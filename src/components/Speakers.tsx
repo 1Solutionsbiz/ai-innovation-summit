@@ -1,74 +1,98 @@
 
 import { Card, CardContent } from "./ui/card";
+import { Button } from "./ui/button";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const SPEAKERS = [
   {
-    name: "Sarah Johnson",
-    role: "UX Director, Google",
-    image: "photo-1494891848038-7bd202a2afeb",
-    topic: "The Future of User Experience Design"
+    name: "Dr. Sarah Johnson",
+    role: "AI Research Director, Google",
+    image: "photo-1573496359142-b8d87734a5a2"
   },
   {
     name: "Michael Chen",
-    role: "Senior Developer, Microsoft",
-    image: "photo-1488590528505-98d2b5aba04b",
-    topic: "Building Scalable Web Applications"
+    role: "CTO, OpenAI",
+    image: "photo-1560250097-0b93528c311a"
   },
   {
     name: "Emma Wilson",
-    role: "Design Systems Lead, Apple",
-    image: "photo-1551038247-3d9af20df552",
-    topic: "Creating Effective Design Systems"
+    role: "AI Ethics Professor, MIT",
+    image: "photo-1494790108377-be9c29b29330"
   },
   {
-    name: "David Brown",
-    role: "Tech Lead, Amazon",
-    image: "photo-1460574283810-2aab119d8511",
-    topic: "Cloud Architecture Patterns"
+    name: "David Rodriguez",
+    role: "Head of AI, Microsoft",
+    image: "photo-1507003211169-0a1dd7228f2d"
   },
   {
-    name: "Rachel Martinez",
-    role: "Product Designer, Meta",
-    image: "photo-1496307653780-42ee777d4833",
-    topic: "Design for Social Impact"
+    name: "Dr. Aisha Khan",
+    role: "Neural Networks Specialist, Stanford",
+    image: "photo-1580489944761-15a19d654956"
   },
   {
     name: "James Wilson",
-    role: "Engineering Lead, Netflix",
-    image: "photo-1473177104440-ffee2f376098",
-    topic: "Streaming Architecture at Scale"
+    role: "Founder, AI Ventures",
+    image: "photo-1531427186611-ecfd6d936c79"
   }
 ];
 
 export const Speakers = () => {
+  const isMobile = useIsMobile();
+
   return (
-    <section id="speakers" className="py-20 bg-secondary">
+    <section id="speakers" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Speakers</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-orbitron">Meet the Speakers</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Learn from industry leaders who are shaping the future of design and development.
+            Learn from industry leaders who are pioneering the future of artificial intelligence.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {SPEAKERS.map((speaker) => (
-            <Card key={speaker.name} className="overflow-hidden hover:shadow-lg transition-shadow">
-              <CardContent className="p-0">
-                <img
-                  src={`https://images.unsplash.com/${speaker.image}?auto=format&fit=crop&w=800&q=80`}
-                  alt={speaker.name}
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="font-bold text-xl mb-1">{speaker.name}</h3>
-                  <p className="text-muted-foreground mb-3">{speaker.role}</p>
-                  <p className="font-medium">{speaker.topic}</p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+
+        {isMobile ? (
+          <Carousel className="w-full max-w-xs mx-auto">
+            <CarouselContent>
+              {SPEAKERS.map((speaker) => (
+                <CarouselItem key={speaker.name}>
+                  <SpeakerCard speaker={speaker} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="flex justify-center mt-4">
+              <CarouselPrevious className="static translate-y-0 mr-2" />
+              <CarouselNext className="static translate-y-0 ml-2" />
+            </div>
+          </Carousel>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {SPEAKERS.map((speaker) => (
+              <SpeakerCard key={speaker.name} speaker={speaker} />
+            ))}
+          </div>
+        )}
+
+        <div className="text-center mt-12">
+          <Button className="btn-gradient text-white">View Full Speaker Lineup</Button>
         </div>
       </div>
     </section>
   );
 };
+
+const SpeakerCard = ({ speaker }: { speaker: typeof SPEAKERS[0] }) => (
+  <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+    <CardContent className="p-0">
+      <img
+        src={`https://images.unsplash.com/${speaker.image}?auto=format&fit=crop&w=800&q=80`}
+        alt={speaker.name}
+        className="w-full h-64 object-cover"
+      />
+      <div className="p-6">
+        <h3 className="font-bold text-xl mb-1 font-orbitron">{speaker.name}</h3>
+        <p className="text-muted-foreground mb-3">{speaker.role}</p>
+        <Button variant="outline" size="sm">View Bio</Button>
+      </div>
+    </CardContent>
+  </Card>
+);
