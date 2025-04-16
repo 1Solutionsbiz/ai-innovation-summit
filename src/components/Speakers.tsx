@@ -1,51 +1,58 @@
-
 import { Card, CardContent } from "./ui/card";
 import { Button } from "./ui/button";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "./ui/carousel";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const SPEAKERS = [
   {
     name: "Dr. Sarah Johnson",
     role: "AI Research Director, Google",
-    image: "photo-1573496359142-b8d87734a5a2"
+    image: "photo-1573496359142-b8d87734a5a2",
   },
   {
     name: "Michael Chen",
     role: "CTO, OpenAI",
-    image: "photo-1560250097-0b93528c311a"
+    image: "photo-1560250097-0b93528c311a",
   },
   {
     name: "Emma Wilson",
     role: "AI Ethics Professor, MIT",
-    image: "photo-1494790108377-be9c29b29330"
+    image: "photo-1494790108377-be9c29b29330",
   },
   {
     name: "David Rodriguez",
     role: "Head of AI, Microsoft",
-    image: "photo-1507003211169-0a1dd7228f2d"
+    image: "photo-1507003211169-0a1dd7228f2d",
   },
   {
     name: "Dr. Aisha Khan",
     role: "Neural Networks Specialist, Stanford",
-    image: "photo-1580489944761-15a19d654956"
+    image: "photo-1580489944761-15a19d654956",
   },
   {
     name: "James Wilson",
     role: "Founder, AI Ventures",
-    image: "photo-1531427186611-ecfd6d936c79"
-  }
+    image: "photo-1531427186611-ecfd6d936c79",
+  },
 ];
 
 export const Speakers = () => {
   const isMobile = useIsMobile();
 
   return (
-    <section id="speakers" className="py-20 bg-white">
+    <section id="speakers" className="py-20 bg-black text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-orbitron">Meet the Speakers</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-orbitron">
+            Meet the Speakers
+          </h2>
+          <p className="text-lg max-w-2xl mx-auto text-gray-300">
             Learn from industry leaders who are pioneering the future of artificial intelligence.
           </p>
         </div>
@@ -73,7 +80,9 @@ export const Speakers = () => {
         )}
 
         <div className="text-center mt-12">
-          <Button className="btn-gradient text-white">View Full Speaker Lineup</Button>
+          <Button className="btn-gradient text-white">
+            View Full Speaker Lineup
+          </Button>
         </div>
       </div>
     </section>
@@ -90,8 +99,10 @@ const SpeakerCard = ({ speaker }: { speaker: typeof SPEAKERS[0] }) => (
       />
       <div className="p-6">
         <h3 className="font-bold text-xl mb-1 font-orbitron">{speaker.name}</h3>
-        <p className="text-muted-foreground mb-3">{speaker.role}</p>
-        <Button variant="outline" size="sm">View Bio</Button>
+        <p className="text-gray-500 mb-3">{speaker.role}</p>
+        <Button variant="outline" size="sm">
+          View Bio
+        </Button>
       </div>
     </CardContent>
   </Card>
