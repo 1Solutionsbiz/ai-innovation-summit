@@ -1,4 +1,3 @@
-
 import { Play } from "lucide-react";
 
 export const PastHighlights = () => {
@@ -21,12 +20,29 @@ export const PastHighlights = () => {
   ];
 
   return (
-    <section className="py-20 bg-secondary/10">
+    <section className="py-20 bg-secondary/10 btn-gradient">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold mb-2 font-orbitron">Past Event Highlights</h2>
-        <p className="text-muted-foreground mb-12">Explore our collection of talks and relive the best moments.</p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <p className="text-dark mb-12">Explore our collection of talks and relive the best moments.</p>
+
+        {/* YouTube Video */}
+        <div className="mb-16">
+          <div className="aspect-video w-full overflow-hidden rounded-lg shadow-lg">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/k6MtF2BM1WU"
+              title="Post Event Montage"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              className="w-full h-full"
+            ></iframe>
+          </div>
+        </div>
+
+        {/* Highlights */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
           {highlights.map((highlight) => (
             <div key={highlight.title} className="group relative">
               <div className="aspect-video relative overflow-hidden rounded-lg bg-dark">
@@ -42,7 +58,7 @@ export const PastHighlights = () => {
                 </div>
               </div>
               <h3 className="text-xl font-bold mt-4 mb-2">{highlight.title}</h3>
-              <p className="text-muted-foreground">{highlight.description}</p>
+              <p className="text-dark">{highlight.description}</p>
             </div>
           ))}
         </div>

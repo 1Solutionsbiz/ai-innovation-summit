@@ -10,7 +10,7 @@ import { PastHighlights } from "@/components/PastHighlights";
 import { Schedule } from "@/components/Schedule";
 import { Sponsors } from "@/components/Sponsors";
 import { PartnershipCTA } from "@/components/PartnershipCTA";
-import { Venue } from "@/components/Venue";
+
 import { Newsletter } from "@/components/Newsletter";
 import { Footer } from "@/components/Footer";
 
@@ -19,16 +19,17 @@ const Index = () => {
     <div className="min-h-screen">
       <Header />
       <Hero />
-      <MovingStrip />
+      <MovingStrip  color="bg-neon-purple"/>
       <About />
+      <MovingStrip color="bg-neon-blue"/>
       <KeyPoints />
-      <Features />
+      {/* <Features /> */}
       <Speakers />
       <PastHighlights />
-      <Schedule />
+      {/* <Schedule /> */}
       <Sponsors />
       <PartnershipCTA />
-      <Venue />
+     
       <Newsletter />
       <Footer />
     </div>
