@@ -25,13 +25,13 @@ export const PastHighlights = () => {
         <h2 className="text-3xl md:text-4xl font-bold mb-2 font-orbitron">Past Event Highlights</h2>
         <p className="text-dark mb-12">Explore our collection of talks and relive the best moments.</p>
 
-        {/* YouTube Video */}
+        {/* YouTube Video with Autoplay */}
         <div className="mb-16">
           <div className="aspect-video w-full overflow-hidden rounded-lg shadow-lg">
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/k6MtF2BM1WU"
+              src="https://www.youtube.com/embed/k6MtF2BM1WU?autoplay=1&mute=1"
               title="Post Event Montage"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -42,7 +42,7 @@ export const PastHighlights = () => {
         </div>
 
         {/* Highlights */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {highlights.map((highlight) => (
             <div key={highlight.title} className="group relative">
               <div className="aspect-video relative overflow-hidden rounded-lg bg-dark">

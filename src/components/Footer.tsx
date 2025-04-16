@@ -8,13 +8,15 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between gap-8">
           {/* Left - Info */}
           <div className="md:w-1/2">
-            <h3 className="text-2xl font-bold font-orbitron text-gradient mb-4">
-              AI Innovation Summit
-            </h3>
-            <p className="text-gray-300">
+            <img
+              src="/cloud_new.png"
+              alt="AI Innovation Summit Logo"
+              className="h-16 w-auto mb-4"
+            />
+            <p className="text-gray-300 pl-4">
               The premier conference for artificial intelligence professionals and enthusiasts.
             </p>
-            <p className="mt-4 text-gray-300">
+            <p className="mt-4 text-gray-300 pl-4">
               © 2025 AI Innovation Summit. All rights reserved.
             </p>
           </div>
@@ -61,10 +63,7 @@ export const Footer = () => {
 
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-300 gap-4">
-          {/* Left - Copyright */}
           <p>© 2025 AI Innovation Summit</p>
-
-          {/* Right - Policies */}
           <div className="flex flex-wrap gap-4">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms & Conditions</a>
