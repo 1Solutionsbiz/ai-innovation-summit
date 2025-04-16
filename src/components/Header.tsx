@@ -3,7 +3,6 @@ import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./ui/tooltip";
 
 export const Header = () => {
   const isMobile = useIsMobile();
@@ -24,7 +23,13 @@ export const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-dark/80 border-b border-neon-purple/10">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <a href="/" className="font-orbitron font-bold text-2xl text-gradient">AI INNOVATION SUMMIT</a>
+        <a href="/">
+          <img 
+            src="https://smefutures.com/events/cloud-ai-innovation-summit/wp-content/uploads/2024/02/cloud_new.png" 
+            alt="AI Innovation Summit"
+            className="h-8"
+          />
+        </a>
         
         {isMobile ? (
           <Sheet>
