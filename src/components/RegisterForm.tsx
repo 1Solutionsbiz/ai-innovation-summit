@@ -62,7 +62,7 @@ export const Register = () => {
   return (
     <section className="py-16 px-4 bg-gray-900 text-white" id="register">
       <div className="max-w-4xl mx-auto bg-gray-800 p-8 rounded-lg shadow-lg">
-        <h2 className="text-3xl font-bold mb-8 text-center text-gradient"> Register Now for AI Innovation Summit</h2>
+        <h2 className="text-4xl font-bold mb-8 text-center text-gradient font-orbitron"> Register Now for AI Innovation Summit</h2>
         <form onSubmit={handleSubmit} noValidate className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Text Fields */}
           {[
@@ -76,7 +76,7 @@ export const Register = () => {
             { name: "pincode", label: "Pincode" },
           ].map((field) => (
             <div key={field.name}>
-              <label className="block mb-1 font-semibold">{field.label}</label>
+              <label className="block mb-1 font-semibold font-orbitron">{field.label}</label>
               <input
                 type={field.name.includes("Email") ? "email" : "text"}
                 name={field.name}
@@ -92,7 +92,7 @@ export const Register = () => {
 
           {/* Industry Select */}
           <div>
-            <label className="block mb-1 font-semibold">Industry</label>
+            <label className="block mb-1 font-semibold font-orbitron">Industry</label>
             <select
               name="industry"
               value={formData.industry}
@@ -113,7 +113,7 @@ export const Register = () => {
 
           {/* Employee Size */}
           <div>
-            <label className="block mb-1 font-semibold">Employee Size</label>
+            <label className="block mb-1 font-semibold font-orbitron">Employee Size</label>
             <select
               name="employeeSize"
               value={formData.employeeSize}

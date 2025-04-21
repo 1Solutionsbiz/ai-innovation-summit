@@ -29,7 +29,7 @@ export default function KeyTheme() {
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Main Heading */}
         <h2
-          className="font-bold mb-6 text-center z-10 relative"
+          className="font-bold mb-6 text-center z-10 relative font-orbitron"
           style={{ fontSize: '5rem' }}
         >
           Key Themes
@@ -37,7 +37,7 @@ export default function KeyTheme() {
 
         {/* Subheading */}
         <div
-          className="bg-purple-700 text-white font-semibold px-6 py-4 w-fit mx-auto shadow-lg relative"
+          className="bg-purple-700 text-white font-semibold px-6 py-4 w-fit mx-auto shadow-lg relative font-orbitron"
           style={{
             transform: 'rotate(-4deg)',
             marginTop: '-60px',
@@ -60,7 +60,7 @@ export default function KeyTheme() {
                 alt={`Icon ${index + 1}`}
                 className="w-16 h-16 mb-4 object-contain mix-blend-screen"
               />
-              <h3 className="text-lg font-semibold mb-2 text-neon-purple">
+              <h3 className="text-lg font-semibold mb-2 text-neon-purple font-orbitron">
                 {card.title}
               </h3>
               <p className="text-sm text-white-300">{card.description}</p>

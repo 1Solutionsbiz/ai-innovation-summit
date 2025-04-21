@@ -63,7 +63,7 @@ const MovingStrip: React.FC<MovingStripProps> = ({ color = "bg-neon-purple" }) =
         {/* Original Content */}
         <div ref={contentRef} className="flex">
           {textItems.map((text, index) => (
-            <span key={`original-${index}`} className="mx-8">
+            <span key={`original-${index}`} className="mx-8 font-orbitron">
               {text}
             </span>
           ))}
@@ -73,7 +73,7 @@ const MovingStrip: React.FC<MovingStripProps> = ({ color = "bg-neon-purple" }) =
         {Array.from({ length: 9 }).map((_, duplicateIndex) => (
           <div key={`duplicate-${duplicateIndex}`} className="flex">
             {textItems.map((text, index) => (
-              <span key={`${duplicateIndex}-${index}`} className="mx-8">
+              <span key={`${duplicateIndex}-${index}`} className="mx-8 font-orbitron">
                 {text}
               </span>
             ))}
