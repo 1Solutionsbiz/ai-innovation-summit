@@ -7,7 +7,7 @@ import { useToast } from "@/hooks/use-toast";
 export const Newsletter = () => {
   const [email, setEmail] = useState("");
   const { toast } = useToast();
-  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
@@ -18,18 +18,19 @@ export const Newsletter = () => {
       setEmail("");
     }
   };
-  
+
   return (
     <section id="register" className="py-20 gradient-bg particles-bg relative">
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-orbitron">
-            Stay Updated with AI Innovation Summit
+
+            Register Now for AI Innovation Summit
           </h2>
           <p className="text-lg mb-8 opacity-90">
             Get news, updates, and speaker announcements directly to your inbox.
           </p>
-          
+
           <form onSubmit={handleSubmit} className="max-w-md mx-auto">
             <div className="flex flex-col sm:flex-row gap-4">
               <Input
@@ -45,7 +46,7 @@ export const Newsletter = () => {
               </Button>
             </div>
           </form>
-          
+
           <p className="text-sm mt-4 opacity-70">
             We respect your privacy and will never share your information.
           </p>

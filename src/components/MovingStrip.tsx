@@ -26,14 +26,13 @@ const MovingStrip: React.FC<MovingStripProps> = ({ color = "bg-neon-purple" }) =
       ease: "power1.inOut",
       scrollTrigger: {
         trigger: stripRef.current,
-        start: "top bottom",    // Start animation when strip is at center of viewport
-        end: "bottom top",      // End when strip goes out of view
-        scrub: 0.5,             // Slow scroll-based animation
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 0.5,
         markers: false,
       },
     });
 
-    // Optional: Duplicate handling on resize (can be expanded in future)
     const calculateDuplicates = () => {
       if (!contentRef.current) return;
       const contentWidth = contentRef.current.offsetWidth;
@@ -45,12 +44,14 @@ const MovingStrip: React.FC<MovingStripProps> = ({ color = "bg-neon-purple" }) =
     return () => window.removeEventListener("resize", calculateDuplicates);
   }, []);
 
+  // ✅ Updated content
   const textItems = [
-    "50+ Expert Speakers",
-    "Interactive Workshops",
-    "Global Networking",
-    "Startup Showcase",
+    "AI Solutions’ Showcase",
     "Industry Insights",
+    "25+ World-Class Visionary Speakers",
+    "Focused Networking",
+    "Keynote Addresses and Workshops",
+    "200+ Tech Leaders",
   ];
 
   return (

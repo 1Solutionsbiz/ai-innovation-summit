@@ -9,12 +9,12 @@ export const Footer = () => {
           {/* Left - Info */}
           <div className="md:w-1/2">
             <img
-              src="/cloud_new.png"
+             src="/logo/Ai-Innovation_Logo_White.png"
               alt="AI Innovation Summit Logo"
-              className="h-16 w-auto mb-4"
+              className="h-28 w-auto mb-4"
             />
             <p className="text-gray-300 pl-4">
-              The premier conference for artificial intelligence professionals and enthusiasts.
+              From prompt to impact — the premier summit for artificial intelligence leaders and enthusiasts, making it the most impactful AI Summit.
             </p>
             <p className="mt-4 text-gray-300 pl-4">
               © 2025 AI Innovation Summit. All rights reserved.
@@ -52,8 +52,8 @@ export const Footer = () => {
                   <Linkedin className="h-6 w-6" />
                 </a>
               </div>
-              <p className="text-gray-300">info@aiinnovationsummit.com</p>
-              <p className="text-gray-300">San Francisco, CA</p>
+              <p className="text-gray-300">guildconferences@guildlive.com</p>
+              <p className="text-gray-300">Smartworks Corporate Park Tower A, Second Floor Sector 125, Noida Uttar Pradesh 201303</p>
             </div>
           </div>
         </div>

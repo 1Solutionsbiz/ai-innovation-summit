@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 export const Sponsors = () => {
   const sponsorTiers = [
     {
-      tier: "Platinum",
+      tier: "Presenting Partner",
       logos: [
         { name: "Google", url: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" },
         { name: "Microsoft", url: "https://svgsilh.com/svg/80658.svg" },
@@ -17,7 +17,7 @@ export const Sponsors = () => {
       ],
     },
     {
-      tier: "Gold",
+      tier: "Co-Partner",
       logos: [
         { name: "IBM", url: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" },
         { name: "Meta", url: "https://venturenixlab.co/wp-content/uploads/2025/02/Meta-Logo.png" },
@@ -26,7 +26,7 @@ export const Sponsors = () => {
       ],
     },
     {
-      tier: "Silver",
+      tier: "Associate Partner",
       logos: [
         { name: "Oracle", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnduWsTuvxrhDFxmPZh0TzMQLL9Z4VCmCdbQ&s" },
         { name: "Salesforce", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrEngtm7EBVPBmkhBtma6iUIu4_xok2f1Gyw&s" },
@@ -52,7 +52,7 @@ export const Sponsors = () => {
         stagger: 0.2,
         ease: "bounce.out",
         scrollTrigger: {
-          trigger: "#sponsors",
+          trigger: "#partners",
           start: "top 80%",
           toggleActions: "play none none reverse",
         },
@@ -61,14 +61,14 @@ export const Sponsors = () => {
   }, []);
 
   return (
-    <section id="sponsors" className="py-20 bg-black text-white">
+    <section id="partners" className="py-20 bg-black text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 font-orbitron">
-            Our Partners & Sponsors
+          Our Partners
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto text-gray-300">
-            Leading technology companies supporting the AI Innovation Summit.
+          <p className=" text-lg max-w-2xl mx-auto text-white-300">
+          Leading enterprises supporting the AI Innovation Summit.
           </p>
         </div>
 
@@ -76,7 +76,7 @@ export const Sponsors = () => {
           {sponsorTiers.map((tier) => (
             <div key={tier.tier} className="mb-10">
               <h3 className="text-center text-xl font-orbitron mb-6">
-                {tier.tier} Sponsors
+                {tier.tier}
               </h3>
 
               <div className="flex flex-wrap justify-center gap-5">
