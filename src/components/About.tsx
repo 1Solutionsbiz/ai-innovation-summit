@@ -32,12 +32,16 @@ export const About = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6 font-orbitron">
               About <span className="text-gradient">AI Innovation Summit</span>
             </h2>
-            <p className="text-lg mb-8">
-              The AI Innovation Summit brings together global AI leaders, researchers, and innovators for three days of learning, networking, and inspiration. Discover how AI is transforming industries and shaping tomorrow.
+            <p className="text-lg mb-6">
+              After the overwhelming success of the Cloud + AI Innovation Summit 2024, we’re back with an even more impactful experience — the AI Innovation Summit 2025. Building on last year’s momentum, this summit is set to become India’s most influential platform for CIOs, CTOs, and AI leaders to explore the transformative power of artificial intelligence in business and technology.
             </p>
-            <p className="text-lg mb-8">
-              Join us for an immersive experience featuring keynotes from AI pioneers, hands-on workshops, networking events, and a showcase of cutting-edge AI startups and technologies.
+            <p className="text-lg mb-6">
+              <strong className="text-neon-purple">Cloud + AI Innovation Summit – Previous 2024 Editions in Delhi, Mumbai and Bengaluru:</strong> Over 750 CIOs, CTOs, IT Heads, and Technology & Business industry leaders joined us for this insightful event, besides drawing 2100+ registrations. The day-long event(s) witnessed active involvement from audience and industry leaders during the powerful panel discussions and other thought leadership sessions, besides the enthusiastic participation and engagement in Digital Sling Shot activity, opinion-forming poll questions, Sponsor booth interactions, and Scratch Card Lucky Draw contest, that contributed to the vibrant atmosphere and success of the summit.
             </p>
+            <p className="text-lg mb-6">
+              With a future-forward agenda, this year’s summit will dive deep into critical themes such as <strong className="text-neon-purple">AI-driven digital transformation, enterprise automation, cyber resilience, generative & Agentic AI</strong>, and <strong className="text-neon-purple">ethical AI governance</strong>. Designed for visionaries and decision-makers, the AI Innovation Summit 2025 is where cutting-edge ideas meet real-world enterprise applications — powering the AI-first future.
+            </p>
+
           </div>
 
           {/* Right Image with Tilt Hover */}

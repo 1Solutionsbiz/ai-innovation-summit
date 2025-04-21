@@ -13,24 +13,31 @@ import { PartnershipCTA } from "@/components/PartnershipCTA";
 
 import { Newsletter } from "@/components/Newsletter";
 import { Footer } from "@/components/Footer";
-
+import { Register } from "@/components/RegisterForm";
+import KeyTheme from "@/components/KeyTheme";
+import StickyWrapper from "@/components/StickyWrapper";
 const Index = () => {
   return (
     <div className="min-h-screen">
       <Header />
       <Hero />
-      <MovingStrip  color="bg-neon-purple"/>
+      <MovingStrip color="bg-neon-purple" />
       <About />
-      <MovingStrip color="bg-neon-blue"/>
+      <MovingStrip color="bg-neon-blue" />
       <KeyPoints />
       {/* <Features /> */}
       <Speakers />
       <PastHighlights />
-      {/* <Schedule /> */}
+      <div className="min-h-screen bg-gray-100">
+        <StickyWrapper />
+      </div>
       <Sponsors />
       <PartnershipCTA />
-     
-      <Newsletter />
+      <KeyTheme />
+      <Register />
+
+
+      {/* <Newsletter /> */}
       <Footer />
     </div>
   );

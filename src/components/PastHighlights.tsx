@@ -22,27 +22,25 @@ export const PastHighlights = () => {
   return (
     <section className="py-20 bg-secondary/10 btn-gradient">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-2 font-orbitron">Past Event Highlights</h2>
-        <p className="text-dark mb-12">Explore our collection of talks and relive the best moments.</p>
+        <h2 className="text-3xl md:text-4xl font-bold mb-2 font-orbitron">Blast from the Past</h2>
+        <p className="text-dark mb-12">Take a glimpse of the past three overwhelmingly successful editions of previously titled, “Cloud+Ai Innovation Summit”.</p>
 
-        {/* YouTube Video with Autoplay */}
+        {/* Local Video */}
         <div className="mb-16">
           <div className="aspect-video w-full overflow-hidden rounded-lg shadow-lg">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/k6MtF2BM1WU?autoplay=1&mute=1"
-              title="Post Event Montage"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              className="w-full h-full"
-            ></iframe>
+            <video
+              src="/Post_Event_Montage.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
 
         {/* Highlights */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {highlights.map((highlight) => (
             <div key={highlight.title} className="group relative">
               <div className="aspect-video relative overflow-hidden rounded-lg bg-dark">
@@ -61,7 +59,7 @@ export const PastHighlights = () => {
               <p className="text-dark">{highlight.description}</p>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
