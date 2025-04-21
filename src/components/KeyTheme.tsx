@@ -51,10 +51,10 @@ export default function KeyTheme() {
         {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
           {cardData.map((card, index) => (
-            <div
-              key={index}
-              className="bg-gray-800 rounded-2xl shadow-md p-6 border-2 border-white flex flex-col items-center text-center"
-            >
+          <div
+          key={index}
+          className="bg-gray-900 rounded-2xl shadow-md p-6 border-2 border-white flex flex-col items-center text-center relative overflow-hidden transform transition-transform duration-500 hover:scale-105"
+        >
               <img
                 src={`/key/${index + 1}.png`}
                 alt={`Icon ${index + 1}`}
