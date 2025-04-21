@@ -11,14 +11,12 @@ export const Footer = () => {
             <img
              src="/logo/Ai-Innovation_Logo_White.png"
               alt="AI Innovation Summit Logo"
-              className="h-28 w-auto mb-4"
+              className="h-24 w-auto mb-4"
             />
             <p className="text-gray-300 pl-4">
               From prompt to impact — the premier summit for artificial intelligence leaders and enthusiasts, making it the most impactful AI Summit.
             </p>
-            <p className="mt-4 text-gray-300 pl-4">
-              © 2025 AI Innovation Summit. All rights reserved.
-            </p>
+           
           </div>
 
           {/* Right - Links & Social */}
@@ -29,9 +27,9 @@ export const Footer = () => {
               <nav className="space-y-2">
                 <a href="#about" className="block text-gray-300 hover:text-neon-blue transition-colors">About</a>
                 <a href="#speakers" className="block text-gray-300 hover:text-neon-blue transition-colors">Speakers</a>
-                <a href="#schedule" className="block text-gray-300 hover:text-neon-blue transition-colors">Schedule</a>
-                <a href="#sponsors" className="block text-gray-300 hover:text-neon-blue transition-colors">Sponsors</a>
-                <a href="#" className="block text-gray-300 hover:text-neon-blue transition-colors">Code of Conduct</a>
+                {/* <a href="#schedule" className="block text-gray-300 hover:text-neon-blue transition-colors">Schedule</a> */}
+                <a href="#partners" className="block text-gray-300 hover:text-neon-blue transition-colors">Partners</a>
+       
               </nav>
             </div>
 

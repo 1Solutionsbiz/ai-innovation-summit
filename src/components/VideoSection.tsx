@@ -35,7 +35,7 @@ const VideoSection: React.FC<VideoSectionProps> = ({ city, imageName, videoLinks
       }`}
       style={{ top: '30px' }}
     >
-      <h2 className="text-4xl font-bold py-20 text-white">
+      <h2 className="text-4xl font-bold py-20 text-white font-orbitron">
         Watch On Demand Session - {city}
       </h2>
   
