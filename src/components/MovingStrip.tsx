@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -11,16 +11,24 @@ interface MovingStripProps {
 const MovingStrip: React.FC<MovingStripProps> = ({ color = "bg-neon-purple" }) => {
   const stripRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+  const [duplicates, setDuplicates] = useState(10);
+
+  const textItems = [
+    "AI Solutions’ Showcase",
+    "Industry Insights",
+    "25+ World-Class Visionary Speakers",
+    "Focused Networking",
+    "Keynote Addresses and Workshops",
+    "200+ Tech Leaders",
+  ];
 
   useEffect(() => {
     if (!stripRef.current) return;
 
-    // Set strip to be center-aligned initially
     gsap.set(stripRef.current, {
       xPercent: -50,
     });
 
-    // Animate strip to move left slowly on scroll
     gsap.to(stripRef.current, {
       xPercent: -10,
       ease: "power1.inOut",
@@ -33,47 +41,45 @@ const MovingStrip: React.FC<MovingStripProps> = ({ color = "bg-neon-purple" }) =
       },
     });
 
-    const calculateDuplicates = () => {
+    const updateDuplicates = () => {
       if (!contentRef.current) return;
       const contentWidth = contentRef.current.offsetWidth;
       const viewportWidth = window.innerWidth;
-      return Math.ceil(viewportWidth / (contentWidth / 5)) + 2;
+      const count = Math.ceil(viewportWidth / (contentWidth / textItems.length)) + 2;
+      setDuplicates(count);
     };
 
-    window.addEventListener("resize", calculateDuplicates);
-    return () => window.removeEventListener("resize", calculateDuplicates);
+    updateDuplicates();
+    window.addEventListener("resize", updateDuplicates);
+    return () => window.removeEventListener("resize", updateDuplicates);
   }, []);
 
-  // ✅ Updated content
-  const textItems = [
-    "AI Solutions’ Showcase",
-    "Industry Insights",
-    "25+ World-Class Visionary Speakers",
-    "Focused Networking",
-    "Keynote Addresses and Workshops",
-    "200+ Tech Leaders",
-  ];
-
   return (
-    <div className={`${color} overflow-hidden h-32 flex items-center`}>
+    <div className={`${color} overflow-hidden h-20 sm:h-24 md:h-32 flex items-center`}>
       <div
         ref={stripRef}
-        className="whitespace-nowrap text-white text-5xl font-bold flex"
+        className="whitespace-nowrap text-white flex font-bold"
       >
         {/* Original Content */}
         <div ref={contentRef} className="flex">
           {textItems.map((text, index) => (
-            <span key={`original-${index}`} className="mx-8 font-orbitron">
+            <span
+              key={`original-${index}`}
+              className="mx-4 sm:mx-6 md:mx-8 text-xl sm:text-2xl md:text-4xl lg:text-5xl font-orbitron"
+            >
               {text}
             </span>
           ))}
         </div>
 
         {/* Duplicates for seamless effect */}
-        {Array.from({ length: 9 }).map((_, duplicateIndex) => (
+        {Array.from({ length: duplicates }).map((_, duplicateIndex) => (
           <div key={`duplicate-${duplicateIndex}`} className="flex">
             {textItems.map((text, index) => (
-              <span key={`${duplicateIndex}-${index}`} className="mx-8 font-orbitron">
+              <span
+                key={`${duplicateIndex}-${index}`}
+                className="mx-4 sm:mx-6 md:mx-8 text-xl sm:text-2xl md:text-4xl lg:text-5xl font-orbitron"
+              >
                 {text}
               </span>
             ))}

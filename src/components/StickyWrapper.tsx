@@ -26,7 +26,7 @@ const StickyWrapper = () => {
       />
 
       <VideoSection
-        city="Bangaluru"
+        city="Bengaluru"
         imageName="bangaluru"
         videoLinks={[
           'https://www.youtube.com/watch?v=wBaEOg_21bM',
