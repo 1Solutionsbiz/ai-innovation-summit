@@ -19,7 +19,7 @@ export default function WhoShouldSponsor() {
         {/* Main Heading */}
         <h2
           className="font-bold mb-6 text-center z-10 relative font-orbitron"
-          style={{ fontSize: '5rem' }}
+          style={{ fontSize: '3rem' }}
         >
           Who Should Sponsor?
         </h2>
@@ -29,10 +29,9 @@ export default function WhoShouldSponsor() {
           {cardData.map((card, index) => (
             <div
               key={index}
-              className="bg-gray-900 rounded-2xl shadow-md p-6 border-2 border-white flex flex-col items-center text-center relative overflow-hidden transform transition-transform duration-500 hover:scale-105"
+              className="bg-[#00ffff] rounded-2xl shadow-md p-6 border-2 border-white flex flex-col items-center text-center relative overflow-hidden transform transition-transform duration-500 hover:scale-105"
             >
-             
-              <h3 className="text-lg font-semibold mb-2 text-neon-blue font-orbitron">
+              <h3 className="text-lg font-semibold mb-2 text-black font-orbitron">
                 {card.title}
               </h3>
             </div>

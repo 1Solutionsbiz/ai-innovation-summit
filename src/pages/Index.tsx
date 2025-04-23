@@ -17,8 +17,10 @@ import { Register } from "@/components/RegisterForm";
 import KeyTheme from "@/components/KeyTheme";
 import StickyWrapper from "@/components/StickyWrapper";
 import Agenda from "@/components/Agenda";
-import ShouldAttend from "@/components/ShouldAttend";
+import {ShouldAttend} from "@/components/ShouldAttend";
 import WhoShouldSponsor from "@/components/WhoShouldSponsor";
+import { Features } from "@/components/Features";
+import AudienceProfile from "@/components/AudienceProfile";
 const Index = () => {
   return (
     <div className="min-h-screen">
@@ -29,17 +31,19 @@ const Index = () => {
       <MovingStrip color="bg-neon-blue" />
       <KeyPoints />
       {/* <Features /> */}
-      <Speakers />
+      {/* <Speakers /> */}
       <PastHighlights />
       <div className="min-h-screen bg-gray-100">
         <StickyWrapper />
       </div>
       <Agenda />
-      <Sponsors />
+      {/* <Sponsors /> */}
       <PartnershipCTA />
       <KeyTheme />
       <ShouldAttend />
-      <WhoShouldSponsor/>
+      {/* <AudienceProfile/> */}
+      {/* <Features/> */}
+      <WhoShouldSponsor />
       <Register />
 
       {/* <Newsletter /> */}

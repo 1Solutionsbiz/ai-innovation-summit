@@ -5,21 +5,21 @@ export const KeyPoints = () => {
       description:
         "Hear CIOs, CTOs, and AI Chiefs from the top enterprises of the country making an impact in the world with AI.",
       image:
-        "https://framerusercontent.com/images/75T9rcOc5cHkP4CES5YuC1NJe6U.png?scale-down-to=1024",
+        "/networking/1.png",
     },
     {
       title: "Keynote Addresses and Workshops",
       description:
         "Gear up for the valuable takeaways including the focused Industry insights, trending enterprise use-cases.",
       image:
-        "https://framerusercontent.com/images/H8lRiIVEbvSwKmAaDSlO41VM0os.png?scale-down-to=1024",
+        "/networking/2.png",
     },
     {
       title: "Networking Opportunities",
       description:
         "Meet the who’s who from the tech fraternity, the tech leaders from across the industry sectors including Manufacturing, Health & Pharma, BFSI & FinTech, and many more.",
       image:
-        "https://framerusercontent.com/images/VUo12f2txBzkA1naDkwvle2yPY.png?scale-down-to=1024",
+        "/networking/3.png",
     },
   ];
 
@@ -39,7 +39,7 @@ export const KeyPoints = () => {
               <img
                 src={point.image}
                 alt={point.title}
-                className="w-full h-[550px] object-cover rounded-md"
+                className="w-full h-[400px] object-cover rounded-md"
               />
               <div className="absolute -z-10 top-0 right-0 w-24 h-24 opacity-20">
                 <div className="w-full h-full bg-neon-purple rotate-45 transform origin-center"></div>
