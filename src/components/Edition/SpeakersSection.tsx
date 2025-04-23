@@ -51,7 +51,7 @@ const speakers: Speaker[] = [
     name: 'Anbu David',
     designation: 'Vice President & Head- Information Security, IT Ops & ITSM, DPO and Regional CISO for APAC',
     company: 'Holcim',
-    image: '/edition/speaker/Anbu-David.jpg',
+    image: '/edition/speaker/anbu-david.jpg',
   },
   {
     name: 'Prakash Narayanan',
@@ -63,7 +63,7 @@ const speakers: Speaker[] = [
     name: 'Sudarshan Rajagopal',
     designation: 'Partner Technology Consulting - Cyber Security',
     company: 'EY',
-    image: '/edition/speaker/Sudharshan.jpg',
+    image: '/edition/speaker/sudharshan.jpg',
   },
   {
     name: 'Sunil David',
