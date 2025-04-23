@@ -1,55 +1,57 @@
-import React from 'react';
-
-export default function ShouldAttend() {
-  const cardData = [
-   
+export const ShouldAttend = () => {
+  const points = [
     {
-      title: "Business leaders seeking to understand AI's impact on their industries.",
-     
+      title: "Industry Leading Speakers",
+      description:
+        "Hear CIOs, CTOs, and AI Chiefs from the top enterprises of the country making an impact in the world with AI.",
+      image:
+        "/networking/1.png",
     },
     {
-      title: 'Government officials interested in AI policy and regulation.',
-     
+      title: "Keynote Addresses and Workshops",
+      description:
+        "Gear up for the valuable takeaways including the focused Industry insights, trending enterprise use-cases.",
+      image:
+        "/networking/2.png",
     },
     {
-      title: 'Start-ups and developers exploring innovative AI applications.',
-      
+      title: "Networking Opportunities",
+      description:
+        "Meet the who’s who from the tech fraternity, the tech leaders from across the industry sectors including Manufacturing, Health & Pharma, BFSI & FinTech, and many more.",
+      image:
+        "/networking/3.png",
     },
   ];
 
   return (
-    <section className="bg-dark text-white py-20 px-6 relative">
-      <div className="max-w-5xl mx-auto relative z-10">
-        {/* Main Heading */}
-        <h2
-          className="font-bold mb-6 text-center z-10 relative font-orbitron"
-          style={{ fontSize: '5rem' }}
-        >
-        Who Should Attend ?
+    <section className=" bg-neon-blue pb-16">
+        {/* Heading */}
+        <h2 className="font-bold text-center py-16 font-orbitron text-black" style={{ fontSize: '3rem' }}>
+          Who Should Attend?
         </h2>
-
-       
-
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
-          {cardData.map((card, index) => (
-          <div
-          key={index}
-          className="bg-gray-900 rounded-2xl shadow-md p-6 border-2 border-white flex flex-col items-center text-center relative overflow-hidden transform transition-transform duration-500 hover:scale-105"
-        >
-              <img
-                src={`/key/${index + 1}.png`}
-                alt={`Icon ${index + 1}`}
-                className="w-16 h-16 mb-4 object-contain mix-blend-screen"
-              />
-              <h3 className="text-lg font-semibold mb-2 text-neon-purple font-orbitron">
-                {card.title}
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3">
+          {points.map((point) => (
+            <div
+              key={point.title}
+              className="relative bg-gray-900 p-6 shadow-lg border-l-4 border-r-4 border-neon-blue"
+            >
+              <h3 className="text-2xl font-orbitron text-white mb-4 mt-10">
+                {point.title}
               </h3>
-              {/* <p className="text-sm text-white-300">{card.description}</p> */}
+              <p className="text-gray-400 mb-4">{point.description}</p>
+              <img
+                src={point.image}
+                alt={point.title}
+                className="w-full h-[400px] object-cover rounded-md"
+              />
+              <div className="absolute -z-10 top-0 right-0 w-24 h-24 opacity-20">
+                <div className="w-full h-full bg-neon-purple rotate-45 transform origin-center"></div>
+              </div>
             </div>
           ))}
         </div>
       </div>
     </section>
   );
-}
+};
