@@ -51,7 +51,7 @@ const speakers: Speaker[] = [
     name: 'Anbu David',
     designation: 'Vice President & Head- Information Security, IT Ops & ITSM, DPO and Regional CISO for APAC',
     company: 'Holcim',
-    image: '/edition/speaker/anbu-david.jpg',
+    image: '/edition/speaker/Anbu-David.jpg',
   },
   {
     name: 'Prakash Narayanan',
