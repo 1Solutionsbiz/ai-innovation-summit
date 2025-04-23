@@ -63,7 +63,7 @@ const speakers: Speaker[] = [
     name: 'Sudarshan Rajagopal',
     designation: 'Partner Technology Consulting - Cyber Security',
     company: 'EY',
-    image: '/edition/speaker/Sudharshan.jpg',
+    image: '/edition/speaker/sudharshan.jpg',
   },
   {
     name: 'Sunil David',
