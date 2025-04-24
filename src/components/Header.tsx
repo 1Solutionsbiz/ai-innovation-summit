@@ -20,6 +20,8 @@ export const Header = () => {
       <a href="#about" className="hover:text-neon-blue transition-colors">About</a>
       <a href="#speakers" className="hover:text-neon-blue transition-colors">Speakers</a>
       <a href="#partners" className="hover:text-neon-blue transition-colors">Partners</a>
+      <a href="#agenda" className="hover:text-neon-blue transition-colors">Agenda</a>
+      <a href="#footer" className="hover:text-neon-blue transition-colors">Contact Us</a>
       <a href="#upcoming-editions" className="hover:text-neon-blue transition-colors">Upcoming Editions</a>
 
       {/* Dropdown for Previous Editions */}

@@ -2,21 +2,20 @@ import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
 export const Footer = () => {
   return (
-    <footer className="bg-dark text-white py-12">
+    <footer className="bg-dark text-white py-12" id="footer">
       <div className="container mx-auto px-4">
         {/* Top Section */}
         <div className="flex flex-col md:flex-row justify-between gap-8">
           {/* Left - Info */}
           <div className="md:w-1/2">
             <img
-             src="/logo/Ai-Innovation_Logo_White.png"
+              src="/logo/Ai-Innovation_Logo_White.png"
               alt="AI Innovation Summit Logo"
               className="h-24 w-auto mb-4"
             />
             <p className="text-gray-300 pl-4">
               From prompt to impact — the premier summit for artificial intelligence leaders and enthusiasts, making it the most impactful AI Summit.
             </p>
-           
           </div>
 
           {/* Right - Links & Social */}
@@ -29,7 +28,6 @@ export const Footer = () => {
                 <a href="#speakers" className="block text-gray-300 hover:text-neon-blue transition-colors">Speakers</a>
                 {/* <a href="#schedule" className="block text-gray-300 hover:text-neon-blue transition-colors">Schedule</a> */}
                 <a href="#partners" className="block text-gray-300 hover:text-neon-blue transition-colors">Partners</a>
-       
               </nav>
             </div>
 
@@ -50,8 +48,39 @@ export const Footer = () => {
                   <Linkedin className="h-6 w-6" />
                 </a>
               </div>
-              <p className="text-gray-300">guildconferences@guildlive.com</p>
-              <p className="text-gray-300">Smartworks Corporate Park Tower A, Second Floor Sector 125, Noida Uttar Pradesh 201303</p>
+              <p>
+                <a
+                  href="mailto:guildconferences@guildlive.com"
+                  className="text-gray-300 hover:text-neon-blue hover:underline"
+                >
+                  guildconferences@guildlive.com
+                </a>
+              </p>
+              <p className="text-gray-300">
+                Smartworks Corporate Park Tower A, Second Floor Sector 125, Noida Uttar Pradesh 201303
+              </p>
+
+              <h4 className="font-bold my-3">For Speakership Opportunity,</h4>
+              <p>
+                Email at{" "}
+                <a
+                  href="mailto:nishant.batra@guildlive.com"
+                  className="text-neon-blue hover:underline"
+                >
+                  nishant.batra@guildlive.com
+                </a>
+              </p>
+
+              <h4 className="font-bold my-3">For Partnerships,</h4>
+              <p>
+                Email at{" "}
+                <a
+                  href="mailto:annu@guildlive.com"
+                  className="text-neon-blue hover:underline"
+                >
+                  annu@guildlive.com
+                </a>
+              </p>
             </div>
           </div>
         </div>

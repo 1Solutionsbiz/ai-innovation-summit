@@ -1,4 +1,3 @@
-// src/components/VideoModal.tsx
 import React from 'react';
 
 interface VideoModalProps {
@@ -22,11 +21,17 @@ const VideoModal: React.FC<VideoModalProps> = ({ videoUrl, onClose }) => {
   };
 
   return (
-    <div
-      className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center"
-      onClick={handleBackgroundClick} // Background click handler
-    >
-      <div className="bg-white rounded-lg shadow-lg w-[90%] max-w-3xl relative">
+    <>
+      {/* Overlay */}
+      <div
+        className="fixed inset-0 bg-black bg-opacity-70 z-[9998]"
+        onClick={handleBackgroundClick}
+      />
+
+      {/* Centered Modal */}
+      <div
+        className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-[9999] bg-white rounded-lg shadow-lg w-[90%] max-w-3xl"
+      >
         <button
           onClick={onClose}
           className="absolute top-2 right-2 text-2xl font-bold text-gray-600 hover:text-red-600"
@@ -43,7 +48,7 @@ const VideoModal: React.FC<VideoModalProps> = ({ videoUrl, onClose }) => {
           />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

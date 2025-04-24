@@ -5,7 +5,7 @@ export const Hero = () => {
     <section className="relative min-h-screen pt-16 flex items-center overflow-hidden">
       {/* Background Image */}
       <img
-        src="https://framerusercontent.com/images/ljMQF4DEtvynG65tUOw8Pb1cgSY.png"
+        src="/hero-banner.jpeg"
         alt="Hero Background"
         className="absolute top-0 left-0 w-full h-full object-cover object-left"
         style={{
@@ -28,7 +28,7 @@ export const Hero = () => {
             width: "100%",
             height: "100vh",
             borderRadius: "inherit",
-            backgroundImage: `url('https://framerusercontent.com/images/R9Cu3YeOQ2EMQDkLd7gaJUO4c0.svg')`,
+            backgroundImage: `url('/hero-banner-image.svg')`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "right center",
             backgroundSize: "cover",
@@ -49,7 +49,7 @@ export const Hero = () => {
             </p>
 
             <p className="text-lg md:text-xl mb-10 font-medium">
-              July 10, 2025 | Mumbai, India
+              July 9, 2025 |Taj Santacruz, Mumbai, India
             </p>
           </div>
 
