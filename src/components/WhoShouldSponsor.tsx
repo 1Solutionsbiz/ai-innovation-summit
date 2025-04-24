@@ -1,43 +1,54 @@
-import React from 'react';
-
-export default function WhoShouldSponsor() {
-  const cardData = [
+export const WhoShouldSponsor = () => {
+  const points = [
     {
       title: "Technology companies offering AI solutions.",
+      image: "/networking/1.png",
     },
     {
       title: "Institutions investing in AI-driven innovations.",
+      image: "/networking/2.png",
     },
     {
       title: "Consulting firms providing AI integration services.",
+      image: "/networking/3.png",
     },
   ];
 
   return (
-    <section className="bg-dark text-white py-20 px-6 relative">
-      <div className="max-w-5xl mx-auto relative z-10">
-        {/* Main Heading */}
-        <h2
-          className="font-bold mb-6 text-center z-10 relative font-orbitron"
-          style={{ fontSize: '3rem' }}
-        >
-          Who Should Sponsor?
-        </h2>
+    <section className="bg-neon-blue pb-16">
+      {/* Heading */}
+      <h2
+        className="font-bold text-center py-16 font-orbitron text-black"
+        style={{ fontSize: '3rem' }}
+      >
+        Who Should Partner?
+      </h2>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
-          {cardData.map((card, index) => (
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {points.map((point) => (
             <div
-              key={index}
-              className="bg-[#00ffff] rounded-2xl shadow-md p-6 border-2 border-white flex flex-col items-center text-center relative overflow-hidden transform transition-transform duration-500 hover:scale-105"
+              key={point.title}
+              className="relative bg-gray-900 p-6 shadow-lg border-l-4 border-r-4 border-neon-blue transform transition-transform duration-300 hover:scale-105 "
             >
-              <h3 className="text-lg font-semibold mb-2 text-black font-orbitron">
-                {card.title}
+              <h3 className="text-2xl font-orbitron text-white mb-4 mt-4 text-center">
+                {point.title}
               </h3>
+
+              {/* Optional image (currently commented out) */}
+              {/* <img
+                src={point.image}
+                alt={point.title}
+                className="w-full h-[400px] object-cover rounded-md"
+              /> */}
+
+              <div className="absolute -z-10 top-5 right-5 w-24 h-24 opacity-20">
+                <div className="w-full h-full bg-neon-purple rotate-45 transform origin-center"></div>
+              </div>
             </div>
           ))}
         </div>
       </div>
     </section>
   );
-}
+};
