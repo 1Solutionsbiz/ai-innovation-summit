@@ -79,12 +79,12 @@ const StickyWrapper = () => {
   
 
   return (
-    <div ref={wrapperRef} className="relative w-full h-screen overflow-hidden bg-black pb-10">
-      <div className="flex w-[300vw] h-screen ">
+    <div ref={wrapperRef} className="relative h-100 overflow-hidden bg-black pb-10">
+      <div className="flex w-[300vw] h-100 ">
         {sections.map((section, index) => (
           <div
             key={index}
-            className="video-card w-screen h-screen flex-shrink-0 bg-black  "
+            className="video-card w-screen  flex-shrink-0 bg-black  "
           >
             <VideoSection
               city={section.city}

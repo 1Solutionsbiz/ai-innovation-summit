@@ -14,12 +14,12 @@ const VideoCard: React.FC<VideoCardProps> = ({ videoUrl, imageSrc }) => {
   return (
     <div
       onClick={handleClick}
-      className="cursor-pointer w-full h-full border rounded-lg overflow-hidden shadow hover:shadow-lg transition-all"
+      className="cursor-pointer w-full  border rounded-lg overflow-hidden shadow hover:shadow-lg transition-all"
     >
       <img
         src={imageSrc}
         alt="Video Thumbnail"
-        className="w-full h-full object-cover"
+        className="w-full  object-cover"
       />
     </div>
   );

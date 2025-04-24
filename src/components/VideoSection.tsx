@@ -1,4 +1,3 @@
-// VideoSection.tsx (your updated and final code)
 import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import VideoCard from './VideoCard';
@@ -49,16 +48,16 @@ const VideoSection: React.FC<VideoSectionProps> = ({ city, imageName, videoLinks
 
   return (
     <div
-      className={`mb-12 text-center  z-10 transition-all duration-300 pb-40 pt-120 ${
+      className={`mb-12 text-center z-10 transition-all duration-300 pb-40 pt-120 ${
         isScrolled ? 'bg-black bg-opacity-100' : ''
       }`}
-      style={{ top: '30px' }}
+      style={{ top: '25px' }} // No need for 100vh, let it adjust based on content
     >
       <h2 className="text-4xl font-bold py-10 text-white font-orbitron">
         Watch On Demand Session - {city}
       </h2>
 
-      <div className="px-6 sm:px-12 max-w-7xl mx-auto ">
+      <div className="px-6 sm:px-12 max-w-7xl mx-auto">
         <Slider {...sliderSettings}>
           {videoLinks.map((link, index) => (
             <div key={index} className="p-2">
@@ -73,9 +72,12 @@ const VideoSection: React.FC<VideoSectionProps> = ({ city, imageName, videoLinks
         </Slider>
       </div>
 
-      <button className="btn-gradient px-9 py-3 text-white rounded-full mt-6 ">
-        View All
-      </button>
+      {/* Ensure the button is always visible and centered */}
+      <div className="flex justify-center mt-6 sm:mt-8">
+        <button className="btn-gradient px-9 py-3 text-white rounded-full">
+          View All
+        </button>
+      </div>
     </div>
   );
 };
