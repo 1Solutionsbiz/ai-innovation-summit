@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import VideoCard from '../VideoCard';
 
 interface WatchDemandProps {
@@ -8,24 +8,12 @@ interface WatchDemandProps {
 }
 
 const WatchDemand: React.FC<WatchDemandProps> = ({ city, imageName, videoLinks }) => {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 100);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <div
-      className={` text-center z-10 transition-all duration-300 pb-40 pt-120 ${
-        isScrolled ? 'bg-black bg-opacity-100' : ''
-      }`}
+      className="bg-black text-white text-center z-10 transition-all duration-300 pb-40 pt-120"
       style={{ top: '30px' }}
     >
-      <h2 className="text-4xl font-bold pb-10 text-white font-orbitron">
+      <h2 className="text-4xl font-bold pb-10 font-orbitron">
         Watch On Demand Session - {city}
       </h2>
 
@@ -44,8 +32,6 @@ const WatchDemand: React.FC<WatchDemandProps> = ({ city, imageName, videoLinks }
           ))}
         </div>
       </div>
-
-   
     </div>
   );
 };

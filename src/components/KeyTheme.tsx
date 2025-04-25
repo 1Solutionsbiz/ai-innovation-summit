@@ -3,25 +3,53 @@ import React from 'react';
 export default function KeyTheme() {
   const cardData = [
     {
-      title: 'ROI on AI investments:',
+      title: 'From AI Hype to Business Impact',
       description:
-        'Pinpointing AI use cases that deliver tangible value is a 2025 CIO priority. Success requires identifying initiatives that impact the bottom line.',
+        'Debunking myths, aligning CXO expectations, and building real-world AI narratives rooted in outcomes—not buzzwords.',
+      image: '/key/From-AI-Hype-to-Business-Impact.png'
     },
     {
-      title: 'Scaling AI implementation',
+      title: 'Agentic AI: The Next Enterprise Paradigm',
       description:
-        'Choosing where and how to apply AI is key. Shadow GenAI use brings major risks of data leakage.',
+        'Exploring autonomous agents, their application in enterprise workflows, and how they\'re reshaping decision-making.',
+      image: '/key/Agentic-AI.png'
     },
     {
-      title: 'Proactive cyberthreat intelligence:',
+      title: 'From Pilot to Production: The Scaling Challenge',
       description:
-        'With threat actors growing more sophisticated, protecting IT ecosystems is tougher than ever.',
+        'Why 80% of AI pilots don\'t scale—and how to build robust strategies around people, processes, and platforms.',
+      image: '/key/From-Pilot-to-Production.png'
     },
     {
-      title: 'Agentic AI: Redefining the future of work',
+      title: 'AI + Data Strategy: Laying the Foundation for Scale',
       description:
-        'Beyond GenAI, agentic AI is rising. Are enterprises ready for autonomous tools?',
+        'Ensuring structured, enterprise-wide data readiness for Generative and Agentic AI applications.',
+      image: '/key/AI-Data-Strategy.png'
     },
+    {
+      title: 'People Intelligence: AI-Powered Workforce',
+      description:
+        'Using GenAI to understand employee behavior, drive engagement, and influence strategic decisions.',
+      image: '/key/People-Intelligence.png'
+    },
+    {
+      title: 'Redefining ROI: Measuring Value in the AI Era',
+      description:
+        'Metrics, frameworks, and leadership mindsets required to define and track AI success across business units.',
+      image: '/key/Redefining-ROI.png'
+    },
+    {
+      title: 'Governance, Ethics & Regulation',
+      description:
+        'Evolving board-level frameworks, cybersecurity concerns, bias mitigation, and compliance in the AI age.',
+      image: '/key/Governance.png'
+    },
+    {
+      title: 'Industry Tracks',
+      description:
+        'Manufacturing, Construction, BFSI, Retail – deep dives into how AI is transforming each sector.',
+      image: '/key/industry-icon.png'
+    }
   ];
 
   return (
@@ -48,16 +76,16 @@ export default function KeyTheme() {
           Mastering AI and securing the future
         </div>
 
-        {/* Cards Grid */}
+        {/* Cards Grid - Updated to grid-cols-2 md:grid-cols-4 for better layout with 8 cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
           {cardData.map((card, index) => (
-          <div
-          key={index}
-          className="bg-gray-900 rounded-2xl shadow-md p-6 border-2 border-white flex flex-col items-center text-center relative overflow-hidden transform transition-transform duration-500 hover:scale-105"
-        >
+            <div
+              key={index}
+              className="bg-gray-900 rounded-2xl shadow-md p-6 border-2 border-white flex flex-col items-center text-center relative overflow-hidden transform transition-transform duration-500 hover:scale-105"
+            >
               <img
-                src={`/key/${index + 1}.png`}
-                alt={`Icon ${index + 1}`}
+                src={card.image}
+                alt={`${card.title} icon`}
                 className="w-16 h-16 mb-4 object-contain mix-blend-screen"
               />
               <h3 className="text-lg font-semibold mb-2 text-neon-purple font-orbitron">

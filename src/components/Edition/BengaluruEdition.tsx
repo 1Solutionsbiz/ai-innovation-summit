@@ -1,5 +1,5 @@
 import { Header } from "@/components/Header";
-import { Hero } from "@/components/Hero";
+
 import { PastHighlights } from "@/components/PastHighlights";
 import { Footer } from "@/components/Footer";
 
@@ -11,19 +11,9 @@ import Agenda, { AgendaItem } from "../Agenda";
 import ShouldAttend from "../ShouldAttend";
 import LeaderQuotes from "./LeaderQuotes";
 import WatchDemand from "./DemadVideos";
+import { PastEventHero } from "./PastEventHero";
 
-const agendaData: AgendaItem[] = [
-  { time: "09:00 AM - 09:45 AM", title: "Registration", color: "purple" },
-  { time: "10:00 AM - 11:00 AM", title: "Cloud, AI and Digital Transformation: The Whole Is Greater Than the Sum of Its Parts.", color: "blue" },
-  { time: "11:00 AM - 11:30 AM", title: "Networking Tea/Coffee Break", color: "purple" },
-  { time: "11:30 AM - 12:15 PM", title: "Rethinking Zero-Trust: An AI-Based Approach to Cybersecurity", color: "blue" },
-  { time: "12:15 PM - 12:45 PM", title: "How Humans and AI-Driven Agents Propel Work Success", color: "purple" },
-  { time: "12:45 PM - 01:30 PM", title: "Re-imagining the Future of Work: AI-driven Collaboration and Remote Productivity", color: "blue" },
-  { time: "01:30 PM - 02:15 PM", title: "Networking Luncheon", color: "purple" },
-  { time: "02:15 PM - 03:00 PM", title: "Data+AI: Building an End-To-End Data Strategy for Analytics and Generative AI", color: "blue" },
-  { time: "03:00 PM - 03:45 PM", title: "Responsible AI: Navigating Complexities in Ethical AI Implementation", color: "purple" },
-  { time: "03:45 PM - 05:00 PM", title: "Networking Hi Tea & Conclusion", color: "blue" },
-];
+
 
 const sections = [
   {
@@ -67,23 +57,126 @@ const speakers = [
   { name: 'Kamesh Srinivasan', designation: 'Partner- Data, AI, Automation', company: 'KPMG India', image: '/edition/speakers/kamesh-babu-r.jpg' },
   { name: 'Manish Shukla', designation: 'Head of Generative AI Platform', company: 'NatWest Group', image: '/edition/speakers/manish-shukla.png' },
 ];
+const quotesData = [
+  {
+    image: "/edition/leaders/mukesh-jain.png",
+    name: "Mukesh Jain",
+    title: "CTO and VP - Leading Ai Based Innovation @ Capgemini",
+    quote:
+      "When we talk of digital transformation, it is not just about applications or being digital, it is about how we leverage data and the power of data to be able to get more value.",
+  },
+  {
+    image: "/edition/leaders/amit-joshi.png",
+    name: "Amit Joshi",
+    title: "CISO Cement Business, Adani Enterprises",
+    quote:
+      "When you talk about building an Ai kind of a solution, it really depends on the data being considered, consumed and injected into the solution for correct prediction and generation of data-oriented solution.",
+  },
+];
+const agendaData: AgendaItem[] = [
+  {
+    time: "09:00 – 09:45 AM",
+    title: "Registration",
+    description: "",
+    color: "purple",
+  },
+  {
+    time: "10:00 – 11:00 AM",
+    title: "Cloud, AI and Digital Transformation: The Whole Is Greater Than the Sum of Its Parts.",
+    description: "",
+    color: "blue",
+  },
+  {
+    time: "11:00 – 11:30 AM",
+    title: "Networking Tea/Coffee Break",
+    description: "",
+    color: "purple",
+  },
+  {
+    time: "11:30 – 12:15 PM",
+    title: "Rethinking Zero-Trust: An AI-Based Approach to Cybersecurity",
+    description: "",
+    color: "blue",
+  },
+  {
+    time: "12:15 – 12:45 PM",
+    title: "How Humans and AI-Driven Agents Propel Work Success",
+    description: "",
+    color: "purple",
+  },
+  {
+    time: "12:45 – 01:30 PM",
+    title: "Re-imagining the Future of Work: AI-driven Collaboration and Remote Productivity",
+    description: "",
+    color: "blue",
+  },
+  {
+    time: "01:30 – 02:15 PM",
+    title: "Networking Luncheon",
+    description: "",
+    color: "purple",
+  },
+  {
+    time: "02:15 – 03:00 PM",
+    title: "Data+AI: Building an End-To-End Data Strategy for Analytics and Generative AI",
+    description: "",
+    color: "blue",
+  },
+  {
+    time: "03:00 – 03:45 PM",
+    title: "Responsible AI: Navigating Complexities in Ethical AI Implementation",
+    description: "",
+    color: "purple",
+  },
+  {
+    time: "03:45 – 05:00 PM",
+    title: "Networking Hi Tea & Conclusion",
+    description: "",
+    color: "blue",
+  }
+];
 
 const BengaluruEdition = () => {
   const section = sections[0];
 
   return (
     <div className="min-h-screen">
-      <Header />
-      <Hero />
+      <Header isRegistrationActive={false} />
+      <PastEventHero
+        backgroundImage="/past-hero-banner.png"
+         contentPosition="left"
+        contentBackgroundImage=""
+        heroImage="/cloud_new.png"
+        subheading=""
+        date="7th November 2024, Bengaluru"
+      />
       <PastHighlights />
       <Objectives />
-      <StatsSection />
+      <StatsSection
+        stats={[
+          { label: 'Attendees', value: '200+' },
+          { label: 'Speakers', value: '30+' },
+          { label: 'Sessions', value: '5+' },
+          { label: 'Networking Hrs', value: '8+ hrs' },
+        ]}
+        images={[
+          '/edition/stats/1.png',
+          '/edition/stats/2.png',
+          '/edition/stats/3.png',
+          '/edition/stats/4.png',
+          '/edition/stats/5.png',
+        ]}
+      />
+
+
       <SpeakersSection speakers={speakers} />
-      <Agenda items={agendaData} />
+
       <ShouldAttend />
       <Glimpses />
-      <LeaderQuotes />
+
+      <LeaderQuotes quotes={quotesData} />
       <WatchDemand {...section} />
+      <Agenda items={agendaData}  />
       <Footer />
     </div>
   );

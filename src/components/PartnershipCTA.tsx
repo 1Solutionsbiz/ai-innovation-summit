@@ -25,7 +25,7 @@ export const PartnershipCTA = () => {
             <div className="absolute inset-0 bg-grid-white/10 -z-10" />
             <div className="absolute top-0 right-0 w-32 h-32 bg-neon-orange/20 rounded-full blur-2xl" />
             <img
-              src="partnership.png"
+              src="/partnership.png"
               alt="Partnership"
               className="rounded-lg w-full h-auto object-contain max-h-[500px] transform transition-transform duration-500 ease-in-out group-hover:scale-105"
             />
