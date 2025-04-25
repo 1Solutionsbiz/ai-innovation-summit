@@ -38,7 +38,7 @@ const MovingImageGrid: React.FC<MovingImageGridProps> = ({ formattedData, color 
             ease: "none", // Linear animation for smooth scrolling
             scrollTrigger: {
                 trigger: sectionRef.current, // Pin the entire section
-                pin: true, // Pin the section
+                // pin: true, // Pin the section
                 start: "top 30%", // Start pinning when section top hits 30% from viewport top
                 end: `+=${totalWidth - window.innerWidth}`, // Stop when last image is in view
                 scrub: 1, // Smooth scrolling

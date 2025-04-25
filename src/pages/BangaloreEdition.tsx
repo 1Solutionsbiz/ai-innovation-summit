@@ -103,14 +103,20 @@ const agendaData: AgendaItem[] = [
     }
 ];
 
-
+const socialLinks = {
+    linkedin: "https://www.linkedin.com/showcase/guild-ai-innovation-summit/about/?viewAsMember=true",
+};
 const BangaloreEdition = () => {
     useEffect(() => {
         window.scrollTo(0, 0); // Scrolls to the top of the page
     }, []);
     return (
         <div className="min-h-screen">
-            <Header isRegistrationActive={false} />
+            <Header
+                isRegistrationActive={false}
+                registrationButtonName="Registration Closed"
+                disabledButtonName="Register Now"
+            />
             <Hero
                 backgroundImage="/hero-banner.png"
                 contentBackgroundImage="/hero-banner-image.svg"
@@ -119,13 +125,13 @@ const BangaloreEdition = () => {
                 subheading="From prompt to impact"
                 body="Join the brightest minds in Artificial Intelligence and Innovation at the most impactful AI Summit mastering AI and securing the future."
                 date="October 2025 | Bangalore "
-                
+
                 stats={[
                     { value: "30+", label: "Speakers" },
                     { value: "10+", label: "Workshops" },
                     { value: "500+", label: "Attendees" },
                 ]}
-              
+
             />
             <MovingStrip color="bg-neon-purple" />
             <About />
@@ -149,8 +155,7 @@ const BangaloreEdition = () => {
             <KeyTheme />
             <ShouldAttend />
             <WhoShouldSponsor />
-
-            <Footer />
+            <Footer socialLinks={socialLinks} />
         </div>
     );
 };

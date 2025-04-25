@@ -7,9 +7,15 @@ import { useIsMobile } from "@/hooks/use-mobile";
 
 interface HeaderProps {
   isRegistrationActive?: boolean;
+  registrationButtonName?: string;
+  disabledButtonName?: string;
 }
 
-export const Header = ({ isRegistrationActive = true }: HeaderProps) => {
+export const Header = ({ 
+  isRegistrationActive = true, 
+  registrationButtonName = "Register Now",
+  disabledButtonName = "Registration Closed"
+}: HeaderProps) => {
   const isMobile = useIsMobile();
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
@@ -70,11 +76,11 @@ export const Header = ({ isRegistrationActive = true }: HeaderProps) => {
 
       {isRegistrationActive ? (
         <a href="#register" className="hover:text-neon-blue transition-colors">
-          <Button className="btn-gradient">Register Now</Button>
+          <Button className="btn-gradient">{registrationButtonName}</Button>
         </a>
       ) : (
         <Button className="btn-gradient" disabled>
-          Register Now
+          {disabledButtonName}
         </Button>
       )}
     </>

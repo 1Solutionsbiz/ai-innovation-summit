@@ -104,7 +104,9 @@ const agendaData: AgendaItem[] = [
   }
 ];
 
-
+const socialLinks = {
+  linkedin: "https://www.linkedin.com/showcase/guild-ai-innovation-summit/about/?viewAsMember=true",
+};
 const Index = () => {
   useEffect(() => {
     window.scrollTo(0, 0); // Scrolls to the top of the page
@@ -150,7 +152,7 @@ const Index = () => {
       <ShouldAttend />
       <WhoShouldSponsor />
       <Register />
-      <Footer />
+      <Footer socialLinks={socialLinks} />
     </div>
   );
 };

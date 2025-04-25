@@ -135,16 +135,26 @@ const agendaData: AgendaItem[] = [
     color: "blue",
   }
 ];
-
+const socialLinks = {
+  twitter: "https://x.com/CloudAiSummit",
+  facebook: "https://www.facebook.com/people/CloudAi-Innovation-Summit/61555887803398/",
+  instagram: "https://www.instagram.com/cloudaiinnovationsummit/",
+  linkedin: "https://www.linkedin.com/company/cloud-ai-innovation-summit/",
+};
 const BengaluruEdition = () => {
   const section = sections[0];
 
   return (
     <div className="min-h-screen">
-      <Header isRegistrationActive={false} />
+     
+      <Header
+        isRegistrationActive={false}
+        registrationButtonName="Registration Closed"
+        disabledButtonName="Registration Closed"
+      />
       <PastEventHero
         backgroundImage="/past-hero-banner.png"
-         contentPosition="left"
+        contentPosition="left"
         contentBackgroundImage=""
         heroImage="/cloud_new.png"
         subheading=""
@@ -176,8 +186,8 @@ const BengaluruEdition = () => {
 
       <LeaderQuotes quotes={quotesData} />
       <WatchDemand {...section} />
-      <Agenda items={agendaData}  />
-      <Footer />
+      <Agenda items={agendaData} />
+      <Footer socialLinks={socialLinks} />
     </div>
   );
 };

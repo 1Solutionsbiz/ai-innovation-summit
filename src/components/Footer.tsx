@@ -1,6 +1,6 @@
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
-export const Footer = () => {
+export const Footer = ({ socialLinks }) => {
   return (
     <footer className="bg-dark text-white py-12" id="footer">
       <div className="container mx-auto px-4">
@@ -26,7 +26,6 @@ export const Footer = () => {
               <nav className="space-y-2">
                 <a href="#about" className="block text-gray-300 hover:text-neon-blue transition-colors">About</a>
                 <a href="#speakers" className="block text-gray-300 hover:text-neon-blue transition-colors">Speakers</a>
-                {/* <a href="#schedule" className="block text-gray-300 hover:text-neon-blue transition-colors">Schedule</a> */}
                 <a href="#partners" className="block text-gray-300 hover:text-neon-blue transition-colors">Partners</a>
               </nav>
             </div>
@@ -35,18 +34,26 @@ export const Footer = () => {
             <div>
               <h4 className="font-bold mb-4">Connect With Us</h4>
               <div className="flex space-x-4 mb-4">
-                <a href="#" className="text-gray-300 hover:text-neon-blue transition-colors">
-                  <Twitter className="h-6 w-6" />
-                </a>
-                <a href="#" className="text-gray-300 hover:text-neon-blue transition-colors">
-                  <Facebook className="h-6 w-6" />
-                </a>
-                <a href="#" className="text-gray-300 hover:text-neon-blue transition-colors">
-                  <Instagram className="h-6 w-6" />
-                </a>
-                <a href="#" className="text-gray-300 hover:text-neon-blue transition-colors">
-                  <Linkedin className="h-6 w-6" />
-                </a>
+                {socialLinks?.twitter && (
+                  <a href={socialLinks.twitter} className="text-gray-300 hover:text-neon-blue transition-colors">
+                    <Twitter className="h-6 w-6" />
+                  </a>
+                )}
+                {socialLinks?.facebook && (
+                  <a href={socialLinks.facebook} className="text-gray-300 hover:text-neon-blue transition-colors">
+                    <Facebook className="h-6 w-6" />
+                  </a>
+                )}
+                {socialLinks?.instagram && (
+                  <a href={socialLinks.instagram} className="text-gray-300 hover:text-neon-blue transition-colors">
+                    <Instagram className="h-6 w-6" />
+                  </a>
+                )}
+                {socialLinks?.linkedin && (
+                  <a href={socialLinks.linkedin} className="text-gray-300 hover:text-neon-blue transition-colors">
+                    <Linkedin className="h-6 w-6" />
+                  </a>
+                )}
               </div>
               <p>
                 <a
