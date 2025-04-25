@@ -4,20 +4,10 @@ import { Draggable } from 'gsap/Draggable';
 
 gsap.registerPlugin(Draggable);
 
-const StatsSection = () => {
+const StatsSection = ({ stats = [], images = [] }) => {
   const imageRefs = useRef([]);
   const containerRef = useRef(null);
 
-  const stats = [
-    { label: 'Attendees', value: '200+' },
-    { label: 'Speakers', value: '30+' },
-    { label: 'Sessions', value: '5+' },
-    { label: 'Networking Hrs', value: '8+ hrs' },
-  ];
-
-  const images = [1, 2, 3, 4, 5];
-
-  // Spread out more (non-overlapping, unique zones)
   const positions = [
     { top: '15%', left: '25%' },
     { top: '25%', left: '70%' },
@@ -30,7 +20,6 @@ const StatsSection = () => {
     imageRefs.current.forEach((img, index) => {
       if (!img) return;
 
-      // Bounce animation
       gsap.to(img, {
         y: -15,
         repeat: -1,
@@ -40,17 +29,16 @@ const StatsSection = () => {
         delay: index * 0.1,
       });
 
-      // Make draggable inside container
       Draggable.create(img, {
         type: 'x,y',
         bounds: containerRef.current,
         inertia: true,
         onPress() {
-          gsap.killTweensOf(img, "x,y"); // avoid drag conflict, keep bounce
+          gsap.killTweensOf(img, "x,y");
         }
       });
     });
-  }, []);
+  }, [images]);
 
   return (
     <div className="bg-gray-900 text-white py-16 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
@@ -62,7 +50,7 @@ const StatsSection = () => {
               <h2 className="text-6xl font-orbitron font-bold text-gradient">
                 {stat.value}
               </h2>
-              <p className=" text-gray-300 text-2xl">{stat.label}</p>
+              <p className="text-gray-300 text-2xl">{stat.label}</p>
             </div>
           ))}
         </div>
@@ -78,22 +66,22 @@ const StatsSection = () => {
         ref={containerRef}
         className="w-full md:w-1/2 relative h-[350px] mt-16 md:mt-0"
       >
-        {images.map((num, idx) => (
+        {images.map((imageUrl, idx) => (
           <div
             key={idx}
             ref={(el) => (imageRefs.current[idx] = el)}
             className="absolute rounded-full overflow-hidden border-2 border-white shadow-md cursor-move"
             style={{
-              width: `${(60 + idx * 5) * 2}px`, // smaller gap increases spacing
+              width: `${(60 + idx * 5) * 2}px`,
               height: `${(60 + idx * 5) * 2}px`,
-              top: positions[idx].top,
-              left: positions[idx].left,
+              top: positions[idx]?.top || '50%',
+              left: positions[idx]?.left || '50%',
               transform: 'translate(-50%, 0%)',
             }}
           >
             <img
-              src={`/edition/stats/${num}.png`}
-              alt={`Stat ${num}`}
+              src={imageUrl}
+              alt={`Stat ${idx + 1}`}
               className="w-full h-full object-cover pointer-events-none"
             />
           </div>

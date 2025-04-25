@@ -1,18 +1,20 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { useIsMobile } from "@/hooks/use-mobile";
 
-export const Header = () => {
+interface HeaderProps {
+  isRegistrationActive?: boolean;
+}
+
+export const Header = ({ isRegistrationActive = true }: HeaderProps) => {
   const isMobile = useIsMobile();
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
-  // Handle Dropdown State
-  const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
-
-  // Toggle dropdown on click
-  const handleDropdownClick = () => {
-    setDropdownOpen(prevState => !prevState);
+  const handleDropdownClick = (dropdownName: string) => {
+    setOpenDropdown(prev => prev === dropdownName ? null : dropdownName);
   };
 
   const NavItems = () => (
@@ -22,47 +24,72 @@ export const Header = () => {
       <a href="#partners" className="hover:text-neon-blue transition-colors">Partners</a>
       <a href="#agenda" className="hover:text-neon-blue transition-colors">Agenda</a>
       <a href="#footer" className="hover:text-neon-blue transition-colors">Contact Us</a>
-      <a href="#upcoming-editions" className="hover:text-neon-blue transition-colors">Upcoming Editions</a>
+
+      {/* Dropdown for Upcoming Editions */}
+      <div className="relative">
+        <button 
+          className="hover:text-neon-blue transition-colors" 
+          onClick={() => handleDropdownClick("upcoming")}
+        >
+          Upcoming Editions
+        </button>
+        {openDropdown === "upcoming" && (
+          <div className="absolute left-0 mt-2 w-56 bg-dark-lighter border border-neon-purple/20 shadow-lg z-10">
+            <Link to="/upcoming/bangalore-2025" className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors">
+              Bangalore Edition 2025
+            </Link>
+            <Link to="/upcoming/delhi-ncr-2025" className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors">
+              Delhi-NCR Edition 2025
+            </Link>
+          </div>
+        )}
+      </div>
 
       {/* Dropdown for Previous Editions */}
       <div className="relative">
         <button 
           className="hover:text-neon-blue transition-colors" 
-          onClick={handleDropdownClick}
+          onClick={() => handleDropdownClick("previous")}
         >
           Previous Editions
         </button>
-        {dropdownOpen && (
+        {openDropdown === "previous" && (
           <div className="absolute left-0 mt-2 w-56 bg-dark-lighter border border-neon-purple/20 shadow-lg z-10">
-            <a href="/previous/mumbai-2024" className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors">
+            <Link to="/previous/mumbai-2024" className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors">
               Mumbai Edition 2024
-            </a>
-            <a href="/previous/bengaluru-2024" className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors">
+            </Link>
+            <Link to="/previous/bangalore-2024" className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors">
               Bengaluru Edition 2024
-            </a>
-            <a href="/previous/gurugram-2024" className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors">
+            </Link>
+            <Link to="/previous/gurugram-2024" className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors">
               Gurugram Edition 2024
-            </a>
+            </Link>
           </div>
         )}
       </div>
 
-      <a href="#register" className="hover:text-neon-blue transition-colors">
-        <Button className="btn-gradient">Register Now</Button>
-      </a>
+      {isRegistrationActive ? (
+        <a href="#register" className="hover:text-neon-blue transition-colors">
+          <Button className="btn-gradient">Register Now</Button>
+        </a>
+      ) : (
+        <Button className="btn-gradient" disabled>
+          Register Now
+        </Button>
+      )}
     </>
   );
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-dark/80 border-b border-neon-purple/10 z-10000">
       <div className="container mx-auto px-4 h-26 flex items-center justify-between py-3">
-        <a href="/">
+        <Link to="/">
           <img
             src="/logo/Ai-Innovation_Logo_White.png"
             alt="AI Innovation Summit"
             className="h-20 w-auto"
           />
-        </a>
+        </Link>
 
         {isMobile ? (
           <Sheet>

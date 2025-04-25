@@ -10,6 +10,10 @@ import NotFound from "./pages/NotFound";
 import MumbaiEdition from "./components/Edition/MumbaiEdition";
 import BengaluruEdition from "./components/Edition/BengaluruEdition";
 import GurugramEdition from "./components/Edition/GurugramEdition";
+import WatchOnDemand from "./pages/WatchOnDemand";
+import DelhiEdition from "./pages/DelhiEdition";
+import BangaloreEdition from "./pages/BangaloreEdition";
+import ScrollManager from "./components/ScrollManager";
 
 const queryClient = new QueryClient();
 
@@ -18,11 +22,15 @@ const App = () => (
     <Toaster />
     <Sonner />
     <BrowserRouter>
+    <ScrollManager /> 
       <Routes>
         <Route path="/" element={<Index />} />
-        {/* <Route path="/previous/mumbai-2024" element={<MumbaiEdition />} /> */}
-        <Route path="/previous/bengaluru-2024" element={<BengaluruEdition />} />
-        {/* <Route path="/previous/gurugram-2024" element={<GurugramEdition />} /> */}
+        <Route path="/previous/mumbai-2024" element={<MumbaiEdition />} />
+        <Route path="/previous/bangalore-2024" element={<BengaluruEdition />} />
+        <Route path="/previous/gurugram-2024" element={<GurugramEdition />} />
+        <Route path="/watch-on-demand" element={<WatchOnDemand />} />
+        <Route path="/upcoming/bangalore-2025" element={<BangaloreEdition/>} />
+        <Route path="/upcoming/delhi-ncr-2025" element={<DelhiEdition/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
