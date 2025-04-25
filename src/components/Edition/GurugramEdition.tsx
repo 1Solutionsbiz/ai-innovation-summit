@@ -63,16 +63,25 @@ const quotesData = [
       "The way tons of data is getting created in the last 3-4 years, the amount of data which is getting generated is humongous, so what we need is an infrastructure which can basically manage on-demand situation, and the infrastructure which is a secure infrastructure and has a lot of inbuilt facilities.",
   },
 ];
-
+const socialLinks = {
+  twitter: "https://x.com/CloudAiSummit",
+  facebook: "https://www.facebook.com/people/CloudAi-Innovation-Summit/61555887803398/",
+  instagram: "https://www.instagram.com/cloudaiinnovationsummit/",
+  linkedin: "https://www.linkedin.com/company/cloud-ai-innovation-summit/",
+};
 const GurugramEdition = () => {
   const section = sections[0];
 
   return (
     <div className="min-h-screen">
-    <Header isRegistrationActive={false} />
+      <Header
+        isRegistrationActive={false}
+        registrationButtonName="Registration Closed"
+        disabledButtonName="Registration Closed"
+      />
       <PastEventHero
         backgroundImage="/past-hero-banner.png"
-         contentPosition="left"
+        contentPosition="left"
         contentBackgroundImage=""
         heroImage="/cloud_new.png"
         subheading="Unlocking the Future: Navigating the Confluence of Cloud and AI"
@@ -101,7 +110,7 @@ const GurugramEdition = () => {
 
       <WatchDemand {...section} />
       <LeaderQuotes quotes={quotesData} />
-      <Footer />
+      <Footer socialLinks={socialLinks} />
     </div>
   );
 };

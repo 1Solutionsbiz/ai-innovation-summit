@@ -103,14 +103,20 @@ const agendaData: AgendaItem[] = [
     }
 ];
 
-
+const socialLinks = {
+    linkedin: "https://www.linkedin.com/showcase/guild-ai-innovation-summit/about/?viewAsMember=true",
+};
 const DelhiEdition = () => {
     useEffect(() => {
         window.scrollTo(0, 0); // Scrolls to the top of the page
     }, []);
     return (
         <div className="min-h-screen">
-            <Header isRegistrationActive={false} />
+            <Header
+                isRegistrationActive={false}
+                registrationButtonName="Registration Closed"
+                disabledButtonName="Register Now"
+            />
             <Hero
                 backgroundImage="/hero-banner.png"
                 contentBackgroundImage="/hero-banner-image.svg"
@@ -148,7 +154,7 @@ const DelhiEdition = () => {
             <ShouldAttend />
             <WhoShouldSponsor />
 
-            <Footer />
+            <Footer socialLinks={socialLinks} />
         </div>
     );
 };
