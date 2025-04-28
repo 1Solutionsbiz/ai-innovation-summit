@@ -127,10 +127,10 @@ const BangaloreEdition = () => {
                 date="October 2025 | Bangalore "
 
                 stats={[
-                    { value: "30+", label: "Speakers" },
-                    { value: "10+", label: "Workshops" },
-                    { value: "500+", label: "Attendees" },
-                ]}
+                    { value: "25+", label: "Speakers" },
+                    { value: "8+", label: "Hrs" },
+                    { value: "200+", label: "Attendees" },
+                  ]}
 
             />
             <MovingStrip color="bg-neon-purple" />

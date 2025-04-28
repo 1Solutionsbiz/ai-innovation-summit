@@ -126,10 +126,10 @@ const DelhiEdition = () => {
                 body="Join the brightest minds in Artificial Intelligence and Innovation at the most impactful AI Summit mastering AI and securing the future."
                 date="December 2025 | Delhi-NCR"
                 stats={[
-                    { value: "30+", label: "Speakers" },
-                    { value: "10+", label: "Workshops" },
-                    { value: "500+", label: "Attendees" },
-                ]}
+                    { value: "25+", label: "Speakers" },
+                    { value: "8+", label: "Hrs" },
+                    { value: "200+", label: "Attendees" },
+                  ]}
             />
             <MovingStrip color="bg-neon-purple" />
             <About />
