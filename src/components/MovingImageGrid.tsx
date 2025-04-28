@@ -22,7 +22,7 @@ const MovingImageGrid: React.FC<MovingImageGridProps> = ({ formattedData, color 
             return;
         }
 
-        console.log("Formatted Data:", formattedData);
+        // console.log("Formatted Data:", formattedData);
 
         // Calculate total width for animation
         const imageWidth = 320 + 32; // w-80 (320px) + mx-4 (32px)

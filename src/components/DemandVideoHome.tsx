@@ -9,14 +9,14 @@ const DemandVideoHome: React.FC = () => {
     };
     // Sample data for images and links
     const formattedData = [
-        { image: "/edition/1-mumbai.png", link: "https://www.youtube.com/watch?v=glzVZO7u7rY" },
-        { image: "/edition/2-mumbai.png", link: "https://www.youtube.com/watch?v=udD6TSasVGE" },
-        { image: "/edition/3-mumbai.png", link: "https://www.youtube.com/watch?v=PZ3mbxs4Mx4" },
-        { image: "/edition/4-mumbai.png", link: "https://youtu.be/Ob8fN8ox0aQ?list=TLGGKAfd5aznV9AyMzA0MjAyNQ" },
-        { image: "/edition/5-mumbai.png", link: "https://youtu.be/QDXYOeRKOa0?list=TLGGZudhCP6fE98yMzA0MjAyNQ" },
-        { image: "/edition/6-mumbai.png", link: "https://youtu.be/RA3ujjieS5U?list=TLGGLWh9HrQ4t_cyMzA0MjAyNQ" },
-        { image: "/edition/7-mumbai.png", link: "https://youtu.be/VmpLIrGSooo?list=TLGGIlODjU8dzfQyMzA0MjAyNQ" },
-        { image: "/edition/8-mumbai.png", link: "https://youtu.be/2LMzP3kCzqQ?list=TLGGM4JUFuMnrOEyMzA0MjAyNQ" },
+        // { image: "/edition/1-mumbai.png", link: "https://www.youtube.com/watch?v=glzVZO7u7rY" },
+        // { image: "/edition/2-mumbai.png", link: "https://www.youtube.com/watch?v=udD6TSasVGE" },
+        // { image: "/edition/3-mumbai.png", link: "https://www.youtube.com/watch?v=PZ3mbxs4Mx4" },
+        // { image: "/edition/4-mumbai.png", link: "https://youtu.be/Ob8fN8ox0aQ?list=TLGGKAfd5aznV9AyMzA0MjAyNQ" },
+        // { image: "/edition/5-mumbai.png", link: "https://youtu.be/QDXYOeRKOa0?list=TLGGZudhCP6fE98yMzA0MjAyNQ" },
+        // { image: "/edition/6-mumbai.png", link: "https://youtu.be/RA3ujjieS5U?list=TLGGLWh9HrQ4t_cyMzA0MjAyNQ" },
+        // { image: "/edition/7-mumbai.png", link: "https://youtu.be/VmpLIrGSooo?list=TLGGIlODjU8dzfQyMzA0MjAyNQ" },
+        // { image: "/edition/8-mumbai.png", link: "https://youtu.be/2LMzP3kCzqQ?list=TLGGM4JUFuMnrOEyMzA0MjAyNQ" },
         { image: "/edition/9-mumbai.png", link: "https://youtu.be/5lJ0Y8xHfX8?list=TLGGG55aGMO-tewyMzA0MjAyNQ" },
         { image: "/edition/10-mumbai.png", link: "https://youtu.be/enCwuw4Az8g?list=TLGGLTlYnhS6D7cyMzA0MjAyNQ" },
         { image: "/edition/11-mumbai.png", link: "https://youtu.be/x6l9CRqgdoY?list=TLGGusPJqiJvaqMyMzA0MjAyNQ" },
