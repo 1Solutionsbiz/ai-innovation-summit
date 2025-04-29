@@ -12,47 +12,56 @@ export const PastEventHero = ({
   const isRight = contentPosition === "right";
 
   return (
-    <section className="relative min-h-screen pt-16 flex items-center overflow-hidden">
+    <section className="relative min-h-[60vh] sm:min-h-screen pt-12 sm:pt-16 flex items-center overflow-hidden">
       {/* Background Image */}
       <img
         src={backgroundImage}
         alt="Hero Background"
-        className="absolute top-0 left-0 w-full h-full object-cover object-left"
+        className="absolute top-0 left-0 w-full h-full object-cover object-center sm:object-left"
+        style={{
+          borderRadius: "inherit",
+          objectFit: "cover",
+        }}
       />
 
       {/* Optional Overlay */}
-      {/* {overlay && <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-0" />} */}
+      {overlay && <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-0" />}
 
       {/* Content */}
       <div
-        className={`container p-0 relative z-10 text-white flex  ${
+        className={`container px-4 sm:px-6 lg:px-8 relative z-10 text-white flex ${
           isRight ? "justify-end" : "justify-start"
         }`}
       >
         <div
-          className="w-[50%] p-10 pl-0 bg-black/0 rounded-xl"  // Changed max-w-4xl to w-[70%]
+          className="w-full sm:w-[70%] lg:w-[50%] p-6 sm:p-8 lg:p-10 bg-black/0 rounded-xl"
           style={{
-            height: "100vh",
             backgroundImage: `url('${contentBackgroundImage}')`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: `${contentPosition} center`,
             backgroundSize: "cover",
             textAlign: isRight ? "right" : "left",
+            minHeight: "50vh",
+            height: "auto",
           }}
         >
           {/* Inner Content */}
           <div
-            className={` pl-0 p-5 mt-20 flex flex-col ${
+            className={`p-4 sm:p-5 mt-8 sm:mt-12 flex flex-col ${
               isRight ? "items-end text-right" : "items-start text-left"
             }`}
           >
             <img
               src={heroImage}
               alt="Past Event"
-              className="max-w-100 h-auto mb-6"
+              className="w-full max-w-[300px] sm:max-w-[400px] lg:max-w-[500px] h-auto mb-4 sm:mb-6"
             />
-           <p className="text-xl md:text-2xl mb-4 opacity-90 font-light px-[60px]">{subheading}</p>
-           <p className="text-lg md:text-xl mb-10 font-medium px-[60px]">{date}</p>
+            <p className="text-base sm:text-lg md:text-xl mb-3 sm:mb-4 opacity-90 font-light px-0 sm:px-6 lg:px-10">
+              {subheading}
+            </p>
+            <p className="text-sm sm:text-base md:text-lg mb-6 sm:mb-8 font-medium px-0 sm:px-6 lg:px-10">
+              {date}
+            </p>
           </div>
         </div>
       </div>

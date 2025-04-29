@@ -1,5 +1,5 @@
 import { Button } from "./ui/button";
-
+import { Link } from 'react-router-dom';
 export const PartnershipCTA = () => {
   return (
     <section className="py-24 bg-dark relative overflow-hidden">
@@ -15,9 +15,16 @@ export const PartnershipCTA = () => {
             <p className="text-gray-400 text-lg lg:text-xl mb-8 max-w-xl pl-4">
               More information about becoming a partner will be released shortly.
             </p>
-            <Button size="lg" className="btn-gradient hover:bg-neon-purple/90 text-white px-6 py-3 text-base ml-4">
-              Learn more about Partnerships
-            </Button>
+
+
+            <Link to="/partner-form">
+              <Button
+                size="lg"
+                className="btn-gradient hover:bg-neon-purple/90 text-white px-6 py-3 text-base ml-4"
+              >
+                Learn more about Partnerships
+              </Button>
+            </Link>
           </div>
 
           {/* RIGHT SIDE - IMAGE */}
