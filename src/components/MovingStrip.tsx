@@ -11,7 +11,7 @@ interface MovingStripProps {
 const MovingStrip: React.FC<MovingStripProps> = ({ color = "bg-neon-purple" }) => {
   const stripRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
-  const [duplicates, setDuplicates] = useState(10);
+  const [duplicates, setDuplicates] = useState(2);
 
   const textItems = [
     "AI Solutions’ Showcase",
@@ -30,8 +30,8 @@ const MovingStrip: React.FC<MovingStripProps> = ({ color = "bg-neon-purple" }) =
     });
 
     gsap.to(stripRef.current, {
-      xPercent: -10,
-      ease: "power1.inOut",
+      xPercent: -100,
+      ease: "none",
       scrollTrigger: {
         trigger: stripRef.current,
         start: "top bottom",
@@ -45,7 +45,7 @@ const MovingStrip: React.FC<MovingStripProps> = ({ color = "bg-neon-purple" }) =
       if (!contentRef.current) return;
       const contentWidth = contentRef.current.offsetWidth;
       const viewportWidth = window.innerWidth;
-      const count = Math.ceil(viewportWidth / (contentWidth / textItems.length)) + 2;
+      const count = Math.max(2, Math.ceil(viewportWidth / contentWidth) + 1);
       setDuplicates(count);
     };
 
@@ -55,17 +55,17 @@ const MovingStrip: React.FC<MovingStripProps> = ({ color = "bg-neon-purple" }) =
   }, []);
 
   return (
-    <div className={`${color} overflow-hidden h-20 sm:h-24 md:h-32 flex items-center`}>
+    <div className={`${color} overflow-hidden h-20 sm:h-24 md:h-32 flex items-center w-full`}>
       <div
         ref={stripRef}
-        className="whitespace-nowrap text-white flex font-bold"
+        className="whitespace-nowrap text-white flex font-bold min-w-max"
       >
         {/* Original Content */}
         <div ref={contentRef} className="flex">
           {textItems.map((text, index) => (
             <span
               key={`original-${index}`}
-              className="mx-4 sm:mx-6 md:mx-8 text-xl sm:text-2xl md:text-4xl lg:text-5xl font-orbitron"
+              className="mx-2 sm:mx-4 md:mx-6 lg:mx-8 text-lg sm:text-xl md:text-2xl lg:text-4xl font-orbitron"
             >
               {text}
             </span>
@@ -78,7 +78,7 @@ const MovingStrip: React.FC<MovingStripProps> = ({ color = "bg-neon-purple" }) =
             {textItems.map((text, index) => (
               <span
                 key={`${duplicateIndex}-${index}`}
-                className="mx-4 sm:mx-6 md:mx-8 text-xl sm:text-2xl md:text-4xl lg:text-5xl font-orbitron"
+                className="mx-2 sm:mx-4 md:mx-6 lg:mx-8 text-lg sm:text-xl md:text-2xl lg:text-4xl font-orbitron"
               >
                 {text}
               </span>
