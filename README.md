@@ -1,73 +1,44 @@
-# Welcome to your Lovable project
+# AIInnovationSummit
 
-## Project info
+🚀 **AIInnovationSummit** — A modern event website built with **React**, **TypeScript**, **TailwindCSS**, and enhanced with **GSAP animations**.
 
-**URL**: https://lovable.dev/projects/4301e070-104a-49ff-a445-4a58b38b25c2
+---
 
-## How can I edit this code?
+## 📋 Table of Contents
 
-There are several ways of editing your application.
+- [About](#about)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Available Scripts](#available-scripts)
+- [Folder Structure](#folder-structure)
+- [Deployment](#deployment)
+- [License](#license)
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4301e070-104a-49ff-a445-4a58b38b25c2) and start prompting.
+## 📖 About
 
-Changes made via Lovable will be committed automatically to this repo.
+**AIInnovationSummit** is a next-generation event platform showcasing advancements in Artificial Intelligence.  
+It focuses on smooth animations, responsive design, and scalable TypeScript architecture.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠 Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **React** — Frontend library
+- **TypeScript** — Strongly typed JavaScript
+- **TailwindCSS** — Utility-first CSS framework
+- **GSAP** — High-performance animations
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## ⚙️ Installation
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+First, ensure you have **Node.js** and **npm/yarn** installed.
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/4301e070-104a-49ff-a445-4a58b38b25c2) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+```bash
+git clone https://github.com/your-username/AIInnovationSummit.git
+cd AIInnovationSummit
+npm install
+# or
+yarn install
