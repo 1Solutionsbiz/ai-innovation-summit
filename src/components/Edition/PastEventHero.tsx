@@ -25,7 +25,7 @@ export const PastEventHero = ({
       />
 
       {/* Optional Overlay */}
-      {overlay && <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-0" />}
+      {overlay && <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-0 lg:hidden md:hidden"  />}
 
       {/* Content */}
       <div

@@ -27,26 +27,27 @@ const ShouldAttend: React.FC = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-gray-900 text-white px-6 md:px-16 py-8">
-      <div className="text-center mb-12">
-        <h2 className="text-5xl font-bold font-orbitron text-gradient">
+    <section ref={sectionRef} className="bg-gray-900 text-white px-4 sm:px-6 md:px-16 py-10">
+      <div className="text-center mb-12 px-2">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-orbitron text-gradient leading-tight">
           Why Should Attend?
         </h2>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-8 mx-auto">
-        <div className="flex-[2]">
-          <h2 className="text-3xl font-orbitron pl-10 font-bold text-gradient mb-6">
+      <div className="flex flex-col lg:flex-row gap-10 mx-auto">
+        {/* Left Column */}
+        <div className="lg:flex-[2]">
+          <h2 className="text-2xl sm:text-3xl font-orbitron font-bold text-gradient mb-6 px-2 sm:px-6">
             Audience Profile
           </h2>
 
-          <div className="pb-20 px-10">
+          <div className="px-2 sm:px-6 lg:px-10 pb-10">
             <div>
-              <h3 className="text-lg font-semibold mb-4 hover:scale-105 transition-transform duration-300 flex items-center gap-2">
-                <img src="/decision-making-icon.png" alt="Decision Makers" className="w-10 h-10" />
+              <h3 className="text-base sm:text-lg font-semibold mb-4 hover:scale-105 transition-transform duration-300 flex items-center gap-2">
+                <img src="/decision-making-icon.png" alt="Decision Makers" className="w-8 sm:w-10 h-8 sm:h-10" />
                 Key Decision Makers
               </h3>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 text-sm">
                 {[
                   "CIOs / COOs / CTOs / CFOs / IT & IS Directors",
                   "Chief of Digital Transformation (CDX)",
@@ -75,11 +76,11 @@ const ShouldAttend: React.FC = () => {
             </div>
 
             <div className="mt-12">
-              <h3 className="text-lg font-semibold mb-4 hover:scale-105 transition-transform duration-300 flex items-center gap-2">
-                <img src="/industry-icon.png" alt="Industries" className="w-10 h-10" />
+              <h3 className="text-base sm:text-lg font-semibold mb-4 hover:scale-105 transition-transform duration-300 flex items-center gap-2">
+                <img src="/industry-icon.png" alt="Industries" className="w-8 sm:w-10 h-8 sm:h-10" />
                 Key Industries
               </h3>
-              <ul className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-4 text-sm">
+              <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-4 text-sm">
                 {["BFSI", "Manufacturing", "Retail", "Healthcare", "IT Services", "SaaS"].map(
                   (item, index) => (
                     <li
@@ -95,11 +96,12 @@ const ShouldAttend: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex-1 flex justify-center pb-20">
+        {/* Right Column Image */}
+        <div className="lg:flex-1 flex justify-center px-4 sm:px-6 lg:px-0">
           <img
             src="/attend.png"
             alt="Audience Visual"
-            className="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 object-cover"
+            className="rounded-lg shadow-lg w-full max-w-sm sm:max-w-md object-cover hover:scale-105 transition-transform duration-300"
           />
         </div>
       </div>

@@ -140,8 +140,11 @@
   -ms-overflow-style: none;  /* IE/Edge */
   scrollbar-width: none;     /* Firefox */
 }
-.pt-120{
-  padding-top: 120px;
+@media (min-width:500px){
+
+  .pt-120{
+    padding-top: 80px;
+  }
 }
 .pb-40{
   padding-bottom: 40px!important;

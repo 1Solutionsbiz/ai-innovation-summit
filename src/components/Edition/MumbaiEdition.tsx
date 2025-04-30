@@ -12,6 +12,7 @@ import ShouldAttend from "../ShouldAttend";
 import LeaderQuotes from "./LeaderQuotes";
 import WatchDemand from "./DemadVideos";
 import { PastEventHero } from "./PastEventHero";
+import { useEffect } from "react";
 
 
 
@@ -91,7 +92,9 @@ const socialLinks = {
 };
 const MumbaiEdition = () => {
   const section = sections[0];
-
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page
+  }, []);
   return (
     <div className="min-h-screen">
       <Header
