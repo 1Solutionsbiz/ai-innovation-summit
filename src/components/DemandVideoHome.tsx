@@ -43,7 +43,7 @@ const DemandVideoHome: React.FC = () => {
         <div className="py-8 bg-black top-10">
             {/* Heading */}
             <h2 className="text-center font-orbitron text-white  font-bold text-3xl sm:text-3xl md:text-5xl lg:text-6xl mb-8 pt-10  top-20">
-                Explore Our Image Gallery
+            Watch On-Demand Videos
             </h2>
 
             {/* Moving Image Grid Component */}
