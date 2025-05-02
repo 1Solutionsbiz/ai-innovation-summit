@@ -1,5 +1,5 @@
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
-
+import { Link } from 'react-router-dom';
 export const Footer = ({ socialLinks }) => {
   return (
     <footer className="bg-dark text-white py-12" id="footer">
@@ -13,7 +13,7 @@ export const Footer = ({ socialLinks }) => {
               alt="AI Innovation Summit Logo"
               className="h-24 w-auto mb-4"
             />
-            <p className="text-gray-300 lg:pl-4 sm:pl-0"> 
+            <p className="text-gray-300 lg:pl-4 sm:pl-0">
               From prompt to impact — the premier summit for artificial intelligence leaders and enthusiasts, making it the most impactful AI Summit.
             </p>
           </div>
@@ -99,9 +99,12 @@ export const Footer = ({ socialLinks }) => {
         <div className="flex flex-col md:flex-row justify-between lg:items-center text-sm text-gray-300 gap-4">
           <p className="sm:text-left">© 2025 AI Innovation Summit</p>
           <div className="flex flex-wrap gap-4">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms & Conditions</a>
-            <a href="#" className="hover:text-white transition-colors">Cookie Settings</a>
+
+
+            <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/terms-and-conditions" className="hover:text-white transition-colors">Terms & Conditions</Link>
+
+            {/* <a href="#" className="hover:text-white transition-colors">Cookie Settings</a> */}
           </div>
         </div>
       </div>

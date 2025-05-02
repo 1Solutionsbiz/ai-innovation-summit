@@ -1,6 +1,8 @@
 // src/pages/dashboard/PartnerSectionForm.tsx
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import ReCAPTCHA from "react-google-recaptcha";
 
 interface FormData {
   name: string;
@@ -48,96 +50,58 @@ export const PartnerSectionForm: React.FC = () => {
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
   const [serverError, setServerError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
   useEffect(() => {
-    // 1. Extract UTM parameters and pages
     const params = new URLSearchParams(window.location.search);
-    const utm_source = params.get("utm_source") || "";
-    const utm_medium = params.get("utm_medium") || "";
-    const utm_campaign = params.get("utm_campaign") || "";
-    const utm_term = params.get("utm_term") || "";
-    const utm_content = params.get("utm_content") || "";
-    const landingPage = document.referrer || "";
-    const conversionPage = window.location.href;
-
-    // 2. Fetch public IP
-    const fetchIP = async () => {
-      try {
-        const res = await axios.get("https://api.ipify.org?format=json");
-        setFormData(prev => ({
-          ...prev,
-          ip_address: res.data.ip || ""
-        }));
-      } catch (err) {
-        console.error("IP fetch error:", err);
-      }
-    };
-
-    // 3. Initialize all at once
     setFormData(prev => ({
       ...prev,
-      utm_source_temp: utm_source,
-      utm_medium_temp: utm_medium,
-      utm_campaign_temp: utm_campaign,
-      utm_term_temp: utm_term,
-      utm_content_temp: utm_content,
-      landing_page_temp: landingPage,
-      conversion_page_temp: conversionPage,
+      utm_source_temp: params.get("utm_source") || "",
+      utm_medium_temp: params.get("utm_medium") || "",
+      utm_campaign_temp: params.get("utm_campaign") || "",
+      utm_term_temp: params.get("utm_term") || "",
+      utm_content_temp: params.get("utm_content") || "",
+      landing_page_temp: document.referrer || "",
+      conversion_page_temp: window.location.href,
     }));
 
-    fetchIP();
-
-    // Debug: log extracted UTM
-    console.log({ utm_source, utm_medium, utm_campaign, utm_term, utm_content });
+    axios.get("https://api.ipify.org?format=json")
+      .then(res => {
+        setFormData(prev => ({ ...prev, ip_address: res.data.ip || "" }));
+      })
+      .catch(err => console.error("IP fetch error:", err));
   }, []);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const validate = (): boolean => {
     const newErrors: Partial<Record<keyof FormData, string>> = {};
-    [
-      "name",
-      "designation",
-      "officialEmail",
-      "phoneNumber",
-      "mobileNumber",
-      "industry",
-      "organization",
-      "city",
-      "state",
-      "pincode",
-    ].forEach(key => {
+    const requiredFields = [
+      "name", "designation", "officialEmail", "phoneNumber", "mobileNumber",
+      "industry", "organization", "city", "state", "pincode"
+    ];
+
+    requiredFields.forEach(key => {
       const val = formData[key as keyof FormData] as string;
-      if (!val.trim()) {
-        newErrors[key as keyof FormData] = "This field is required";
-      }
-      if (
-        key === "officialEmail" &&
-        val &&
-        !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)
-      ) {
+      if (!val.trim()) newErrors[key as keyof FormData] = "This field is required";
+      if (key === "officialEmail" && val && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
         newErrors[key as keyof FormData] = "Enter a valid email";
       }
-      if (
-        (key === "phoneNumber" || key === "mobileNumber") &&
-        val &&
-        !/^\d{10}$/.test(val)
-      ) {
+      if ((key === "phoneNumber" || key === "mobileNumber") && val && !/^\d{10}$/.test(val)) {
         newErrors[key as keyof FormData] = "Enter a 10-digit number";
       }
-      if (
-        key === "pincode" &&
-        val &&
-        !/^\d{6}$/.test(val)
-      ) {
+      if (key === "pincode" && val && !/^\d{6}$/.test(val)) {
         newErrors[key as keyof FormData] = "Enter a valid 6-digit pincode";
       }
     });
+
+    if (!recaptchaToken) {
+      setServerError("Please verify you are not a robot.");
+      return false;
+    }
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -146,19 +110,23 @@ export const PartnerSectionForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setServerError(null);
+
     if (!validate()) return;
 
     setSubmitting(true);
     try {
+      const payload = { ...formData, recaptcha_token: recaptchaToken };
+
       const resp = await axios.post(
         "https://darkorange-flamingo-563587.hostingersite.com/api/partner-register",
-        formData,
+        payload,
         { headers: { "Content-Type": "application/json" } }
       );
-      alert(resp.data.message || "Partner registered successfully!");
 
-      // Reset form but keep meta
+      alert(resp.data.message || "Thank You for your registration. We will reach out to you shortly.");
+
       setFormData(prev => ({
+        ...prev,
         name: "",
         designation: "",
         officialEmail: "",
@@ -169,16 +137,9 @@ export const PartnerSectionForm: React.FC = () => {
         city: "",
         state: "",
         pincode: "",
-        utm_source_temp: prev.utm_source_temp,
-        utm_medium_temp: prev.utm_medium_temp,
-        utm_campaign_temp: prev.utm_campaign_temp,
-        utm_term_temp: prev.utm_term_temp,
-        utm_content_temp: prev.utm_content_temp,
-        landing_page_temp: prev.landing_page_temp,
-        conversion_page_temp: prev.conversion_page_temp,
-        ip_address: prev.ip_address,
       }));
       setErrors({});
+      setRecaptchaToken(null);
     } catch (err: any) {
       console.error(err);
       if (err.response?.data?.errors) {
@@ -189,8 +150,7 @@ export const PartnerSectionForm: React.FC = () => {
         setErrors(srv);
       } else {
         setServerError(
-          err.response?.data?.message ||
-          "Something went wrong. Please try again."
+          err.response?.data?.message || "Something went wrong. Please try again."
         );
       }
     } finally {
@@ -204,9 +164,9 @@ export const PartnerSectionForm: React.FC = () => {
         <h2 className="text-4xl font-bold mb-6 text-center text-gradient font-orbitron">
           Partner Section Form
         </h2>
-        {serverError && <div className="text-red-500 text-center mb-4">{serverError}</div>}
+ 
+
         <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full" noValidate>
-          {/* Visible Fields */}
           {[
             { label: "Name", name: "name" },
             { label: "Designation", name: "designation" },
@@ -234,7 +194,6 @@ export const PartnerSectionForm: React.FC = () => {
             </div>
           ))}
 
-          {/* Hidden Meta Fields */}
           {[
             "utm_source_temp",
             "utm_medium_temp",
@@ -253,12 +212,21 @@ export const PartnerSectionForm: React.FC = () => {
             />
           ))}
 
+          <div className="sm:col-span-2 mt-4">
+            <ReCAPTCHA
+              sitekey="6LfhcysrAAAAAGAo4G_2kXen3oBn290aZNX7caV_"
+              onChange={token => setRecaptchaToken(token)}
+              theme="dark"
+            />
+          {serverError && <div className="text-red-500  mb-4">{serverError}</div>}
+          </div>
           <div className="sm:col-span-2 text-center mt-4">
             <button
               type="submit"
               disabled={submitting}
               className={`${submitting ? "bg-gray-600" : "bg-blue-600 hover:bg-blue-700"} text-white px-6 py-2 rounded font-semibold w-full sm:w-auto`}
             >
+         
               {submitting ? "Submitting..." : "Submit"}
             </button>
           </div>

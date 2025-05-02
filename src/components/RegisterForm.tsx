@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import ReCAPTCHA from "react-google-recaptcha";
+
+const RECAPTCHA_SITE_KEY = "6LfhcysrAAAAAGAo4G_2kXen3oBn290aZNX7caV_"; // 🔁 Replace with your actual site key
 
 interface FormDataType {
   name: string;
@@ -47,14 +50,13 @@ export const Register: React.FC = () => {
     conversion_page_temp: "",
     ip_address: ""
   });
+
   const [errors, setErrors] = useState<Partial<Record<keyof FormDataType, string>>>({});
   const [serverError, setServerError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
-  const industries = [
-    "Media & Entertainment", "Retail", "Manufacturing", "Automotive", "Telecom",
-    "Ecommerce", "Oil & Gas", "IT", "Healthcare", "Real Estate", "Other"
-  ];
+  const industries = ["Media & Entertainment", "Retail", "Manufacturing", "Automotive", "Telecom", "Ecommerce", "Oil & Gas", "IT", "Healthcare", "Real Estate", "Other"];
   const employeeSizes = ["0-100", "100-200", "200-300", "300-400", "400-500", "500+"];
 
   useEffect(() => {
@@ -73,17 +75,11 @@ export const Register: React.FC = () => {
     fetch('https://api.ipify.org?format=json')
       .then(res => res.json())
       .then(data => {
-        setFormData(prev => ({
-          ...prev,
-          ip_address: data.ip || ''
-        }));
-      })
-      .catch(err => console.error('IP fetch error:', err));
+        setFormData(prev => ({ ...prev, ip_address: data.ip || '' }));
+      });
   }, []);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value, type } = e.target;
     const checked = (e.target as HTMLInputElement).checked;
     setFormData(prev => ({
@@ -96,14 +92,22 @@ export const Register: React.FC = () => {
     const newErrors: Partial<Record<keyof FormDataType, string>> = {};
     for (const key in formData) {
       const val = formData[key as keyof FormDataType];
-      if (key === "termsAccepted" || key === "detailsDisclosure") {
-        if (!val) newErrors[key as keyof FormDataType] = "This field is required.";
-      } else if (!val || (typeof val === "string" && !val.trim())) {
-        if (!key.endsWith('_temp') && key !== 'ip_address') {
+      const isOptional = key === "personalEmail" || key.endsWith("_temp") || key === "ip_address";
+
+      if (!isOptional) {
+        if ((key === "termsAccepted" || key === "detailsDisclosure") && !val) {
+          newErrors[key as keyof FormDataType] = "This field is required.";
+        } else if (typeof val === "string" && !val.trim()) {
           newErrors[key as keyof FormDataType] = "This field is required.";
         }
       }
     }
+
+    if (!recaptchaToken) {
+      alert("Please complete the reCAPTCHA.");
+      return false;
+    }
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -116,12 +120,13 @@ export const Register: React.FC = () => {
 
     setSubmitting(true);
     try {
+      const payload = { ...formData, recaptchaToken };
       const resp = await axios.post(
         "https://darkorange-flamingo-563587.hostingersite.com/api/register",
-        formData,
+        payload,
         { headers: { "Content-Type": "application/json" } }
       );
-      alert(resp.data.message || "Registered successfully!");
+      alert(resp.data.message || "Thank You for your registration. We will reach out to you shortly. ");
       setFormData({
         name: "",
         designation: "",
@@ -145,6 +150,7 @@ export const Register: React.FC = () => {
         ip_address: ""
       });
       setErrors({});
+      setRecaptchaToken(null);
     } catch (err: any) {
       console.error(err);
       if (err.response?.data?.errors) {
@@ -154,10 +160,7 @@ export const Register: React.FC = () => {
         }
         setErrors(srvErrs);
       } else {
-        setServerError(
-          err.response?.data?.message ||
-          "Something went wrong. Please try again."
-        );
+        setServerError("Something went wrong. Please try again.");
       }
     } finally {
       setSubmitting(false);
@@ -171,12 +174,10 @@ export const Register: React.FC = () => {
           Register Now for AI Innovation Summit
         </h2>
 
-        {serverError && (
-          <div className="mb-4 text-red-400 text-center">{serverError}</div>
-        )}
+        {serverError && <div className="mb-4 text-red-400 text-center">{serverError}</div>}
 
         <form onSubmit={handleSubmit} noValidate className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Hidden UTM & Meta Fields */}
+          {/* Hidden Fields */}
           <input type="hidden" name="utm_campaign_temp" value={formData.utm_campaign_temp} />
           <input type="hidden" name="utm_medium_temp" value={formData.utm_medium_temp} />
           <input type="hidden" name="utm_source_temp" value={formData.utm_source_temp} />
@@ -186,14 +187,14 @@ export const Register: React.FC = () => {
           <input type="hidden" name="conversion_page_temp" value={formData.conversion_page_temp} />
           <input type="hidden" name="ip_address" value={formData.ip_address} />
 
-          {/* Text Fields */}
+          {/* Input Fields */}
           {[
             { name: "name", label: "Name" },
             { name: "designation", label: "Designation" },
             { name: "company", label: "Company" },
             { name: "contactNumber", label: "Contact Number" },
             { name: "officialEmail", label: "Official Email" },
-            { name: "personalEmail", label: "Personal Email" },
+            { name: "personalEmail", label: "Personal Email (optional)" },
             { name: "city", label: "City" },
             { name: "pincode", label: "Pincode" }
           ].map(field => (
@@ -222,13 +223,9 @@ export const Register: React.FC = () => {
               className="w-full border border-gray-300 rounded px-3 py-2 text-black"
             >
               <option value="">Select Industry</option>
-              {industries.map(i => (
-                <option key={i} value={i}>{i}</option>
-              ))}
+              {industries.map(i => <option key={i} value={i}>{i}</option>)}
             </select>
-            {errors.industry && (
-              <p className="text-red-400 text-sm mt-1">{errors.industry}</p>
-            )}
+            {errors.industry && <p className="text-red-400 text-sm mt-1">{errors.industry}</p>}
           </div>
 
           {/* Employee Size */}
@@ -241,20 +238,12 @@ export const Register: React.FC = () => {
               className="w-full border border-gray-300 rounded px-3 py-2 text-black"
             >
               <option value="">Select Size</option>
-              {employeeSizes.map(size => (
-                <option key={size} value={size}>{size}</option>
-              ))}
+              {employeeSizes.map(size => <option key={size} value={size}>{size}</option>)}
             </select>
-            {errors.employeeSize && (
-              <p className="text-red-400 text-sm mt-1">{errors.employeeSize}</p>
-            )}
+            {errors.employeeSize && <p className="text-red-400 text-sm mt-1">{errors.employeeSize}</p>}
           </div>
 
-          <div className="md:col-span-2">
-            <span>We respect your privacy and will never share your information.</span>
-          </div>
-
-          {/* Terms & Conditions */}
+          {/* Terms and Disclosure */}
           <div className="md:col-span-2">
             <label className="flex items-start space-x-3">
               <input
@@ -268,6 +257,7 @@ export const Register: React.FC = () => {
             </label>
             {errors.termsAccepted && <p className="text-red-400 text-sm mt-1">{errors.termsAccepted}</p>}
           </div>
+
           <div className="md:col-span-2">
             <label className="flex items-start space-x-3">
               <input
@@ -277,17 +267,26 @@ export const Register: React.FC = () => {
                 onChange={handleChange}
                 className="mt-1"
               />
-              <span>I confirm my agreement to disclose my details to The Guild, as well as the partners and sponsors of the event.</span>
+              <span>I agree to the disclosure of details</span>
             </label>
             {errors.detailsDisclosure && <p className="text-red-400 text-sm mt-1">{errors.detailsDisclosure}</p>}
           </div>
 
-          {/* Submit Button */}
+          {/* reCAPTCHA */}
           <div className="md:col-span-2">
+            <ReCAPTCHA
+              sitekey={RECAPTCHA_SITE_KEY}
+              onChange={token => setRecaptchaToken(token)}
+              theme="dark"
+            />
+          </div>
+
+          {/* Submit */}
+          <div className="md:col-span-2 text-center">
             <button
               type="submit"
               disabled={submitting}
-              className={`w-full text-center ${submitting ? "bg-gray-600" : "bg-blue-600 hover:bg-blue-700"} text-white btn-gradient font-medium px-3 py-2 rounded text-lg`}
+              className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded"
             >
               {submitting ? "Submitting..." : "Submit"}
             </button>

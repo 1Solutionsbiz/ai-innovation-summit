@@ -21,6 +21,8 @@ import Login from "./pages/auth/Login";
 import Dashboard from "./pages/dashboard/Dashboard";
 import { RequireAuth } from "@/components/layout/RequireAuth";
 import PartnerForm from "./pages/PartnerForm";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 const queryClient = new QueryClient();
 
@@ -43,7 +45,7 @@ const App: React.FC = () => (
             </RequireAuth>
           }
         />
-       <Route path="/partner-form" element={<PartnerForm />}/>
+        <Route path="/partner-form" element={<PartnerForm />} />
         {/* Public site routes */}
         <Route path="/" element={<Index />} />
         <Route path="/previous/mumbai-2024" element={<MumbaiEdition />} />
@@ -52,7 +54,10 @@ const App: React.FC = () => (
         <Route path="/watch-on-demand" element={<WatchOnDemand />} />
         <Route path="/upcoming/bangalore-2025" element={<BangaloreEdition />} />
         <Route path="/upcoming/delhi-ncr-2025" element={<DelhiEdition />} />
-        
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+
+
 
         {/* 404 */}
         <Route path="*" element={<NotFound />} />
