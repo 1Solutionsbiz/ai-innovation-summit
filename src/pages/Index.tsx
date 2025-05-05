@@ -16,6 +16,7 @@ import Agenda, { AgendaItem } from "@/components/Agenda"; // Import Agenda and A
 import { PartnershipCTA } from "@/components/PartnershipCTA";
 import DemandVideoHome from "@/components/DemandVideoHome";
 import { useEffect } from "react";
+import { Speakers } from "@/components/Speakers";
 
 const agendaData: AgendaItem[] = [
   {
@@ -135,7 +136,7 @@ const Index = () => {
       <MovingStrip color="bg-neon-blue" />
       <KeyPoints />
       <PastHighlights />
-
+{/* <Speakers/> */}
       {/* <div className=" bg-black">
         <StickyWrapper />
       </div> */}
