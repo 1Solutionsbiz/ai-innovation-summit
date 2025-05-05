@@ -135,22 +135,25 @@ const Index = () => {
       <About />
       <MovingStrip color="bg-neon-blue" />
       <KeyPoints />
+        {/* Include the Agenda component with agendaData as prop */}
+        <Agenda items={agendaData} eventDetails={{
+        date: "09 July 2025",
+        venue: "Taj Santacruz, Mumbai",
+        audience: "200+ Enterprise Technology Leaders"
+      }} />
+       <Speakers />
+       <KeyTheme />
       <PastHighlights />
-{/* <Speakers/> */}
+     
       {/* <div className=" bg-black">
         <StickyWrapper />
       </div> */}
       <DemandVideoHome />
 
-      {/* Include the Agenda component with agendaData as prop */}
-      <Agenda items={agendaData} eventDetails={{
-        date: "09 July 2025",
-        venue: "Taj Santacruz, Mumbai",
-        audience: "200+ Enterprise Technology Leaders"
-      }} />
+    
 
       <PartnershipCTA />
-      <KeyTheme />
+    
       <ShouldAttend />
       <WhoShouldSponsor />
       <Register />

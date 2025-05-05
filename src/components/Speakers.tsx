@@ -11,34 +11,29 @@ import { useIsMobile } from "@/hooks/use-mobile";
 
 const SPEAKERS = [
   {
-    name: "Dr. Sarah Johnson",
-    role: "AI Research Director, Google",
-    image: "photo-1573496359142-b8d87734a5a2",
+    name: "(Moderator) Anup Purohit",
+    role: "Ex-Global CIO, Wipro",
+    panel: "Data, AI & the New Age of Business Intelligence",
+    time: "12:45 – 01:30 PM",
+    linkedin: "https://www.linkedin.com/in/anup-purohit-8958b21/",
+    image: "/speakers/anup-purohit.png",
   },
   {
-    name: "Michael Chen",
-    role: "CTO, OpenAI",
-    image: "photo-1560250097-0b93528c311a",
+    name: "Aashish Kshetry",
+    role: "CIO & VP-IT, Asian Paints",
+    panel:
+      "From AI Vision to Enterprise Value: Scaling with Strategy, Governance & ROI",
+    time: "10:15 – 11:00 AM",
+    linkedin: "https://www.linkedin.com/in/aashish-kshetry-9090234/",
+    image: "/speakers/ashish-kshetry.png",
   },
   {
-    name: "Emma Wilson",
-    role: "AI Ethics Professor, MIT",
-    image: "photo-1494790108377-be9c29b29330",
-  },
-  {
-    name: "David Rodriguez",
-    role: "Head of AI, Microsoft",
-    image: "photo-1507003211169-0a1dd7228f2d",
-  },
-  {
-    name: "Dr. Aisha Khan",
-    role: "Neural Networks Specialist, Stanford",
-    image: "photo-1580489944761-15a19d654956",
-  },
-  {
-    name: "James Wilson",
-    role: "Founder, AI Ventures",
-    image: "photo-1531427186611-ecfd6d936c79",
+    name: "Mukesh Jain",
+    role: "CTO, Executive Vice President, Capgemini",
+    panel: "Data, AI & the New Age of Business Intelligence",
+    time: "12:45 – 01:30 PM",
+    linkedin: "https://www.linkedin.com/in/mukeshjaincoach/",
+    image: "/speakers/mukesh-jain.png",
   },
 ];
 
@@ -46,15 +41,16 @@ export const Speakers = () => {
   const isMobile = useIsMobile();
 
   return (
-    <section id="speakers" className="py-20 bg-black text-white">
+    <section id="speakers" className="py-[80px] lg:py-[150px] sm:py-[60px] bg-black text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-orbitron">
-            Meet the Speakers
+          <h2 className="text-4xl lg:text-6xl md:text-4xl sm:text-4xl font-bold mb-4 font-orbitron">
+            Visionary Speakers
           </h2>
-          <p className="text-lg max-w-2xl mx-auto text-gray-300">
-            Learn from industry leaders who are pioneering the future of artificial intelligence.
-          </p>
+          {/* <p className="text-lg max-w-2xl mx-auto text-white">
+            Learn from industry leaders who are pioneering the future of
+            artificial intelligence.
+          </p> */}
         </div>
 
         {isMobile ? (
@@ -66,10 +62,12 @@ export const Speakers = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
+
             <div className="flex justify-center mt-4">
-              <CarouselPrevious className="static translate-y-0 mr-2" />
-              <CarouselNext className="static translate-y-0 ml-2" />
+              <CarouselPrevious className="static translate-y-0 mr-2 w-4 h-4 text-sm" />
+              <CarouselNext className="static translate-y-0 ml-2 w-4 h-4 text-sm" />
             </div>
+
           </Carousel>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -78,31 +76,38 @@ export const Speakers = () => {
             ))}
           </div>
         )}
-
-        <div className="text-center mt-12">
-          <Button className="btn-gradient text-white">
-            View Full Speaker Lineup
-          </Button>
-        </div>
       </div>
     </section>
   );
 };
 
 const SpeakerCard = ({ speaker }: { speaker: typeof SPEAKERS[0] }) => (
-  <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+  <Card className="overflow-hidden hover:shadow-lg transition-shadow hover:scale-105 transition-all ease-in-out  ">
     <CardContent className="p-0">
-      <img
-        src={`https://images.unsplash.com/${speaker.image}?auto=format&fit=crop&w=800&q=80`}
-        alt={speaker.name}
-        className="w-full h-64 object-cover"
-      />
-      <div className="p-6">
-        <h3 className="font-bold text-xl mb-1 font-orbitron">{speaker.name}</h3>
-        <p className="text-gray-500 mb-3">{speaker.role}</p>
-        <Button variant="outline" size="sm">
-          View Bio
-        </Button>
+      <div className="w-full h-64 bg-purple-500 flex items-center justify-center">
+        <img
+          src={speaker.image}
+          alt={speaker.name}
+          className="w-full h-full object-cover "
+        />
+      </div>
+      <div className="p-4 md:p-6">
+        <h3 className="font-bold text-lg md:text-xl mb-1 font-orbitron ">
+          {speaker.name}
+        </h3>
+        <p className=" text-sm md:text-base">{speaker.role}</p>
+        <p className="text-sm  mt-2 ">{speaker.time}</p>
+        <p className="text-sm  mb-3 ">
+          Panel: "{speaker.panel}"
+        </p>
+        <a
+          href={speaker.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-400 text-sm hover:underline"
+        >
+          View LinkedIn
+        </a>
       </div>
     </CardContent>
   </Card>

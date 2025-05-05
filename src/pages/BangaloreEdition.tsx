@@ -15,6 +15,7 @@ import Agenda, { AgendaItem } from "@/components/Agenda"; // Import Agenda and A
 import { PartnershipCTA } from "@/components/PartnershipCTA";
 import DemandVideoHome from "@/components/DemandVideoHome";
 import { useEffect } from "react";
+import { Speakers } from "@/components/Speakers";
 
 const agendaData: AgendaItem[] = [
     {
@@ -136,6 +137,15 @@ const BangaloreEdition = () => {
             <About />
             <MovingStrip color="bg-neon-blue" />
             <KeyPoints />
+            
+            {/* Include the Agenda component with agendaData as prop */}
+            <Agenda items={agendaData} eventDetails={{
+                date: "09 July 2025",
+                venue: "Taj Santacruz, Mumbai",
+                audience: "200+ Enterprise Technology Leaders"
+            }} />
+             <Speakers />
+              <KeyTheme />
             <PastHighlights />
 
             {/* <div className=" bg-black">
@@ -143,15 +153,9 @@ const BangaloreEdition = () => {
       </div> */}
             <DemandVideoHome />
 
-            {/* Include the Agenda component with agendaData as prop */}
-            <Agenda items={agendaData} eventDetails={{
-                date: "09 July 2025",
-                venue: "Taj Santacruz, Mumbai",
-                audience: "200+ Enterprise Technology Leaders"
-            }} />
 
             <PartnershipCTA />
-            <KeyTheme />
+          
             <ShouldAttend />
             <WhoShouldSponsor />
             <Footer socialLinks={socialLinks} />
