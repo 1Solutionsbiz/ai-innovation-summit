@@ -30,7 +30,7 @@ const ShouldAttend: React.FC = () => {
     <section ref={sectionRef} className="bg-gray-900 text-white px-4 sm:px-6 md:px-16 py-10">
       <div className="text-center mb-12 px-2">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-orbitron text-gradient leading-tight">
-          Why Should Attend?
+          Who Should Attend?
         </h2>
       </div>
 
