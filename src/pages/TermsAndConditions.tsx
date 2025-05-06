@@ -1,8 +1,11 @@
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const TermsAndConditions: React.FC = () => {
+     useEffect(() => {
+          window.scrollTo(0, 0); // Scrolls to the top of the page
+      }, []);
   const socialLinks = {
     linkedin: "https://www.linkedin.com/showcase/guild-ai-innovation-summit/about/?viewAsMember=true",
   };
