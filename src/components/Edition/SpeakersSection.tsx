@@ -9,7 +9,7 @@ type Speaker = {
 
 const SpeakersSection = ({ speakers }: { speakers: Speaker[] }) => {
   return (
-    <div className="bg-black py-16 px-4 sm:px-6 md:px-12 lg:px-24">
+    <div className="bg-black py-16 px-4 sm:px-6 md:px-12 lg:px-24" id='speakers'>
       <div className="container mx-auto">
 
         {/* Heading */}
