@@ -57,7 +57,7 @@ export const Register: React.FC = () => {
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
   const industries = ["Media & Entertainment", "Retail", "Manufacturing", "Automotive", "Telecom", "Ecommerce", "Oil & Gas", "IT", "Healthcare", "Real Estate", "Other"];
-  const employeeSizes = ["0-100", "100-200", "200-300", "300-400", "400-500", "500+"];
+  const employeeSizes = ["0-100", "100-200", "200-300", "300-400", "400-500", "500-1000","1000-5000","5000+"];
 
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
