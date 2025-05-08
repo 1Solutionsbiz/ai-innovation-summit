@@ -29,6 +29,32 @@ const SPEAKERS = [
     linkedin: "https://www.linkedin.com/in/anup-purohit-8958b21/",
     image: "/speakers/anup-purohit.png",
   },
+  {
+    name: "Tarun Pandey",
+    role: "Chief Technology Officer, Aditya Birla Health Insurance Company Limited",
+    linkedin: "https://www.linkedin.com/in/tarunpandey/",
+    image: "/speakers/tarun-pandey.png",
+  },
+  {
+    name: "Hetal Presswala",
+    role: "Chief Information Security Officer, Kalpatru Projects International Limited",
+    linkedin: "https://www.linkedin.com/in/hetal-presswala/",
+    image: "/speakers/hetal-presswala.png",
+  },
+  {
+    name: "Aliasgar Karachiwala",
+    role: "EVP & IT Head - Applications, Automation, AI and Business Solutions Group RBL Bank",
+    linkedin: "https://www.linkedin.com/in/aliasgarkarachiwala/",
+    image: "/speakers/aliasgar-karachiwala.png",
+  },
+
+
+  {
+    name: "Amit Joshi",
+    role: "CISO, Hindalco Industries Limited ",
+    linkedin: "https://www.linkedin.com/in/amit-joshi-ba7a886/",
+    image: "/speakers/amit-joshi.png",
+  },
 ];
 
 export const Speakers = () => {
