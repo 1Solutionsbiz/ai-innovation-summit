@@ -24,22 +24,10 @@ const SPEAKERS = [
     image: "/speakers/mukesh-jain.png",
   },
   {
-    name: "Anup Purohit",
-    role: "Ex-Global CIO, Wipro",
-    linkedin: "https://www.linkedin.com/in/anup-purohit-8958b21/",
-    image: "/speakers/anup-purohit.png",
-  },
-  {
     name: "Tarun Pandey",
     role: "Chief Technology Officer, Aditya Birla Health Insurance Company Limited",
     linkedin: "https://www.linkedin.com/in/tarunpandey/",
     image: "/speakers/tarun-pandey.png",
-  },
-  {
-    name: "Hetal Presswala",
-    role: "Chief Information Security Officer, Kalpatru Projects International Limited",
-    linkedin: "https://www.linkedin.com/in/hetal-presswala/",
-    image: "/speakers/hetal-presswala.png",
   },
   {
     name: "Aliasgar Karachiwala",
@@ -48,12 +36,25 @@ const SPEAKERS = [
     image: "/speakers/aliasgar-karachiwala.png",
   },
 
-
   {
     name: "Amit Joshi",
     role: "CISO, Hindalco Industries Limited ",
     linkedin: "https://www.linkedin.com/in/amit-joshi-ba7a886/",
     image: "/speakers/amit-joshi.png",
+  },
+
+  {
+    name: "Hetal Presswala",
+    role: "Chief Information Security Officer, Kalpatru Projects International Limited",
+    linkedin: "https://www.linkedin.com/in/hetal-presswala/",
+    image: "/speakers/hetal-presswala.png",
+  },
+
+  {
+    name: "Anup Purohit",
+    role: "Ex-Global CIO, Wipro",
+    linkedin: "https://www.linkedin.com/in/anup-purohit-8958b21/",
+    image: "/speakers/anup-purohit.png",
   },
 ];
 
