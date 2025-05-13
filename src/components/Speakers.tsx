@@ -11,6 +11,12 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { FaLinkedin } from "react-icons/fa"; // LinkedIn icon
 
 const SPEAKERS = [
+   {
+    name: "Dipu KV",
+    role: "Senior President, Bajaj Allianz General Insurance",
+    linkedin: "https://www.linkedin.com/in/kvdipu/",
+    image: "/speakers/dipu-kv.png",
+  },
   {
     name: "Aashish Kshetry",
     role: "CIO & VP-IT, Asian Paints",
@@ -29,6 +35,31 @@ const SPEAKERS = [
     linkedin: "https://www.linkedin.com/in/tarunpandey/",
     image: "/speakers/tarun-pandey.png",
   },
+   {
+    name: "Sudeep Mazumder ",
+    role: "Global CDIO, PGP Glass Pvt. Ltd.",
+    linkedin: "https://www.linkedin.com/in/mazumdersudip/",
+    image: "/speakers/sudip-mazumdar.png",
+  },
+   {
+    name: "Vineet Shukla",
+    role: "CTO – Mahindra Teqo",
+    linkedin: "https://www.linkedin.com/in/shuklavineet/",
+    image: "/speakers/vineet-shukla.png",
+  },
+  {
+    name: "Vijaya Kadiyala",
+    role: " Executive Director, India Head of Enterprise Architecture, DBS Bank ",
+    linkedin: "https://www.linkedin.com/in/vijaya-kadiyala/",
+    image: "/speakers/vijaya.png",
+  },
+    {
+    name: "Tejasvi Addagada",
+    role: " Senior Vice President, Head- Enterprise Data Management, Data Office, HDFC Bank ",
+    linkedin: "https://www.linkedin.com/in/tejasviaddagada/",
+    image: "/speakers/tejaswi.png",
+  },
+ 
   {
     name: "Aliasgar Karachiwala",
     role: "EVP & IT Head - Applications, Automation, AI and Business Solutions Group RBL Bank",
@@ -49,13 +80,30 @@ const SPEAKERS = [
     linkedin: "https://www.linkedin.com/in/hetal-presswala/",
     image: "/speakers/hetal-presswala.png",
   },
-
+  
+ 
+  
+    {
+    name: "Rajat Mathur",
+    role: "Partner, BCG (Boston Consulting Group)",
+    linkedin: "https://www.linkedin.com/in/rajat2000/",
+    image: "/speakers/rajat-mathur.png",
+  },
+ 
+  
   {
     name: "Anup Purohit",
     role: "Ex-Global CIO, Wipro",
     linkedin: "https://www.linkedin.com/in/anup-purohit-8958b21/",
     image: "/speakers/anup-purohit.png",
   },
+  {
+    name: "Sudipta Ghosh",
+    role: " Partner, PwC India",
+    linkedin: "https://www.linkedin.com/in/sudiptaghosh/",
+    image: "/speakers/sudipta-ghosh.png",
+  },
+
 ];
 
 export const Speakers = () => {
