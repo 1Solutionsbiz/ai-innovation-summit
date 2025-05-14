@@ -11,6 +11,12 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import { FaLinkedin } from "react-icons/fa"; // LinkedIn icon
 
 const SPEAKERS = [
+  {
+    name:"Parvez Mulla",
+    role:"MD & CEO, Fedbank Financial Services",
+    linkedin:"https://www.linkedin.com/in/parvez-mulla-b796044/",
+    image:"/speakers/parvez-mulla.png",
+  },
    {
     name: "Dipu KV",
     role: "Senior President, Bajaj Allianz General Insurance",
@@ -46,6 +52,12 @@ const SPEAKERS = [
     role: "CTO – Mahindra Teqo",
     linkedin: "https://www.linkedin.com/in/shuklavineet/",
     image: "/speakers/vineet-shukla.png",
+  },
+   {
+    name: "Nishant Pradhan",
+    role: "Chief AI Officer, Mirae Asset Mutual Fund (India)",
+    linkedin: "https://www.linkedin.com/in/pradhannishant/",
+    image: "/speakers/nishant-pradhan.png",
   },
   {
     name: "Vijaya Kadiyala",
