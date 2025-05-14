@@ -99,7 +99,7 @@ const agendaData: AgendaItem[] = [
   },
   {
     time: "05:00 – 07:00 PM",
-    title: "Cocktails, Networking & CXO Mixer",
+    title: "Networking & CXO Mixer",
     description: "Unwind and connect over cocktails in a casual CXO‑only networking environment.",
     color: "blue",
   }
@@ -135,25 +135,18 @@ const Index = () => {
       <About />
       <MovingStrip color="bg-neon-blue" />
       <KeyPoints />
+       <Speakers />
         {/* Include the Agenda component with agendaData as prop */}
         <Agenda items={agendaData} eventDetails={{
         date: "09 July 2025",
         venue: "Taj Santacruz, Mumbai",
         audience: "200+ Enterprise Technology Leaders"
       }} />
-       <Speakers />
+      
        <KeyTheme />
       <PastHighlights />
-     
-      {/* <div className=" bg-black">
-        <StickyWrapper />
-      </div> */}
       <DemandVideoHome />
-
-    
-
       <PartnershipCTA />
-    
       <ShouldAttend />
       <WhoShouldSponsor />
       <Register />
