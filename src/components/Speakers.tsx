@@ -42,7 +42,7 @@ const SPEAKERS = [
     image: "/speakers/tarun-pandey.png",
   },
    {
-    name: "Sudeep Mazumder ",
+    name: "Sudip Mazumder ",
     role: "Global CDIO, PGP Glass",
     linkedin: "https://www.linkedin.com/in/mazumdersudip/",
     image: "/speakers/sudip-mazumdar.png",
