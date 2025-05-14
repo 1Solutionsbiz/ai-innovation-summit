@@ -37,13 +37,13 @@ const SPEAKERS = [
   },
   {
     name: "Tarun Pandey",
-    role: "Chief Technology Officer, Aditya Birla Health Insurance Company Limited",
+    role: "Chief Technology Officer, Aditya Birla Health Insurance",
     linkedin: "https://www.linkedin.com/in/tarunpandey/",
     image: "/speakers/tarun-pandey.png",
   },
    {
     name: "Sudeep Mazumder ",
-    role: "Global CDIO, PGP Glass Pvt. Ltd.",
+    role: "Global CDIO, PGP Glass",
     linkedin: "https://www.linkedin.com/in/mazumdersudip/",
     image: "/speakers/sudip-mazumdar.png",
   },
@@ -61,13 +61,13 @@ const SPEAKERS = [
   },
   {
     name: "Vijaya Kadiyala",
-    role: " Executive Director, India Head of Enterprise Architecture, DBS Bank ",
+    role: " Executive Director, India Head of Enterprise Architecture, DBS Bank",
     linkedin: "https://www.linkedin.com/in/vijaya-kadiyala/",
     image: "/speakers/vijaya.png",
   },
     {
     name: "Tejasvi Addagada",
-    role: " Senior Vice President, Head- Enterprise Data Management, Data Office, HDFC Bank ",
+    role: " Senior Vice President, Head- Enterprise Data Management, Data Office, HDFC Bank",
     linkedin: "https://www.linkedin.com/in/tejasviaddagada/",
     image: "/speakers/tejaswi.png",
   },
@@ -81,14 +81,14 @@ const SPEAKERS = [
 
   {
     name: "Amit Joshi",
-    role: "CISO, Hindalco Industries Limited ",
+    role: "CISO, Hindalco Industries",
     linkedin: "https://www.linkedin.com/in/amit-joshi-ba7a886/",
     image: "/speakers/amit-joshi.png",
   },
 
   {
     name: "Hetal Presswala",
-    role: "Chief Information Security Officer, Kalpatru Projects International Limited",
+    role: "Chief Information Security Officer, Kalpatru Projects International ",
     linkedin: "https://www.linkedin.com/in/hetal-presswala/",
     image: "/speakers/hetal-presswala.png",
   },
