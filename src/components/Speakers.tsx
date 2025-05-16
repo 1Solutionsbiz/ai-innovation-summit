@@ -13,7 +13,7 @@ import { FaLinkedin } from "react-icons/fa"; // LinkedIn icon
 const SPEAKERS = [
   {
     name:"Parvez Mulla",
-    role:"MD & CEO, Fedbank Financial Services",
+    role:"MD & CEO, Fedbank Financial Services Ltd. ",
     linkedin:"https://www.linkedin.com/in/parvez-mulla-b796044/",
     image:"/speakers/parvez-mulla.png",
   },
