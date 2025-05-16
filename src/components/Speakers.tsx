@@ -12,12 +12,12 @@ import { FaLinkedin } from "react-icons/fa"; // LinkedIn icon
 
 const SPEAKERS = [
   {
-    name:"Parvez Mulla",
-    role:"MD & CEO, Fedbank Financial Services Ltd. ",
-    linkedin:"https://www.linkedin.com/in/parvez-mulla-b796044/",
-    image:"/speakers/parvez-mulla.png",
+    name: "Parvez Mulla",
+    role: "MD & CEO, Fedbank Financial Services Ltd. ",
+    linkedin: "https://www.linkedin.com/in/parvez-mulla-b796044/",
+    image: "/speakers/parvez-mulla.png",
   },
-   {
+  {
     name: "Dipu KV",
     role: "Senior President, Bajaj Allianz General Insurance",
     linkedin: "https://www.linkedin.com/in/kvdipu/",
@@ -41,19 +41,26 @@ const SPEAKERS = [
     linkedin: "https://www.linkedin.com/in/tarunpandey/",
     image: "/speakers/tarun-pandey.png",
   },
-   {
+
+  {
+    name: "Nikhil Malhotra",
+    role: "Chief Innovation Officer & Global Head of AI and Emerging Technologies Tech Mahindra",
+    linkedin: "https://www.linkedin.com/in/nikhilmalhotra2009/",
+    image: "/speakers/nikhil-malhotra.png",
+  },
+  {
     name: "Sudip Mazumder ",
     role: "Global CDIO, PGP Glass",
     linkedin: "https://www.linkedin.com/in/mazumdersudip/",
     image: "/speakers/sudip-mazumdar.png",
   },
-   {
+  {
     name: "Vineet Shukla",
     role: "CTO – Mahindra Teqo",
     linkedin: "https://www.linkedin.com/in/shuklavineet/",
     image: "/speakers/vineet-shukla.png",
   },
-   {
+  {
     name: "Nishant Pradhan",
     role: "Chief AI Officer, Mirae Asset Mutual Fund (India)",
     linkedin: "https://www.linkedin.com/in/pradhannishant/",
@@ -65,13 +72,13 @@ const SPEAKERS = [
     linkedin: "https://www.linkedin.com/in/vijaya-kadiyala/",
     image: "/speakers/vijaya.png",
   },
-    {
+  {
     name: "Tejasvi Addagada",
     role: " Senior Vice President, Head- Enterprise Data Management, Data Office, HDFC Bank",
     linkedin: "https://www.linkedin.com/in/tejasviaddagada/",
     image: "/speakers/tejaswi.png",
   },
- 
+
   {
     name: "Aliasgar Karachiwala",
     role: "EVP & IT Head - Applications, Automation, AI and Business Solutions Group RBL Bank",
@@ -92,17 +99,17 @@ const SPEAKERS = [
     linkedin: "https://www.linkedin.com/in/hetal-presswala/",
     image: "/speakers/hetal-presswala.png",
   },
-  
- 
-  
-    {
+
+
+
+  {
     name: "Rajat Mathur",
     role: "Partner, BCG (Boston Consulting Group)",
     linkedin: "https://www.linkedin.com/in/rajat2000/",
     image: "/speakers/rajat-mathur.png",
   },
- 
-  
+
+
   {
     name: "Anup Purohit",
     role: "Ex-Global CIO, Wipro",
