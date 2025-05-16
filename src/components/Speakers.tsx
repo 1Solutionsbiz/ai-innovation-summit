@@ -44,7 +44,7 @@ const SPEAKERS = [
 
   {
     name: "Nikhil Malhotra",
-    role: "Chief Innovation Officer & Global Head of AI and Emerging Technologies Tech Mahindra",
+    role: "Chief Innovation Officer & Global Head of AI and Emerging Technologies, Tech Mahindra",
     linkedin: "https://www.linkedin.com/in/nikhilmalhotra2009/",
     image: "/speakers/nikhil-malhotra.png",
   },
