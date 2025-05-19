@@ -41,7 +41,18 @@ const SPEAKERS = [
     linkedin: "https://www.linkedin.com/in/tarunpandey/",
     image: "/speakers/tarun-pandey.png",
   },
-
+ {
+    name: "Sivakumar Nandipati",
+    role: "Chief Digital Officer, Fedbank FInancial Services",
+    linkedin: "https://www.linkedin.com/in/sivakumarnandipati/",
+    image: "/speakers/siva-kumar-nandipati.png",
+  },
+   {
+    name: "Suman Guha",
+    role: "CTO, Tata CLiQ Fashion",
+    linkedin: "https://www.linkedin.com/in/guha-suman/",
+    image: "/speakers/suman-guha.png",
+  },
   {
     name: "Nikhil Malhotra",
     role: "Chief Innovation Officer & Global Head of AI and Emerging Technologies, Tech Mahindra",
