@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
 import { useTable, usePagination, useSortBy, useGlobalFilter } from 'react-table';
@@ -46,44 +46,68 @@ const RegistrationForm: React.FC = () => {
   const [searchInput, setSearchInput] = useState('');
   const [showUtmFields, setShowUtmFields] = useState(false);
 
-  const columns = React.useMemo(
-    () => [
-      { Header: 'ID', accessor: 'id' },
-      { Header: 'Name', accessor: 'name' },
-      { Header: 'Designation', accessor: 'designation' },
-      { Header: 'Company', accessor: 'company' },
-      { Header: 'Industry', accessor: 'industry' },
-      { Header: 'Employee Size', accessor: 'employee_size' },
-      { Header: 'Contact Number', accessor: 'contact_number' },
-      { Header: 'Official Email', accessor: 'official_email' },
-      { Header: 'Personal Email', accessor: 'personal_email' },
-      { Header: 'City', accessor: 'city' },
-      { Header: 'Pincode', accessor: 'pincode' },
-      { Header: 'Terms Accepted', accessor: (row: Registration) => (row.terms_accepted ? 'Yes' : 'No') },
-      { Header: 'Details Disclosure', accessor: (row: Registration) => (row.details_disclosure ? 'Yes' : 'No') },
-      // UTM Fields (hidden by default)
-      ...(showUtmFields ? [
-        { Header: 'Campaign', accessor: 'utm_campaign_temp' },
-        { Header: 'Medium', accessor: 'utm_medium_temp' },
-        { Header: 'Source', accessor: 'utm_source_temp' },
-        { Header: 'Content', accessor: 'utm_content_temp' },
-        { Header: 'Term', accessor: 'utm_term_temp' },
-        { Header: 'Landing Page', accessor: 'landing_page_temp' },
-        { Header: 'Conversion Page', accessor: 'conversion_page_temp' },
-        { Header: 'IP Address', accessor: 'ip_address' },
-      ] : []),
-      { Header: 'Created At', accessor: 'created_at' },
-    ],
+  // Memoize data to prevent unnecessary re-renders
+  const dataTable = useMemo(() => data || [], [data]);
+
+  // Define columns with sorting configuration
+  const columns = useMemo(
+    () => {
+      const baseColumns = [
+        { Header: 'ID', accessor: 'id', sortType: 'basic' },
+        { Header: 'Name', accessor: 'name', sortType: 'alphanumeric' },
+        { Header: 'Designation', accessor: 'designation', sortType: 'alphanumeric' },
+        { Header: 'Company', accessor: 'company', sortType: 'alphanumeric' },
+        { Header: 'Industry', accessor: 'industry', sortType: 'alphanumeric' },
+        { Header: 'Employee Size', accessor: 'employee_size', sortType: 'alphanumeric' },
+        { Header: 'Contact Number', accessor: 'contact_number', sortType: 'alphanumeric' },
+        { Header: 'Official Email', accessor: 'official_email', sortType: 'alphanumeric' },
+        { Header: 'Personal Email', accessor: 'personal_email', sortType: 'alphanumeric' },
+        { Header: 'City', accessor: 'city', sortType: 'alphanumeric' },
+        { Header: 'Pincode', accessor: 'pincode', sortType: 'alphanumeric' },
+        {
+          Header: 'Terms Accepted',
+          accessor: (row: Registration) => (row.terms_accepted ? 'Yes' : 'No'),
+          sortType: 'alphanumeric',
+        },
+        {
+          Header: 'Details Disclosure',
+          accessor: (row: Registration) => (row.details_disclosure ? 'Yes' : 'No'),
+          sortType: 'alphanumeric',
+        },
+        {
+          Header: 'Created At',
+          accessor: 'created_at',
+          sortType: (rowA: any, rowB: any, columnId: string) => {
+            const a = new Date(rowA.values[columnId]).getTime();
+            const b = new Date(rowB.values[columnId]).getTime();
+            return a > b ? 1 : -1;
+          },
+        },
+      ];
+
+      const utmColumns = showUtmFields
+        ? [
+            { Header: 'Campaign', accessor: 'utm_campaign_temp', sortType: 'alphanumeric' },
+            { Header: 'Medium', accessor: 'utm_medium_temp', sortType: 'alphanumeric' },
+            { Header: 'Source', accessor: 'utm_source_temp', sortType: 'alphanumeric' },
+            { Header: 'Content', accessor: 'utm_content_temp', sortType: 'alphanumeric' },
+            { Header: 'Term', accessor: 'utm_term_temp', sortType: 'alphanumeric' },
+            { Header: 'Landing Page', accessor: 'landing_page_temp', sortType: 'alphanumeric' },
+            { Header: 'Conversion Page', accessor: 'conversion_page_temp', sortType: 'alphanumeric' },
+            { Header: 'IP Address', accessor: 'ip_address', sortType: 'alphanumeric' },
+          ]
+        : [];
+
+      return [...baseColumns, ...utmColumns];
+    },
     [showUtmFields]
   );
-
-  const dataTable = React.useMemo(() => data || [], [data]);
 
   const {
     getTableProps,
     getTableBodyProps,
     headerGroups,
-    rows,
+    page, // Use `page` instead of `rows` for pagination
     prepareRow,
     canPreviousPage,
     canNextPage,
@@ -159,7 +183,7 @@ const RegistrationForm: React.FC = () => {
                   {headerGroup.headers.map(column => (
                     <th
                       {...column.getHeaderProps(column.getSortByToggleProps())}
-                      className="p-3 text-left font-semibold text-gray-300 uppercase tracking-wider"
+                      className="p-3 text-left font-semibold text-gray-300 uppercase tracking-wider cursor-pointer"
                     >
                       <div className="flex items-center">
                         {column.render('Header')}
@@ -168,7 +192,7 @@ const RegistrationForm: React.FC = () => {
                             ? column.isSortedDesc
                               ? ' ↓'
                               : ' ↑'
-                            : ''}
+                            : ' ↕'}
                         </span>
                       </div>
                     </th>
@@ -178,7 +202,7 @@ const RegistrationForm: React.FC = () => {
             </thead>
 
             <tbody {...getTableBodyProps()}>
-              {rows.map(row => {
+              {page.map(row => {
                 prepareRow(row);
                 return (
                   <tr {...row.getRowProps()} className="border-b border-gray-700 hover:bg-gray-700 transition">
@@ -237,7 +261,9 @@ const RegistrationForm: React.FC = () => {
               <span>Go to page:</span>
               <input
                 type="number"
-                defaultValue={pageIndex + 1}
+                min="1"
+                max={pageCount}
+                value={pageIndex + 1}
                 onChange={e => {
                   const page = e.target.value ? Number(e.target.value) - 1 : 0;
                   gotoPage(page);
