@@ -30,10 +30,10 @@ const SPEAKERS = [
     image: "/speakers/ashish-kshetry.png",
   },
   {
-    name: "Mukesh Jain",
-    role: "CTO, Executive Vice President, Capgemini",
-    linkedin: "https://www.linkedin.com/in/mukeshjaincoach/",
-    image: "/speakers/mukesh-jain.png",
+    name: "Nikhil Malhotra",
+    role: "Chief Innovation Officer & Global Head of AI and Emerging Technologies, Tech Mahindra",
+    linkedin: "https://www.linkedin.com/in/nikhilmalhotra2009/",
+    image: "/speakers/nikhil-malhotra.png",
   },
   {
     name: "Tarun Pandey",
@@ -41,24 +41,25 @@ const SPEAKERS = [
     linkedin: "https://www.linkedin.com/in/tarunpandey/",
     image: "/speakers/tarun-pandey.png",
   },
- {
+  {
     name: "Sivakumar Nandipati",
     role: "Chief Digital Officer, Fedbank FInancial Services",
     linkedin: "https://www.linkedin.com/in/sivakumarnandipati/",
     image: "/speakers/siva-kumar-nandipati.png",
   },
-   {
+  {
     name: "Suman Guha",
     role: "CTO, Tata CLiQ Fashion",
     linkedin: "https://www.linkedin.com/in/guha-suman/",
     image: "/speakers/suman-guha.png",
   },
   {
-    name: "Nikhil Malhotra",
-    role: "Chief Innovation Officer & Global Head of AI and Emerging Technologies, Tech Mahindra",
-    linkedin: "https://www.linkedin.com/in/nikhilmalhotra2009/",
-    image: "/speakers/nikhil-malhotra.png",
+    name: "Mukesh Jain",
+    role: "CTO, Executive Vice President, Capgemini",
+    linkedin: "https://www.linkedin.com/in/mukeshjaincoach/",
+    image: "/speakers/mukesh-jain.png",
   },
+
   {
     name: "Sudip Mazumder ",
     role: "Global CDIO, PGP Glass",
@@ -71,25 +72,31 @@ const SPEAKERS = [
     linkedin: "https://www.linkedin.com/in/shuklavineet/",
     image: "/speakers/vineet-shukla.png",
   },
-  {
-    name: "Nishant Pradhan",
-    role: "Chief AI Officer, Mirae Asset Mutual Fund (India)",
-    linkedin: "https://www.linkedin.com/in/pradhannishant/",
-    image: "/speakers/nishant-pradhan.png",
-  },
-  {
+    {
     name: "Vijaya Kadiyala",
     role: " Executive Director, India Head of Enterprise Architecture, DBS Bank",
     linkedin: "https://www.linkedin.com/in/vijaya-kadiyala/",
     image: "/speakers/vijaya.png",
   },
   {
+    name: "Nishant Pradhan",
+    role: "Chief AI Officer, Mirae Asset Mutual Fund (India)",
+    linkedin: "https://www.linkedin.com/in/pradhannishant/",
+    image: "/speakers/nishant-pradhan.png",
+  },
+
+  {
     name: "Tejasvi Addagada",
     role: " Senior Vice President, Head- Enterprise Data Management, Data Office, HDFC Bank",
     linkedin: "https://www.linkedin.com/in/tejasviaddagada/",
     image: "/speakers/tejaswi.png",
   },
-
+ {
+    name: "Amit Joshi",
+    role: "CISO, Hindalco Industries",
+    linkedin: "https://www.linkedin.com/in/amit-joshi-ba7a886/",
+    image: "/speakers/amit-joshi.png",
+  },
   {
     name: "Aliasgar Karachiwala",
     role: "EVP & IT Head - Applications, Automation, AI and Business Solutions Group RBL Bank",
@@ -97,12 +104,7 @@ const SPEAKERS = [
     image: "/speakers/aliasgar-karachiwala.png",
   },
 
-  {
-    name: "Amit Joshi",
-    role: "CISO, Hindalco Industries",
-    linkedin: "https://www.linkedin.com/in/amit-joshi-ba7a886/",
-    image: "/speakers/amit-joshi.png",
-  },
+ 
 
   {
     name: "Hetal Presswala",
@@ -111,8 +113,12 @@ const SPEAKERS = [
     image: "/speakers/hetal-presswala.png",
   },
 
-
-
+  {
+    name: "Chaitanya Gogineni",
+    role: "Partner - Lighthouse (Data, Analytics and AI), KPMG India",
+    linkedin: "https://www.linkedin.com/in/chaitanyagogineni/",
+    image: "/speakers/chaitanya-gogineni.png",
+  },
   {
     name: "Rajat Mathur",
     role: "Partner, BCG (Boston Consulting Group)",
