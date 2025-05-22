@@ -74,7 +74,7 @@ const SPEAKERS = [
   },
     {
     name: "Vijaya Kadiyala",
-    role: " Executive Director, India Head of Enterprise Architecture, DBS Bank",
+    role: " Executive Director, India Head of Enterprise Architecture and Data/AI Platform and Cloud Engineering, DBS Bank ",
     linkedin: "https://www.linkedin.com/in/vijaya-kadiyala/",
     image: "/speakers/vijaya.png",
   },
