@@ -24,6 +24,12 @@ const SPEAKERS = [
     image: "/speakers/dipu-kv.png",
   },
   {
+    name: "Sumit Garg",
+    role: "Global CIO, Piramal Pharma Solutions",
+    linkedin: "https://www.linkedin.com/in/sumit-garg-375706/",
+    image: "/speakers/Sumit-Garg.png",
+  },
+  {
     name: "Aashish Kshetry",
     role: "CIO & VP-IT, Asian Paints",
     linkedin: "https://www.linkedin.com/in/aashish-kshetry-9090234/",
