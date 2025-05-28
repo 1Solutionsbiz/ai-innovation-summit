@@ -35,37 +35,45 @@ const SPEAKERS = [
     linkedin: "https://www.linkedin.com/in/aashish-kshetry-9090234/",
     image: "/speakers/ashish-kshetry.png",
   },
-  {
-    name: "Nikhil Malhotra",
-    role: "Chief Innovation Officer & Global Head of AI and Emerging Technologies, Tech Mahindra",
-    linkedin: "https://www.linkedin.com/in/nikhilmalhotra2009/",
-    image: "/speakers/nikhil-malhotra.png",
+    {
+    name: "	Dwarka Srinath",
+    role: "Group CDIO, TATA Power",
+    linkedin: "https://www.linkedin.com/in/dwarka-srinath-88b05b14/",
+    image: "/speakers/dwarka-srinath.png",
   },
+ 
   {
     name: "Tarun Pandey",
     role: "Chief Technology Officer, Aditya Birla Health Insurance",
     linkedin: "https://www.linkedin.com/in/tarunpandey/",
     image: "/speakers/tarun-pandey.png",
   },
-  {
-    name: "Sivakumar Nandipati",
-    role: "Chief Digital Officer, Fedbank FInancial Services",
-    linkedin: "https://www.linkedin.com/in/sivakumarnandipati/",
-    image: "/speakers/siva-kumar-nandipati.png",
+   {
+    name: "Nikhil Malhotra",
+    role: "Chief Innovation Officer & Global Head of AI and Emerging Technologies, Tech Mahindra",
+    linkedin: "https://www.linkedin.com/in/nikhilmalhotra2009/",
+    image: "/speakers/nikhil-malhotra.png",
   },
-  {
-    name: "Suman Guha",
-    role: "CTO, Tata CLiQ Fashion",
-    linkedin: "https://www.linkedin.com/in/guha-suman/",
-    image: "/speakers/suman-guha.png",
-  },
-  {
+   {
     name: "Mukesh Jain",
     role: "CTO, Executive Vice President, Capgemini",
     linkedin: "https://www.linkedin.com/in/mukeshjaincoach/",
     image: "/speakers/mukesh-jain.png",
   },
-
+   {
+    name: "Suman Guha",
+    role: "CTO, Tata CLiQ Fashion",
+    linkedin: "https://www.linkedin.com/in/guha-suman/",
+    image: "/speakers/suman-guha.png",
+  },
+  
+  {
+    name: "Vineet Shukla",
+    role: "CTO – Mahindra Teqo",
+    linkedin: "https://www.linkedin.com/in/shuklavineet/",
+    image: "/speakers/vineet-shukla.png",
+  },
+  
   {
     name: "Sudip Mazumder ",
     role: "Global CDIO, PGP Glass",
@@ -73,10 +81,16 @@ const SPEAKERS = [
     image: "/speakers/sudip-mazumdar.png",
   },
   {
-    name: "Vineet Shukla",
-    role: "CTO – Mahindra Teqo",
-    linkedin: "https://www.linkedin.com/in/shuklavineet/",
-    image: "/speakers/vineet-shukla.png",
+    name: "Sivakumar Nandipati",
+    role: "Chief Digital Officer, Fedbank FInancial Services",
+    linkedin: "https://www.linkedin.com/in/sivakumarnandipati/",
+    image: "/speakers/siva-kumar-nandipati.png",
+  },
+   {
+    name: "Nishant Pradhan",
+    role: "Chief AI Officer, Mirae Asset Mutual Fund (India)",
+    linkedin: "https://www.linkedin.com/in/pradhannishant/",
+    image: "/speakers/nishant-pradhan.png",
   },
     {
     name: "Vijaya Kadiyala",
@@ -84,12 +98,7 @@ const SPEAKERS = [
     linkedin: "https://www.linkedin.com/in/vijaya-kadiyala/",
     image: "/speakers/vijaya.png",
   },
-  {
-    name: "Nishant Pradhan",
-    role: "Chief AI Officer, Mirae Asset Mutual Fund (India)",
-    linkedin: "https://www.linkedin.com/in/pradhannishant/",
-    image: "/speakers/nishant-pradhan.png",
-  },
+ 
 
   {
     name: "Tejasvi Addagada",
