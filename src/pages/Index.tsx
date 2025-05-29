@@ -16,7 +16,8 @@ import Agenda, { AgendaItem } from "@/components/Agenda"; // Import Agenda and A
 import { PartnershipCTA } from "@/components/PartnershipCTA";
 import DemandVideoHome from "@/components/DemandVideoHome";
 import { useEffect } from "react";
-import { Speakers } from "@/components/Speakers";
+import  {Speakers}  from "@/components/Speakers";
+import { MUMBAI_SPEAKERS } from "@/data/mumbaiSpeakers";
 
 const agendaData: AgendaItem[] = [
   {
@@ -135,7 +136,7 @@ const Index = () => {
       <About />
       <MovingStrip color="bg-neon-blue" />
       <KeyPoints />
-       <Speakers />
+       <Speakers data={MUMBAI_SPEAKERS}/>
         {/* Include the Agenda component with agendaData as prop */}
         <Agenda items={agendaData} eventDetails={{
         date: "09 July 2025",

@@ -15,7 +15,8 @@ import Agenda, { AgendaItem } from "@/components/Agenda"; // Import Agenda and A
 import { PartnershipCTA } from "@/components/PartnershipCTA";
 import DemandVideoHome from "@/components/DemandVideoHome";
 import { useEffect } from "react";
-import { Speakers } from "@/components/Speakers";
+import { BengaloreRegisterForm } from "@/components/BengaloreRegisterForm";
+
 
 const agendaData: AgendaItem[] = [
     {
@@ -124,7 +125,7 @@ const BangaloreEdition = () => {
                 heading="Shaping the Future with AI"
                 subheading="From prompt to impact"
                 body="Join the brightest minds in Artificial Intelligence and Innovation at the most impactful AI Summit mastering AI and securing the future."
-                date="October 2025 | Bangalore "
+                date="August 2025 | Bangalore "
 
                 stats={[
                     { value: "25+", label: "Speakers" },
@@ -137,11 +138,11 @@ const BangaloreEdition = () => {
             <About />
             <MovingStrip color="bg-neon-blue" />
             <KeyPoints />
-             <Speakers />
+          
             {/* Include the Agenda component with agendaData as prop */}
             <Agenda items={agendaData} eventDetails={{
-                date: "09 July 2025",
-                venue: "Taj Santacruz, Mumbai",
+                date: "21 August 2025",
+                venue: "Bangalore",
                 audience: "200+ Enterprise Technology Leaders"
             }} />
             
@@ -151,6 +152,7 @@ const BangaloreEdition = () => {
             <PartnershipCTA />
             <ShouldAttend />
             <WhoShouldSponsor />
+            {/* <BengaloreRegisterForm /> */}
             <Footer socialLinks={socialLinks} />
         </div>
     );
