@@ -83,6 +83,15 @@ const DashboardLayout: React.FC = () => {
                 Registration Form
               </Link>
             </li>
+               <li>
+              <Link
+                to="bengalore-registration-form"
+                className="block py-2 px-2 hover:bg-gray-700 rounded text-gray-200 font-orbitron"
+                onClick={() => setIsSidebarOpen(false)}
+              >
+               Bengalore Registration Form
+              </Link>
+            </li>
           </ul>
         </nav>
         <button
