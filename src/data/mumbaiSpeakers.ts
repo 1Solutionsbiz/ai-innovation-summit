@@ -144,5 +144,11 @@ export const MUMBAI_SPEAKERS = [
     linkedin: "https://www.linkedin.com/in/sudiptaghosh/",
     image: "/speakers/sudipta-ghosh.png",
   },
+ {
+    name: "Mubin Shaikh",
+    role: " Partner/Principal | Technology Consulting – Cybersecurity EY",
+    linkedin: "https://www.linkedin.com/in/mubinshaikh/",
+    image: "/speakers/mubin-shaikh.png",
+  },
 
 ];
