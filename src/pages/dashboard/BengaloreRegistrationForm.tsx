@@ -3,21 +3,21 @@ import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
 import { useTable, usePagination, useSortBy, useGlobalFilter } from 'react-table';
 import { CSVLink } from 'react-csv';
+import debounce from 'lodash/debounce';
 
+// Updated interface to match API response
 interface Registration {
   id: number;
   name: string;
   designation: string | null;
-  company: string | null;
-  industry: string | null;
-  employee_size: string | null;
-  contact_number: string | null;
   official_email: string | null;
-  personal_email: string | null;
+  phone_number: string | null;
+  // mobile_number: string | null;
+  industry: string | null;
+  organization: string | null;
   city: string | null;
+  state: string | null;
   pincode: string | null;
-  terms_accepted: boolean;
-  details_disclosure: boolean;
   utm_campaign_temp: string | null;
   utm_medium_temp: string | null;
   utm_source_temp: string | null;
@@ -27,20 +27,28 @@ interface Registration {
   conversion_page_temp: string | null;
   ip_address: string | null;
   created_at: string;
+  updated_at: string;
 }
 
 const fetchRegistrations = async (): Promise<Registration[]> => {
-  const token = localStorage.getItem('token') || '';
-  const resp = await axios.get('https://darkorange-flamingo-563587.hostingersite.com/api/bangalore-registers', {
-    headers: { Authorization: `Bearer ${token}` },
-  });
-  return resp.data.data;
+  const token = localStorage.getItem('token');
+  if (!token) throw new Error('Authentication token is missing. Please log in.');
+  
+  try {
+    const resp = await axios.get('https://darkorange-flamingo-563587.hostingersite.com/api/bangalore-registers', {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    return resp.data.data || [];
+  } catch (error) {
+    throw new Error('Failed to fetch registrations. Please try again later.');
+  }
 };
 
 const BengaloreRegistrationForm: React.FC = () => {
   const { data, isLoading, error } = useQuery<Registration[], Error>({
     queryKey: ['registrations'],
     queryFn: fetchRegistrations,
+    retry: 1, // Limit retries for failed requests
   });
 
   const [searchInput, setSearchInput] = useState('');
@@ -49,52 +57,51 @@ const BengaloreRegistrationForm: React.FC = () => {
   // Memoize data to prevent unnecessary re-renders
   const dataTable = useMemo(() => data || [], [data]);
 
+  // Debounced search handler
+  const debouncedSetGlobalFilter = useMemo(
+    () => debounce((value: string | undefined, setGlobalFilter: (value: string | undefined) => void) => {
+      setGlobalFilter(value);
+    }, 300),
+    []
+  );
+
   // Define columns with sorting configuration
   const columns = useMemo(
     () => {
       const baseColumns = [
         { Header: 'ID', accessor: 'id', sortType: 'basic' },
         { Header: 'Name', accessor: 'name', sortType: 'alphanumeric' },
-        { Header: 'Designation', accessor: 'designation', sortType: 'alphanumeric' },
-        { Header: 'Company', accessor: 'company', sortType: 'alphanumeric' },
-        { Header: 'Industry', accessor: 'industry', sortType: 'alphanumeric' },
-        { Header: 'Employee Size', accessor: 'employee_size', sortType: 'alphanumeric' },
-        { Header: 'Contact Number', accessor: 'contact_number', sortType: 'alphanumeric' },
-        { Header: 'Official Email', accessor: 'official_email', sortType: 'alphanumeric' },
-        { Header: 'Personal Email', accessor: 'personal_email', sortType: 'alphanumeric' },
-        { Header: 'City', accessor: 'city', sortType: 'alphanumeric' },
-        { Header: 'Pincode', accessor: 'pincode', sortType: 'alphanumeric' },
-        {
-          Header: 'Terms Accepted',
-          accessor: (row: Registration) => (row.terms_accepted ? 'Yes' : 'No'),
-          sortType: 'alphanumeric',
-        },
-        {
-          Header: 'Details Disclosure',
-          accessor: (row: Registration) => (row.details_disclosure ? 'Yes' : 'No'),
-          sortType: 'alphanumeric',
-        },
+        { Header: 'Designation', accessor: 'designation', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+        { Header: 'Organization', accessor: 'organization', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+        { Header: 'Industry', accessor: 'industry', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+        { Header: 'Phone Number', accessor: 'phone_number', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+        // { Header: 'Mobile Number', accessor: 'mobile_number', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+        { Header: 'Official Email', accessor: 'official_email', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+        { Header: 'City', accessor: 'city', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+        { Header: 'State', accessor: 'state', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+        { Header: 'Pincode', accessor: 'pincode', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         {
           Header: 'Created At',
           accessor: 'created_at',
           sortType: (rowA: any, rowB: any, columnId: string) => {
-            const a = new Date(rowA.values[columnId]).getTime();
-            const b = new Date(rowB.values[columnId]).getTime();
-            return a > b ? 1 : -1;
+            const a = rowA.values[columnId] ? new Date(rowA.values[columnId]).getTime() : 0;
+            const b = rowB.values[columnId] ? new Date(rowB.values[columnId]).getTime() : 0;
+            return a > b ? 1 : a < b ? -1 : 0;
           },
+          Cell: ({ value }: { value: string }) => new Date(value).toLocaleString() || 'N/A',
         },
       ];
 
       const utmColumns = showUtmFields
         ? [
-            { Header: 'Campaign', accessor: 'utm_campaign_temp', sortType: 'alphanumeric' },
-            { Header: 'Medium', accessor: 'utm_medium_temp', sortType: 'alphanumeric' },
-            { Header: 'Source', accessor: 'utm_source_temp', sortType: 'alphanumeric' },
-            { Header: 'Content', accessor: 'utm_content_temp', sortType: 'alphanumeric' },
-            { Header: 'Term', accessor: 'utm_term_temp', sortType: 'alphanumeric' },
-            { Header: 'Landing Page', accessor: 'landing_page_temp', sortType: 'alphanumeric' },
-            { Header: 'Conversion Page', accessor: 'conversion_page_temp', sortType: 'alphanumeric' },
-            { Header: 'IP Address', accessor: 'ip_address', sortType: 'alphanumeric' },
+            { Header: 'Campaign', accessor: 'utm_campaign_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+            { Header: 'Medium', accessor: 'utm_medium_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+            { Header: 'Source', accessor: 'utm_source_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+            { Header: 'Content', accessor: 'utm_content_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+            { Header: 'Term', accessor: 'utm_term_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+            { Header: 'Landing Page', accessor: 'landing_page_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+            { Header: 'Conversion Page', accessor: 'conversion_page_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+            { Header: 'IP Address', accessor: 'ip_address', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
           ]
         : [];
 
@@ -107,7 +114,7 @@ const BengaloreRegistrationForm: React.FC = () => {
     getTableProps,
     getTableBodyProps,
     headerGroups,
-    page, // Use `page` instead of `rows` for pagination
+    page,
     prepareRow,
     canPreviousPage,
     canNextPage,
@@ -131,17 +138,26 @@ const BengaloreRegistrationForm: React.FC = () => {
   );
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value || undefined;
-    setSearchInput(value || '');
-    setGlobalFilter(value);
+    const value = e.target.value || '';
+    setSearchInput(value);
+    debouncedSetGlobalFilter(value, setGlobalFilter);
   };
 
   if (isLoading) return <div className="text-white">Loading registrations…</div>;
-  if (error) return <div className="text-red-500">Error: {error.message}</div>;
+  if (error) return (
+    <div className="text-red-500">
+      Error: {error.message}
+      {error.message.includes('token') && (
+        <div>
+          <a href="/login" className="text-blue-400 underline">Log in again</a>
+        </div>
+      )}
+    </div>
+  );
 
   return (
     <div className="p-6 bg-gray-900 rounded-lg shadow-lg text-white min-h-screen">
-      <h2 className="text-2xl font-bold mb-6 font-orbitron">Registration List</h2>
+      <h2 className="text-2xl font-bold mb-6 font-orbitron">Bangalore Registration List</h2>
 
       <div className="mb-6 flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="w-full md:w-1/3">
@@ -164,7 +180,8 @@ const BengaloreRegistrationForm: React.FC = () => {
 
           <CSVLink
             data={dataTable}
-            filename="registrations.csv"
+            headers={columns.map(col => ({ label: col.Header, key: col.accessor as string }))}
+            filename="bangalore-registrations.csv"
             className="bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition"
           >
             Export CSV
@@ -217,7 +234,6 @@ const BengaloreRegistrationForm: React.FC = () => {
             </tbody>
           </table>
 
-          {/* Pagination */}
           <div className="mt-6 flex flex-col sm:flex-row justify-between items-center gap-4 p-4">
             <div className="flex gap-2">
               <button

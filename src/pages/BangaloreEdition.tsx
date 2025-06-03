@@ -114,9 +114,7 @@ const BangaloreEdition = () => {
     return (
         <div className="min-h-screen">
             <Header
-                isRegistrationActive={false}
-                registrationButtonName="Registration Closed"
-                disabledButtonName="Register Now"
+             
             />
             <Hero
                 backgroundImage="/hero-banner.png"
@@ -152,7 +150,7 @@ const BangaloreEdition = () => {
             <PartnershipCTA />
             <ShouldAttend />
             <WhoShouldSponsor />
-            {/* <BengaloreRegisterForm /> */}
+            <BengaloreRegisterForm />
             <Footer socialLinks={socialLinks} />
         </div>
     );
