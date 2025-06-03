@@ -52,8 +52,8 @@ const App: React.FC = () => (
         <Route path="/previous/bangalore-2024" element={<BengaluruEdition />} />
         <Route path="/previous/gurugram-2024" element={<GurugramEdition />} />
         <Route path="/watch-on-demand" element={<WatchOnDemand />} />
-        <Route path="/upcoming/bangalore-2025" element={<BangaloreEdition />} />
-        <Route path="/upcoming/delhi-ncr-2025" element={<DelhiEdition />} />
+        <Route path="/bangalore-2025" element={<BangaloreEdition />} />
+        <Route path="/delhi-ncr-2025" element={<DelhiEdition />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
 
