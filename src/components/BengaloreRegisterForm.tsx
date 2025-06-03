@@ -12,7 +12,7 @@ interface FormDataType {
   industry: string;
   employeeSize: string;
   phoneNumber: string;
-  mobileNumber: string;
+  // mobileNumber: string;
   officialEmail: string;
   personalEmail: string;
   city: string;
@@ -39,7 +39,7 @@ export const BengaloreRegisterForm: React.FC = () => {
     industry: "",
     employeeSize: "",
     phoneNumber: "",
-    mobileNumber: "",
+
     officialEmail: "",
     personalEmail: "",
     city: "",
@@ -133,12 +133,12 @@ export const BengaloreRegisterForm: React.FC = () => {
         ...formData,
         official_email: formData.officialEmail,
         phone_number: formData.phoneNumber,
-        mobile_number: formData.mobileNumber,
+        // mobile_number: formData.mobileNumber,
         recaptchaToken,
       };
       delete payload.officialEmail;
       delete payload.phoneNumber;
-      delete payload.mobileNumber;
+      // delete payload.mobileNumber;
 
       const resp = await axios.post(
         "https://darkorange-flamingo-563587.hostingersite.com/api/bangalore-registers",
@@ -154,7 +154,7 @@ export const BengaloreRegisterForm: React.FC = () => {
         industry: "",
         employeeSize: "",
         phoneNumber: "",
-        mobileNumber: "",
+        // mobileNumber: "",
         officialEmail: "",
         personalEmail: "",
         city: "",
@@ -225,7 +225,7 @@ export const BengaloreRegisterForm: React.FC = () => {
             { name: "company", label: "Company" },
             { name: "organization", label: "Organization" },
             { name: "phoneNumber", label: "Phone Number" },
-            { name: "mobileNumber", label: "Mobile Number" },
+            // { name: "mobileNumber", label: "Mobile Number" },
             { name: "officialEmail", label: "Official Email" },
             { name: "personalEmail", label: "Personal Email (optional)" },
             { name: "city", label: "City" },
