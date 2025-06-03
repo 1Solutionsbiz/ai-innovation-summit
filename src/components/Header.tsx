@@ -12,16 +12,27 @@ interface HeaderProps {
 }
 
 const ScrollToHash = () => {
-  const { hash } = useLocation();
+  const { pathname, hash } = useLocation();
 
   useEffect(() => {
     if (hash) {
-      const element = document.getElementById(hash.replace("#", ""));
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
+      setTimeout(() => {
+        const element = document.getElementById(hash.replace("#", ""));
+        if (element) {
+          const offset = 100; // Adjust this value based on your header height
+          const bodyRect = document.body.getBoundingClientRect().top;
+          const elementRect = element.getBoundingClientRect().top;
+          const elementPosition = elementRect - bodyRect;
+          const offsetPosition = elementPosition - offset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
+        }
+      }, 100);
     }
-  }, [hash]);
+  }, [pathname, hash]);
 
   return null;
 };
@@ -34,13 +45,29 @@ export const Header = ({
   const isMobile = useIsMobile();
   const location = useLocation();
   const currentPath = location.pathname;
-  const isEditionsPage =
-    currentPath.includes("upcoming") || currentPath.includes("previous");
-
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   const handleDropdownClick = (dropdownName: string) => {
     setOpenDropdown((prev) => (prev === dropdownName ? null : dropdownName));
+  };
+
+  const handleSectionClick = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 100; // Same as in ScrollToHash
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+
+      // Update URL without page reload
+      window.history.pushState(null, "", `${currentPath}#${id}`);
+    }
   };
 
   const NavItems = () => {
@@ -54,25 +81,15 @@ export const Header = ({
 
     return (
       <>
-        {navLinks.map((item) =>
-          isEditionsPage ? (
-            <a
-              key={item.id}
-              href={`#${item.id}`}
-              className="hover:text-neon-blue transition-colors"
-            >
-              {item.label}
-            </a>
-          ) : (
-            <Link
-              key={item.id}
-              to={`/#${item.id}`}
-              className="hover:text-neon-blue transition-colors"
-            >
-              {item.label}
-            </Link>
-          )
-        )}
+        {navLinks.map((item) => (
+          <button
+            key={item.id}
+            onClick={() => handleSectionClick(item.id)}
+            className="hover:text-neon-blue transition-colors"
+          >
+            {item.label}
+          </button>
+        ))}
 
         <div className="relative">
           <button
@@ -84,13 +101,13 @@ export const Header = ({
           {openDropdown === "upcoming" && (
             <div className="absolute left-0 mt-2 w-56 bg-dark-lighter border border-neon-purple/20 shadow-lg z-10">
               <Link
-                to="/upcoming/bangalore-2025"
+                to="/bangalore-2025"
                 className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors"
               >
                 Bangalore Edition 2025
               </Link>
               <Link
-                to="/upcoming/delhi-ncr-2025"
+                to="/delhi-ncr-2025"
                 className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors"
               >
                 Delhi-NCR Edition 2025
@@ -131,21 +148,12 @@ export const Header = ({
         </div>
 
         {isRegistrationActive ? (
-          isEditionsPage ? (
-            <a
-              href="#register"
-              className="hover:text-neon-blue transition-colors"
-            >
-              <Button className="btn-gradient">{registrationButtonName}</Button>
-            </a>
-          ) : (
-            <Link
-              to="/#register"
-              className="hover:text-neon-blue transition-colors"
-            >
-              <Button className="btn-gradient">{registrationButtonName}</Button>
-            </Link>
-          )
+          <button
+            onClick={() => handleSectionClick("register")}
+            className="hover:text-neon-blue transition-colors"
+          >
+            <Button className="btn-gradient">{registrationButtonName}</Button>
+          </button>
         ) : (
           <Button className="btn-gradient" disabled>
             {disabledButtonName}
