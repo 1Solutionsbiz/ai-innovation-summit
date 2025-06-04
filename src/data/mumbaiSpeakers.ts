@@ -150,5 +150,6 @@ export const MUMBAI_SPEAKERS = [
     linkedin: "https://www.linkedin.com/in/mubinshaikh/",
     image: "/speakers/mubin-shaikh.png",
   },
+  
 
 ];
