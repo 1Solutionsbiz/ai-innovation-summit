@@ -146,7 +146,7 @@ export const MUMBAI_SPEAKERS = [
   },
  {
     name: "Mubin Shaikh",
-    role: " Partner/Principal | Technology Consulting – Cybersecurity EY",
+    role: "Partner, Technology Consulting – Cybersecurity EY",
     linkedin: "https://www.linkedin.com/in/mubinshaikh/",
     image: "/speakers/mubin-shaikh.png",
   },
