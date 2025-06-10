@@ -78,10 +78,11 @@ const RegistrationForm: React.FC = () => {
           Header: 'Created At',
           accessor: 'created_at',
           sortType: (rowA: any, rowB: any, columnId: string) => {
-            const a = new Date(rowA.values[columnId]).getTime();
-            const b = new Date(rowB.values[columnId]).getTime();
-            return a > b ? 1 : -1;
+            const a = rowA.values[columnId] ? new Date(rowA.values[columnId]).getTime() : 0;
+            const b = rowB.values[columnId] ? new Date(rowB.values[columnId]).getTime() : 0;
+            return a > b ? 1 : a < b ? -1 : 0;
           },
+          Cell: ({ value }: { value: string }) => new Date(value).toLocaleString() || 'N/A',
         },
       ];
 
