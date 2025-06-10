@@ -76,6 +76,12 @@ export const MUMBAI_SPEAKERS = [
     linkedin: "https://www.linkedin.com/in/sivakumarnandipati/",
     image: "/speakers/siva-kumar-nandipati.png",
   },
+   {
+    name: "Namrita Mahindro",
+    role: "Chief Digital Officer, Aditya Birla Chemicals",
+    linkedin: "https://www.linkedin.com/in/namritasehgal/",
+    image: "/speakers/namrita-mahindro.png",
+  },
   {
     name: "Nishant Pradhan",
     role: "Chief AI Officer, Mirae Asset Mutual Fund (India)",
