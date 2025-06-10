@@ -25,12 +25,12 @@ export const MUMBAI_SPEAKERS = [
     linkedin: "https://www.linkedin.com/in/aashish-kshetry-9090234/",
     image: "/speakers/ashish-kshetry.png",
   },
-  {
-    name: "	Dwarka Srinath",
-    role: "Group CDIO, TATA Power",
-    linkedin: "https://www.linkedin.com/in/dwarka-srinath-88b05b14/",
-    image: "/speakers/dwarka-srinath.png",
-  },
+  // {
+  //   name: "	Dwarka Srinath",
+  //   role: "Group CDIO, TATA Power",
+  //   linkedin: "https://www.linkedin.com/in/dwarka-srinath-88b05b14/",
+  //   image: "/speakers/dwarka-srinath.png",
+  // },
 
   {
     name: "Tarun Pandey",
@@ -138,11 +138,17 @@ export const MUMBAI_SPEAKERS = [
   },
 
 
-  {
-    name: "Anup Purohit",
-    role: "Ex-Global CIO, Wipro",
-    linkedin: "https://www.linkedin.com/in/anup-purohit-8958b21/",
-    image: "/speakers/anup-purohit.png",
+  // {
+  //   name: "Anup Purohit",
+  //   role: "Ex-Global CIO, Wipro",
+  //   linkedin: "https://www.linkedin.com/in/anup-purohit-8958b21/",
+  //   image: "/speakers/anup-purohit.png",
+  // },
+    {
+    name: "Sankarson Banerjee",
+    role: "Former CIO, RBL Bank",
+    linkedin: "https://www.linkedin.com/in/sankarson/",
+    image: "/speakers/sankarson-banerjee.png",
   },
   {
     name: "Sudipta Ghosh",
