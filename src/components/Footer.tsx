@@ -75,7 +75,17 @@ export const Footer = ({ socialLinks }) => {
               <h4 className="font-bold my-3">For Speakership Opportunity,</h4>
               <p>
                 Email at{" "}
-                <a
+               
+                 <a
+                  href="mailto:aditi.malik@guildlive.com"
+                  className="text-neon-blue hover:underline"
+                >
+                   aditi.malik@guildlive.com
+                </a>
+                &nbsp;
+                 or 
+                 &nbsp;
+                 <a
                   href="mailto:nishant.batra@guildlive.com"
                   className="text-neon-blue hover:underline"
                 >
