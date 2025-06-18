@@ -158,7 +158,7 @@ export const MUMBAI_SPEAKERS = [
   // },
     {
     name: "Sankarson Banerjee",
-    role: "Former CIO, RBL Bank",
+    role: "Director, Dialoqa and Former CIO, RBL",
     linkedin: "https://www.linkedin.com/in/sankarson/",
     image: "/speakers/sankarson-banerjee.png",
   },
