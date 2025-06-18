@@ -18,6 +18,7 @@ import DemandVideoHome from "@/components/DemandVideoHome";
 import { useEffect } from "react";
 import  {Speakers}  from "@/components/Speakers";
 import { MUMBAI_SPEAKERS } from "@/data/mumbaiSpeakers";
+import { Sponsors } from "@/components/Sponsors";
 
 const agendaData: AgendaItem[] = [
   {
@@ -137,6 +138,7 @@ const Index = () => {
       <MovingStrip color="bg-neon-blue" />
       <KeyPoints />
        <Speakers data={MUMBAI_SPEAKERS}/>
+       <Sponsors/>
         {/* Include the Agenda component with agendaData as prop */}
         <Agenda items={agendaData} eventDetails={{
         date: "09 July 2025",

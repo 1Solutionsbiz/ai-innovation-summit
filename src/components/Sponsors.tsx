@@ -9,33 +9,20 @@ gsap.registerPlugin(ScrollTrigger);
 export const Sponsors = () => {
   const sponsorTiers = [
     {
-      tier: "Presenting Partner",
-      logos: [
-        { name: "Google", url: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" },
-        { name: "Microsoft", url: "https://svgsilh.com/svg/80658.svg" },
-        { name: "Amazon", url: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" },
-      ],
-    },
-    {
-      tier: "Co-Partner",
-      logos: [
-        { name: "IBM", url: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" },
-        { name: "Meta", url: "https://venturenixlab.co/wp-content/uploads/2025/02/Meta-Logo.png" },
-        { name: "NVIDIA", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtVWdztLmxozDgFBhgErvuyjIuc5igGoWOXg&s" },
-        { name: "Intel", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDLOhtSEKPhXW6uhqj-ybQMdlLACZRRv8xwg&s" },
-      ],
-    },
-    {
       tier: "Associate Partner",
       logos: [
-        { name: "Oracle", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnduWsTuvxrhDFxmPZh0TzMQLL9Z4VCmCdbQ&s" },
-        { name: "Salesforce", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrEngtm7EBVPBmkhBtma6iUIu4_xok2f1Gyw&s" },
-        { name: "Adobe", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Adobe_Corporate_logo.svg/2560px-Adobe_Corporate_logo.svg.png" },
-        { name: "Samsung", url: "https://upload.wikimedia.org/wikipedia/commons/b/b4/Samsung_wordmark.svg" },
-        { name: "Cisco", url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqHxfp5_IxQLcw1D8CVTi6ouBWcTy2m6sxHw&s" },
-        { name: "Dell", url: "https://upload.wikimedia.org/wikipedia/commons/4/48/Dell_Logo.svg" },
+        { name: "Snowflake", url: "/sponsers/snowflake.png" },
+
       ],
     },
+    {
+      tier: "Robotics Partner",
+      logos: [
+        { name: "Xboom", url: "/sponsers/xboom.png" },
+        
+      ],
+    },
+    
   ];
 
   useEffect(() => {
