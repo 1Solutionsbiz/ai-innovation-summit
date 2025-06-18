@@ -56,6 +56,12 @@ export const MUMBAI_SPEAKERS = [
     linkedin: "https://www.linkedin.com/in/guha-suman/",
     image: "/speakers/suman-guha.png",
   },
+ {
+    name: "Vivek Sharma",
+    role: "Chief Information and Digital Officer, Pidilite Industries",
+    linkedin: "https://www.linkedin.com/in/vivek-sharma1222a66/",
+    image: "/speakers/vivek-sharma.png",
+  },
 
   {
     name: "Vineet Shukla",
@@ -103,6 +109,12 @@ export const MUMBAI_SPEAKERS = [
     image: "/speakers/tejaswi.png",
   },
   {
+    name: "Dr. Durga Prasad Dube",
+    role: "Executive Vice President & Global CISO, Reliance Industries",
+    linkedin: "https://www.linkedin.com/in/dr-durga-prasad-dube-ph-d-072a407/",
+    image: "/speakers/durga-prasad-dube.png",
+  },
+   {
     name: "Amit Joshi",
     role: "CISO, Hindalco Industries",
     linkedin: "https://www.linkedin.com/in/amit-joshi-ba7a886/",

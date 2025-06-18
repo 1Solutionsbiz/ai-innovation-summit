@@ -8,21 +8,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const Sponsors = () => {
   const sponsorTiers = [
-    {
-      tier: "Associate Partner",
-      logos: [
-        { name: "Snowflake", url: "/sponsers/snowflake.png" },
-
-      ],
-    },
+   
     {
       tier: "Robotics Partner",
       logos: [
         { name: "Xboom", url: "/sponsers/xboom.png" },
-        
       ],
     },
-    
+    {
+      tier: "Associate Partner",
+      logos: [
+        { name: "Snowflake", url: "/sponsers/snowflake.png" },
+      ],
+    },
   ];
 
   useEffect(() => {
@@ -48,35 +46,35 @@ export const Sponsors = () => {
   }, []);
 
   return (
-    <section id="partners" className="py-20 bg-black text-white">
+    <section id="partners" className="pb-20 bg-black text-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 font-orbitron">
-          Our Partners
+          <h2 className="text-4xl lg:text-6xl md:text-4xl font-bold mb-4 font-orbitron text-neon-blue">
+            Our Partners
           </h2>
           <p className=" text-lg max-w-2xl mx-auto text-white-300">
-          Leading enterprises supporting the AI Innovation Summit.
+            Leading enterprises supporting the AI Innovation Summit.
           </p>
         </div>
 
         <div className="space-y-12">
           {sponsorTiers.map((tier) => (
             <div key={tier.tier} className="mb-10">
-              <h3 className="text-center text-xl font-orbitron mb-6">
+              <h2 className="text-center text-4xl font-orbitron mb-6">
                 {tier.tier}
-              </h3>
+              </h2>
 
               <div className="flex flex-wrap justify-center gap-5">
                 {tier.logos.map((logo) => (
                   <Card
                     key={logo.name}
-                    className="w-full max-w-[180px] h-24 flex items-center justify-center bg-gray-900 shadow-sm hover:shadow-md transition-shadow transform hover:scale-105 duration-300 sponsor-logo"
+                    className="w-full max-w-[180px] h-24 flex items-center justify-center bg-white shadow-sm hover:shadow-md transition-shadow transform hover:scale-105 duration-300 sponsor-logo "
                   >
                     <CardContent className="p-4 flex items-center justify-center">
                       <img
                         src={logo.url}
                         alt={logo.name}
-                        className="max-h-12 object-contain bg-white p-2 rounded"
+                        className="max-h-24 object-contain"
                       />
                     </CardContent>
                   </Card>
