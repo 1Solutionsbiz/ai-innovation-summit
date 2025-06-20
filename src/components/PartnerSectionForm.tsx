@@ -1,5 +1,3 @@
-// src/pages/dashboard/PartnerSectionForm.tsx
-
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -15,6 +13,9 @@ interface FormData {
   city: string;
   state: string;
   pincode: string;
+  dataConsent: boolean; // New field
+  marketingConsent: boolean; // New field
+  sponsorSharingConsent: boolean; // New field
   utm_campaign_temp: string;
   utm_medium_temp: string;
   utm_source_temp: string;
@@ -37,6 +38,9 @@ export const PartnerSectionForm: React.FC = () => {
     city: "",
     state: "",
     pincode: "",
+    dataConsent: true, // Pre-checked
+    marketingConsent: true, // Pre-checked
+    sponsorSharingConsent: true, // Pre-checked
     utm_campaign_temp: "",
     utm_medium_temp: "",
     utm_source_temp: "",
@@ -73,8 +77,12 @@ export const PartnerSectionForm: React.FC = () => {
   }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const { name, value, type } = e.target;
+    const checked = (e.target as HTMLInputElement).checked;
+    setFormData(prev => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
   };
 
   const validate = (): boolean => {
@@ -122,7 +130,11 @@ export const PartnerSectionForm: React.FC = () => {
         payload,
         { headers: { "Content-Type": "application/json" } }
       );
-
+      // const resp = await axios.post(
+      //   "http://127.0.0.1:8000/api/partner-register",
+      //   payload,
+      //   { headers: { "Content-Type": "application/json" } }
+      // );
       alert(resp.data.message || "Thank You for your registration. We will reach out to you shortly.");
 
       setFormData(prev => ({
@@ -137,6 +149,9 @@ export const PartnerSectionForm: React.FC = () => {
         city: "",
         state: "",
         pincode: "",
+        dataConsent: true, // Reset to checked
+        marketingConsent: true, // Reset to checked
+        sponsorSharingConsent: true, // Reset to checked
       }));
       setErrors({});
       setRecaptchaToken(null);
@@ -162,9 +177,8 @@ export const PartnerSectionForm: React.FC = () => {
     <section className="w-full bg-gray-900 py-[200px] px-4">
       <div className="max-w-3xl mx-auto bg-gray-800 p-8 rounded-md shadow-md">
         <h2 className="text-4xl font-bold mb-6 text-center text-gradient font-orbitron">
-         Register to Partner with Us 
+          Register to Partner with Us
         </h2>
- 
 
         <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full" noValidate>
           {[
@@ -184,7 +198,7 @@ export const PartnerSectionForm: React.FC = () => {
               <input
                 type={field.type || "text"}
                 name={field.name}
-                value={formData[field.name as keyof FormData]}
+                value={formData[field.name as keyof FormData] as string}
                 onChange={handleChange}
                 className="border border-gray-600 rounded px-3 py-2 bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -193,6 +207,46 @@ export const PartnerSectionForm: React.FC = () => {
               )}
             </div>
           ))}
+
+          {/* Consent Checkboxes */}
+          <div className="sm:col-span-2">
+            <label className="flex items-start space-x-3">
+              <input
+                type="checkbox"
+                name="dataConsent"
+                checked={formData.dataConsent}
+                onChange={handleChange}
+                className="mt-1"
+              />
+              <span className="text-white">I consent to the collection and processing of my personal data by The Guild (Polygon Media Pvt. Ltd.) for the purpose of registering and communicating with me regarding this event. I have read and agree to the Privacy Policy.</span>
+            </label>
+          </div>
+
+          <div className="sm:col-span-2">
+            <label className="flex items-start space-x-3">
+              <input
+                type="checkbox"
+                name="marketingConsent"
+                checked={formData.marketingConsent}
+                onChange={handleChange}
+                className="mt-1"
+              />
+              <span className="text-white">I would like to receive occasional updates, insights, and promotional content from The Guild and its platforms, including SME Futures, Guild Live, and CIO Guild.</span>
+            </label>
+          </div>
+
+          <div className="sm:col-span-2">
+            <label className="flex items-start space-x-3">
+              <input
+                type="checkbox"
+                name="sponsorSharingConsent"
+                checked={formData.sponsorSharingConsent}
+                onChange={handleChange}
+                className="mt-1"
+              />
+              <span className="text-white">I agree to have my name, designation, and company shared with select sponsors or partners of this event for relevant business communication.</span>
+            </label>
+          </div>
 
           {[
             "utm_source_temp",
@@ -208,7 +262,7 @@ export const PartnerSectionForm: React.FC = () => {
               key={field}
               type="hidden"
               name={field}
-              value={formData[field as keyof FormData]}
+              value={formData[field as keyof FormData] as string}
             />
           ))}
 
@@ -218,7 +272,7 @@ export const PartnerSectionForm: React.FC = () => {
               onChange={token => setRecaptchaToken(token)}
               theme="dark"
             />
-          {serverError && <div className="text-red-500  mb-4">{serverError}</div>}
+            {serverError && <div className="text-red-500 mb-4">{serverError}</div>}
           </div>
           <div className="sm:col-span-2 text-center mt-4">
             <button
@@ -226,9 +280,12 @@ export const PartnerSectionForm: React.FC = () => {
               disabled={submitting}
               className={`${submitting ? "bg-gray-600" : "bg-blue-600 hover:bg-blue-700"} text-white px-6 py-2 rounded font-semibold w-full sm:w-auto`}
             >
-         
               {submitting ? "Submitting..." : "Submit"}
             </button>
+            <p className="text-xs mt-2 text-gray-400">
+              You can withdraw your consent at any time by contacting us at guildconferences@guildlive.com.
+              All data will be processed in accordance with The Guild's Privacy Policy and applicable data protection laws.
+            </p>
           </div>
         </form>
       </div>

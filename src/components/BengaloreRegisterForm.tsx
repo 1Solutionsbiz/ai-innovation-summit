@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
 
-const RECAPTCHA_SITE_KEY = "6LfhcysrAAAAAGAo4G_2kXen3oBn290aZNX7caV_"; // Replace with your actual site key
+const RECAPTCHA_SITE_KEY = "6LfhcysrAAAAAGAo4G_2kXen3oBn290aZNX7caV_";
 
 interface FormDataType {
   name: string;
@@ -12,7 +12,6 @@ interface FormDataType {
   industry: string;
   employeeSize: string;
   phoneNumber: string;
-  // mobileNumber: string;
   officialEmail: string;
   personalEmail: string;
   city: string;
@@ -20,6 +19,9 @@ interface FormDataType {
   pincode: string;
   termsAccepted: boolean;
   detailsDisclosure: boolean;
+  dataConsent: boolean; // New field
+  marketingConsent: boolean; // New field
+  sponsorSharingConsent: boolean; // New field
   utm_campaign_temp: string;
   utm_medium_temp: string;
   utm_source_temp: string;
@@ -39,7 +41,6 @@ export const BengaloreRegisterForm: React.FC = () => {
     industry: "",
     employeeSize: "",
     phoneNumber: "",
-
     officialEmail: "",
     personalEmail: "",
     city: "",
@@ -47,6 +48,9 @@ export const BengaloreRegisterForm: React.FC = () => {
     pincode: "",
     termsAccepted: false,
     detailsDisclosure: false,
+    dataConsent: true, // Pre-checked
+    marketingConsent: true, // Pre-checked
+    sponsorSharingConsent: true, // Pre-checked
     utm_campaign_temp: "",
     utm_medium_temp: "",
     utm_source_temp: "",
@@ -99,7 +103,9 @@ export const BengaloreRegisterForm: React.FC = () => {
     const newErrors: Partial<Record<keyof FormDataType, string>> = {};
     for (const key in formData) {
       const val = formData[key as keyof FormDataType];
-      const isOptional = key === "personalEmail" || key.endsWith("_temp") || key === "ip_address";
+
+      const isOptional = key === "personalEmail" || key.endsWith("_temp") || key === "ip_address" ||
+        key === "dataConsent" || key === "marketingConsent" || key === "sponsorSharingConsent";
 
       if (!isOptional) {
         if ((key === "termsAccepted" || key === "detailsDisclosure") && !val) {
@@ -133,18 +139,23 @@ export const BengaloreRegisterForm: React.FC = () => {
         ...formData,
         official_email: formData.officialEmail,
         phone_number: formData.phoneNumber,
-        // mobile_number: formData.mobileNumber,
+
         recaptchaToken,
       };
       delete payload.officialEmail;
       delete payload.phoneNumber;
-      // delete payload.mobileNumber;
+
 
       const resp = await axios.post(
         "https://darkorange-flamingo-563587.hostingersite.com/api/bangalore-registers",
         payload,
         { headers: { "Content-Type": "application/json" } }
       );
+      // const resp = await axios.post(
+      //   "http://127.0.0.1:8000/api/bangalore-registers",
+      //   payload,
+      //   { headers: { "Content-Type": "application/json" } }
+      // );
       setSuccessMessage(resp.data.message || "Thank You for your registration. We will reach out to you shortly.");
       setFormData({
         name: "",
@@ -154,7 +165,6 @@ export const BengaloreRegisterForm: React.FC = () => {
         industry: "",
         employeeSize: "",
         phoneNumber: "",
-        // mobileNumber: "",
         officialEmail: "",
         personalEmail: "",
         city: "",
@@ -162,6 +172,9 @@ export const BengaloreRegisterForm: React.FC = () => {
         pincode: "",
         termsAccepted: false,
         detailsDisclosure: false,
+        dataConsent: true,
+        marketingConsent: true,
+        sponsorSharingConsent: true,
         utm_campaign_temp: "",
         utm_medium_temp: "",
         utm_source_temp: "",
@@ -201,7 +214,7 @@ export const BengaloreRegisterForm: React.FC = () => {
     <section className="py-16 px-4 bg-gray-900 text-white" id="register">
       <div className="max-w-4xl mx-auto bg-gray-800 p-8 rounded-lg shadow-lg">
         <h2 className="text-4xl lg:text-5xl font-bold mb-8 text-center font-orbitron">
-          Register Now for AI Innovation Summit
+          Register Now for AI Innovation Summit – Bengaluru
         </h2>
 
         {serverError && <div className="mb-4 text-red-400 text-center">{serverError}</div>}
@@ -225,7 +238,7 @@ export const BengaloreRegisterForm: React.FC = () => {
             { name: "company", label: "Company" },
             { name: "organization", label: "Organization" },
             { name: "phoneNumber", label: "Phone Number" },
-            // { name: "mobileNumber", label: "Mobile Number" },
+
             { name: "officialEmail", label: "Official Email" },
             { name: "personalEmail", label: "Personal Email (optional)" },
             { name: "city", label: "City" },
@@ -305,7 +318,45 @@ export const BengaloreRegisterForm: React.FC = () => {
             </label>
             {errors.detailsDisclosure && <p className="text-red-400 text-sm mt-1">{errors.detailsDisclosure}</p>}
           </div>
+          {/* New Consent Checkboxes */}
+          <div className="md:col-span-2">
+            <label className="flex items-start space-x-3">
+              <input
+                type="checkbox"
+                name="dataConsent"
+                checked={formData.dataConsent}
+                onChange={handleChange}
+                className="mt-1"
+              />
+              <span>I consent to the collection and processing of my personal data by The Guild (Polygon Media Pvt. Ltd.) for the purpose of registering and communicating with me regarding this event. I have read and agree to the Privacy Policy.</span>
+            </label>
+          </div>
 
+          <div className="md:col-span-2">
+            <label className="flex items-start space-x-3">
+              <input
+                type="checkbox"
+                name="marketingConsent"
+                checked={formData.marketingConsent}
+                onChange={handleChange}
+                className="mt-1"
+              />
+              <span>I would like to receive occasional updates, insights, and promotional content from The Guild and its platforms, including SME Futures, Guild Live, and CIO Guild.</span>
+            </label>
+          </div>
+
+          <div className="md:col-span-2">
+            <label className="flex items-start space-x-3">
+              <input
+                type="checkbox"
+                name="sponsorSharingConsent"
+                checked={formData.sponsorSharingConsent}
+                onChange={handleChange}
+                className="mt-1"
+              />
+              <span>I agree to have my name, designation, and company shared with select sponsors or partners of this event for relevant business communication.</span>
+            </label>
+          </div>
           {/* reCAPTCHA */}
           <div className="md:col-span-2">
             <ReCAPTCHA
@@ -324,6 +375,10 @@ export const BengaloreRegisterForm: React.FC = () => {
             >
               {submitting ? "Submitting..." : "Submit"}
             </button>
+            <p className="text-xs mt-2 text-gray-400">
+              You can withdraw your consent at any time by contacting us at guildconferences@guildlive.com.
+              All data will be processed in accordance with The Guild's Privacy Policy and applicable data protection laws.
+            </p>
           </div>
         </form>
       </div>

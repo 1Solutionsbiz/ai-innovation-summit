@@ -23,6 +23,7 @@ import { RequireAuth } from "@/components/layout/RequireAuth";
 import PartnerForm from "./pages/PartnerForm";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import CodeOfConduct from "./pages/CodeOfConduct";
 
 const queryClient = new QueryClient();
 
@@ -56,7 +57,7 @@ const App: React.FC = () => (
         <Route path="/delhi-ncr-2025" element={<DelhiEdition />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-
+        <Route path="/code-of-conduct" element={<CodeOfConduct />} />
 
 
         {/* 404 */}

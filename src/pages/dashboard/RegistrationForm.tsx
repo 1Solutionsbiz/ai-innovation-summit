@@ -18,6 +18,9 @@ interface Registration {
   pincode: string | null;
   terms_accepted: boolean;
   details_disclosure: boolean;
+  data_consent: boolean;
+  marketing_consent:boolean;
+  sponsor_sharing_consent:boolean;
   utm_campaign_temp: string | null;
   utm_medium_temp: string | null;
   utm_source_temp: string | null;
@@ -31,6 +34,7 @@ interface Registration {
 
 const fetchRegistrations = async (): Promise<Registration[]> => {
   const token = localStorage.getItem('token') || '';
+  console.log(token);
   const resp = await axios.get('https://darkorange-flamingo-563587.hostingersite.com/api/registration', {
     headers: { Authorization: `Bearer ${token}` },
   });
@@ -72,6 +76,21 @@ const RegistrationForm: React.FC = () => {
         {
           Header: 'Details Disclosure',
           accessor: (row: Registration) => (row.details_disclosure ? 'Yes' : 'No'),
+          sortType: 'alphanumeric',
+        },
+          {
+          Header: 'Data Consent',
+          accessor: (row: Registration) => (row.data_consent ? 'Yes' : 'No'),
+          sortType: 'alphanumeric',
+        },
+          {
+          Header: 'Marketing Consent',
+          accessor: (row: Registration) => (row.marketing_consent ? 'Yes' : 'No'),
+          sortType: 'alphanumeric',
+        },
+          {
+          Header: 'Sponser Sharing Consent',
+          accessor: (row: Registration) => (row.sponsor_sharing_consent ? 'Yes' : 'No'),
           sortType: 'alphanumeric',
         },
         {

@@ -6,13 +6,12 @@ import { CSVLink } from 'react-csv';
 import debounce from 'lodash/debounce';
 
 // Updated interface to match API response
-interface Registration {
+interface BengaloreRegistration {
   id: number;
   name: string;
   designation: string | null;
   official_email: string | null;
   phone_number: string | null;
-  // mobile_number: string | null;
   industry: string | null;
   organization: string | null;
   city: string | null;
@@ -28,16 +27,22 @@ interface Registration {
   ip_address: string | null;
   created_at: string;
   updated_at: string;
+  data_consent: boolean;
+  marketing_consent: boolean;
+  sponsor_sharing_consent: boolean;
 }
 
-const fetchRegistrations = async (): Promise<Registration[]> => {
+const fetchRegistrations = async (): Promise<BengaloreRegistration[]> => {
   const token = localStorage.getItem('token');
   if (!token) throw new Error('Authentication token is missing. Please log in.');
-  
+
   try {
     const resp = await axios.get('https://darkorange-flamingo-563587.hostingersite.com/api/bangalore-registers', {
       headers: { Authorization: `Bearer ${token}` },
     });
+    //    const resp = await axios.get('http://127.0.0.1:8000/api/bangalore-registers', {
+    //   headers: { Authorization: `Bearer ${token}` },
+    // });
     return resp.data.data || [];
   } catch (error) {
     throw new Error('Failed to fetch registrations. Please try again later.');
@@ -45,7 +50,7 @@ const fetchRegistrations = async (): Promise<Registration[]> => {
 };
 
 const BengaloreRegistrationForm: React.FC = () => {
-  const { data, isLoading, error } = useQuery<Registration[], Error>({
+  const { data, isLoading, error } = useQuery<BengaloreRegistration[], Error>({
     queryKey: ['registrations'],
     queryFn: fetchRegistrations,
     retry: 1, // Limit retries for failed requests
@@ -81,6 +86,24 @@ const BengaloreRegistrationForm: React.FC = () => {
         { Header: 'State', accessor: 'state', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         { Header: 'Pincode', accessor: 'pincode', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         {
+          Header: 'Data Consent',
+          accessor: 'data_consent',
+          Cell: ({ value }: { value: boolean }) => value ? 'Yes' : 'No',
+          width: 100
+        },
+        {
+          Header: 'Marketing Consent',
+          accessor: 'marketing_consent',
+          Cell: ({ value }: { value: boolean }) => value ? 'Yes' : 'No',
+          width: 120
+        },
+        {
+          Header: 'Sponsor Sharing',
+          accessor: 'sponsor_sharing_consent',
+          Cell: ({ value }: { value: boolean }) => value ? 'Yes' : 'No',
+          width: 130
+        },
+        {
           Header: 'Created At',
           accessor: 'created_at',
           sortType: (rowA: any, rowB: any, columnId: string) => {
@@ -94,15 +117,15 @@ const BengaloreRegistrationForm: React.FC = () => {
 
       const utmColumns = showUtmFields
         ? [
-            { Header: 'Campaign', accessor: 'utm_campaign_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
-            { Header: 'Medium', accessor: 'utm_medium_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
-            { Header: 'Source', accessor: 'utm_source_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
-            { Header: 'Content', accessor: 'utm_content_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
-            { Header: 'Term', accessor: 'utm_term_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
-            { Header: 'Landing Page', accessor: 'landing_page_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
-            { Header: 'Conversion Page', accessor: 'conversion_page_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
-            { Header: 'IP Address', accessor: 'ip_address', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
-          ]
+          { Header: 'Campaign', accessor: 'utm_campaign_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+          { Header: 'Medium', accessor: 'utm_medium_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+          { Header: 'Source', accessor: 'utm_source_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+          { Header: 'Content', accessor: 'utm_content_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+          { Header: 'Term', accessor: 'utm_term_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+          { Header: 'Landing Page', accessor: 'landing_page_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+          { Header: 'Conversion Page', accessor: 'conversion_page_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+          { Header: 'IP Address', accessor: 'ip_address', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+        ]
         : [];
 
       return [...baseColumns, ...utmColumns];
