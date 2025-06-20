@@ -25,6 +25,9 @@ interface Partner {
   conversion_page_temp: string;
   ip_address: string;
   created_at: string;
+    data_consent: boolean;
+  marketing_consent:boolean;
+  sponsor_sharing_consent:boolean;
 }
 
 const fetchPartners = async (): Promise<Partner[]> => {
@@ -68,6 +71,22 @@ const PartnerForm: React.FC = () => {
         { Header: 'Conversion Page', accessor: 'conversion_page_temp' },
         { Header: 'IP Address', accessor: 'ip_address' },
       ] : []),
+      
+          {
+          Header: 'Data Consent',
+          accessor: (row: Partner) => (row.data_consent ? 'Yes' : 'No'),
+          sortType: 'alphanumeric',
+        },
+          {
+          Header: 'Marketing Consent',
+          accessor: (row: Partner) => (row.marketing_consent ? 'Yes' : 'No'),
+          sortType: 'alphanumeric',
+        },
+          {
+          Header: 'Sponser Sharing Consent',
+          accessor: (row: Partner) => (row.sponsor_sharing_consent ? 'Yes' : 'No'),
+          sortType: 'alphanumeric',
+        },
       { Header: 'Date', accessor: 'created_at' },
     ],
     [showUtmFields]

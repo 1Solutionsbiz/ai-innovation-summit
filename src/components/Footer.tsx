@@ -16,7 +16,7 @@ export const Footer = ({ socialLinks }) => {
             <p className="text-gray-300 lg:pl-4 sm:pl-0 ">
               From prompt to impact — the premier summit for artificial intelligence leaders and enthusiasts, making it the most impactful AI Summit.
             </p>
-              <img
+            <img
               src="/guild-logo.png"
               alt="Guild Logo"
               className="h-auto w-auto mt-5"
@@ -75,17 +75,17 @@ export const Footer = ({ socialLinks }) => {
               <h4 className="font-bold my-3">For Speakership Opportunity,</h4>
               <p>
                 Email at{" "}
-               
-                 <a
+
+                <a
                   href="mailto:aditi.malik@guildlive.com"
                   className="text-neon-blue hover:underline"
                 >
-                   aditi.malik@guildlive.com
+                  aditi.malik@guildlive.com
                 </a>
                 &nbsp;
-                 or 
-                 &nbsp;
-                 <a
+                or
+                &nbsp;
+                <a
                   href="mailto:nishant.batra@guildlive.com"
                   className="text-neon-blue hover:underline"
                 >
@@ -118,6 +118,7 @@ export const Footer = ({ socialLinks }) => {
 
             <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link to="/terms-and-conditions" className="hover:text-white transition-colors">Terms & Conditions</Link>
+            <Link to="/code-of-conduct" className="hover:text-white transition-colors">Code of Conduct</Link>
 
             {/* <a href="#" className="hover:text-white transition-colors">Cookie Settings</a> */}
           </div>

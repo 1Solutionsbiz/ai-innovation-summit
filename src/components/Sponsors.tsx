@@ -68,7 +68,7 @@ export const Sponsors = () => {
                 {tier.logos.map((logo) => (
                   <Card
                     key={logo.name}
-                    className="w-full max-w-[220px] h-24 flex items-center justify-center border-none bg-dark shadow-sm hover:shadow-md transition-shadow transform hover:scale-105 duration-300 sponsor-logo "
+                    className="w-full max-w-[220px] h-24 flex items-center justify-center border-none bg-black shadow-sm hover:shadow-md transition-shadow transform hover:scale-105 duration-300 sponsor-logo "
                   >
                     <CardContent className="p-4 flex items-center justify-center">
                       <img

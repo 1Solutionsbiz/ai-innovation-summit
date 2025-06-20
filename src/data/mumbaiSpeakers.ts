@@ -110,7 +110,7 @@ export const MUMBAI_SPEAKERS = [
   },
   {
     name: "Dr. Durga Prasad Dube",
-    role: "Executive Vice President & Global CISO, Reliance Industries",
+    role: "EVP & Group Head - Cybersecurity & Information Risk Management, Reliance Industries Ltd.",
     linkedin: "https://www.linkedin.com/in/dr-durga-prasad-dube-ph-d-072a407/",
     image: "/speakers/durga-prasad-dube.png",
   },
