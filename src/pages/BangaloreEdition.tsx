@@ -179,29 +179,46 @@ const BangaloreEdition = () => {
       }} />
 
 
-      <div className="bg-black text-white text-center p-4 rounded-lg">
-        <h1 className="text-neon-purple font-bold text-2xl md:text-3xl text-center font-orbitron">
-          02:30 – 04:00 PM | AI in Action: Sector-Focused & Thematic Parallel Tracks
-        </h1>
-        <p className="mt-2 text-center">These sessions will run in parallel across different halls</p>
-        <h3 className="font-bold text-lg mt-4 text-center font-orbitron text-neon-blue">Track 1: Fintech & Financial Services Innovation</h3>
-        <p className="text-center">Shaping the Future of BFSI with AI & Automation</p>
+
+
+      <div className="bg-black text-white p-4 ">
+        {/* Common Header */}
+        <div className="text-center">
+          <h1 className="text-neon-purple font-bold text-2xl md:text-3xl font-orbitron">
+            02:30 – 04:00 PM | AI in Action: Sector-Focused & Thematic Parallel Tracks
+          </h1>
+          <p className="mt-2">These sessions will run in parallel across different halls</p>
+        </div>
+
+        {/* Parallel Tracks - Side by Side */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 px-10">
+          {/* Track 1 */}
+          <div className="border border-gray-700 p-4 ">
+            <h3 className="font-bold text-lg text-center font-orbitron text-neon-blue">
+              Track 1: Fintech & Financial Services Innovation
+            </h3>
+            <p className="text-center mb-4">Shaping the Future of BFSI with AI & Automation</p>
+            <ShortAgenda items={shortAgendaData1} />
+          </div>
+
+          {/* Track 2 */}
+          <div className="border border-gray-700 p-4 ">
+            <h3 className="font-bold text-lg text-center font-orbitron text-neon-blue">
+              Track 2: AI x Startups – Scaling Ambitions with Intelligence
+            </h3>
+            <p className="text-center mb-4">How India's Boldest Startups are Leveraging AI for Disruption</p>
+            <ShortAgenda items={shortAgendaData2} />
+          </div>
+        </div>
       </div>
 
-
-      <ShortAgenda items={shortAgendaData1} />
-      <div className="bg-black text-white text-center p-4 rounded-lg">
-
-        <h3 className="font-bold text-lg mt-4 text-center font-orbitron text-neon-blue">Track 2: AI x Startups – Scaling Ambitions with Intelligence</h3>
-        <p className="text-center">How India’s Boldest Startups are Leveraging AI for Disruption</p>
-      </div>
-      <ShortAgenda items={shortAgendaData2} />
-      <div className="bg-black text-white text-center p-4 rounded-lg">
+      {/* Main Hall Section */}
+      <div className="bg-black text-white p-4  pb-20">
         <h1 className="text-neon-purple font-bold text-2xl md:text-3xl text-center font-orbitron">
           Main Hall Programming
         </h1>
+        <ShortAgenda items={shortAgendaData3} />
       </div>
-       <ShortAgenda items={shortAgendaData3} />
       <KeyTheme />
       <PastHighlights />
       <DemandVideoHome />

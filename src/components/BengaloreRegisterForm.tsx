@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
+import { Link } from "react-router-dom";
+
 
 const RECAPTCHA_SITE_KEY = "6LfhcysrAAAAAGAo4G_2kXen3oBn290aZNX7caV_";
 
@@ -18,7 +20,7 @@ interface FormDataType {
   state: string;
   pincode: string;
   termsAccepted: boolean;
-  detailsDisclosure: boolean;
+  // detailsDisclosure: boolean;
   dataConsent: boolean; // New field
   marketingConsent: boolean; // New field
   sponsorSharingConsent: boolean; // New field
@@ -47,7 +49,7 @@ export const BengaloreRegisterForm: React.FC = () => {
     state: "",
     pincode: "",
     termsAccepted: false,
-    detailsDisclosure: false,
+    // detailsDisclosure: false,
     dataConsent: true, // Pre-checked
     marketingConsent: true, // Pre-checked
     sponsorSharingConsent: true, // Pre-checked
@@ -108,7 +110,7 @@ export const BengaloreRegisterForm: React.FC = () => {
         key === "dataConsent" || key === "marketingConsent" || key === "sponsorSharingConsent";
 
       if (!isOptional) {
-        if ((key === "termsAccepted" || key === "detailsDisclosure") && !val) {
+        if ((key === "termsAccepted" ) && !val) {
           newErrors[key as keyof FormDataType] = "This field is required.";
         } else if (typeof val === "string" && !val.trim()) {
           newErrors[key as keyof FormDataType] = "This field is required.";
@@ -139,10 +141,11 @@ export const BengaloreRegisterForm: React.FC = () => {
         ...formData,
         official_email: formData.officialEmail,
         phone_number: formData.phoneNumber,
-
+        personal_email:formData.personalEmail,
         recaptchaToken,
       };
       delete payload.officialEmail;
+      delete payload.personalEmail;
       delete payload.phoneNumber;
 
 
@@ -171,7 +174,7 @@ export const BengaloreRegisterForm: React.FC = () => {
         state: "",
         pincode: "",
         termsAccepted: false,
-        detailsDisclosure: false,
+        // detailsDisclosure: false,
         dataConsent: true,
         marketingConsent: true,
         sponsorSharingConsent: true,
@@ -300,12 +303,12 @@ export const BengaloreRegisterForm: React.FC = () => {
                 onChange={handleChange}
                 className="mt-1"
               />
-              <span>I have read & agree with Terms & Conditions</span>
+              <span>I have read & agree with <Link to="/terms-and-conditions" className="text-neon-blue">Terms & Conditions</Link> </span>
             </label>
             {errors.termsAccepted && <p className="text-red-400 text-sm mt-1">{errors.termsAccepted}</p>}
           </div>
 
-          <div className="md:col-span-2">
+          {/* <div className="md:col-span-2">
             <label className="flex items-start space-x-3">
               <input
                 type="checkbox"
@@ -317,7 +320,7 @@ export const BengaloreRegisterForm: React.FC = () => {
               <span>I agree to the disclosure of details</span>
             </label>
             {errors.detailsDisclosure && <p className="text-red-400 text-sm mt-1">{errors.detailsDisclosure}</p>}
-          </div>
+          </div> */}
           {/* New Consent Checkboxes */}
           <div className="md:col-span-2">
             <label className="flex items-start space-x-3">
@@ -328,7 +331,7 @@ export const BengaloreRegisterForm: React.FC = () => {
                 onChange={handleChange}
                 className="mt-1"
               />
-              <span>I consent to the collection and processing of my personal data by The Guild (Polygon Media Pvt. Ltd.) for the purpose of registering and communicating with me regarding this event. I have read and agree to the Privacy Policy.</span>
+              <span>I consent to the collection and processing of my personal data by The Guild (Polygon Media Pvt. Ltd.) for the purpose of registering and communicating with me regarding this event. I have read and agree to the <Link to="/privacy-policy" className="text-neon-blue"> Privacy Policy</Link>.</span>
             </label>
           </div>
 
@@ -377,7 +380,7 @@ export const BengaloreRegisterForm: React.FC = () => {
             </button>
             <p className="text-xs mt-2 text-gray-400">
               You can withdraw your consent at any time by contacting us at guildconferences@guildlive.com.
-              All data will be processed in accordance with The Guild's Privacy Policy and applicable data protection laws.
+              All data will be processed in accordance with The Guild's <Link to="/privacy-policy" className="text-neon-blue"> Privacy Policy</Link>  and applicable data protection laws.
             </p>
           </div>
         </form>
