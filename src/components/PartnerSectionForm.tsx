@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
+import { Link } from "react-router-dom";
 
 interface FormData {
   name: string;
@@ -218,7 +219,7 @@ export const PartnerSectionForm: React.FC = () => {
                 onChange={handleChange}
                 className="mt-1"
               />
-              <span className="text-white">I consent to the collection and processing of my personal data by The Guild (Polygon Media Pvt. Ltd.) for the purpose of registering and communicating with me regarding this event. I have read and agree to the Privacy Policy.</span>
+              <span className="text-white">I consent to the collection and processing of my personal data by The Guild (Polygon Media Pvt. Ltd.) for the purpose of registering and communicating with me regarding this event. I have read and agree to the <Link to="/privacy-policy" className="text-neon-blue"> Privacy Policy</Link>.</span>
             </label>
           </div>
 
@@ -284,7 +285,7 @@ export const PartnerSectionForm: React.FC = () => {
             </button>
             <p className="text-xs mt-2 text-gray-400">
               You can withdraw your consent at any time by contacting us at guildconferences@guildlive.com.
-              All data will be processed in accordance with The Guild's Privacy Policy and applicable data protection laws.
+              All data will be processed in accordance with The Guild's <Link to="/privacy-policy" className="text-neon-blue"> Privacy Policy</Link>  and applicable data protection laws.
             </p>
           </div>
         </form>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
+import { Link } from "react-router-dom";
 
 const RECAPTCHA_SITE_KEY = "6LfhcysrAAAAAGAo4G_2kXen3oBn290aZNX7caV_"; // 🔁 Replace with your actual site key
 
@@ -16,7 +17,7 @@ interface FormDataType {
   city: string;
   pincode: string;
   termsAccepted: boolean;
-  detailsDisclosure: boolean;
+  // detailsDisclosure: boolean;
   dataConsent: boolean; // New field
   marketingConsent: boolean; // New field
   sponsorSharingConsent: boolean; // New field
@@ -43,7 +44,7 @@ export const Register: React.FC = () => {
     city: "",
     pincode: "",
     termsAccepted: false,
-    detailsDisclosure: false,
+    // detailsDisclosure: false,
     dataConsent: true, // Pre-checked
     marketingConsent: true, // Pre-checked
     sponsorSharingConsent: true, // Pre-checked
@@ -63,7 +64,7 @@ export const Register: React.FC = () => {
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
   const industries = ["Media & Entertainment", "Retail", "Manufacturing", "Automotive", "Telecom", "Ecommerce", "Oil & Gas", "IT", "Healthcare", "Real Estate", "Other"];
-  const employeeSizes = ["0-100", "100-200", "200-300", "300-400", "400-500", "500-1000","1000-5000","5000+"];
+  const employeeSizes = ["0-100", "100-200", "200-300", "300-400", "400-500", "500-1000", "1000-5000", "5000+"];
 
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
@@ -98,11 +99,11 @@ export const Register: React.FC = () => {
     const newErrors: Partial<Record<keyof FormDataType, string>> = {};
     for (const key in formData) {
       const val = formData[key as keyof FormDataType];
-      const isOptional = key === "personalEmail" || key.endsWith("_temp") || key === "ip_address" || 
-                        key === "dataConsent" || key === "marketingConsent" || key === "sponsorSharingConsent"; // All new checkboxes are optional
+      const isOptional = key === "personalEmail" || key.endsWith("_temp") || key === "ip_address" ||
+        key === "dataConsent" || key === "marketingConsent" || key === "sponsorSharingConsent"; // All new checkboxes are optional
 
       if (!isOptional) {
-        if ((key === "termsAccepted" || key === "detailsDisclosure") && !val) {
+        if ((key === "termsAccepted" ) && !val) {
           newErrors[key as keyof FormDataType] = "This field is required.";
         } else if (typeof val === "string" && !val.trim()) {
           newErrors[key as keyof FormDataType] = "This field is required.";
@@ -129,12 +130,12 @@ export const Register: React.FC = () => {
     try {
       const payload = { ...formData, recaptchaToken };
 
-        const resp = await axios.post(
-        "https://darkorange-flamingo-563587.hostingersite.com",
+      const resp = await axios.post(
+        "https://darkorange-flamingo-563587.hostingersite.com/api/register",
         payload,
         { headers: { "Content-Type": "application/json" } }
       );
-    
+
       alert(resp.data.message || "Thank You for your registration. We will reach out to you shortly. ");
       setFormData({
         name: "",
@@ -148,7 +149,7 @@ export const Register: React.FC = () => {
         city: "",
         pincode: "",
         termsAccepted: false,
-        detailsDisclosure: false,
+        // detailsDisclosure: false,
         dataConsent: true, // Reset to checked
         marketingConsent: true, // Reset to checked
         sponsorSharingConsent: true, // Reset to checked
@@ -183,7 +184,7 @@ export const Register: React.FC = () => {
     <section className="py-16 px-4 bg-gray-900 text-white" id="register">
       <div className="max-w-4xl mx-auto bg-gray-800 p-8 rounded-lg shadow-lg">
         <h2 className="text-4xl lg:text-5xl font-bold mb-8 text-center font-orbitron">
-       Register Now for AI Innovation Summit – Mumbai
+          Register Now for AI Innovation Summit – Mumbai
         </h2>
 
         {serverError && <div className="mb-4 text-red-400 text-center">{serverError}</div>}
@@ -265,12 +266,12 @@ export const Register: React.FC = () => {
                 onChange={handleChange}
                 className="mt-1"
               />
-              <span>I have read & agree with Terms & Conditions</span>
+              <span>I have read & agree with <Link to="/terms-and-conditions" className="text-neon-blue">Terms & Conditions</Link></span>
             </label>
             {errors.termsAccepted && <p className="text-red-400 text-sm mt-1">{errors.termsAccepted}</p>}
           </div>
 
-          <div className="md:col-span-2">
+          {/* <div className="md:col-span-2">
             <label className="flex items-start space-x-3">
               <input
                 type="checkbox"
@@ -282,7 +283,7 @@ export const Register: React.FC = () => {
               <span>I agree to the disclosure of details</span>
             </label>
             {errors.detailsDisclosure && <p className="text-red-400 text-sm mt-1">{errors.detailsDisclosure}</p>}
-          </div>
+          </div> */}
 
           {/* New Consent Checkboxes */}
           <div className="md:col-span-2">
@@ -294,7 +295,7 @@ export const Register: React.FC = () => {
                 onChange={handleChange}
                 className="mt-1"
               />
-              <span>I consent to the collection and processing of my personal data by The Guild (Polygon Media Pvt. Ltd.) for the purpose of registering and communicating with me regarding this event. I have read and agree to the Privacy Policy.</span>
+              <span>I consent to the collection and processing of my personal data by The Guild (Polygon Media Pvt. Ltd.) for the purpose of registering and communicating with me regarding this event. I have read and agree to the <Link to="/privacy-policy" className="text-neon-blue"> Privacy Policy</Link>.</span>
             </label>
           </div>
 
@@ -343,8 +344,8 @@ export const Register: React.FC = () => {
               {submitting ? "Submitting..." : "Submit"}
             </button>
             <p className="text-xs mt-2 text-gray-400">
-              You can withdraw your consent at any time by contacting us at guildconferences@guildlive.com. 
-              All data will be processed in accordance with The Guild's Privacy Policy and applicable data protection laws.
+              You can withdraw your consent at any time by contacting us at guildconferences@guildlive.com.
+              All data will be processed in accordance with The Guild's <Link to="/privacy-policy" className="text-neon-blue"> Privacy Policy</Link>  and applicable data protection laws.
             </p>
           </div>
         </form>
