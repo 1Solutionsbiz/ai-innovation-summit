@@ -14,7 +14,7 @@ const Login: React.FC = () => {
 
   const handleLogin = async () => {
     try {
-      const resp = await axios.post('https://darkorange-flamingo-563587.hostingersite.com/api/login', {
+      const resp = await axios.post('https://olive-elk-842602.hostingersite.com/api/login', {
         email,
         password,
       });

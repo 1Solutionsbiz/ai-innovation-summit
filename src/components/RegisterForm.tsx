@@ -131,7 +131,7 @@ export const Register: React.FC = () => {
       const payload = { ...formData, recaptchaToken };
 
       const resp = await axios.post(
-        "https://darkorange-flamingo-563587.hostingersite.com/api/register",
+        "https://olive-elk-842602.hostingersite.com/api/register",
         payload,
         { headers: { "Content-Type": "application/json" } }
       );

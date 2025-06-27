@@ -32,7 +32,7 @@ interface Partner {
 
 const fetchPartners = async (): Promise<Partner[]> => {
   const token = localStorage.getItem('token') || '';
-  const resp = await axios.get('https://darkorange-flamingo-563587.hostingersite.com/api/partners', {
+  const resp = await axios.get('https://olive-elk-842602.hostingersite.com/api/partners', {
     headers: { Authorization: `Bearer ${token}` },
   });
   return resp.data.data;

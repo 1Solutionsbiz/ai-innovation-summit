@@ -91,7 +91,7 @@ export const Header = ({
           </button>
         ))}
 
-        <div className="relative">
+        <div className="relative flex flex-col items-center">
           <button
             className="hover:text-neon-blue transition-colors"
             onClick={() => handleDropdownClick("upcoming")}
@@ -99,7 +99,7 @@ export const Header = ({
             Upcoming Editions
           </button>
           {openDropdown === "upcoming" && (
-            <div className="absolute left-0 mt-2 w-56 bg-dark-lighter border border-neon-purple/20 shadow-lg z-10">
+            <div className={`absolute ${isMobile ? 'left-1/2 transform -translate-x-1/2' : 'left-0'} mt-2 w-56 bg-dark-lighter border border-neon-purple/20 shadow-lg z-10`}>
               <Link
                 to="/bangalore-2025"
                 className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors"
@@ -116,7 +116,7 @@ export const Header = ({
           )}
         </div>
 
-        <div className="relative">
+        <div className="relative flex flex-col items-center">
           <button
             className="hover:text-neon-blue transition-colors"
             onClick={() => handleDropdownClick("previous")}
@@ -124,7 +124,7 @@ export const Header = ({
             Previous Editions
           </button>
           {openDropdown === "previous" && (
-            <div className="absolute left-0 mt-2 w-56 bg-dark-lighter border border-neon-purple/20 shadow-lg z-10">
+            <div className={`absolute ${isMobile ? 'left-1/2 transform -translate-x-1/2' : 'left-0'} mt-2 w-56 bg-dark-lighter border border-neon-purple/20 shadow-lg z-10`}>
               <Link
                 to="/previous/mumbai-2024"
                 className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors"
@@ -184,7 +184,7 @@ export const Header = ({
                 </Button>
               </SheetTrigger>
               <SheetContent className="bg-dark-lighter text-white">
-                <nav className="flex flex-col space-y-4 mt-8">
+                <nav className="flex flex-col space-y-4 mt-8 items-center">
                   <NavItems />
                 </nav>
               </SheetContent>

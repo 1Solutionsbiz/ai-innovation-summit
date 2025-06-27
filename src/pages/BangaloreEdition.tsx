@@ -78,13 +78,13 @@ const agendaData: AgendaItem[] = [
 const shortAgendaData1: AgendaItem[] = [
   {
     time: "02:30 – 03:10 PM",
-    title: "Special Session: AI-Powered Lending & Risk – Rewiring BFSI DNA",
+    title: "Special Session 1: AI-Powered Lending & Risk – Rewiring BFSI DNA",
     description: "A high-impact discussion with BFSI leaders on how AI is transforming credit underwriting, fraud management, and operational risk, while enabling faster, more inclusive financial services.",
     color: "purple",
   },
   {
     time: "03:10 – 04:00 PM",
-    title: "Spotlight Session: GenAI for FinTech, InsurTech & Customer Personalization",
+    title: "Spotlight Session 1: GenAI for FinTech, InsurTech & Customer Personalization",
     description: "Partner Spotlight",
     color: "blue",
   },
@@ -93,13 +93,13 @@ const shortAgendaData1: AgendaItem[] = [
 const shortAgendaData2: AgendaItem[] = [
   {
     time: "02:30 – 03:10 PM",
-    title: "Panel: Founders’ Playbook: Building AI-Native Startups",
-    description: "Fast-growing founders share how they embed AI at the core of their products and culture—from real-time decision-making to LLM-driven platforms—and what it takes to scale responsibly.",
+    title: "Special Session 2: Founders’ Playbook: Building AI-Native Startups",
+    description: " Fast-growing founders share how they embed AI at the core of their products and culture—from real-time decision-making to LLM-driven platforms—and what it takes to scale responsibly.",
     color: "purple",
   },
   {
     time: "03:10 – 04:00 PM",
-    title: "Spotlight Session: AI-Powered Growth Engines – Martech, Sales, and Ops",
+    title: "Spotlight Session 2: AI-Powered Growth Engines – Martech, Sales, and Ops",
     description: "Partner Spotlight",
     color: "blue",
   },

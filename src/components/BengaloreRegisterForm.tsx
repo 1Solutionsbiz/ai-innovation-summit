@@ -9,7 +9,7 @@ const RECAPTCHA_SITE_KEY = "6LfhcysrAAAAAGAo4G_2kXen3oBn290aZNX7caV_";
 interface FormDataType {
   name: string;
   designation: string;
-  company: string;
+ 
   organization: string;
   industry: string;
   employeeSize: string;
@@ -17,7 +17,6 @@ interface FormDataType {
   officialEmail: string;
   personalEmail: string;
   city: string;
-  state: string;
   pincode: string;
   termsAccepted: boolean;
   // detailsDisclosure: boolean;
@@ -38,7 +37,7 @@ export const BengaloreRegisterForm: React.FC = () => {
   const [formData, setFormData] = useState<FormDataType>({
     name: "",
     designation: "",
-    company: "",
+
     organization: "",
     industry: "",
     employeeSize: "",
@@ -46,7 +45,7 @@ export const BengaloreRegisterForm: React.FC = () => {
     officialEmail: "",
     personalEmail: "",
     city: "",
-    state: "",
+
     pincode: "",
     termsAccepted: false,
     // detailsDisclosure: false,
@@ -150,10 +149,11 @@ export const BengaloreRegisterForm: React.FC = () => {
 
 
       const resp = await axios.post(
-        "https://darkorange-flamingo-563587.hostingersite.com/api/bangalore-registers",
+        "https://olive-elk-842602.hostingersite.com/api/bangalore-registers",
         payload,
         { headers: { "Content-Type": "application/json" } }
       );
+      
       // const resp = await axios.post(
       //   "http://127.0.0.1:8000/api/bangalore-registers",
       //   payload,
@@ -163,7 +163,7 @@ export const BengaloreRegisterForm: React.FC = () => {
       setFormData({
         name: "",
         designation: "",
-        company: "",
+       
         organization: "",
         industry: "",
         employeeSize: "",
@@ -171,7 +171,7 @@ export const BengaloreRegisterForm: React.FC = () => {
         officialEmail: "",
         personalEmail: "",
         city: "",
-        state: "",
+      
         pincode: "",
         termsAccepted: false,
         // detailsDisclosure: false,
@@ -238,14 +238,14 @@ export const BengaloreRegisterForm: React.FC = () => {
           {[
             { name: "name", label: "Name" },
             { name: "designation", label: "Designation" },
-            { name: "company", label: "Company" },
+           
             { name: "organization", label: "Organization" },
             { name: "phoneNumber", label: "Phone Number" },
 
             { name: "officialEmail", label: "Official Email" },
             { name: "personalEmail", label: "Personal Email (optional)" },
             { name: "city", label: "City" },
-            { name: "state", label: "State" },
+          
             { name: "pincode", label: "Pincode" }
           ].map(field => (
             <div key={field.name}>
