@@ -159,7 +159,7 @@ export const BengaloreRegisterForm: React.FC = () => {
       //   payload,
       //   { headers: { "Content-Type": "application/json" } }
       // );
-      setSuccessMessage(resp.data.message || "Thank You for your registration. We will reach out to you shortly.");
+      setSuccessMessage(resp.data.message || "Thank You for Registering – Pending Confirmation. You will receive a confirmation email once your registration is approved.");
       setFormData({
         name: "",
         designation: "",

@@ -136,7 +136,7 @@ export const Register: React.FC = () => {
         { headers: { "Content-Type": "application/json" } }
       );
 
-      alert(resp.data.message || "Thank You for your registration. We will reach out to you shortly. ");
+      alert(resp.data.message || "Thank You for Registering – Pending Confirmation. You will receive a confirmation email once your registration is approved. ");
       setFormData({
         name: "",
         designation: "",
