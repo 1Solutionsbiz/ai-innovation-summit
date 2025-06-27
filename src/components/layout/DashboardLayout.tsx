@@ -12,7 +12,7 @@ const DashboardLayout: React.FC = () => {
   const logoutMutation = useMutation({
     mutationFn: async () => {
       await axios.post(
-        'https://darkorange-flamingo-563587.hostingersite.com/api/logout',
+        'https://olive-elk-842602.hostingersite.com/api/logout',
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );

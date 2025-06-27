@@ -127,7 +127,7 @@ export const PartnerSectionForm: React.FC = () => {
       const payload = { ...formData, recaptcha_token: recaptchaToken };
 
       const resp = await axios.post(
-        "https://darkorange-flamingo-563587.hostingersite.com/api/partner-register",
+        "https://olive-elk-842602.hostingersite.com/api/partner-register",
         payload,
         { headers: { "Content-Type": "application/json" } }
       );
