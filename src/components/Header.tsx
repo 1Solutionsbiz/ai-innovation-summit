@@ -46,9 +46,20 @@ export const Header = ({
   const location = useLocation();
   const currentPath = location.pathname;
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [hoverDropdown, setHoverDropdown] = useState<string | null>(null);
 
   const handleDropdownClick = (dropdownName: string) => {
     setOpenDropdown((prev) => (prev === dropdownName ? null : dropdownName));
+  };
+
+  const handleDropdownHover = (dropdownName: string) => {
+    if (!isMobile) {
+      setHoverDropdown(dropdownName);
+    }
+  };
+
+  const handleDropdownLeave = () => {
+    setHoverDropdown(null);
   };
 
   const handleSectionClick = (id: string) => {
@@ -91,20 +102,24 @@ export const Header = ({
           </button>
         ))}
 
-        <div className="relative flex flex-col items-center">
+        <div 
+          className="relative flex flex-col items-center"
+          onMouseEnter={() => handleDropdownHover("upcoming")}
+          onMouseLeave={handleDropdownLeave}
+        >
           <button
             className="hover:text-neon-blue transition-colors"
             onClick={() => handleDropdownClick("upcoming")}
           >
             Upcoming Editions
           </button>
-          {openDropdown === "upcoming" && (
+          {(openDropdown === "upcoming" || hoverDropdown === "upcoming") && (
             <div className={`absolute ${isMobile ? 'left-1/2 transform -translate-x-1/2' : 'left-0'} mt-2 w-56 bg-dark-lighter border border-neon-purple/20 shadow-lg z-10`}>
               <Link
                 to="/bangalore-2025"
                 className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors"
               >
-                Bangalore Edition 2025
+               Bengaluru Edition 2025
               </Link>
               <Link
                 to="/delhi-ncr-2025"
@@ -116,14 +131,18 @@ export const Header = ({
           )}
         </div>
 
-        <div className="relative flex flex-col items-center">
+        <div 
+          className="relative flex flex-col items-center"
+          onMouseEnter={() => handleDropdownHover("previous")}
+          onMouseLeave={handleDropdownLeave}
+        >
           <button
             className="hover:text-neon-blue transition-colors"
             onClick={() => handleDropdownClick("previous")}
           >
             Previous Editions
           </button>
-          {openDropdown === "previous" && (
+          {(openDropdown === "previous" || hoverDropdown === "previous") && (
             <div className={`absolute ${isMobile ? 'left-1/2 transform -translate-x-1/2' : 'left-0'} mt-2 w-56 bg-dark-lighter border border-neon-purple/20 shadow-lg z-10`}>
               <Link
                 to="/previous/mumbai-2024"
