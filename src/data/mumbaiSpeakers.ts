@@ -78,7 +78,7 @@ export const MUMBAI_SPEAKERS = [
   },
   {
     name: "Sivakumar Nandipati",
-    role: "Chief Digital Officer, Fedbank FInancial Services",
+    role: "Chief Digital Officer, Fedbank Financial Services",
     linkedin: "https://www.linkedin.com/in/sivakumarnandipati/",
     image: "/speakers/siva-kumar-nandipati.png",
   },
