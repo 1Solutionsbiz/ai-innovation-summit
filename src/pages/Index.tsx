@@ -83,14 +83,13 @@ const agendaData: AgendaItem[] = [
   },
   {
     time: "03:15 – 04:00 PM",
-    title: "Panel: 'AI Readiness Across Industries: What’s Working, What’s Not'",
+    title: "Closing Panel: 'AI Readiness Across Industries: What’s Working, What’s Not'",
     description: "An industry‑focused discussion highlighting experiences from manufacturing, BFSI, retail, and pharma sectors. Understand successful approaches, common pitfalls, and practical recommendations for building AI readiness and maturity within diverse organizational contexts.",
     color: "purple",
   },
   {
     time: "04:00 – 04:45 PM",
-    title: "Closing Panel: 'Agentic AI, Strategic Analytics & the Road Ahead'",
-    description: "Gain forward‑looking insights into the evolving role of Agentic AI and strategic analytics in business. Speakers will explore anticipated trends, emerging opportunities, regulatory considerations, and outline key priorities enterprises must embrace for future AI‑driven success.",
+    title: "Lucky Draw Contest: Prize Winners Announcement",
     color: "blue",
   },
   {
