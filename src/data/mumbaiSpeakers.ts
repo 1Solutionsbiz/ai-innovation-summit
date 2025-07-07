@@ -19,6 +19,12 @@ export const MUMBAI_SPEAKERS = [
     linkedin: "https://www.linkedin.com/in/sumit-garg-375706/",
     image: "/speakers/Sumit-Garg.png",
   },
+   {
+    name: "Amit Ray",
+    role: "CIO Advisory and Customer Success Leader, Jio",
+    linkedin: "https://www.linkedin.com/in/amit-ray-360831156/",
+    image: "/speakers/amit-ray.png",
+  },
   {
     name: "Aashish Kshetry",
     role: "CIO & VP-IT, Asian Paints",
