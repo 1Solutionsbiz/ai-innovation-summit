@@ -19,6 +19,7 @@ import { useEffect } from "react";
 import  {Speakers}  from "@/components/Speakers";
 import { MUMBAI_SPEAKERS } from "@/data/mumbaiSpeakers";
 import { Sponsors } from "@/components/Sponsors";
+import RegistrationClosed from "@/components/RegistrationClosed";
 
 const agendaData: AgendaItem[] = [
   {
@@ -126,7 +127,10 @@ const Index = () => {
   }, []);
   return (
     <div className="min-h-screen">
-      <Header />
+      <Header 
+       isRegistrationActive={false}
+        registrationButtonName="Registration Closed"
+        disabledButtonName="Registration Closed" />
       <Hero
         backgroundImage="/hero-banner.png"
         contentBackgroundImage="/hero-banner-image.svg"
@@ -161,7 +165,8 @@ const Index = () => {
       <PartnershipCTA />
       <ShouldAttend />
       <WhoShouldSponsor />
-      <Register />
+      {/* <Register /> */}
+      <RegistrationClosed/>
       <Footer socialLinks={socialLinks} />
     </div>
   );
