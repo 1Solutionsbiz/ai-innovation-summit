@@ -11,7 +11,7 @@ export const Sponsors = () => {
     {
       tier: "Co-Partner",
       logos: [
-        { name: "Microsoft", url: "/sponsers/microsoft.webp" },
+        { name: "Microsoft", url: "/sponsers/microsoft.png" },
       ],
     },
     {
