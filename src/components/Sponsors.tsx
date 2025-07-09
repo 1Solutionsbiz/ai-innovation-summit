@@ -8,7 +8,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const Sponsors = () => {
   const sponsorTiers = [
-   
+    {
+      tier: "Co-Partner",
+      logos: [
+        { name: "Microsoft", url: "/sponsers/microsoft.webp" },
+      ],
+    },
     {
       tier: "Robotics Partner",
       logos: [
