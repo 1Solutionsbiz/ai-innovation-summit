@@ -157,7 +157,7 @@ const BangaloreEdition = () => {
         heading="Shaping the Future with AI"
         subheading="From prompt to impact"
         body="Join the brightest minds in Artificial Intelligence and Innovation at the most impactful AI Summit mastering AI and securing the future."
-        date="August 2025 | The Leela Palace, Bengaluru"
+        date="3 September 2025 | The Leela Palace, Bengaluru"
 
         stats={[
           { value: "25+", label: "Speakers" },
