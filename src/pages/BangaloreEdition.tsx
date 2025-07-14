@@ -17,6 +17,7 @@ import DemandVideoHome from "@/components/DemandVideoHome";
 import { useEffect } from "react";
 import { BengaloreRegisterForm } from "@/components/BengaloreRegisterForm";
 import ShortAgenda from "@/components/ShortAgenda";
+import PastPartners from "@/components/PastPartners";
 
 
 const agendaData: AgendaItem[] = [
@@ -170,7 +171,7 @@ const BangaloreEdition = () => {
       <About />
       <MovingStrip color="bg-neon-blue" />
       <KeyPoints />
-
+      <PastPartners />
       {/* Include the Agenda component with agendaData as prop */}
       <Agenda items={agendaData} eventDetails={{
         date: "03 September 2025 ",
@@ -223,6 +224,7 @@ const BangaloreEdition = () => {
       <PastHighlights />
       <DemandVideoHome />
       <PartnershipCTA />
+
       <ShouldAttend />
       <WhoShouldSponsor />
       <BengaloreRegisterForm />
