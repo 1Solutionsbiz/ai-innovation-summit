@@ -14,6 +14,7 @@ interface FormData {
   city: string;
   state: string;
   pincode: string;
+  termsAccepted: boolean;
   dataConsent: boolean; // New field
   marketingConsent: boolean; // New field
   sponsorSharingConsent: boolean; // New field
@@ -39,6 +40,7 @@ export const PartnerSectionForm: React.FC = () => {
     city: "",
     state: "",
     pincode: "",
+    termsAccepted: false,
     dataConsent: true, // Pre-checked
     marketingConsent: true, // Pre-checked
     sponsorSharingConsent: true, // Pre-checked
@@ -105,6 +107,11 @@ export const PartnerSectionForm: React.FC = () => {
       if (key === "pincode" && val && !/^\d{6}$/.test(val)) {
         newErrors[key as keyof FormData] = "Enter a valid 6-digit pincode";
       }
+      // Specific validation for checkbox fields
+      if (!formData.termsAccepted) {
+        newErrors.termsAccepted = "You must accept the terms and conditions";
+      }
+
     });
 
     if (!recaptchaToken) {
@@ -150,6 +157,7 @@ export const PartnerSectionForm: React.FC = () => {
         city: "",
         state: "",
         pincode: "",
+        termsAccepted: true,
         dataConsent: true, // Reset to checked
         marketingConsent: true, // Reset to checked
         sponsorSharingConsent: true, // Reset to checked
@@ -208,7 +216,19 @@ export const PartnerSectionForm: React.FC = () => {
               )}
             </div>
           ))}
-
+          <div className="md:col-span-2">
+            <label className="flex items-start space-x-3">
+              <input
+                type="checkbox"
+                name="termsAccepted"
+                checked={formData.termsAccepted}
+                onChange={handleChange}
+                className="mt-1"
+              />
+              <span className="text-white">I have read & agree with <Link to="/terms-and-conditions" className="text-neon-blue">Terms & Conditions</Link></span>
+            </label>
+            {errors.termsAccepted && <p className="text-red-400 text-sm mt-1">{errors.termsAccepted}</p>}
+          </div>
           {/* Consent Checkboxes */}
           <div className="sm:col-span-2">
             <label className="flex items-start space-x-3">

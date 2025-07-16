@@ -18,6 +18,8 @@ import { useEffect } from "react";
 import { BengaloreRegisterForm } from "@/components/BengaloreRegisterForm";
 import ShortAgenda from "@/components/ShortAgenda";
 import PastPartners from "@/components/PastPartners";
+import { Speakers } from "@/components/Speakers";
+import { BENGALURU_SPEAKERS } from "@/data/bengaluruSpeakers";
 
 
 const agendaData: AgendaItem[] = [
@@ -171,6 +173,7 @@ const BangaloreEdition = () => {
       <About />
       <MovingStrip color="bg-neon-blue" />
       <KeyPoints />
+        <Speakers data={BENGALURU_SPEAKERS}/>
       <PastPartners />
       {/* Include the Agenda component with agendaData as prop */}
       <Agenda items={agendaData} eventDetails={{
