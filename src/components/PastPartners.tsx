@@ -6,7 +6,8 @@ import "keen-slider/keen-slider.min.css";
 const logos = [
   "/sponsers/microsoft.png",
   "/sponsers/snowflake.png",
-  "/sponsers/xboom.png",
+  "/sponsers/xboom.png",,
+  "/sponsers/slack.png"
 ];
 
 const PastPartners: React.FC = () => {
@@ -39,7 +40,7 @@ const PastPartners: React.FC = () => {
             <img
               src={logo}
               alt={`Mumbai Partner ${index + 1}`}
-              className="h-16 sm:h-20 md:h-24 w-auto object-contain transition-transform duration-300 hover:scale-105"
+              className="h-10 sm:h-16 md:h-18 w-auto object-contain transition-transform duration-300 hover:scale-105"
             />
           </div>
         ))}
