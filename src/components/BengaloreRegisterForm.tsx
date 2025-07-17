@@ -9,15 +9,17 @@ const RECAPTCHA_SITE_KEY = "6LfhcysrAAAAAGAo4G_2kXen3oBn290aZNX7caV_";
 interface FormDataType {
   name: string;
   designation: string;
- 
+
   organization: string;
   industry: string;
   employeeSize: string;
   phoneNumber: string;
   officialEmail: string;
-  personalEmail: string;
+  // personalEmail: string;
   city: string;
   pincode: string;
+  dob: string;
+  ageAcknowledged: boolean;
   termsAccepted: boolean;
   // detailsDisclosure: boolean;
   dataConsent: boolean; // New field
@@ -43,10 +45,12 @@ export const BengaloreRegisterForm: React.FC = () => {
     employeeSize: "",
     phoneNumber: "",
     officialEmail: "",
-    personalEmail: "",
+    // personalEmail: "",
     city: "",
 
     pincode: "",
+    dob: "",
+    ageAcknowledged: false,
     termsAccepted: false,
     // detailsDisclosure: false,
     dataConsent: true, // Pre-checked
@@ -109,13 +113,20 @@ export const BengaloreRegisterForm: React.FC = () => {
         key === "dataConsent" || key === "marketingConsent" || key === "sponsorSharingConsent";
 
       if (!isOptional) {
-        if ((key === "termsAccepted" ) && !val) {
+        if ((key === "termsAccepted") && !val) {
           newErrors[key as keyof FormDataType] = "This field is required.";
         } else if (typeof val === "string" && !val.trim()) {
           newErrors[key as keyof FormDataType] = "This field is required.";
         }
       }
+      if (!formData.dob) {
+        newErrors.dob = "Please provide your date of birth.";
+      }
+      if (!formData.ageAcknowledged) {
+        newErrors.ageAcknowledged = "You must confirm you are 18 or older.";
+      }
     }
+
 
     if (!recaptchaToken) {
       setServerError("Please complete the reCAPTCHA.");
@@ -140,11 +151,11 @@ export const BengaloreRegisterForm: React.FC = () => {
         ...formData,
         official_email: formData.officialEmail,
         phone_number: formData.phoneNumber,
-        personal_email:formData.personalEmail,
+        // personal_email: formData.personalEmail,
         recaptchaToken,
       };
       delete payload.officialEmail;
-      delete payload.personalEmail;
+      // delete payload.personalEmail;
       delete payload.phoneNumber;
 
 
@@ -153,7 +164,7 @@ export const BengaloreRegisterForm: React.FC = () => {
         payload,
         { headers: { "Content-Type": "application/json" } }
       );
-      
+
       // const resp = await axios.post(
       //   "http://127.0.0.1:8000/api/bangalore-registers",
       //   payload,
@@ -163,17 +174,18 @@ export const BengaloreRegisterForm: React.FC = () => {
       setFormData({
         name: "",
         designation: "",
-       
+
         organization: "",
         industry: "",
         employeeSize: "",
         phoneNumber: "",
         officialEmail: "",
-        personalEmail: "",
+        // personalEmail: "",
         city: "",
-      
+        dob: "",
         pincode: "",
         termsAccepted: false,
+        ageAcknowledged: false,
         // detailsDisclosure: false,
         dataConsent: true,
         marketingConsent: true,
@@ -212,6 +224,13 @@ export const BengaloreRegisterForm: React.FC = () => {
       setSubmitting(false);
     }
   };
+  const getEighteenYearsAgo = () => {
+    const today = new Date();
+    today.setFullYear(today.getFullYear() - 18);
+    return today.toISOString().split("T")[0];
+  };
+
+  const maxDob = getEighteenYearsAgo();
 
   return (
     <section className="py-16 px-4 bg-gray-900 text-white" id="register">
@@ -238,14 +257,14 @@ export const BengaloreRegisterForm: React.FC = () => {
           {[
             { name: "name", label: "Name" },
             { name: "designation", label: "Designation" },
-           
+
             { name: "organization", label: "Organization" },
             { name: "phoneNumber", label: "Phone Number" },
 
             { name: "officialEmail", label: "Official Email" },
-            { name: "personalEmail", label: "Personal Email (optional)" },
+            // { name: "personalEmail", label: "Personal Email (optional)" },
             { name: "city", label: "City" },
-          
+
             { name: "pincode", label: "Pincode" }
           ].map(field => (
             <div key={field.name}>
@@ -292,6 +311,21 @@ export const BengaloreRegisterForm: React.FC = () => {
             </select>
             {errors.employeeSize && <p className="text-red-400 text-sm mt-1">{errors.employeeSize}</p>}
           </div>
+          {/* date of birth  */}
+          <div>
+            <label className="block mb-1 font-semibold font-orbitron">Date of Birth</label>
+            <input
+              type="date"
+              name="dob"
+              value={formData.dob}
+              onChange={handleChange}
+              max={maxDob} // ✅ limit date to 18+ years only
+              className="w-full border border-gray-300 rounded px-3 py-2 text-black"
+            />
+            {errors.dob && (
+              <p className="text-red-400 text-sm mt-1">{errors.dob}</p>
+            )}
+          </div>
 
           {/* Terms and Disclosure */}
           <div className="md:col-span-2">
@@ -306,6 +340,21 @@ export const BengaloreRegisterForm: React.FC = () => {
               <span>I have read & agree with <Link to="/terms-and-conditions" className="text-neon-blue">Terms & Conditions</Link> </span>
             </label>
             {errors.termsAccepted && <p className="text-red-400 text-sm mt-1">{errors.termsAccepted}</p>}
+          </div>
+          <div className="md:col-span-2">
+            <label className="flex items-start space-x-3">
+              <input
+                type="checkbox"
+                name="ageAcknowledged"
+                checked={formData.ageAcknowledged}
+                onChange={handleChange}
+                className="mt-1"
+              />
+              <span>I acknowledge that I am 18 years of age or older and eligible to participate.</span>
+            </label>
+            {errors.ageAcknowledged && (
+              <p className="text-red-400 text-sm mt-1">{errors.ageAcknowledged}</p>
+            )}
           </div>
 
           {/* <div className="md:col-span-2">

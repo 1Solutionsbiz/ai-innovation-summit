@@ -27,6 +27,7 @@ interface BengaloreRegistration {
   ip_address: string | null;
   created_at: string;
   updated_at: string;
+  age_acknowledged: boolean;
   data_consent: boolean;
   marketing_consent: boolean;
   sponsor_sharing_consent: boolean;
@@ -85,6 +86,12 @@ const BengaloreRegistrationForm: React.FC = () => {
         { Header: 'City', accessor: 'city', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         { Header: 'State', accessor: 'state', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         { Header: 'Pincode', accessor: 'pincode', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+         {
+          Header: 'Age Acknowledge',
+          accessor: 'age_acknowledged',
+          Cell: ({ value }: { value: boolean }) => value ? 'Yes' : 'No',
+          width: 100
+        },
         {
           Header: 'Data Consent',
           accessor: 'data_consent',
