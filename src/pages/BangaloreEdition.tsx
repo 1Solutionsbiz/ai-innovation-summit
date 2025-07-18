@@ -228,7 +228,8 @@ const BangaloreEdition = () => {
         <ShortAgenda items={shortAgendaData3} />
       </div>
       <KeyTheme />
-      <PastHighlights />
+<PastHighlights videoSrc="/videos/Post_Event_Montage.mp4" />
+
       <DemandVideoHome />
       <PartnershipCTA />
 

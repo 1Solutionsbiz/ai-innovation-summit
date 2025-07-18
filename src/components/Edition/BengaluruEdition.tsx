@@ -164,7 +164,8 @@ const BengaluruEdition = () => {
         subheading=""
         date="7th November 2024, Bengaluru"
       />
-      <PastHighlights />
+      <PastHighlights videoSrc="/videos/Post_Event_Montage.mp4" />
+
       <Objectives />
       <StatsSection
         stats={[
