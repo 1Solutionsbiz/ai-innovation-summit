@@ -16,7 +16,7 @@ import Agenda, { AgendaItem } from "@/components/Agenda"; // Import Agenda and A
 import { PartnershipCTA } from "@/components/PartnershipCTA";
 import DemandVideoHome from "@/components/DemandVideoHome";
 import { useEffect } from "react";
-import  {Speakers}  from "@/components/Speakers";
+import { Speakers } from "@/components/Speakers";
 import { MUMBAI_SPEAKERS } from "@/data/mumbaiSpeakers";
 import { Sponsors } from "@/components/Sponsors";
 import RegistrationClosed from "@/components/RegistrationClosed";
@@ -39,7 +39,7 @@ const agendaData: AgendaItem[] = [
     title: "Keynote Session: 'From Innovation to Impact – Rewiring the Enterprise with AI'",
     description: "Examine strategies to transform AI projects from experimental investments into measurable business outcomes. Understand the key principles of aligning AI initiatives closely with strategic priorities to ensure tangible impact on enterprise performance and decision-making.",
     color: "purple",
-  },  {
+  }, {
     time: "10:15 – 10:20 AM",
     title: "On Stage Performance by Xboom Robotic Dogs",
     color: "blue",
@@ -68,10 +68,10 @@ const agendaData: AgendaItem[] = [
     description: "Explore the implementation and operationalization of autonomous AI agents in enterprise processes. Panellists will discuss practical applications, real‑world case studies, potential barriers to adoption, and measurable benefits in terms of efficiency, accuracy, and reduced human intervention.",
     color: "blue",
   },
-    {
+  {
     time: "12:45 – 12:50 PM",
     title: "Tech Demonstration: Capabilities of Robotic Dogs Across Industries",
-  
+
     color: "purple",
   },
   {
@@ -98,7 +98,7 @@ const agendaData: AgendaItem[] = [
     description: "An industry‑focused discussion highlighting experiences from manufacturing, BFSI, retail, and pharma sectors. Understand successful approaches, common pitfalls, and practical recommendations for building AI readiness and maturity within diverse organizational contexts.",
     color: "purple",
   },
-    {
+  {
     time: "04:00 – 04:05 PM",
     title: "Closing Remarks",
     color: "blue",
@@ -111,10 +111,10 @@ const agendaData: AgendaItem[] = [
   {
     time: "04:45 – 05:00 PM",
     title: "Closing Session: Networking, Tea, Feedback & Swag Distribution",
-    
+
     color: "blue",
   },
-  
+
 ];
 
 
@@ -127,8 +127,8 @@ const Index = () => {
   }, []);
   return (
     <div className="min-h-screen">
-      <Header 
-       isRegistrationActive={false}
+      <Header
+        isRegistrationActive={false}
         registrationButtonName="Registration Closed"
         disabledButtonName="Registration Closed" />
       <Hero
@@ -150,23 +150,24 @@ const Index = () => {
       <About />
       <MovingStrip color="bg-neon-blue" />
       <KeyPoints />
-       <Speakers data={MUMBAI_SPEAKERS}/>
-       <Sponsors/>
-        {/* Include the Agenda component with agendaData as prop */}
-        <Agenda items={agendaData} eventDetails={{
+      <Speakers data={MUMBAI_SPEAKERS} />
+      <Sponsors />
+      {/* Include the Agenda component with agendaData as prop */}
+      <Agenda items={agendaData} eventDetails={{
         date: "09 July 2025",
         venue: "Taj Santacruz, Mumbai",
         audience: "200+ Enterprise Technology Leaders"
       }} />
-      
-       <KeyTheme />
-      <PastHighlights />
+
+      <KeyTheme />
+      <PastHighlights videoSrc="/videos/mumbai-edition-montage.mp4" />
+
       <DemandVideoHome />
       <PartnershipCTA />
       <ShouldAttend />
       <WhoShouldSponsor />
       {/* <Register /> */}
-      <RegistrationClosed/>
+      <RegistrationClosed />
       <Footer socialLinks={socialLinks} />
     </div>
   );

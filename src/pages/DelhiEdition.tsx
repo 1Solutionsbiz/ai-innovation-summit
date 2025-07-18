@@ -144,7 +144,8 @@ const DelhiEdition = () => {
             }} />
            
             <KeyTheme />
-            <PastHighlights />
+         <PastHighlights videoSrc="/videos/Post_Event_Montage.mp4" />
+
             <DemandVideoHome />
             <PartnershipCTA />
             <ShouldAttend />

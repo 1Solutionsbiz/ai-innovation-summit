@@ -110,7 +110,8 @@ const MumbaiEdition = () => {
         subheading="Unlocking the Future: Navigating the Confluence of Cloud and AI"
         date="5th June 2024, Mumbai"
       />
-      <PastHighlights />
+      <PastHighlights videoSrc="/videos/Post_Event_Montage.mp4" />
+
       <Objectives />
       <StatsSection
         stats={[
