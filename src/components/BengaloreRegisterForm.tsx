@@ -73,7 +73,8 @@ export const BengaloreRegisterForm: React.FC = () => {
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
   const industries = ["Media & Entertainment", "Retail", "Manufacturing", "Automotive", "Telecom", "Ecommerce", "Oil & Gas", "IT", "Healthcare", "Real Estate", "Other"];
-  const employeeSizes = ["0-100", "100-200", "200-300", "300-400", "400-500", "500-1000", "1000-5000", "5000+"];
+  // const employeeSizes = ["0-100", "100-200", "200-300", "300-400", "400-500", "500-1000", "1000-5000", "5000+"];
+  const employeeSizes = ["0-500","500-2000","2000-5000","5000-10000","10000+"];
 
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
@@ -170,8 +171,8 @@ export const BengaloreRegisterForm: React.FC = () => {
       //   payload,
       //   { headers: { "Content-Type": "application/json" } }
       // );
-      // setSuccessMessage(resp.data.message || "Thank You for Registering – Pending Confirmation. You will receive a confirmation email once your registration is approved.");
 
+      // setSuccessMessage(resp.data.message || "Thank You for Registering – Pending Confirmation. You will receive a confirmation email once your registration is approved.");
       alert("Thank You for Registering – Pending Confirmation. You will receive a confirmation email once your registration is approved.");
 
       setFormData({
@@ -260,14 +261,49 @@ export const BengaloreRegisterForm: React.FC = () => {
           {[
             { name: "name", label: "Name" },
             { name: "designation", label: "Designation" },
-
             { name: "organization", label: "Organization" },
-            { name: "phoneNumber", label: "Phone Number" },
-
-            { name: "officialEmail", label: "Official Email" },
+            // { name: "phoneNumber", label: "Phone Number" },
+            // { name: "officialEmail", label: "Official Email" },
             // { name: "personalEmail", label: "Personal Email (optional)" },
-            { name: "city", label: "City" },
+            // { name: "city", label: "City" },
+            // { name: "pincode", label: "Pincode" }
+          ].map(field => (
+            <div key={field.name}>
+              <label className="block mb-1 font-semibold font-orbitron">{field.label}</label>
+              <input
+                type={field.name.includes("Email") ? "email" : field.name.includes("Number") ? "tel" : "text"}
+                name={field.name}
+                value={formData[field.name as keyof FormDataType] as string}
+                onChange={handleChange}
+                className="w-full border border-gray-300 rounded px-3 py-2 text-black"
+              />
+              {errors[field.name as keyof FormDataType] && (
+                <p className="text-red-400 text-sm mt-1">{errors[field.name as keyof FormDataType]}</p>
+              )}
+            </div>
+          ))}
 
+
+          {/* Employee Size */}
+          <div>
+            <label className="block mb-1 font-semibold font-orbitron">Employee Size</label>
+            <select
+              name="employeeSize"
+              value={formData.employeeSize}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded px-3 py-2 text-black"
+            >
+              <option value="">Select Size</option>
+              {employeeSizes.map(size => <option key={size} value={size}>{size}</option>)}
+            </select>
+            {errors.employeeSize && <p className="text-red-400 text-sm mt-1">{errors.employeeSize}</p>}
+          </div>
+
+
+          {[
+            { name: "officialEmail", label: "Official Email" },
+            { name: "phoneNumber", label: "Phone Number" },
+            { name: "city", label: "City" },
             { name: "pincode", label: "Pincode" }
           ].map(field => (
             <div key={field.name}>
@@ -285,6 +321,7 @@ export const BengaloreRegisterForm: React.FC = () => {
             </div>
           ))}
 
+
           {/* Industry */}
           <div>
             <label className="block mb-1 font-semibold font-orbitron">Industry</label>
@@ -300,22 +337,39 @@ export const BengaloreRegisterForm: React.FC = () => {
             {errors.industry && <p className="text-red-400 text-sm mt-1">{errors.industry}</p>}
           </div>
 
-          {/* Employee Size */}
-          <div>
-            <label className="block mb-1 font-semibold font-orbitron">Employee Size</label>
-            <select
-              name="employeeSize"
-              value={formData.employeeSize}
-              onChange={handleChange}
-              className="w-full border border-gray-300 rounded px-3 py-2 text-black"
-            >
-              <option value="">Select Size</option>
-              {employeeSizes.map(size => <option key={size} value={size}>{size}</option>)}
-            </select>
-            {errors.employeeSize && <p className="text-red-400 text-sm mt-1">{errors.employeeSize}</p>}
-          </div>
           {/* date of birth  */}
           <div>
+
+<label className="block mb-1 font-semibold font-orbitron">Birth Year</label>
+{/* <input
+  type="number"
+  name="dob"
+  value={formData.dob}
+  onChange={handleChange}
+  min="1900"
+  max={new Date().getFullYear()}
+  placeholder="YYYY"
+  className="w-full border border-gray-300 rounded px-3 py-2 text-black"
+/> */}
+<input
+  type="number"
+  name="dob"
+  value={formData.dob}
+  onChange={(e) => {
+    let val = e.target.value;
+    if (val.length > 4) val = val.slice(0, 4);
+    setFormData(prev => ({ ...prev, dob: val }));
+  }}
+  min="1900"
+  max={new Date().getFullYear()}
+  placeholder="YYYY"
+  className="w-full border border-gray-300 rounded px-3 py-2 text-black"
+/>
+
+
+
+
+            {/*             
             <label className="block mb-1 font-semibold font-orbitron">Date of Birth</label>
             <input
               type="date"
@@ -324,7 +378,9 @@ export const BengaloreRegisterForm: React.FC = () => {
               onChange={handleChange}
               max={maxDob} // ✅ limit date to 18+ years only
               className="w-full border border-gray-300 rounded px-3 py-2 text-black"
-            />
+            /> */}
+
+
             {errors.dob && (
               <p className="text-red-400 text-sm mt-1">{errors.dob}</p>
             )}

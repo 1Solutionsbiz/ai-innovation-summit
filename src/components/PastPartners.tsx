@@ -28,7 +28,7 @@ const PastPartners: React.FC = () => {
   return (
     <section className="py-16 bg-black">
       <h2 className="text-5xl sm:text-6xl md:text-7xl font-orbitron text-gradient font-bold text-center mb-16">
-        Past Partners
+        Series Partners
       </h2>
 
       <div ref={sliderRef} className="keen-slider px-4">

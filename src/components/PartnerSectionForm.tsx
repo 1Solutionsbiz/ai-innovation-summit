@@ -143,6 +143,8 @@ export const PartnerSectionForm: React.FC = () => {
       //   payload,
       //   { headers: { "Content-Type": "application/json" } }
       // );
+
+
       alert(resp.data.message || "Thank You for your registration. We will reach out to you shortly.");
 
       setFormData(prev => ({

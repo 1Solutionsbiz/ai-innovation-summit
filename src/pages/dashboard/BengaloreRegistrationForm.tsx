@@ -79,6 +79,8 @@ const BengaloreRegistrationForm: React.FC = () => {
         { Header: 'Name', accessor: 'name', sortType: 'alphanumeric' },
         { Header: 'Designation', accessor: 'designation', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         { Header: 'Organization', accessor: 'organization', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+        { Header: 'Employee Size', accessor: 'employeesize', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+        { Header: 'Birth Year', accessor: 'dob', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         { Header: 'Industry', accessor: 'industry', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         { Header: 'Phone Number', accessor: 'phone_number', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         // { Header: 'Mobile Number', accessor: 'mobile_number', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
@@ -87,7 +89,6 @@ const BengaloreRegistrationForm: React.FC = () => {
         { Header: 'City', accessor: 'city', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         { Header: 'State', accessor: 'state', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         { Header: 'Pincode', accessor: 'pincode', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
-        { Header: 'D.O.B.', accessor: 'dob', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         { Header: 'Source', accessor: 'utm_source_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         { Header: 'Medium', accessor: 'utm_medium_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         {
