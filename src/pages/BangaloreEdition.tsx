@@ -45,7 +45,7 @@ const agendaData: AgendaItem[] = [
   {
     time: "10:15 – 11:00 AM",
     title: "Session 1: Architecting AI-First Enterprises – From Cloud to Culture",
-    description: "A focused discussion on how leading enterprises is reimagining their architecture, infrastructure, and culture to become truly AI-first. From cloud-native foundations to data pipelines and workforce readiness, this session unveils the strategic blueprint to scale AI responsibly.",
+    description: " A focused discussion on how leading enterprises is reimagining their architecture, infrastructure, and culture to become truly AI-first. From cloud-native foundations to data pipelines and workforce readiness, this session unveils the trategic blueprint to scale AI responsibly. Moderator:• Venkat Iyer, Partner- Cyber and Risk Consulting, PwC Panelists:• Shashwat Singh, hief Information Officer, boAt• Debashis Singh, Chief Information Officer, Persistent Systems • Rejin Surendran, Global CIO, Wipro Enterprises Limited • Anand V, Chief Information Officer Regional - APAC, Randstad • Vishwesh Pai, Head of Product, JSM Service & AI, Atlassian ",
     color: "blue",
   },
   {
@@ -55,27 +55,63 @@ const agendaData: AgendaItem[] = [
     color: "purple",
   },
   {
-    time: "11:15 – 12:00 PM",
-    title: "Session 2: CXO Fireside Chat- The CEO-CIO Playbook for Disruptive Growth",
-    description: "A candid conversation decodes how visionary CEOs and CIOs align technology, strategy, and culture to unlock non-linear growth. From AI bets to agile reinvention—discover leadership lessons from the frontlines of enterprise transformation.",
+    time: "11:15 – 11:35 PM",
+    title: "Special Address: Agentic AI in Real-World IT, Software, and Support",
+    description: " Speaker: Vishwesh Pai, Head of Product, JSM Service & AI, Atlassian.",
     color: "blue",
   },
   {
-    time: "12:00 – 12:45 PM",
-    title: "Session 3: Agentic Automation – Beyond GenAI to Self-Driving Workflows",
-    description: "Move beyond prompt-based AI to autonomous, self-learning workflows. Industry leaders discuss how agentic automation is redefining enterprise operations, boosting decision velocity, and reshaping business processes in a world where AI can act, decide, and evolve.",
+    time: "11:35 – 12:15 PM",
+    title: " Session 2: CXO Fireside Chat- The CEO-CIO Playbook for Disruptive Growth",
+    description: "   A candid conversation decodes how visionary CEOs and CIOs align technology, strategy, and culture to unlock non-linear growth. From AI bets to agile reinvention—discover leadership lessons from the frontlines of enterprise transformation.Speakers: • Mithun Appaiah, CEO, Wow! Momo • Nandkishor Dhomne, CIO, Manipal Health Enterprises ",
     color: "purple",
   },
   {
-    time: "12:45 – 01:30 PM",
-    title: "Session 4: Data, AI & the New Age of Business Intelligence",
-    description: "This session examines how leading enterprises leverage AI-driven analytics to enhance business intelligence. Panelists will cover data strategies, predictive and prescriptive analytics, and the transformation of traditional BI functions into proactive, intelligent decision-support systems.",
+    time: "12:15 – 01:00 PM",
+    title: " Session 3: Agentic Automation – Beyond GenAI to Self-Driving Workflows",
+    description: "Move beyond prompt-based AI to autonomous, self-learning workflows. Industry leaders discuss how agentic automation is redefining enterprise operations, boosting decision velocity, and reshaping business processes in a world where AI can act, decide, and evolve. Moderator: Rajnil Malik, Partner and GenAI GTM Leader, PwC India Panelists: • Raman Srinivasan, Chief Digital Officer, Inmobi Group • Bhargab Dutta, Chief Digital Officer, Century Plyboards • Srinivas Jaggumantri, UTO, financial services, Infosys • Geetha Adinarayan, CTO, IBM Consulting, India and South Asia, IBM",
     color: "blue",
   },
   {
-    time: "01:30 – 02:30 PM",
+    time: "01:00 – 01:45 PM",
+    title: "Session 4: Data, AI & the New Age of Business Intelligence",
+    description: " This session examines how leading enterprises l everage AI-driven analytics to enhance business intelligence. Panelists will cover data strategies, predictive and prescriptive analytics, and the transformation of traditional BI functions into proactive, intelligent decision-support systems.Moderator: Mallikarjun Kandkuru, Partner, Data and Analytics, KPMG Panelists:• Koushik Kadidal, Chief Data Officer, PayU • Vivek Rajagopal, Group CAIO, Narayana Health • Sridhar Jonnala, Chief Technology Officer, AI, Strategy, Delivery and Governance, IBM • Chandramouli Godhandaraman Head of Architecture (Retail) and Program Engineering, HDFC Bank • Ganapathy V, VP & Head- Global Advanced Analytics CoE, Holcim ",
+    color: "purple",
+  },
+  {
+    time: "01:45 – 02:30 PM",
     title: "Networking Lunch",
+    description: " ",
+    color: "blue",
+  },
+  {
+    time: "02:30 – 02:45 PM",
+    title: "Distinguished Speaker Address",
     description: "",
+    color: "purple",
+  },
+  {
+    time: "02:45 – 03:30 PM",
+    title: "Session 5: Securing the AI Stack: Cybersecurity in the Age of GenAI",
+    description: "This session examines the cybersecurity implications of widespread Generative AI adoption. Panelists will address ritical security concerns, risks associated with AI-generated code and data, and best practices to ensure secure and responsible deployment of AI across enterprise IT infrastructures.Moderator: • Preetam Hazarika, Partner, PwC India Panelists:• Vikas Singh Yadav, CISO, Flipkart • Yogesh Kumar, CISO, Fanuc India • Jason Joseph, Chief Information Security Officer (CISO), mPokket Financial Services Pvt Ltd • Sudeep Dey, CIO-CISO, Aster DM Healthcare, India.",
+    color: "blue",
+  },
+  {
+    time: "03:30 – 04:15 PM",
+    title: "Session 6: GCC Leaders on Global AI Delivery from India",
+    description: " Global Capability Centers (GCCs) are driving enterprise AI innovation at scale from India. This session gathers GCC heads to discuss delivery models, talent strategy, and India’s growing leadership in building global AI platforms from the ground up.Moderator:• Pragati (Kushwah) Chakraborty, Partner, Deloitte Panelists:• Vikram Balakrishna, CTO and Head of Transformation – Technology Centers India & Philippines, Atos • Dr. Suchin Sudhakaran, Cyber Security Leader, BP • Tanushree Dutta, Executive Director - Risk and Information Management, Morgan Stanley*",
+    color: "purple",
+  },
+  {
+    time: "04:15 – 05:00 PM",
+    title: "Session 7: AI Readiness Across Industries: What’s Working, What’s Not",
+    description: "This session presents an industry-focused discussion featuring experiences from the services, manufacturing, BFSI, retail, and pharma sectors. Panelists will highlight successful approaches, common pitfalls, and practical ecommendations for building AI readiness and maturity across diverse organizational contexts.Moderator:• Kamesh Srinivasan, Partner, KPMG India Panelists:• Manish Shukla, Head of Generative AI Platform, NatWest Group • Dr. Avnish Kshatriya, Chief Digital & Information Officer (CDIO), Trilegal • Dr. Sheela Siddappa, Leader-AI, Commonwealth Bank",
+    color: "blue",
+  },
+  {
+    time: "05:00 – 05:15 PM",
+    title: "Closing Note & Call to Action",
+    description: " ",
     color: "purple",
   }
 ];
@@ -111,34 +147,40 @@ const shortAgendaData2: AgendaItem[] = [
 ];
 
 const shortAgendaData3: AgendaItem[] = [
-  {
-    time: "02:30 – 03:15 PM",
-    title: "Session 5: Securing the AI Stack: Cybersecurity in the Age of GenAI",
-    description: "This session examines the cybersecurity implications of widespread Generative AI adoption. Panelists will address critical security concerns, risks associated with AI-generated code and data, and best practices to ensure secure and responsible deployment of AI across enterprise IT infrastructures.",
-    color: "purple",
-  },
-  {
-    time: "03:15 – 04:00 PM",
-    title: "Session 6: GCC Leaders on Global AI Delivery from India",
-    description: "Global Capability Centers (GCCs) are driving enterprise AI innovation at scale from India. This session gathers GCC heads to discuss delivery models, talent strategy, and India's growing leadership in building global AI platforms from the ground up.",
-    color: "blue",
-  },
-  {
-    time: "04:00 – 04:45 PM",
-    title: "Session 7: AI Readiness Across Industries: What's Working, What's Not",
-    description: "This session presents an industry-focused discussion featuring experiences from the manufacturing, BFSI, retail, and pharma sectors. Panelists will highlight successful approaches, common pitfalls, and practical recommendations for building AI readiness and maturity across diverse organizational contexts.",
-    color: "purple",
-  },
-  {
-    time: "04:45 – 05:00 PM",
-    title: "Closing Note & Call to Action",
-    description: "",
-    color: "blue",
-  },
   // {
-  //   time: "05:00 – 07:00 PM",
-  //   title: "Networking & CXO Mixer",
-  //   description: "Unwind and connect over cocktails in a casual CXO-only networking environment.",
+  //   time: "01:45 – 02:30 PM",
+  //   title: "Networking Lunch",
+  //   description: " ",
+  //   color: "purple",
+  // },
+  // {
+  //   time: "02:30 – 02:45 PM",
+  //   title: "Distinguished Speaker Address",
+  //   description: "",
+  //   color: "blue",
+  // },
+  // {
+  //   time: "02:45 – 03:30 PM",
+  //   title: "Session 5: Securing the AI Stack: Cybersecurity in the Age of GenAI",
+  //   description: "This session examines the cybersecurity implications of widespread Generative AI adoption. Panelists will address ritical security concerns, risks associated with AI-generated code and data, and best practices to ensure secure and responsible deployment of AI across enterprise IT infrastructures.Moderator: • Preetam Hazarika, Partner, PwC India Panelists:• Vikas Singh Yadav, CISO, Flipkart • Yogesh Kumar, CISO, Fanuc India • Jason Joseph, Chief Information Security Officer (CISO), mPokket Financial Services Pvt Ltd • Sudeep Dey, CIO-CISO, Aster DM Healthcare, India.",
+  //   color: "purple",
+  // },
+  // {
+  //   time: "03:30 – 04:15 PM",
+  //   title: "Session 6: GCC Leaders on Global AI Delivery from India",
+  //   description: " Global Capability Centers (GCCs) are driving enterprise AI innovation at scale from India. This session gathers GCC heads to discuss delivery models, talent strategy, and India’s growing leadership in building global AI platforms from the ground up.Moderator:• Pragati (Kushwah) Chakraborty, Partner, Deloitte Panelists:• Vikram Balakrishna, CTO and Head of Transformation – Technology Centers India & Philippines, Atos • Dr. Suchin Sudhakaran, Cyber Security Leader, BP • Tanushree Dutta, Executive Director - Risk and Information Management, Morgan Stanley*",
+  //   color: "blue",
+  // },
+  // {
+  //   time: "04:15 – 05:00 PM",
+  //   title: "Session 7: AI Readiness Across Industries: What’s Working, What’s Not",
+  //   description: "This session presents an industry-focused discussion featuring experiences from the services, manufacturing, BFSI, retail, and pharma sectors. Panelists will highlight successful approaches, common pitfalls, and practical ecommendations for building AI readiness and maturity across diverse organizational contexts.Moderator:• Kamesh Srinivasan, Partner, KPMG India Panelists:• Manish Shukla, Head of Generative AI Platform, NatWest Group • Dr. Avnish Kshatriya, Chief Digital & Information Officer (CDIO), Trilegal • Dr. Sheela Siddappa, Leader-AI, Commonwealth Bank",
+  //   color: "purple",
+  // },
+  // {
+  //   time: "05:00 – 05:15 PM",
+  //   title: "Closing Note & Call to Action",
+  //   description: " ",
   //   color: "purple",
   // }
 ];
@@ -175,14 +217,14 @@ const BangaloreEdition = () => {
       <MovingStrip color="bg-neon-blue" />
       <KeyPoints />
       <Speakers data={BENGALURU_SPEAKERS} />
-      
+
       <div className="text-center bg-black text-white mt-[-50px] pb-[50px] text-2xl md:text-3xl lg:text-4xl font-orbitron underline underline-offset-4 decoration-white ">
-        AND<span className="text-gradient font-bold"> MORE</span> 
+        AND<span className="text-gradient font-bold"> MORE</span>
       </div>
 
 
       <PastPartnersSpnser />
-      
+
       <PastPartners />
 
       {/* Include the Agenda component with agendaData as prop */}
@@ -194,24 +236,24 @@ const BangaloreEdition = () => {
 
 
 
-      
+
 
 
 
 
       {/* <div className="bg-black text-white p-4 "> */}
-{/* Common Header */}
-        {/* <div className="text-center">
+      {/* Common Header */}
+      {/* <div className="text-center">
           <h1 className="text-neon-purple font-bold text-2xl md:text-3xl font-orbitron">
             02:30 – 04:00 PM | AI in Action: Sector-Focused & Thematic Parallel Tracks
           </h1>
           <p className="mt-2">These sessions will run in parallel across different halls</p>
         </div> */}
 
-{/* Parallel Tracks - Side by Side */}
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 px-10"> */}
-{/* Track 1 */}
-          {/* <div className="border border-gray-700 p-4 ">
+      {/* Parallel Tracks - Side by Side */}
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 px-10"> */}
+      {/* Track 1 */}
+      {/* <div className="border border-gray-700 p-4 ">
             <h3 className="font-bold text-lg text-center font-orbitron text-neon-blue">
               Track 1: Fintech & Financial Services Innovation
             </h3>
@@ -219,8 +261,8 @@ const BangaloreEdition = () => {
             <ShortAgenda items={shortAgendaData1} />
           </div> */}
 
-{/* Track 2 */}
-          {/* <div className="border border-gray-700 p-4 ">
+      {/* Track 2 */}
+      {/* <div className="border border-gray-700 p-4 ">
             <h3 className="font-bold text-lg text-center font-orbitron text-neon-blue">
               Track 2: AI x Startups – Scaling Ambitions with Intelligence
             </h3>
@@ -229,17 +271,17 @@ const BangaloreEdition = () => {
           </div>
         </div>
       </div> */}
-      
+
 
       {/* Main Hall Section */}
-      <div className="bg-black text-white p-4  pb-20">
-        <h1 className="text-neon-purple font-bold text-2xl md:text-3xl text-center font-orbitron">
+      {/* <div className="bg-black text-white p-4  pb-20"> */}
+        {/* <h1 className="text-neon-purple font-bold text-2xl md:text-3xl text-center font-orbitron">
           Main Hall Programming
-        </h1>
-        <ShortAgenda items={shortAgendaData3} />
-      </div>
+        </h1> */}
+        {/* <ShortAgenda items={shortAgendaData3} /> */}
+      {/* </div> */}
       <KeyTheme />
-<PastHighlights videoSrc="/videos/Post_Event_Montage.mp4" />
+      <PastHighlights videoSrc="/videos/Post_Event_Montage.mp4" />
 
       <DemandVideoHome />
       <PartnershipCTA />

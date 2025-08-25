@@ -14,7 +14,7 @@ import { Features } from "@/components/Features";
 import AudienceProfile from "@/components/AudienceProfile";
 import Agenda, { AgendaItem } from "@/components/Agenda"; // Import Agenda and AgendaItem type
 import { PartnershipCTA } from "@/components/PartnershipCTA";
-import DemandVideoHome from "@/components/DemandVideoHome";
+import DemandVideoHome from "@/components/DemandVideoHome2025";
 import { useEffect } from "react";
 import { Speakers } from "@/components/Speakers";
 import { MUMBAI_SPEAKERS } from "@/data/mumbaiSpeakers";
@@ -163,6 +163,7 @@ const Index = () => {
       <PastHighlights videoSrc="/videos/mumbai-edition-montage.mp4" />
 
       <DemandVideoHome />
+      
       <PartnershipCTA />
       <ShouldAttend />
       <WhoShouldSponsor />

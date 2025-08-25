@@ -149,3 +149,18 @@
 .pb-40{
   padding-bottom: 40px!important;
 }
+
+
+.singhaniya>.h-96{
+    height: auto !important;
+}
+
+.swodpage>.bangaluru{
+  padding-top: 10%;
+}
+
+@media (min-width: 768px) {
+  .mumbai25 .md\:h-\[400px\] {
+        height: auto !important;
+    }
+}

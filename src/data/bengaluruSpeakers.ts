@@ -151,6 +151,12 @@ export const BENGALURU_SPEAKERS = [
     linkedin: "https://www.linkedin.com/in/vikassinghyadav/?originalSubdomain=in",
     image: "/speakers/bengaluru/vikas.png",
   },
+  {
+    name: "Vishwesh Pai",
+    role: "Head of Product, JSM Service & AI, Atlassian",
+    linkedin: "https://www.linkedin.com/in/vishweshpai/?originalSubdomain=in",
+    image: "/speakers/bengaluru/vishwesh.png",
+  },
 
 ];
 

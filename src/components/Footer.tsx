@@ -97,10 +97,10 @@ export const Footer = ({ socialLinks }) => {
               <p>
                 Email at{" "}
                 <a
-                  href="mailto:annu@guildlive.com"
+                  href="partnership@guildlive.com"
                   className="text-neon-blue hover:underline"
                 >
-                  annu@guildlive.com
+                  partnership@guildlive.com
                 </a>
               </p>
             </div>

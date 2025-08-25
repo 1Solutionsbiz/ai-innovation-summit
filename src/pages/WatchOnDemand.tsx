@@ -18,7 +18,23 @@ const sections = [
         ],
     },
     {
-        city: 'Mumbai',
+        city: 'Mumbai 2025',
+        imageName: 'mumbai25',
+        videoLinks: [
+            "https://youtu.be/drYtFmjo3vE?feature=shared",
+            "https://youtu.be/ER-8Lmp1G08?feature=shared",
+            "https://youtu.be/Wv8-atWSgjU?feature=shared",
+            "https://youtu.be/bXZDTUKKlWQ?feature=shared",
+            "https://youtu.be/aDkRMPjUkC8?feature=shared",
+            "https://youtu.be/zGk_zzPK98o?feature=shared",
+            "https://youtu.be/L6T3HXP2zHU?feature=shared",
+            "https://youtu.be/i3_ciFPnrrE?feature=shared",
+            "https://youtu.be/i3_ciFPnrrE?feature=shared",
+            "https://youtu.be/mKWMoV77GPU?feature=shared",
+        ],
+    },
+    {
+        city: 'Mumbai 2024',
         imageName: 'mumbai',
         videoLinks: [
             'https://www.youtube.com/watch?v=glzVZO7u7rY',
@@ -59,7 +75,7 @@ const WatchOnDemand = () => {
         window.scrollTo(0, 0); // Scrolls to the top of the page
     }, []);
     return (
-        <div className="min-h-screen">
+        <div className="min-h-screen swodpage">
             <Header />
             {sections.map((section, index) => (
                 <WatchDemand key={index} {...section} />
