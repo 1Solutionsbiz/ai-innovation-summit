@@ -55,7 +55,7 @@ const agendaData: AgendaItem[] = [
     color: "purple",
   },
   {
-    time: "11:15 – 11:35 PM",
+    time: "11:15 – 11:35 AM",
     title: "Special Address: Agentic AI in Real-World IT, Software, and Support",
     description: " Speaker: Vishwesh Pai, Head of Product, JSM Service & AI, Atlassian.",
     color: "blue",
