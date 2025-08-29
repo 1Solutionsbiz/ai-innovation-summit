@@ -20,6 +20,7 @@ const DemandVideoHome: React.FC = () => {
         { image: "/edition/8-mumbai25.png", link: "https://youtu.be/i3_ciFPnrrE?feature=shared" },
         { image: "/edition/9-mumbai25.png", link: "https://youtu.be/i3_ciFPnrrE?feature=shared" },
         { image: "/edition/10-mumbai25.png", link: "https://youtu.be/mKWMoV77GPU?feature=shared" },
+        { image: "/edition/11-mumbai25.png", link: "https://youtu.be/rwCFMYyqBAE" },
         
     ];
 

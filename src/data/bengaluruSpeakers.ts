@@ -157,6 +157,61 @@ export const BENGALURU_SPEAKERS = [
     linkedin: "https://www.linkedin.com/in/vishweshpai/?originalSubdomain=in",
     image: "/speakers/bengaluru/vishwesh.png",
   },
+  {
+    name: "Amit Atri",
+    role: "Global CIO, Tata Consumer Products",
+    linkedin: "https://www.linkedin.com/in/amit-atri-414797/",
+    image: "/speakers/bengaluru/amit.png",
+  },
+  {
+    name: "Venkat Iyer",
+    role: "Partner, PwC",
+    linkedin: "https://www.linkedin.com/in/iyervn/",
+    image: "/speakers/bengaluru/venkat.png",
+  },
+  {
+    name: "Mithun Appaiah",
+    role: "CEO, WoW! Momo FMCG",
+    linkedin: "https://www.linkedin.com/in/mithun-appaiah-57237225/",
+    image: "/speakers/bengaluru/mithun.png",
+  },
+  {
+    name: "Rajnil Mallik",
+    role: "Partner and GenAI GTM Leader, PwC India",
+    linkedin: "https://www.linkedin.com/in/rajnil-mallik-5a5226/",
+    image: "/speakers/bengaluru/rajnil.png",
+  },
+  {
+    name: "Ganapathy V",
+    role: "VP, & Head- Global Advanced Analytics CoE, Holcim",
+    linkedin: "https://www.linkedin.com/in/gana-v/",
+    image: "/speakers/bengaluru/ganapathy.png",
+  },
+  {
+    name: "Mallikarjun Kandkuru",
+    role: "Partner, KPMG India",
+    linkedin: "https://www.linkedin.com/in/mallikarjun-kandkuru-99370484/",
+    image: "/speakers/bengaluru/mallikarjun.png",
+  },
+  {
+    name: "Pragati (Kushwah) Chakraborty",
+    role: "Partner, Deloitte",
+    linkedin: "https://www.linkedin.com/in/pragati-chakraborty-a5b9465/",
+    image: "/speakers/bengaluru/pragati.png",
+  },
+  {
+    name: "Rupesh Lochan Gupta",
+    role: "Head- AI Platform and AI CoE, Tata Consultancy Services",
+    linkedin: "https://www.linkedin.com/in/rupeshlochan/",
+    image: "/speakers/bengaluru/rupesh.png",
+  },
+  {
+    name: "Dhruv Rastogi",
+    role: "SVP & Head of Data Science, Medi Assist",
+    linkedin: "https://www.linkedin.com/in/dhruvarastogi/",
+    image: "/speakers/bengaluru/dhruv.png",
+  },
+
 
 ];
 

@@ -20,13 +20,13 @@ const sponsorTiers = [
       ],
       isCoPartner: true // Add this flag
     },
-    // {
-    //   tier: "Robotics Partner",
-    //   logos: [
-    //     { name: "Xboom", url: "/sponsers/xboom.png" },
-    //   ],
-    //   isCoPartner: false
-    // },
+    {
+      tier: "Robotics Partner",
+      logos: [
+        { name: "Xboom", url: "/sponsers/xboom.png" },
+      ],
+      isCoPartner: false
+    },
     {
       tier: "Agentic AI Partner",
       logos: [
