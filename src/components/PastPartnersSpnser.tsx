@@ -34,6 +34,13 @@ const sponsorTiers = [
       ],
       isCoPartner: false
     },
+    // {
+    //   tier: "Live Streaming Partner",
+    //   logos: [
+    //     { name: "24fd", url: "/sponsers/24fd-logo.png" },
+    //   ],
+    //   isCoPartner: false
+    // },
   ];
 
 

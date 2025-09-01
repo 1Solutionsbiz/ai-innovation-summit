@@ -211,7 +211,14 @@ export const BENGALURU_SPEAKERS = [
     linkedin: "https://www.linkedin.com/in/dhruvarastogi/",
     image: "/speakers/bengaluru/dhruv.png",
   },
+  {
+    name: "Prasanna",
+    role: "Prasanna Kumar Subbanna – VP, Global Patient Safety, Novo Nordisk",
+    linkedin: "https://www.linkedin.com/in/prasanna-kumar-subbanna-846980a/",
+    image: "/speakers/bengaluru/prasanna.png",
+  },
 
+  
 
 ];
 
