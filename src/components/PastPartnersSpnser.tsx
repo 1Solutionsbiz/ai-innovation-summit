@@ -21,16 +21,23 @@ const sponsorTiers = [
       isCoPartner: true // Add this flag
     },
     {
-      tier: "Robotics Partner",
+      tier: "Agentic AI Partner",
       logos: [
-        { name: "Xboom", url: "/sponsers/xboom.png" },
+        { name: "Salesforce", url: "/sponsers/salesforce.png" },
       ],
       isCoPartner: false
     },
     {
-      tier: "Agentic AI Partner",
+      tier: "Associate Partner",
       logos: [
-        { name: "Salesforce", url: "/sponsers/salesforce.png" },
+        { name: "Microsoft", url: "/sponsers/microsoft.png" },
+      ],
+      isCoPartner: false
+    },
+    {
+      tier: "Robotics Partner",
+      logos: [
+        { name: "Xboom", url: "/sponsers/xboom.png" },
       ],
       isCoPartner: false
     },

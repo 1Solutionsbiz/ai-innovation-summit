@@ -222,7 +222,12 @@ const BangaloreEdition = () => {
       <About />
       <MovingStrip color="bg-neon-blue" />
       <KeyPoints />
-      <Speakers data={BENGALURU_SPEAKERS} />
+
+      <div className="bengspekr">
+        <Speakers data={BENGALURU_SPEAKERS} />
+      </div>
+
+
 
       <div className="text-center bg-black text-white mt-[-50px] pb-[50px] text-2xl md:text-3xl lg:text-4xl font-orbitron underline underline-offset-4 decoration-white ">
         AND<span className="text-gradient font-bold"> MORE</span>

@@ -217,10 +217,20 @@ export const BENGALURU_SPEAKERS = [
     linkedin: "https://www.linkedin.com/in/prasanna-kumar-subbanna-846980a/",
     image: "/speakers/bengaluru/prasanna.png",
   },
+  {
+    name: "Shalini Sriram",
+    role: "Regional Sales Director, Salesforce",
+    linkedin: "https://www.linkedin.com/in/shalini-sriram-5a1139a/?originalSubdomain=in",
+    image: "/speakers/bengaluru/shalini.png",
+  },
 
   
 
 ];
 
 	
+
+
+
+
 

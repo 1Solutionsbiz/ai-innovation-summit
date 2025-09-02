@@ -38,7 +38,7 @@ const ScrollToHash = () => {
 };
 
 export const Header = ({
-  isRegistrationActive = true,
+  isRegistrationActive = false,
   registrationButtonName = "Register Now",
   disabledButtonName = "Registration Closed",
 }: HeaderProps) => {

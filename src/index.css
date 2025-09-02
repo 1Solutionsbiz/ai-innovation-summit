@@ -164,3 +164,9 @@
         height: auto !important;
     }
 }
+
+.bengspekr>section>div.container>div.grid>div.rounded-lg:nth-child(37){
+  /* background: red !important; */
+  margin-left:107.5%;
+  margin-right:-107.5%;
+}
