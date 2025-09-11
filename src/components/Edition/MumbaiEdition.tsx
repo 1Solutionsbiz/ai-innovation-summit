@@ -7,6 +7,7 @@ import Objectives from "./Objectives";
 import StatsSection from "./StatsSection";
 import SpeakersSection from "./SpeakersSection";
 
+import PastPartners from "@/components/PastPartners";
 
 import ShouldAttend from "../ShouldAttend";
 import LeaderQuotes from "./LeaderQuotes";
@@ -132,6 +133,8 @@ const MumbaiEdition = () => {
 
       <SpeakersSection speakers={speakers} />
 
+      <PastPartners />
+      
       <ShouldAttend />
 
       <LeaderQuotes quotes={quotesData} />

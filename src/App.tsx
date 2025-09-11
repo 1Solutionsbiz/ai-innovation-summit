@@ -48,13 +48,14 @@ const App: React.FC = () => (
         />
         <Route path="/partner-form" element={<PartnerForm />} />
         {/* Public site routes */}
+        <Route path="/delhi-ncr-2025" element={<DelhiEdition />} />
+        {/* <Route path="/" element={<DelhiEdition />} /> */}
         <Route path="/" element={<BangaloreEdition/>} />
         <Route path="/previous/mumbai-2024" element={<MumbaiEdition />} />
         <Route path="/previous/bangalore-2024" element={<BengaluruEdition />} />
         <Route path="/previous/gurugram-2024" element={<GurugramEdition />} />
         <Route path="/watch-on-demand" element={<WatchOnDemand />} />
         <Route path="/previous/mumbai-2025" element={<Index />} />
-        <Route path="/delhi-ncr-2025" element={<DelhiEdition />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/code-of-conduct" element={<CodeOfConduct />} />

@@ -6,8 +6,9 @@ import "keen-slider/keen-slider.min.css";
 const logos = [
   "/sponsers/microsoft.png",
   "/sponsers/snowflake.png",
-  "/sponsers/xboom.png",,
-  "/sponsers/slack.png"
+  "/sponsers/xboom.png",
+  "/sponsers/slack.png",
+  "/sponsers/atlassian.png"
 ];
 
 const PastPartners: React.FC = () => {

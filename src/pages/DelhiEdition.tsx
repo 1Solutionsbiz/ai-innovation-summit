@@ -13,6 +13,9 @@ import { WhoShouldSponsor } from "@/components/WhoShouldSponsor";
 
 import Agenda, { AgendaItem } from "@/components/Agenda"; // Import Agenda and AgendaItem type
 import { PartnershipCTA } from "@/components/PartnershipCTA";
+
+import PastPartners from "@/components/PastPartners";
+
 import DemandVideoHome from "@/components/DemandVideoHome";
 import { useEffect } from "react";
 // import { Speakers } from "@/components/Speakers";
@@ -136,6 +139,9 @@ const DelhiEdition = () => {
             <MovingStrip color="bg-neon-blue" />
             <KeyPoints />
              {/* <Speakers /> */}
+
+      <PastPartners />
+
             {/* Include the Agenda component with agendaData as prop */}
             <Agenda items={agendaData} eventDetails={{
                 date: "09 July 2025",
@@ -148,6 +154,8 @@ const DelhiEdition = () => {
 
             <DemandVideoHome />
             <PartnershipCTA />
+
+
             <ShouldAttend />
             <WhoShouldSponsor />
 

@@ -14,6 +14,7 @@ import WatchDemand from "./DemadVideos";
 import { PastEventHero } from "./PastEventHero";
 import { useEffect } from "react";
 
+import PastPartners from "@/components/PastPartners";
 
 
 const sections = [
@@ -191,6 +192,9 @@ const BengaluruEdition = () => {
 
       <LeaderQuotes quotes={quotesData} />
       <WatchDemand {...section} />
+
+      <PastPartners />
+
       <Agenda items={agendaData} />
       <Footer socialLinks={socialLinks} />
     </div>

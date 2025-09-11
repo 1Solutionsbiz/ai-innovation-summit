@@ -102,6 +102,8 @@ export const Header = ({
           </button>
         ))}
 
+      
+        
         <div 
           className="relative flex flex-col items-center"
           onMouseEnter={() => handleDropdownHover("upcoming")}
@@ -115,12 +117,6 @@ export const Header = ({
           </button>
           {(openDropdown === "upcoming" || hoverDropdown === "upcoming") && (
             <div className={`absolute ${isMobile ? 'left-1/2 transform -translate-x-1/2' : 'left-0'} mt-2 w-56 bg-dark-lighter border border-neon-purple/20 shadow-lg z-10`}>
-              {/* <Link
-                to="/bangalore-2025"
-                className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors"
-              >
-               Bengaluru Edition 2025
-              </Link> */}
               <Link
                 to="/delhi-ncr-2025"
                 className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors"
@@ -130,6 +126,7 @@ export const Header = ({
             </div>
           )}
         </div>
+        
 
         <div 
           className="relative flex flex-col items-center"
@@ -144,6 +141,12 @@ export const Header = ({
           </button>
           {(openDropdown === "previous" || hoverDropdown === "previous") && (
             <div className={`absolute ${isMobile ? 'left-1/2 transform -translate-x-1/2' : 'left-0'} mt-2 w-56 bg-dark-lighter border border-neon-purple/20 shadow-lg z-10`}>
+              {/* <Link
+                to="/previous/bangalore-2025"
+                className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors"
+              >
+                Bengaluru Edition 2025
+              </Link> */}
               <Link
                 to="/previous/mumbai-2025"
                 className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors"

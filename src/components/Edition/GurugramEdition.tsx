@@ -12,7 +12,7 @@ import LeaderQuotes from "./LeaderQuotes";
 import WatchDemand from "./DemadVideos";
 import { PastEventHero } from "./PastEventHero";
 import { useEffect } from "react";
-
+import PastPartners from "@/components/PastPartners";
 
 
 const sections = [
@@ -110,6 +110,7 @@ const GurugramEdition = () => {
 
       <SpeakersSection speakers={speakers} />
 
+      <PastPartners />
 
       <WatchDemand {...section} />
       <LeaderQuotes quotes={quotesData} />
