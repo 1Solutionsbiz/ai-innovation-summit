@@ -7,11 +7,11 @@ interface PastHighlightsProps {
 export const PastHighlights = ({ videoSrc }: PastHighlightsProps) => {
   return (
     <section className="py-20 bg-secondary/10 btn-gradient">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-2 font-orbitron">
+      <div className="container mx-auto px-4 blastsection">
+        <h2 className="text-3xl md:text-4xl font-bold mb-2 font-orbitron text-center">
           Blast from the Past
         </h2>
-        <p className="text-dark mb-12">
+        <p className="text-dark mb-12 text-center">
           Take a glimpse of the past three overwhelmingly successful editions of
           previously titled, “Cloud+Ai Innovation Summit”.
         </p>

@@ -104,7 +104,7 @@ export const Header = ({
 
       
         
-        <div 
+        {/* <div 
           className="relative flex flex-col items-center"
           onMouseEnter={() => handleDropdownHover("upcoming")}
           onMouseLeave={handleDropdownLeave}
@@ -125,7 +125,7 @@ export const Header = ({
               </Link>
             </div>
           )}
-        </div>
+        </div> */}
         
 
         <div 
@@ -141,12 +141,12 @@ export const Header = ({
           </button>
           {(openDropdown === "previous" || hoverDropdown === "previous") && (
             <div className={`absolute ${isMobile ? 'left-1/2 transform -translate-x-1/2' : 'left-0'} mt-2 w-56 bg-dark-lighter border border-neon-purple/20 shadow-lg z-10`}>
-              {/* <Link
+              <Link
                 to="/previous/bangalore-2025"
                 className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors"
               >
                 Bengaluru Edition 2025
-              </Link> */}
+              </Link>
               <Link
                 to="/previous/mumbai-2025"
                 className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors"
@@ -166,10 +166,10 @@ export const Header = ({
                 Bengaluru Edition 2024
               </Link>
               <Link
-                to="/previous/gurugram-2024"
+                to="/previous/delhi-ncr-2024"
                 className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors"
               >
-                Gurugram Edition 2024
+                Delhi NCR Edition 2024
               </Link>
             </div>
           )}

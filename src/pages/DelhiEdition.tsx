@@ -150,7 +150,7 @@ const DelhiEdition = () => {
             }} />
            
             <KeyTheme />
-         <PastHighlights videoSrc="/videos/Post_Event_Montage.mp4" />
+         <PastHighlights videoSrc="/videos/Yt_promo_10_sept.mp4" />
 
             <DemandVideoHome />
             <PartnershipCTA />

@@ -160,7 +160,7 @@ const Index = () => {
       }} />
 
       <KeyTheme />
-      <PastHighlights videoSrc="/videos/mumbai-edition-montage.mp4" />
+      <PastHighlights videoSrc="/videos/Yt_promo_10_sept.mp4" />
 
       <DemandVideoHome />
       
