@@ -20,6 +20,10 @@ import DemandVideoHome from "@/components/DemandVideoHome";
 import { useEffect } from "react";
 // import { Speakers } from "@/components/Speakers";
 
+import SocialWall from "@/components/SocialWall";
+
+
+
 const agendaData: AgendaItem[] = [
     {
         time: "09:00 – 09:30 AM",
@@ -135,22 +139,29 @@ const DelhiEdition = () => {
                 ]}
             />
             <MovingStrip color="bg-neon-purple" />
+
+{/* Embed Social Wall Show here */}
+<SocialWall />
+
+
             <About />
             <MovingStrip color="bg-neon-blue" />
             <KeyPoints />
              {/* <Speakers /> */}
 
-      <PastPartners />
+            <div id="partners"></div>
+              <PastPartners />
 
             {/* Include the Agenda component with agendaData as prop */}
             <Agenda items={agendaData} eventDetails={{
-                date: "09 July 2025",
-                venue: "Taj Santacruz, Mumbai",
-                audience: "200+ Enterprise Technology Leaders"
+                date: "Dec 2025",
+                venue: "To be Announced ",
+                audience: "250+ Enterprise Technology Leaders"
             }} />
            
             <KeyTheme />
-         <PastHighlights videoSrc="/videos/Yt_promo_10_sept.mp4" />
+
+            <PastHighlights videoSrc="/videos/Yt_promo_10_sept.mp4" />
 
             <DemandVideoHome />
             <PartnershipCTA />

@@ -5,19 +5,6 @@ import WatchDemand from "@/components/Edition/DemadVideos";
 import { useEffect } from "react";
 const sections = [
     {
-        city: 'Bengaluru',
-        imageName: 'bangaluru',
-        videoLinks: [
-            'https://www.youtube.com/watch?v=wBaEOg_21bM',
-            'https://www.youtube.com/watch?v=UozBEohA7Qg',
-            'https://www.youtube.com/watch?v=hY7Axj-B7jo',
-            'https://www.youtube.com/watch?v=WVaRQYI-ROI',
-            'https://www.youtube.com/watch?v=hQlpZrvsdZ4',
-            'https://www.youtube.com/watch?v=3lvxHZ4TG0Y',
-            'https://www.youtube.com/watch?v=twjvz-eNo-8',
-        ],
-    },
-    {
         city: 'Mumbai 2025',
         imageName: 'mumbai25',
         videoLinks: [
@@ -32,6 +19,19 @@ const sections = [
             "https://youtu.be/i3_ciFPnrrE?feature=shared",
             "https://youtu.be/mKWMoV77GPU?feature=shared",
             "https://youtu.be/rwCFMYyqBAE",
+        ],
+    },
+    {
+        city: 'Bengaluru 2025',
+        imageName: 'bangaluru',
+        videoLinks: [
+            'https://www.youtube.com/watch?v=wBaEOg_21bM',
+            'https://www.youtube.com/watch?v=UozBEohA7Qg',
+            'https://www.youtube.com/watch?v=hY7Axj-B7jo',
+            'https://www.youtube.com/watch?v=WVaRQYI-ROI',
+            'https://www.youtube.com/watch?v=hQlpZrvsdZ4',
+            'https://www.youtube.com/watch?v=3lvxHZ4TG0Y',
+            'https://www.youtube.com/watch?v=twjvz-eNo-8',
         ],
     },
     {
@@ -79,6 +79,7 @@ const WatchOnDemand = () => {
         <div className="min-h-screen swodpage">
             <Header />
             {sections.map((section, index) => (
+
                 <WatchDemand key={index} {...section} />
             ))}
 

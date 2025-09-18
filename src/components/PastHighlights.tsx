@@ -12,8 +12,8 @@ export const PastHighlights = ({ videoSrc }: PastHighlightsProps) => {
           Blast from the Past
         </h2>
         <p className="text-dark mb-12 text-center">
-          Take a glimpse of the past three overwhelmingly successful editions of
-          previously titled, “Cloud+Ai Innovation Summit”.
+          {/* Take a glimpse of the past three overwhelmingly successful editions of previously titled, “Cloud+Ai Innovation Summit”. */}
+          Take a glimpse of the successful editions of the AI Innovation Summit.
         </p>
 
         {/* Local Video */}

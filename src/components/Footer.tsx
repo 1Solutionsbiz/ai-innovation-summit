@@ -86,10 +86,10 @@ export const Footer = ({ socialLinks }) => {
                 or
                 &nbsp;
                 <a
-                  href="mailto:nishant.batra@guildlive.com"
+                  href="mailto:surbhi@guildlive.com"
                   className="text-neon-blue hover:underline"
                 >
-                  nishant.batra@guildlive.com
+                  surbhi@guildlive.com
                 </a>
               </p>
 

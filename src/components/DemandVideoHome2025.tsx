@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const DemandVideoHome: React.FC = () => {
     const navigate = useNavigate();
     const handleClick = () => {
-        navigate('/watch-on-demand');
+        navigate('/watch-on-demand#mumbai-2025');
     };
     // Sample data for images and links
     const formattedData = [
