@@ -17,7 +17,7 @@ import PastPartners from "@/components/PastPartners";
 
 const sections = [
   {
-    city: 'Gurugram',
+    city: 'Delhi NCR 2024',
     imageName: 'gurugram',
     videoLinks: [
       'https://www.youtube.com/watch?v=nNL8q-FzTJY',

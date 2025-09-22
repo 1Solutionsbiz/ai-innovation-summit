@@ -5,7 +5,7 @@ import WatchDemand from "@/components/Edition/DemadVideos";
 import { useEffect } from "react";
 const sections = [
     {
-        city: 'Mumbai 2025',
+        city: 'Bengaluru 2025',
         imageName: 'mumbai25',
         videoLinks: [
             "https://youtu.be/drYtFmjo3vE?feature=shared",
@@ -22,7 +22,7 @@ const sections = [
         ],
     },
     {
-        city: 'Bengaluru 2025',
+        city: 'Bengaluru 2024',
         imageName: 'bangaluru',
         videoLinks: [
             'https://www.youtube.com/watch?v=wBaEOg_21bM',
@@ -58,7 +58,7 @@ const sections = [
         ],
     },
     {
-        city: 'Gurugram',
+        city: 'Delhi NCR 2024',
         imageName: 'gurugram',
         videoLinks: [
             'https://www.youtube.com/watch?v=nNL8q-FzTJY',
