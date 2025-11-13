@@ -38,12 +38,15 @@ const fetchRegistrations = async (): Promise<BengaloreRegistration[]> => {
   if (!token) throw new Error('Authentication token is missing. Please log in.');
 
   try {
-    const resp = await axios.get('https://olive-elk-842602.hostingersite.com/api/bangalore-registers', {
-      headers: { Authorization: `Bearer ${token}` },
-    });
-    // const resp = await axios.get('http://127.0.0.1:8000/api/bangalore-registers', {
+
+    // const resp = await axios.get('https://olive-elk-842602.hostingersite.com/api/bangalore-registers', {
     //   headers: { Authorization: `Bearer ${token}` },
     // });
+    
+    const resp = await axios.get('http://127.0.0.1:8000/api/bangalore-registers', {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    
     return resp.data.data || [];
   } catch (error) {
     throw new Error('Failed to fetch registrations. Please try again later.');

@@ -130,17 +130,17 @@ export const Register: React.FC = () => {
     try {
       const payload = { ...formData, recaptchaToken };
 
-      const resp = await axios.post(
-        "https://olive-elk-842602.hostingersite.com/api/register",
-        payload,
-        { headers: { "Content-Type": "application/json" } }
-      );
-
       // const resp = await axios.post(
-      //   "http://127.0.0.1:8000/api/register",
+      //   "https://olive-elk-842602.hostingersite.com/api/register",
       //   payload,
       //   { headers: { "Content-Type": "application/json" } }
       // );
+
+      const resp = await axios.post(
+        "http://127.0.0.1:8000/api/register",
+        payload,
+        { headers: { "Content-Type": "application/json" } }
+      );
 
       alert(resp.data.message || "Thank You for Registering – Pending Confirmation. You will receive a confirmation email once your registration is approved. ");
       setFormData({

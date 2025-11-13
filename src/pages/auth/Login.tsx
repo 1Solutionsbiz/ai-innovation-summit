@@ -14,14 +14,17 @@ const Login: React.FC = () => {
 
   const handleLogin = async () => {
     try {
-      const resp = await axios.post('https://olive-elk-842602.hostingersite.com/api/login', {
-        email,
-        password,
-      });
-      // const resp = await axios.post('http://127.0.0.1:8000/api/login', {
+      
+      // const resp = await axios.post('https://olive-elk-842602.hostingersite.com/api/login', {
       //   email,
       //   password,
       // });
+
+      const resp = await axios.post('http://127.0.0.1:8000/api/login', {
+        email,
+        password,
+      });
+      
       const { token } = resp.data;
       localStorage.setItem('token', token);
       navigate('/dashboard', { replace: true });

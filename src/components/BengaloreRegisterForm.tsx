@@ -160,17 +160,17 @@ export const BengaloreRegisterForm: React.FC = () => {
       delete payload.phoneNumber;
 
 
-      const resp = await axios.post(
-        "https://olive-elk-842602.hostingersite.com/api/bangalore-registers",
-        payload,
-        { headers: { "Content-Type": "application/json" } }
-      );
-
       // const resp = await axios.post(
-      //   "http://127.0.0.1:8000/api/bangalore-registers",
+      //   "https://olive-elk-842602.hostingersite.com/api/bangalore-registers",
       //   payload,
       //   { headers: { "Content-Type": "application/json" } }
       // );
+
+      const resp = await axios.post(
+        "http://127.0.0.1:8000/api/bangalore-registers",
+        payload,
+        { headers: { "Content-Type": "application/json" } }
+      );
 
       // setSuccessMessage(resp.data.message || "Thank You for Registering – Pending Confirmation. You will receive a confirmation email once your registration is approved.");
       alert("Thank You for Registering – Pending Confirmation. You will receive a confirmation email once your registration is approved.");
@@ -237,268 +237,269 @@ export const BengaloreRegisterForm: React.FC = () => {
   const maxDob = getEighteenYearsAgo();
 
   return (
-//     <section className="py-16 px-4 bg-gray-900 text-white" id="register">
-//       <div className="max-w-4xl mx-auto bg-gray-800 p-8 rounded-lg shadow-lg">
-//         <h2 className="text-4xl lg:text-5xl font-bold mb-8 text-center font-orbitron">
-//           Register Now for AI Innovation Summit – Bengaluru
-//         </h2>
+    <section className="py-16 px-4 bg-gray-900 text-white" id="register">
+      <div className="max-w-4xl mx-auto bg-gray-800 p-8 rounded-lg shadow-lg">
+        <h2 className="text-4xl lg:text-5xl font-bold mb-8 text-center font-orbitron">
+          Register Now for AI Innovation Summit – Bengaluru
+        </h2>
 
-//         {serverError && <div className="mb-4 text-red-400 text-center">{serverError}</div>}
-//         {successMessage && <div className="mb-4 text-green-400 text-center">{successMessage}</div>}
+        {serverError && <div className="mb-4 text-red-400 text-center">{serverError}</div>}
+        {successMessage && <div className="mb-4 text-green-400 text-center">{successMessage}</div>}
 
-//         <form onSubmit={handleSubmit} noValidate className="grid grid-cols-1 md:grid-cols-2 gap-6">
-//           {/* Hidden Fields */}
-//           <input type="hidden" name="utm_campaign_temp" value={formData.utm_campaign_temp} />
-//           <input type="hidden" name="utm_medium_temp" value={formData.utm_medium_temp} />
-//           <input type="hidden" name="utm_source_temp" value={formData.utm_source_temp} />
-//           <input type="hidden" name="utm_content_temp" value={formData.utm_content_temp} />
-//           <input type="hidden" name="utm_term_temp" value={formData.utm_term_temp} />
-//           <input type="hidden" name="landing_page_temp" value={formData.landing_page_temp} />
-//           <input type="hidden" name="conversion_page_temp" value={formData.conversion_page_temp} />
-//           <input type="hidden" name="ip_address" value={formData.ip_address} />
+        <form onSubmit={handleSubmit} noValidate className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Hidden Fields */}
+          <input type="hidden" name="utm_campaign_temp" value={formData.utm_campaign_temp} />
+          <input type="hidden" name="utm_medium_temp" value={formData.utm_medium_temp} />
+          <input type="hidden" name="utm_source_temp" value={formData.utm_source_temp} />
+          <input type="hidden" name="utm_content_temp" value={formData.utm_content_temp} />
+          <input type="hidden" name="utm_term_temp" value={formData.utm_term_temp} />
+          <input type="hidden" name="landing_page_temp" value={formData.landing_page_temp} />
+          <input type="hidden" name="conversion_page_temp" value={formData.conversion_page_temp} />
+          <input type="hidden" name="ip_address" value={formData.ip_address} />
 
-//           {/* Input Fields */}
-//           {[
-//             { name: "name", label: "Name" },
-//             { name: "designation", label: "Designation" },
-//             { name: "organization", label: "Organization" },
-//             // { name: "phoneNumber", label: "Phone Number" },
-//             // { name: "officialEmail", label: "Official Email" },
-//             // { name: "personalEmail", label: "Personal Email (optional)" },
-//             // { name: "city", label: "City" },
-//             // { name: "pincode", label: "Pincode" }
-//           ].map(field => (
-//             <div key={field.name}>
-//               <label className="block mb-1 font-semibold font-orbitron">{field.label}</label>
-//               <input
-//                 type={field.name.includes("Email") ? "email" : field.name.includes("Number") ? "tel" : "text"}
-//                 name={field.name}
-//                 value={formData[field.name as keyof FormDataType] as string}
-//                 onChange={handleChange}
-//                 className="w-full border border-gray-300 rounded px-3 py-2 text-black"
-//               />
-//               {errors[field.name as keyof FormDataType] && (
-//                 <p className="text-red-400 text-sm mt-1">{errors[field.name as keyof FormDataType]}</p>
-//               )}
-//             </div>
-//           ))}
-
-
-//           {/* Employee Size */}
-//           <div>
-//             <label className="block mb-1 font-semibold font-orbitron">Employee Size</label>
-//             <select
-//               name="employeeSize"
-//               value={formData.employeeSize}
-//               onChange={handleChange}
-//               className="w-full border border-gray-300 rounded px-3 py-2 text-black"
-//             >
-//               <option value="">Select Size</option>
-//               {employeeSizes.map(size => <option key={size} value={size}>{size}</option>)}
-//             </select>
-//             {errors.employeeSize && <p className="text-red-400 text-sm mt-1">{errors.employeeSize}</p>}
-//           </div>
+          {/* Input Fields */}
+          {[
+            { name: "name", label: "Name" },
+            { name: "designation", label: "Designation" },
+            { name: "organization", label: "Organization" },
+            // { name: "phoneNumber", label: "Phone Number" },
+            // { name: "officialEmail", label: "Official Email" },
+            // { name: "personalEmail", label: "Personal Email (optional)" },
+            // { name: "city", label: "City" },
+            // { name: "pincode", label: "Pincode" }
+          ].map(field => (
+            <div key={field.name}>
+              <label className="block mb-1 font-semibold font-orbitron">{field.label}</label>
+              <input
+                type={field.name.includes("Email") ? "email" : field.name.includes("Number") ? "tel" : "text"}
+                name={field.name}
+                value={formData[field.name as keyof FormDataType] as string}
+                onChange={handleChange}
+                className="w-full border border-gray-300 rounded px-3 py-2 text-black"
+              />
+              {errors[field.name as keyof FormDataType] && (
+                <p className="text-red-400 text-sm mt-1">{errors[field.name as keyof FormDataType]}</p>
+              )}
+            </div>
+          ))}
 
 
-//           {[
-//             { name: "officialEmail", label: "Official Email" },
-//             { name: "phoneNumber", label: "Phone Number" },
-//             { name: "city", label: "City" },
-//             { name: "pincode", label: "Pincode" }
-//           ].map(field => (
-//             <div key={field.name}>
-//               <label className="block mb-1 font-semibold font-orbitron">{field.label}</label>
-//               <input
-//                 type={field.name.includes("Email") ? "email" : field.name.includes("Number") ? "tel" : "text"}
-//                 name={field.name}
-//                 value={formData[field.name as keyof FormDataType] as string}
-//                 onChange={handleChange}
-//                 className="w-full border border-gray-300 rounded px-3 py-2 text-black"
-//               />
-//               {errors[field.name as keyof FormDataType] && (
-//                 <p className="text-red-400 text-sm mt-1">{errors[field.name as keyof FormDataType]}</p>
-//               )}
-//             </div>
-//           ))}
+          {/* Employee Size */}
+          <div>
+            <label className="block mb-1 font-semibold font-orbitron">Employee Size</label>
+            <select
+              name="employeeSize"
+              value={formData.employeeSize}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded px-3 py-2 text-black"
+            >
+              <option value="">Select Size</option>
+              {employeeSizes.map(size => <option key={size} value={size}>{size}</option>)}
+            </select>
+            {errors.employeeSize && <p className="text-red-400 text-sm mt-1">{errors.employeeSize}</p>}
+          </div>
 
 
-//           {/* Industry */}
-//           <div>
-//             <label className="block mb-1 font-semibold font-orbitron">Industry</label>
-//             <select
-//               name="industry"
-//               value={formData.industry}
-//               onChange={handleChange}
-//               className="w-full border border-gray-300 rounded px-3 py-2 text-black"
-//             >
-//               <option value="">Select Industry</option>
-//               {industries.map(i => <option key={i} value={i}>{i}</option>)}
-//             </select>
-//             {errors.industry && <p className="text-red-400 text-sm mt-1">{errors.industry}</p>}
-//           </div>
-
-//           {/* date of birth  */}
-//           <div>
-
-// <label className="block mb-1 font-semibold font-orbitron">Birth Year</label>
-// {/* <input
-//   type="number"
-//   name="dob"
-//   value={formData.dob}
-//   onChange={handleChange}
-//   min="1900"
-//   max={new Date().getFullYear()}
-//   placeholder="YYYY"
-//   className="w-full border border-gray-300 rounded px-3 py-2 text-black"
-// /> */}
-// <input
-//   type="number"
-//   name="dob"
-//   value={formData.dob}
-//   onChange={(e) => {
-//     let val = e.target.value;
-//     if (val.length > 4) val = val.slice(0, 4);
-//     setFormData(prev => ({ ...prev, dob: val }));
-//   }}
-//   min="1900"
-//   max={new Date().getFullYear()}
-//   placeholder="YYYY"
-//   className="w-full border border-gray-300 rounded px-3 py-2 text-black"
-// />
+          {[
+            { name: "officialEmail", label: "Official Email" },
+            { name: "phoneNumber", label: "Phone Number" },
+            { name: "city", label: "City" },
+            { name: "pincode", label: "Pincode" }
+          ].map(field => (
+            <div key={field.name}>
+              <label className="block mb-1 font-semibold font-orbitron">{field.label}</label>
+              <input
+                type={field.name.includes("Email") ? "email" : field.name.includes("Number") ? "tel" : "text"}
+                name={field.name}
+                value={formData[field.name as keyof FormDataType] as string}
+                onChange={handleChange}
+                className="w-full border border-gray-300 rounded px-3 py-2 text-black"
+              />
+              {errors[field.name as keyof FormDataType] && (
+                <p className="text-red-400 text-sm mt-1">{errors[field.name as keyof FormDataType]}</p>
+              )}
+            </div>
+          ))}
 
 
+          {/* Industry */}
+          <div>
+            <label className="block mb-1 font-semibold font-orbitron">Industry</label>
+            <select
+              name="industry"
+              value={formData.industry}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded px-3 py-2 text-black"
+            >
+              <option value="">Select Industry</option>
+              {industries.map(i => <option key={i} value={i}>{i}</option>)}
+            </select>
+            {errors.industry && <p className="text-red-400 text-sm mt-1">{errors.industry}</p>}
+          </div>
+
+          {/* date of birth  */}
+          <div>
+
+<label className="block mb-1 font-semibold font-orbitron">Birth Year</label>
+{/* <input
+  type="number"
+  name="dob"
+  value={formData.dob}
+  onChange={handleChange}
+  min="1900"
+  max={new Date().getFullYear()}
+  placeholder="YYYY"
+  className="w-full border border-gray-300 rounded px-3 py-2 text-black"
+/> */}
+<input
+  type="number"
+  name="dob"
+  value={formData.dob}
+  onChange={(e) => {
+    let val = e.target.value;
+    if (val.length > 4) val = val.slice(0, 4);
+    setFormData(prev => ({ ...prev, dob: val }));
+  }}
+  min="1900"
+  max={new Date().getFullYear()}
+  placeholder="YYYY"
+  className="w-full border border-gray-300 rounded px-3 py-2 text-black"
+/>
 
 
-//             {/*             
-//             <label className="block mb-1 font-semibold font-orbitron">Date of Birth</label>
-//             <input
-//               type="date"
-//               name="dob"
-//               value={formData.dob}
-//               onChange={handleChange}
-//               max={maxDob} // ✅ limit date to 18+ years only
-//               className="w-full border border-gray-300 rounded px-3 py-2 text-black"
-//             /> */}
 
 
-//             {errors.dob && (
-//               <p className="text-red-400 text-sm mt-1">{errors.dob}</p>
-//             )}
-//           </div>
+            {/*             
+            <label className="block mb-1 font-semibold font-orbitron">Date of Birth</label>
+            <input
+              type="date"
+              name="dob"
+              value={formData.dob}
+              onChange={handleChange}
+              max={maxDob} // ✅ limit date to 18+ years only
+              className="w-full border border-gray-300 rounded px-3 py-2 text-black"
+            /> */}
 
-//           {/* Terms and Disclosure */}
-//           <div className="md:col-span-2">
-//             <label className="flex items-start space-x-3">
-//               <input
-//                 type="checkbox"
-//                 name="termsAccepted"
-//                 checked={formData.termsAccepted}
-//                 onChange={handleChange}
-//                 className="mt-1"
-//               />
-//               <span>I have read & agree with <Link to="/terms-and-conditions" className="text-neon-blue">Terms & Conditions</Link> </span>
-//             </label>
-//             {errors.termsAccepted && <p className="text-red-400 text-sm mt-1">{errors.termsAccepted}</p>}
-//           </div>
-//           <div className="md:col-span-2">
-//             <label className="flex items-start space-x-3">
-//               <input
-//                 type="checkbox"
-//                 name="ageAcknowledged"
-//                 checked={formData.ageAcknowledged}
-//                 onChange={handleChange}
-//                 className="mt-1"
-//               />
-//               <span>I acknowledge that I am 18 years of age or older and eligible to participate.</span>
-//             </label>
-//             {errors.ageAcknowledged && (
-//               <p className="text-red-400 text-sm mt-1">{errors.ageAcknowledged}</p>
-//             )}
-//           </div>
 
-//           {/* <div className="md:col-span-2">
-//             <label className="flex items-start space-x-3">
-//               <input
-//                 type="checkbox"
-//                 name="detailsDisclosure"
-//                 checked={formData.detailsDisclosure}
-//                 onChange={handleChange}
-//                 className="mt-1"
-//               />
-//               <span>I agree to the disclosure of details</span>
-//             </label>
-//             {errors.detailsDisclosure && <p className="text-red-400 text-sm mt-1">{errors.detailsDisclosure}</p>}
-//           </div> */}
-//           {/* New Consent Checkboxes */}
-//           <div className="md:col-span-2">
-//             <label className="flex items-start space-x-3">
-//               <input
-//                 type="checkbox"
-//                 name="dataConsent"
-//                 checked={formData.dataConsent}
-//                 onChange={handleChange}
-//                 className="mt-1"
-//               />
-//               <span>I consent to the collection and processing of my personal data by The Guild (Polygon Media Pvt. Ltd.) for the purpose of registering and communicating with me regarding this event. I have read and agree to the <Link to="/privacy-policy" className="text-neon-blue"> Privacy Policy</Link>.</span>
-//             </label>
-//           </div>
+            {errors.dob && (
+              <p className="text-red-400 text-sm mt-1">{errors.dob}</p>
+            )}
+          </div>
 
-//           <div className="md:col-span-2">
-//             <label className="flex items-start space-x-3">
-//               <input
-//                 type="checkbox"
-//                 name="marketingConsent"
-//                 checked={formData.marketingConsent}
-//                 onChange={handleChange}
-//                 className="mt-1"
-//               />
-//               <span>I would like to receive occasional updates, insights, and promotional content from The Guild and its platforms, including SME Futures, Guild Live, and CIO Guild.</span>
-//             </label>
-//           </div>
+          {/* Terms and Disclosure */}
+          <div className="md:col-span-2">
+            <label className="flex items-start space-x-3">
+              <input
+                type="checkbox"
+                name="termsAccepted"
+                checked={formData.termsAccepted}
+                onChange={handleChange}
+                className="mt-1"
+              />
+              <span>I have read & agree with <Link to="/terms-and-conditions" className="text-neon-blue">Terms & Conditions</Link> </span>
+            </label>
+            {errors.termsAccepted && <p className="text-red-400 text-sm mt-1">{errors.termsAccepted}</p>}
+          </div>
+          <div className="md:col-span-2">
+            <label className="flex items-start space-x-3">
+              <input
+                type="checkbox"
+                name="ageAcknowledged"
+                checked={formData.ageAcknowledged}
+                onChange={handleChange}
+                className="mt-1"
+              />
+              <span>I acknowledge that I am 18 years of age or older and eligible to participate.</span>
+            </label>
+            {errors.ageAcknowledged && (
+              <p className="text-red-400 text-sm mt-1">{errors.ageAcknowledged}</p>
+            )}
+          </div>
 
-//           <div className="md:col-span-2">
-//             <label className="flex items-start space-x-3">
-//               <input
-//                 type="checkbox"
-//                 name="sponsorSharingConsent"
-//                 checked={formData.sponsorSharingConsent}
-//                 onChange={handleChange}
-//                 className="mt-1"
-//               />
-//               <span>I agree to have my name, designation, and company shared with select sponsors or partners of this event for relevant business communication.</span>
-//             </label>
-//           </div>
-//           {/* reCAPTCHA */}
-//           <div className="md:col-span-2">
-//             <ReCAPTCHA
-//               sitekey={RECAPTCHA_SITE_KEY}
-//               onChange={token => setRecaptchaToken(token)}
-//               theme="dark"
-//             />
-//           </div>
+          {/* <div className="md:col-span-2">
+            <label className="flex items-start space-x-3">
+              <input
+                type="checkbox"
+                name="detailsDisclosure"
+                checked={formData.detailsDisclosure}
+                onChange={handleChange}
+                className="mt-1"
+              />
+              <span>I agree to the disclosure of details</span>
+            </label>
+            {errors.detailsDisclosure && <p className="text-red-400 text-sm mt-1">{errors.detailsDisclosure}</p>}
+          </div> */}
+          {/* New Consent Checkboxes */}
+          <div className="md:col-span-2">
+            <label className="flex items-start space-x-3">
+              <input
+                type="checkbox"
+                name="dataConsent"
+                checked={formData.dataConsent}
+                onChange={handleChange}
+                className="mt-1"
+              />
+              <span>I consent to the collection and processing of my personal data by The Guild (Polygon Media Pvt. Ltd.) for the purpose of registering and communicating with me regarding this event. I have read and agree to the <Link to="/privacy-policy" className="text-neon-blue"> Privacy Policy</Link>.</span>
+            </label>
+          </div>
 
-//           {/* Submit */}
-//           <div className="md:col-span-2 text-center">
-//             <button
-//               type="submit"
-//               disabled={submitting}
-//               className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded"
-//             >
-//               {submitting ? "Submitting..." : "Submit"}
-//             </button>
-//             <p className="text-xs mt-2 text-gray-400">
-//               You can withdraw your consent at any time by contacting us at guildconferences@guildlive.com.
-//               All data will be processed in accordance with The Guild's <Link to="/privacy-policy" className="text-neon-blue"> Privacy Policy</Link>  and applicable data protection laws.
-//             </p>
-//           </div>
-//         </form>
-//       </div>
-//     </section>
+          <div className="md:col-span-2">
+            <label className="flex items-start space-x-3">
+              <input
+                type="checkbox"
+                name="marketingConsent"
+                checked={formData.marketingConsent}
+                onChange={handleChange}
+                className="mt-1"
+              />
+              <span>I would like to receive occasional updates, insights, and promotional content from The Guild and its platforms, including SME Futures, Guild Live, and CIO Guild.</span>
+            </label>
+          </div>
 
-<section className="bg-black p-10 md:p-40" id="register">
-  <div className="bg-black font-orbitron text-neon-blue rounded-lg text-center text-4xl md:text-6xl font-bold shadow-lg mx-auto">
-    Registration Closed
-  </div>
-</section>
+          <div className="md:col-span-2">
+            <label className="flex items-start space-x-3">
+              <input
+                type="checkbox"
+                name="sponsorSharingConsent"
+                checked={formData.sponsorSharingConsent}
+                onChange={handleChange}
+                className="mt-1"
+              />
+              <span>I agree to have my name, designation, and company shared with select sponsors or partners of this event for relevant business communication.</span>
+            </label>
+          </div>
+          {/* reCAPTCHA */}
+          <div className="md:col-span-2">
+            <ReCAPTCHA
+              sitekey={RECAPTCHA_SITE_KEY}
+              onChange={token => setRecaptchaToken(token)}
+              theme="dark"
+            />
+          </div>
+
+          {/* Submit */}
+          <div className="md:col-span-2 text-center">
+            <button
+              type="submit"
+              disabled={submitting}
+              className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded"
+            >
+              {submitting ? "Submitting..." : "Submit"}
+            </button>
+            <p className="text-xs mt-2 text-gray-400">
+              You can withdraw your consent at any time by contacting us at guildconferences@guildlive.com.
+              All data will be processed in accordance with The Guild's <Link to="/privacy-policy" className="text-neon-blue"> Privacy Policy</Link>  and applicable data protection laws.
+            </p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+// <section className="bg-black p-10 md:p-40" id="register">
+//   <div className="bg-black font-orbitron text-neon-blue rounded-lg text-center text-4xl md:text-6xl font-bold shadow-lg mx-auto">
+//     Registration Closed
+//   </div>
+// </section>
+
   );
 };

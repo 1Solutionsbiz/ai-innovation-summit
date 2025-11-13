@@ -24,6 +24,7 @@ import SocialWall from "@/components/SocialWall";
 
 
 
+
 const agendaData: AgendaItem[] = [
     {
         time: "09:00 – 10:00 AM",
@@ -126,7 +127,7 @@ const DelhiEdition = () => {
                 heading="Shaping the Future with AI"
                 subheading="From prompt to impact"
                 body="Join the brightest minds in Artificial Intelligence and Innovation at the most impactful AI Summit mastering AI and securing the future."
-                date="December 2025 | Delhi-NCR"
+                date="January 2026 | Delhi-NCR"
                 stats={[
                     { value: "25+", label: "Speakers" },
                     { value: "8+", label: "Hrs" },
@@ -135,8 +136,9 @@ const DelhiEdition = () => {
             />
             <MovingStrip color="bg-neon-purple" />
 
+{/* <h1>Singhaniya World</h1> */}
 {/* Embed Social Wall Show here */}
-<SocialWall />
+{/* <SocialWall /> */}
 
 
             <About />
@@ -149,8 +151,8 @@ const DelhiEdition = () => {
 
             {/* Include the Agenda component with agendaData as prop */}
             <Agenda items={agendaData} eventDetails={{
-                date: "Dec 2025",
-                venue: "To be Announced ",
+                date: "January 2026",
+                venue: "Delhi-NCR",
                 audience: "250+ Enterprise Technology Leaders"
             }} />
            
