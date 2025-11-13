@@ -17,7 +17,7 @@ const LeadersReflect = () => {
   };
   const testimonials = [
     {
-      quote: "Moderating the session on GCC leaders was a privilege. The conversations clearly showed how India's GCCs are now driving end-to-end AI-led transformations, embedding responsible practices while combining cost efficiency with innovation. The bold ideas and real use cases shared reflected India's growing role in shaping global AI delivery.",
+      quote: "Moderating the session on GCC leaders was a privilege. The conversations clearly showed how India’s GCCs are now driving end-to-end AI-led transformations, embedding responsible practices while combining cost efficiency with innovation. The bold ideas and real use cases shared reflected India’s growing role in shaping global AI delivery.",
       name: "Pragati (Kushwah) Chakraborty",
       title: "Partner, Deloitte",
     },
@@ -27,7 +27,7 @@ const LeadersReflect = () => {
       title: "CIO, boAt",
     },
     {
-      quote: "It was inspiring to join the discussion on 'Agentic Automation – Beyond GenAI to Self-Driving Workflows'. The session highlighted real business impact — from sales and customer service to financial workflows — while addressing the challenges of scaling from pilots to production with the right governance and skills in place.",
+      quote: "It was inspiring to join the discussion on ‘Agentic Automation – Beyond GenAI to Self-Driving Workflows’. The session highlighted real business impact — from sales and customer service to financial workflows — while addressing the challenges of scaling from pilots to production with the right governance and skills in place.",
       name: "Raman Srinivasan",
       title: "Chief Digital Officer, InMobi Group",
     },

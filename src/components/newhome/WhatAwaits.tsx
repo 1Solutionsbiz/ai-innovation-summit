@@ -5,31 +5,31 @@ const WhatAwaits = () => {
 
   const features = [
     {
-      title: "AI Playground",
-      description: "Explore hands-on experiences with AI prototypes and tools.",
+      title: "Trends That Transform",
+      description: "Uncover the shifts in AI, automation, and strategy that are redefining enterprise success in the age of intelligence. ",
       image: "/delhi26/AI-Playground.png",
     },
     {
-      title: "Collaborative Corners",
+      title: "Connect & Collaborate",
       description:
-        "Connect, collaborate, and exchange ideas with industry peers.",
+        "Meet brilliant minds, share ideas, and spark conversations that matter.",
       image: "/delhi26/Connect-Collaborate.png",
     },
     {
-      title: "Tech in Action",
-      description: "Watch real-time tech demos transforming industries.",
+      title: "AI in Action",
+      description: "Step into a world of innovation with live demos, hands-on prototypes, and interactive labs showcasing the technologies transforming enterprises today. ",
       image: "/delhi26/Tech-in-Action.png",
     },
     {
-      title: "Actionable Insights",
+      title: "Moments That Matter",
       description:
-        "Gain expert perspectives and data-driven strategies to apply AI effectively.",
+        "Step into the spark of innovation, dynamic dialogue, and unforgettable in-person experiences that shape the future of AI.",
       image: "/delhi26/Actionable-Insights.png",
     },
     {
-      title: "Visionary Voices",
+      title: "Voices of Impact",
       description:
-        "Hear visionary leaders redefining AI in business and society.",
+        "Listen and engage with visionary leaders as they share bold ideas and real insights driving the next era of AI transformation.",
       image: "/delhi26/Visionary-Voices.png",
     },
   ];
@@ -46,7 +46,7 @@ const WhatAwaits = () => {
         {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-            What Awaits
+            What Awaits You at <br /> AI Innovation Summit ’26 
           </h2>
           <p className="text-white/90 text-xl md:text-2xl max-w-3xl mx-auto">
             Experience innovation, insights, and impact at India’s premier AI summit

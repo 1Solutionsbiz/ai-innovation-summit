@@ -37,11 +37,8 @@ const DelhiEditionNew = () => {
       <FocusAreas />
       <FeaturedSpeakers />
       <SeriesPartners />
-      <IndustryRepresentation />
-      
       <Agenda />
-
-
+      <IndustryRepresentation />
       <WhoShouldAttend />
       <BeThePartner />
       <BlastFromPast />

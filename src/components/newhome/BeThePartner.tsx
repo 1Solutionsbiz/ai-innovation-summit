@@ -10,38 +10,38 @@ const BeThePartner = () => {
       image: "/delhi26/techinnovation/tech-innov-1.png",
     },
     {
-      icon: Radio,
-      title: "Amplify Your Brand",
+      icon: Network,
+      title: "Connect Across Ecosystems",
       description:
-        "Elevate your organization's profile through thought leadership and strategic visibility.",
-      image: "/delhi26/techinnovation/tech-innov-6.png",
-    },
-    {
-      icon: Scale,
-      title: "Champion Responsible AI",
-      description:
-        "Advocate for ethical, inclusive, and human-centric AI implementation.",
-      image: "/delhi26/techinnovation/tech-innov-5.png",
+        "Forge high-value alliances with innovators, decision-makers, and cross-sector collaborators",
+      image: "/delhi26/techinnovation/tech-innov-2.png",
     },
     {
       icon: Zap,
       title: "Showcase Your Innovations",
       description:
-        "Showcase your solutions and breakthroughs to a curated, forward-thinking audience.",
+        "Demonstrate your solutions and technological breakthroughs to a curated, forward-thinking audience.",
       image: "/delhi26/techinnovation/tech-innov-3.png",
     },
     {
-      icon: Network,
-      title: "Connect Across Ecosystems",
+      icon: Scale,
+      title: "Champion Responsible AI",
       description:
-        "Build high-value alliances with innovators, decision-makers, cross-sector collaborators.",
-      image: "/delhi26/techinnovation/tech-innov-2.png",
+        "Advocate for ethical, inclusive, and human-centric AI implementation. ",
+      image: "/delhi26/techinnovation/tech-innov-5.png",
+    },
+    {
+      icon: Radio,
+      title: "Amplify Your Brand",
+      description:
+        "Elevate your organization’s profile through thought leadership and strategic visibility. ",
+      image: "/delhi26/techinnovation/tech-innov-6.png",
     },
     {
       icon: Eye,
-      title: "Spot Disruptive Trends",
+      title: "Spot Disruptive Trends ",
       description:
-        "Access pioneering research, market intelligence, and innovations before the curve.",
+        "Access pioneering research, market intelligence, and innovations before the curve. ",
       image: "/delhi26/techinnovation/tech-innov-4.png",
     },
   ];
@@ -54,8 +54,7 @@ const BeThePartner = () => {
         </h2>
 
         <p className="text-center text-white/90 max-w-4xl mx-auto mb-12 text-xl md:text-2xl leading-relaxed">
-          As a partner at the AI Innovation Summit, you go beyond participation—immerse yourself in
-          breakthroughs, shape transformative solutions, and help define the future of innovation.
+          Stand Out, Seize the Spotlight and Drive Innovation Today and Tomorrow 
         </p>
 
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -9,9 +9,9 @@ const AboutTheGuild = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
             About The Guild
           </h2>
-          <p className="text-slate-600 text-center text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed mb-12">
+          {/* <p className="text-slate-600 text-center text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed mb-12">
             Building platforms that unite leaders and innovators
-          </p>
+          </p> */}
 
           <div className="space-y-6 text-slate-700 text-lg md:text-xl leading-relaxed text-center">
             <p>

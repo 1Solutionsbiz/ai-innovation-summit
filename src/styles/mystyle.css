@@ -417,5 +417,14 @@ All colors MUST be HSL.
     width: 100% !important;
   }
 
+  .guild-mb-logo{
+    margin-top: 35px !important;
+    margin-bottom: 0px !important;
+  }
+  .singhaniya-badge{
+    top: 6% !important;
+    right: 0px !important;
+  }
+
 }
 /* Mobile Screen End */

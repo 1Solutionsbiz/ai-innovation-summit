@@ -54,7 +54,7 @@ const WatchOnDemand = () => {
           Watch On-Demand Videos
         </h2>
         <p className="text-slate-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-12 text-center">
-          Explore highlights from previous summits
+          Catch the Summit Highlights Anytime
         </p>
 
         <div className="overflow-hidden" ref={emblaRef}>

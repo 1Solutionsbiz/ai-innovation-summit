@@ -1,64 +1,59 @@
-import { Lightbulb, Globe2, Building2, Briefcase, UserCheck } from "lucide-react";
+import {
+  Landmark,
+  Factory,
+  ShoppingBag,
+  Cpu,
+  Truck,
+  Pill,
+  Car,
+  Network,
+  Zap,
+  Building2,
+} from "lucide-react";
 
 const IndustryRepresentation = () => {
-  const points = [
-    {
-      icon: <Lightbulb className="w-12 h-12 text-[#D94C67]" />,
-      title: "Drive strategic conversations",
-      desc: "On innovation, talent, AI, leadership and ESG.",
-    },
-    {
-      icon: <Globe2 className="w-12 h-12 text-[#D94C67]" />,
-      title: "Spotlight Delhi’s role",
-      desc: "As a global capability hub.",
-    },
-    {
-      icon: <Building2 className="w-12 h-12 text-[#D94C67]" />,
-      title: "Showcase GCCs",
-      desc: "That shape enterprise outcomes, not just enable them.",
-    },
-    {
-      icon: <Briefcase className="w-12 h-12 text-[#D94C67]" />,
-      title: "Amplify India’s growth",
-      desc: "With 40,000 new GCC jobs projected by 2026.",
-    },
-    {
-      icon: <UserCheck className="w-12 h-12 text-[#D94C67]" />,
-      title: "Focus on AI & cybersecurity",
-      desc: "Next-gen talent, analytics and sustainable growth.",
-    },
+  const industries = [
+    { icon: <Landmark className="w-12 h-12 text-[#D94C67]" />, name: "BFSI & Fintech", desc: "" },
+    { icon: <Factory className="w-12 h-12 text-[#D94C67]" />, name: "Manufacturing & Engineering", desc: "" },
+    { icon: <ShoppingBag className="w-12 h-12 text-[#D94C67]" />, name: "FMCG & Consumer Goods", desc: "" },
+    { icon: <Cpu className="w-12 h-12 text-[#D94C67]" />, name: "IT & SaaS", desc: "" },
+    { icon: <Truck className="w-12 h-12 text-[#D94C67]" />, name: "E-commerce & Online Retail", desc: "" },
+    { icon: <Pill className="w-12 h-12 text-[#D94C67]" />, name: "Pharma & Healthcare", desc: "" },
+    { icon: <Car className="w-12 h-12 text-[#D94C67]" />, name: "Automotive & Mobility", desc: "" },
+    { icon: <Network className="w-12 h-12 text-[#D94C67]" />, name: "Telecom & Digital Infrastructure", desc: "" },
+    { icon: <Zap className="w-12 h-12 text-[#D94C67]" />, name: "Energy & Utilities", desc: "" },
+    { icon: <Building2 className="w-12 h-12 text-[#D94C67]" />, name: "Real Estate & Hospitality", desc: "" },
   ];
 
   return (
-    <section className="py-[150px] bg-gradient-to-br from-white via-gray-50 to-slate-100 text-center">
-      <div className="container mx-auto px-6 md:px-12">
+    <section className="py-[150px] bg-gradient-to-br from-[#1A1C2E] via-[#3E2F8A] to-[#BF1C88] text-center relative overflow-hidden">
+      <div className="container mx-auto px-6 md:px-12 relative z-10">
         {/* Heading */}
-        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-          Inside the 10th Edition of the Summit
+        <h2 className="text-3xl md:text-5xl font-bold text-white mb-16 drop-shadow-lg">
+          Industry Representation
         </h2>
-        <p className="text-gray-600 text-lg md:text-xl max-w-4xl mx-auto mb-14 leading-relaxed">
-          The 10th Edition of the ET Edge GCC Summit will bring together industry leaders,
-          policymakers, technologists, and innovators to{" "}
-          <strong>decode the next chapter of GCC evolution</strong> and{" "}
-          <strong>co-design future-ready, high-impact centres.</strong>
-        </p>
 
         {/* Icon Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 text-center">
-          {points.map((item, index) => (
+          {industries.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center text-gray-800 hover:scale-105 transition-all duration-300"
+              className="p-8 rounded-2xl backdrop-blur-md bg-white/10 border border-white/20 text-white shadow-xl transition-all duration-300 hover:scale-105 hover:bg-white/20"
             >
-              <div className="mb-5 industryicon">{item.icon}</div>
-              <h3 className="text-lg font-semibold mb-2 lh14remi">{item.title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed max-w-[220px] lh14remi">
-                {item.desc}
-              </p>
+              <div className="flex flex-col items-center justify-center space-y-4">
+                {item.icon}
+                <h3 className="text-lg font-semibold">{item.name}</h3>
+                {item.desc && (
+                  <p className="text-sm text-white/80 max-w-[200px]">{item.desc}</p>
+                )}
+              </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Optional background gradient overlay */}
+      <div className="absolute inset-0 bg-[url('/delhi26/bg-pattern.png')] bg-cover bg-center opacity-10"></div>
     </section>
   );
 };

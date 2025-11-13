@@ -1,14 +1,16 @@
 const WhoShouldAttend = () => {
   const attendees = [
-    "CIOs / CTOs / CDOs and other C-suite executives",
+    "CIOs, CTOs, CDOs, and other C-suite executives",
     "Heads of Digital Transformation",
-    "Heads of Emerging Technologies",
-    "Heads of Innovation",
-    "Enterprise / Solution Architects",
-    "Cloud / Data / Analytics Executives",
-    "Heads of AI / Automation / Labs",
-    "Heads of Customer Experience / CX / IoT",
-    "Strategic / Innovation / Technology Decision-Makers",
+    "Heads of Emerging Technologies ",
+    "Heads of Innovation ",
+    "Enterprise / Solution Architects ",
+    "Cloud & Digital Technology Executives ",
+    "Chief Data & Analytics Officers (CDAO) ",
+    "Heads of AI, Automation, and Labs ",
+    "Heads of Customer Experience and IoT ",
+    "Enterprise Security / Cybersecurity Heads ",
+    "Strategic and Technology Leaders ",
   ];
 
   return (
@@ -18,9 +20,9 @@ const WhoShouldAttend = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
             Who Should Attend
           </h2>
-          <p className="text-slate-600 text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
+          {/* <p className="text-slate-600 text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
             Connecting visionaries and decision-makers across industries
-          </p>
+          </p> */}
         </div>
         
         <div className="max-w-6xl mx-auto">

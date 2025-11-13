@@ -12,6 +12,9 @@ const ContactDetails = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4">
             Contact Us
           </h2>
+          <p className="text-white text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-12 text-center">
+            For Speakership Opportunity
+          </p>
           <div className="w-16 h-[3px] bg-white/50 mx-auto rounded-full"></div>
         </div>
 
@@ -28,13 +31,13 @@ const ContactDetails = () => {
                 <Mail size={18} />
                 <span className="fs20">surbhi@guildlive.com</span>
               </a>
-              <a
+              {/* <a
                 href="tel:+1234567890"
                 className="flex items-center justify-center gap-2 hover:text-white transition-colors"
               >
                 <Phone size={18} />
                 <span className="fs20">+91 XXX XXX XXXX</span>
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -49,13 +52,13 @@ const ContactDetails = () => {
                 <Mail size={18} />
                 <span className="fs20">aditi.malik@guildlive.com</span>
               </a>
-              <a
+              {/* <a
                 href="tel:+1234567890"
                 className="flex items-center justify-center gap-2 hover:text-white transition-colors"
               >
                 <Phone size={18} />
                 <span className="fs20">+91 XXX XXX XXXX</span>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

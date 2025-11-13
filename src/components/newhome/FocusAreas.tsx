@@ -8,7 +8,7 @@ import securityImage from "@/assets/focus-security.jpg";
 const FocusAreas = () => {
   const focusAreas = [
     {
-      title: "India's AI Leadership & Global Influence",
+      title: "India’s AI Leadership & Global Influence",
       image: indiaAiImage,
     },
     {
@@ -42,9 +42,9 @@ const FocusAreas = () => {
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent opacity-0 animate-fade-in-up">
           Focus Areas
         </h2>
-        <p className="text-slate-600 text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed mb-12 text-center opacity-0 animate-fade-in-up animation-delay-200">
+        {/* <p className="text-slate-600 text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed mb-12 text-center opacity-0 animate-fade-in-up animation-delay-200">
           Key themes shaping the future of AI innovation
-        </p>
+        </p> */}
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {focusAreas.map((area, index) => {

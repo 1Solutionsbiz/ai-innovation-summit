@@ -21,7 +21,7 @@ const HeroBanner = () => {
       <div className="absolute inset-0 bg-black/40"></div>
 
 
-<div className="row text-white absolute top-4 right-20 p-4 md:p-8 lg:p-12 singhaniya">
+<div className="row text-white absolute top-4 right-20 p-4 md:p-8 lg:p-12 singhaniya-badge">
     {/* Logo + Edition Badge */}
     <div className="mb-8 flex justify-center items-center gap-6 opacity-0 animate-fade-in">
         {/* 6th Edition Badge */}
@@ -44,21 +44,7 @@ const HeroBanner = () => {
       {/* 🔹 Content */}
       <div className="relative z-10 container mx-auto px-4 py-20 text-center">
         {/* Logo + Edition Badge */}
-        <div className="mb-8 flex justify-center items-center gap-6 opacity-0 animate-fade-in">
-          {/* 6th Edition Badge */}
-          {/* <div
-            className="relative glass-button-clr h100 text-white font-semibold text-lg px-6 py-3 text-center uppercase shadow-lg"
-            style={{
-              clipPath: "polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%)",
-              padding: "10px",
-            }}
-          >
-            <span className="pt10 block leading-tight">
-              6<sup>th</sup>
-              <br />
-              EDITION
-            </span>
-          </div> */}
+        <div className="mb-8 flex justify-center items-center gap-6 opacity-0 animate-fade-in guild-mb-logo">
 
           {/* Guild Logo */}
           <img
@@ -89,13 +75,13 @@ const HeroBanner = () => {
             {/* Location Icon + Delhi */}
             <span className="flex items-center gap-2">
               <MapPin className="w-6 h-6 text-fuchsia-400" />
-              Delhi
+              The Westin, Gurgaon, Delhi NCR
             </span>
             <span>|</span>
             {/* Date Icon + Month */}
             <span className="flex items-center gap-2">
               <CalendarDays className="w-6 h-6 text-fuchsia-400" />
-              January 2026
+              21st January 2026
             </span>
           </p>
 
