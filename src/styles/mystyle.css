@@ -408,6 +408,16 @@ All colors MUST be HSL.
   .lh80px{
     line-height: 80px !important;
   }
+  
+  .bepartsec10{
+    width: 100% !important;
+  }
+  .bepartsec7{
+    width: 70% !important
+  }
+  .bepartsec3{
+    width: 30% !important
+  }
 }
 /* Desktop Screen End */
 
