@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import guildLogo from "@/assets/guild-logo.png";
+import aiinvationlogo from "/logo/Ai-Innovation_Logo_White.png";
 import { MapPin, CalendarDays } from "lucide-react"; // ✅ Added icons
 
 const HeroBanner = () => {
@@ -44,7 +45,7 @@ const HeroBanner = () => {
       {/* 🔹 Content */}
       <div className="relative z-10 container mx-auto px-4 py-20 text-center">
         {/* Logo + Edition Badge */}
-        <div className="mb-8 flex justify-center items-center gap-6 opacity-0 animate-fade-in guild-mb-logo">
+        <div className="flex justify-center items-center gap-6 opacity-0 animate-fade-in guild-mb-logo">
 
           {/* Guild Logo */}
           <img
@@ -55,9 +56,14 @@ const HeroBanner = () => {
         </div>
 
         {/* Main Title */}
-        <div className="mb-12 opacity-0 animate-fade-in animation-delay-200">
+        <div className="opacity-0 animate-fade-in animation-delay-200">
           <h1 className="text-white">
-            <span className="block text-5xl md:text-7xl lg:text-8xl font-bold mb-2">
+            <img
+              src={aiinvationlogo}
+              alt="Ai Innovation Summit"
+              className=" mx-auto h-24 md:h-32 lg:h-40 ailogmain object-contain"
+            />
+            {/* <span className="block text-5xl md:text-7xl lg:text-8xl font-bold mb-2">
               <span className="text-white">AI</span>
               <span className="bg-gradient-to-r from-purple-500 to-fuchsia-600 bg-clip-text text-transparent">
                 Innovation
@@ -65,24 +71,26 @@ const HeroBanner = () => {
             </span>
             <span className="block text-6xl md:text-8xl lg:text-9xl font-black tracking-wider">
               SUMMIT
-            </span>
+            </span> */}
           </h1>
         </div>
 
         {/* Event Details */}
         <div className="space-y-3 mb-12 opacity-0 animate-fade-in-up animation-delay-600">
           <p className="text-white text-xl md:text-2xl font-normal tracking-wide flex items-center justify-center gap-4">
-            {/* Location Icon + Delhi */}
-            <span className="flex items-center gap-2">
-              <MapPin className="w-6 h-6 text-fuchsia-400" />
-              The Westin, Gurgaon, Delhi NCR
-            </span>
-            <span>|</span>
+            
             {/* Date Icon + Month */}
             <span className="flex items-center gap-2">
               <CalendarDays className="w-6 h-6 text-fuchsia-400" />
-              21st January 2026
+              21st January 2026 
             </span>
+            <span>|</span>
+            {/* Location Icon + Delhi */}
+            <span className="flex items-center gap-2">
+              <MapPin className="w-6 h-6 text-fuchsia-400" />
+              The Westin Gurgaon, New Delhi
+            </span>
+
           </p>
 
           <h2 className="text-white text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight">

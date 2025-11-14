@@ -376,6 +376,23 @@ All colors MUST be HSL.
   font-size: 15px !important;
 }
 
+.ailogmain{
+  height: 20rem !important;
+}
+
+.bgcolro1{
+  background:#bf1c881a !important;
+}
+
+.becolsec{
+  border-bottom: 1px solid #6b7280;
+  padding-bottom: 10px;
+}
+.becolseci{
+  border-bottom: 1px solid #d94c67;
+  padding-bottom: 10px;
+}
+
 /* Desktop Screen Start */
 @media screen and (min-width: 767px) {
   .rightbtn-newp-ires{
@@ -387,6 +404,9 @@ All colors MUST be HSL.
   }
   .ccws85{
     width: 25rem !important;
+  }
+  .lh80px{
+    line-height: 80px !important;
   }
 }
 /* Desktop Screen End */

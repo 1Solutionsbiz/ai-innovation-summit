@@ -24,7 +24,7 @@ const WhatAwaits = () => {
       title: "Moments That Matter",
       description:
         "Step into the spark of innovation, dynamic dialogue, and unforgettable in-person experiences that shape the future of AI.",
-      image: "/delhi26/Actionable-Insights.png",
+      image: "/delhi26/Moments-that-matters.png",
     },
     {
       title: "Voices of Impact",

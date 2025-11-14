@@ -1,5 +1,6 @@
 import { Linkedin } from "lucide-react";
 import aiLogo from "@/assets/ai-innovation-logo.png";
+import aiinvationlogo from "/logo/Ai-Innovation_Logo_White.png";
 import guildLogo from "@/assets/guild-logo.png";
 
 const Footer = () => {
@@ -11,9 +12,12 @@ const Footer = () => {
           <div className="space-y-6">
             <div>
               <h3 className="text-2xl md:text-3xl font-bold mb-2">
-                <span className="italic">AI</span> Innovation
+                <img
+                  src={aiinvationlogo}
+                  alt="Ai Innovation Summit"
+                  className=" h-10 md:h-12 lg:h-16 object-contain "
+                />
               </h3>
-              <h3 className="text-2xl md:text-3xl font-bold">SUMMIT</h3>
             </div>
             
             <p className="text-slate-300 text-sm leading-relaxed">
