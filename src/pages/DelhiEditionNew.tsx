@@ -19,6 +19,7 @@ import AboutTheGuild from "@/components/newhome/AboutTheGuild";
 import { DelhiJune26RegisterForm } from "@/components/DelhiJune26RegisterForm";
 import Footer from "@/components/newhome/Footer";
 
+
 import "@/styles/mystyle.css";
 
 

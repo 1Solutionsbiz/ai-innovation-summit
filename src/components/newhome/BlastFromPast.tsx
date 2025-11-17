@@ -1,5 +1,5 @@
 const BlastFromPast = () => {
-  const videoSrc = "videos/Delhi-2026_banner.mp4";
+  const videoSrc = "videos/Yt_promo_10_sept.mp4";
   const videoTitle = "AI Innovation Summit 2024 Highlights";
 
   return (
@@ -15,16 +15,27 @@ const BlastFromPast = () => {
         <div className="max-w-6xl mx-auto">
           <div className="bg-white rounded-lg shadow-xl overflow-hidden">
             <div className="aspect-video">
-              <iframe
-                src={videoSrc}
-                title={videoTitle}
-                className="w-full h-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+                {/* Local Video */}
+                <div className="mb-16">
+                  <div className="aspect-video w-full overflow-hidden rounded-lg shadow-lg">
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                  
+                      className="w-full h-full object-cover"
+                    >
+                      <source src={videoSrc} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
             </div>
           </div>
         </div>
+
+
       </div>
     </section>
   );
