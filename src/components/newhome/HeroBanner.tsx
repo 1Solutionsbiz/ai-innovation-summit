@@ -43,7 +43,7 @@ const HeroBanner = () => {
 </div>
 
       {/* 🔹 Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20 text-center">
+      <div className="relative z-10 container nwdglm mx-auto px-4 py-20 text-center">
         {/* Logo + Edition Badge */}
         <div className="flex justify-center items-center gap-6 opacity-0 animate-fade-in guild-mb-logo">
 
@@ -76,7 +76,7 @@ const HeroBanner = () => {
         </div>
 
         {/* Event Details */}
-        <div className="space-y-3 mb-12 opacity-0 animate-fade-in-up animation-delay-600">
+        <div className="space-y-3 mb-12 moblocation opacity-0 animate-fade-in-up animation-delay-600">
           <p className="text-white text-xl md:text-2xl font-normal tracking-wide flex items-center justify-center gap-4">
             
             {/* Date Icon + Month */}
@@ -84,7 +84,7 @@ const HeroBanner = () => {
               <CalendarDays className="w-6 h-6 text-fuchsia-400" />
               21st January 2026 
             </span>
-            <span>|</span>
+            <span className="mobldidr">|</span>
             {/* Location Icon + Delhi */}
             <span className="flex items-center gap-2">
               <MapPin className="w-6 h-6 text-fuchsia-400" />

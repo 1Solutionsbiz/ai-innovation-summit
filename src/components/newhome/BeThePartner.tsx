@@ -80,7 +80,7 @@ const BeThePartner = () => {
             md:grid-cols-[55%_45%] 
             lg:grid-cols-[60%_40%] 
             gap-10 
-            max-w-6xl 
+            max-w-7xl 
             mx-auto 
             items-center
           "

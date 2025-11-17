@@ -12,7 +12,7 @@ const BlastFromPast = () => {
           Relive the Summit Moments 
         </p>
 
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="bg-white rounded-lg shadow-xl overflow-hidden">
             <div className="aspect-video">
               <iframe

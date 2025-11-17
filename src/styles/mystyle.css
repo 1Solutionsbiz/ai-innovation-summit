@@ -424,8 +424,27 @@ All colors MUST be HSL.
 
 /* Mobile Screen Start */
 @media screen and (max-width: 481px) {
+  
+  .nwdglm>div>img{
+    margin-top: 10%;
+    margin-bottom: -25%;
+  }
+  .moblocation{
+    margin-top: -15% !important;
+  }
+  .moblocation>p{
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+  .moblocation>p>.mobldidr{
+    display: none !important;
+  }
+  .fs40m{
+    font-size: 40px !important;
+  }
+
   svg{
-    color: #fff !important;
+    color: #fff;
   }
   .space-y-4 > :not([hidden]) ~ :not([hidden]),
   .transition-colors{

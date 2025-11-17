@@ -6,55 +6,44 @@ import guildLogo from "@/assets/guild-logo.png";
 const Footer = () => {
   return (
     <footer className="bg-slate-900 text-white">
-      <div className="container mx-auto px-4 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-          {/* Left Section */}
+      <div className="container max-w-7xl mx-auto px-4 sm:px-6 py-10 md:py-16">
+
+        {/* TOP SECTION */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-12">
+
+          {/* LEFT SECTION */}
           <div className="space-y-6">
             <div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-2">
-                <img
-                  src={aiinvationlogo}
-                  alt="Ai Innovation Summit"
-                  className=" h-10 md:h-12 lg:h-16 object-contain "
-                />
-              </h3>
+              <img
+                src={aiinvationlogo}
+                alt="Ai Innovation Summit"
+                className="h-9 sm:h-10 md:h-12 lg:h-16 object-contain"
+              />
             </div>
-            
+
             <p className="text-slate-300 text-sm leading-relaxed">
-              From prompt to impact — the premier summit for artificial intelligence leaders and
-              enthusiasts, making it the most impactful AI Summit.
+              From prompt to impact — the premier summit for artificial intelligence
+              leaders and enthusiasts, making it the most impactful AI Summit.
             </p>
-            
-            <div className="flex items-center gap-4 pt-4">
-              {/* <img
+
+            <div className="pt-4">
+              <img
                 src={guildLogo}
                 alt="The Guild"
-                className="h-8 object-contain"
+                className="h-8 sm:h-10 md:h-12 w-auto object-contain"
               />
-              <div className="w-px h-8 bg-slate-600"></div>
-                <img
-                  src={aiLogo}
-                  alt="Guild Live"
-                  className="h-8 object-contain"
-                /> */}
-                
-                <img 
-                  src={guildLogo} 
-                  alt="The Guild" 
-                  className="h-auto w-auto mt-5 object-contain"
-                />
-
-              </div>
+            </div>
           </div>
 
-          {/* Center Section - Quick Links */}
-          <div>
-            <h4 className="text-xl font-bold mb-6">Quick Links</h4>
+          {/* CENTER SECTION */}
+          <div className="text-left sm:text-left">
+            <h4 className="text-xl font-bold mb-5 sm:mb-6">Quick Links</h4>
+
             <ul className="space-y-3">
               <li>
                 <a
                   href="#about"
-                  className="text-slate-300 hover:text-white transition-colors"
+                  className="text-slate-300 hover:text-white transition-colors text-sm sm:text-base"
                 >
                   About
                 </a>
@@ -62,7 +51,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#speakers"
-                  className="text-slate-300 hover:text-white transition-colors"
+                  className="text-slate-300 hover:text-white transition-colors text-sm sm:text-base"
                 >
                   Speakers
                 </a>
@@ -70,7 +59,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#partners"
-                  className="text-slate-300 hover:text-white transition-colors"
+                  className="text-slate-300 hover:text-white transition-colors text-sm sm:text-base"
                 >
                   Partners
                 </a>
@@ -78,29 +67,34 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Right Section - Connect With Us */}
+          {/* RIGHT SECTION */}
           <div>
-            <h4 className="text-xl font-bold mb-6">Connect With Us</h4>
+            <h4 className="text-xl font-bold mb-5 sm:mb-6">Connect With Us</h4>
+
             <div className="space-y-4">
               <div className="flex items-center gap-2">
                 <Linkedin className="text-cyan-400" size={20} />
               </div>
-              
+
               <a
                 href="mailto:guildconferences@guildlive.com"
-                className="text-slate-300 hover:text-cyan-400 transition-colors block"
+                className="text-slate-300 hover:text-cyan-400 transition-colors text-sm sm:text-base block"
               >
                 guildconferences@guildlive.com
               </a>
-              
+
               <p className="text-slate-300 text-sm leading-relaxed">
-                Smartworks Corporate Park Tower A, Second Floor Sector 125, Noida
-                Uttar Pradesh 201303
+                Smartworks Corporate Park Tower A, Second Floor Sector 125,
+                Noida, Uttar Pradesh 201303
               </p>
-              
-              <div className="pt-4 space-y-3">
+
+              {/* Speakership */}
+              <div className="pt-2 space-y-3">
                 <div>
-                  <p className="font-semibold mb-2">For Speakership Opportunity,</p>
+                  <p className="font-semibold text-sm sm:text-base mb-1">
+                    For Speakership Opportunity,
+                  </p>
+
                   <p className="text-sm text-slate-300">
                     Email at{" "}
                     <a
@@ -118,9 +112,13 @@ const Footer = () => {
                     </a>
                   </p>
                 </div>
-                
+
+                {/* Partnerships */}
                 <div>
-                  <p className="font-semibold mb-2">For Partnerships,</p>
+                  <p className="font-semibold text-sm sm:text-base mb-1">
+                    For Partnerships,
+                  </p>
+
                   <p className="text-sm text-slate-300">
                     Email at{" "}
                     <a
@@ -136,23 +134,28 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-slate-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-slate-400 text-sm">© Copyright 2025, The Guild</p>
-          
-          <div className="flex flex-wrap gap-6 text-sm">
+        {/* BOTTOM SECTION */}
+        <div className="border-t border-slate-700 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+
+          <p className="text-slate-400 text-xs sm:text-sm text-center md:text-left">
+            © Copyright 2025, The Guild
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm">
             <a
               href="#privacy"
               className="text-slate-400 hover:text-white transition-colors"
             >
               Privacy Policy
             </a>
+
             <a
               href="#terms"
               className="text-slate-400 hover:text-white transition-colors"
             >
               Terms & Conditions
             </a>
+
             <a
               href="#conduct"
               className="text-slate-400 hover:text-white transition-colors"

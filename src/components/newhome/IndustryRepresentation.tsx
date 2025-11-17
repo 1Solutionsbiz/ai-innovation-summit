@@ -34,7 +34,7 @@ const IndustryRepresentation = () => {
         </h2>
 
         {/* Icon Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10 text-center">
+        <div className="grid grid-cols-1 max-w-7xl mx-auto sm:grid-cols-2 lg:grid-cols-5 gap-10 text-center">
           {industries.map((item, index) => (
             <div
               key={index}

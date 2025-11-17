@@ -57,7 +57,7 @@ const WatchOnDemand = () => {
           Catch the Summit Highlights Anytime
         </p>
 
-        <div className="overflow-hidden" ref={emblaRef}>
+        <div className="overflow-hidden max-w-7xl mx-auto" ref={emblaRef}>
           <div className="flex gap-6">
             {videos.map((video) => (
               <div

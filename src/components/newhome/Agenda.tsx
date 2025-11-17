@@ -82,7 +82,7 @@ const AgendaNew = () => {
         </div>
 
         {/* Agenda List */}
-        <div className="max-w-4xl mx-auto divide-y divide-gray-200 
+        <div className="max-w-7xl mx-auto divide-y divide-gray-200 
         backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-8
         ">
           {agendaData.map((item, index) => {

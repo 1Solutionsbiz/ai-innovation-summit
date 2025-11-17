@@ -28,7 +28,7 @@ const SeriesPartners = () => {
           Partnering with industry leaders to drive innovation
         </p>
         
-          <div className="max-w-5xl mx-auto space-y-10">
+          <div className="max-w-6xl mx-auto space-y-10">
             {/* Presenting Partner */}
             <div className="py-6 opacity-0 animate-fade-in-up animation-delay-400">
               <p className="text-sm font-semibold text-center mb-4 tracking-wide text-gray-700">

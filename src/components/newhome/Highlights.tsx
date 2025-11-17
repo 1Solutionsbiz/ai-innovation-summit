@@ -44,7 +44,7 @@ const Highlights = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-7xl mx-auto">
           {highlights.map((item, index) => {
             const Icon = item.icon;
             const delays = ['', 'animation-delay-200', 'animation-delay-400', 'animation-delay-600'];
@@ -57,7 +57,7 @@ const Highlights = () => {
                   WebkitBackdropFilter: 'blur(20px) saturate(180%)',
                 }}
               >
-                <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-white drop-shadow-lg">
+                <div className="text-5xl fs40m md:text-6xl lg:text-7xl font-bold text-white drop-shadow-lg">
                   {item.number}
                 </div>
                 <div className="text-sm md:text-base lg:text-lg font-medium text-white/95 tracking-wide">
