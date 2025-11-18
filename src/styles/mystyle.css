@@ -418,6 +418,30 @@ All colors MUST be HSL.
   .bepartsec3{
     width: 30% !important
   }
+
+  .singhaniyanewdspkr>.singhspkrg:nth-child(36),
+  .singhaniyanewdspkr>.singhspkrg:nth-child(37) {
+    /* background: red !important; */
+    margin-left: 165%;
+    margin-right: -165%;
+  }
+
+  .sspastprnrlogo>.atlassian{
+    /* background-color: red; */
+    height: 4rem !important;
+  }
+  .sspastprnrlogo>.salesforce{
+    /* background-color: green; */
+    height: 8rem !important;
+  }
+  .sspastprnrlogo>.microsoft{
+    /* background-color: blue; */
+  }
+  .sspastprnrlogo>.xboom{
+    /* background-color: orange; */
+  }
+
+
 }
 /* Desktop Screen End */
 

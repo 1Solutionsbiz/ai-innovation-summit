@@ -13,59 +13,74 @@ const AgendaNew = () => {
 
   const agendaData = [
     {
-      time: "08:00 AM – 09:00 AM",
-      title: "Registrations",
+      time: "08:30 – 09:45 AM ",
+      title: "Registration & Networking Breakfast ",
       description: "",
     },
     {
-      time: "09:00 AM – 10:00 AM",
-      title: "Welcome Agenda 1",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
-    {
-      time: "10:01 AM – 11:00 AM",
-      title: "Welcome Agenda 2",
+      time: "10:00 – 10:10 AM  ",
+      title: "Welcome Note & Opening Remarks  ",
       description: "",
     },
     {
-      time: "11:01 AM – 12:00 PM",
-      title: "Tea Break",
+      time: "10:10 – 10:30 AM  ",
+      title: "Keynote Address: AI Made in India – Innovation for 1.4 billion and beyond  ",
+      description: "Explores how India is pioneering scalable, purpose-driven AI solutions for 1.4 billion people while creating models that can influence global industries and societies.",
+    },
+    {
+      time: "10:30– 11:15 AM ",
+      title: "Session 1: Panel Discussion From Prompt to Impact – Scaling AI Across the Enterprise",
+      description: "How leading enterprises are moving beyond experimentation into scaled AI adoption. Covers cultural shifts, cloud-native foundations, workforce readiness, and governance models.  ",
+    },
+    {
+      time: "11:15 – 11:45 AM",
+      title: "Partner Innovation Showcase",
+      description: "Technology partners share live case studies and enterprise AI deployments.",
+    },
+    {
+      time: "11:45 – 12:30 PM ",
+      title: "Session 2: Panel Discussion Beyond GenAI – Towards Self-Learning Workflows",
+      description: "A deep dive into intelligent automation: from RPA to agentic automation. Industry leaders discuss how self-learning workflows boost decision velocity and reshape operations. ",
+    },
+    {
+      time: "12:30 – 01:00 PM  ",
+      title: " Session 3: Fire-Side Chat CEO–CIO Leadership Dialogue: The AI Imperative ",
+      description: "An exclusive fireside conversation on aligning AI investments with enterprise growth, resilience, and long-term transformation. ",
+    },
+    {
+      time: "01:00 – 02:00 PM  ",
+      title: "Networking Lunch  ",
       description: "",
     },
     {
-      time: "12:01 PM – 01:00 PM",
-      title: "Welcome Agenda 3",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      time: "02:00 – 02:45 PM (Parallel Track) ",
+      title: "Delhi Spotlight Parallel Tracks",
+      description: "Track A: AI in BFSI – Trust, Risk & Digital Transformation How BFSI leaders are using AI for fraud detection, risk modelling, credit scoring, and customer engagement. Track B: AI in Manufacturing – Smart Factories & Predictive Supply Chains Automotive and electronics giants discuss predictive maintenance, quality assurance, digital twins, and AI in supply chain optimization.Track C: AI in Customer Experience – Hyper-Personalization at Scale FMCG, retail, and consumer goods leaders explore personalization, omnichannel strategies, demand forecasting, and AI-driven product innovation.",
     },
     {
-      time: "01:01 PM – 02:00 PM",
-      title: "Lunch Break",
+      time: "02:45 – 03:30 PM (Parallel Track)",
+      title: "Partner Case Studies & Demos ",
+      description: "Focused showcases from partners on applied AI solutions for BFSI, manufacturing, and CX.  ",
+    },
+    {
+      time: "03:30 – 04:15 PM  ",
+      title: "Session 4: Panel Discussion ",
+      description: "Fortifying the AI Enterprise – Risks & Defenses in the GenAI Era Examines AI-driven vulnerabilities — from generated code risks to data security. Panelists share frameworks for building secure, trustworthy AI ecosystems. ",
+    },
+        {
+      time: "04:15 – 05:00 PM ",
+      title: "Session 5: Panel Discussion  ",
+      description: "The India AI Playbook – Lessons from Industry Leaders CXOs from services, manufacturing, BFSI, and consumer goods share what’s working, what’s failing, and practical roadmaps for building AI maturity.",
+    },
+        {
+      time: "05:00 – 05:15 PM  ",
+      title: "Closing Note & Call to Action ",
       description: "",
     },
-    {
-      time: "02:01 PM – 03:00 PM",
-      title: "Welcome Agenda 4",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
-    {
-      time: "03:01 PM – 04:00 PM",
-      title: "Welcome Agenda 5",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
-    {
-      time: "04:01 PM – 05:00 PM",
-      title: "Tea Break",
-      description: "",
-    },
-    {
-      time: "05:01 PM – 06:00 PM",
-      title: "Welcome Agenda 6",
-      description: "",
-    },
-    {
-      time: "06:01 PM",
-      title: "Announcement & Closing",
-      description: "",
+        {
+      time: "06:00 – 09:00 PM  ",
+      title: "Exclusive CIO/CTO Gala Dinner & Networking Cocktails (Invite-only, 50 Leaders)  ",
+      description: "An intimate evening of dialogue with India’s top technology leaders on “Leading the AI-First Enterprise.” ",
     },
   ];
 
