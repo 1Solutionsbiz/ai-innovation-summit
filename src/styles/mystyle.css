@@ -393,6 +393,17 @@ All colors MUST be HSL.
   padding-bottom: 10px;
 }
 
+.fiwidth{
+  width: 60% !important;
+}
+.fiwidthimgctr{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
 /* Desktop Screen Start */
 @media screen and (min-width: 767px) {
   .rightbtn-newp-ires{
@@ -417,6 +428,10 @@ All colors MUST be HSL.
   }
   .bepartsec3{
     width: 30% !important
+  }
+
+  .mr10{
+    margin:0px 30px !important;
   }
 
   .singhaniyanewdspkr>.singhspkrg:nth-child(36),
