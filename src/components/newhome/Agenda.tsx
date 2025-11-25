@@ -24,7 +24,7 @@ const AgendaNew = () => {
     },
     {
       time: "10:10 – 10:30 AM  ",
-      title: "Keynote Address: AI Made in India – Innovation for 1.4 billion and beyond  ",
+      title: "Keynote Address: AI Made in India – Innovation for 1.4 billion and beyond",
       description: "Explores how India is pioneering scalable, purpose-driven AI solutions for 1.4 billion people while creating models that can influence global industries and societies.",
     },
     {
@@ -55,7 +55,7 @@ const AgendaNew = () => {
     {
       time: "02:00 – 02:45 PM (Parallel Track) ",
       title: "Delhi Spotlight Parallel Tracks",
-      description: "Track A: AI in BFSI – Trust, Risk & Digital Transformation How BFSI leaders are using AI for fraud detection, risk modelling, credit scoring, and customer engagement. Track B: AI in Manufacturing – Smart Factories & Predictive Supply Chains Automotive and electronics giants discuss predictive maintenance, quality assurance, digital twins, and AI in supply chain optimization.Track C: AI in Customer Experience – Hyper-Personalization at Scale FMCG, retail, and consumer goods leaders explore personalization, omnichannel strategies, demand forecasting, and AI-driven product innovation.",
+      description: "Track A: AI in BFSI – Trust, Risk & Digital Transformation How BFSI leaders are using AI for fraud detection, risk modelling, credit scoring, and customer engagement. \n Track B: AI in Manufacturing – Smart Factories & Predictive Supply Chains Automotive and electronics giants discuss predictive maintenance, quality assurance, digital twins, and AI in supply chain optimization. \n Track C: AI in Customer Experience – Hyper-Personalization at Scale FMCG, retail, and consumer goods leaders explore personalization, omnichannel strategies, demand forecasting, and AI-driven product innovation.",
     },
     {
       time: "02:45 – 03:30 PM (Parallel Track)",
@@ -64,13 +64,13 @@ const AgendaNew = () => {
     },
     {
       time: "03:30 – 04:15 PM  ",
-      title: "Session 4: Panel Discussion ",
-      description: "Fortifying the AI Enterprise – Risks & Defenses in the GenAI Era Examines AI-driven vulnerabilities — from generated code risks to data security. Panelists share frameworks for building secure, trustworthy AI ecosystems. ",
+      title: "Session 4: Panel Discussion Fortifying the AI Enterprise – Risks & Defenses in the GenAI Era ",
+      description: "Examines AI-driven vulnerabilities — from generated code risks to data security. Panelists share frameworks for building secure, trustworthy AI ecosystems. ",
     },
         {
       time: "04:15 – 05:00 PM ",
-      title: "Session 5: Panel Discussion  ",
-      description: "The India AI Playbook – Lessons from Industry Leaders CXOs from services, manufacturing, BFSI, and consumer goods share what’s working, what’s failing, and practical roadmaps for building AI maturity.",
+      title: "Session 5: Panel Discussion  The India AI Playbook – Lessons from Industry Leaders ",
+      description: "CXOs from services, manufacturing, BFSI, and consumer goods share what’s working, what’s failing, and practical roadmaps for building AI maturity.",
     },
         {
       time: "05:00 – 05:15 PM  ",
@@ -146,12 +146,18 @@ const AgendaNew = () => {
                     {/* Description (toggle) */}
                     <div
                       className={`overflow-hidden transition-all duration-500 ${
-                        isActive ? "max-h-40 opacity-100 mt-3" : "max-h-0 opacity-0"
+                        isActive ? "max-h-50 opacity-100 mt-3" : "max-h-0 opacity-0"
                       }`}
                     >
-                      <p className="text-white text-base leading-relaxed">
+                      {/* <p className="text-white text-base leading-relaxed">
                         {item.description}
-                      </p>
+                      </p> */}
+                      {item.description.split("\n").map((para, i) => (
+                        <p key={i} className="text-white text-base leading-relaxed mb-3">
+                          {para.trim()}
+                        </p>
+                      ))}
+
                     </div>
                   </div>
                 </div>

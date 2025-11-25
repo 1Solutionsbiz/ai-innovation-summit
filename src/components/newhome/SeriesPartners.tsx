@@ -18,7 +18,7 @@ const partnersData = [
   },
   {
     tier: "Robotics Partner",
-    logos: [{ name: "Xboom", url: "/sponsers/xboom.png" }],
+    logos: [{ name: "Xboom", url: "/sponsers/xboom-1.png" }],
     isCoPartner: false,
   },
 ];
