@@ -8,7 +8,7 @@ const WhatAwaits = () => {
       title: "Trends That Transform",
       description:
         "Uncover the shifts in AI, automation, and strategy that are redefining enterprise success in the age of intelligence.",
-      image: "/delhi26/AI-Playground.png",
+      image: "/delhi26/Trends-That-Transform.png",
     },
     {
       title: "Connect & Collaborate",
@@ -20,19 +20,19 @@ const WhatAwaits = () => {
       title: "AI in Action",
       description:
         "Step into a world of innovation with live demos, hands-on prototypes, and interactive labs showcasing the technologies transforming enterprises today.",
-      image: "/delhi26/Tech-in-Action.png",
+      image: "/delhi26/AI-in-Action.png",
     },
     {
       title: "Moments That Matter",
       description:
         "Step into the spark of innovation, dynamic dialogue, and unforgettable in-person experiences that shape the future of AI.",
-      image: "/delhi26/Moments-that-matters.png",
+      image: "/delhi26/Moments-That-Matter.png",
     },
     {
       title: "Voices of Impact",
       description:
         "Listen and engage with visionary leaders as they share bold ideas and real insights driving the next era of AI transformation.",
-      image: "/delhi26/Visionary-Voices.png",
+      image: "/delhi26/Voices-of-Impact.png",
     },
   ];
 

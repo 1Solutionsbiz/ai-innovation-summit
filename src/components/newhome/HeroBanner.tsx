@@ -4,7 +4,7 @@ import aiinvationlogo from "/logo/Ai-Innovation_Logo_White.png";
 import { MapPin, CalendarDays } from "lucide-react"; // ✅ Added icons
 
 const HeroBanner = () => {
-  const videoSrc = "/videos/Delhi-2026_banner.mp4";
+  const videoSrc = "/videos/Delhi-2026_video.mp4";
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
