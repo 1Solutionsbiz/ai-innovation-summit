@@ -98,10 +98,10 @@ const Footer = () => {
                   <p className="text-sm text-slate-300">
                     Email at{" "}
                     <a
-                      href="mailto:surbhi@guildlive.com"
+                      href="mailto:nishant.batra@guildlive.com"
                       className="text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
-                      surbhi@guildlive.com
+                      nishant.batra@guildlive.com
                     </a>{" "}
                     or{" "}
                     <a

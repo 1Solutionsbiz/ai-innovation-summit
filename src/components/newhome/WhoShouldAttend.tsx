@@ -2,38 +2,33 @@ const WhoShouldAttend = () => {
   const attendees = [
     "CIOs, CTOs, CDOs, and other C-suite executives",
     "Heads of Digital Transformation",
-    "Heads of Emerging Technologies ",
-    "Heads of Innovation ",
-    "Enterprise / Solution Architects ",
-    "Cloud & Digital Technology Executives ",
-    "Chief Data & Analytics Officers (CDAO) ",
-    "Heads of AI, Automation, and Labs ",
-    "Heads of Customer Experience and IoT ",
-    "Enterprise Security / Cybersecurity Heads ",
-    "Strategic and Technology Leaders ",
+    "Heads of Emerging Technologies",
+    "Heads of Innovation",
+    "Enterprise / Solution Architects",
+    "Cloud & Digital Technology Executives",
+    "Chief Data & Analytics Officers (CDAO)",
+    "Heads of AI, Automation, and Labs",
+    "Heads of Customer Experience and IoT",
+    "Enterprise Security / Cybersecurity Heads",
   ];
 
   return (
-    <section id="who-should-attend" className="py-[150px] py-16 bg-gradient-to-b from-slate-50 to-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
-            Who Should Attend
-          </h2>
-          {/* <p className="text-slate-600 text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
-            Connecting visionaries and decision-makers across industries
-          </p> */}
-        </div>
+    <section id="who-should-attend" className="py-16 bg-gradient-to-b from-slate-50 to-white">
+      <div className="container mx-auto px-4 text-center">
         
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-10 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
+          Who Should Attend
+        </h2>
+
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center">
             {attendees.map((attendee, index) => (
               <div
                 key={index}
-                className="flex items-start gap-3"
+                className="flex justify-center items-start gap-3 text-center"
               >
-                <div className="flex-shrink-0 w-2 h-2 mt-2 bg-slate-400 rounded-full"></div>
-                <p className="text-foreground font-medium fs20">{attendee}</p>
+                {/* <div className="w-2 h-2 mt-2 bg-slate-500 rounded-full"></div> */}
+                <p className="text-foreground font-medium text-lg">{attendee}</p>
               </div>
             ))}
           </div>

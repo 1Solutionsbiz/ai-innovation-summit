@@ -18,6 +18,17 @@ const WatchOnDemand = () => {
     { image: "/edition/4-bangaluru25.jpg", link: "https://www.youtube.com/watch?v=peAQ8Y-NBcc" },
     { image: "/edition/5-bangaluru25.jpg", link: "https://www.youtube.com/watch?v=8863H6tLnQU" },
     { image: "/edition/6-bangaluru25.jpg", link: "https://www.youtube.com/watch?v=fwgJTX3epCg" },
+    { image: "/edition/1-mumbai25.png", link: "https://youtu.be/drYtFmjo3vE?feature=shared" },
+    { image: "/edition/2-mumbai25.png", link: "https://youtu.be/ER-8Lmp1G08?feature=shared" },
+    { image: "/edition/3-mumbai25.png", link: "https://youtu.be/Wv8-atWSgjU?feature=shared" },
+    { image: "/edition/4-mumbai25.png", link: "https://youtu.be/bXZDTUKKlWQ?feature=shared" },
+    { image: "/edition/5-mumbai25.png", link: "https://youtu.be/aDkRMPjUkC8?feature=shared" },
+    { image: "/edition/6-mumbai25.png", link: "https://youtu.be/zGk_zzPK98o?feature=shared" },
+    { image: "/edition/7-mumbai25.png", link: "https://youtu.be/L6T3HXP2zHU?feature=shared" },
+    { image: "/edition/8-mumbai25.png", link: "https://youtu.be/i3_ciFPnrrE?feature=shared" },
+    { image: "/edition/9-mumbai25.png", link: "https://youtu.be/i3_ciFPnrrE?feature=shared" },
+    { image: "/edition/10-mumbai25.png", link: "https://youtu.be/mKWMoV77GPU?feature=shared" },
+    { image: "/edition/11-mumbai25.png", link: "https://youtu.be/rwCFMYyqBAE" },
   ];
 
   return (

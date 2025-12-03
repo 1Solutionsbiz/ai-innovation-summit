@@ -5,29 +5,34 @@ const WhatAwaits = () => {
 
   const features = [
     {
-      title: "Immersive Tech",
-      description:"Step into interactive demos bringing cutting-edge experiences to life.",
-      image: "/delhi26/Power-Networking.jpg",
+      title: "Trends That Transform",
+      description:
+        "Uncover the shifts in AI, automation, and strategy that are redefining enterprise success in the age of intelligence.",
+      image: "/delhi26/Trends-That-Transform.png",
     },
     {
-      title: "Power Networking",
-      description:"Connect with top industry leaders and forge meaningful connections.",
-      image: "/delhi26/Immersive-Tech.jpg",
+      title: "Connect & Collaborate",
+      description:
+        "Meet brilliant minds, share ideas, and spark conversations that matter.",
+      image: "/delhi26/Connect-Collaborate.png",
     },
     {
-      title: "Insightful Talks",
-      description:"Gain sharp perspectives from visionary voices shaping the future of tech.",
-      image: "/delhi26/Insightful-Talks.jpg",
+      title: "AI in Action",
+      description:
+        "Step into a world of innovation with live demos, hands-on prototypes, and interactive labs showcasing the technologies transforming enterprises today.",
+      image: "/delhi26/AI-in-Action.png",
     },
     {
-      title: "Expert Panels",
-      description:"Hear experts decode emerging trends, challenges, and real-world AI applications.",
-      image: "/delhi26/Expert-Panels.jpg",
+      title: "Moments That Matter",
+      description:
+        "Step into the spark of innovation, dynamic dialogue, and unforgettable in-person experiences that shape the future of AI.",
+      image: "/delhi26/Moments-That-Matter.png",
     },
     {
-      title: "AI & Robotics",
-      description:"Explore innovations pushing the boundaries of intelligent automation.",
-      image: "/delhi26/AI-Robotics.jpg",
+      title: "Voices of Impact",
+      description:
+        "Listen and engage with visionary leaders as they share bold ideas and real insights driving the next era of AI transformation.",
+      image: "/delhi26/Voices-of-Impact.png",
     },
   ];
 
@@ -81,7 +86,7 @@ const WhatAwaits = () => {
 const FeatureCard = ({ feature, large }) => {
   return (
     <div
-      className={`relative whatsawaitsbg cursor-pointer overflow-hidden rounded-xl group 
+      className={`relative cursor-pointer overflow-hidden rounded-xl group 
         ${
           large
             ? "h-[300px] sm:h-[400px] md:h-[615px]"
@@ -97,7 +102,7 @@ const FeatureCard = ({ feature, large }) => {
       />
 
       {/* Overlay */}
-      <div className="absolute bgclr inset-0 bg-gradient-to-b from-black/70 via-black/30 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-transparent"></div>
 
       {/* Text Content */}
       <div className="absolute top-4 left-4 right-4 text-white z-10">

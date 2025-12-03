@@ -205,63 +205,41 @@ const FeaturedSpeakers = () => {
           Industry leaders who have shared their insights
         </p>
 
-        {/* 🔥 Scrollable Section */}
-        <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
-          <div className="flex gap-6 md:gap-8 px-2 w-max">
-            {speakers.map((speaker, index) => (
-              <div
-                key={index}
-                className="
-                  w-[160px]         /* 📱 mobile: 2 per row */
-                  sm:w-[200px]      /* 📱 slightly bigger screens: 3 */
-                  md:w-[280px]      /* 💻 tablets: 4 */
-                  lg:w-[240px]      /* 🖥 desktop: 5 in one frame */
-                  flex flex-col items-center text-center
-                  singhniaya-spkrsection
-                "
-              >
-
-                <div className="relative w-full aspect-square speakerimgradis overflow-hidden mb-4 bg-gradient-to-b from-[#b72fd5] to-[#b70b76] hover:shadow-xl duration-300">
-                  <img
-                    src={speaker.image}
-                    alt={speaker.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-
-                <div className="space-y-1">
-                  <h4 className="text-base md:text-lg font-bold text-foreground">
-                    {speaker.name}
-                  </h4>
-
-                  <p className="text-sm text-foreground/70">{speaker.role}</p>
-
-                  {speaker.linkedin && (
-                    <a
-                      href={speaker.linkedin}
-                      target="_blank"
-                      className="text-xs text-blue-600 hover:underline"
-                    >
-                      LinkedIn →
-                    </a>
-                  )}
-                </div>
+        <div className="grid singhaniyanewdspkr grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-7 max-w-7xl mx-auto">
+          {speakers.map((speaker, index) => (
+            <div key={index} className="flex singhspkrg flex-col items-center text-center">
+              <div className="relative w-full aspect-square speakerimgradis overflow-hidden mb-4 bg-gradient-to-b from-[#b72fd5] to-[#b70b76] hover:shadow-xl duration-300">
+                <img
+                  src={speaker.image}
+                  alt={speaker.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
-            ))}
-          </div>
-        </div>
 
+              {/* Name + Role + LinkedIn */}
+              <div className="space-y-1">
+                <h4 className="text-base md:text-lg font-bold text-foreground">
+                  {speaker.name}
+                </h4>
+
+                <p className="text-sm text-foreground/70">{speaker.role}</p>
+
+                {speaker.linkedin && (
+                  <a
+                    href={speaker.linkedin}
+                    target="_blank"
+                    className="text-xs text-blue-600 hover:underline"
+                  >
+                    LinkedIn →
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
-
-
 };
 
 export default FeaturedSpeakers;
-
-
-
-
-
-

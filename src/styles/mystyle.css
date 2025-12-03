@@ -402,6 +402,24 @@ All colors MUST be HSL.
 }
 
 
+.whatsawaitsbg:hover>.bgclr{
+      background: repeating-linear-gradient(180deg, black, transparent 100%);
+}
+
+
+/* Optional prettier scrollbar */
+::-webkit-scrollbar {
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #e5e7eb;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #6b7280;
+  border-radius: 10px;
+}
+
 
 
 /* Desktop Screen Start */

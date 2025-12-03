@@ -20,16 +20,16 @@ const ContactDetails = () => {
 
         {/* Contact Cards */}
         <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 relative z-10">
-          {/* Surbhi */}
+          {/* Nishant */}
           <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-8 w-full ccws85 text-center shadow-xl hover:bg-white/15 transition-all duration-300">
-            <h3 className="fs2rem font-semibold mb-2">Surbhi Mishra</h3>
+            <h3 className="fs2rem font-semibold mb-2">Nishant Batra</h3>
             <div className="space-y-3 text-sm text-white/80">
               <a
-                href="mailto:surbhi@guildlive.com"
+                href="mailto:nishant.batra@guildlive.com"
                 className="flex items-center justify-center gap-2 hover:text-white transition-colors mb-5 mt-5"
               >
                 <Mail size={18} />
-                <span className="fs20">surbhi@guildlive.com</span>
+                <span className="fs20">nishant.batra@guildlive.com</span>
               </a>
               {/* <a
                 href="tel:+1234567890"
