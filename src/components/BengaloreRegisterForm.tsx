@@ -160,17 +160,17 @@ export const BengaloreRegisterForm: React.FC = () => {
       delete payload.phoneNumber;
 
 
-      // const resp = await axios.post(
-      //   "https://olive-elk-842602.hostingersite.com/api/bangalore-registers",
-      //   payload,
-      //   { headers: { "Content-Type": "application/json" } }
-      // );
-
       const resp = await axios.post(
-        "http://127.0.0.1:8000/api/bangalore-registers",
+        "https://olive-elk-842602.hostingersite.com/api/bangalore-registers",
         payload,
         { headers: { "Content-Type": "application/json" } }
       );
+
+      // const resp = await axios.post(
+      //   "http://127.0.0.1:8000/api/bangalore-registers",
+      //   payload,
+      //   { headers: { "Content-Type": "application/json" } }
+      // );
 
       // setSuccessMessage(resp.data.message || "Thank You for Registering – Pending Confirmation. You will receive a confirmation email once your registration is approved.");
       alert("Thank You for Registering – Pending Confirmation. You will receive a confirmation email once your registration is approved.");

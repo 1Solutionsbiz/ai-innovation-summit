@@ -12,17 +12,17 @@ const DashboardLayout: React.FC = () => {
   const logoutMutation = useMutation({
     mutationFn: async () => {
       
-      // await axios.post(
-      //   'https://olive-elk-842602.hostingersite.com/api/logout',
-      //   {},
-      //   { headers: { Authorization: `Bearer ${token}` } }
-      // );
-      
       await axios.post(
-        'http://127.0.0.1:8000/api/logout',
+        'https://olive-elk-842602.hostingersite.com/api/logout',
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
+      
+      // await axios.post(
+      //   'http://127.0.0.1:8000/api/logout',
+      //   {},
+      //   { headers: { Authorization: `Bearer ${token}` } }
+      // );
 
     },
     onSuccess: () => {

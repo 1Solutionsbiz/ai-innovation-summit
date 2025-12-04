@@ -47,7 +47,7 @@ const DelhiEditionNew = () => {
       <WatchOnDemand />
       <ContactDetails />
       <AboutTheGuild />
-      {/* <DelhiJune26RegisterForm /> */}
+      <DelhiJune26RegisterForm />
       <Footer />
     </div>
   );

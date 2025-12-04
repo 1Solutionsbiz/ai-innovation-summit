@@ -133,16 +133,16 @@ export const PartnerSectionForm: React.FC = () => {
     try {
       const payload = { ...formData, recaptcha_token: recaptchaToken };
 
-      // const resp = await axios.post(
-      //   "https://olive-elk-842602.hostingersite.com/api/partner-register",
-      //   payload,
-      //   { headers: { "Content-Type": "application/json" } }
-      // );
       const resp = await axios.post(
-        "http://127.0.0.1:8000/api/partner-register",
+        "https://olive-elk-842602.hostingersite.com/api/partner-register",
         payload,
         { headers: { "Content-Type": "application/json" } }
       );
+      // const resp = await axios.post(
+      //   "http://127.0.0.1:8000/api/partner-register",
+      //   payload,
+      //   { headers: { "Content-Type": "application/json" } }
+      // );
 
 
       alert(resp.data.message || "Thank You for your registration. We will reach out to you shortly.");

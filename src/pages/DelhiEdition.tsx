@@ -19,6 +19,7 @@ import PastPartners from "@/components/PastPartners";
 import DemandVideoHome from "@/components/DemandVideoHome";
 import { useEffect } from "react";
 // import { Speakers } from "@/components/Speakers";
+import { DelhiJune26RegisterForm } from "@/components/DelhiJune26RegisterForm";
 
 import SocialWall from "@/components/SocialWall";
 
@@ -115,6 +116,11 @@ const DelhiEdition = () => {
     }, []);
     return (
         <div className="min-h-screen">
+
+
+
+            <DelhiJune26RegisterForm />
+            {/*
             <Header
                 isRegistrationActive={false}
                 registrationButtonName="Registration Closed"
@@ -135,21 +141,25 @@ const DelhiEdition = () => {
                 ]}
             />
             <MovingStrip color="bg-neon-purple" />
+                */}
 
 {/* <h1>Singhaniya World</h1> */}
 {/* Embed Social Wall Show here */}
 {/* <SocialWall /> */}
 
-
+            {/*
             <About />
             <MovingStrip color="bg-neon-blue" />
             <KeyPoints />
-             {/* <Speakers /> */}
+            <Speakers />
 
             <div id="partners"></div>
               <PastPartners />
+            */}
+
 
             {/* Include the Agenda component with agendaData as prop */}
+                {/*
             <Agenda items={agendaData} eventDetails={{
                 date: "January 2026",
                 venue: "Delhi-NCR",
@@ -157,17 +167,14 @@ const DelhiEdition = () => {
             }} />
            
             <KeyTheme />
-
             <PastHighlights videoSrc="/videos/Yt_promo_10_sept.mp4" />
-
             <DemandVideoHome />
             <PartnershipCTA />
-
-
             <ShouldAttend />
             <WhoShouldSponsor />
-
             <Footer socialLinks={socialLinks} />
+            */}
+
         </div>
     );
 };

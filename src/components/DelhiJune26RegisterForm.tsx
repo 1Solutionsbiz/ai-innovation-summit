@@ -160,17 +160,17 @@ export const DelhiJune26RegisterForm: React.FC = () => {
       delete payload.phoneNumber;
 
 
-      // const resp = await axios.post(
-      //   "https://olive-elk-842602.hostingersite.com/api/bangalore-registers",
-      //   payload,
-      //   { headers: { "Content-Type": "application/json" } }
-      // );
-
       const resp = await axios.post(
-        "http://127.0.0.1:8000/api/bangalore-registers",
+        "https://olive-elk-842602.hostingersite.com/api/bangalore-registers",
         payload,
         { headers: { "Content-Type": "application/json" } }
       );
+
+      // const resp = await axios.post(
+      //   "http://127.0.0.1:8000/api/bangalore-registers",
+      //   payload,
+      //   { headers: { "Content-Type": "application/json" } }
+      // );
 
       // setSuccessMessage(resp.data.message || "Thank You for Registering – Pending Confirmation. You will receive a confirmation email once your registration is approved.");
       alert("Thank You for Registering – Pending Confirmation. You will receive a confirmation email once your registration is approved.");
@@ -240,7 +240,7 @@ export const DelhiJune26RegisterForm: React.FC = () => {
     <section className="py-16 px-4 bg-gray-900 text-white" id="register">
       <div className="max-w-4xl mx-auto bg-gray-800 p-8 rounded-lg shadow-lg">
         <h2 className="text-4xl lg:text-5xl font-bold mb-8 text-center font-orbitron">
-          Register Now for AI Innovation Summit – Delhi
+          Register Now for AI Innovation Summit
         </h2>
 
         {serverError && <div className="mb-4 text-red-400 text-center">{serverError}</div>}
