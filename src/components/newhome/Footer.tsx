@@ -17,7 +17,7 @@ const Footer = () => {
               <img
                 src={aiinvationlogo}
                 alt="Ai Innovation Summit"
-                className="h-9 sm:h-10 md:h-12 lg:h-16 object-contain"
+                className="h-9 sm:h-10 md:h-12 lg:h-24 object-contain"
               />
             </div>
 

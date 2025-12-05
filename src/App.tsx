@@ -51,7 +51,7 @@ const App: React.FC = () => (
         {/* Public site routes */}
         <Route path="/" element={<DelhiEditionNew />} />
 
-        <Route path="/delhi-new-event-26-form-test" element={<DelhiEdition />} />
+        {/* <Route path="/delhi-new-event-26-form-test" element={<DelhiEdition />} /> */}
 
         <Route path="/previous/bangalore-2025" element={<BangaloreEdition/>} />
         <Route path="/previous/mumbai-2024" element={<MumbaiEdition />} />

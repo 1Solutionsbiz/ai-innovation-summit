@@ -103,13 +103,16 @@ const HeroBanner = () => {
 
         {/* CTA Button */}
         <div className="mt-12 opacity-0 animate-scale-in animation-delay-800">
-          <Button
-            size="lg"
-            className="bg-white/10 border-2 border-white/30 text-white hover:bg-white hover:text-black hover:scale-105 transition-all duration-300 text-lg px-8 py-6 rounded-full font-semibold tracking-wide shadow-lg hover:shadow-xl backdrop-blur-sm"
-          >
-            Registration Starts Soon!
-          </Button>
+          <a href="#delhiregistrationform">
+            <Button
+              size="lg"
+              className="bg-white/10 border-2 border-white/30 text-white hover:bg-white hover:text-black hover:scale-105 transition-all duration-300 text-lg px-8 py-6 rounded-full font-semibold tracking-wide shadow-lg hover:shadow-xl backdrop-blur-sm"
+            >
+              Register Now
+            </Button>
+          </a>
         </div>
+
       </div>
     </section>
   );

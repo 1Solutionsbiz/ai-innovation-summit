@@ -5,27 +5,27 @@ const WhatAwaits = () => {
 
   const features = [
     {
-      title: "Immersive Tech",
+      title: "Where AI Meets Reality",
       description:"Step into interactive demos bringing cutting-edge experiences to life.",
       image: "/delhi26/Power-Networking.jpg",
     },
     {
-      title: "Power Networking",
+      title: "Connections That Shape Tomorrow",
       description:"Connect with top industry leaders and forge meaningful connections.",
       image: "/delhi26/Immersive-Tech.jpg",
     },
     {
-      title: "Insightful Talks",
+      title: "Ideas That Shift Perspectives",
       description:"Gain sharp perspectives from visionary voices shaping the future of tech.",
       image: "/delhi26/Insightful-Talks.jpg",
     },
     {
-      title: "Expert Panels",
+      title: "Real Voices. Real Impact.",
       description:"Hear experts decode emerging trends, challenges, and real-world AI applications.",
       image: "/delhi26/Expert-Panels.jpg",
     },
     {
-      title: "AI & Robotics",
+      title: "Machines That Learn. Systems That Think.",
       description:"Explore innovations pushing the boundaries of intelligent automation.",
       image: "/delhi26/AI-Robotics.jpg",
     },

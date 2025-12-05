@@ -39,11 +39,11 @@ const fetchRegistrations = async (): Promise<BengaloreRegistration[]> => {
 
   try {
 
-    const resp = await axios.get('https://olive-elk-842602.hostingersite.com/api/bangalore-registers', {
+    const resp = await axios.get('https://olive-elk-842602.hostingersite.com/api/delhi-registers', {
       headers: { Authorization: `Bearer ${token}` },
     });
-    
-    // const resp = await axios.get('http://127.0.0.1:8000/api/bangalore-registers', {
+
+    // const resp = await axios.get('http://127.0.0.1:8000/api/delhi-registers', {
     //   headers: { Authorization: `Bearer ${token}` },
     // });
     
@@ -209,153 +209,155 @@ const BengaloreRegistrationForm: React.FC = () => {
   );
 
   return (
-    <div className="p-6 bg-gray-900 rounded-lg shadow-lg text-white min-h-screen">
-      <h2 className="text-2xl font-bold mb-6 font-orbitron">Delhi Registration List</h2>
 
-      <div className="mb-6 flex flex-col md:flex-row justify-between items-center gap-4">
-        <div className="w-full md:w-1/3">
-          <input
-            type="text"
-            value={searchInput}
-            onChange={handleSearchChange}
-            placeholder="Search all columns..."
-            className="w-full p-3 border border-gray-700 bg-gray-800 text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-        </div>
+          <div className="p-6 bg-gray-900 rounded-lg shadow-lg text-white min-h-screen" id=''>
+            <h2 className="text-2xl font-bold mb-6 font-orbitron">Delhi Registration List</h2>
 
-        <div className="flex gap-4">
-          {/* <button
-            onClick={() => setShowUtmFields(!showUtmFields)}
-            className="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded transition"
-          >
-            {showUtmFields ? 'Hide UTM Fields' : 'Show UTM Fields'}
-          </button> */}
+            <div className="mb-6 flex flex-col md:flex-row justify-between items-center gap-4">
+              <div className="w-full md:w-1/3">
+                <input
+                  type="text"
+                  value={searchInput}
+                  onChange={handleSearchChange}
+                  placeholder="Search all columns..."
+                  className="w-full p-3 border border-gray-700 bg-gray-800 text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
 
-          <CSVLink
-            data={dataTable}
-            headers={columns.map(col => ({ label: col.Header, key: col.accessor as string }))}
-            filename="delhi-registrations.csv"
-            className="bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition"
-          >
-            Export CSV
-          </CSVLink>
-        </div>
-      </div>
+              <div className="flex gap-4">
+                {/* <button
+                  onClick={() => setShowUtmFields(!showUtmFields)}
+                  className="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded transition"
+                >
+                  {showUtmFields ? 'Hide UTM Fields' : 'Show UTM Fields'}
+                </button> */}
 
-      {dataTable.length === 0 ? (
-        <p className="text-center text-gray-400">No registrations found.</p>
-      ) : (
-        <div className="overflow-x-auto bg-gray-800 rounded-lg shadow-md">
-          <table {...getTableProps()} className="min-w-full text-sm">
-            <thead className="bg-gray-700">
-              {headerGroups.map(headerGroup => (
-                <tr {...headerGroup.getHeaderGroupProps()}>
-                  {headerGroup.headers.map(column => (
-                    <th
-                      {...column.getHeaderProps(column.getSortByToggleProps())}
-                      className="p-3 text-left font-semibold text-gray-300 uppercase tracking-wider cursor-pointer"
-                    >
-                      <div className="flex items-center">
-                        {column.render('Header')}
-                        <span>
-                          {column.isSorted
-                            ? column.isSortedDesc
-                              ? ' ↓'
-                              : ' ↑'
-                            : ' ↕'}
-                        </span>
-                      </div>
-                    </th>
-                  ))}
-                </tr>
-              ))}
-            </thead>
+                <CSVLink
+                  data={dataTable}
+                  headers={columns.map(col => ({ label: col.Header, key: col.accessor as string }))}
+                  filename="delhi-registrations.csv"
+                  className="bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition"
+                >
+                  Export CSV
+                </CSVLink>
+              </div>
+            </div>
 
-            <tbody {...getTableBodyProps()}>
-              {page.map(row => {
-                prepareRow(row);
-                return (
-                  <tr {...row.getRowProps()} className="border-b border-gray-700 hover:bg-gray-700 transition">
-                    {row.cells.map(cell => (
-                      <td {...cell.getCellProps()} className="p-3 text-gray-400">
-                        {cell.render('Cell')}
-                      </td>
+            {dataTable.length === 0 ? (
+              <p className="text-center text-gray-400">No registrations found.</p>
+            ) : (
+              <div className="overflow-x-auto bg-gray-800 rounded-lg shadow-md">
+                <table {...getTableProps()} className="min-w-full text-sm">
+                  <thead className="bg-gray-700">
+                    {headerGroups.map(headerGroup => (
+                      <tr {...headerGroup.getHeaderGroupProps()}>
+                        {headerGroup.headers.map(column => (
+                          <th
+                            {...column.getHeaderProps(column.getSortByToggleProps())}
+                            className="p-3 text-left font-semibold text-gray-300 uppercase tracking-wider cursor-pointer"
+                          >
+                            <div className="flex items-center">
+                              {column.render('Header')}
+                              <span>
+                                {column.isSorted
+                                  ? column.isSortedDesc
+                                    ? ' ↓'
+                                    : ' ↑'
+                                  : ' ↕'}
+                              </span>
+                            </div>
+                          </th>
+                        ))}
+                      </tr>
                     ))}
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+                  </thead>
 
-          <div className="mt-6 flex flex-col sm:flex-row justify-between items-center gap-4 p-4">
-            <div className="flex gap-2">
-              <button
-                onClick={() => gotoPage(0)}
-                disabled={!canPreviousPage}
-                className="px-3 py-1 border border-gray-700 rounded disabled:opacity-50 hover:bg-gray-700"
-              >
-                {'<<'}
-              </button>
-              <button
-                onClick={() => previousPage()}
-                disabled={!canPreviousPage}
-                className="px-3 py-1 border border-gray-700 rounded disabled:opacity-50 hover:bg-gray-700"
-              >
-                {'<'}
-              </button>
-              <button
-                onClick={() => nextPage()}
-                disabled={!canNextPage}
-                className="px-3 py-1 border border-gray-700 rounded disabled:opacity-50 hover:bg-gray-700"
-              >
-                {'>'}
-              </button>
-              <button
-                onClick={() => gotoPage(pageCount - 1)}
-                disabled={!canNextPage}
-                className="px-3 py-1 border border-gray-700 rounded disabled:opacity-50 hover:bg-gray-700"
-              >
-                {'>>'}
-              </button>
-            </div>
+                  <tbody {...getTableBodyProps()}>
+                    {page.map(row => {
+                      prepareRow(row);
+                      return (
+                        <tr {...row.getRowProps()} className="border-b border-gray-700 hover:bg-gray-700 transition">
+                          {row.cells.map(cell => (
+                            <td {...cell.getCellProps()} className="p-3 text-gray-400">
+                              {cell.render('Cell')}
+                            </td>
+                          ))}
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
 
-            <div>
-              Page{' '}
-              <strong>
-                {pageIndex + 1} of {pageOptions.length}
-              </strong>
-            </div>
+                <div className="mt-6 flex flex-col sm:flex-row justify-between items-center gap-4 p-4">
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => gotoPage(0)}
+                      disabled={!canPreviousPage}
+                      className="px-3 py-1 border border-gray-700 rounded disabled:opacity-50 hover:bg-gray-700"
+                    >
+                      {'<<'}
+                    </button>
+                    <button
+                      onClick={() => previousPage()}
+                      disabled={!canPreviousPage}
+                      className="px-3 py-1 border border-gray-700 rounded disabled:opacity-50 hover:bg-gray-700"
+                    >
+                      {'<'}
+                    </button>
+                    <button
+                      onClick={() => nextPage()}
+                      disabled={!canNextPage}
+                      className="px-3 py-1 border border-gray-700 rounded disabled:opacity-50 hover:bg-gray-700"
+                    >
+                      {'>'}
+                    </button>
+                    <button
+                      onClick={() => gotoPage(pageCount - 1)}
+                      disabled={!canNextPage}
+                      className="px-3 py-1 border border-gray-700 rounded disabled:opacity-50 hover:bg-gray-700"
+                    >
+                      {'>>'}
+                    </button>
+                  </div>
 
-            <div className="flex gap-2 items-center">
-              <span>Go to page:</span>
-              <input
-                type="number"
-                min="1"
-                max={pageCount}
-                value={pageIndex + 1}
-                onChange={e => {
-                  const page = e.target.value ? Number(e.target.value) - 1 : 0;
-                  gotoPage(page);
-                }}
-                className="w-16 p-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
+                  <div>
+                    Page{' '}
+                    <strong>
+                      {pageIndex + 1} of {pageOptions.length}
+                    </strong>
+                  </div>
 
-              <select
-                value={pageSize}
-                onChange={e => setPageSize(Number(e.target.value))}
-                className="p-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
-                {[10, 20, 30, 40, 50].map(size => (
-                  <option key={size} value={size}>
-                    Show {size}
-                  </option>
-                ))}
-              </select>
-            </div>
+                  <div className="flex gap-2 items-center">
+                    <span>Go to page:</span>
+                    <input
+                      type="number"
+                      min="1"
+                      max={pageCount}
+                      value={pageIndex + 1}
+                      onChange={e => {
+                        const page = e.target.value ? Number(e.target.value) - 1 : 0;
+                        gotoPage(page);
+                      }}
+                      className="w-16 p-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+
+                    <select
+                      value={pageSize}
+                      onChange={e => setPageSize(Number(e.target.value))}
+                      className="p-2 bg-gray-800 border border-gray-700 rounded text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    >
+                      {[10, 20, 30, 40, 50].map(size => (
+                        <option key={size} value={size}>
+                          Show {size}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
-        </div>
-      )}
-    </div>
+
   );
 };
 

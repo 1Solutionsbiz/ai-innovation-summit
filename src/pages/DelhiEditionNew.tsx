@@ -47,7 +47,10 @@ const DelhiEditionNew = () => {
       <WatchOnDemand />
       <ContactDetails />
       <AboutTheGuild />
+      
+      <section id="delhiregistrationform" ></section>
       <DelhiJune26RegisterForm />
+      
       <Footer />
     </div>
   );
