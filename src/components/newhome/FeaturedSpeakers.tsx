@@ -196,7 +196,7 @@ const FeaturedSpeakers = () => {
 
   return (
     <section id="speakers" className="py-16 md:py-24 bg-background">
-      <div className="container mx-auto px-4">
+      <div className="container  mx-auto px-4">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
           Featured Speakers: Past Editions
         </h2>
@@ -253,7 +253,7 @@ const FeaturedSpeakers = () => {
 
 
 
-        <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
+        <div className="overflow-x-auto  scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
   <div className="flex gap-6 md:gap-8 px-2 w-max">
     {speakers.map((speaker, index) => (
       <div key={index} className="w-[160px] sm:w-[200px] md:w-[280px] lg:w-[240px] flex flex-col items-center text-center singhniaya-spkrsection">

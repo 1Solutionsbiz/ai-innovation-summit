@@ -5,6 +5,7 @@ import Highlights from "@/components/newhome/Highlights";
 import Overview from "@/components/newhome/Overview";
 import WhatAwaits from "@/components/newhome/WhatAwaits";
 import FocusAreas from "@/components/newhome/FocusAreas";
+import DelhiSpeakers from "@/components/newhome/DelhiSpeakers";
 import FeaturedSpeakers from "@/components/newhome/FeaturedSpeakers";
 import SeriesPartners from "@/components/newhome/SeriesPartners";
 import IndustryRepresentation from "@/components/newhome/IndustryRepresentation";
@@ -36,6 +37,7 @@ const DelhiEditionNew = () => {
       <Overview />
       <WhatAwaits />
       <FocusAreas />
+      <DelhiSpeakers />
       <FeaturedSpeakers />
       <SeriesPartners />
       <Agenda />

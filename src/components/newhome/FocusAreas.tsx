@@ -43,7 +43,7 @@ const WhatAwaits = () => {
   ];
 
   return (
-    <section className="py-[80px]">
+    <section className="py-[80px]" id="focus-areas">
 
 
 <div className="absolute inset-0  from-white via-gray-50 to-slate-100" />
@@ -54,7 +54,7 @@ const WhatAwaits = () => {
   </h2>
 
 
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto mw-96p px-4">
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div

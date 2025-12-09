@@ -421,6 +421,10 @@ All colors MUST be HSL.
 }
 
 
+.lh-1-4{
+  line-height: 1.4 !important;
+}
+
 
 /* Desktop Screen Start */
 @media screen and (min-width: 767px) {
@@ -450,6 +454,10 @@ All colors MUST be HSL.
 
   .mr10{
     margin:0px 30px !important;
+  }
+
+  .mw-96p{
+    max-width: 96% !important;
   }
 
   .singhaniyanewdspkr>.singhspkrg:nth-child(36),
