@@ -240,7 +240,7 @@ export const DelhiJune26RegisterForm: React.FC = () => {
     <section className="py-16 px-4 bg-gray-900 text-white" id="register">
       <div className="max-w-4xl mx-auto bg-gray-800 p-8 rounded-lg shadow-lg">
         <h2 className="text-4xl lg:text-5xl font-bold mb-8 text-center font-orbitron">
-          Register Now for AI Innovation Summit
+          Express Your Interest for AI Innovation Summit
         </h2>
 
         {serverError && <div className="mb-4 text-red-400 text-center">{serverError}</div>}
