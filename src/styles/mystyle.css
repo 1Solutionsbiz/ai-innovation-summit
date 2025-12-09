@@ -426,6 +426,19 @@ All colors MUST be HSL.
 }
 
 
+.singhspkrg {
+  border: 1px solid #e6e6e6;
+}
+.singhspkrgbdr{
+  border-radius: 0px !important;
+}
+.singhspkrgbdr>img{
+  border-bottom: 1px solid #e6e6e6;
+}
+
+
+
+
 /* Desktop Screen Start */
 @media screen and (min-width: 767px) {
   .rightbtn-newp-ires{

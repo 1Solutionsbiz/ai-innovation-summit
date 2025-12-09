@@ -3,9 +3,27 @@ const FeaturedSpeakers = () => {
   const speakers = [
     {
       name: "Kapil Mahajan",
-      role: "Global Chief Information & Technology Officer, Allcargo Logistics ",
+      role: "Global Chief Information & Technology Officer, Allcargo Logistics",
       linkedin: "https://www.linkedin.com/in/kapil-mahajan-cio/",
       image: "/speakers/delhi26/Kapil-Mahajan.png",
+    },
+    {
+      name: "Manish Chandegara",
+      role: "Group CIO, Simpolo Ceramics",
+      linkedin: "https://www.linkedin.com/in/kapil-mahajan-cio/",
+      image: "/speakers/delhi26/manish.png",
+    },
+    {
+      name: "Harsh Vardhan",
+      role: "Global Head- Digital Innovation, Apollo Tyres",
+      linkedin: "https://www.linkedin.com/in/kapil-mahajan-cio/",
+      image: "/speakers/delhi26/harsh vardhan.png",
+    },
+    {
+      name: "Animesh Srrivastava",
+      role: "Senior Vice President of Technology, Moglix",
+      linkedin: "https://www.linkedin.com/in/kapil-mahajan-cio/",
+      image: "/speakers/delhi26/animesh.png",
     },
 
   ];
@@ -25,7 +43,7 @@ const FeaturedSpeakers = () => {
           {speakers.map((speaker, index) => (
             <div key={index} className="flex singhspkrg flex-col items-center text-center hover:shadow-xl duration-300 pb-4 rounded-lg">
               {/* <div className="relative w-full aspect-square speakerimgradis overflow-hidden mb-4 bg-gradient-to-b from-[#b72fd5] to-[#b70b76] hover:shadow-xl duration-300"> */}
-              <div className="relative w-full aspect-square speakerimgradis overflow-hidden mb-4">
+              <div className="relative w-full aspect-square speakerimgradis singhspkrgbdr overflow-hidden mb-4">
                 <img
                   src={speaker.image}
                   alt={speaker.name}
