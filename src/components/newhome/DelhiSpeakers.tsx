@@ -2,28 +2,70 @@ const FeaturedSpeakers = () => {
   // 🔥 Added your full Bengaluru speakers list
   const speakers = [
     {
+      name: "Raghav Aggarwal",
+      role: "Co-Founder, Fluid AI",
+      linkedin: "https://www.linkedin.com/in/trutech/?originalSubdomain=in",
+      image: "/speakers/delhi26/raghav.png",
+    },
+    {
+      name: "Ranganathan Vaidyanathan Iyer",
+      role: "Group CIO, DPO, Sr. EVP-ICTS, JBM Group",
+      linkedin: "https://www.linkedin.com/in/manishchandegara/",
+      image: "/speakers/delhi26/ranganathan.png",
+    },
+    {
       name: "Kapil Mahajan",
       role: "Global Chief Information & Technology Officer, Allcargo Logistics",
       linkedin: "https://www.linkedin.com/in/kapil-mahajan-cio/",
       image: "/speakers/delhi26/Kapil-Mahajan.png",
     },
     {
+      name: "Nishit Shrivastava",
+      role: "CITO, Muthoot FinCorp",
+      linkedin: "https://www.linkedin.com/in/nishit-shrivastava/",
+      image: "/speakers/delhi26/nishit.png",
+    },
+    {
       name: "Manish Chandegara",
       role: "Group CIO, Simpolo Ceramics",
-      linkedin: "https://www.linkedin.com/in/kapil-mahajan-cio/",
+      linkedin: "https://www.linkedin.com/in/manishchandegara/",
       image: "/speakers/delhi26/manish.png",
+    },
+    {
+      name: "Tarun Aggarwal",
+      role: "Group Chief Technology Officer, Capri Global Capital",
+      linkedin: "https://www.linkedin.com/in/tarun-aggarwal8/?originalSubdomain=in",
+      image: "/speakers/delhi26/tarun-agrawal.png",
     },
     {
       name: "Harsh Vardhan",
       role: "Global Head- Digital Innovation, Apollo Tyres",
-      linkedin: "https://www.linkedin.com/in/kapil-mahajan-cio/",
-      image: "/speakers/delhi26/harsh vardhan.png",
+      linkedin: "https://www.linkedin.com/in/harshvardhan-ai/?originalSubdomain=in",
+      image: "/speakers/delhi26/harsh-vardhan.png",
+    },
+    {
+      name: "Mohit Malik",
+      role: "CTO, Chaayos",
+      linkedin: "https://www.linkedin.com/in/mohit-malik-8517784/",
+      image: "/speakers/delhi26/mohit-malik.png",
+    },
+    {
+      name: "Varun Bansal",
+      role: "Vice President, Head IT, Bata India",
+      linkedin: "https://www.linkedin.com/in/varunbansal10/?originalSubdomain=in",
+      image: "/speakers/delhi26/varun-bansal.png",
     },
     {
       name: "Animesh Srrivastava",
       role: "Senior Vice President of Technology, Moglix",
-      linkedin: "https://www.linkedin.com/in/kapil-mahajan-cio/",
+      linkedin: "https://www.linkedin.com/in/animeshs/",
       image: "/speakers/delhi26/animesh.png",
+    },
+    {
+      name: "Jagannath Sahoo",
+      role: "Chief Information Security Officer, Gujarat Fluorochemicals Limited",
+      linkedin: "https://www.linkedin.com/in/dr-jagannath-sahoo-94880622/",
+      image: "/speakers/delhi26/jaganath.png",
     },
 
   ];
@@ -34,7 +76,7 @@ const FeaturedSpeakers = () => {
         <h2 className="text-4xl md:text-5xl lg:text-6xl lh-1-4 font-bold text-center mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
           Visionary Speakers
         </h2>
-
+        <br />
         {/* <p className="text-foreground/70 text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed mb-16 text-center">
           Industry leaders who have shared their insights
         </p> */}
