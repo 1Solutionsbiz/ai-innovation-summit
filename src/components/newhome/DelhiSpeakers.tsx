@@ -11,13 +11,13 @@ const FeaturedSpeakers = () => {
       name: "Ranganathan Vaidyanathan Iyer",
       role: "Group CIO, DPO, Sr. EVP-ICTS, JBM Group",
       linkedin: "https://www.linkedin.com/in/manishchandegara/",
-      image: "/speakers/delhi26/ranganathan.png",
+      image: "/speakers/delhi26/Ragannathan.png",
     },
     {
       name: "Kapil Mahajan",
-      role: "Global Chief Information & Technology Officer, Allcargo Logistics",
+      role: "Global & Group CITO, Allcargo Logistics",
       linkedin: "https://www.linkedin.com/in/kapil-mahajan-cio/",
-      image: "/speakers/delhi26/Kapil-Mahajan.png",
+      image: "/speakers/delhi26/kapil mahajan.png",
     },
     {
       name: "Nishit Shrivastava",
@@ -35,25 +35,25 @@ const FeaturedSpeakers = () => {
       name: "Tarun Aggarwal",
       role: "Group Chief Technology Officer, Capri Global Capital",
       linkedin: "https://www.linkedin.com/in/tarun-aggarwal8/?originalSubdomain=in",
-      image: "/speakers/delhi26/tarun-agrawal.png",
+      image: "/speakers/delhi26/tarun agrawal.png",
     },
     {
       name: "Harsh Vardhan",
       role: "Global Head- Digital Innovation, Apollo Tyres",
       linkedin: "https://www.linkedin.com/in/harshvardhan-ai/?originalSubdomain=in",
-      image: "/speakers/delhi26/harsh-vardhan.png",
+      image: "/speakers/delhi26/harsh vardhan.png",
     },
     {
       name: "Mohit Malik",
       role: "CTO, Chaayos",
       linkedin: "https://www.linkedin.com/in/mohit-malik-8517784/",
-      image: "/speakers/delhi26/mohit-malik.png",
+      image: "/speakers/delhi26/mohit malik.png",
     },
     {
       name: "Varun Bansal",
       role: "Vice President, Head IT, Bata India",
       linkedin: "https://www.linkedin.com/in/varunbansal10/?originalSubdomain=in",
-      image: "/speakers/delhi26/varun-bansal.png",
+      image: "/speakers/delhi26/varun bansal.png",
     },
     {
       name: "Animesh Srrivastava",
@@ -65,7 +65,7 @@ const FeaturedSpeakers = () => {
       name: "Jagannath Sahoo",
       role: "Chief Information Security Officer, Gujarat Fluorochemicals Limited",
       linkedin: "https://www.linkedin.com/in/dr-jagannath-sahoo-94880622/",
-      image: "/speakers/delhi26/jaganath.png",
+      image: "/speakers/delhi26/jagannathan.png",
     },
 
   ];
@@ -94,7 +94,7 @@ const FeaturedSpeakers = () => {
               </div>
 
               {/* Name + Role + LinkedIn */}
-              <div className="space-y-1">
+              <div className="space-y-1 plr10">
                 <h4 className="text-base md:text-lg font-bold text-foreground">
                   {speaker.name}
                 </h4>

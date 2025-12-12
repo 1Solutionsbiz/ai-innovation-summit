@@ -239,7 +239,7 @@ export const DelhiJune26RegisterForm: React.FC = () => {
   return (
     <section className="py-16 px-4 bg-gray-900 text-white" id="register">
       <div className="max-w-4xl mx-auto bg-gray-800 p-8 rounded-lg shadow-lg">
-        <h2 className="text-4xl lg:text-5xl font-bold mb-8 text-center font-orbitron">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4">
           Express Your Interest for AI Innovation Summit
         </h2>
 
@@ -269,7 +269,7 @@ export const DelhiJune26RegisterForm: React.FC = () => {
             // { name: "pincode", label: "Pincode" }
           ].map(field => (
             <div key={field.name}>
-              <label className="block mb-1 font-semibold font-orbitron">{field.label}</label>
+              <label className="block mb-1 font-semibold ">{field.label}</label>
               <input
                 type={field.name.includes("Email") ? "email" : field.name.includes("Number") ? "tel" : "text"}
                 name={field.name}
@@ -286,7 +286,7 @@ export const DelhiJune26RegisterForm: React.FC = () => {
 
           {/* Employee Size */}
           <div>
-            <label className="block mb-1 font-semibold font-orbitron">Employee Size</label>
+            <label className="block mb-1 font-semibold ">Employee Size</label>
             <select
               name="employeeSize"
               value={formData.employeeSize}
@@ -307,7 +307,7 @@ export const DelhiJune26RegisterForm: React.FC = () => {
             { name: "pincode", label: "Pincode" }
           ].map(field => (
             <div key={field.name}>
-              <label className="block mb-1 font-semibold font-orbitron">{field.label}</label>
+              <label className="block mb-1 font-semibold ">{field.label}</label>
               <input
                 type={field.name.includes("Email") ? "email" : field.name.includes("Number") ? "tel" : "text"}
                 name={field.name}
@@ -324,7 +324,7 @@ export const DelhiJune26RegisterForm: React.FC = () => {
 
           {/* Industry */}
           <div>
-            <label className="block mb-1 font-semibold font-orbitron">Industry</label>
+            <label className="block mb-1 font-semibold ">Industry</label>
             <select
               name="industry"
               value={formData.industry}
@@ -340,7 +340,7 @@ export const DelhiJune26RegisterForm: React.FC = () => {
           {/* date of birth  */}
           <div>
 
-<label className="block mb-1 font-semibold font-orbitron">Birth Year</label>
+<label className="block mb-1 font-semibold ">Birth Year</label>
 {/* <input
   type="number"
   name="dob"
@@ -370,7 +370,7 @@ export const DelhiJune26RegisterForm: React.FC = () => {
 
 
             {/*             
-            <label className="block mb-1 font-semibold font-orbitron">Date of Birth</label>
+            <label className="block mb-1 font-semibold ">Date of Birth</label>
             <input
               type="date"
               name="dob"
@@ -496,7 +496,7 @@ export const DelhiJune26RegisterForm: React.FC = () => {
     </section>
 
 // <section className="bg-black p-10 md:p-40" id="register">
-//   <div className="bg-black font-orbitron text-neon-blue rounded-lg text-center text-4xl md:text-6xl font-bold shadow-lg mx-auto">
+//   <div className="bg-black  text-neon-blue rounded-lg text-center text-4xl md:text-6xl font-bold shadow-lg mx-auto">
 //     Registration Closed
 //   </div>
 // </section>

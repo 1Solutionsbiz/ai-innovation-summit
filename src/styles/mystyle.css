@@ -436,6 +436,10 @@ All colors MUST be HSL.
   border-bottom: 1px solid #e6e6e6;
 }
 
+.plr10{
+  padding: 0px 10px !important;
+}
+
 
 
 
@@ -444,6 +448,12 @@ All colors MUST be HSL.
   .rightbtn-newp-ires{
       margin-right: -40px;
   } 
+
+  
+.singhspkrg:nth-child(11){
+    margin-left: 524px;
+    margin-right: -524px;
+}
 
   .leftbtn-newp-ires{
       margin-left: -40px;
