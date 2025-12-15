@@ -376,10 +376,6 @@ All colors MUST be HSL.
   font-size: 15px !important;
 }
 
-.ailogmain{
-  height: 20rem !important;
-}
-
 .bgcolro1{
   background:#bf1c881a !important;
 }
@@ -441,6 +437,23 @@ All colors MUST be HSL.
 }
 
 
+.mainlogwid{
+  margin-top: -5%;
+}
+
+
+  .ftrlogo{
+    height: 8rem !important;
+    margin-left: -15px;
+  }
+
+  .del26plo{
+    height: 4rem !important;
+  }
+
+
+
+
 
 
 /* Desktop Screen Start */
@@ -450,6 +463,12 @@ All colors MUST be HSL.
   } 
 
   
+
+  .ailogmain{
+    height: 25rem !important;
+  }
+
+
 /* .singhspkrg:nth-child(11){
     margin-left: 524px;
     margin-right: -524px;
@@ -513,6 +532,11 @@ All colors MUST be HSL.
 /* Mobile Screen Start */
 @media screen and (max-width: 481px) {
   
+  
+  .ailogmain{
+    height: 21rem !important;
+  }
+
   .nwdglm>div>img{
     margin-top: 10%;
     margin-bottom: -25%;

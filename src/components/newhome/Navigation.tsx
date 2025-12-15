@@ -34,7 +34,7 @@ const Navigation = () => {
           {/* LOGO (Left aligned) */}
           <Link to="/" className="flex items-center">
             <img
-              src="/logo/Ai-Innovation_Logo_White.png"
+              src="/logo/Ai-Innovation_Logo_White-new.png"
               alt="AI Innovation Summit"
               className="h-10 w-auto md:h-12 object-contain"
             />
