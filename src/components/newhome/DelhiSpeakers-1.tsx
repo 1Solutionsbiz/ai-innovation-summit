@@ -9,8 +9,8 @@ const FeaturedSpeakers = () => {
     },
     {
       name: "Ranganathan Vaidyanathan Iyer",
-      role: "Group CIO, JBM Group",
-      linkedin: "https://www.linkedin.com/in/ranganathaniyer/?originalSubdomain=in",
+      role: "Group CIO, DPO, Sr. EVP-ICTS, JBM Group",
+      linkedin: "https://www.linkedin.com/in/manishchandegara/",
       image: "/speakers/delhi26/Ragannathan.png",
     },
     {
@@ -24,12 +24,6 @@ const FeaturedSpeakers = () => {
       role: "CITO, Muthoot FinCorp",
       linkedin: "https://www.linkedin.com/in/nishit-shrivastava/",
       image: "/speakers/delhi26/nishit.png",
-    },
-    {
-      name: "Anurag Jain",
-      role: "Chief Digital & Technology Officer (CDTO) - KFC India and Partner Countries, Yum Brands",
-      linkedin: "https://www.linkedin.com/in/anuragjain25/",
-      image: "/speakers/delhi26/Anurag Jain.png",
     },
     {
       name: "Manish Chandegara",
@@ -56,18 +50,6 @@ const FeaturedSpeakers = () => {
       image: "/speakers/delhi26/mohit malik.png",
     },
     {
-      name: "Jagannath Sahoo",
-      role: "Chief Information Security Officer, Gujarat Fluorochemicals Limited",
-      linkedin: "https://www.linkedin.com/in/dr-jagannath-sahoo-94880622/",
-      image: "/speakers/delhi26/jagannathan.png",
-    },
-    {
-      name: "Vivek Shankar",
-      role: "CITSO & Vice President, Axis Max Life Insurance",
-      linkedin: "https://www.linkedin.com/in/vivek-shankar-70a2ba22/",
-      image: "/speakers/delhi26/Vivek Shankar.png",
-    },
-    {
       name: "Varun Bansal",
       role: "Vice President, Head IT, Bata India",
       linkedin: "https://www.linkedin.com/in/varunbansal10/?originalSubdomain=in",
@@ -80,22 +62,10 @@ const FeaturedSpeakers = () => {
       image: "/speakers/delhi26/animesh.png",
     },
     {
-      name: "Rajat Wadhwa",
-      role: "Head- Customer Applications, Hero FinCorp",
-      linkedin: "https://www.linkedin.com/in/rajatwadhwa/?originalSubdomain=in",
-      image: "/speakers/delhi26/rajat wadhwa.png",
-    },
-    // {
-    //   name: "Amit Sharma",
-    //   role: "Sr. Vice President - Enterprise Information Management and Analytics, Canara HSBC Life Insurance",
-    //   linkedin: "https://www.linkedin.com/in/amisharma/?originalSubdomain=in",
-    //   image: "#",
-    // },
-    {
-      name: "Abhishek Das",
-      role: "Partner- Consulting, EY",
-      linkedin: "https://www.linkedin.com/in/abhishekdas17/",
-      image: "/speakers/delhi26/Abhishek Das.png",
+      name: "Jagannath Sahoo",
+      role: "Chief Information Security Officer, Gujarat Fluorochemicals Limited",
+      linkedin: "https://www.linkedin.com/in/dr-jagannath-sahoo-94880622/",
+      image: "/speakers/delhi26/jagannathan.png",
     },
 
   ];

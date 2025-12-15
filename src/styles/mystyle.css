@@ -450,10 +450,10 @@ All colors MUST be HSL.
   } 
 
   
-.singhspkrg:nth-child(11){
+/* .singhspkrg:nth-child(11){
     margin-left: 524px;
     margin-right: -524px;
-}
+} */
 
   .leftbtn-newp-ires{
       margin-left: -40px;
