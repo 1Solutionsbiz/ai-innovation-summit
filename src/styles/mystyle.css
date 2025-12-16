@@ -442,6 +442,10 @@ All colors MUST be HSL.
 }
 
 
+.del26hbg{
+  height: 8rem;
+}
+
   .ftrlogo{
     height: 8rem !important;
     margin-left: -15px;
@@ -465,7 +469,7 @@ All colors MUST be HSL.
   
 
   .ailogmain{
-    height: 25rem !important;
+    height: 30rem !important;
   }
 
 

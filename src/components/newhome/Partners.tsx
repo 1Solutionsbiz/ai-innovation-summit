@@ -2,7 +2,7 @@ import seriesPartnersBg from "@/assets/series-partners-bg.jpg";
 
 const partnersData = [
   {
-    tier: "",
+    tier: "Presenting Partner",
     logos: [{ name: "Adobe", url: "/partners/Adobe_Logo_Red.png" }],
     isCoPartner: true,
   },
@@ -28,9 +28,9 @@ const SeriesPartners = () => {
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent opacity-0 animate-fade-in-up">
           Partners
         </h2>
-        <p className="text-slate-600 text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed mb-12 text-center opacity-0 animate-fade-in-up animation-delay-200">
+        {/* <p className="text-slate-600 text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed mb-12 text-center opacity-0 animate-fade-in-up animation-delay-200">
             Presenting Partner  
-        </p>
+        </p> */}
 
         {/* Partner Blocks (Dynamic) */}
         <div className="max-w-6xl mx-auto space-y-10">
@@ -41,7 +41,7 @@ const SeriesPartners = () => {
                 400 + index * 200
               }`}
             >
-              <p className="text-sm font-semibold text-center mb-4 tracking-wide text-gray-700 uppercase">
+              <p className="text-xl font-semibold text-center mb-4 tracking-wide text-gray-700 uppercase">
                 {partner.tier}
               </p>
 

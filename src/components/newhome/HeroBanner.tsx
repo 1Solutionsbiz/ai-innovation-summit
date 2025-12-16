@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import guildLogo from "@/assets/guild-logo.png";
-import aiinvationlogo from "/logo/Ai-Innovation_Logo_White.png";
+import aiinvationlogo from "/logo/Ai-Innovation_rl-ogo-white-2026.png";
 import { MapPin, CalendarDays } from "lucide-react"; // ✅ Added icons
 
 const HeroBanner = () => {
@@ -45,15 +45,16 @@ const HeroBanner = () => {
       {/* 🔹 Content */}
       <div className="relative z-10 container nwdglm mx-auto px-4 py-20 text-center">
         {/* Logo + Edition Badge */}
-        <div className="flex justify-center items-center gap-6 opacity-0 animate-fade-in guild-mb-logo">
-
-          {/* Guild Logo */}
+        
+        
+        {/* Guild Logo */}
+        {/* <div className="flex justify-center items-center gap-6 opacity-0 animate-fade-in guild-mb-logo">
           <img
             src={guildLogo}
             alt="The Guild"
             className="h-auto w-auto mt-5 object-contain"
           />
-        </div>
+        </div> */}
 
         {/* Main Title */}
         <div className="opacity-0 animate-fade-in animation-delay-200">

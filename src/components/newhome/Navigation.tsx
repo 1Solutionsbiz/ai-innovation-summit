@@ -34,9 +34,9 @@ const Navigation = () => {
           {/* LOGO (Left aligned) */}
           <Link to="/" className="flex items-center">
             <img
-              src="/logo/Ai-Innovation_Logo_White-new.png"
+              src="/logo/Ai-Innovation_Logo_White.png"
               alt="AI Innovation Summit"
-              className="h-10 w-auto md:h-12 object-contain"
+              className="h-10 w-auto md:h-16 object-contain"
             />
           </Link>
 
@@ -84,6 +84,17 @@ const Navigation = () => {
                 ))}
               </div>
             </div>
+
+            {/* Previous Editions Dropdown */}
+            <div className="relative group">
+              <a href="#delhiregistrationform"
+                  className="bg-white/10 border-2 border-white/25 text-white hover:bg-white hover:text-black hover:scale-105 transition-all duration-300 text-sm px-4 py-2 rounded-full font-semibold tracking-wide shadow-lg hover:shadow-xl backdrop-blur-sm"
+                >
+                  Register Now
+              </a>
+            </div>
+
+
           </div>
         </div>
 
