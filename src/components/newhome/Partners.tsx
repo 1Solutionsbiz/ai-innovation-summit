@@ -12,7 +12,7 @@ const SeriesPartners = () => {
   return (
     <section
       id="partners"
-      className="py-16 md:py-24 bg-white relative overflow-hidden"
+      className="py-16 md:py-24 pb-0 bg-white relative overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0">
@@ -37,11 +37,11 @@ const SeriesPartners = () => {
           {partnersData.map((partner, index) => (
             <div
               key={index}
-              className={`py-6 opacity-0 animate-fade-in-up animation-delay-${
+              className={`py-6 opacity-0 animate-fade-in-up pt-0 animation-delay-${
                 400 + index * 200
               }`}
             >
-              <p className="text-xl font-semibold text-center mb-4 tracking-wide text-gray-700 uppercase">
+              <p className="text-xl text-center mb-4 tracking-wide d26pb10 text-gray-700 uppercase">
                 {partner.tier}
               </p>
 

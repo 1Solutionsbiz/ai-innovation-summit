@@ -8,6 +8,7 @@ import FocusAreas from "@/components/newhome/FocusAreas";
 import DelhiSpeakers from "@/components/newhome/DelhiSpeakers";
 import FeaturedSpeakers from "@/components/newhome/FeaturedSpeakers";
 import SeriesPartners from "@/components/newhome/SeriesPartners";
+import SeriesPartnersNew from "@/components/newhome/SeriesPartnersNew";
 import Partners from "@/components/newhome/Partners";
 import IndustryRepresentation from "@/components/newhome/IndustryRepresentation";
 import WhoShouldAttend from "@/components/newhome/WhoShouldAttend";
@@ -41,7 +42,8 @@ const DelhiEditionNew = () => {
       <DelhiSpeakers />
       <FeaturedSpeakers />
       <Partners />
-      <SeriesPartners />
+      {/* <SeriesPartners /> */}
+      <SeriesPartnersNew />
       <Agenda />
       <IndustryRepresentation />
       <WhoShouldAttend />

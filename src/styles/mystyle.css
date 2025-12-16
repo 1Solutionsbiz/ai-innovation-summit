@@ -424,6 +424,7 @@ All colors MUST be HSL.
 
 .singhspkrg {
   border: 1px solid #e6e6e6;
+  background: #fff;
 }
 .singhspkrgbdr{
   border-radius: 0px !important;
@@ -456,9 +457,18 @@ All colors MUST be HSL.
   }
 
 
-
-
-
+  .pb-0{
+    padding-bottom: 0px !important;
+  }
+  .pt-0{
+    padding-top: 10px !important;
+  }
+  .d26spsec-pt{
+    padding-top: 4rem !important;
+  }
+  .dl26hbg{
+    background: #0b122c;
+  }
 
 /* Desktop Screen Start */
 @media screen and (min-width: 767px) {
