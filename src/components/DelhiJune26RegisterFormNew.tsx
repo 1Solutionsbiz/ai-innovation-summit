@@ -19,6 +19,10 @@ interface FormDataType {
   city: string;
   pincode: string;
   dob: string;
+
+  
+  parallelTrack: string;
+
   ageAcknowledged: boolean;
   termsAccepted: boolean;
   // detailsDisclosure: boolean;
@@ -50,6 +54,7 @@ export const DelhiJune26RegisterForm: React.FC = () => {
 
     pincode: "",
     dob: "",
+    parallelTrack: "",
     ageAcknowledged: false,
     termsAccepted: false,
     // detailsDisclosure: false,
@@ -126,6 +131,7 @@ export const DelhiJune26RegisterForm: React.FC = () => {
       if (!formData.ageAcknowledged) {
         newErrors.ageAcknowledged = "You must confirm you are 18 or older.";
       }
+
     }
 
 
@@ -187,6 +193,7 @@ export const DelhiJune26RegisterForm: React.FC = () => {
         // personalEmail: "",
         city: "",
         dob: "",
+        parallelTrack: "",
         pincode: "",
         termsAccepted: false,
         ageAcknowledged: false,
@@ -385,6 +392,59 @@ export const DelhiJune26RegisterForm: React.FC = () => {
               <p className="text-red-400 text-sm mt-1">{errors.dob}</p>
             )}
           </div>
+
+
+
+{/* Parallel Track Selection */}
+<div className="md:col-span-2">
+  <label className="block mb-2 font-semibold text-white">
+    Which Parallel Industry Parallel Track do you wish to attend?
+  </label>
+
+  <div className="space-y-2">
+    <label className="flex items-start space-x-3">
+      <input
+        type="radio"
+        name="parallelTrack"
+        value="AI in BFSI Trust Risk and Digital Transformation"
+        checked={formData.parallelTrack === "AI in BFSI Trust Risk and Digital Transformation"}
+        onChange={handleChange}
+        className="mt-1"
+      />
+      <span>Track A: AI in BFSI – Trust, Risk & Digital Transformation</span>
+    </label>
+
+    <label className="flex items-start space-x-3">
+      <input
+        type="radio"
+        name="parallelTrack"
+        value="AI in Manufacturing Smart Factories and Predictive Supply Chains"
+        checked={formData.parallelTrack === "AI in Manufacturing Smart Factories and Predictive Supply Chains"}
+        onChange={handleChange}
+        className="mt-1"
+      />
+      <span>Track B: AI in Manufacturing – Smart Factories & Predictive Supply Chains</span>
+    </label>
+
+    <label className="flex items-start space-x-3">
+      <input
+        type="radio"
+        name="parallelTrack"
+        value="AI in Customer Experience Hyper Personalization at Scale"
+        checked={formData.parallelTrack === "AI in Customer Experience Hyper Personalization at Scale"}
+        onChange={handleChange}
+        className="mt-1"
+      />
+      <span>Track C: AI in Customer Experience – Hyper-Personalization at Scale</span>
+    </label>
+  </div>
+
+  {errors.parallelTrack && (
+    <p className="text-red-400 text-sm mt-1">
+      {errors.parallelTrack}
+    </p>
+  )}
+</div>
 
 
 

@@ -26,12 +26,6 @@ const FeaturedSpeakers = () => {
       image: "/speakers/delhi26/nishit.png",
     },
     {
-      name: "Anurag Jain",
-      role: "Chief Digital & Technology Officer (CDTO) - KFC India and Partner Countries, Yum Brands",
-      linkedin: "https://www.linkedin.com/in/anuragjain25/",
-      image: "/speakers/delhi26/Anurag Jain.png",
-    },
-    {
       name: "Manish Chandegara",
       role: "Group CIO, Simpolo Ceramics",
       linkedin: "https://www.linkedin.com/in/manishchandegara/",
@@ -39,15 +33,57 @@ const FeaturedSpeakers = () => {
     },
     {
       name: "Tarun Aggarwal",
-      role: "Group Chief Technology Officer, Capri Global Capital",
+      role: "Group CTO, Capri Global Capital",
       linkedin: "https://www.linkedin.com/in/tarun-aggarwal8/?originalSubdomain=in",
       image: "/speakers/delhi26/tarun agrawal.png",
     },
     {
-      name: "Harsh Vardhan",
-      role: "Global Head- Digital Innovation, Apollo Tyres",
-      linkedin: "https://www.linkedin.com/in/harshvardhan-ai/?originalSubdomain=in",
-      image: "/speakers/delhi26/harsh vardhan.png",
+      name: "Anurag Jain",
+      role: "CDTO - KFC India and Partner Countries, Yum Brands",
+      linkedin: "https://www.linkedin.com/in/anuragjain25/",
+      image: "/speakers/delhi26/Anurag Jain.png",
+    },
+    {
+      name: "Rahul Sangal",
+      role: "Chief Strategy & Digital Officer, Dixon Technologies India",
+      linkedin: "https://www.linkedin.com/in/sangalrahul/",
+      image: "/speakers/delhi26/Rahul Sangal.png",
+    },
+    {
+      name: "Atul Govil",
+      role: "Chief Transformation Officer & Head (SAP & IT) - Corporate , India Glycols Limited",
+      linkedin: "https://www.linkedin.com/in/atul-govil-48042410/",
+      image: "/speakers/delhi26/Atul-Givil.png",
+    },
+    {
+      name: "Ritesh Rathod",
+      role: "Chief Strategy & Data Officer, Canara HSBC Life Insurance",
+      linkedin: "	https://www.linkedin.com/in/ritesh-rathod-b9633313/",
+      image: "/speakers/delhi26/Ritesh-Rathod.png",
+    },
+    {
+      name: "Varun Bansal",
+      role: "VP, Head IT, Bata India",
+      linkedin: "https://www.linkedin.com/in/varunbansal10/?originalSubdomain=in",
+      image: "/speakers/delhi26/varun bansal.png",
+    },
+    {
+      name: "Rajat Wadhwa",
+      role: "Head- Customer Applications, Hero FinCorp",
+      linkedin: "https://www.linkedin.com/in/rajatwadhwa/?originalSubdomain=in",
+      image: "/speakers/delhi26/rajat wadhwa.png",
+    },
+    {
+      name: "Amit Sharma",
+      role: "Sr. VP - Enterprise Information Management and Analytics, Canara HSBC Life Insurance",
+      linkedin: "https://www.linkedin.com/in/amisharma/?originalSubdomain=in",
+      image: "/speakers/delhi26/amit-sharma.png",
+    },
+    {
+      name: "Animesh Srrivastava",
+      role: "Senior VP of Technology, Moglix",
+      linkedin: "https://www.linkedin.com/in/animeshs/",
+      image: "/speakers/delhi26/animesh.png",
     },
     {
       name: "Mohit Malik",
@@ -56,34 +92,34 @@ const FeaturedSpeakers = () => {
       image: "/speakers/delhi26/mohit malik.png",
     },
     {
-      name: "Jagannath Sahoo",
-      role: "Chief Information Security Officer, Gujarat Fluorochemicals Limited",
-      linkedin: "https://www.linkedin.com/in/dr-jagannath-sahoo-94880622/",
-      image: "/speakers/delhi26/jagannathan.png",
+      name: "Harsh Vardhan",
+      role: "Global Head- Digital Innovation, Apollo Tyres",
+      linkedin: "https://www.linkedin.com/in/harshvardhan-ai/?originalSubdomain=in",
+      image: "/speakers/delhi26/harsh vardhan.png",
     },
+    // {
+    //   name: "Chanchal Saxena",
+    //   role: "Business Partner IT & Digital Experience, Kohler India",
+    //   linkedin: "https://www.linkedin.com/in/chanchal-saxena/",
+    //   image: "#",
+    // },
     {
       name: "Vivek Shankar",
-      role: "CITSO & Vice President, Axis Max Life Insurance",
+      role: "CITSO & VP, Axis Max Life Insurance",
       linkedin: "https://www.linkedin.com/in/vivek-shankar-70a2ba22/",
       image: "/speakers/delhi26/Vivek Shankar.png",
     },
     {
-      name: "Varun Bansal",
-      role: "Vice President, Head IT, Bata India",
-      linkedin: "https://www.linkedin.com/in/varunbansal10/?originalSubdomain=in",
-      image: "/speakers/delhi26/varun bansal.png",
+      name: "Jagannath Sahoo",
+      role: "CISO, Gujarat Fluorochemicals Limited",
+      linkedin: "https://www.linkedin.com/in/dr-jagannath-sahoo-94880622/",
+      image: "/speakers/delhi26/jagannathan.png",
     },
     {
-      name: "Animesh Srivastava",
-      role: "Senior Vice President of Technology, Moglix",
-      linkedin: "https://www.linkedin.com/in/animeshs/",
-      image: "/speakers/delhi26/animesh.png",
-    },
-    {
-      name: "Rajat Wadhwa",
-      role: "Head- Customer Applications, Hero FinCorp",
-      linkedin: "https://www.linkedin.com/in/rajatwadhwa/?originalSubdomain=in",
-      image: "/speakers/delhi26/rajat wadhwa.png",
+      name: "Abhishek Das",
+      role: "Partner- Consulting, EY",
+      linkedin: "https://www.linkedin.com/in/abhishekdas17/",
+      image: "/speakers/delhi26/Abhishek Das.png",
     },
     // {
     //   name: "Amit Sharma",
@@ -91,17 +127,12 @@ const FeaturedSpeakers = () => {
     //   linkedin: "https://www.linkedin.com/in/amisharma/?originalSubdomain=in",
     //   image: "#",
     // },
-    {
-      name: "Abhishek Das",
-      role: "Partner- Consulting, EY",
-      linkedin: "https://www.linkedin.com/in/abhishekdas17/",
-      image: "/speakers/delhi26/Abhishek Das.png",
-    },
+    
 
   ];
 
   return (
-    <section id="speakers" className="py-16 md:py-24 bg-gradient-to-br from-white via-gray-50 to-slate-100">
+    <section id="speakers" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl lg:text-6xl lh-1-4 font-bold text-center mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
           Visionary Speakers
