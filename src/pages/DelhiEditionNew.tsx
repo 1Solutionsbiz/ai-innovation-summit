@@ -19,7 +19,7 @@ import LeadersReflect from "@/components/newhome/LeadersReflect";
 import WatchOnDemand from "@/components/newhome/WatchOnDemand";
 import ContactDetails from "@/components/newhome/ContactDetails";
 import AboutTheGuild from "@/components/newhome/AboutTheGuild";
-import { DelhiJune26RegisterForm } from "@/components/DelhiJune26RegisterForm";
+import { DelhiJune26RegisterForm } from "@/components/DelhiJune26RegisterFormNew";
 import Footer from "@/components/newhome/Footer";
 
 

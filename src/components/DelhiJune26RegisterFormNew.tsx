@@ -19,8 +19,6 @@ interface FormDataType {
   city: string;
   pincode: string;
   dob: string;
-
-  
   parallelTrack: string;
 
   ageAcknowledged: boolean;
