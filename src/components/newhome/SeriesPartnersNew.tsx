@@ -60,7 +60,7 @@ const PastPartners: React.FC = () => {
                         w-auto object-contain 
                         transition-all duration-300 
                         grayscale opacity-70 
-                        hover:grayscale-0 hover:opacity-100 hover:scale-105
+                        hover:grayscale-70 hover:opacity-100 hover:scale-105
                       "
                     />
 

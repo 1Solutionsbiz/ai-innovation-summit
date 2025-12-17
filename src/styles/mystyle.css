@@ -417,6 +417,33 @@ All colors MUST be HSL.
 }
 
 
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.auto-scroll {
+  display: flex;
+  width: max-content;
+  animation: scroll-horizontal 30s linear infinite;
+}
+
+.auto-scroll:hover {
+  animation-play-state: paused;
+}
+
+
+
+
+
+
+
+
 .lh-1-4{
   line-height: 1.4 !important;
 }
