@@ -42,8 +42,8 @@ const DelhiEditionNew = () => {
       <DelhiSpeakers />
       <FeaturedSpeakers />
       <Partners />
-      <SeriesPartnersNew />
       <Agenda />
+      <SeriesPartnersNew />
       <IndustryRepresentation />
       <WhoShouldAttend />
       <BeThePartner />

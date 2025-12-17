@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import guildLogo from "@/assets/guild-logo.png";
-import aiinvationlogo from "/logo/Ai-Innovation_rl-ogo-white-2026.png";
+import aiinvationlogo from "/logo/Ai-Innovation_logo-2026.png";
 import { MapPin, CalendarDays } from "lucide-react"; // ✅ Added icons
 
 const HeroBanner = () => {
@@ -107,7 +107,8 @@ const HeroBanner = () => {
           <a href="#delhiregistrationform">
             <Button
               size="lg"
-              className="bg-white/10 border-2 border-white/30 text-white hover:bg-white hover:text-black hover:scale-105 transition-all duration-300 text-lg px-8 py-6 rounded-full font-semibold tracking-wide shadow-lg hover:shadow-xl backdrop-blur-sm"
+              className=" text-white hover:scale-105 transition-all duration-300 text-lg px-8 py-6 rounded-[5px] font-semibold tracking-wide shadow-lg hover:shadow-xl backdrop-blur-sm"
+                style={{ background: "#bf1c88" }}
             >
               Register Now
             </Button>

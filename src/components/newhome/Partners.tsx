@@ -6,13 +6,18 @@ const partnersData = [
     logos: [{ name: "Adobe", url: "/partners/Adobe_Logo_Red.png" }],
     isCoPartner: true,
   },
+  {
+    tier: "Agentic Enterprise Partner",
+    logos: [{ name: "Salesforce", url: "/partners/salesforce.png" }],
+    isCoPartner: true,
+  },
 ];
 
 const SeriesPartners = () => {
   return (
     <section
       id="partners"
-      className="py-16 md:py-24 pb-0 bg-white relative overflow-hidden"
+      className="py-16 md:py-24 bg-white relative overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0">

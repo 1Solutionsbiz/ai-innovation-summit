@@ -87,11 +87,14 @@ const Navigation = () => {
 
             {/* Previous Editions Dropdown */}
             <div className="relative group">
-              <a href="#delhiregistrationform"
-                  className="bg-white/10 border-2 border-white/25 text-white hover:bg-white hover:text-black hover:scale-105 transition-all duration-300 text-sm px-4 py-2 rounded-full font-semibold tracking-wide shadow-lg hover:shadow-xl backdrop-blur-sm"
-                >
-                  Register Now
+              <a
+                href="#delhiregistrationform"
+                className="text-white hover:scale-105 transition-all duration-300 text-sm px-4 py-2 rounded-[5px] font-semibold tracking-wide shadow-lg hover:shadow-xl"
+                style={{ background: "#bf1c88" }}
+              >
+                Register Now
               </a>
+
             </div>
 
 
