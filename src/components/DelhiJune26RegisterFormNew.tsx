@@ -396,7 +396,7 @@ export const DelhiJune26RegisterForm: React.FC = () => {
 {/* Parallel Track Selection */}
 <div className="md:col-span-2">
   <label className="block mb-2 font-semibold text-white">
-    Which Parallel Industry Parallel Track do you wish to attend?
+    Which Parallel Industry Track do you wish to attend?
   </label>
 
   <div className="space-y-2">
@@ -444,7 +444,7 @@ export const DelhiJune26RegisterForm: React.FC = () => {
   )}
 </div>
 
-
+<hr />
 
           {/* Terms and Disclosure */}
           <div className="md:col-span-2">
