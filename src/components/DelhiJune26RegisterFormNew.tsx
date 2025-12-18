@@ -394,13 +394,12 @@ export const DelhiJune26RegisterForm: React.FC = () => {
 
 
 {/* Parallel Track Selection */}
-<div className="md:col-span-2">
-  <label className="block mb-2 font-semibold text-white">
+<div className="md:col-span-2 border rounded bg-white px-3 py-2">
+  <label className="block mb-2 font-semibold text-black">
     Which Parallel Industry Track do you wish to attend?
   </label>
-
-  <div className="space-y-2">
-    <label className="flex items-start space-x-3">
+  <div className="space-y-2 px-3 py-3">
+    <label className="flex items-start space-x-3 text-black">
       <input
         type="radio"
         name="parallelTrack"
@@ -412,7 +411,7 @@ export const DelhiJune26RegisterForm: React.FC = () => {
       <span>Track A: AI in BFSI – Trust, Risk & Digital Transformation</span>
     </label>
 
-    <label className="flex items-start space-x-3">
+    <label className="flex items-start space-x-3 text-black">
       <input
         type="radio"
         name="parallelTrack"
@@ -424,7 +423,7 @@ export const DelhiJune26RegisterForm: React.FC = () => {
       <span>Track B: AI in Manufacturing – Smart Factories & Predictive Supply Chains</span>
     </label>
 
-    <label className="flex items-start space-x-3">
+    <label className="flex items-start space-x-3 text-black">
       <input
         type="radio"
         name="parallelTrack"
@@ -444,7 +443,6 @@ export const DelhiJune26RegisterForm: React.FC = () => {
   )}
 </div>
 
-<hr />
 
           {/* Terms and Disclosure */}
           <div className="md:col-span-2">

@@ -108,7 +108,7 @@ const AgendaNew = () => {
             return (
               <div
                 key={index}
-                className="py-6"
+                className="py-6 border-none"
                 onClick={() =>
                   hasDescription &&
                   !isParallelTracks &&
@@ -164,6 +164,7 @@ const AgendaNew = () => {
                                 <span className="font-semibold block">
                                   {track.split("–")[0]}
                                 </span>
+                                <br />
                                 <span className="font-normal">
                                   {track.split("–")[1]}
                                 </span>

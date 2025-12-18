@@ -2,10 +2,23 @@ const FeaturedSpeakers = () => {
   // 🔥 Added your full Bengaluru speakers list
   const speakers = [
     {
+      name: "Vyshak Venugopalan",
+      role: "Senior Director, Solution Consulting, India & JAPAC Partner Solutions, Adobe India",
+      linkedin: "https://www.linkedin.com/in/vyshakv/",
+      image: "/speakers/delhi26/Vyash-V.png",
+    },
+
+    {
       name: "Raghav Aggarwal",
       role: "Co-Founder, Fluid AI",
       linkedin: "https://www.linkedin.com/in/trutech/?originalSubdomain=in",
       image: "/speakers/delhi26/raghav.png",
+    },
+    {
+      name: "Narottam Sharma",
+      role: "	Jubilant Foodworks, Chief Information Officer",
+      linkedin: "https://www.linkedin.com/in/narottamsharma/",
+      image: "/speakers/delhi26/Narrottam-Sharma.png",
     },
     {
       name: "Ranganathan Vaidyanathan Iyer",
@@ -57,13 +70,13 @@ const FeaturedSpeakers = () => {
     },
     {
       name: "Ritesh Rathod",
-      role: "Chief Strategy & Data Officer, Canara HSBC Life Insurance",
+      role: "Chief Strategy & Digital Officer, Canara HSBC Life Insurance",
       linkedin: "	https://www.linkedin.com/in/ritesh-rathod-b9633313/",
       image: "/speakers/delhi26/Ritesh-Rathod.png",
     },
     {
       name: "Varun Bansal",
-      role: "VP, Head IT, Bata India",
+      role: "Vice President, Head IT, Bata India",
       linkedin: "https://www.linkedin.com/in/varunbansal10/?originalSubdomain=in",
       image: "/speakers/delhi26/varun bansal.png",
     },
@@ -75,13 +88,13 @@ const FeaturedSpeakers = () => {
     },
     {
       name: "Amit Sharma",
-      role: "Sr. VP - Enterprise Information Management and Analytics, Canara HSBC Life Insurance",
+      role: "	Sr. Vice President - Enterprise Information Management and Analytics, Canara HSBC Life Insurance",
       linkedin: "https://www.linkedin.com/in/amisharma/?originalSubdomain=in",
       image: "/speakers/delhi26/amit-sharma.png",
     },
     {
       name: "Animesh Srrivastava",
-      role: "Senior VP of Technology, Moglix",
+      role: "	Senior Vice President of Technology, Moglix",
       linkedin: "https://www.linkedin.com/in/animeshs/",
       image: "/speakers/delhi26/animesh.png",
     },
@@ -97,18 +110,24 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/harshvardhan-ai/?originalSubdomain=in",
       image: "/speakers/delhi26/harsh vardhan.png",
     },
+    {
+      name: "Vivek Shankar",
+      role: "CITSO & Vice President, Axis Max Life Insurance",
+      linkedin: "https://www.linkedin.com/in/vivek-shankar-70a2ba22/",
+      image: "/speakers/delhi26/Vivek Shankar.png",
+    },
     // {
     //   name: "Chanchal Saxena",
     //   role: "Business Partner IT & Digital Experience, Kohler India",
     //   linkedin: "https://www.linkedin.com/in/chanchal-saxena/",
     //   image: "#",
     // },
-    {
-      name: "Vivek Shankar",
-      role: "CITSO & VP, Axis Max Life Insurance",
-      linkedin: "https://www.linkedin.com/in/vivek-shankar-70a2ba22/",
-      image: "/speakers/delhi26/Vivek Shankar.png",
-    },
+    // {
+    //   name: "Anjali Dutta",
+    //   role: "Head of Experience Design & Digital Studio | BORN Service Line, Tech Mahindra  , Tech Mahindra",
+    //   linkedin: "https://www.linkedin.com/in/anjali-dutta-b5204219/",
+    //   image: "#",
+    // },
     {
       name: "Jagannath Sahoo",
       role: "CISO, Gujarat Fluorochemicals Limited",
@@ -121,18 +140,13 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/abhishekdas17/",
       image: "/speakers/delhi26/Abhishek Das.png",
     },
-    // {
-    //   name: "Amit Sharma",
-    //   role: "Sr. Vice President - Enterprise Information Management and Analytics, Canara HSBC Life Insurance",
-    //   linkedin: "https://www.linkedin.com/in/amisharma/?originalSubdomain=in",
-    //   image: "#",
-    // },
+
     
 
   ];
 
   return (
-    <section id="speakers" className="py-16 md:py-24 bg-background">
+    <section id="speakers" className="py-16 md:py-24 bg-gradient-to-br from-white via-gray-50 to-slate-100">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl lg:text-6xl lh-1-4 font-bold text-center mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
           Visionary Speakers
