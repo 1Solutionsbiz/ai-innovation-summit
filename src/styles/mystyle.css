@@ -499,22 +499,21 @@ All colors MUST be HSL.
 
 /* Desktop Screen Start */
 @media screen and (min-width: 767px) {
+
+  
+/* .singhspkrg:nth-child(21){
+    margin-left: 524px;
+    margin-right: -524px;
+} */
+
+
+
   .rightbtn-newp-ires{
       margin-right: -40px;
   } 
-
-  
-
   .ailogmain{
     height: 30rem !important;
   }
-
-
-.singhspkrg:nth-child(21){
-    margin-left: 524px;
-    margin-right: -524px;
-}
-
   .leftbtn-newp-ires{
       margin-left: -40px;
   }

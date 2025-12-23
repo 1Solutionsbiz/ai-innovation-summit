@@ -2,13 +2,6 @@ const FeaturedSpeakers = () => {
   // 🔥 Added your full Bengaluru speakers list
   const speakers = [
     {
-      name: "Vyshak Venugopalan",
-      role: "Senior Director, Solution Consulting, India & JAPAC Partner Solutions, Adobe India",
-      linkedin: "https://www.linkedin.com/in/vyshakv/",
-      image: "/speakers/delhi26/Vyash-V.png",
-    },
-
-    {
       name: "Raghav Aggarwal",
       role: "Co-Founder, Fluid AI",
       linkedin: "https://www.linkedin.com/in/trutech/?originalSubdomain=in",
@@ -16,7 +9,7 @@ const FeaturedSpeakers = () => {
     },
     {
       name: "Narottam Sharma",
-      role: "	Jubilant Foodworks, Chief Information Officer",
+      role: "CIO, Jubilant Foodworks",
       linkedin: "https://www.linkedin.com/in/narottamsharma/",
       image: "/speakers/delhi26/Narrottam-Sharma.png",
     },
@@ -50,6 +43,18 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/tarun-aggarwal8/?originalSubdomain=in",
       image: "/speakers/delhi26/tarun agrawal.png",
     },
+    // {
+    //   name: "Mukul Jain",
+    //   role: "CTO, Axis Max Life Insurance",
+    //   linkedin: "https://www.linkedin.com/in/mukuljain1/",
+    //   image: "#",
+    // },
+    {
+      name: "Sunil Kumar",
+      role: "CTO, Shiprocket",
+      linkedin: "	https://www.linkedin.com/in/ksunil/",
+      image: "/speakers/delhi26/Sunil Kumar.png",
+    },
     {
       name: "Anurag Jain",
       role: "CDTO - KFC India and Partner Countries, Yum Brands",
@@ -57,16 +62,22 @@ const FeaturedSpeakers = () => {
       image: "/speakers/delhi26/Anurag Jain.png",
     },
     {
-      name: "Rahul Sangal",
-      role: "Chief Strategy & Digital Officer, Dixon Technologies India",
-      linkedin: "https://www.linkedin.com/in/sangalrahul/",
-      image: "/speakers/delhi26/Rahul Sangal.png",
+      name: "Raman Srinivasan",
+      role: "Chief Digital Officer, InMobi Group",
+      linkedin: "https://www.linkedin.com/in/raman-srinivasan-3364b12/",
+      image: "/speakers/delhi26/Raman Srinivasan.png",
     },
     {
       name: "Atul Govil",
       role: "Chief Transformation Officer & Head (SAP & IT) - Corporate , India Glycols Limited",
       linkedin: "https://www.linkedin.com/in/atul-govil-48042410/",
       image: "/speakers/delhi26/Atul-Givil.png",
+    },
+    {
+      name: "Rahul Sangal",
+      role: "Chief Strategy & Digital Officer, Dixon Technologies India",
+      linkedin: "https://www.linkedin.com/in/sangalrahul/",
+      image: "/speakers/delhi26/Rahul Sangal.png",
     },
     {
       name: "Ritesh Rathod",
@@ -122,12 +133,12 @@ const FeaturedSpeakers = () => {
     //   linkedin: "https://www.linkedin.com/in/chanchal-saxena/",
     //   image: "#",
     // },
-    // {
-    //   name: "Anjali Dutta",
-    //   role: "Head of Experience Design & Digital Studio | BORN Service Line, Tech Mahindra  , Tech Mahindra",
-    //   linkedin: "https://www.linkedin.com/in/anjali-dutta-b5204219/",
-    //   image: "#",
-    // },
+    {
+      name: "Anjali Dutta",
+      role: "Head of Experience Design & Digital Studio | BORN Service Line, Tech Mahindra  , Tech Mahindra",
+      linkedin: "https://www.linkedin.com/in/anjali-dutta-b5204219/",
+      image: "/speakers/delhi26/Anjali Dutta.png",
+    },
     {
       name: "Jagannath Sahoo",
       role: "CISO, Gujarat Fluorochemicals Limited",
@@ -140,8 +151,18 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/abhishekdas17/",
       image: "/speakers/delhi26/Abhishek Das.png",
     },
-
-    
+    {
+      name: "Himanshu Ghawri",
+      role: "Partner, PwC India",
+      linkedin: "https://www.linkedin.com/in/himanshu-ghawri-a7b906a/",
+      image: "/speakers/delhi26/Himanshu-Ghawri.png",
+    },
+    {
+      name: "Vyshak Venugopalan",
+      role: "Senior Director, Solution Consulting, India & JAPAC Partner Solutions, Adobe India",
+      linkedin: "https://www.linkedin.com/in/vyshakv/",
+      image: "/speakers/delhi26/Vyash-V.png",
+    },
 
   ];
 
