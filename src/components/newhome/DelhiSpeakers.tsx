@@ -75,19 +75,19 @@ const FeaturedSpeakers = () => {
     },
     {
       name: "Rahul Sangal",
-      role: "Chief Strategy & Digital Officer, Dixon Technologies India",
+      role: "Chief Strategy & Digital Officer, Dixon Technologies India Limited",
       linkedin: "https://www.linkedin.com/in/sangalrahul/",
       image: "/speakers/delhi26/Rahul Sangal.png",
     },
     {
       name: "Ritesh Rathod",
-      role: "Chief Strategy & Digital Officer, Canara HSBC Life Insurance",
+      role: "Chief Strategy & Data Officer, Canara HSBC Life Insurance",
       linkedin: "	https://www.linkedin.com/in/ritesh-rathod-b9633313/",
       image: "/speakers/delhi26/Ritesh-Rathod.png",
     },
     {
       name: "Varun Bansal",
-      role: "Vice President, Head IT, Bata India",
+      role: "VP, Head IT, Bata India",
       linkedin: "https://www.linkedin.com/in/varunbansal10/?originalSubdomain=in",
       image: "/speakers/delhi26/varun bansal.png",
     },
@@ -99,13 +99,13 @@ const FeaturedSpeakers = () => {
     },
     {
       name: "Amit Sharma",
-      role: "	Sr. Vice President - Enterprise Information Management and Analytics, Canara HSBC Life Insurance",
+      role: "	Sr. VP - Enterprise Information Management and Analytics, Canara HSBC Life Insurance",
       linkedin: "https://www.linkedin.com/in/amisharma/?originalSubdomain=in",
       image: "/speakers/delhi26/amit-sharma.png",
     },
     {
       name: "Animesh Srrivastava",
-      role: "	Senior Vice President of Technology, Moglix",
+      role: "	Senior VP of Technology, Moglix",
       linkedin: "https://www.linkedin.com/in/animeshs/",
       image: "/speakers/delhi26/animesh.png",
     },
@@ -123,7 +123,7 @@ const FeaturedSpeakers = () => {
     },
     {
       name: "Vivek Shankar",
-      role: "CITSO & Vice President, Axis Max Life Insurance",
+      role: "CITSO & VP, Axis Max Life Insurance Limited",
       linkedin: "https://www.linkedin.com/in/vivek-shankar-70a2ba22/",
       image: "/speakers/delhi26/Vivek Shankar.png",
     },
@@ -135,7 +135,7 @@ const FeaturedSpeakers = () => {
     // },
     {
       name: "Anjali Dutta",
-      role: "Head of Experience Design & Digital Studio | BORN Service Line, Tech Mahindra  , Tech Mahindra",
+      role: "Head of Experience Design & Digital Studio | BORN Service Line, Tech Mahindra",
       linkedin: "https://www.linkedin.com/in/anjali-dutta-b5204219/",
       image: "/speakers/delhi26/Anjali Dutta.png",
     },
