@@ -95,6 +95,7 @@ const BengaloreRegistrationForm: React.FC = () => {
         { Header: 'Pincode', accessor: 'pincode', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         { Header: 'Source', accessor: 'utm_source_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         { Header: 'Medium', accessor: 'utm_medium_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+        { Header: 'UTM ID', accessor: 'utm_id_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         {
           Header: 'Created At',
           accessor: 'created_at',

@@ -32,7 +32,6 @@ interface FormDataType {
   utm_source_temp: string;
   utm_content_temp: string;
   utm_term_temp: string;
-  utm_id_temp: string;
   landing_page_temp: string;
   conversion_page_temp: string;
   ip_address: string;
@@ -65,7 +64,6 @@ export const DelhiJune26RegisterForm: React.FC = () => {
     utm_source_temp: "",
     utm_content_temp: "",
     utm_term_temp: "",
-    utm_id_temp: "",
     landing_page_temp: "",
     conversion_page_temp: "",
     ip_address: ""
@@ -90,7 +88,6 @@ export const DelhiJune26RegisterForm: React.FC = () => {
       utm_source_temp: queryParams.get('utm_source') || '',
       utm_content_temp: queryParams.get('utm_content') || '',
       utm_term_temp: queryParams.get('utm_term') || '',
-      utm_id_temp: queryParams.get('utm_id') || '',
       landing_page_temp: document.referrer || '',
       conversion_page_temp: window.location.href
     }));
@@ -207,7 +204,6 @@ export const DelhiJune26RegisterForm: React.FC = () => {
         utm_source_temp: "",
         utm_content_temp: "",
         utm_term_temp: "",
-        utm_id_temp: "",
         landing_page_temp: "",
         conversion_page_temp: "",
         ip_address: ""
@@ -262,7 +258,6 @@ export const DelhiJune26RegisterForm: React.FC = () => {
           <input type="hidden" name="utm_source_temp" value={formData.utm_source_temp} />
           <input type="hidden" name="utm_content_temp" value={formData.utm_content_temp} />
           <input type="hidden" name="utm_term_temp" value={formData.utm_term_temp} />
-          <input type="hidden" name="utm_id_temp" value={formData.utm_id_temp} />
           <input type="hidden" name="landing_page_temp" value={formData.landing_page_temp} />
           <input type="hidden" name="conversion_page_temp" value={formData.conversion_page_temp} />
           <input type="hidden" name="ip_address" value={formData.ip_address} />
