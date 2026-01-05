@@ -13,6 +13,11 @@ const WatchOnDemand = () => {
   const scrollNext = useCallback(() => emblaApi && emblaApi.scrollNext(), [emblaApi]);
 
   const videos = [
+    { image: "/edition/1-delhi26.jpg", link: "https://youtu.be/1H6zUN-oz_U?si=hqKcKvXgSlEcFr1j" },
+    { image: "/edition/2-delhi26.jpg", link: "https://youtu.be/ISM8I81gv_4?si=PZ7TXdt8VyGEumtZ" },
+    { image: "/edition/3-delhi26.jpg", link: "https://youtu.be/5VI-Adm2pog?si=NAMDSveIOquic2hp" },
+    { image: "/edition/4-delhi26.jpg", link: "https://youtu.be/A0SmaoIxPr0?si=Unz4rZKChuJw0_z6" },
+    { image: "/edition/5-delhi26.jpg", link: "https://youtu.be/Z-j3Z_NgjgA?si=1R4aoMd6eR_BYslZ" },
     { image: "/edition/1-bangaluru25.jpg", link: "https://www.youtube.com/watch?v=aQ4pH33lW8k" },
     { image: "/edition/3-bangaluru25.jpg", link: "https://www.youtube.com/watch?v=DNGrBTNE0FY" },
     { image: "/edition/4-bangaluru25.jpg", link: "https://www.youtube.com/watch?v=peAQ8Y-NBcc" },

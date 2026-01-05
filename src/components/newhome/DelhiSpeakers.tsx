@@ -165,7 +165,7 @@ const FeaturedSpeakers = () => {
     },
     {
       name: "Manpreet Singh Ahuja",
-      role: "Partner – Sustainability Strategy & Transformation, PwC India",
+      role: "Partner, Chief Client and Alliance & TMT Sector Leader, PwC India",
       linkedin: "https://www.linkedin.com/in/manpreet-singh-6710788/",
       image: "/speakers/delhi26/Manpreet Ahuja.png",
     },
