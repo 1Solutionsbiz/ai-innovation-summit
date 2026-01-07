@@ -26,6 +26,12 @@ const FeaturedSpeakers = () => {
       image: "/speakers/delhi26/Ragannathan.png",
     },
     {
+      name: "Dr. Chander Shekhar Devra",
+      role: "SRF, CIO & Vice President, Specialty Chemicals Business & Chemicals Technology Group",
+      linkedin: "https://www.linkedin.com/in/drchandershekhardevra/",
+      image: "/speakers/delhi26/Dr.-Chander-Shekhar-Devra.png",
+    },
+    {
       name: "Kapil Mahajan",
       role: "Global & Group CITO, Allcargo Logistics",
       linkedin: "https://www.linkedin.com/in/kapil-mahajan-cio/",
@@ -134,29 +140,35 @@ const FeaturedSpeakers = () => {
       image: "/speakers/delhi26/Raman Srinivasan.png",
     },
     {
+      name: "Pankaj Gupta",
+      role: "Chief AI Officer, Jindal Stainless",
+      linkedin: "https://www.linkedin.com/in/pankajmath/",
+      image: "/speakers/delhi26/Pankaj Gupta.png",
+    },
+    {
       name: "Rajat Wadhwa",
       role: "Head- Customer Applications, Hero FinCorp",
       linkedin: "https://www.linkedin.com/in/rajatwadhwa/?originalSubdomain=in",
       image: "/speakers/delhi26/rajat wadhwa.png",
     },
-    // {
-    //   name: "Chanchal Saxena",
-    //   role: "Business Partner IT & Digital Experience, Kohler India",
-    //   linkedin: "https://www.linkedin.com/in/chanchal-saxena/",
-    //   image: "#",
-    // },
+            // {
+            //   name: "Chanchal Saxena",
+            //   role: "Business Partner IT & Digital Experience, Kohler India",
+            //   linkedin: "https://www.linkedin.com/in/chanchal-saxena/",
+            //   image: "#",
+            // },
     {
       name: "Anjali Dutta",
       role: "Head of Experience Design & Digital Studio | BORN Service Line, Tech Mahindra",
       linkedin: "https://www.linkedin.com/in/anjali-dutta-b5204219/",
       image: "/speakers/delhi26/Anjali Dutta.png",
     },
-    {
-      name: "Himanshu Ghawri",
-      role: "Partner, PwC India",
-      linkedin: "https://www.linkedin.com/in/himanshu-ghawri-a7b906a/",
-      image: "/speakers/delhi26/Himanshu-Ghawri.png",
-    },
+            // {
+            //   name: "Himanshu Ghawri",
+            //   role: "Partner, PwC India",
+            //   linkedin: "https://www.linkedin.com/in/himanshu-ghawri-a7b906a/",
+            //   image: "/speakers/delhi26/Himanshu-Ghawri.png",
+            // },
     {
       name: "Abhishek Das",
       role: "Partner- Consulting, EY",
@@ -180,6 +192,24 @@ const FeaturedSpeakers = () => {
       role: "Partner, PwC India",
       linkedin: "https://www.linkedin.com/in/rituparnomukhopadhyay",
       image: "/speakers/delhi26/Ritupurano.png",
+    },
+    // {
+    //   name: "Siddharth Gupta",
+    //   role: "Partner, KPMG India",
+    //   linkedin: "https://www.linkedin.com/in/siddharth-gupta-37410617/",
+    //   image: "/speakers/delhi26/",
+    // },
+    {
+      name: "Vinod Kumar Pathak",
+      role: "PwC India, Senior Partner & Leader- Manufacturing Sector, India",
+      linkedin: "https://www.linkedin.com/in/vinod-kumar-pathak-19305b2/",
+      image: "/speakers/delhi26/Vinod Pathak.png",
+    },
+    {
+      name: "Ritesh Jain",
+      role: "Partner- Agentic Automation, PwC India",
+      linkedin: "https://www.linkedin.com/in/ritesh-jain-2435451/",
+      image: "/speakers/delhi26/Ritesh Jain.png",
     },
     {
       name: "Vyshak Venugopalan",
