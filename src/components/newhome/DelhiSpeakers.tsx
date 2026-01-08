@@ -183,7 +183,7 @@ const FeaturedSpeakers = () => {
     },
     {
       name: "Ankit Garg",
-      role: "Partner, PwC",
+      role: "Partner- Risk Consulting, PwC",
       linkedin: "https://www.linkedin.com/in/ankgarg/",
       image: "/speakers/delhi26/Ankit Garg.png",
     },

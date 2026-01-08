@@ -500,11 +500,20 @@ All colors MUST be HSL.
 /* Desktop Screen Start */
 @media screen and (min-width: 767px) {
 
-  
-/* .singhspkrg:nth-child(21){
+/*   
+.singhspkrg:nth-child(31){
     margin-left: 524px;
     margin-right: -524px;
 } */
+ 
+.singhspkrg:nth-child(31){
+    margin-left: 400px;
+    margin-right: -400px;
+}
+.singhspkrg:nth-child(32){
+    margin-left: 400px;
+    margin-right: -400px;
+}
 
 
 
