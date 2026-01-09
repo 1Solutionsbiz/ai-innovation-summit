@@ -213,7 +213,7 @@ const FeaturedSpeakers = () => {
     },
     {
       name: "Vyshak Venugopalan",
-      role: "Senior Director, Solution Consulting, India & JAPAC Partner Solutions, Adobe India",
+      role: "Sr Director, Solution Consulting, India and JAPAC Partner Solution Leader, Adobe",
       linkedin: "https://www.linkedin.com/in/vyshakv/",
       image: "/speakers/delhi26/Vyash-V.png",
     },
