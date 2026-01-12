@@ -217,6 +217,12 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/vyshakv/",
       image: "/speakers/delhi26/Vyash-V.png",
     },
+    {
+      name: "Gowthamram C. Nallan",
+      role: "Solutions Consulting Lead, Adobe India",
+      linkedin: "https://www.linkedin.com/in/gowthamram-nallan-8b27731b/?originalSubdomain=in",
+      image: "/speakers/delhi26/Gowthamram-C.-Nallan.png",
+    },
 
   ];
 
