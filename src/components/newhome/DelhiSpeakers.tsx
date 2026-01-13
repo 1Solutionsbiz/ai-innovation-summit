@@ -49,12 +49,12 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/nishit-shrivastava/",
       image: "/speakers/delhi26/nishit.png",
     },
-    // {
-    //   name: "Mukul Jain",
-    //   role: "CTO, Axis Max Life Insurance",
-    //   linkedin: "https://www.linkedin.com/in/mukuljain1/",
-    //   image: "#",
-    // },
+    {
+      name: "Mukul Jain",
+      role: "CTO, Axis Max Life Insurance",
+      linkedin: "https://www.linkedin.com/in/mukuljain1/",
+      image: "/speakers/delhi26/mukul-jain.png",
+    },
     {
       name: "Tarun Aggarwal",
       role: "Group CTO, Capri Global Capital",
@@ -192,6 +192,12 @@ const FeaturedSpeakers = () => {
       role: "Partner, PwC India",
       linkedin: "https://www.linkedin.com/in/rituparnomukhopadhyay",
       image: "/speakers/delhi26/Ritupurano.png",
+    },
+    {
+      name: "Ayush Gupta",
+      role: "Partner, KPMG",
+      linkedin: "https://www.linkedin.com/in/ayushg11/",
+      image: "/speakers/delhi26/ayush-agrawal.png",
     },
     // {
     //   name: "Siddharth Gupta",
