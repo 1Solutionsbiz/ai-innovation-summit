@@ -497,6 +497,9 @@ All colors MUST be HSL.
     background: #0b122c;
   }
 
+
+
+
 /* Desktop Screen Start */
 @media screen and (min-width: 767px) {
 
@@ -564,7 +567,7 @@ All colors MUST be HSL.
   }
   .sspastprnrlogo>.salesforce{
     /* background-color: green; */
-    height: 8rem !important;
+    height: 9rem !important;
   }
   .sspastprnrlogo>.microsoft{
     /* background-color: blue; */
@@ -634,6 +637,10 @@ All colors MUST be HSL.
   .singhaniya-badge{
     top: 6% !important;
     right: 0px !important;
+  }
+  .sspastprnrlogo>.salesforce{
+    /* background-color: green; */
+    height: 8rem !important;
   }
 
 }

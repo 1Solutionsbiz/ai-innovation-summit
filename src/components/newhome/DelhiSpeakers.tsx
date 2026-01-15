@@ -256,6 +256,12 @@ const FeaturedSpeakers = () => {
     //   linkedin: "https://www.linkedin.com/in/rituparnomukhopadhyay",
     //   image: "/speakers/delhi26/Ritupurano.png",
     // },
+    // {
+    //   name: "Rachit Bhatnagar",
+    //   role: "Solutions Consulting Practice Lead, Adobe",
+    //   linkedin: "https://www.linkedin.com/in/rachitbhatnagar/",
+    //   image: "/speakers/delhi26/",
+    // },
 
   ];
 
