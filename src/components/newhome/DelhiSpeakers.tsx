@@ -244,24 +244,24 @@ const FeaturedSpeakers = () => {
 
 
 
-    // {
-    //   name: "Siddharth Sikand",
-    //   role: "Customer Transformation Advisor (Distinguished Enterprise Architect), Salesforce",
-    //   linkedin: "https://www.linkedin.com/in/siddharthsikand/",
-    //   image: "/speakers/delhi26/",
-    // },
+    {
+      name: "Siddharth Sikand",
+      role: "Customer Transformation Advisor (Distinguished Enterprise Architect), Salesforce",
+      linkedin: "https://www.linkedin.com/in/siddharthsikand/",
+      image: "/speakers/delhi26/siddharth-sikand.png",
+    },
     // {
     //   name: "Rituparno Mukhopadhyay",
     //   role: "Partner, PwC India",
     //   linkedin: "https://www.linkedin.com/in/rituparnomukhopadhyay",
     //   image: "/speakers/delhi26/Ritupurano.png",
     // },
-    // {
-    //   name: "Rachit Bhatnagar",
-    //   role: "Solutions Consulting Practice Lead, Adobe",
-    //   linkedin: "https://www.linkedin.com/in/rachitbhatnagar/",
-    //   image: "/speakers/delhi26/",
-    // },
+    {
+      name: "Rachit Bhatnagar",
+      role: "Solutions Consulting Practice Lead, Adobe",
+      linkedin: "https://www.linkedin.com/in/rachitbhatnagar/",
+      image: "/speakers/delhi26/Rachit-Bhatnagar.png",
+    },
 
   ];
 
