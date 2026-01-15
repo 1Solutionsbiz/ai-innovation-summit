@@ -7,6 +7,11 @@ const partnersData = [
     isCoPartner: true,
   },
   {
+    tier: "Enterprise AI Partner",
+    logos: [{ name: "Microsoft", url: "/partners/microsoft.png" }],
+    isCoPartner: true,
+  },
+  {
     tier: "Agentic Enterprise Partner",
     logos: [{ name: "Salesforce", url: "/partners/salesforce.png" }],
     isCoPartner: true,

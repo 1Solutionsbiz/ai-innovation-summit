@@ -201,7 +201,7 @@ const FeaturedSpeakers = () => {
     },
     // {
     //   name: "Siddharth Gupta",
-    //   role: "Partner, KPMG India",
+    //   role: "Partner , Digital Platforms, KPMG India",
     //   linkedin: "https://www.linkedin.com/in/siddharth-gupta-37410617/",
     //   image: "/speakers/delhi26/",
     // },
