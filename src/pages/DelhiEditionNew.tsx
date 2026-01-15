@@ -16,6 +16,7 @@ import Agenda from "@/components/newhome/Agenda";
 import BeThePartner from "@/components/newhome/BeThePartner";
 import BlastFromPast from "@/components/newhome/BlastFromPast";
 import LeadersReflect from "@/components/newhome/LeadersReflect";
+import DelegateExperienceRewards from "@/components/newhome/DelegateExperienceRewards";
 import WatchOnDemand from "@/components/newhome/WatchOnDemand";
 import ContactDetails from "@/components/newhome/ContactDetails";
 import AboutTheGuild from "@/components/newhome/AboutTheGuild";
@@ -46,6 +47,7 @@ const DelhiEditionNew = () => {
       <SeriesPartnersNew />
       <IndustryRepresentation />
       <WhoShouldAttend />
+      {/* <DelegateExperienceRewards /> */}
       <BeThePartner />
       <BlastFromPast />
       <LeadersReflect />

@@ -12,81 +12,81 @@ const AgendaNew = () => {
   };
 
 
-    const agendaData = [
+
+
+
+
+
+
+  
+
+
+  const agendaData = [
     {
       time: "08:30 – 09:45 AM ",
       title: "Registration & Networking Breakfast ",
       description: "",
     },
     {
-      time: "10:00 – 10:15 AM  ",
+      time: "10:15 – 10:30 AM ",
       title: "Welcome Note & Opening Remarks  ",
       description: "",
     },
     {
-      time: "10:15 – 10:30 AM  ",
-      title: "Special Address: The AI Tipping Point: Navigating Seismic Shifts in Digital Experiences ",
-      description: "AI is no longer a future promise—it’s a present reality reshaping how businesses create, deliver, and optimize experiences. Explore the magnitude of this shift, why data quality matters, and how organizations can harness AI to unlock creativity, accelerate productivity, and deliver personalized experiences at scale. ",
-    },
-    {
       time: "10:30 – 10:45 AM ",
-      title: "Keynote Address: AI Made in India – Innovation for 1.4 billion and beyond ",
-      description: "Explores how India is pioneering scalable, purpose-driven AI solutions for 1.4 billion people while creating models that can influence global industries and societies. ",
+      title: "Special Address: The AI Tipping Point: Navigating Seismic Shifts in Digital Experiences ",
+      description: "AI is no longer a future promise—it’s a present reality reshaping how businesses create, deliver, and optimize experiences. Explore the magnitude of this shift, why data quality matters, and how organizations can harness AI to unlock creativity, accelerate productivity, and deliver personalized experiences at scale. Speaker: · Vyshak Venugopalan, Senior Director, Solution Consulting, India & JAPAC Partner Solutions Leader, Adobe ",
     },
     {
-      time: "10:45 – 11:30 AM",
+      time: "10:45 – 11:00 AM ",
+      title: "Keynote Address: AI Made in India – Innovation for 1.4 billion and beyond",
+      description: "Explores how India is pioneering scalable, purpose-driven AI solutions for 1.4 billion people while creating models that can influence global industries and societies. Speaker: · Raghav Aggarwal, Co-Founder, Fluid AI ",
+    },
+    {
+      time: "11:00 – 11:45 AM",
       title: "Session 1: Panel Discussion From Prompt to Impact – Scaling AI Across the Enterprise",
-      description: "How leading enterprises are moving beyond experimentation into scaled AI adoption. Covers cultural shifts, cloud-native foundations, workforce readiness, and governance models.",
+      description: "How leading enterprises are moving beyond experimentation into scaled AI adoption. Covers cultural shifts, cloud-native foundations, workforce readiness, and governance models.Moderator: Ritesh Jain, Partner- Agentic Automation, PwC India Panelists: · Ranganathan Vaidyanathan Iyer, Group CIO, JBM Group · Kapil Mahajan, Global Chief Information & Technology Officer, Allcargo Logistics · Manish Chandegara, Group CIO, Simpolo Ceramics",
     },
     {
-      time: "11:30 – 12:00 PM ",
-      title: "Partner Innovation Showcase",
-      description: "Technology partners share live case studies and enterprise AI deployments.",
+      time: "11:45 – 12:45 PM ",
+      title: "Session 2: Panel Discussion Agentic AI: Beyond GenAI – Towards Self-Learning Workflows",
+      description: "A deep dive into intelligent automation: from RPA to agentic automation. Industry leaders discuss how self-learning workflows boost decision velocity and reshape operations. Moderator: Siddharth Gupta, Partner, KPMG India Panelists: · Mukul Jain, CTO, Axis Max Life Insurance · Harsh Vardhan, Global Head- Digital Innovation, Apollo Tyres · Tarun Aggarwal, Group Chief Technology Officer, Capri Global Capital · Mohit Malik, CTO, Chaayos · Siddharth Sikand, Customer Transformation Advisor (Distinguished Enterprise Architect), Salesforce",
     },
     {
-      time: "12:00– 12:45 PM ",
-      title: " Session 2: Panel Discussion Agentic AI: Beyond GenAI – Towards Self-Learning Workflows",
-      description: "A deep dive into intelligent automation: from RPA to agentic automation. Industry leaders discuss how self-learning workflows boost decision velocity and reshape operations. ",
-    },
-    {
-      time: "12:45 – 01:15 PM ",
-      title: "Session 3: Fire-Side Chat CEO–CIO Leadership Dialogue: The AI Imperative ",
-      description: "An exclusive fireside conversation on aligning AI investments with enterprise growth, resilience, and long-term transformation.",
+      time: "12:45 – 01:15 PM",
+      title: " Session 3: Fire-Side Chat CEO – CIO Leadership Dialogue: The AI Imperative",
+      description: "An exclusive fireside conversation on aligning AI investments with enterprise growth, resilience, and long-term transformation. Speakers: · Ved Goel, Group CFO & CEO International Business, Dr. Lal PathLabs · Narottam Sharma, CIO, Jubilant Foodworks ",
     },
     {
       time: "01:15 – 02:15 PM",
       title: "Networking Lunch ",
       description: "",
     },
+    
     {
-      time: "02:15 – 03:00 PM (Parallel Track) ",
-      title: "Delhi Spotlight Parallel Tracks",
-      description: "Track A: AI in BFSI - Trust, Risk & Digital Transformation – How BFSI leaders are using AI for fraud detection, risk modelling, credit scoring, and customer engagement. \n Track B: AI in Manufacturing - Smart Factories & Predictive Supply Chains – Automotive and electronics giants discuss predictive maintenance, quality assurance, digital twins, and AI in supply chain optimization. \n Track C: AI in Customer Experience - Hyper-Personalization at Scale – FMCG, retail, and consumer goods leaders explore personalization, omnichannel strategies, demand forecasting, and AI-driven product innovation.",
+      time: "02:15 – 03:00 PM(Parallel Track) ",
+      title: "Spotlight Parallel Tracks",
+      description: "Track A: AI in BFSI - Trust, Risk & Digital Transformation – How BFSI leaders are using AI for fraud detection, risk modelling, credit scoring, and customer engagement . Moderator: Ankit Garg, Partner, PwC Panelists: · Mukesh Sharma, CTO, Paisabazaar · Amit Sharma, Sr. Vice President - Enterprise Information Management and Analytics, Canara HSBC Life Insurance · Rajat Wadhwa, Head- Customer Applications, Hero FinCorp \n Track B: AI in Manufacturing - Smart Factories & Predictive Supply Chains –  Automotive and electronics giants discuss predictive maintenance, quality assurance, digital twins, and AI in supply chain optimization. Moderator: Vinod Kumar Pathak, Partner and Leader - Manufacturing, PwC India Panelists: · Pankaj Gupta, Chief AI Officer, Jindal Stainless · Manish Chandegara, Group CIO, SImpolo Ceramics · Animesh Srivastava, Senior Vice President of Technology, Moglix\n Track C: AI in Customer Experience  Hyper-Personalization at Scale –  FMCG, retail, and consumer goods leaders explore personalization, omnichannel strategies, demand forecasting, and AI-driven product innovation. Moderator: Ayush Gupta, Partner, KPMG Panelists: · Anil Sharma, Senior Director, Chief Technology Officer - AMESA, PepsiCo · Sunil Kumar, CTO, Shiprocket · Raman Srinivasan, Chief Digital Officer, Inmobi Group · Anjali Dutta, Head of Experience Design & Digital Studio | BORN Service Line, Tech Mahindra · Gowthamram C. Nallan, Solutions Consulting Lead, Adobe India ",
     },
     {
-      time: "03:00 – 03:45 PM (Parallel Track) ",
-      title: "Partner Case Studies & Demos  ",
-      description: "Focused showcases from partners on applied AI solutions for BFSI, manufacturing, and CX.  ",
+      time: "03:15 – 03:30 PM (Parallel Track) ",
+      title: "Partner Session",
+      description: "How enterprises are leveraging AI to reimagine customer experience and drive measurable business impact. From applied innovation to enterprise-ready solutions, this session offers a clear view into how AI is being operationalized across modern digital experiences. Speaker: Rachit Bhatnagar, Solutions Consulting Practice Lead, Adobe",
     },
     {
       time: "03:45 – 04:30 PM ",
-      title: "Session 4: Panel Discussion Fortifying the AI Enterprise – Risks & Defenses in the GenAI Era",
-      description: "Examines AI-driven vulnerabilities — from generated code risks to data security. Panelists share frameworks for building secure, trustworthy AI ecosystems. ",
+      title: "Session 4: Panel Discussion Fortifying the AI Enterprise – Risks & Defenses in the GenAI Era  ",
+      description: "Examines AI-driven vulnerabilities — from generated code risks to data security. Panelists share frameworks for building secure, trustworthy AI ecosystems. Moderator: Abhishek Das, Partner – Consulting, EY Panelists: · Jagannath Sahoo, Chief Information Security Officer, Gujarat Fluorochemicals Limited · Vivek Shankar, CITSO & Vice President, Axis Max Life Insurance · Mukesh Sharma, CTO, Paisabazaar ",
     },
-        {
-      time: "04:30 – 05:15 PM",
-      title: "Session 5: Panel Discussion The India AI Playbook – Lessons from Industry Leaders  ",
-      description: "CXOs from services, manufacturing, BFSI, and consumer goods share what’s working, what’s failing, and practical roadmaps for building AI maturity. ",
+    {
+      time: "04:30 – 05:30 PM ",
+      title: "Session 5: Panel Discussion The India AI Playbook – Lessons from Industry Leaders",
+      description: "CXOs from services, manufacturing, BFSI, and consumer goods share what’s working, what’s failing, and practical roadmaps for building AI maturity. Moderator: Manpreet Singh Ahuja, Partner, Chief Client and Alliance & TMT Sector Leader, PwC India Panelists: · Anurag Jain, Chief Digital & Technology Officer (CDTO) - KFC India and Partner Countries, Yum Brands · Ritesh Rathod, Chief Strategy & Data Officer, Canara HSBC Life Insurance· Atul Govil, Chief Transformation Officer & Head (SAP & IT) - Corporate, India Glycols Limited · Rahul Sangal, Chief Strategy & Digital Officer, Dixon Technologies India Limited · Varun Bansal, Vice President, Head of IT, Bata India ",
     },
-        {
-      time: "05:15 – 05:30 PM ",
-      title: "Closing Note & Call to Action ",
-      description: "",
-    },
-        {
-      time: "06:00 – 09:00 PM",
-      title: "Exclusive CIO/CTO Gala Dinner & Networking Cocktails (Invite-only, 50 Leaders)  ",
-      description: "An intimate evening of dialogue with India’s top technology leaders on “Leading the AI-First Enterprise.” ",
+    {
+      time: "05:30 – 05:45 PM",
+      title: "Closing Note & Networking over Hi-Tea ",
+      description: " ",
     },
   ];
   return (
@@ -106,7 +106,7 @@ const AgendaNew = () => {
           {agendaData.map((item, index) => {
             const hasDescription = item.description?.trim();
             const isParallelTracks =
-              item.title === "Delhi Spotlight Parallel Tracks";
+              item.title === "Spotlight Parallel Tracks";
             const isActive = activeIndex === index;
             const isOpen = isParallelTracks || isActive;
 
@@ -152,11 +152,10 @@ const AgendaNew = () => {
 
                     {/* Description */}
                     <div
-                      className={`transition-all duration-500 overflow-hidden ${
-                        isOpen
+                      className={`transition-all duration-500 overflow-hidden ${isOpen
                           ? "max-h-[700px] opacity-100 mt-4"
                           : "max-h-0 opacity-0"
-                      }`}
+                        }`}
                     >
                       {isParallelTracks ? (
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -165,7 +164,7 @@ const AgendaNew = () => {
                               key={i}
                               className="bg-white/10 border border-white/20 rounded-xl p-4 flex flex-col justify-between"
                             >
-                             <p className="text-white text-sm leading-relaxed mb-4">
+                              <p className="text-white text-sm leading-relaxed mb-4">
                                 <span className="font-semibold block">
                                   {track.split("–")[0]}
                                 </span>
