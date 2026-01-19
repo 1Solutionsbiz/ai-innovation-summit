@@ -200,7 +200,7 @@ const FeaturedSpeakers = () => {
     },
     {
       name: "Vinod Kumar",
-      role: "Partner & Leader- Manufacturing, PwC India",
+      role: "Senior Partner & Leader- Manufacturing, PwC India",
       linkedin: "https://www.linkedin.com/in/vinod-kumar-pathak-19305b2/",
       image: "/speakers/delhi26/Vinod Pathak.png",
     },
