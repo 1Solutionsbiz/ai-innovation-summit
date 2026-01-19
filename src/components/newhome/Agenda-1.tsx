@@ -89,6 +89,8 @@ const AgendaNew = () => {
       description: " ",
     },
   ];
+
+
   return (
     <section
       className="relative py-16 bg-gradient-to-b from-[#0c1a2a] to-[#203a56]"
@@ -169,66 +171,9 @@ const AgendaNew = () => {
                                   {track.split("–")[0]}
                                 </span>
                                 <br />
-                                {/* <span className="font-normal">
+                                <span className="font-normal">
                                   {track.split("–")[1]}
-                                </span> */}
-                                <span className="font-normal text-white/90 text-sm leading-relaxed block">
-                                        {(() => {
-                                            const content = track.split("–")[1] || "";
-
-                                            const moderatorMatch = content.match(/Moderator:(.*?)(Panelists:|$)/);
-                                            const panelistsMatch = content.match(/Panelists:(.*)$/);
-
-                                            const descriptionText = content
-                                            .replace(/Moderator:.*$/s, "")
-                                            .trim();
-
-                                            const moderatorText = moderatorMatch
-                                            ? moderatorMatch[1].trim()
-                                            : "";
-
-                                            const panelistsText = panelistsMatch
-                                            ? panelistsMatch[1]
-                                                .split("·")
-                                                .map(p => p.trim())
-                                                .filter(Boolean)
-                                            : [];
-
-                                            return (
-                                            <>
-                                                {/* Description */}
-                                                {descriptionText && (
-                                                <p className="mb-4">
-                                                    {descriptionText}
-                                                </p>
-                                                )}
-
-                                                {/* Moderator */}
-                                                {moderatorText && (
-                                                <div className="mb-4">
-                                                    <p className="font-semibold mb-1">Moderator:</p>
-                                                    <p>{moderatorText}</p>
-                                                </div>
-                                                )}
-
-                                                {/* Panelists */}
-                                                {panelistsText.length > 0 && (
-                                                <div>
-                                                    <p className="font-semibold mb-2">Panelists:</p>
-                                                    <ul className="list-disc list-inside space-y-1">
-                                                    {panelistsText.map((p, i) => (
-                                                        <li key={i}>{p}</li>
-                                                    ))}
-                                                    </ul>
-                                                </div>
-                                                )}
-                                            </>
-                                            );
-                                        })()}
                                 </span>
-
-
-
                               </p>
 
 
@@ -270,6 +215,8 @@ const AgendaNew = () => {
       </div>
     </section>
   );
+
+  
 };
 
 export default AgendaNew;

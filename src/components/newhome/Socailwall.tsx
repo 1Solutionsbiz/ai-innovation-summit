@@ -8,9 +8,9 @@ const Socialwall = () => {
 
     script.setAttribute(
       "data-wallurl",
-      "https://my.walls.io/sdvhd?nobackground=1&show_header=0&show_post_info=1&accessibility=0"
+      "https://my.walls.io/ai-innovation-summit?nobackground=1&show_header=1&show_post_info=1&accessibility=0"
     );
-    script.setAttribute("data-title", "sdvhd");
+    script.setAttribute("data-title", "ai-innovation-summit");
     script.setAttribute("data-width", "100%");
     script.setAttribute("data-autoheight", "1");
     script.setAttribute("data-height", "800");
@@ -19,7 +19,7 @@ const Socialwall = () => {
 
     const container = document.getElementById("socialwall-widget");
     if (container) {
-      container.innerHTML = ""; // safety: avoid duplicate script
+      container.innerHTML = ""; // avoid duplicate widget on re-render
       container.appendChild(script);
     }
   }, []);
