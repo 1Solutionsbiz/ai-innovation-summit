@@ -110,7 +110,7 @@ const HeroBanner = () => {
               className=" text-white hover:scale-105 transition-all duration-300 text-lg px-8 py-6 rounded-[5px] font-semibold tracking-wide shadow-lg hover:shadow-xl backdrop-blur-sm"
                 style={{ background: "#bf1c88" }}
             >
-              Register Now
+              Registrations Closed
             </Button>
           </a>
         </div>

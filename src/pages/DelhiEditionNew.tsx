@@ -22,6 +22,7 @@ import WatchOnDemand from "@/components/newhome/WatchOnDemand";
 import ContactDetails from "@/components/newhome/ContactDetails";
 import AboutTheGuild from "@/components/newhome/AboutTheGuild";
 import { DelhiJune26RegisterForm } from "@/components/DelhiJune26RegisterFormNew";
+import RegistrationFormClosedform from "@/components/RegistrationFormClosed";
 import Footer from "@/components/newhome/Footer";
 
 
@@ -58,7 +59,8 @@ const DelhiEditionNew = () => {
       <AboutTheGuild />
       
       <section id="delhiregistrationform" ></section>
-      <DelhiJune26RegisterForm />
+      {/* <DelhiJune26RegisterForm /> */}
+      <RegistrationFormClosedform />
       
       <Footer />
     </div>
