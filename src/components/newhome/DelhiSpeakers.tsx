@@ -127,12 +127,12 @@ const FeaturedSpeakers = () => {
       linkedin: "	https://www.linkedin.com/in/ritesh-rathod-b9633313/",
       image: "/speakers/delhi26/Ritesh-Rathod.png",
     },
-    {
-      name: "Rahul Sangal",
-      role: "Chief Strategy & Digital Officer, Dixon Technologies India Limited",
-      linkedin: "https://www.linkedin.com/in/sangalrahul/",
-      image: "/speakers/delhi26/Rahul Sangal.png",
-    },
+    // {
+    //   name: "Rahul Sangal",
+    //   role: "Chief Strategy & Digital Officer, Dixon Technologies India Limited",
+    //   linkedin: "https://www.linkedin.com/in/sangalrahul/",
+    //   image: "/speakers/delhi26/Rahul Sangal.png",
+    // },
     {
       name: "Atul Govil",
       role: "Chief Transformation Officer & Head (SAP & IT) - Corporate , India Glycols Limited",
