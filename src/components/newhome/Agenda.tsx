@@ -62,7 +62,6 @@ const AgendaNew = () => {
       title: "Networking Lunch ",
       description: "",
     },
-    
     {
       time: "02:15 – 03:00 PM(Parallel Track) ",
       title: "Spotlight Parallel Tracks",
@@ -70,8 +69,8 @@ const AgendaNew = () => {
     },
     {
       time: "03:15 – 03:30 PM (Parallel Track) ",
-      title: "Partner Session Shaping the future of CX with AI",
-      description: "How enterprises are leveraging AI to reimagine customer experience and drive measurable business impact. From applied innovation to enterprise-ready solutions, this session offers a clear view into how AI is being operationalized across modern digital experiences. Speaker: Rachit Bhatnagar, Solutions Consulting Practice Lead, Adobe",
+      title: "Presentation Session – Shaping the future of CX with AI",
+      description: "How enterprises are leveraging AI to reimagine customer experience and drive measurable business impact. \n From applied innovation to enterprise-ready solutions, this session offers a clear view into how AI is being operationalized across modern digital experiences. Speaker: Rachit Bhatnagar, Solutions Consulting Practice Lead, Adobe",
     },
     {
       time: "03:45 – 04:30 PM ",
