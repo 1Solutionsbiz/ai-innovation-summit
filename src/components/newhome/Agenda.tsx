@@ -226,9 +226,6 @@ const AgendaNew = () => {
                                             );
                                         })()}
                                 </span>
-
-
-
                               </p>
 
 
@@ -252,12 +249,108 @@ const AgendaNew = () => {
                         item.description
                           ?.split("\n")
                           .map((para, i) => (
-                            <p
+                            // <p
+                            //   key={i}
+                            //   className="text-white text-base leading-relaxed mb-3"
+                            // >
+                            //   {para}
+                            // </p>
+                            <div
                               key={i}
-                              className="text-white text-base leading-relaxed mb-3"
+                              className="text-white text-base leading-relaxed mb-4"
                             >
-                              {para}
-                            </p>
+                              {(() => {
+                                const content = para || "";
+
+                                // Matches
+                                const moderatorMatch = content.match(
+                                  /Moderator:(.*?)(Panelists:|Speaker:|Speakers:|$)/
+                                );
+
+                                const panelistsMatch = content.match(
+                                  /Panelists:(.*?)(Speaker:|Speakers:|$)/
+                                );
+
+                                const speakersMatch = content.match(
+                                  /(Speaker|Speakers):(.*)$/
+                                );
+
+                                // Clean description (remove all role-based lines)
+                                const descriptionText = content
+                                  .replace(/(Moderator|Panelists|Speaker|Speakers):.*$/s, "")
+                                  .trim();
+
+                                // Extract values
+                                const moderatorText = moderatorMatch
+                                  ? moderatorMatch[1].trim()
+                                  : "";
+
+                                const panelistsText = panelistsMatch
+                                  ? panelistsMatch[1]
+                                      .split("·")
+                                      .map(p => p.trim())
+                                      .filter(Boolean)
+                                  : [];
+
+                                const speakerLabel = speakersMatch
+                                  ? speakersMatch[1] // Speaker OR Speakers
+                                  : "";
+
+                                const speakersText = speakersMatch
+                                  ? speakersMatch[2]
+                                      .split("·")
+                                      .map(s => s.trim())
+                                      .filter(Boolean)
+                                  : [];
+
+                                return (
+                                  <>
+                                    {/* Description */}
+                                    {descriptionText && (
+                                      <p className="mb-4">
+                                        {descriptionText}
+                                      </p>
+                                    )}
+
+                                    {/* Moderator */}
+                                    {moderatorText && (
+                                      <div className="mb-4">
+                                        <p className="font-semibold mb-1">Moderator:</p>
+                                        <p>{moderatorText}</p>
+                                      </div>
+                                    )}
+
+                                    {/* Panelists */}
+                                    {panelistsText.length > 0 && (
+                                      <div className="mb-4">
+                                        <p className="font-semibold mb-2">Panelists:</p>
+                                        <ul className="list-disc list-inside space-y-1">
+                                          {panelistsText.map((p, idx) => (
+                                            <li key={idx}>{p}</li>
+                                          ))}
+                                        </ul>
+                                      </div>
+                                    )}
+
+                                    {/* Speaker / Speakers (label preserved exactly) */}
+                                    {speakersText.length > 0 && (
+                                      <div>
+                                        <p className="font-semibold mb-2">
+                                          {speakerLabel}:
+                                        </p>
+                                        <ul className="list-disc list-inside space-y-1">
+                                          {speakersText.map((s, idx) => (
+                                            <li key={idx}>{s}</li>
+                                          ))}
+                                        </ul>
+                                      </div>
+                                    )}
+                                  </>
+                                );
+                              })()}
+                            </div>
+
+
                           ))
                       )}
                     </div>
