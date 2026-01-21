@@ -8,18 +8,18 @@ const Socialwall = () => {
 
     script.setAttribute(
       "data-wallurl",
-      "https://my.walls.io/ai-innovation-summit?nobackground=1&show_header=1&show_post_info=1&accessibility=0"
+      "https://my.walls.io/AIIS2026?nobackground=1&show_header=0&show_post_info=1&accessibility=0"
     );
-    script.setAttribute("data-title", "ai-innovation-summit");
+    script.setAttribute("data-title", "AIIS2026");
     script.setAttribute("data-width", "100%");
     script.setAttribute("data-autoheight", "1");
-    script.setAttribute("data-height", "800");
+    script.setAttribute("data-height", "400");
     script.setAttribute("data-lazyload", "1");
     script.setAttribute("allow", "camera");
 
     const container = document.getElementById("socialwall-widget");
     if (container) {
-      container.innerHTML = ""; // avoid duplicate widget on re-render
+      container.innerHTML = ""; // duplicate load se bachane ke liye
       container.appendChild(script);
     }
   }, []);

@@ -39,6 +39,7 @@ const DelhiEditionNew = () => {
       <HeroBanner />
       <WhiteStrip />
       <Highlights />
+      <Socailwall />
       <Overview />
       <WhatAwaits />
       <FocusAreas />
@@ -50,7 +51,6 @@ const DelhiEditionNew = () => {
       <IndustryRepresentation />
       <WhoShouldAttend />
       {/* <DelegateExperienceRewards /> */}
-      {/* <Socailwall /> */}
       <BeThePartner />
       <BlastFromPast />
       <LeadersReflect />
