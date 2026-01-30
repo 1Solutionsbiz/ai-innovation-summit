@@ -142,6 +142,12 @@ export const Header = ({
           {(openDropdown === "previous" || hoverDropdown === "previous") && (
             <div className={`absolute ${isMobile ? 'left-1/2 transform -translate-x-1/2' : 'left-0'} mt-2 w-56 bg-dark-lighter border border-neon-purple/20 shadow-lg z-10`}>
               <Link
+                to="/previous/delhi-2026"
+                className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors"
+              >
+                Delhi Edition 2026
+              </Link>
+              <Link
                 to="/previous/bangalore-2025"
                 className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors"
               >

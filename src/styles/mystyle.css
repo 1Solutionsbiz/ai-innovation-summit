@@ -499,6 +499,12 @@ All colors MUST be HSL.
 
 
 
+  .singhaniyaspls>img.adobe{
+    height: 2.5rem !important;
+  }
+
+
+
 
 /* Desktop Screen Start */
 @media screen and (min-width: 767px) {
@@ -525,6 +531,10 @@ All colors MUST be HSL.
   } 
   .ailogmain{
     height: 30rem !important;
+  }
+  .ailogmain-mum26{
+    height: 20rem !important;
+    margin-top: 5rem;
   }
   .leftbtn-newp-ires{
       margin-left: -40px;
@@ -560,7 +570,10 @@ All colors MUST be HSL.
     margin-left: 165%;
     margin-right: -165%;
   }
-
+  .sspastprnrlogo>.atlassian{
+    /* background-color: red; */
+    height: 4rem !important;
+  }
   .sspastprnrlogo>.atlassian{
     /* background-color: red; */
     height: 4rem !important;
