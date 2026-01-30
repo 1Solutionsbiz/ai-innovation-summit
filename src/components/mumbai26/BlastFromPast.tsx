@@ -1,5 +1,5 @@
 const BlastFromPast = () => {
-  const videoSrc = "videos/Yt_promo_10_sept.mp4";
+  const videoSrc = "videos/GUILD-Highlight-26.mp4";
   const videoTitle = "AI Innovation Summit 2024 Highlights";
 
   return (
