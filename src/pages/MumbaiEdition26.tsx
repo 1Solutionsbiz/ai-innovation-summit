@@ -2,27 +2,26 @@ import Navigation from "@/components/newhome/Navigation";
 import HeroBanner from "@/components/mumbai26/HeroBanner";
 import WhiteStrip from "@/components/newhome/WhiteStrip";
 import Highlights from "@/components/newhome/Highlights";
+import Socailwall from "@/components/newhome/Socailwall";
 import Overview from "@/components/mumbai26/Overview";
 import WhatAwaits from "@/components/mumbai26/WhatAwaits";
-import FocusAreas from "@/components/mumbai26/FocusAreas";
+import FocusAreas from "@/components/newhome/FocusAreas";
 
 import FeaturedSpeakers from "@/components/mumbai26/FeaturedSpeakers";
-import SeriesPartners from "@/components/mumbai26/SeriesPartners";
+
 import SeriesPartnersNew from "@/components/mumbai26/SeriesPartnersNew";
-import Partners from "@/components/newhome/Partners";
-import IndustryRepresentation from "@/components/mumbai26/IndustryRepresentation";
-import WhoShouldAttend from "@/components/mumbai26/WhoShouldAttend";
-import Agenda from "@/components/newhome/Agenda"; 
-import BeThePartner from "@/components/mumbai26/BeThePartner";
+
+import IndustryRepresentation from "@/components/newhome/IndustryRepresentation";
+import WhoShouldAttend from "@/components/newhome/WhoShouldAttend";
+
+import BeThePartner from "@/components/newhome/BeThePartner";
 import BlastFromPast from "@/components/mumbai26/BlastFromPast";
 import LeadersReflect from "@/components/mumbai26/LeadersReflect";
-import DelegateExperienceRewards from "@/components/mumbai26/DelegateExperienceRewards";
-import Socailwall from "@/components/mumbai26/Socailwall";
-import WatchOnDemand from "@/components/mumbai26/WatchOnDemand";
-import ContactDetails from "@/components/mumbai26/ContactDetails";
-import AboutTheGuild from "@/components/mumbai26/AboutTheGuild";
-import { DelhiJune26RegisterForm } from "@/components/DelhiJune26RegisterFormNew";
-import RegistrationFormClosedform from "@/components/RegistrationFormClosed";
+
+import WatchOnDemand from "@/components/newhome/WatchOnDemand";
+import ContactDetails from "@/components/newhome/ContactDetails";
+import AboutTheGuild from "@/components/newhome/AboutTheGuild";
+
 import Footer from "@/components/newhome/Footer";
 
 

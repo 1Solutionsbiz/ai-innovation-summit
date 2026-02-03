@@ -22,7 +22,7 @@ const WhatAwaits = () => {
     {
       title: "Real Voices. Real Impact.",
       description:"Hear experts decode emerging trends, challenges, and real-world AI applications.",
-      image: "/delhi26/Expert-Panels.jpg",
+      image: "/delhi26/Expert-Panels-1.jpg",
     },
     {
       title: "Machines That Learn. Systems That Think.",
