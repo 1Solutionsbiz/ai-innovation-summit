@@ -18,7 +18,7 @@ import BeThePartner from "@/components/newhome/BeThePartner";
 import BlastFromPast from "@/components/mumbai26/BlastFromPast";
 import LeadersReflect from "@/components/mumbai26/LeadersReflect";
 
-import WatchOnDemand from "@/components/newhome/WatchOnDemand";
+import WatchOnDemand from "@/components/mumbai26/WatchOnDemand";
 import ContactDetails from "@/components/newhome/ContactDetails";
 import AboutTheGuild from "@/components/newhome/AboutTheGuild";
 
