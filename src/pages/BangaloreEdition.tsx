@@ -16,7 +16,7 @@ import { PartnershipCTA } from "@/components/PartnershipCTA";
 import DemandVideoHome from "@/components/DemandVideoHome";
 import { useEffect } from "react";
 import { BengaloreRegisterForm } from "@/components/BengaloreRegisterForm";
-import ShortAgenda from "@/components/ShortAgenda";
+import RegistrationClosed from "@/components/RegistrationClosed";
 import PastPartnersSpnser from "@/components/PastPartnersSpnser";
 import PastPartners from "@/components/PastPartners";
 import { Speakers } from "@/components/Speakers";
@@ -305,7 +305,7 @@ const BangaloreEdition = () => {
 
       <ShouldAttend />
       <WhoShouldSponsor />
-      <BengaloreRegisterForm />
+      <RegistrationClosed />
       <Footer socialLinks={socialLinks} />
     </div>
   );
