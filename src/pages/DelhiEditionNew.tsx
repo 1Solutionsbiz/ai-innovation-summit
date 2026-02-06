@@ -7,7 +7,6 @@ import WhatAwaits from "@/components/newhome/WhatAwaits";
 import FocusAreas from "@/components/newhome/FocusAreas";
 import DelhiSpeakers from "@/components/newhome/DelhiSpeakers";
 import FeaturedSpeakers from "@/components/newhome/FeaturedSpeakers";
-import SeriesPartners from "@/components/newhome/SeriesPartners";
 import SeriesPartnersNew from "@/components/newhome/SeriesPartnersNew";
 import Partners from "@/components/newhome/Partners";
 import IndustryRepresentation from "@/components/newhome/IndustryRepresentation";
@@ -16,12 +15,10 @@ import Agenda from "@/components/newhome/Agenda";
 import BeThePartner from "@/components/newhome/BeThePartner";
 import BlastFromPast from "@/components/newhome/BlastFromPast";
 import LeadersReflect from "@/components/newhome/LeadersReflect";
-import DelegateExperienceRewards from "@/components/newhome/DelegateExperienceRewards";
 import Socailwall from "@/components/newhome/Socailwall";
 import WatchOnDemand from "@/components/newhome/WatchOnDemand";
 import ContactDetails from "@/components/newhome/ContactDetails";
 import AboutTheGuild from "@/components/newhome/AboutTheGuild";
-import { DelhiJune26RegisterForm } from "@/components/DelhiJune26RegisterFormNew";
 import RegistrationFormClosedform from "@/components/RegistrationFormClosed";
 import Footer from "@/components/newhome/Footer";
 
@@ -50,7 +47,6 @@ const DelhiEditionNew = () => {
       <SeriesPartnersNew />
       <IndustryRepresentation />
       <WhoShouldAttend />
-      {/* <DelegateExperienceRewards /> */}
       <BeThePartner />
       <BlastFromPast />
       <LeadersReflect />

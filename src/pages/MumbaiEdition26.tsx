@@ -9,7 +9,7 @@ import FocusAreas from "@/components/newhome/FocusAreas";
 
 import FeaturedSpeakers from "@/components/mumbai26/FeaturedSpeakers";
 
-import SeriesPartnersNew from "@/components/mumbai26/SeriesPartnersNew";
+import SeriesPartnersNew from "@/components/newhome/SeriesPartnersNew";
 
 import IndustryRepresentation from "@/components/newhome/IndustryRepresentation";
 import WhoShouldAttend from "@/components/newhome/WhoShouldAttend";

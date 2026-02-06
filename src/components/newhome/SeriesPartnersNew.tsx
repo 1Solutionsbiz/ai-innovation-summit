@@ -3,6 +3,16 @@ import seriesPartnersBg from "@/assets/series-partners-bg.jpg";
 const partnersData = [
   {
     tier: "",
+    logos: [{ name: "Slack", url: "/sponsers/slack-logo.jpg" }],
+    isCoPartner: true,
+  },
+  {
+    tier: "",
+    logos: [{ name: "Adobe", url: "/sponsers/adobe.png" }],
+    isCoPartner: true,
+  },
+  {
+    tier: "",
     logos: [{ name: "Atlassian", url: "/sponsers/atlassian-1.png" }],
     isCoPartner: true,
   },
