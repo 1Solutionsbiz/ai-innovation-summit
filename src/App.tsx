@@ -13,7 +13,7 @@ import MumbaiEdition from "./components/Edition/MumbaiEdition";
 import BengaluruEdition from "./components/Edition/BengaluruEdition";
 import GurugramEdition from "./components/Edition/GurugramEdition";
 import WatchOnDemand from "./pages/WatchOnDemand";
-import MumbaiEdition26 from "./pages/MumbaiEdition26";
+import BengaluruEdition26 from "./pages/BengaluruEdition26";
 import DelhiEditionNew from "./pages/DelhiEditionNew";
 import BangaloreEdition from "./pages/BangaloreEdition";
 import ScrollManager from "./components/ScrollManager";
@@ -49,7 +49,7 @@ const App: React.FC = () => (
         />
         <Route path="/partner-form" element={<PartnerForm />} />
         {/* Public site routes */}
-        <Route path="/" element={<MumbaiEdition26 />} />
+        <Route path="/" element={<BengaluruEdition26 />} />
 
         <Route path="/previous/delhi-2026" element={<DelhiEditionNew />} />
         <Route path="/previous/bangalore-2025" element={<BangaloreEdition/>} />

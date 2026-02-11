@@ -1,13 +1,13 @@
-import Navigation from "@/components/newhome/Navigation";
-import HeroBanner from "@/components/mumbai26/HeroBanner";
+import Navigation from "@/components/bengaluru26/Navigation";
+import HeroBanner from "@/components/bengaluru26/HeroBanner";
 import WhiteStrip from "@/components/newhome/WhiteStrip";
 import Highlights from "@/components/newhome/Highlights";
 import Socailwall from "@/components/newhome/Socailwall";
-import Overview from "@/components/mumbai26/Overview";
-import WhatAwaits from "@/components/mumbai26/WhatAwaits";
+import Overview from "@/components/bengaluru26/Overview";
+import WhatAwaits from "@/components/bengaluru26/WhatAwaits";
 import FocusAreas from "@/components/newhome/FocusAreas";
 
-import FeaturedSpeakers from "@/components/mumbai26/FeaturedSpeakers";
+import FeaturedSpeakers from "@/components/bengaluru26/FeaturedSpeakers";
 
 import SeriesPartnersNew from "@/components/newhome/SeriesPartnersNew";
 
@@ -15,8 +15,8 @@ import IndustryRepresentation from "@/components/newhome/IndustryRepresentation"
 import WhoShouldAttend from "@/components/newhome/WhoShouldAttend";
 
 import BeThePartner from "@/components/newhome/BeThePartner";
-import BlastFromPast from "@/components/mumbai26/BlastFromPast";
-import LeadersReflect from "@/components/mumbai26/LeadersReflect";
+import BlastFromPast from "@/components/bengaluru26/BlastFromPast";
+import LeadersReflect from "@/components/bengaluru26/LeadersReflect";
 
 import WatchOnDemand from "@/components/newhome/WatchOnDemand";
 import ContactDetails from "@/components/newhome/ContactDetails";

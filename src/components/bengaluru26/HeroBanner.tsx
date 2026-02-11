@@ -89,7 +89,7 @@ const HeroBanner = () => {
             {/* Location Icon + Delhi */}
             <span className="flex items-center gap-2">
               <MapPin className="w-6 h-6 text-fuchsia-400" />
-              Mumbai 2026 Coming Soon!
+              Bengaluru 2026 Coming Soon!
             </span>
 
           </p>
