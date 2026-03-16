@@ -88,17 +88,19 @@ const HeroBanner = () => {
             {/* <span className="mobldidr">|</span> */}
             {/* Location Icon + Delhi */}
             <span className="flex items-center gap-2">
+              <CalendarDays className="w-6 h-6 text-fuchsia-400" />
+              11<sup>th</sup> June 2026 |
               <MapPin className="w-6 h-6 text-fuchsia-400" />
-              Bengaluru 2026 Coming Soon!
+              Conrad Hotel, Bengaluru
             </span>
 
           </p>
 
           <h2 className="text-white text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight">
-            From Prompt to Impact
+            From Assistance to Autonomy
           </h2>
           <p className="text-white text-2xl">
-            Where intelligence sparks the next wave of innovation
+            Where Agentic AI Meets Enterprise-Scale Execution
           </p>
         </div>
 

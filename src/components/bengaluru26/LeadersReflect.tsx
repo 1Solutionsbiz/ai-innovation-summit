@@ -44,7 +44,7 @@ const LeadersReflect = () => {
     {
       quote: "Summits like these are critical to understanding what’s happening across the industry. With brands and solution providers in one room, it creates a safe space for honest conversations on what’s working and what’s not. For me, this is truly an enlightenment platform.",
       name: "Ajit Belani",
-      title: "Ajit Belani",
+      title: "Director Marketing, Salesforce",
     },
     {
       quote: "It’s great to see leaders come together on a common platform. The emphasis on collaboration and shared learning made this a valuable experience.",
@@ -69,7 +69,7 @@ const LeadersReflect = () => {
     {
       quote: "The AI Innovation Summit highlights how AI extends far beyond consumer use cases into B2B and core sectors. This perspective is critical as the country scales its economic ambitions. Such forums drive awareness and encourage valuable exchange of ideas.",
       name: "Animesh Srivastava",
-      title: "Chief Information Officer, Moglix",
+      title: "Senior Vice resident of Technology, Moglix ",
     },
     // {
     //   quote: "Moderating the session on GCC leaders was a privilege. The conversations clearly showed how India’s GCCs are now driving end-to-end AI-led transformations, embedding responsible practices while combining cost efficiency with innovation. The bold ideas and real use cases shared reflected India’s growing role in shaping global AI delivery.",

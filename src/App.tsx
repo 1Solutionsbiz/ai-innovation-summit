@@ -14,6 +14,7 @@ import BengaluruEdition from "./components/Edition/BengaluruEdition";
 import GurugramEdition from "./components/Edition/GurugramEdition";
 import WatchOnDemand from "./pages/WatchOnDemand";
 import BengaluruEdition26 from "./pages/BengaluruEdition26";
+import SinghaniyaTest from "./pages/SinghaniyaTest";
 import DelhiEditionNew from "./pages/DelhiEditionNew";
 import BangaloreEdition from "./pages/BangaloreEdition";
 import ScrollManager from "./components/ScrollManager";
@@ -50,6 +51,7 @@ const App: React.FC = () => (
         <Route path="/partner-form" element={<PartnerForm />} />
         {/* Public site routes */}
         <Route path="/" element={<BengaluruEdition26 />} />
+        <Route path="/agenda-registration-form" element={<SinghaniyaTest />} />
 
         <Route path="/previous/delhi-2026" element={<DelhiEditionNew />} />
         <Route path="/previous/bangalore-2025" element={<BangaloreEdition/>} />

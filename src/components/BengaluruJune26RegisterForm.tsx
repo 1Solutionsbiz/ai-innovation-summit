@@ -32,12 +32,13 @@ interface FormDataType {
   utm_source_temp: string;
   utm_content_temp: string;
   utm_term_temp: string;
+  utm_id_temp: string;
   landing_page_temp: string;
   conversion_page_temp: string;
   ip_address: string;
 }
 
-export const DelhiJune26RegisterForm: React.FC = () => {
+export const BengaluruJune26RegisterForm: React.FC = () => {
   const [formData, setFormData] = useState<FormDataType>({
     name: "",
     designation: "",
@@ -64,6 +65,7 @@ export const DelhiJune26RegisterForm: React.FC = () => {
     utm_source_temp: "",
     utm_content_temp: "",
     utm_term_temp: "",
+    utm_id_temp: "",
     landing_page_temp: "",
     conversion_page_temp: "",
     ip_address: ""
@@ -88,6 +90,7 @@ export const DelhiJune26RegisterForm: React.FC = () => {
       utm_source_temp: queryParams.get('utm_source') || '',
       utm_content_temp: queryParams.get('utm_content') || '',
       utm_term_temp: queryParams.get('utm_term') || '',
+      utm_id_temp: queryParams.get('utm_id') || '',
       landing_page_temp: document.referrer || '',
       conversion_page_temp: window.location.href
     }));
@@ -204,6 +207,7 @@ export const DelhiJune26RegisterForm: React.FC = () => {
         utm_source_temp: "",
         utm_content_temp: "",
         utm_term_temp: "",
+        utm_id_temp: "",
         landing_page_temp: "",
         conversion_page_temp: "",
         ip_address: ""
@@ -258,6 +262,7 @@ export const DelhiJune26RegisterForm: React.FC = () => {
           <input type="hidden" name="utm_source_temp" value={formData.utm_source_temp} />
           <input type="hidden" name="utm_content_temp" value={formData.utm_content_temp} />
           <input type="hidden" name="utm_term_temp" value={formData.utm_term_temp} />
+          <input type="hidden" name="utm_id_temp" value={formData.utm_id_temp} />
           <input type="hidden" name="landing_page_temp" value={formData.landing_page_temp} />
           <input type="hidden" name="conversion_page_temp" value={formData.conversion_page_temp} />
           <input type="hidden" name="ip_address" value={formData.ip_address} />
@@ -537,13 +542,13 @@ export const DelhiJune26RegisterForm: React.FC = () => {
 
           {/* Submit */}
           <div className="md:col-span-2 text-center">
-            <button
+            {/* <button
               type="submit"
               disabled={submitting}
               className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded"
             >
               {submitting ? "Submitting..." : "Submit"}
-            </button>
+            </button> */}
             <p className="text-xs mt-2 text-gray-400">
               You can withdraw your consent at any time by contacting us at guildconferences@guildlive.com.
               All data will be processed in accordance with The Guild's <Link to="/privacy-policy" className="text-neon-blue"> Privacy Policy</Link>  and applicable data protection laws.

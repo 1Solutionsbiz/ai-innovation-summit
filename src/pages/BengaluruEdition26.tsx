@@ -1,13 +1,14 @@
 import Navigation from "@/components/bengaluru26/Navigation";
 import HeroBanner from "@/components/bengaluru26/HeroBanner";
 import WhiteStrip from "@/components/newhome/WhiteStrip";
-import Highlights from "@/components/newhome/Highlights";
+import Highlights from "@/components/bengaluru26/Highlights";
 import Socailwall from "@/components/newhome/Socailwall";
 import Overview from "@/components/bengaluru26/Overview";
 import WhatAwaits from "@/components/bengaluru26/WhatAwaits";
 import FocusAreas from "@/components/newhome/FocusAreas";
 
 import FeaturedSpeakers from "@/components/bengaluru26/FeaturedSpeakers";
+import Agenda from "@/components/bengaluru26/Agenda"; 
 
 import SeriesPartnersNew from "@/components/newhome/SeriesPartnersNew";
 
@@ -21,6 +22,8 @@ import LeadersReflect from "@/components/bengaluru26/LeadersReflect";
 import WatchOnDemand from "@/components/newhome/WatchOnDemand";
 import ContactDetails from "@/components/newhome/ContactDetails";
 import AboutTheGuild from "@/components/newhome/AboutTheGuild";
+
+import { BengaluruJune26RegisterForm } from "@/components/BengaluruJune26RegisterForm";
 
 import Footer from "@/components/newhome/Footer";
 
@@ -43,6 +46,7 @@ const DelhiEditionNew = () => {
       <WhatAwaits />
       <FocusAreas />
       <FeaturedSpeakers />
+      {/* <Agenda /> */}
       <SeriesPartnersNew />
       <IndustryRepresentation />
       <WhoShouldAttend />
@@ -54,8 +58,8 @@ const DelhiEditionNew = () => {
       <ContactDetails />
       <AboutTheGuild />
       
-      {/* <section id="delhiregistrationform" ></section> */}
-      {/* <DelhiJune26RegisterForm /> */}
+      {/* <section id="bengalururegistrationform" ></section> */}
+      {/* <BengaluruJune26RegisterForm /> */}
       {/* <RegistrationFormClosedform /> */}
       
       <Footer />
