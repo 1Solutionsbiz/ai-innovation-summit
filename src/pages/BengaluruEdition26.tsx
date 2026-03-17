@@ -19,7 +19,7 @@ import BeThePartner from "@/components/newhome/BeThePartner";
 import BlastFromPast from "@/components/bengaluru26/BlastFromPast";
 import LeadersReflect from "@/components/bengaluru26/LeadersReflect";
 
-import WatchOnDemand from "@/components/newhome/WatchOnDemand";
+import WatchOnDemand from "@/components/bengaluru26/WatchOnDemand";
 import ContactDetails from "@/components/newhome/ContactDetails";
 import AboutTheGuild from "@/components/newhome/AboutTheGuild";
 
