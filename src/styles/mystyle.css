@@ -594,6 +594,24 @@ All colors MUST be HSL.
 /* Desktop Screen End */
 
 
+
+
+.bega26{
+    display: flex;
+    gap: 5px;
+  }
+.bega26 span{
+    display: flex;
+    gap: 5px;
+  }
+
+.bega26 sup{
+  top: 5px;
+}
+  
+
+
+
 /* Mobile Screen Start */
 @media screen and (max-width: 481px) {
   
@@ -616,6 +634,21 @@ All colors MUST be HSL.
   .moblocation>p>.mobldidr{
     display: none !important;
   }
+
+  
+  
+.bega26{
+    flex-direction: column;
+}
+
+.mt-2i{
+    margin-top: 1rem !important;
+} 
+.mb-2i{
+    margin-bottom: 1rem !important;
+}
+
+
   .fs40m{
     font-size: 40px !important;
   }

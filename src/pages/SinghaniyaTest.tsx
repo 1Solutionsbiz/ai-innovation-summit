@@ -21,7 +21,7 @@ const DelhiEditionNew = () => {
       <Agenda />
       
       <section id="bengalururegistrationform" ></section>
-      <BengaluruJune26RegisterForm />
+      {/* <BengaluruJune26RegisterForm /> */}
       
       <Footer />
     </div>

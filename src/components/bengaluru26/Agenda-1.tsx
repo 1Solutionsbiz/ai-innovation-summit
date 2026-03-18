@@ -23,87 +23,86 @@ const AgendaNew = () => {
 
   const agendaData = [
     {
-      time: "09:00 – 09:45 AM",
-      title: "Registration & Networking Breakfast ",
-      description: "",
-    },
-    {
-      time: "09:45 – 10:00 AM",
+      time: "09:45 – 10:00",
       title: "Welcome Address ",
       description: "",
     },
     {
-      time: "10:00 – 10:15 AM ",
-      title: "Opening Address: The Autonomous Enterprise: Engineering the Shift ",
-      description: " <ul> <li>Enterprise AI is entering its third wave — from experimentation and copilots to autonomous systems executing workflows and decisions.</li> <li>While 70%+ CIOs run AI pilots, fewer than 25% have scaled AI into mission-critical production.</li><li>The real challenge now is architecture, governance, and economic viability.</li><li>This opening address explores the shift from AI augmentation to AI autonomy—and what it takes to build AI-native enterprises.</li></ul>   ",
+      time: "10:00 – 10:15 ",
+      title: "Opening Address : The Autonomous Enterprise: Engineering the Shift ",
+      description: "Enterprise AI is entering its third wave. The first wave focused on experimentation. The second wave introduced copilots and productivity assistants. The third wave now emerging is defined by autonomous systems capable of executing workflows, orchestrating decisions, and reshaping enterprise operating models.\n According to recent global enterprise surveys, over 70% of CIOs report active AI pilots, yet fewer than 25% have successfully scaled AI into mission-critical production systems. The gap is no longer about ambition it is about architecture, governance, and economic viability.\n This opening address frames the shift from AI augmentation to AI autonomy, outlining what it takes to engineer enterprises where intelligence is embedded into systems, not layered on top of them.",
     },
     {
-      time: "10:15 – 10:30 AM ",
-      title: "Keynote Address: Build and Govern the Agentic Enterprise ",
-      description: "<ul><li>Agentic AI enables goal-driven systems that interact dynamically with data, applications, and workflows.</li><li>As autonomy grows, so does complexity in orchestration, monitoring, transparency, and governance.</li><li>Enterprises must address multi-agent management, model drift, and auditability of AI-driven decisions.</li><li>This keynote explores the architecture and governance frameworks required to build safe, enterprise-grade agentic systems.</li></ul>",
+      time: "10:15 – 10:30 ",
+      title: "Keynote: Build and Govern the Agentic Enterprise ",
+      description: "Agentic AI systems capable of goal-driven decision making represents a structural evolution in enterprise automation. Unlike static AI models, agent-based systems interact dynamically with data, applications, and workflows. \n But autonomy introduces complexity. \n Questions enterprises must answer: \n <ul> <li>How do you manage multi-agent orchestration?</li> <li>How do you monitor model drift and decision transparency?</li><li>How do you audit autonomous workflows?</li><li>What is the governance model for AI agents?</li></ul> \n Industry data shows that AI governance failures are now among the top five emerging enterprise risk categories. This keynote explores the architectural principles, governance frameworks, and control layers required to build enterprise-grade agentic systems safely and sustainably.  ",
     },
     {
-      time: "10:30 – 11:15 AM ",
+      time: "10:30 – 11:15 ",
+      title: "Plenary Panel :From Prototype to Production: The Economics of Enterprise AI ",
+      description: "Enterprise AI success is not determined by innovation—it is determined by economics.\n Over 80% of AI initiatives stall before full-scale deployment. Key barriers include:<ul><li>Escalating GPU costs</li><li>Infrastructure complexity</li><li>Integration challenges</li><li>Unclear ROI metrics</li><li>Vendor lock-in risks</li></ul>\n AI workloads can increase cloud expenditure by 20-40% if not architected properly. Meanwhile, CFOs are demanding measurable returns on AI investments.\n <p>This panel examines:</p><ul><li>AI FinOps strategies</li><li>Infrastructure optimization</li><li>Model lifecycle management</li><li>Cost-per-inference economics</li><li>Scaling AI without exponential spend</li></ul><p>Because in 2026, AI without economic discipline is unsustainable.</p>",
+    },
+    {
+      time: "11:15 – 11:45 ",
 
-      title: "Session 1: Panel Discussion From Prototype to Production: The Economics of Enterprise AI ",
-      description: "<ul><li>Enterprise AI success depends on economics, not just innovation.</li><li>80%+ of AI initiatives stall due to GPU costs, infrastructure complexity, integration challenges, unclear ROI, and vendor lock-in.</li><li>Poorly architected AI workloads can raise cloud costs by 20–40%.</li><li>This panel explores AI FinOps, infrastructure optimization, model lifecycle management, and scaling AI sustainably.</li></ul> ",
+      title: "Technology Deep Dive Session ",
+      description: "Enabling the Autonomous Enterprise ",
     },
     {
-      time: "11:15 – 11:45 AM  ",
-      title: "Technology Deep Dive Session",
-      description: "Enabling the Autonomous Enterprise",
-    },
-    {
-      time: "11:45 – 12:00 PM  ",
+      time: "11:45 – 12:00  ",
       title: "Networking Break ",
-      description: "",
+      description: " ",
     },
     {
-      time: "12:00 – 12:45 PM",
-      title: " Session 2: Panel Discussion AI × The Future of Work ",
-      description: "Redesigning the Engineering Organization.\n <ul><li>AI copilots can boost developer productivity by 20–55% and reduce enterprise workflow handling time by up to 30%.</li><li>As AI becomes embedded in daily work, organizations must rethink decision layers, oversight, and accountability.</li><li>Engineering and operational models will evolve as humans increasingly collaborate with AI systems.</li><li>This session explores how enterprises must redesign operating models for effective human–AI collaboration.</li></ul>",
+      time: "12:00 – 12:45 ",
+      title: " Panel: AI × The Future of Work ",
+      description: "Enterprise studies indicate that AI copilots can increase developer productivity by 20–55%. In enterprises, AI-assisted workflows are reducing handling time by up to 30%. Yet productivity gains raise deeper structural questions.\n <ul><li>Which decision layers move to AI?</li><li>What happens to middle management oversight?</li><li>How do you redesign accountability in AI-assisted workflows?</li><li>How do engineering organizations evolve when code is co-written by machines?</li></ul>\n This session moves beyond job displacement narratives and instead focuses on operating model redesign. As AI becomes embedded in daily enterprise workflows, leadership must redefine decision rights, governance boundaries, and human-machine collaboration frameworks.",
     },
     {
-      time: "12:45 – 01:15 PM ",
-      title: "Session 3: Fire-Side Chat CEO × CIO Leadership Dialogue",
-      description: "<ul><li>Autonomous systems reshape budget allocation, risk exposure, compliance, talent models, and competitive positioning.</li><li>Leaders must determine the right balance between human oversight and AI-driven decisions.</li><li>Key questions include acceptable autonomy levels and measuring AI-driven performance.</li><li>This dialogue explores how leadership aligns AI strategy with enterprise value creation.</li></ul>",
+      time: "12:45 – 13:15 ",
+      title: "CEO × CIO Leadership Dialogue ",
+      description: "Enterprise AI transformation is no longer a technology conversation—it is a boardroom priority.\n Autonomous systems impact:<ul><li>Budget allocation</li><li>Risk exposure</li><li>Regulatory compliance</li><li>Talent models</li><li>Competitive positioning</li></ul>\n EOs are now asking: <p>“How much autonomy is acceptable?”</p><p>“What decisions should remain human?”</p><p>“How do we measure AI-driven enterprise performance?”</p>\n This high-impact dialogue brings strategic accountability into focus, examining how leadership teams align AI strategy with enterprise value creation.",
     },
     {
-      time: "01:15 – 02:00 PM ",
+      time: "13:15 – 14:00 ",
       title: "Networking Lunch",
       description: "",
     },
     {
-      time: "02:00 – 03:30 PM ",
+      time: "14:00 – 15:30 (Parallel Track) ",
       title: "Spotlight Parallel Tracks",
-      description: "<strong>Track A: BFSI / FinTech</strong><p><strong>Autonomous Financial Systems</strong></p><br><ul><li>Financial services is one of the most AI-intensive sectors, powering use cases from fraud detection to credit risk modelling.</li><li>While AI improves fraud detection by 20–40%, regulatory scrutiny and legacy system integration remain key challenges.</li><li>This track explores AI in regulated environments, small language models, risk and compliance automation, and AI-enabled core banking modernization.</li><li>Focus on building financial AI systems that balance innovation with governance and auditability.</li></ul>\n <strong>Track B: Customer Experience</strong><p><strong>Autonomous Customer Platforms</strong></p><br><ul><li>AI-powered agents are transforming customer experience by handling interactions, generating content, and predicting intent in real time.</li><li>AI-driven contact centers can reduce operational costs by 25–30% while improving speed and personalization.</li><li>Scaling AI in CX requires solving data fragmentation, omni-channel orchestration, bias, and ROI measurement.</li><li>This track focuses on building scalable, secure, and measurable AI-driven customer platforms.</li></ul><br>  \n <strong>Track C: Manufacturing / Digital Twins</strong><p><strong>Autonomous Industrial Systems</strong></p><br><ul><li>Manufacturing is adopting AI-driven digital twins and predictive systems to optimize operations.</li><li>AI-powered predictive maintenance can reduce downtime by up to 30% and maintenance costs by 10–20%</li><li>Industrial AI requires edge computing, secure IoT infrastructure, and cross-system interoperability.</li><li>This track explores how AI is embedded into industrial systems and supply chains to enable autonomous production environments.</li></ul> ",
+      description: "<strong>Track A: BFSI / FinTech</strong><p><strong>Autonomous Financial Systems</strong></p><br><p>Financial services institutions are among the most AI-intensive sectors globally.From fraud detection to credit risk modelling, AI systems process billions ofdata points daily.</p><p>However, regulatory scrutiny is intensifying.</p><p>According to global banking regulators, model risk management failures and algorithmic bias are emerging systemic risks. Meanwhile, AI adoption in fraud detection has shown detection improvements of 20–40%, yet integration with legacy core systems remains a bottleneck.</p> <p><strong>This track explores:</strong></p><ul><li>AI in regulated environments</li><li>Small language models for precision banking</li><li>Risk and compliance automation</li><li>Core banking modernization with AI layers</li><li>Auditability and governance in financial AI systems</li></ul><p>Autonomy in BFSI must balance innovation with accountability.</p><p><strong>Sessions may include:</strong></p><ul><li>Small Language Models in Regulated Banking</li><li>AI Risk & Compliance Automation</li><li>Core Banking + AI Architecture</li><li>Fraud, AML & AI Decision Engines</li></ul>\n <strong>Track B: Customer Experience</strong><p><strong>Autonomous Customer Platforms</strong></p><br>Customer experience is undergoing structural transformation. AI-powered agents are handling service interactions, generating dynamic content, and predicting customer intent in real time. <br> Studies show AI-driven contact centers can reduce operational costs by 25-30% while improving response time and personalization.<br><strong>Yet scaling AI in CX introduces challenges:</strong><ul><li>Data fragmentation</li><li>Omni-channel orchestration</li><li>Model bias</li><li>Measuring ROI across customer journeys</li></ul><br>This track focuses on building autonomous customer platforms that are measurable, secure, and scalable not experimental chatbots.<br><strong>Sessions may include:</strong><ul><li>Enterprise Conversational AI at Scale</li><li>AI Co-Workers in Contact Centers</li><li>Customer Data as AI Infrastructure</li><li>Measuring ROI in AI-Driven CX</li></ul>  \n <strong>Track C: Manufacturing / Digital Twins</strong><p><strong>Autonomous Industrial Systems</strong></p><br>Manufacturing is rapidly embracing AI-driven digital twins and predictive systems.<br>>Industry research shows predictive maintenance powered by AI can reduce downtime by up to 30% and maintenance costs by 10–20%. Digital twin adoption is accelerating in multi-plant enterprises to simulate operations and optimize throughput.<br><strong>However, industrial AI requires:</strong><ul><li>Edge computing integration</li><li>Secure IoT infrastructure</li><li>Cross-system interoperability</li><li>Operational resilience</li></ul><br>This track explores how enterprises are embedding AI directly into industrial control systems and supply chain orchestration to create autonomous production environments.<br><strong>Sessions may include:</strong><ul><li>Enterprise Digital Twin Architecture</li><li>Edge AI & Industrial IoT Integration</li><li>Predictive Maintenance at Scale</li><li>AI-driven Supply Chain Control Towers</li></ul> ",
     },
     {
-      time: "03:30 – 03:45 PM",
-      title: "Executive Transition Break ",
+      time: "15:30 – 15:45",
+      title: "Executive Transition Break [Plenary] ",
       description: "",
     },
     {
-      time: "03:45 – 04:15 PM ",
-      title: "Session 4: Panel Discussion Cyber Security in the Autonomous Enterprise ",
-      description: "Defending the AI-Native Enterpris<ul><li>As AI becomes embedded in enterprise workflows, new security risks are emerging.</li><li>Key threats include model poisoning, prompt injection, data leakage via LLMs, and manipulation of autonomous systems.</li><li>Security leaders are seeing a rise in AI-related threat vectors across organizations.</li><li>This session explores how to design AI systems that are secure by architecture, not by afterthought.</li></ul>",
+      time: "15:45 – 16:15 [Enterprise Backbone Block] ",
+      title: "Cyber Security in the Autonomous Enterprise ",
+      description: "Defending the AI-Native Enterprise\n As enterprises embed AI into workflows, the attack surface expands.\n Emerging risks include:<ul><li>Model poisoning</li><li>Prompt injection attacks</li><li>Data leakage via LLMs</li><li>Autonomous system manipulation</li></ul>\n Security leaders report a significant increase in AI-related threat vectors over the past year.Protecting AI-native systems requires rethinking traditional cyber frameworks.\n This session examines how to design AI systems that are secure-by-architecture, not secure-by-addition.",
     },
     {
-      time: "04:15 – 04:45 PM ",
-      title: "Session 5: Panel Discussion ",
-      description: " <strong> Data + AI Architecture</strong> <br> Turning Enterprise Data into Strategic Infrastructure \n <ul><li>AI performance depends on strong data foundations.</li><li>Over 60% of AI project failures are linked to poor data quality or fragmented data architecture.</li><li>Enterprises are moving toward lakehouse models, unified data platforms, and interoperable AI stacks.</li><li>This session explores data architecture, governance, model observability, and infrastructure readiness for AI at scale.</li></ul> ",
+      time: "16:15 – 16:45 [Securing & Scaling the AI Core] ",
+      title: "Data + AI Architecture ",
+      description: "Turning Enterprise Data into Strategic Infrastructure \n AI performance is only as strong as its data foundation.\n Research consistently shows that over 60% of AI project failures are linked to poor data quality or fragmented data architecture. Enterprises are moving toward lakehouse models, unified data platforms, and interoperable stacks to enable scalable AI.\n This session explores:<ul><li>Open vs proprietary AI stacks</li><li>Lakehouse architecture</li><li>Model observability</li><li>Data governance frameworks</li><li>Infrastructure readiness for AI scale</li></ul>\n Because the autonomous enterprise is not powered by models alone—it is powered by data infrastructure. ",
     },
     {
-      time: "04:45 – 05:15 PM ",
-      title: "Session 6: Panel Discussion  ",
-      description: " <strong> Cross Industry Power Conversation</strong> <br> Engineering Competitive Advantage Through AI \n <ul><li>Enterprises that scale AI effectively are achieving faster decision cycles, higher efficiency, and deeper customer personalization.</li><li>However, scaling AI autonomy requires strong governance, engineering maturity, economic discipline, and leadership alignment.</li><li>This closing conversation reflects the day’s insights and what distinguishes AI adopters from true AI leaders.</li></ul> ",
+      time: "16:45 – 17:15 ",
+      title: "Cross Industry Power Conversation  ",
+      description: "<strong>Engineering Competitive Advantage Through AI</strong>\n The competitive landscape is shifting. Enterprises that scale AI effectively are reporting faster decision cycles, improved operational efficiency, and enhanced customer personalization.\n But scaling autonomy requires:<ul><li>Strong governance</li><li>Engineering maturity</li><li>Economic discipline</li><li>Leadership alignment</li></ul>\n This closing conversation synthesizes the day’s insights and explores what separates AI adopters from AI leaders in the emerging autonomous economy.",
     },
     {
-      time: "05:15 – 05:30 PM ",
+      time: "17:15 – 17:30 ",
       title: "Closing & End of the Summit  ",
-      description: "",
+      description: " Release of AI Enterprise Pulse 2026 ",
     },
-
+    {
+      time: "18:30 – 21:00 ",
+      title: "Enterprise Leadership Dinner  ",
+      description: "Invite-only. 40-60 CXOs. Closed-door. ",
+    },
   ];
 
 

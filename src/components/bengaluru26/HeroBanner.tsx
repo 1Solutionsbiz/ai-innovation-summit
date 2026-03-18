@@ -77,7 +77,7 @@ const HeroBanner = () => {
         </div>
 
         {/* Event Details */}
-        <div className="space-y-3 mb-12 moblocation opacity-0 animate-fade-in-up animation-delay-600">
+        <div className="space-y-3 mb-0 moblocationbeng26 opacity-0 animate-fade-in-up animation-delay-600">
           <p className="text-white text-xl md:text-2xl font-normal tracking-wide flex items-center justify-center gap-4">
             
             {/* Date Icon + Month */}
@@ -87,16 +87,18 @@ const HeroBanner = () => {
             </span> */}
             {/* <span className="mobldidr">|</span> */}
             {/* Location Icon + Delhi */}
-            <span className="flex items-center gap-2">
-              <CalendarDays className="w-6 h-6 text-fuchsia-400" />
-              11<sup>th</sup> June 2026 |
-              <MapPin className="w-6 h-6 text-fuchsia-400" />
-              Conrad Hotel, Bengaluru
+            <span className="bega26 items-center mobbega26">
+              <span>
+                <CalendarDays className="w-6 h-6 text-fuchsia-400" /> 11<sup>th</sup> June 2026 |
+              </span>
+              <span>
+                <MapPin className="w-6 h-6 text-fuchsia-400" /> Conrad Hotel, Bengaluru
+              </span>
             </span>
 
           </p>
 
-          <h2 className="text-white text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+          <h2 className="text-white text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight mt-2i mb-2i">
             From Assistance to Autonomy
           </h2>
           <p className="text-white text-2xl">
