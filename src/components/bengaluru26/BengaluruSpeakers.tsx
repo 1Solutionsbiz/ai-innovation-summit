@@ -2,16 +2,10 @@ const FeaturedSpeakers = () => {
   // 🔥 Added your full Bengaluru speakers list
   const speakers = [
     {
-      name: "Sudeep Dey",
-      role: "CIO & CISO, Aster DM Healthcare",
-      linkedin: "https://www.linkedin.com/in/deysudeep/",
-      image: "/speakers/bengaluru26/Sudeep-Dey.png",
-    },
-    {
-      name: "Vikram Sridharan",
-      role: "Chief Digital & IT Officer, Crompton Greaves Consumer Electricals",
-      linkedin: "https://www.linkedin.com/in/sridharanvikram/",
-      image: "/speakers/bengaluru26/Vikram-Sridharan.png",
+      name: "Krishnan Venkateswaran",
+      role: "Chief Digital & Information Officer, Titan Company",
+      linkedin: "",
+      image: "/speakers/bengaluru26/Krishnan-Venkateswaran.png",
     },
     {
       name: "Rajesh Ramachandran",
@@ -20,10 +14,16 @@ const FeaturedSpeakers = () => {
       image: "/speakers/bengaluru26/Rajesh-Ramachandran.png",
     },
     {
-      name: "Krishnan Venkateswaran",
-      role: "Chief Digital & Information Officer, Titan Company",
-      linkedin: "",
-      image: "/speakers/bengaluru26/Krishnan-Venkateswaran.png",
+      name: "Vikram Sridharan",
+      role: "Chief Digital & IT Officer, Crompton Greaves Consumer Electricals",
+      linkedin: "https://www.linkedin.com/in/sridharanvikram/",
+      image: "/speakers/bengaluru26/Vikram-Sridharan.png",
+    },
+    {
+      name: "Sudeep Dey",
+      role: "CIO & CISO, Aster DM Healthcare",
+      linkedin: "https://www.linkedin.com/in/deysudeep/",
+      image: "/speakers/bengaluru26/Sudeep-Dey.png",
     },
 
   ];
