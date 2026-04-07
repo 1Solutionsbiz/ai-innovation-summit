@@ -570,6 +570,16 @@ All colors MUST be HSL.
     margin-left: 165%;
     margin-right: -165%;
   }
+
+  
+  .singhaniyabeng26spkr>.singhspkrg:nth-child(1),  
+  .singhaniyabeng26spkr>.singhspkrg:nth-child(2),  
+  .singhaniyabeng26spkr>.singhspkrg:nth-child(3),
+  .singhaniyabeng26spkr>.singhspkrg:nth-child(4) {
+    margin-left: 50%;
+    margin-right: -50%;
+  }
+
   .sspastprnrlogo>.atlassian{
     /* background-color: red; */
     height: 4rem !important;

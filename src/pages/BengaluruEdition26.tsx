@@ -29,6 +29,7 @@ import Footer from "@/components/newhome/Footer";
 
 
 import "@/styles/mystyle.css";
+import BengaluruSpeakers from "@/components/bengaluru26/BengaluruSpeakers";
 
 
 
@@ -45,6 +46,7 @@ const DelhiEditionNew = () => {
       <Overview />
       <WhatAwaits />
       <FocusAreas />
+      <BengaluruSpeakers />
       <FeaturedSpeakers />
       <Agenda />
       <SeriesPartnersNew />
