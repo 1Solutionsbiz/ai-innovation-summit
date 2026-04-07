@@ -9,9 +9,21 @@ const FeaturedSpeakers = () => {
     },
     {
       name: "Rajesh Ramachandran",
-      role: "Global Chief Digital Officer & MD, ABB Automation",
+      role: "Global Chief Digital Officer & MD, ABB Automation, ABB",
       linkedin: "https://www.linkedin.com/in/rajeshramachandranurl/?originalSubdomain=in",
       image: "/speakers/bengaluru26/Rajesh-Ramachandran.png",
+    },
+    {
+      name: "Chandan Vijay",
+      role: "Global Chief Data Officer, ABB Energy Industries",
+      linkedin: "https://www.linkedin.com/in/chandanvijay/",
+      image: "/speakers/bengaluru26/Chandan-Vijay.png",
+    },
+    {
+      name: "Narendra Babu",
+      role: "CTO, PayU",
+      linkedin: "https://www.linkedin.com/in/narendra-babu-4780444/",
+      image: "/speakers/bengaluru26/Narendra-Babu.png",
     },
     {
       name: "Vikram Sridharan",

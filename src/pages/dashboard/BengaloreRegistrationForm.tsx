@@ -212,7 +212,7 @@ const BengaloreRegistrationForm: React.FC = () => {
 
   return (
     <div className="p-6 bg-gray-900 rounded-lg shadow-lg text-white min-h-screen">
-      <h2 className="text-2xl font-bold mb-6 font-orbitron">Delhi Registration List</h2>
+      <h2 className="text-2xl font-bold mb-6 font-orbitron">Bengaluru Registration List</h2>
 
       <div className="mb-6 flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="w-full md:w-1/3">

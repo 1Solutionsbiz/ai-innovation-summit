@@ -60,8 +60,8 @@ const DelhiEditionNew = () => {
       <ContactDetails />
       <AboutTheGuild />
       
-      {/* <section id="bengalururegistrationform" ></section> */}
-      {/* <BengaluruJune26RegisterForm /> */}
+      <section id="bengalururegistrationform" ></section>
+      <BengaluruJune26RegisterForm />
       {/* <RegistrationFormClosedform /> */}
       
       <Footer />

@@ -93,11 +93,11 @@ const DashboardLayout: React.FC = () => {
             </li>
                <li>
               <Link
-                to="delhi-registration-form"
+                to="bengaluru-registration-form"
                 className="block py-2 px-2 hover:bg-gray-700 rounded text-gray-200 font-orbitron"
                 onClick={() => setIsSidebarOpen(false)}
               >
-                Delhi Registration Form
+                Bengaluru Registration Form
               </Link>
             </li>
                {/* <li>
