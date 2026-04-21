@@ -236,7 +236,7 @@ const BengaloreRegistrationForm: React.FC = () => {
           <CSVLink
             data={dataTable}
             headers={columns.map(col => ({ label: col.Header, key: col.accessor as string }))}
-            filename="delhi-registrations.csv"
+            filename="bengaluru-registrations.csv"
             className="bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition"
           >
             Export CSV

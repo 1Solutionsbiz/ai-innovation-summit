@@ -41,6 +41,8 @@ const Navigation = () => {
             />
           </Link>
 
+
+
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -102,6 +104,10 @@ const Navigation = () => {
           </div>
         </div>
 
+
+
+
+
         {/* --- MOBILE MENU --- */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-white/20">
@@ -118,6 +124,11 @@ const Navigation = () => {
                   {item}
                 </a>
               ))}
+
+
+
+
+              
 
               {/* Mobile Previous Editions Dropdown */}
               <div>

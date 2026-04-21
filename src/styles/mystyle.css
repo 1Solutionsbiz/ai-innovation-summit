@@ -621,6 +621,10 @@ All colors MUST be HSL.
   
 
 
+.displynone{
+  display: none !important;
+}
+
 
 /* Mobile Screen Start */
 @media screen and (max-width: 481px) {

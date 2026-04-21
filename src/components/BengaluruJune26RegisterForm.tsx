@@ -404,40 +404,41 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
     Which Parallel Industry Track do you wish to attend?
   </label>
   <div className="space-y-2 px-3 py-3">
+
     <label className="flex items-start space-x-3 text-black">
       <input
         type="radio"
         name="parallelTrack"
-        value="AI in BFSI Trust Risk and Digital Transformation"
-        checked={formData.parallelTrack === "AI in BFSI Trust Risk and Digital Transformation"}
+        value="BFSI / FinTech"
+        checked={formData.parallelTrack === "BFSI / FinTech"}
         onChange={handleChange}
         className="mt-1"
       />
-      <span>Track A: AI in BFSI – Trust, Risk & Digital Transformation</span>
+      <span>Track A: BFSI / FinTech</span>
     </label>
 
     <label className="flex items-start space-x-3 text-black">
       <input
         type="radio"
         name="parallelTrack"
-        value="AI in Manufacturing Smart Factories and Predictive Supply Chains"
-        checked={formData.parallelTrack === "AI in Manufacturing Smart Factories and Predictive Supply Chains"}
+        value="Customer Experience"
+        checked={formData.parallelTrack === "Customer Experience"}
         onChange={handleChange}
         className="mt-1"
       />
-      <span>Track B: AI in Manufacturing – Smart Factories & Predictive Supply Chains</span>
+      <span>Track B: Customer Experience</span>
     </label>
 
     <label className="flex items-start space-x-3 text-black">
       <input
         type="radio"
         name="parallelTrack"
-        value="AI in Customer Experience Hyper Personalization at Scale"
-        checked={formData.parallelTrack === "AI in Customer Experience Hyper Personalization at Scale"}
+        value="Manufacturing / Digital Twins"
+        checked={formData.parallelTrack === "Manufacturing / Digital Twins"}
         onChange={handleChange}
         className="mt-1"
       />
-      <span>Track C: AI in Customer Experience – Hyper-Personalization at Scale</span>
+      <span>Track C: Manufacturing / Digital Twins</span>
     </label>
   </div>
 

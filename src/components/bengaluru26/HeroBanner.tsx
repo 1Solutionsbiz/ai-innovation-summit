@@ -101,9 +101,19 @@ const HeroBanner = () => {
           <h2 className="text-white text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight mt-2i mb-2i">
             From Assistance to Autonomy
           </h2>
-          <p className="text-white text-2xl">
+          <p className="text-white text-2xl mb-2i">
             Where Agentic AI Meets Enterprise-Scale Execution
           </p>
+
+          
+          <a
+            href="#bengalururegistrationform"
+            className="md:hidden text-white hover:scale-105 transition-all duration-300 text-sm px-4 py-2 mt-2i rounded-[5px] font-semibold tracking-wide shadow-lg hover:shadow-xl"
+            style={{ background: "#bf1c88" }}
+          >
+            Register Now 
+          </a>
+          
         </div>
 
         {/* CTA Button */}

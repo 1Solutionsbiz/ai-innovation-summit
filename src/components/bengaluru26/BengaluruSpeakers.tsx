@@ -8,16 +8,10 @@ const FeaturedSpeakers = () => {
       image: "/speakers/bengaluru26/Krishnan-Venkateswaran.png",
     },
     {
-      name: "Rajesh Ramachandran",
-      role: "Global Chief Digital Officer & MD, ABB Automation, ABB",
-      linkedin: "https://www.linkedin.com/in/rajeshramachandranurl/?originalSubdomain=in",
-      image: "/speakers/bengaluru26/Rajesh-Ramachandran.png",
-    },
-    {
-      name: "Chandan Vijay",
-      role: "Global Chief Data Officer, ABB Energy Industries",
-      linkedin: "https://www.linkedin.com/in/chandanvijay/",
-      image: "/speakers/bengaluru26/Chandan-Vijay.png",
+      name: "Amit Atri",
+      role: "Sr. VP & Global Chief Information Officer	Tata Consumer Products",
+      linkedin: "https://www.linkedin.com/in/amit-atri-414797/",
+      image: "/speakers/bengaluru26/Amit.jpg",
     },
     {
       name: "Narendra Babu",
@@ -37,6 +31,24 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/deysudeep/",
       image: "/speakers/bengaluru26/Sudeep-Dey.png",
     },
+    {
+      name: "Rajesh Ramachandran",
+      role: "Global Chief Digital Officer & MD, ABB Automation, ABB",
+      linkedin: "https://www.linkedin.com/in/rajeshramachandranurl/?originalSubdomain=in",
+      image: "/speakers/bengaluru26/Rajesh-Ramachandran.png",
+    },
+    {
+      name: "Chandan Vijay",
+      role: "Global Chief Data Officer, ABB Energy Industries",
+      linkedin: "https://www.linkedin.com/in/chandanvijay/",
+      image: "/speakers/bengaluru26/Chandan-Vijay.png",
+    },
+    // {
+    //   name: "Amit Kapur",
+    //   role: "VP- Applied AI, Data & Analytics, Lowe's India",
+    //   linkedin: "https://www.linkedin.com/in/amit-kapur-ak/",
+    //   image: "/speakers/bengaluru26/Amit-Kapur.png",
+    // },
 
   ];
 
