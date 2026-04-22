@@ -662,6 +662,13 @@ All colors MUST be HSL.
     margin-bottom: 1rem !important;
 }
 
+.mt-4i{
+    margin-top: 2rem !important;
+} 
+.mb-4i{
+    margin-bottom: 2rem !important;
+}
+
 
   .fs40m{
     font-size: 40px !important;
