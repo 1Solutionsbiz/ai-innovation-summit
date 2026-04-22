@@ -5,7 +5,7 @@ const FeaturedSpeakers = () => {
       name: "Krishnan Venkateswaran",
       role: "Chief Digital & Information Officer, Titan Company",
       linkedin: "",
-      image: "/speakers/bengaluru26/Krishnan-Venkateswaran.png",
+      image: "/speakers/bengaluru26/Krishnan-Venkateswaran.jpg",
     },
     {
       name: "Amit Atri",
@@ -17,38 +17,44 @@ const FeaturedSpeakers = () => {
       name: "Narendra Babu",
       role: "CTO, PayU",
       linkedin: "https://www.linkedin.com/in/narendra-babu-4780444/",
-      image: "/speakers/bengaluru26/Narendra-Babu.png",
+      image: "/speakers/bengaluru26/Narendra-Babu.jpg",
     },
     {
       name: "Vikram Sridharan",
       role: "Chief Digital & IT Officer, Crompton Greaves Consumer Electricals",
       linkedin: "https://www.linkedin.com/in/sridharanvikram/",
-      image: "/speakers/bengaluru26/Vikram-Sridharan.png",
+      image: "/speakers/bengaluru26/Vikram-Sridharan.jpg",
     },
     {
       name: "Sudeep Dey",
       role: "CIO & CISO, Aster DM Healthcare",
       linkedin: "https://www.linkedin.com/in/deysudeep/",
-      image: "/speakers/bengaluru26/Sudeep-Dey.png",
+      image: "/speakers/bengaluru26/Sudeep-Dey.jpg",
     },
     {
       name: "Rajesh Ramachandran",
       role: "Global Chief Digital Officer & MD, ABB Automation, ABB",
       linkedin: "https://www.linkedin.com/in/rajeshramachandranurl/?originalSubdomain=in",
-      image: "/speakers/bengaluru26/Rajesh-Ramachandran.png",
+      image: "/speakers/bengaluru26/Rajesh-Ramachandran.jpg",
     },
     {
       name: "Chandan Vijay",
       role: "Global Chief Data Officer, ABB Energy Industries",
       linkedin: "https://www.linkedin.com/in/chandanvijay/",
-      image: "/speakers/bengaluru26/Chandan-Vijay.png",
+      image: "/speakers/bengaluru26/Chandan-Vijay.jpg",
     },
-    // {
-    //   name: "Amit Kapur",
-    //   role: "VP- Applied AI, Data & Analytics, Lowe's India",
-    //   linkedin: "https://www.linkedin.com/in/amit-kapur-ak/",
-    //   image: "/speakers/bengaluru26/Amit-Kapur.png",
-    // },
+    {
+      name: "Kumar S",
+      role: "Chief Technology Officer, Head of AI Strategy and Business Growth",
+      linkedin: "https://www.linkedin.com/in/kumar-subramani/",
+      image: "/speakers/bengaluru26/Kumar-S.jpg",
+    },
+    {
+      name: "Amit Kapur",
+      role: "VP- Applied AI, Data & Analytics, Lowe's India",
+      linkedin: "https://www.linkedin.com/in/amit-kapur-ak/",
+      image: "/speakers/bengaluru26/Amit-Kapur.jpg",
+    },
 
   ];
 
