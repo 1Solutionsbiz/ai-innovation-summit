@@ -67,6 +67,12 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/amit-kapur-ak/",
       image: "/speakers/bengaluru26/Amit-Kapur.jpg",
     },
+    // {
+    //   name: "Anand Das",
+    //   role: "Chief Digital & AI Officer: Engineering, TVS Motor Company",
+    //   linkedin: "https://www.linkedin.com/in/anand-das-7888a54/",
+    //   image: "/speakers/bengaluru26/anand-das.jpg",
+    // },
 
   ];
 

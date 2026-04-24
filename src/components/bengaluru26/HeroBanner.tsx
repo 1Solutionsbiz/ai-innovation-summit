@@ -62,7 +62,7 @@ const HeroBanner = () => {
             <img
               src={aiinvationlogo}
               alt="Ai Innovation Summit"
-              className=" mx-auto h-24 md:h-32 lg:h-40 ailogmain-mum26 object-contain"
+              className=" mx-auto h-24 md:h-32 lg:h-40 ailogmain-bang26 object-contain"
             />
             {/* <span className="block text-5xl md:text-7xl lg:text-8xl font-bold mb-2">
               <span className="text-white">AI</span>
