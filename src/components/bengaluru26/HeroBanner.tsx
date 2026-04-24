@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import guildLogo from "@/assets/guild-logo.png";
-import aiinvationlogo from "/logo/Ai-Innovation_logo-2026-1.png";
+import aiinvationlogo from "/logo/logo-26.png";
 import { MapPin, CalendarDays } from "lucide-react"; // ✅ Added icons
 
 const HeroBanner = () => {
