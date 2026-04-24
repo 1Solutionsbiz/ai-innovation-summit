@@ -3,13 +3,13 @@ const FeaturedSpeakers = () => {
   const speakers = [
     {
       name: "Krishnan Venkateswaran",
-      role: "Chief Digital & Information Officer, Titan Company",
+      role: "CDIO, Titan Company",
       linkedin: "",
       image: "/speakers/bengaluru26/Krishnan-Venkateswaran.jpg",
     },
     {
       name: "Amit Atri",
-      role: "Sr. VP & Global Chief Information Officer	Tata Consumer Products",
+      role: "Sr. VP & Global CIO, Tata Consumer Products",
       linkedin: "https://www.linkedin.com/in/amit-atri-414797/",
       image: "/speakers/bengaluru26/Amit.jpg",
     },
@@ -33,9 +33,15 @@ const FeaturedSpeakers = () => {
     },
     {
       name: "Rajesh Ramachandran",
-      role: "Global Chief Digital Officer & MD, ABB Automation, ABB",
+      role: "Global CDO & MD, ABB Automation",
       linkedin: "https://www.linkedin.com/in/rajeshramachandranurl/?originalSubdomain=in",
       image: "/speakers/bengaluru26/Rajesh-Ramachandran.jpg",
+    },
+    {
+      name: "Sambit Sarangi",
+      role: "CTO – Tech Platform, MakeMyTrip",
+      linkedin: "https://www.linkedin.com/in/sambitsarangi/",
+      image: "/speakers/bengaluru26/Sambit-Sarangi.jpg",
     },
     {
       name: "Chandan Vijay",
@@ -45,9 +51,15 @@ const FeaturedSpeakers = () => {
     },
     {
       name: "Kumar S",
-      role: "Chief Technology Officer, Head of AI Strategy and Business Growth",
+      role: "CTO, Head of AI Strategy and Business, Newgen Digital",
       linkedin: "https://www.linkedin.com/in/kumar-subramani/",
       image: "/speakers/bengaluru26/Kumar-S.jpg",
+    },
+    {
+      name: "Sivakumar Selva Ganapathy",
+      role: "Country Head, VP – India Digital/IT, Board Member of Johnson Controls GCC, Johnson Controls",
+      linkedin: "https://www.linkedin.com/in/sivakumarsg/",
+      image: "/speakers/bengaluru26/Sivakumar-Selva.jpg",
     },
     {
       name: "Amit Kapur",
