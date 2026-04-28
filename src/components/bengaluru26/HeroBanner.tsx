@@ -98,7 +98,7 @@ const HeroBanner = () => {
 
           </p>
 
-          <h2 className="text-white text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight mt-2i mb-2i">
+          <h2 className="text-white text-2xl md:text-4xl lg:text-3xl font-bold tracking-tight mt-2i mb-2i">
             From Assistance to Autonomy
           </h2>
           <p className="text-white text-2xl mb-4i">
