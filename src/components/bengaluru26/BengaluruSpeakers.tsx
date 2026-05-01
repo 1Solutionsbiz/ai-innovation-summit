@@ -1,6 +1,19 @@
 const FeaturedSpeakers = () => {
   // 🔥 Added your full Bengaluru speakers list
   const speakers = [
+   
+    {
+      name: "Amit Atri",
+      role: "Sr. VP & Global CIO, Tata Consumer Products",
+      linkedin: "https://www.linkedin.com/in/amit-atri-414797/",
+      image: "/speakers/bengaluru26/Amit.jpg",
+    },
+     {
+      name: "Sudeep Dey",
+      role: "CIO & CISO, Aster DM Healthcare",
+      linkedin: "https://www.linkedin.com/in/deysudeep/",
+      image: "/speakers/bengaluru26/Sudeep-Dey.jpg",
+    },
     {
       name: "Krishnan Venkateswaran",
       role: "CDIO, Titan Company",
@@ -8,10 +21,10 @@ const FeaturedSpeakers = () => {
       image: "/speakers/bengaluru26/Krishnan-Venkateswaran.jpg",
     },
     {
-      name: "Amit Atri",
-      role: "Sr. VP & Global CIO, Tata Consumer Products",
-      linkedin: "https://www.linkedin.com/in/amit-atri-414797/",
-      image: "/speakers/bengaluru26/Amit.jpg",
+      name: "Ashley DSouza",
+      role: "Chief Digital Officer, Hindustan Coca-Cola Beverages",
+      linkedin: "https://www.linkedin.com/in/ashleydsouza/ ",
+      image: "/speakers/bengaluru26/Ashley-Dsouza.jpg",
     },
     {
       name: "Narendra Babu",
@@ -19,23 +32,17 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/narendra-babu-4780444/",
       image: "/speakers/bengaluru26/Narendra-Babu.jpg",
     },
-    {
-      name: "Anand Das",
-      role: "Chief Digital & AI Officer: Engineering, TVS Motor Company",
-      linkedin: "https://www.linkedin.com/in/anand-das-7888a54/",
-      image: "/speakers/bengaluru26/anand-das.jpg",
-    },
-    {
+     {
       name: "Vikram Sridharan",
       role: "Chief Digital & IT Officer, Crompton Greaves Consumer Electricals",
       linkedin: "https://www.linkedin.com/in/sridharanvikram/",
       image: "/speakers/bengaluru26/Vikram-Sridharan.jpg",
     },
-    {
-      name: "Sudeep Dey",
-      role: "CIO & CISO, Aster DM Healthcare",
-      linkedin: "https://www.linkedin.com/in/deysudeep/",
-      image: "/speakers/bengaluru26/Sudeep-Dey.jpg",
+     {
+      name: "Sambit Sarangi",
+      role: "CTO – Tech Platform, MakeMyTrip",
+      linkedin: "https://www.linkedin.com/in/sambitsarangi/",
+      image: "/speakers/bengaluru26/Sambit-Sarangi.jpg",
     },
     {
       name: "Rajesh Ramachandran",
@@ -44,16 +51,16 @@ const FeaturedSpeakers = () => {
       image: "/speakers/bengaluru26/Rajesh-Ramachandran.jpg",
     },
     {
-      name: "Sambit Sarangi",
-      role: "CTO – Tech Platform, MakeMyTrip",
-      linkedin: "https://www.linkedin.com/in/sambitsarangi/",
-      image: "/speakers/bengaluru26/Sambit-Sarangi.jpg",
+      name: "Anand Das",
+      role: "Chief Digital & AI Officer: Engineering, TVS Motor Company",
+      linkedin: "https://www.linkedin.com/in/anand-das-7888a54/",
+      image: "/speakers/bengaluru26/anand-das.jpg",
     },
     {
-      name: "Chandan Vijay",
-      role: "Global Chief Data Officer, ABB Energy Industries",
-      linkedin: "https://www.linkedin.com/in/chandanvijay/",
-      image: "/speakers/bengaluru26/Chandan-Vijay.jpg",
+      name: "Maruthy Ramgandhi",
+      role: "Chief Technology Officer, SNITCH",
+      linkedin: "https://www.linkedin.com/in/maruthy/",
+      image: "/speakers/bengaluru26/Maruthy-Ramgandhi.jpg",
     },
     {
       name: "Kumar S",
@@ -61,11 +68,12 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/kumar-subramani/",
       image: "/speakers/bengaluru26/Kumar-S.jpg",
     },
+   
     {
-      name: "Sivakumar Selva Ganapathy",
-      role: "Country Head, VP – India Digital/IT, Board Member of Johnson Controls GCC, Johnson Controls",
-      linkedin: "https://www.linkedin.com/in/sivakumarsg/",
-      image: "/speakers/bengaluru26/Sivakumar-Selva.jpg",
+      name: "Chandan Vijay",
+      role: "Global Chief Data Officer, ABB Energy Industries",
+      linkedin: "https://www.linkedin.com/in/chandanvijay/",
+      image: "/speakers/bengaluru26/Chandan-Vijay.jpg",
     },
     {
       name: "Amit Kapur",
@@ -73,9 +81,29 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/amit-kapur-ak/",
       image: "/speakers/bengaluru26/Amit-Kapur.jpg",
     },
-
+   
+    {
+      name: "Sivakumar Selva Ganapathy",
+      role: "Country Head, VP – India Digital/IT, Board Member of Johnson Controls GCC, Johnson Controls",
+      linkedin: "https://www.linkedin.com/in/sivakumarsg/",
+      image: "/speakers/bengaluru26/Sivakumar-Selva.jpg",
+    },
+    // {
+    //   name: "Sharmistha Chatterjee",
+    //   role: "Vice President, Data & AI Shared Capabilities Digital Workspace, American Express",
+    //   linkedin: "https://www.linkedin.com/in/sivakumarsg/",
+    //   image: "/speakers/bengaluru26/Sivakumar-Selva.jpg",
+    // },
+    // {
+    //   name: "Syed Atif Umar",
+    //   role: "Head of Analytics, Meesho",
+    //   linkedin: "https://www.linkedin.com/in/sivakumarsg/",
+    //   image: "/speakers/bengaluru26/Sivakumar-Selva.jpg",
+    // },
 
   ];
+
+
 
   return (
     <section id="speakers" className="py-16 md:py-24 bg-gradient-to-br from-white via-gray-50 to-slate-100">
