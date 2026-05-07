@@ -26,13 +26,13 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/ashleydsouza/ ",
       image: "/speakers/bengaluru26/Ashley-Dsouza.jpg",
     },
+    // {
+    //   name: "Dhivya Kumar Bansal",
+    //   role: "CDTO, Diageo",
+    //   linkedin: "#",
+    //   image: "/speakers/bengaluru26/",
+    // },
     {
-      name: "Narendra Babu",
-      role: "CTO, PayU",
-      linkedin: "https://www.linkedin.com/in/narendra-babu-4780444/",
-      image: "/speakers/bengaluru26/Narendra-Babu.jpg",
-    },
-     {
       name: "Vikram Sridharan",
       role: "Chief Digital & IT Officer, Crompton Greaves Consumer Electricals",
       linkedin: "https://www.linkedin.com/in/sridharanvikram/",
@@ -51,12 +51,30 @@ const FeaturedSpeakers = () => {
       image: "/speakers/bengaluru26/Rajesh-Ramachandran.jpg",
     },
     {
+      name: "Narendra Babu",
+      role: "CTO, PayU",
+      linkedin: "https://www.linkedin.com/in/narendra-babu-4780444/",
+      image: "/speakers/bengaluru26/Narendra-Babu.jpg",
+    },
+    {
       name: "Anand Das",
       role: "Chief Digital & AI Officer: Engineering, TVS Motor Company",
       linkedin: "https://www.linkedin.com/in/anand-das-7888a54/",
       image: "/speakers/bengaluru26/anand-das.jpg",
     },
     {
+      name: "Venkatewaran Krishnamoorthy",
+      role: "CTO, Dairy Day",
+      linkedin: "https://www.linkedin.com/in/venkateswaran-krishnamoorthy-08a8044/",
+      image: "/speakers/bengaluru26/Venkateswaran-Krishnamoorthy.jpg",
+    },
+    {
+      name: "Chandan Vijay",
+      role: "Global Chief Data Officer, ABB Energy Industries",
+      linkedin: "https://www.linkedin.com/in/chandanvijay/",
+      image: "/speakers/bengaluru26/Chandan-Vijay.jpg",
+    },
+     {
       name: "Maruthy Ramgandhi",
       role: "Chief Technology Officer, SNITCH",
       linkedin: "https://www.linkedin.com/in/maruthy/",
@@ -68,38 +86,47 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/kumar-subramani/",
       image: "/speakers/bengaluru26/Kumar-S.jpg",
     },
-   
-    {
-      name: "Chandan Vijay",
-      role: "Global Chief Data Officer, ABB Energy Industries",
-      linkedin: "https://www.linkedin.com/in/chandanvijay/",
-      image: "/speakers/bengaluru26/Chandan-Vijay.jpg",
-    },
+    
+    
     {
       name: "Amit Kapur",
       role: "VP- Applied AI, Data & Analytics, Lowe's India",
       linkedin: "https://www.linkedin.com/in/amit-kapur-ak/",
       image: "/speakers/bengaluru26/Amit-Kapur.jpg",
     },
-   
+   {
+      name: "Sharmistha Chatterjee",
+      role: "Vice President, Data & AI Shared Capabilities Digital Workspace, American Express",
+      linkedin: "https://www.linkedin.com/in/sharmistha-chatterjee-7a186310/",
+      image: "/speakers/bengaluru26/Sharmistha-Chatterjee.jpg",
+    },
     {
       name: "Sivakumar Selva Ganapathy",
       role: "Country Head, VP – India Digital/IT, Board Member of Johnson Controls GCC, Johnson Controls",
       linkedin: "https://www.linkedin.com/in/sivakumarsg/",
       image: "/speakers/bengaluru26/Sivakumar-Selva.jpg",
     },
-    // {
-    //   name: "Sharmistha Chatterjee",
-    //   role: "Vice President, Data & AI Shared Capabilities Digital Workspace, American Express",
-    //   linkedin: "https://www.linkedin.com/in/sivakumarsg/",
-    //   image: "/speakers/bengaluru26/Sivakumar-Selva.jpg",
-    // },
+     
     // {
     //   name: "Syed Atif Umar",
     //   role: "Head of Analytics, Meesho",
-    //   linkedin: "https://www.linkedin.com/in/sivakumarsg/",
-    //   image: "/speakers/bengaluru26/Sivakumar-Selva.jpg",
+    //   linkedin: "#",
+    //   image: "/speakers/bengaluru26/",
     // },
+    // {
+    //   name: "Sathish S Srinivasan",
+    //   role: "Managing Director, CTO - Head of IT Production, BNP Paribas India Solution Pvt Ltd",
+    //   linkedin: "#",
+    //   image: "/speakers/bengaluru26/",
+    // },
+    // {
+    //   name: "Satkeerthi M",
+    //   role: "CTO- Airtel Business, Airtel Business",
+    //   linkedin: "#",
+    //   image: "/speakers/bengaluru26/",
+    // },
+   
+    
 
   ];
 

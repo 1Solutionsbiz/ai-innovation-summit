@@ -3,7 +3,7 @@ import { Plus, Minus } from "lucide-react";
 
 const AgendaNew = () => {
   const higlitbanner = "/delhi26/highlight.png";
-  const adobelogo = "/partners/Adobe_Logo_Red.png";
+  const salesforcelogo = "/partners/salesforce.png";
 
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -204,18 +204,18 @@ const AgendaNew = () => {
                             ></div>
 
 
-                              {/* {i === 2 && (
+                              {i === 1 && (
                                 <div className="mt-auto">
                                   <p className="text-white/70 text-xs mb-2">
-                                    Sponsored by:
+                                    Powered by:
                                   </p>
                                   <img
-                                    src={adobelogo}
-                                    alt="Adobe"
-                                    className="h-8 object-contain"
+                                    src={salesforcelogo}
+                                    alt="salesforce"
+                                    className="h-12 object-contain"
                                   />
                                 </div>
-                              )} */}
+                              )}
 
                             </div>
                           ))}
