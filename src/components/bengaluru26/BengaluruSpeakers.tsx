@@ -62,12 +62,12 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/anand-das-7888a54/",
       image: "/speakers/bengaluru26/anand-das.jpg",
     },
-    {
-      name: "Venkatewaran Krishnamoorthy",
-      role: "CTO, Dairy Day",
-      linkedin: "https://www.linkedin.com/in/venkateswaran-krishnamoorthy-08a8044/",
-      image: "/speakers/bengaluru26/Venkateswaran-Krishnamoorthy.jpg",
-    },
+    // {
+    //   name: "Venkatewaran Krishnamoorthy",
+    //   role: "CTO, Dairy Day",
+    //   linkedin: "https://www.linkedin.com/in/venkateswaran-krishnamoorthy-08a8044/",
+    //   image: "/speakers/bengaluru26/Venkateswaran-Krishnamoorthy.jpg",
+    // },
     {
       name: "Chandan Vijay",
       role: "Global Chief Data Officer, ABB Energy Industries",
