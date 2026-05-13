@@ -1,14 +1,14 @@
 const FeaturedSpeakers = () => {
   // 🔥 Added your full Bengaluru speakers list
   const speakers = [
-   
+ 
     {
       name: "Amit Atri",
       role: "Sr. VP & Global CIO, Tata Consumer Products",
       linkedin: "https://www.linkedin.com/in/amit-atri-414797/",
       image: "/speakers/bengaluru26/Amit.jpg",
     },
-     {
+    {
       name: "Sudeep Dey",
       role: "CIO & CISO, Aster DM Healthcare",
       linkedin: "https://www.linkedin.com/in/deysudeep/",
@@ -19,6 +19,12 @@ const FeaturedSpeakers = () => {
       role: "CDIO, Titan Company",
       linkedin: "",
       image: "/speakers/bengaluru26/Krishnan-Venkateswaran.jpg",
+    },
+    {
+      name: " Amrish Kumar Jain",
+      role: "CIO & CISO, Tally Solutions",
+      linkedin: "https://www.linkedin.com/in/amrishjain/ ",
+      image: "/speakers/bengaluru26/Amrish Kumar-Jain.jpg",
     },
     {
       name: "Ashley DSouza",
@@ -38,7 +44,7 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/sridharanvikram/",
       image: "/speakers/bengaluru26/Vikram-Sridharan.jpg",
     },
-     {
+    {
       name: "Sambit Sarangi",
       role: "CTO – Tech Platform, MakeMyTrip",
       linkedin: "https://www.linkedin.com/in/sambitsarangi/",
@@ -69,36 +75,30 @@ const FeaturedSpeakers = () => {
     //   image: "/speakers/bengaluru26/Venkateswaran-Krishnamoorthy.jpg",
     // },
     {
-      name: "Chandan Vijay",
-      role: "Global Chief Data Officer, ABB Energy Industries",
-      linkedin: "https://www.linkedin.com/in/chandanvijay/",
-      image: "/speakers/bengaluru26/Chandan-Vijay.jpg",
-    },
-     {
       name: "Maruthy Ramgandhi",
       role: "Chief Technology Officer, SNITCH",
       linkedin: "https://www.linkedin.com/in/maruthy/",
       image: "/speakers/bengaluru26/Maruthy-Ramgandhi.jpg",
     },
+ 
+    {
+      name: "Chandan Vijay",
+      role: "Global Chief Data Officer, ABB Energy Industries",
+      linkedin: "https://www.linkedin.com/in/chandanvijay/",
+      image: "/speakers/bengaluru26/Chandan-Vijay.jpg",
+    },
+ 
     {
       name: "Kumar S",
       role: "CTO, Head of AI Strategy and Business, Newgen Digital",
       linkedin: "https://www.linkedin.com/in/kumar-subramani/",
       image: "/speakers/bengaluru26/Kumar-S.jpg",
     },
-    
-    
     {
       name: "Amit Kapur",
       role: "VP- Applied AI, Data & Analytics, Lowe's India",
       linkedin: "https://www.linkedin.com/in/amit-kapur-ak/",
       image: "/speakers/bengaluru26/Amit-Kapur.jpg",
-    },
-   {
-      name: "Sharmistha Chatterjee",
-      role: "Vice President, Data & AI Shared Capabilities Digital Workspace, American Express",
-      linkedin: "https://www.linkedin.com/in/sharmistha-chatterjee-7a186310/",
-      image: "/speakers/bengaluru26/Sharmistha-Chatterjee.jpg",
     },
     {
       name: "Sivakumar Selva Ganapathy",
@@ -106,31 +106,64 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/sivakumarsg/",
       image: "/speakers/bengaluru26/Sivakumar-Selva.jpg",
     },
-     
-    // {
-    //   name: "Syed Atif Umar",
-    //   role: "Head of Analytics, Meesho",
-    //   linkedin: "#",
-    //   image: "/speakers/bengaluru26/",
-    // },
-    // {
-    //   name: "Sathish S Srinivasan",
-    //   role: "Managing Director, CTO - Head of IT Production, BNP Paribas India Solution Pvt Ltd",
-    //   linkedin: "#",
-    //   image: "/speakers/bengaluru26/",
-    // },
-    // {
-    //   name: "Satkeerthi M",
-    //   role: "CTO- Airtel Business, Airtel Business",
-    //   linkedin: "#",
-    //   image: "/speakers/bengaluru26/",
-    // },
-   
-    
-
+    {
+      name: "Sharmistha Chatterjee",
+      role: "Vice President, Data & AI Shared Capabilities Digital Workspace, American Express",
+      linkedin: "https://www.linkedin.com/in/sharmistha-chatterjee-7a186310/",
+      image: "/speakers/bengaluru26/Sharmistha-Chatterjee.jpg",
+    },
+    {
+      name: "Syed Atif Umar",
+      role: "Head of Analytics, Meesho",
+      linkedin: "https://www.linkedin.com/in/syed-atif-umar-819b191/",
+      image: "/speakers/bengaluru26/Syed-Atif-Umar.jpg",
+    },
+ 
+    //   {
+    //     name: "Sathish S Srinivasan",
+    //     role: "Managing Director, CTO - Head of IT Production, BNP Paribas India Solution Pvt Ltd",
+    //     linkedin: "#",
+    //     image: "/speakers/bengaluru26/",
+    //   },
+    //  {
+    //     name: "Satkeerthi M",
+    //     role: "CTO- Airtel Business, Airtel Business",
+    //     linkedin: "#",
+    //     image: "/speakers/bengaluru26/",
+    //   },
+    //     {
+    //       name: "Yoginder Singh Grewal",
+    //       role: "CIO, Hindustan Coca-Cola Beverages",
+    //       linkedin: "#",
+    //       image: "/speakers/bengaluru26/",
+    //     },
+    //     {
+    //       name: "Jignesh Vora",
+    //       role: "CDO, Muthoot Finance",
+    //       linkedin: "#",
+    //       image: "/speakers/bengaluru26/",
+    //     },
+    //     {
+    //       name: "Praveen Parihar",
+    //       role: "CISO, Razorpay",
+    //       linkedin: "#",
+    //       image: "/speakers/bengaluru26/",
+    //     },
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
   ];
-
-
+ 
 
   return (
     <section id="speakers" className="py-16 md:py-24 bg-gradient-to-br from-white via-gray-50 to-slate-100">
