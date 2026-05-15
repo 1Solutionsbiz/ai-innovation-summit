@@ -3,6 +3,12 @@ const FeaturedSpeakers = () => {
   const speakers = [
  
     {
+      name: "Kumar Nitesh",
+      role: "CEO- Ajio Business and Trends Footwear, Reliance Retail",
+      linkedin: "https://www.linkedin.com/in/kumar-nitesh1/",
+      image: "/speakers/bengaluru26/Kumar-Nitesh.jpg",
+    },
+    {
       name: "Amit Atri",
       role: "Sr. VP & Global CIO, Tata Consumer Products",
       linkedin: "https://www.linkedin.com/in/amit-atri-414797/",
@@ -51,6 +57,12 @@ const FeaturedSpeakers = () => {
       image: "/speakers/bengaluru26/Sambit-Sarangi.jpg",
     },
     {
+      name: "Akilur Rahman",
+      role: "CTO, Hitachi Energy India",
+      linkedin: "https://www.linkedin.com/in/akilurrahman/?skipRedirect=true",
+      image: "/speakers/bengaluru26/Akilur-Rahman.jpg",
+    },
+    {
       name: "Rajesh Ramachandran",
       role: "Global CDO & MD, ABB Automation",
       linkedin: "https://www.linkedin.com/in/rajeshramachandranurl/?originalSubdomain=in",
@@ -93,6 +105,12 @@ const FeaturedSpeakers = () => {
       role: "CTO, Head of AI Strategy and Business, Newgen Digital",
       linkedin: "https://www.linkedin.com/in/kumar-subramani/",
       image: "/speakers/bengaluru26/Kumar-S.jpg",
+    },
+    {
+      name: "Kuldeep Singh Tomar",
+      role: "CISO, BigBasket",
+      linkedin: "https://www.linkedin.com/in/kuldeep-t-5b21316/",
+      image: "/speakers/bengaluru26/Kuldeep-Tomar.jpg",
     },
     {
       name: "Amit Kapur",
@@ -149,6 +167,8 @@ const FeaturedSpeakers = () => {
     //       linkedin: "#",
     //       image: "/speakers/bengaluru26/",
     //     },
+
+    
  
  
  
