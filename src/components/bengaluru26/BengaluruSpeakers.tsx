@@ -136,7 +136,13 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/syed-atif-umar-819b191/",
       image: "/speakers/bengaluru26/Syed-Atif-Umar.jpg",
     },
- 
+    {
+      name: "Suvodip Chatterjee",
+      role: "Global Head of AI Data science & MLOps",
+      linkedin: "https://www.linkedin.com/in/suvodip-chatterjee-1396096/",
+      image: "/speakers/bengaluru26/Suvodip-Chatterjee.jpg",
+    },
+
     //   {
     //     name: "Sathish S Srinivasan",
     //     role: "Managing Director, CTO - Head of IT Production, BNP Paribas India Solution Pvt Ltd",
@@ -167,6 +173,12 @@ const FeaturedSpeakers = () => {
     //       linkedin: "#",
     //       image: "/speakers/bengaluru26/",
     //     },
+        {
+          name: "Sundeep Kamath",
+          role: "RVP Sales, Salesforce",
+          linkedin: "https://www.linkedin.com/in/sundeepkamath/",
+          image: "/speakers/bengaluru26/Sundeep-Kamath.jpg",
+        },
 
     
  
