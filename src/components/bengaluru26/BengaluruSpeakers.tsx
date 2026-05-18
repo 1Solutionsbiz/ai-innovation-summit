@@ -175,7 +175,7 @@ const FeaturedSpeakers = () => {
     //     },
         {
           name: "Sundeep Kamath",
-          role: "RVP Sales, Salesforce",
+          role: "Regional Vice President, Salesforce",
           linkedin: "https://www.linkedin.com/in/sundeepkamath/",
           image: "/speakers/bengaluru26/Sundeep-Kamath.jpg",
         },
