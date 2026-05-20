@@ -137,11 +137,32 @@ const FeaturedSpeakers = () => {
       image: "/speakers/bengaluru26/Syed-Atif-Umar.jpg",
     },
     {
+      name: "Ishita De",
+      role: "General Manager & Chief Information Security Officer — Diageo",
+      linkedin: "https://www.linkedin.com/in/ishita-de-cissp-pmp-a91b3640/",
+      image: "/speakers/bengaluru26/Ishita-de.jpg",
+    },
+    {
       name: "Suvodip Chatterjee",
       role: "Global Head of AI Data science & MLOps",
       linkedin: "https://www.linkedin.com/in/suvodip-chatterjee-1396096/",
       image: "/speakers/bengaluru26/Suvodip-Chatterjee.jpg",
     },
+
+	
+    {
+      name: "Nishant Chandra",
+      role: "Senior Vice President – Engineering — Angel One",
+      linkedin: "https://www.linkedin.com/in/nishantchandra/",
+      image: "/speakers/bengaluru26/Nishant-Chandra.jpg",
+    },
+    {
+      name: "Jyothi Kodenkiri",
+      role: "Vice President – Cloud Engineering — Deutsche Bank",
+      linkedin: "https://www.linkedin.com/in/jyothi-k-89bb423/",
+      image: "/speakers/bengaluru26/Jyothi-Kodenkiri.png",
+    },
+
 
     //   {
     //     name: "Sathish S Srinivasan",
@@ -173,17 +194,18 @@ const FeaturedSpeakers = () => {
     //       linkedin: "#",
     //       image: "/speakers/bengaluru26/",
     //     },
-        {
-          name: "Sundeep Kamath",
-          role: "Regional Vice President, Salesforce",
-          linkedin: "https://www.linkedin.com/in/sundeepkamath/",
-          image: "/speakers/bengaluru26/Sundeep-Kamath.jpg",
-        },
+       
 
     
  
  
  
+    {
+      name: "Sundeep Kamath",
+      role: "Regional Vice President, Salesforce",
+      linkedin: "https://www.linkedin.com/in/sundeepkamath/",
+      image: "/speakers/bengaluru26/Sundeep-Kamath.jpg",
+    },
  
  
  
