@@ -52,7 +52,7 @@ const FeaturedSpeakers = () => {
     },
     {
       name: "Sambit Sarangi",
-      role: "CTO – Tech Platform, MakeMyTrip",
+      role: "CTO - Tech Platform, MakeMyTrip",
       linkedin: "https://www.linkedin.com/in/sambitsarangi/",
       image: "/speakers/bengaluru26/Sambit-Sarangi.jpg",
     },
@@ -69,22 +69,28 @@ const FeaturedSpeakers = () => {
       image: "/speakers/bengaluru26/Rajesh-Ramachandran.jpg",
     },
     {
+      name: "Anand Das",
+      role: "Chief Digital & AI Officer: Engineering, TVS Motor Company",
+      linkedin: "https://www.linkedin.com/in/anand-das-7888a54/",
+      image: "/speakers/bengaluru26/anand-das.jpg",
+    },
+    {
       name: "Narendra Babu",
       role: "CTO, PayU",
       linkedin: "https://www.linkedin.com/in/narendra-babu-4780444/",
       image: "/speakers/bengaluru26/Narendra-Babu.jpg",
     },
     {
-      name: "Anand Das",
-      role: "Chief Digital & AI Officer: Engineering, TVS Motor Company",
-      linkedin: "https://www.linkedin.com/in/anand-das-7888a54/",
-      image: "/speakers/bengaluru26/anand-das.jpg",
+      name: "Venkatewaran Krishnamoorthy",
+      role: "CTO, Dairy Day",
+      linkedin: "https://www.linkedin.com/in/venkateswaran-krishnamoorthy-08a8044/",
+      image: "/speakers/bengaluru26/Venkateswaran-Krishnamoorthy.jpg",
     },
     // {
-    //   name: "Venkatewaran Krishnamoorthy",
-    //   role: "CTO, Dairy Day",
-    //   linkedin: "https://www.linkedin.com/in/venkateswaran-krishnamoorthy-08a8044/",
-    //   image: "/speakers/bengaluru26/Venkateswaran-Krishnamoorthy.jpg",
+    //   name: "Krishnendu Majumdar",
+    //   role: "CPTO, Yubi Group",
+    //   linkedin: "#",
+    //   image: "/speakers/bengaluru26/",
     // },
     {
       name: "Maruthy Ramgandhi",
@@ -113,22 +119,60 @@ const FeaturedSpeakers = () => {
       image: "/speakers/bengaluru26/Kuldeep-Tomar.jpg",
     },
     {
-      name: "Amit Kapur",
-      role: "VP- Applied AI, Data & Analytics, Lowe's India",
-      linkedin: "https://www.linkedin.com/in/amit-kapur-ak/",
-      image: "/speakers/bengaluru26/Amit-Kapur.jpg",
-    },
-    {
-      name: "Sivakumar Selva Ganapathy",
-      role: "Country Head, VP – India Digital/IT, Board Member of Johnson Controls GCC, Johnson Controls",
-      linkedin: "https://www.linkedin.com/in/sivakumarsg/",
-      image: "/speakers/bengaluru26/Sivakumar-Selva.jpg",
-    },
-    {
       name: "Sharmistha Chatterjee",
       role: "Vice President, Data & AI Shared Capabilities Digital Workspace, American Express",
       linkedin: "https://www.linkedin.com/in/sharmistha-chatterjee-7a186310/",
       image: "/speakers/bengaluru26/Sharmistha-Chatterjee.jpg",
+    },
+    // {
+    //   name: "Santosh Kumar",
+    //   role: "CISO, Mphasis",
+    //   linkedin: "https://www.linkedin.com/in/santoshkumarpro/",
+    //   image: "/speakers/bengaluru26/#",
+    // },
+    
+    {
+      name: "Ishita De",
+      role: "General Manager & Chief Information Security Officer — Diageo",
+      linkedin: "https://www.linkedin.com/in/ishita-de-cissp-pmp-a91b3640/",
+      image: "/speakers/bengaluru26/Ishita-de.jpg",
+    },
+    {
+      name: "Biswajit Biswas",
+      role: "Chief Data Scientist, Tata Elxsi",
+      linkedin: "https://www.linkedin.com/in/biswasbiswajit/",
+      image: "/speakers/bengaluru26/Biswajit-Biswas.jpg",
+    },
+    // {
+    //   name: "Venkataprasanna G",
+    //   role: "VP & Head- Technology Risks, HCL Tech",
+    //   linkedin: "https://www.linkedin.com/in/venkataprasannaghadamchetty/ ",
+    //   image: "/speakers/bengaluru26/#",
+    // },
+    
+    {
+      name: "Suvodip Chatterjee",
+      role: "Global Head of AI Data science & MLOps",
+      linkedin: "https://www.linkedin.com/in/suvodip-chatterjee-1396096/",
+      image: "/speakers/bengaluru26/Suvodip-Chatterjee.jpg",
+    },
+    {
+      name: "Nishant Chandra",
+      role: "Senior Vice President - Engineering — Angel One",
+      linkedin: "https://www.linkedin.com/in/nishantchandra/",
+      image: "/speakers/bengaluru26/Nishant-Chandra.jpg",
+    },
+    {
+      name: "Jyothi Kodenkiri",
+      role: "Vice President - Cloud Engineering — Deutsche Bank",
+      linkedin: "https://www.linkedin.com/in/jyothi-k-89bb423/",
+      image: "/speakers/bengaluru26/Jyothi-Kodenkiri.png",
+    },
+    {
+      name: "Anil Yadav",
+      role: "VP Engineering, HDFC Securities",
+      linkedin: "https://www.linkedin.com/in/anilyadav/",
+      image: "/speakers/bengaluru26/Anil-Yadav.jpg",
     },
     {
       name: "Syed Atif Umar",
@@ -137,51 +181,90 @@ const FeaturedSpeakers = () => {
       image: "/speakers/bengaluru26/Syed-Atif-Umar.jpg",
     },
     {
-      name: "Ishita De",
-      role: "General Manager & Chief Information Security Officer — Diageo",
-      linkedin: "https://www.linkedin.com/in/ishita-de-cissp-pmp-a91b3640/",
-      image: "/speakers/bengaluru26/Ishita-de.jpg",
+      name: "Sundareshwar Krishnamurthy",
+      role: "Partner and India Cyber leader, PwC India",
+      linkedin: "https://www.linkedin.com/in/sundareshwar/",
+      image: "/speakers/bengaluru26/Sundareshwar-Krishnamurthy.jpg",
     },
     {
-      name: "Suvodip Chatterjee",
-      role: "Global Head of AI Data science & MLOps",
-      linkedin: "https://www.linkedin.com/in/suvodip-chatterjee-1396096/",
-      image: "/speakers/bengaluru26/Suvodip-Chatterjee.jpg",
-    },
-
-	
-    {
-      name: "Nishant Chandra",
-      role: "Senior Vice President – Engineering — Angel One",
-      linkedin: "https://www.linkedin.com/in/nishantchandra/",
-      image: "/speakers/bengaluru26/Nishant-Chandra.jpg",
+      name: "Sundar Ram",
+      role: "Partner & Leader - Cloud Engineering and Data Analytics, PwC India",
+      linkedin: "https://www.linkedin.com/in/sundar-ram-9557b32/",
+      image: "/speakers/bengaluru26/Sundar-Ram.jpg",
     },
     {
-      name: "Jyothi Kodenkiri",
-      role: "Vice President – Cloud Engineering — Deutsche Bank",
-      linkedin: "https://www.linkedin.com/in/jyothi-k-89bb423/",
-      image: "/speakers/bengaluru26/Jyothi-Kodenkiri.png",
+      name: "Sreyssha George",
+      role: "Managing Director & Partner, BCG",
+      linkedin: "https://www.linkedin.com/in/sreyssha/ ",
+      image: "/speakers/bengaluru26/Sreyssha-George.jpg",
     },
+    {
+      name: "Sundeep Kamath",
+      role: "Regional Vice President, Salesforce",
+      linkedin: "https://www.linkedin.com/in/sundeepkamath/",
+      image: "/speakers/bengaluru26/Sundeep-Kamath.jpg",
+    },
+    // {
+    //   name: "Mithlesh Razdan",
+    //   role: "Director, Solution Engineering, Salesforce",
+    //   linkedin: "#",
+    //   image: "/speakers/bengaluru26/#",
+    // },
+    // {
+    //   name: "Akbar Shaikh",
+    //   role: "Partner, Deloitte",
+    //   linkedin: "#",
+    //   image: "/speakers/bengaluru26/#",
+    // },
+    // {
+    //   name: "Arjun Bhattacharyya",
+    //   role: "CTDO, Ion Exchange India",
+    //   linkedin: "#",
+    //   image: "/speakers/bengaluru26/#",
+    // },
+    // {
+    //   name: "Sathish S Srinivasan",
+    //   role: "Managing Director, CTO - Head of IT Production, BNP Paribas India Solution Pvt Ltd",
+    //   linkedin: "#",
+    //   image: "/speakers/bengaluru26/",
+    // },
+    // {
+    //   name: "Yoginder Singh Grewal",
+    //   role: "CIO, Hindustan Coca-Cola Beverages",
+    //   linkedin: "#",
+    //   image: "/speakers/bengaluru26/",
+    // },
 
 
-    //   {
-    //     name: "Sathish S Srinivasan",
-    //     role: "Managing Director, CTO - Head of IT Production, BNP Paribas India Solution Pvt Ltd",
-    //     linkedin: "#",
-    //     image: "/speakers/bengaluru26/",
-    //   },
+
+
+
+
+
+
+
+
+
+
+    // {
+    //   name: "Amit Kapur",
+    //   role: "VP- Applied AI, Data & Analytics, Lowe's India",
+    //   linkedin: "https://www.linkedin.com/in/amit-kapur-ak/",
+    //   image: "/speakers/bengaluru26/Amit-Kapur.jpg",
+    // },
+    // {
+    //   name: "Sivakumar Selva Ganapathy",
+    //   role: "Country Head, VP – India Digital/IT, Board Member of Johnson Controls GCC, Johnson Controls",
+    //   linkedin: "https://www.linkedin.com/in/sivakumarsg/",
+    //   image: "/speakers/bengaluru26/Sivakumar-Selva.jpg",
+    // },
     //  {
     //     name: "Satkeerthi M",
     //     role: "CTO- Airtel Business, Airtel Business",
     //     linkedin: "#",
     //     image: "/speakers/bengaluru26/",
     //   },
-    //     {
-    //       name: "Yoginder Singh Grewal",
-    //       role: "CIO, Hindustan Coca-Cola Beverages",
-    //       linkedin: "#",
-    //       image: "/speakers/bengaluru26/",
-    //     },
+
     //     {
     //       name: "Jignesh Vora",
     //       role: "CDO, Muthoot Finance",
@@ -200,12 +283,6 @@ const FeaturedSpeakers = () => {
  
  
  
-    {
-      name: "Sundeep Kamath",
-      role: "Regional Vice President, Salesforce",
-      linkedin: "https://www.linkedin.com/in/sundeepkamath/",
-      image: "/speakers/bengaluru26/Sundeep-Kamath.jpg",
-    },
  
  
  
