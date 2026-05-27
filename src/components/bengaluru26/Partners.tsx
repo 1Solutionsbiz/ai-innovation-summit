@@ -11,11 +11,20 @@ const partnersData = [
     logos: [{ name: "Atlassian", url: "/partners/atlassian.png" }],
     isCoPartner: true,
   },
-  // {
-  //   tier: "Agentic Enterprise Partner",
-  //   logos: [{ name: "Salesforce", url: "/partners/" }],
-  //   isCoPartner: true,
-  // },
+
+
+  {
+    tier: "Associate Partner",
+    logos: [{ name: "Snowflake", url: "/partners/Snowflake.png" }],
+    isCoPartner: true,
+  },
+  {
+    tier: "Engagement Partner",
+    logos: [{ name: "EquateMe", url: "/partners/EquateMe.png" }],
+    isCoPartner: true,
+  },
+
+
 ];
 
 const SeriesPartners = () => {

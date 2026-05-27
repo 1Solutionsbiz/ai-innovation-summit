@@ -27,7 +27,7 @@ const FeaturedSpeakers = () => {
       image: "/speakers/bengaluru26/Krishnan-Venkateswaran.jpg",
     },
     {
-      name: " Amrish Kumar Jain",
+      name: "Amrish Kumar Jain",
       role: "CIO & CISO, Tally Solutions",
       linkedin: "https://www.linkedin.com/in/amrishjain/ ",
       image: "/speakers/bengaluru26/Amrish Kumar-Jain.jpg",
@@ -80,18 +80,25 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/narendra-babu-4780444/",
       image: "/speakers/bengaluru26/Narendra-Babu.jpg",
     },
+
     {
-      name: "Venkatewaran Krishnamoorthy",
-      role: "CTO, Dairy Day",
-      linkedin: "https://www.linkedin.com/in/venkateswaran-krishnamoorthy-08a8044/",
-      image: "/speakers/bengaluru26/Venkateswaran-Krishnamoorthy.jpg",
+      name: "Krishnendu Majumdar",
+      role: "CPTO, Yubi Group",
+      linkedin: "https://www.linkedin.com/in/krishnendum",
+      image: "/speakers/bengaluru26/Krishnendu-Majumdar.jpg",
     },
     // {
-    //   name: "Krishnendu Majumdar",
-    //   role: "CPTO, Yubi Group",
+    //   name: "Sathish S Srinivasan",
+    //   role: "Managing Director, CTO - Head of IT Production, BNP Paribas India Solution Pvt Ltd",
     //   linkedin: "#",
     //   image: "/speakers/bengaluru26/",
-    // },
+    // },    
+    {
+      name: "Umesh Bude",
+      role: "CTO, Pocket FM",
+      linkedin: "https://www.linkedin.com/in/umesh-bude/",
+      image: "/speakers/bengaluru26/Umesh-Bude.jpg",
+    },
     {
       name: "Maruthy Ramgandhi",
       role: "Chief Technology Officer, SNITCH",
@@ -105,12 +112,17 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/chandanvijay/",
       image: "/speakers/bengaluru26/Chandan-Vijay.jpg",
     },
- 
     {
       name: "Kumar S",
       role: "CTO, Head of AI Strategy and Business, Newgen Digital",
       linkedin: "https://www.linkedin.com/in/kumar-subramani/",
       image: "/speakers/bengaluru26/Kumar-S.jpg",
+    },
+    {
+      name: "Siddharth Sureka",
+      role: "Chief AI Officer, Motilal Oswal Financial Services",
+      linkedin: "https://www.linkedin.com/in/siddharth-sureka/",
+      image: "/speakers/bengaluru26/Siddharth-Sureka.jpg",
     },
     {
       name: "Kuldeep Singh Tomar",
@@ -124,16 +136,15 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/sharmistha-chatterjee-7a186310/",
       image: "/speakers/bengaluru26/Sharmistha-Chatterjee.jpg",
     },
-    // {
-    //   name: "Santosh Kumar",
-    //   role: "CISO, Mphasis",
-    //   linkedin: "https://www.linkedin.com/in/santoshkumarpro/",
-    //   image: "/speakers/bengaluru26/#",
-    // },
-    
+    {
+      name: "Santosh Kumar",
+      role: "CISO, Mphasis",
+      linkedin: "https://www.linkedin.com/in/santoshkumarpro/",
+      image: "/speakers/bengaluru26/Santosh-Kumar.jpg",
+    },
     {
       name: "Ishita De",
-      role: "General Manager & Chief Information Security Officer — Diageo",
+      role: "Chief Information Security Officer - Diageo",
       linkedin: "https://www.linkedin.com/in/ishita-de-cissp-pmp-a91b3640/",
       image: "/speakers/bengaluru26/Ishita-de.jpg",
     },
@@ -143,13 +154,12 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/biswasbiswajit/",
       image: "/speakers/bengaluru26/Biswajit-Biswas.jpg",
     },
-    // {
-    //   name: "Venkataprasanna G",
-    //   role: "VP & Head- Technology Risks, HCL Tech",
-    //   linkedin: "https://www.linkedin.com/in/venkataprasannaghadamchetty/ ",
-    //   image: "/speakers/bengaluru26/#",
-    // },
-    
+    {
+      name: "Venkataprasanna G",
+      role: "VP & Head- Technology Risks, HCL Tech",
+      linkedin: "https://www.linkedin.com/in/venkataprasannaghadamchetty/ ",
+      image: "/speakers/bengaluru26/Venkataprasanna-G.jpg",
+    },    
     {
       name: "Suvodip Chatterjee",
       role: "Global Head of AI Data science & MLOps",
@@ -198,6 +208,12 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/sreyssha/ ",
       image: "/speakers/bengaluru26/Sreyssha-George.jpg",
     },
+    // {
+    //   name: "Akbar Shaikh",
+    //   role: "Partner, Deloitte",
+    //   linkedin: "#",
+    //   image: "/speakers/bengaluru26/#",
+    // },
     {
       name: "Sundeep Kamath",
       role: "Regional Vice President, Salesforce",
@@ -210,12 +226,20 @@ const FeaturedSpeakers = () => {
     //   linkedin: "#",
     //   image: "/speakers/bengaluru26/#",
     // },
-    // {
-    //   name: "Akbar Shaikh",
-    //   role: "Partner, Deloitte",
-    //   linkedin: "#",
-    //   image: "/speakers/bengaluru26/#",
-    // },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // {
     //   name: "Arjun Bhattacharyya",
     //   role: "CTDO, Ion Exchange India",
@@ -223,29 +247,17 @@ const FeaturedSpeakers = () => {
     //   image: "/speakers/bengaluru26/#",
     // },
     // {
-    //   name: "Sathish S Srinivasan",
-    //   role: "Managing Director, CTO - Head of IT Production, BNP Paribas India Solution Pvt Ltd",
-    //   linkedin: "#",
-    //   image: "/speakers/bengaluru26/",
-    // },
-    // {
     //   name: "Yoginder Singh Grewal",
     //   role: "CIO, Hindustan Coca-Cola Beverages",
     //   linkedin: "#",
     //   image: "/speakers/bengaluru26/",
     // },
-
-
-
-
-
-
-
-
-
-
-
-
+    // {
+    //   name: "Venkatewaran Krishnamoorthy",
+    //   role: "CTO, Dairy Day",
+    //   linkedin: "https://www.linkedin.com/in/venkateswaran-krishnamoorthy-08a8044/",
+    //   image: "/speakers/bengaluru26/Venkateswaran-Krishnamoorthy.jpg",
+    // },
     // {
     //   name: "Amit Kapur",
     //   role: "VP- Applied AI, Data & Analytics, Lowe's India",
