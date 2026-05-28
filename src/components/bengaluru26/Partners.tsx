@@ -11,10 +11,8 @@ const partnersData = [
     logos: [{ name: "Atlassian", url: "/partners/atlassian.png" }],
     isCoPartner: true,
   },
-
-
   {
-    tier: "Associate Partner",
+    tier: "AI Data Cloud Partner",
     logos: [{ name: "Snowflake", url: "/partners/Snowflake.png" }],
     isCoPartner: true,
   },

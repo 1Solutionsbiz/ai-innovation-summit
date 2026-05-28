@@ -144,7 +144,7 @@ const FeaturedSpeakers = () => {
     },
     {
       name: "Ishita De",
-      role: "Chief Information Security Officer - Diageo",
+      role: "Chief Information Security Officer - Diageo India",
       linkedin: "https://www.linkedin.com/in/ishita-de-cissp-pmp-a91b3640/",
       image: "/speakers/bengaluru26/Ishita-de.jpg",
     },
