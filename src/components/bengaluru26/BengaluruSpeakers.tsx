@@ -1,7 +1,13 @@
 const FeaturedSpeakers = () => {
   // 🔥 Added your full Bengaluru speakers list
   const speakers = [
- 
+
+      {
+        name: "Kunal Mehta",
+        role: "CIO, Arvind Fashions",
+        linkedin: "",
+        image: "/speakers/bengaluru26/Kunal-Mehta.jpg",
+      },
     {
       name: "Kumar Nitesh",
       role: "CEO- Ajio Business and Trends Footwear, Reliance Retail",
@@ -44,12 +50,12 @@ const FeaturedSpeakers = () => {
     //   linkedin: "#",
     //   image: "/speakers/bengaluru26/",
     // },
-    {
-      name: "Vikram Sridharan",
-      role: "Chief Digital & IT Officer, Crompton Greaves Consumer Electricals",
-      linkedin: "https://www.linkedin.com/in/sridharanvikram/",
-      image: "/speakers/bengaluru26/Vikram-Sridharan.jpg",
-    },
+    // {
+    //   name: "Vikram Sridharan",
+    //   role: "Chief Digital & IT Officer, Crompton Greaves Consumer Electricals",
+    //   linkedin: "https://www.linkedin.com/in/sridharanvikram/",
+    //   image: "/speakers/bengaluru26/Vikram-Sridharan.jpg",
+    // },
     {
       name: "Sambit Sarangi",
       role: "CTO - Tech Platform, MakeMyTrip",
@@ -64,7 +70,7 @@ const FeaturedSpeakers = () => {
     },
     {
       name: "Rajesh Ramachandran",
-      role: "Global CDO & MD, ABB Automation",
+      role: "Global Chief Digital Officer, ABB Automation",
       linkedin: "https://www.linkedin.com/in/rajeshramachandranurl/?originalSubdomain=in",
       image: "/speakers/bengaluru26/Rajesh-Ramachandran.jpg",
     },
@@ -99,13 +105,12 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/umesh-bude/",
       image: "/speakers/bengaluru26/Umesh-Bude.jpg",
     },
-    {
-      name: "Maruthy Ramgandhi",
-      role: "Chief Technology Officer, SNITCH",
-      linkedin: "https://www.linkedin.com/in/maruthy/",
-      image: "/speakers/bengaluru26/Maruthy-Ramgandhi.jpg",
-    },
- 
+    // {
+    //   name: "Maruthy Ramgandhi",
+    //   role: "Chief Technology Officer, SNITCH",
+    //   linkedin: "https://www.linkedin.com/in/maruthy/",
+    //   image: "/speakers/bengaluru26/Maruthy-Ramgandhi.jpg",
+    // },
     {
       name: "Chandan Vijay",
       role: "Global Chief Data Officer, ABB Energy Industries",
@@ -159,7 +164,7 @@ const FeaturedSpeakers = () => {
       role: "VP & Head- Technology Risks, HCL Tech",
       linkedin: "https://www.linkedin.com/in/venkataprasannaghadamchetty/ ",
       image: "/speakers/bengaluru26/Venkataprasanna-G.jpg",
-    },    
+    },
     {
       name: "Suvodip Chatterjee",
       role: "Global Head of AI Data science & MLOps",
@@ -226,6 +231,12 @@ const FeaturedSpeakers = () => {
     //   linkedin: "#",
     //   image: "/speakers/bengaluru26/#",
     // },
+    {
+      name: "Tulasi Menon",
+      role: "Head of Product, AI Strategy for Jira Service Management, Atlassian",
+      linkedin: "",
+      image: "/speakers/bengaluru26/Tulasi-Menon.jpg",
+    },
 
 
 
@@ -289,24 +300,24 @@ const FeaturedSpeakers = () => {
     //       linkedin: "#",
     //       image: "/speakers/bengaluru26/",
     //     },
-       
 
-    
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   ];
- 
+
 
   return (
     <section id="speakers" className="py-16 md:py-24 bg-gradient-to-br from-white via-gray-50 to-slate-100">
