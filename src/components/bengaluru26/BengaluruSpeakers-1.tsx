@@ -44,6 +44,18 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/ashleydsouza/ ",
       image: "/speakers/bengaluru26/Ashley-Dsouza.jpg",
     },
+    // {
+    //   name: "Dhivya Kumar Bansal",
+    //   role: "CDTO, Diageo",
+    //   linkedin: "#",
+    //   image: "/speakers/bengaluru26/",
+    // },
+    // {
+    //   name: "Vikram Sridharan",
+    //   role: "Chief Digital & IT Officer, Crompton Greaves Consumer Electricals",
+    //   linkedin: "https://www.linkedin.com/in/sridharanvikram/",
+    //   image: "/speakers/bengaluru26/Vikram-Sridharan.jpg",
+    // },
     {
       name: "Rohit Kilam",
       role: "CTO, HDFC Life ",
@@ -81,6 +93,12 @@ const FeaturedSpeakers = () => {
       image: "/speakers/bengaluru26/Krishnendu-Majumdar.jpg",
     },
     // {
+    //   name: "Anand Das",
+    //   role: "Chief Digital & AI Officer: Engineering, TVS Motor Company",
+    //   linkedin: "https://www.linkedin.com/in/anand-das-7888a54/",
+    //   image: "/speakers/bengaluru26/anand-das.jpg",
+    // },
+    // {
     //   name: "Sathish S Srinivasan",
     //   role: "Managing Director, CTO - Head of IT Production, BNP Paribas India Solution Pvt Ltd",
     //   linkedin: "#",
@@ -92,6 +110,12 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/umesh-bude/",
       image: "/speakers/bengaluru26/Umesh-Bude.jpg",
     },
+    // {
+    //   name: "Maruthy Ramgandhi",
+    //   role: "Chief Technology Officer, SNITCH",
+    //   linkedin: "https://www.linkedin.com/in/maruthy/",
+    //   image: "/speakers/bengaluru26/Maruthy-Ramgandhi.jpg",
+    // },
     {
       name: "Chandan Vijay",
       role: "Global Chief Data Officer, ABB Energy Industries",
@@ -200,30 +224,30 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/sreyssha/ ",
       image: "/speakers/bengaluru26/Sreyssha-George.jpg",
     },
-      // {
-      //   name: "Akbar Shaikh",
-      //   role: "Partner, Deloitte",
-      //   linkedin: "",
-      //   image: "/speakers/bengaluru26/#",
-      // },
-      // {
-      //   name: "Rajat Gupta",
-      //   role: "Managing Director, BCG",
-      //   linkedin: "",
-      //   image: "/speakers/bengaluru26/#",
-      // },
-    {
-      name: "Anuj Kumar",
-      role: "Partner, KPMG",
-      linkedin: "",
-      image: "/speakers/bengaluru26/Anuj-Kumar.jpg",
-    },
-    {
-      name: "Pramod Singh",
-      role: "Expert Associate Partner, Advanced Analytics Group, Bain & Company",
-      linkedin: "",
-      image: "/speakers/bengaluru26/Pramod-Singh.jpg",
-    },
+      {
+        name: "Akbar Shaikh",
+        role: "Partner, Deloitte",
+        linkedin: "",
+        image: "/speakers/bengaluru26/#",
+      },
+      {
+        name: "Rajat Gupta",
+        role: "Managing Director, BCG",
+        linkedin: "",
+        image: "/speakers/bengaluru26/#",
+      },
+      {
+        name: "Anuj Kumar",
+        role: "Partner, KPMG",
+        linkedin: "",
+        image: "/speakers/bengaluru26/#",
+      },
+      {
+        name: "Pramod Singh",
+        role: "Expert Associate Partner, Advanced Analytics Group, Bain & Company",
+        linkedin: "",
+        image: "/speakers/bengaluru26/#",
+      },
     {
       name: "Sundeep Kamath",
       role: "Regional Vice President, Salesforce",
