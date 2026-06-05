@@ -24,23 +24,23 @@ const partnersData = [
     isCoPartner: true,
   },
   {
-    tier: "AI Data Cloud Partner",
-    logos: [
-      {
-        name: "Snowflake",
-        url: "/partners/Snowflake.png",
-        link: "https://www.snowflake.com/en/",
-      },
-    ],
-    isCoPartner: true,
-  },
-  {
     tier: "Cyber Resilience Partner",
     logos: [
       {
         name: "Cohesity",
         url: "/partners/cohesity.png",
         link: "https://www.cohesity.com/",
+      },
+    ],
+    isCoPartner: true,
+  },
+  {
+    tier: "AI Data Cloud Partner",
+    logos: [
+      {
+        name: "Snowflake",
+        url: "/partners/Snowflake.png",
+        link: "https://www.snowflake.com/en/",
       },
     ],
     isCoPartner: true,
@@ -84,9 +84,8 @@ const SeriesPartners = () => {
           {partnersData.map((partner, index) => (
             <div
               key={index}
-              className={`py-6 pt-0 opacity-0 animate-fade-in-up animation-delay-${
-                400 + index * 200
-              }`}
+              className={`py-6 pt-0 opacity-0 animate-fade-in-up animation-delay-${400 + index * 200
+                }`}
             >
               <p className="text-xl text-center mb-4 tracking-wide d26pb10 text-gray-700 uppercase">
                 {partner.tier}
@@ -105,11 +104,10 @@ const SeriesPartners = () => {
                     <img
                       src={logo.url}
                       alt={logo.name}
-                      className={`object-contain del26plo ${
-                        partner.isCoPartner ? "h-20" : "h-16"
-                      } ${logo.name
-                        .toLowerCase()
-                        .replace(/\s+/g, "-")}`}
+                      className={`object-contain del26plo ${partner.isCoPartner ? "h-20" : "h-16"
+                        } ${logo.name
+                          .toLowerCase()
+                          .replace(/\s+/g, "-")}`}
                       loading="lazy"
                     />
                   </a>

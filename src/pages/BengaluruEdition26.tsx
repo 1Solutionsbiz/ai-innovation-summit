@@ -1,3 +1,6 @@
+import ScrollToHash from "@/components/ScrollToHash";
+
+
 import Navigation from "@/components/bengaluru26/Navigation";
 import HeroBanner from "@/components/bengaluru26/HeroBanner";
 import WhiteStrip from "@/components/newhome/WhiteStrip";
@@ -39,6 +42,8 @@ import BengaluruSpeakers from "@/components/bengaluru26/BengaluruSpeakers";
 const DelhiEditionNew = () => {
   return (
     <div className="min-h-screen">
+       <ScrollToHash />
+       
       <Navigation />
       <HeroBanner />
       <WhiteStrip />
