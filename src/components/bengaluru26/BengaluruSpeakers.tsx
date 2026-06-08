@@ -21,6 +21,12 @@ const FeaturedSpeakers = () => {
       image: "/speakers/bengaluru26/Amit.jpg",
     },
     {
+      name: "Dhivya Kumar Bansal",
+      role: "CDTO, Diageo India",
+      linkedin: "https://www.linkedin.com/in/dhivya-kumar-bansal/",
+      image: "/speakers/bengaluru26/Dhivya-Kumar-Bansal.jpg",
+    },
+    {
       name: "Sudeep Dey",
       role: "CIO & CISO, Aster DM Healthcare",
       linkedin: "https://www.linkedin.com/in/deysudeep/",
@@ -105,6 +111,12 @@ const FeaturedSpeakers = () => {
       image: "/speakers/bengaluru26/Kumar-S.jpg",
     },
     {
+      name: "Shashi Mohan Singh",
+      role: "CDO, Reliance Consumer Products",
+      linkedin: "https://www.linkedin.com/in/shashi-mohan-singh-13a9344/",
+      image: "/speakers/bengaluru26/Shashi-Mohan-Singh.jpg",
+    },
+    {
       name: "Siddharth Sureka",
       role: "Chief AI Officer, Motilal Oswal Financial Services",
       linkedin: "https://www.linkedin.com/in/siddharth-sureka/",
@@ -176,12 +188,12 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/syed-atif-umar-819b191/",
       image: "/speakers/bengaluru26/Syed-Atif-Umar.jpg",
     },
-    // {
-    //   name: "Sruti Sivaraman",
-    //   role: "Head of Engineering Automation, Nokia",
-    //   linkedin: "",
-    //   image: "/speakers/bengaluru26/",
-    // },
+    {
+      name: "Sruti Sivaraman",
+      role: "Head of Engineering Automation, Nokia",
+      linkedin: "https://www.linkedin.com/in/sruti-sivaraman/",
+      image: "/speakers/bengaluru26/Sruti-Sivaraman.jpg",
+    },
     {
       name: "Sundareshwar Krishnamurthy",
       role: "Partner and India Cyber leader, PwC India",
@@ -200,12 +212,12 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/sreyssha/ ",
       image: "/speakers/bengaluru26/Sreyssha-George.jpg",
     },
-      // {
-      //   name: "Akbar Shaikh",
-      //   role: "Partner, Deloitte",
-      //   linkedin: "",
-      //   image: "/speakers/bengaluru26/#",
-      // },
+    {
+      name: "Akbar Ali Shaikh",
+      role: "Partner - Autonomous Finance, Deloitte",
+      linkedin: "https://www.linkedin.com/in/akbar-ali-shaikh-2b182137?originalSubdomain=in",
+      image: "/speakers/bengaluru26/Akbar-Ali-Shaikh.jpg",
+    },
       // {
       //   name: "Rajat Gupta",
       //   role: "Managing Director, BCG",
@@ -214,15 +226,21 @@ const FeaturedSpeakers = () => {
       // },
     {
       name: "Anuj Kumar",
-      role: "Partner, KPMG",
+      role: "Partner, KPMG India",
       linkedin: "",
       image: "/speakers/bengaluru26/Anuj-Kumar.jpg",
     },
+    // {
+    //   name: "Pramod Singh",
+    //   role: "Expert Associate Partner, Advanced Analytics Group, Bain & Company",
+    //   linkedin: "",
+    //   image: "/speakers/bengaluru26/Pramod-Singh.jpg",
+    // },
     {
-      name: "Pramod Singh",
-      role: "Expert Associate Partner, Advanced Analytics Group, Bain & Company",
-      linkedin: "",
-      image: "/speakers/bengaluru26/Pramod-Singh.jpg",
+      name: "Divyansh Nasa",
+      role: "Partner, EY Parthenon India, EY India",
+      linkedin: "https://www.linkedin.com/in/divyanshnasa/",
+      image: "/speakers/bengaluru26/Divyansh-Nasa.jpg",
     },
     {
       name: "Sundeep Kamath",
