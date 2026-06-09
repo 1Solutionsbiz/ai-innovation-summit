@@ -3,6 +3,12 @@ const FeaturedSpeakers = () => {
   const speakers = [
 
     {
+      name: "Dr. N. Manjula",
+      role: "IAS, Hon'ble Secretary to Government, Department of Electronics, IT, BT and S&T, Government of Karnataka ",
+      linkedin: "",
+      image: "/speakers/bengaluru26/Dr-N-Manjula.jpg",
+    },
+    {
       name: "Kunal Mehta",
       role: "CIO, Arvind Fashions",
       linkedin: "https://www.linkedin.com/in/kunal-mehta-1377516/",
@@ -85,13 +91,7 @@ const FeaturedSpeakers = () => {
       role: "CPTO, Yubi Group",
       linkedin: "https://www.linkedin.com/in/krishnendum",
       image: "/speakers/bengaluru26/Krishnendu-Majumdar.jpg",
-    },
-    // {
-    //   name: "Sathish S Srinivasan",
-    //   role: "Managing Director, CTO - Head of IT Production, BNP Paribas India Solution Pvt Ltd",
-    //   linkedin: "#",
-    //   image: "/speakers/bengaluru26/",
-    // },    
+    },    
     {
       name: "Umesh Bude",
       role: "CTO, Pocket FM",
@@ -218,30 +218,30 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/akbar-ali-shaikh-2b182137?originalSubdomain=in",
       image: "/speakers/bengaluru26/Akbar-Ali-Shaikh.jpg",
     },
-      // {
-      //   name: "Rajat Gupta",
-      //   role: "Managing Director, BCG",
-      //   linkedin: "",
-      //   image: "/speakers/bengaluru26/#",
-      // },
+    // {
+    //   name: "Rajat Gupta",
+    //   role: "Managing Director, BCG",
+    //   linkedin: "",
+    //   image: "/speakers/bengaluru26/",
+    // },
     {
       name: "Anuj Kumar",
       role: "Partner, KPMG India",
       linkedin: "",
       image: "/speakers/bengaluru26/Anuj-Kumar.jpg",
     },
-    // {
-    //   name: "Pramod Singh",
-    //   role: "Expert Associate Partner, Advanced Analytics Group, Bain & Company",
-    //   linkedin: "",
-    //   image: "/speakers/bengaluru26/Pramod-Singh.jpg",
-    // },
     {
       name: "Divyansh Nasa",
       role: "Partner, EY Parthenon India, EY India",
       linkedin: "https://www.linkedin.com/in/divyanshnasa/",
       image: "/speakers/bengaluru26/Divyansh-Nasa.jpg",
     },
+    // {
+    //   name: "S Sathish",
+    //   role: "Partner and National Sector Leader- Industrial Manufacturing, KPMG India",
+    //   linkedin: "",
+    //   image: "/speakers/bengaluru26/",
+    // },
     {
       name: "Sundeep Kamath",
       role: "Regional Vice President, Salesforce",
@@ -254,6 +254,32 @@ const FeaturedSpeakers = () => {
       linkedin: "https://www.linkedin.com/in/tulasi-menon-08b5aa26/",
       image: "/speakers/bengaluru26/Tulasi-Menon.jpg",
     },
+
+    
+    // {
+    //   name: "Rohan Pagey",
+    //   role: "Regional Vice President Sales, Salesforce",
+    //   linkedin: "",
+    //   image: "/speakers/bengaluru26/",
+    // },
+    // {
+    //   name: "Bhaskar Bose",
+    //   role: "Senior Manager Sales, Salesforce",
+    //   linkedin: "",
+    //   image: "/speakers/bengaluru26/",
+    // },
+    // {
+    //   name: "Rajiv Garg",
+    //   role: "Speialist Solution Engineer, Salesforce",
+    //   linkedin: "",
+    //   image: "/speakers/bengaluru26/",
+    // },
+    // {
+    //   name: "Sumit Sharma",
+    //   role: "Director, Solution Engineering, Salesforce",
+    //   linkedin: "",
+    //   image: "/speakers/bengaluru26/",
+    // },
 
     
 
