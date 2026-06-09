@@ -262,12 +262,12 @@ const FeaturedSpeakers = () => {
     //   linkedin: "",
     //   image: "/speakers/bengaluru26/",
     // },
-    // {
-    //   name: "Bhaskar Bose",
-    //   role: "Senior Manager Sales, Salesforce",
-    //   linkedin: "",
-    //   image: "/speakers/bengaluru26/",
-    // },
+    {
+      name: "Bhaskar Bose",
+      role: "Senior Manager Sales, Salesforce",
+      linkedin: "",
+      image: "/speakers/bengaluru26/Bhaskar-Bose.jpg",
+    },
     // {
     //   name: "Rajiv Garg",
     //   role: "Speialist Solution Engineer, Salesforce",

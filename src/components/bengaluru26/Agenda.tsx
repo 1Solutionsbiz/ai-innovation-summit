@@ -23,40 +23,45 @@ const AgendaNew = () => {
 
   const agendaData = [
     {
-      time: "08:30 – 09:30 AM",
+      time: "08:30 – 09:15 AM",
       title: "Registration & Networking Breakfast",
       description: "",
     },
     {
-      time: "09:30 – 09:45 AM",
+      time: "09:15 – 09:20 AM",
       title: "Welcome Address ",
       description: "",
     },
     {
-      time: "09:45 – 10:00 AM ",
+      time: "09:20 – 09:35 AM ",
       title: "Opening Address: The Autonomous Enterprise: Engineering the Shift",
-      description: " <ul> <li>Enterprise AI is entering its third wave—from experimentation and copilots to autonomous systems executing workflows and decisions. </li> <li>While 70%+ CIOs run AI pilots, fewer than 25% have scaled AI into mission-critical production.</li><li>The real challenge now is architecture, governance, and economic viability.</li><li>This opening address explores the shift from AI augmentation to AI autonomy—and what it takes to build AI-native enterprises.</li></ul> <b>Speaker :</b> \nKunal Mehta, CIO, Arvind Fashions",
+      description: " <ul> <li>Enterprise AI is entering its third wave—from experimentation and copilots to autonomous systems executing workflows and decisions.  </li> <li>While 70%+ CIOs run AI pilots, fewer than 25% have scaled AI into mission-critical production. </li><li>The real challenge now is architecture, governance, and economic viability. </li><li>This opening address explores the shift from AI augmentation to AI autonomy—and what it takes to build AI-native enterprises. </li></ul> <b>Speaker :</b> \nKunal Mehta, CIO, Arvind Fashions ",
     },
     {
-      time: "10:00 – 10:15 AM ",
+      time: "09:35 – 09:50 AM ",
       title: "Partner Keynote Address: The Agentic Enterprise: Where Humans and AI Agents Drive Customer Success Together",
-      description: "Explore what it means to become an Agentic Enterprise where humans and AI agents work together to drive customer success. \n <b>Speaker :</b> \nSundeep Kamath, RVP Sales, Salesforce ",
+      description: "Explore what it means to become an Agentic Enterprise where humans and AI agents work together to drive customer success. \n <b>Speaker :</b> \nSundeep Kamath, Regional Vice President, Salesforce ",
     },
-    // {
-    //   time: "10:00 – 10:15 AM ",
-    //   title: "Partner Keynote Address: Build and Govern the Agentic Enterprise",
-    //   description: "This Partner keynote explores the architecture and governance frameworks required to build safe, enterprise-grade agentic systems. \n <b>Speaker :</b> \nSundeep Kamath, RVP Sales, Salesforce ",
-    // },
     {
-      time: "10:15 – 11:00 AM ",
+      time: "09:50 – 10:15 AM ",
+      title: "Inaugural Address: Guest of Honour ",
+      description: "  \n <b>Speaker :</b> \n Dr. N. Manjula, IAS, Hon’ble Secretary to Government, Department of Electronics, IT, BT and S&T, Government of Karnataka ",
+    },
+    {
+      time: "10:15 – 10:30 AM ",
+      title: "Tea & Coffee Break and Interactive Sponsor Booth Visit",
+      description: " ",
+    },
+    {
+      time: "10:30 – 11:00 AM ",
 
       title: "Session 1: Panel Discussion From Prototype to Production: The Economics of Enterprise AI",
-      description: "<ul><li>Enterprise AI success depends on economics, not just innovation. </li><li> 80%+ of AI initiatives stall due to GPU costs, infrastructure complexity, integration challenges, unclear ROI, and vendor lock-in. </li><li>Poorly architected AI workloads can raise cloud costs by 20–40%. </li><li> This panel explores AI FinOps, infrastructure optimization, model lifecycle management, and scaling AI sustainably.</li></ul> Moderator: Rajat Gupta, Managing Director, BCG Speakers: \n<b>Speakers : </b>\nAmit Atri, Sr. VP & Global Chief Information Officer, Tata Consumer Products \n Amrish Kumar Jain, CIO & CISO, Tally Solutions \nSudeep Dey, CIO & CISO, Aster DM Healthcare \nDhivya Kumar Bansal, CDTO, Diageo ",
+      description: "<ul><li>Enterprise AI success depends on economics, not just innovation. </li><li> 80%+ of AI initiatives stall due to GPU costs, infrastructure complexity, integration challenges, unclear ROI, and vendor lock-in. </li><li>Poorly architected AI workloads can raise cloud costs by 20–40%. </li><li> This panel explores AI FinOps, infrastructure optimization, model lifecycle management, and scaling AI sustainably.</li></ul> Moderator: Rajat Gupta, Managing Director, BCG \n<b>Speakers : </b>\nAmit Atri, Sr. VP & Global Chief Information Officer, Tata Consumer Products \n Dhivya Kumar Bansal, CDTO, Diageo India\n Amrish Kumar Jain, CIO & CISO, Tally Solutions \nSudeep Dey, CIO & CISO, Aster DM Healthcare ",
     },
     {
       time: "11:00 – 11:10 AM  ",
       title: "Partner Keynote Address",
-      description: "Enabling the Autonomous Enterprise \n <b>Speaker :</b> \nTulasi Menon, Head of Product, AI Strategy for Jira Service Management, Atlassian",
+      description: "Enabling the Autonomous Enterprise \n <b>Speaker :</b> \nTulasi Menon, Head of Product, AI Strategy for Jira Service Management, Atlassian ",
     },
     {
       time: "11:10 – 11:55 AM",
@@ -66,7 +71,7 @@ const AgendaNew = () => {
     {
       time: "11:55 – 12:20 PM ",
       title: "Executive Panel: The Connected Intelligence Gap:",
-      description: "What Separates AI That Demos Well from AI That Delivers\n <b>Speakers :</b> \nRohit Kilam, CTO, HDFC life \nTulasi Menon, Head of Product, AI Strategy for Jira Service Management, Atlassian ",
+      description: "What Separates AI That Demos Well from AI That Delivers\n <b>Moderator :</b> \nJothi Kumar, Global Sales Leader - Emerging Regions / APAC, Atlassian   \n <b>Speakers :</b> \nRohit Kilam, CTO, HDFC life \nTulasi Menon, Head of Product, AI Strategy for Jira Service Management, Atlassian ",
     },
     {
       time: "12:20 – 12:50 PM ",
@@ -86,25 +91,30 @@ const AgendaNew = () => {
     {
       time: "02:15 – 03:30 PM ",
       title: "Spotlight Parallel Tracks",
-      description: "<strong>Track A: BFSI / FinTech</strong> <br><br> <p>Autonomous Financial Systems</p> <br> <ul><li>Financial services are one of the most AI-intensive sectors, powering use cases from fraud detection to credit risk modelling.</li><li>While AI improves fraud detection by 20-40%, regulatory scrutiny and legacy system integration remain key challenges.</li><li>This track explores AI in regulated environments, small language models, risk and compliance automation, and AI-enabled core banking modernization.</li><li>Focus on building financial AI systems that balance innovation with governance and auditability.</li></ul> <br><b>Moderator:</b> <ul><li>Akbar Ali Shaikh, Partner - Autonomous Finance, Deloitte</li></ul> <br><b>Speakers :</b> <ul><li>Krishnendu Majumdar, CPTO, Yubi Group</li><li>Nishant Chandra, SVP Engineering, Angel One</li><li>Jyothi Kodenkiri, VP- Cloud Engineering, Deutsche Bank</li><li>Anil Yadav, VP Engineering, HDFC Securities</li></ul>                                                                         \n <strong>Track B: Customer Experience</strong> <br><br> <p>Autonomous Customer Platforms</p><br><ul><li>AI-powered agents are transforming customer experience by handling interactions, generating content, and predicting intent in real time.</li><li>AI-driven contact centers can reduce operational costs by 25-30% while improving speed and personalization.</li><li>Scaling AI in CX requires solving data fragmentation, omni-channel orchestration, bias, and ROI measurement.</li><li>This track focuses on building scalable, secure, and measurable AI-driven customer platforms.</li></ul><br> <b>Speakers :</b> <br><ul><li>Siddharth Sureka, Chief AI Officer, Motilal Oswal Financial Services</li><li>Ashley D’Souza, Chief Digital Officer, Hindustan Coca-Cola Beverages </li><li>Kumar S, Chief Technology Officer, Head of AI Strategy and Business, Newgen Digital</li><li>Umesh Bude, CTO, Pocket FM</li><li>Rohan Pagey, Regional Vice President Sales, Salesforce</li></ul>                                                                                           \n <strong>Track C: Manufacturing / Digital Twins</strong> <br><br> <p>Autonomous Industrial Systems</p><br><ul><li>Manufacturing is adopting AI-driven digital twins and predictive systems to optimize operations.</li><li>AI-powered predictive maintenance can reduce downtime by up to 30% and maintenance costs by 10-20%.</li><li>Industrial AI requires edge computing, secure IoT infrastructure, and cross-system interoperability.</li><li>This track explores how AI is embedded into industrial systems and supply chains to enable autonomous production environments.</li></ul><br> <b>Speakers :</b> <br><ul><li>Chandan Vijay, Global Chief Data Officer, ABB Energy Industries </li><li>Akilur Rahman, CTO, Hitachi Energy India </li><li>Shashi Mohan Singh, CDO, Reliance Consumers</li></ul>",
+      description: "<strong>Track A: BFSI / FinTech</strong> <br><br> <p>Autonomous Financial Systems</p> <br> <ul><li>Financial services are one of the most AI-intensive sectors, powering use cases from fraud detection to credit risk modelling.</li><li>While AI improves fraud detection by 20-40%, regulatory scrutiny and legacy system integration remain key challenges.</li><li>This track explores AI in regulated environments, small language models, risk and compliance automation, and AI-enabled core banking modernization.</li><li>Focus on building financial AI systems that balance innovation with governance and auditability.</li></ul> <br><b>Moderator:</b> <ul><li>Akbar Ali Shaikh, Partner - Autonomous Finance, Deloitte</li></ul> <br><b>Speakers :</b> <ul><li>Krishnendu Majumdar, CPTO, Yubi Group</li><li>Nishant Chandra, SVP Engineering, Angel One</li><li>Jyothi Kodenkiri, VP- Cloud Engineering, Deutsche Bank</li><li>Anil Yadav, VP Engineering, HDFC Securities</li></ul>                                                                         \n <strong>Track B: Customer Experience (45 Minutes)</strong> <br><br> <p>Autonomous Customer Platforms</p><br><ul><li>AI-powered agents are transforming customer experience by handling interactions, generating content, and predicting intent in real time.</li><li>AI-driven contact centers can reduce operational costs by 25-30% while improving speed and personalization.</li><li>Scaling AI in CX requires solving data fragmentation, omni-channel orchestration, bias, and ROI measurement.</li><li>This track focuses on building scalable, secure, and measurable AI-driven customer platforms.</li></ul><br><b>Moderator:</b> <ul><li>Sundar Ram, Partner & Leader - Cloud Engineering and Data Analytics, PwC India </li></ul><br> <b>Speakers :</b> <br><ul><li>Siddharth Sureka, Chief AI Officer, Motilal Oswal Financial Services</li><li>Ashley D’Souza, Chief Digital Officer, Hindustan Coca-Cola Beverages </li><li>Kumar S, Chief Technology Officer, Head of AI Strategy and Business, Newgen Digital</li><li>Umesh Bude, CTO, Pocket FM</li><li>Rohan Pagey, Regional Vice President Sales, Salesforce</li></ul>  <br><b>Keynote Address:</b> <ul><li>Grow customer relationships with Agentic Marketing (15 Minutes) </li></ul><br> <b>Speaker:</b> <ul><li>Bhaskar Bose, Senior Manager Sales, Salesforce</li></ul><br><b>Keynote Address:</b> <ul><li> Agentforce Service: Powering Connected Customer Experiences (15 Minutes) </li></ul><br><b>Speaker: </b> <ul><li>Rajiv Garg, Specialist Solution Engineer, Salesforce </li></ul><br>                                                                                              \n <strong>Track C: Manufacturing / Digital Twins </strong> <br><br> <p>Autonomous Industrial Systems</p><br><ul><li>Manufacturing is adopting AI-driven digital twins and predictive systems to optimize operations.</li><li>AI-powered predictive maintenance can reduce downtime by up to 30% and maintenance costs by 10-20%.</li><li>Industrial AI requires edge computing, secure IoT infrastructure, and cross-system interoperability.</li><li>This track explores how AI is embedded into industrial systems and supply chains to enable autonomous production environments.</li></ul><br>   <b>Moderator:</b> <br><ul><li>S Sathish, Partner and National Sector Leader- Industrial Manufacturing, KPMG India </li></ul> <br>    <b>Speakers :</b> <br><ul><li>Chandan Vijay, Global Chief Data Officer, ABB Energy Industries </li><li>Akilur Rahman, CTO, Hitachi Energy India </li><li>Shashi Mohan Singh, CDO, Reliance Consumer Products </li></ul>",
     },
     {
       time: "03:30 – 03:45 PM",
-      title: "Executive Transition Break ",
+      title: "Transition Break",
       description: "",
     },
     {
-      time: "03:45 – 04:30 PM ",
+      time: "03:45 – 04:00 PM",
+      title: "Partner Keynote Address",
+      description: "Cyber Resilience: The foundation of AI- Powered Business Transformation  <br> <br>   <b>Speakers :</b> <br>\n Lalan Prasad, Solution Architect, Cohesity India & SAARC",
+    },
+    {
+      time: "04:00 – 04:45 PM ",
       title: "Session 5: Panel Discussion -Cyber Security in the Autonomous Enterprise  ",
       description: "<p>Defending the AI-Native Enterprise</p> <br> <ul><li>As AI becomes embedded in enterprise workflows, new security risks are emerging.</li><li>Key threats include model poisoning, prompt injection, data leakage via LLMs, and manipulation of autonomous systems.</li><li>Security leaders are seeing a rise in AI-related threat vectors across organizations.</li><li>This session explores how to design AI systems that are secure by architecture, not by afterthought.</li></ul>Moderator: Sundareshwar Krishnamurthy, Partner and India Cyber leader, PwC India \n <b>Speakers :</b> \nKuldeep Singh Tomar, CISO, BigBasket \nSantosh Kumar, SVP & CISO, Mphasis \nIshita De, CISO, Diageo India \nVenkataprasanna G., VP & Head- Technology Risks, HCLTech",
     },
     {
-      time: "04:30 – 05:15 PM ",
+      time: "04:45 – 05:30 PM ",
       title: "Session 6: Panel Discussion - Cross-Industry Power Conversation ",
-      description: "Engineering Competitive Advantage Through AI \n <ul><li>Enterprises that scale AI effectively are achieving faster decision cycles, higher efficiency, and deeper customer personalization.</li><li>However, scaling AI autonomy requires strong governance, engineering maturity, economic discipline, and leadership alignment. </li><li>This closing conversation reflects the day’s insights and what distinguishes AI adopters from true AI leaders.</li></ul> \n <b>Speakers :</b> \nShashi Mohan Singh, CDO, Reliance Consumer Products  \nSruti Sivaraman, Head of Engineering Automation, Nokia",
+      description: "Engineering Competitive Advantage Through AI \n <ul><li>Enterprises that scale AI effectively are achieving faster decision cycles, higher efficiency, and deeper customer personalization.</li><li>However, scaling AI autonomy requires strong governance, engineering maturity, economic discipline, and leadership alignment. </li><li>This closing conversation reflects the day’s insights and what distinguishes AI adopters from true AI leaders.</li></ul> \n <b>Moderator: Anuj Kumar, Partner, Data & AI, KPMG India \n <b>Speakers :</b> \nShashi Mohan Singh, CDO, Reliance Consumer Products  \nSruti Sivaraman, Head of Engineering Automation, Nokia",
     },
     {
-      time: "05:15 – 05:30 PM ",
+      time: "05:30 – 05:45 PM ",
       title: "Closing & Hi-Tea",
       description: "",
     },
