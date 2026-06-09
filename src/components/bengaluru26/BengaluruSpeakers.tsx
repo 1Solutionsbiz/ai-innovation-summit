@@ -22,7 +22,7 @@ const FeaturedSpeakers = () => {
     },
     {
       name: "Amit Atri",
-      role: "Sr. VP & Global CIO, Tata Consumer Products",
+      role: "	Sr. VP & Global Chief Information Officer, Tata Consumer Products",
       linkedin: "https://www.linkedin.com/in/amit-atri-414797/",
       image: "/speakers/bengaluru26/Amit.jpg",
     },
@@ -40,7 +40,7 @@ const FeaturedSpeakers = () => {
     },
     {
       name: "Krishnan Venkateswaran",
-      role: "CDIO, Titan Company",
+      role: "Chief Digital & Information Officer, Titan Company",
       linkedin: "",
       image: "/speakers/bengaluru26/Krishnan-Venkateswaran.jpg",
     },
@@ -76,7 +76,7 @@ const FeaturedSpeakers = () => {
     },
     {
       name: "Rajesh Ramachandran",
-      role: "Global Chief Digital Officer, ABB Automation",
+      role: "Global Chief Digital Officer & MD, ABB Automation",
       linkedin: "https://www.linkedin.com/in/rajeshramachandranurl/",
       image: "/speakers/bengaluru26/Rajesh-Ramachandran.jpg",
     },
@@ -142,7 +142,7 @@ const FeaturedSpeakers = () => {
     },
     {
       name: "Ishita De",
-      role: "Chief Information Security Officer - Diageo India",
+      role: "CISO, Diageo India",
       linkedin: "https://www.linkedin.com/in/ishita-de-cissp-pmp-a91b3640/",
       image: "/speakers/bengaluru26/Ishita-de.jpg",
     },
@@ -160,19 +160,19 @@ const FeaturedSpeakers = () => {
     },
     {
       name: "Suvodip Chatterjee",
-      role: "Global Head of AI Data science & MLOps",
+      role: "Global Head of AI Data science & MLOps, Signify",
       linkedin: "https://www.linkedin.com/in/suvodip-chatterjee-1396096/",
       image: "/speakers/bengaluru26/Suvodip-Chatterjee.jpg",
     },
     {
       name: "Nishant Chandra",
-      role: "Senior Vice President - Engineering — Angel One",
+      role: "SVP Engineering, Angel One",
       linkedin: "https://www.linkedin.com/in/nishantchandra/",
       image: "/speakers/bengaluru26/Nishant-Chandra.jpg",
     },
     {
       name: "Jyothi Kodenkiri",
-      role: "Vice President - Cloud Engineering — Deutsche Bank",
+      role: "VP Cloud Engineering, Deutsche Bank",
       linkedin: "https://www.linkedin.com/in/jyothi-k-89bb423/",
       image: "/speakers/bengaluru26/Jyothi-Kodenkiri.png",
     },
@@ -214,7 +214,7 @@ const FeaturedSpeakers = () => {
     },
     {
       name: "Akbar Ali Shaikh",
-      role: "Partner - Autonomous Finance, Deloitte",
+      role: "Partner, Deloitte",
       linkedin: "https://www.linkedin.com/in/akbar-ali-shaikh-2b182137?originalSubdomain=in",
       image: "/speakers/bengaluru26/Akbar-Ali-Shaikh.jpg",
     },
@@ -256,30 +256,42 @@ const FeaturedSpeakers = () => {
     },
 
     
-    // {
-    //   name: "Rohan Pagey",
-    //   role: "Regional Vice President Sales, Salesforce",
-    //   linkedin: "",
-    //   image: "/speakers/bengaluru26/",
-    // },
+    {
+      name: "Rohan Pagey",
+      role: "Regional Vice President Sales, Salesforce",
+      linkedin: "",
+      image: "/speakers/bengaluru26/Rohan-Pagey.jpg",
+    },
     {
       name: "Bhaskar Bose",
       role: "Senior Manager Sales, Salesforce",
       linkedin: "",
       image: "/speakers/bengaluru26/Bhaskar-Bose.jpg",
     },
+    {
+      name: "Rajiv Garg",
+      role: "Speialist Solution Engineer, Salesforce",
+      linkedin: "",
+      image: "/speakers/bengaluru26/Rajiv-Garg.jpg",
+    },
+    {
+      name: "Sumit Sharma",
+      role: "Director, Solution Engineering, Salesforce",
+      linkedin: "",
+      image: "/speakers/bengaluru26/Sumit-Sharma.jpg",
+    },
     // {
-    //   name: "Rajiv Garg",
-    //   role: "Speialist Solution Engineer, Salesforce",
+    //   name: "Lalan Prasad",
+    //   role: "Solution Architect, Cohesity India & SAARC",
     //   linkedin: "",
     //   image: "/speakers/bengaluru26/",
     // },
-    // {
-    //   name: "Sumit Sharma",
-    //   role: "Director, Solution Engineering, Salesforce",
-    //   linkedin: "",
-    //   image: "/speakers/bengaluru26/",
-    // },
+    {
+      name: "Jothi Kumar",
+      role: "Global Sales Leader - Emerging Regions / APAC, Atlassian",
+      linkedin: "",
+      image: "/speakers/bengaluru26/Jothi-Kumar.jpg",
+    },
 
     
 
