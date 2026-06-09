@@ -230,12 +230,12 @@ const FeaturedSpeakers = () => {
       linkedin: "",
       image: "/speakers/bengaluru26/Anuj-Kumar.jpg",
     },
-    {
-      name: "Divyansh Nasa",
-      role: "Partner, EY Parthenon India, EY India",
-      linkedin: "https://www.linkedin.com/in/divyanshnasa/",
-      image: "/speakers/bengaluru26/Divyansh-Nasa.jpg",
-    },
+    // {
+    //   name: "Divyansh Nasa",
+    //   role: "Partner, EY Parthenon India, EY India",
+    //   linkedin: "https://www.linkedin.com/in/divyanshnasa/",
+    //   image: "/speakers/bengaluru26/Divyansh-Nasa.jpg",
+    // },
     // {
     //   name: "S Sathish",
     //   role: "Partner and National Sector Leader- Industrial Manufacturing, KPMG India",
