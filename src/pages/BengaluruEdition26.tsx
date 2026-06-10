@@ -28,6 +28,7 @@ import ContactDetails from "@/components/newhome/ContactDetails";
 import AboutTheGuild from "@/components/newhome/AboutTheGuild";
 
 import { BengaluruJune26RegisterForm } from "@/components/BengaluruJune26RegisterForm";
+import RegistrationFormClosedform from "@/components/RegistrationFormClosed";
 
 import Footer from "@/components/newhome/Footer";
 
@@ -68,8 +69,8 @@ const DelhiEditionNew = () => {
       <AboutTheGuild />
       
       <section id="bengalururegistrationform" ></section>
-      <BengaluruJune26RegisterForm />
-      {/* <RegistrationFormClosedform /> */}
+      {/* <BengaluruJune26RegisterForm /> */}
+      <RegistrationFormClosedform />
       
       <Footer />
     </div>

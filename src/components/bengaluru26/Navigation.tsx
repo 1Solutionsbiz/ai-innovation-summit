@@ -95,7 +95,7 @@ const Navigation = () => {
                 className="text-white hover:scale-105 transition-all duration-300 text-sm px-4 py-2 rounded-[5px] font-semibold tracking-wide shadow-lg hover:shadow-xl"
                 style={{ background: "#bf1c88" }}
               >
-                Register Now 
+                Registration Closed 
               </a>
 
             </div>
