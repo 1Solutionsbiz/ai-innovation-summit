@@ -5,7 +5,7 @@ import Navigation from "@/components/bengaluru26/Navigation";
 import HeroBanner from "@/components/bengaluru26/HeroBanner";
 import WhiteStrip from "@/components/newhome/WhiteStrip";
 import Highlights from "@/components/bengaluru26/Highlights";
-import Socailwall from "@/components/newhome/Socailwall";
+import Socailwall from "@/components/bengaluru26/Socailwall";
 import Overview from "@/components/bengaluru26/Overview";
 import WhatAwaits from "@/components/bengaluru26/WhatAwaits";
 import FocusAreas from "@/components/newhome/FocusAreas";

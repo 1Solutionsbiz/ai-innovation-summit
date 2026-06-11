@@ -60,8 +60,8 @@ const AgendaNew = () => {
     },
     {
       time: "11:00 – 11:10 AM  ",
-      title: "Partner Keynote Address",
-      description: "Enabling the Autonomous Enterprise \n <b>Speaker :</b> \nTulasi Menon, Head of Product, AI Strategy for Jira Service Management, Atlassian ",
+      title: "Partner Keynote Address: The AI ROI Illusion: why teams struggle to prove AI impact",
+      description: "<b>Speaker :</b> \nTulasi Menon, Head of Product, AI Strategy for Jira Service Management, Atlassian ",
     },
     {
       time: "11:10 – 11:55 AM",
