@@ -38,11 +38,7 @@ const ScrollToHash = () => {
 };
 
 export const Header = ({
-<<<<<<< HEAD
   isRegistrationActive = false,
-=======
-  isRegistrationActive = true,
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
   registrationButtonName = "Register Now",
   disabledButtonName = "Registration Closed",
 }: HeaderProps) => {
@@ -106,13 +102,9 @@ export const Header = ({
           </button>
         ))}
 
-<<<<<<< HEAD
       
         
         {/* <div 
-=======
-        <div 
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
           className="relative flex flex-col items-center"
           onMouseEnter={() => handleDropdownHover("upcoming")}
           onMouseLeave={handleDropdownLeave}
@@ -125,15 +117,6 @@ export const Header = ({
           </button>
           {(openDropdown === "upcoming" || hoverDropdown === "upcoming") && (
             <div className={`absolute ${isMobile ? 'left-1/2 transform -translate-x-1/2' : 'left-0'} mt-2 w-56 bg-dark-lighter border border-neon-purple/20 shadow-lg z-10`}>
-<<<<<<< HEAD
-=======
-              {/* <Link
-                to="/bangalore-2025"
-                className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors"
-              >
-               Bengaluru Edition 2025
-              </Link> */}
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
               <Link
                 to="/delhi-ncr-2025"
                 className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors"
@@ -142,12 +125,8 @@ export const Header = ({
               </Link>
             </div>
           )}
-<<<<<<< HEAD
         </div> */}
         
-=======
-        </div>
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
 
         <div 
           className="relative flex flex-col items-center"
@@ -163,7 +142,6 @@ export const Header = ({
           {(openDropdown === "previous" || hoverDropdown === "previous") && (
             <div className={`absolute ${isMobile ? 'left-1/2 transform -translate-x-1/2' : 'left-0'} mt-2 w-56 bg-dark-lighter border border-neon-purple/20 shadow-lg z-10`}>
               <Link
-<<<<<<< HEAD
                 to="/previous/delhi-2026"
                 className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors"
               >
@@ -176,8 +154,6 @@ export const Header = ({
                 Bengaluru Edition 2025
               </Link>
               <Link
-=======
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
                 to="/previous/mumbai-2025"
                 className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors"
               >
@@ -196,17 +172,10 @@ export const Header = ({
                 Bengaluru Edition 2024
               </Link>
               <Link
-<<<<<<< HEAD
                 to="/previous/delhi-ncr-2024"
                 className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors"
               >
                 Delhi NCR Edition 2024
-=======
-                to="/previous/gurugram-2024"
-                className="block px-4 py-2 hover:bg-dark hover:text-neon-blue transition-colors"
-              >
-                Gurugram Edition 2024
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
               </Link>
             </div>
           )}

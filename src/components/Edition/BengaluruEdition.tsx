@@ -14,10 +14,7 @@ import WatchDemand from "./DemadVideos";
 import { PastEventHero } from "./PastEventHero";
 import { useEffect } from "react";
 
-<<<<<<< HEAD
 import PastPartners from "@/components/PastPartners";
-=======
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
 
 
 const sections = [
@@ -168,11 +165,7 @@ const BengaluruEdition = () => {
         subheading=""
         date="7th November 2024, Bengaluru"
       />
-<<<<<<< HEAD
       <PastHighlights videoSrc="/videos/Yt_promo_10_sept.mp4" />
-=======
-      <PastHighlights videoSrc="/videos/Post_Event_Montage.mp4" />
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
 
       <Objectives />
       <StatsSection
@@ -199,12 +192,9 @@ const BengaluruEdition = () => {
 
       <LeaderQuotes quotes={quotesData} />
       <WatchDemand {...section} />
-<<<<<<< HEAD
 
       <PastPartners />
 
-=======
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
       <Agenda items={agendaData} />
       <Footer socialLinks={socialLinks} />
     </div>

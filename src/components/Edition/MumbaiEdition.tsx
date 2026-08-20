@@ -7,10 +7,7 @@ import Objectives from "./Objectives";
 import StatsSection from "./StatsSection";
 import SpeakersSection from "./SpeakersSection";
 
-<<<<<<< HEAD
 import PastPartners from "@/components/PastPartners";
-=======
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
 
 import ShouldAttend from "../ShouldAttend";
 import LeaderQuotes from "./LeaderQuotes";
@@ -114,11 +111,7 @@ const MumbaiEdition = () => {
         subheading="Unlocking the Future: Navigating the Confluence of Cloud and AI"
         date="5th June 2024, Mumbai"
       />
-<<<<<<< HEAD
       <PastHighlights videoSrc="/videos/Yt_promo_10_sept.mp4" />
-=======
-      <PastHighlights videoSrc="/videos/Post_Event_Montage.mp4" />
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
 
       <Objectives />
       <StatsSection
@@ -140,11 +133,8 @@ const MumbaiEdition = () => {
 
       <SpeakersSection speakers={speakers} />
 
-<<<<<<< HEAD
       <PastPartners />
       
-=======
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
       <ShouldAttend />
 
       <LeaderQuotes quotes={quotesData} />

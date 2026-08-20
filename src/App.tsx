@@ -13,13 +13,9 @@ import MumbaiEdition from "./components/Edition/MumbaiEdition";
 import BengaluruEdition from "./components/Edition/BengaluruEdition";
 import GurugramEdition from "./components/Edition/GurugramEdition";
 import WatchOnDemand from "./pages/WatchOnDemand";
-<<<<<<< HEAD
 import BengaluruEdition26 from "./pages/BengaluruEdition26";
 import SinghaniyaTest from "./pages/SinghaniyaTest";
 import DelhiEditionNew from "./pages/DelhiEditionNew";
-=======
-import DelhiEdition from "./pages/DelhiEdition";
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
 import BangaloreEdition from "./pages/BangaloreEdition";
 import ScrollManager from "./components/ScrollManager";
 
@@ -54,7 +50,6 @@ const App: React.FC = () => (
         />
         <Route path="/partner-form" element={<PartnerForm />} />
         {/* Public site routes */}
-<<<<<<< HEAD
         <Route path="/" element={<BengaluruEdition26 />} />
         <Route path="/agenda-registration-form" element={<SinghaniyaTest />} />
 
@@ -65,15 +60,6 @@ const App: React.FC = () => (
         <Route path="/previous/delhi-ncr-2024" element={<GurugramEdition />} />
         <Route path="/watch-on-demand" element={<WatchOnDemand />} />
         <Route path="/previous/mumbai-2025" element={<Index />} />
-=======
-        <Route path="/" element={<BangaloreEdition/>} />
-        <Route path="/previous/mumbai-2024" element={<MumbaiEdition />} />
-        <Route path="/previous/bangalore-2024" element={<BengaluruEdition />} />
-        <Route path="/previous/gurugram-2024" element={<GurugramEdition />} />
-        <Route path="/watch-on-demand" element={<WatchOnDemand />} />
-        <Route path="/previous/mumbai-2025" element={<Index />} />
-        <Route path="/delhi-ncr-2025" element={<DelhiEdition />} />
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
         <Route path="/code-of-conduct" element={<CodeOfConduct />} />

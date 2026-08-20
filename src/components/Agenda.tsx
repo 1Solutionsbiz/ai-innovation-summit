@@ -108,11 +108,7 @@ const Agenda: React.FC<AgendaProps> = ({ items, eventDetails }) => {
       <div className="max-w-7xl mx-auto w-full box-border">
         <h2
           id="agenda-heading"
-<<<<<<< HEAD
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold  mb-6 text-center uppercase tracking-widest font-orbitron"
-=======
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 text-center uppercase tracking-widest font-orbitron"
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
         >
           Event Agenda
         </h2>

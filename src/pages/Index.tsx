@@ -14,11 +14,7 @@ import { Features } from "@/components/Features";
 import AudienceProfile from "@/components/AudienceProfile";
 import Agenda, { AgendaItem } from "@/components/Agenda"; // Import Agenda and AgendaItem type
 import { PartnershipCTA } from "@/components/PartnershipCTA";
-<<<<<<< HEAD
 import DemandVideoHome from "@/components/DemandVideoHome2025";
-=======
-import DemandVideoHome from "@/components/DemandVideoHome";
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
 import { useEffect } from "react";
 import { Speakers } from "@/components/Speakers";
 import { MUMBAI_SPEAKERS } from "@/data/mumbaiSpeakers";
@@ -164,16 +160,10 @@ const Index = () => {
       }} />
 
       <KeyTheme />
-<<<<<<< HEAD
       <PastHighlights videoSrc="/videos/Yt_promo_10_sept.mp4" />
 
       <DemandVideoHome />
       
-=======
-      <PastHighlights videoSrc="/videos/mumbai-edition-montage.mp4" />
-
-      <DemandVideoHome />
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
       <PartnershipCTA />
       <ShouldAttend />
       <WhoShouldSponsor />

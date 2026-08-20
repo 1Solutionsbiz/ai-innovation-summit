@@ -73,12 +73,8 @@ export const BengaloreRegisterForm: React.FC = () => {
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
 
   const industries = ["Media & Entertainment", "Retail", "Manufacturing", "Automotive", "Telecom", "Ecommerce", "Oil & Gas", "IT", "Healthcare", "Real Estate", "Other"];
-<<<<<<< HEAD
   // const employeeSizes = ["0-100", "100-200", "200-300", "300-400", "400-500", "500-1000", "1000-5000", "5000+"];
   const employeeSizes = ["0-500","500-2000","2000-5000","5000-10000","10000+"];
-=======
-  const employeeSizes = ["0-100", "100-200", "200-300", "300-400", "400-500", "500-1000", "1000-5000", "5000+"];
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
 
   useEffect(() => {
     const queryParams = new URLSearchParams(window.location.search);
@@ -162,12 +158,7 @@ export const BengaloreRegisterForm: React.FC = () => {
       delete payload.officialEmail;
       // delete payload.personalEmail;
       delete payload.phoneNumber;
-<<<<<<< HEAD
       
-=======
-
-
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
       const resp = await axios.post(
         "https://olive-elk-842602.hostingersite.com/api/bangalore-registers",
         payload,
@@ -179,14 +170,10 @@ export const BengaloreRegisterForm: React.FC = () => {
       //   payload,
       //   { headers: { "Content-Type": "application/json" } }
       // );
-<<<<<<< HEAD
       
       // setSuccessMessage(resp.data.message || "Thank You for Registering – Pending Confirmation. You will receive a confirmation email once your registration is approved.");
       alert("Thank You for Registering – Pending Confirmation. You will receive a confirmation email once your registration is approved.");
 
-=======
-      setSuccessMessage(resp.data.message || "Thank You for Registering – Pending Confirmation. You will receive a confirmation email once your registration is approved.");
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
       setFormData({
         name: "",
         designation: "",
@@ -273,7 +260,6 @@ export const BengaloreRegisterForm: React.FC = () => {
           {[
             { name: "name", label: "Name" },
             { name: "designation", label: "Designation" },
-<<<<<<< HEAD
             { name: "organization", label: "Organization" },
             // { name: "phoneNumber", label: "Phone Number" },
             // { name: "officialEmail", label: "Official Email" },
@@ -317,16 +303,6 @@ export const BengaloreRegisterForm: React.FC = () => {
             { name: "officialEmail", label: "Official Email" },
             { name: "phoneNumber", label: "Phone Number" },
             { name: "city", label: "City" },
-=======
-
-            { name: "organization", label: "Organization" },
-            { name: "phoneNumber", label: "Phone Number" },
-
-            { name: "officialEmail", label: "Official Email" },
-            // { name: "personalEmail", label: "Personal Email (optional)" },
-            { name: "city", label: "City" },
-
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
             { name: "pincode", label: "Pincode" }
           ].map(field => (
             <div key={field.name}>
@@ -344,10 +320,7 @@ export const BengaloreRegisterForm: React.FC = () => {
             </div>
           ))}
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
           {/* Industry */}
           <div>
             <label className="block mb-1 font-semibold font-orbitron">Industry</label>
@@ -363,7 +336,6 @@ export const BengaloreRegisterForm: React.FC = () => {
             {errors.industry && <p className="text-red-400 text-sm mt-1">{errors.industry}</p>}
           </div>
 
-<<<<<<< HEAD
           {/* date of birth  */}
           <div>
 
@@ -397,24 +369,6 @@ export const BengaloreRegisterForm: React.FC = () => {
 
 
             {/*             
-=======
-          {/* Employee Size */}
-          <div>
-            <label className="block mb-1 font-semibold font-orbitron">Employee Size</label>
-            <select
-              name="employeeSize"
-              value={formData.employeeSize}
-              onChange={handleChange}
-              className="w-full border border-gray-300 rounded px-3 py-2 text-black"
-            >
-              <option value="">Select Size</option>
-              {employeeSizes.map(size => <option key={size} value={size}>{size}</option>)}
-            </select>
-            {errors.employeeSize && <p className="text-red-400 text-sm mt-1">{errors.employeeSize}</p>}
-          </div>
-          {/* date of birth  */}
-          <div>
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
             <label className="block mb-1 font-semibold font-orbitron">Date of Birth</label>
             <input
               type="date"
@@ -423,13 +377,9 @@ export const BengaloreRegisterForm: React.FC = () => {
               onChange={handleChange}
               max={maxDob} // ✅ limit date to 18+ years only
               className="w-full border border-gray-300 rounded px-3 py-2 text-black"
-<<<<<<< HEAD
             /> */}
 
 
-=======
-            />
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
             {errors.dob && (
               <p className="text-red-400 text-sm mt-1">{errors.dob}</p>
             )}
@@ -543,7 +493,6 @@ export const BengaloreRegisterForm: React.FC = () => {
         </form>
       </div>
     </section>
-<<<<<<< HEAD
 
 // <section className="bg-black p-10 md:p-40" id="register">
 //   <div className="bg-black font-orbitron text-neon-blue rounded-lg text-center text-4xl md:text-6xl font-bold shadow-lg mx-auto">
@@ -551,7 +500,5 @@ export const BengaloreRegisterForm: React.FC = () => {
 //   </div>
 // </section>
 
-=======
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
   );
 };

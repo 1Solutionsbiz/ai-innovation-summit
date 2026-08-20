@@ -6,14 +6,9 @@ import "keen-slider/keen-slider.min.css";
 const logos = [
   "/sponsers/microsoft.png",
   "/sponsers/snowflake.png",
-<<<<<<< HEAD
   "/sponsers/xboom.png",
   "/sponsers/slack.png",
   "/sponsers/atlassian.png"
-=======
-  "/sponsers/xboom.png",,
-  "/sponsers/slack.png"
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
 ];
 
 const PastPartners: React.FC = () => {
@@ -34,11 +29,7 @@ const PastPartners: React.FC = () => {
   return (
     <section className="py-16 bg-black">
       <h2 className="text-5xl sm:text-6xl md:text-7xl font-orbitron text-gradient font-bold text-center mb-16">
-<<<<<<< HEAD
         Series Partners
-=======
-        Past Partners
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
       </h2>
 
       <div ref={sliderRef} className="keen-slider px-4">

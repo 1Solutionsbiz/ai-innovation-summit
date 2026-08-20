@@ -3,11 +3,7 @@
 export const BENGALURU_SPEAKERS = [
    {
     name: "Bhargab Dutta",
-<<<<<<< HEAD
     role: "Chief Digital Officer, Century Plyboards",
-=======
-    role: "Chief Digital Officer, Century Plyboard",
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
     linkedin: "https://www.linkedin.com/in/bhargabd/",
     image: "/speakers/bengaluru/bhargab.png",
   },
@@ -23,7 +19,6 @@ export const BENGALURU_SPEAKERS = [
     linkedin: "https://www.linkedin.com/in/rejins/",
     image: "/speakers/bengaluru/rejin.png",
   },
-<<<<<<< HEAD
   {
     name: "Anand V",
     role: "Chief Information Officer, APAC - Randstad",
@@ -239,8 +234,3 @@ export const BENGALURU_SPEAKERS = [
 
 
 
-=======
- 
-
-];
->>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
