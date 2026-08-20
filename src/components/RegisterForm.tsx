@@ -136,12 +136,15 @@ export const Register: React.FC = () => {
         { headers: { "Content-Type": "application/json" } }
       );
 
+<<<<<<< HEAD
       // const resp = await axios.post(
       //   "http://127.0.0.1:8000/api/register",
       //   payload,
       //   { headers: { "Content-Type": "application/json" } }
       // );
 
+=======
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
       alert(resp.data.message || "Thank You for Registering – Pending Confirmation. You will receive a confirmation email once your registration is approved. ");
       setFormData({
         name: "",

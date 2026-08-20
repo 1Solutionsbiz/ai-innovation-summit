@@ -12,12 +12,20 @@ import LeaderQuotes from "./LeaderQuotes";
 import WatchDemand from "./DemadVideos";
 import { PastEventHero } from "./PastEventHero";
 import { useEffect } from "react";
+<<<<<<< HEAD
 import PastPartners from "@/components/PastPartners";
+=======
+
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
 
 
 const sections = [
   {
+<<<<<<< HEAD
     city: 'Delhi NCR 2024',
+=======
+    city: 'Gurugram',
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
     imageName: 'gurugram',
     videoLinks: [
       'https://www.youtube.com/watch?v=nNL8q-FzTJY',
@@ -110,7 +118,10 @@ const GurugramEdition = () => {
 
       <SpeakersSection speakers={speakers} />
 
+<<<<<<< HEAD
       <PastPartners />
+=======
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
 
       <WatchDemand {...section} />
       <LeaderQuotes quotes={quotesData} />

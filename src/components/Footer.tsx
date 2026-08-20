@@ -86,10 +86,17 @@ export const Footer = ({ socialLinks }) => {
                 or
                 &nbsp;
                 <a
+<<<<<<< HEAD
                   href="mailto:surbhi@guildlive.com"
                   className="text-neon-blue hover:underline"
                 >
                   surbhi@guildlive.com
+=======
+                  href="mailto:nishant.batra@guildlive.com"
+                  className="text-neon-blue hover:underline"
+                >
+                  nishant.batra@guildlive.com
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
                 </a>
               </p>
 
@@ -97,10 +104,17 @@ export const Footer = ({ socialLinks }) => {
               <p>
                 Email at{" "}
                 <a
+<<<<<<< HEAD
                   href="partnership@guildlive.com"
                   className="text-neon-blue hover:underline"
                 >
                   partnership@guildlive.com
+=======
+                  href="mailto:annu@guildlive.com"
+                  className="text-neon-blue hover:underline"
+                >
+                  annu@guildlive.com
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
                 </a>
               </p>
             </div>

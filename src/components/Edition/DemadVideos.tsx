@@ -9,6 +9,7 @@ interface WatchDemandProps {
 
 const WatchDemand: React.FC<WatchDemandProps> = ({ city, imageName, videoLinks }) => {
   return (
+<<<<<<< HEAD
     // <div
     //   className="bg-black text-white text-center z-10 transition-all duration-300 pb-40 pt-120"
     //   style={{ top: '30px' }}
@@ -21,6 +22,13 @@ const WatchDemand: React.FC<WatchDemandProps> = ({ city, imageName, videoLinks }
         className="text-2xl sm:text-3xl md:text-4xl font-bold pb-10 font-orbitron leading-tight"
         id={city.replace(/\s+/g, "-").toLowerCase()}
        >
+=======
+    <div
+      className="bg-black text-white text-center z-10 transition-all duration-300 pb-40 pt-120"
+      style={{ top: '30px' }}
+    >
+       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold pb-10 font-orbitron leading-tight">
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
         Watch On Demand Session - {city}
       </h2>
 

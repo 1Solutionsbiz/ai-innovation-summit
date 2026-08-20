@@ -138,14 +138,20 @@ export const PartnerSectionForm: React.FC = () => {
         payload,
         { headers: { "Content-Type": "application/json" } }
       );
+<<<<<<< HEAD
 
+=======
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
       // const resp = await axios.post(
       //   "http://127.0.0.1:8000/api/partner-register",
       //   payload,
       //   { headers: { "Content-Type": "application/json" } }
       // );
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
       alert(resp.data.message || "Thank You for your registration. We will reach out to you shortly.");
 
       setFormData(prev => ({
@@ -189,7 +195,11 @@ export const PartnerSectionForm: React.FC = () => {
     <section className="w-full bg-gray-900 py-[200px] px-4">
       <div className="max-w-3xl mx-auto bg-gray-800 p-8 rounded-md shadow-md">
         <h2 className="text-4xl font-bold mb-6 text-center text-gradient font-orbitron">
+<<<<<<< HEAD
           Express your interest to Partner
+=======
+          Register to Partner with Us
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
         </h2>
 
         <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full" noValidate>

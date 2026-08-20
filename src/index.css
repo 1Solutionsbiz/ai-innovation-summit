@@ -148,6 +148,7 @@
 }
 .pb-40{
   padding-bottom: 40px!important;
+<<<<<<< HEAD
 }
 
 
@@ -175,4 +176,6 @@
       display: flex;
     flex-direction: column;
     align-items: center;
+=======
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
 }

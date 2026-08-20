@@ -35,6 +35,7 @@ interface Registration {
 const fetchRegistrations = async (): Promise<Registration[]> => {
   const token = localStorage.getItem('token') || '';
   console.log(token);
+<<<<<<< HEAD
 
   const resp = await axios.get('https://olive-elk-842602.hostingersite.com/api/registration', {
     headers: { Authorization: `Bearer ${token}` },
@@ -44,6 +45,11 @@ const fetchRegistrations = async (): Promise<Registration[]> => {
   //   headers: { Authorization: `Bearer ${token}` },
   // });
   
+=======
+  const resp = await axios.get('https://olive-elk-842602.hostingersite.com/api/registration', {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
   return resp.data.data;
 };
 

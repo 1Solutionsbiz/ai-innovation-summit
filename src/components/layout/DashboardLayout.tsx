@@ -11,12 +11,16 @@ const DashboardLayout: React.FC = () => {
 
   const logoutMutation = useMutation({
     mutationFn: async () => {
+<<<<<<< HEAD
       
+=======
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
       await axios.post(
         'https://olive-elk-842602.hostingersite.com/api/logout',
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
+<<<<<<< HEAD
       
       // await axios.post(
       //   'http://127.0.0.1:8000/api/logout',
@@ -24,6 +28,8 @@ const DashboardLayout: React.FC = () => {
       //   { headers: { Authorization: `Bearer ${token}` } }
       // );
 
+=======
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
     },
     onSuccess: () => {
       localStorage.removeItem('token');
@@ -93,13 +99,18 @@ const DashboardLayout: React.FC = () => {
             </li>
                <li>
               <Link
+<<<<<<< HEAD
                 to="bengaluru-registration-form"
+=======
+                to="bengalore-registration-form"
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
                 className="block py-2 px-2 hover:bg-gray-700 rounded text-gray-200 font-orbitron"
                 onClick={() => setIsSidebarOpen(false)}
               >
                 Bengaluru Registration Form
               </Link>
             </li>
+<<<<<<< HEAD
                {/* <li>
               <Link
                 to="delhi1-registration-form"
@@ -109,6 +120,8 @@ const DashboardLayout: React.FC = () => {
                 Delhi Registration Form
               </Link>
             </li> */}
+=======
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
           </ul>
         </nav>
         <button

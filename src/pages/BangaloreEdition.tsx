@@ -16,8 +16,12 @@ import { PartnershipCTA } from "@/components/PartnershipCTA";
 import DemandVideoHome from "@/components/DemandVideoHome";
 import { useEffect } from "react";
 import { BengaloreRegisterForm } from "@/components/BengaloreRegisterForm";
+<<<<<<< HEAD
 import RegistrationClosed from "@/components/RegistrationClosed";
 import PastPartnersSpnser from "@/components/PastPartnersSpnser";
+=======
+import ShortAgenda from "@/components/ShortAgenda";
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
 import PastPartners from "@/components/PastPartners";
 import { Speakers } from "@/components/Speakers";
 import { BENGALURU_SPEAKERS } from "@/data/bengaluruSpeakers";
@@ -37,6 +41,7 @@ const agendaData: AgendaItem[] = [
     color: "blue",
   },
   {
+<<<<<<< HEAD
     time: "09:45 – 10:00 AM",
     title: "Keynote Address: The India AI Story: Scaling Innovation with Purpose",
     description: "India is shaping a purposeful AI narrative—balancing innovation with scale, ethics, and impact. This keynote outlines the nation’s strategic edge in AI adoption, homegrown capabilities, and its role in global AI leadership. Speaker: • Amit Atri, Global CIO, Tata Consumer Products",
@@ -125,6 +130,48 @@ const agendaData: AgendaItem[] = [
     title: "Closing Note & Call to Action",
     description: " ",
     color: "purple",
+=======
+    time: "09:45 – 10:15 AM",
+    title: "Keynote Address: The India AI Story: Scaling Innovation with Purpose",
+    description: "India is shaping a purposeful AI narrative—balancing innovation with scale, ethics, and impact. This keynote outlines the nation's strategic edge in AI adoption, homegrown capabilities, and its role in global AI leadership.",
+    color: "purple",
+  },
+  {
+    time: "10:15 – 11:00 AM",
+    title: "Session 1: Architecting AI-First Enterprises – From Cloud to Culture",
+    description: "A focused discussion on how leading enterprises is reimagining their architecture, infrastructure, and culture to become truly AI-first. From cloud-native foundations to data pipelines and workforce readiness, this session unveils the strategic blueprint to scale AI responsibly.",
+    color: "blue",
+  },
+  {
+    time: "11:00 – 11:15 AM",
+    title: "Tea / Coffee Break",
+    description: "",
+    color: "purple",
+  },
+  {
+    time: "11:15 – 12:00 PM",
+    title: "Session 2: CXO Fireside Chat- The CEO-CIO Playbook for Disruptive Growth",
+    description: "A candid conversation decodes how visionary CEOs and CIOs align technology, strategy, and culture to unlock non-linear growth. From AI bets to agile reinvention—discover leadership lessons from the frontlines of enterprise transformation.",
+    color: "blue",
+  },
+  {
+    time: "12:00 – 12:45 PM",
+    title: "Session 3: Agentic Automation – Beyond GenAI to Self-Driving Workflows",
+    description: "Move beyond prompt-based AI to autonomous, self-learning workflows. Industry leaders discuss how agentic automation is redefining enterprise operations, boosting decision velocity, and reshaping business processes in a world where AI can act, decide, and evolve.",
+    color: "purple",
+  },
+  {
+    time: "12:45 – 01:30 PM",
+    title: "Session 4: Data, AI & the New Age of Business Intelligence",
+    description: "This session examines how leading enterprises leverage AI-driven analytics to enhance business intelligence. Panelists will cover data strategies, predictive and prescriptive analytics, and the transformation of traditional BI functions into proactive, intelligent decision-support systems.",
+    color: "blue",
+  },
+  {
+    time: "01:30 – 02:30 PM",
+    title: "Networking Lunch",
+    description: "",
+    color: "purple",
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
   }
 ];
 const shortAgendaData1: AgendaItem[] = [
@@ -159,6 +206,7 @@ const shortAgendaData2: AgendaItem[] = [
 ];
 
 const shortAgendaData3: AgendaItem[] = [
+<<<<<<< HEAD
   // {
   //   time: "01:45 – 02:30 PM",
   //   title: "Networking Lunch",
@@ -195,6 +243,38 @@ const shortAgendaData3: AgendaItem[] = [
   //   description: " ",
   //   color: "purple",
   // }
+=======
+  {
+    time: "02:30 – 03:15 PM",
+    title: "Session 5: Securing the AI Stack: Cybersecurity in the Age of GenAI",
+    description: "This session examines the cybersecurity implications of widespread Generative AI adoption. Panelists will address critical security concerns, risks associated with AI-generated code and data, and best practices to ensure secure and responsible deployment of AI across enterprise IT infrastructures.",
+    color: "purple",
+  },
+  {
+    time: "03:15 – 04:00 PM",
+    title: "Session 6: GCC Leaders on Global AI Delivery from India",
+    description: "Global Capability Centers (GCCs) are driving enterprise AI innovation at scale from India. This session gathers GCC heads to discuss delivery models, talent strategy, and India's growing leadership in building global AI platforms from the ground up.",
+    color: "blue",
+  },
+  {
+    time: "04:00 – 04:45 PM",
+    title: "Session 7: AI Readiness Across Industries: What's Working, What's Not",
+    description: "This session presents an industry-focused discussion featuring experiences from the manufacturing, BFSI, retail, and pharma sectors. Panelists will highlight successful approaches, common pitfalls, and practical recommendations for building AI readiness and maturity across diverse organizational contexts.",
+    color: "purple",
+  },
+  {
+    time: "04:45 – 05:00 PM",
+    title: "Closing Note & Call to Action",
+    description: "",
+    color: "blue",
+  },
+  {
+    time: "05:00 – 07:00 PM",
+    title: "Networking & CXO Mixer",
+    description: "Unwind and connect over cocktails in a casual CXO-only networking environment.",
+    color: "purple",
+  }
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
 ];
 const socialLinks = {
   linkedin: "https://www.linkedin.com/showcase/guild-ai-innovation-summit/about/?viewAsMember=true",
@@ -218,7 +298,11 @@ const BangaloreEdition = () => {
         date="3 September 2025 | The Leela Palace, Bengaluru"
 
         stats={[
+<<<<<<< HEAD
           { value: "30+", label: "Speakers" },
+=======
+          { value: "25+", label: "Speakers" },
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
           { value: "8+", label: "Hrs" },
           { value: "200+", label: "Attendees" },
         ]}
@@ -228,6 +312,7 @@ const BangaloreEdition = () => {
       <About />
       <MovingStrip color="bg-neon-blue" />
       <KeyPoints />
+<<<<<<< HEAD
 
       <div className="bengspekr">
         <Speakers data={BENGALURU_SPEAKERS} />
@@ -244,6 +329,14 @@ const BangaloreEdition = () => {
 
       <PastPartners />
 
+=======
+      <Speakers data={BENGALURU_SPEAKERS} />
+      <div className="text-center bg-black text-white mt-[-50px] pb-[50px] text-2xl md:text-3xl lg:text-4xl font-orbitron underline underline-offset-4 decoration-white ">
+        AND<span className="text-gradient font-bold"> MORE</span> 
+      </div>
+
+      <PastPartners />
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
       {/* Include the Agenda component with agendaData as prop */}
       <Agenda items={agendaData} eventDetails={{
         date: "03 September 2025 ",
@@ -254,6 +347,7 @@ const BangaloreEdition = () => {
 
 
 
+<<<<<<< HEAD
 
 
 
@@ -261,25 +355,46 @@ const BangaloreEdition = () => {
       {/* <div className="bg-black text-white p-4 "> */}
       {/* Common Header */}
       {/* <div className="text-center">
+=======
+      <div className="bg-black text-white p-4 ">
+        {/* Common Header */}
+        <div className="text-center">
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
           <h1 className="text-neon-purple font-bold text-2xl md:text-3xl font-orbitron">
             02:30 – 04:00 PM | AI in Action: Sector-Focused & Thematic Parallel Tracks
           </h1>
           <p className="mt-2">These sessions will run in parallel across different halls</p>
+<<<<<<< HEAD
         </div> */}
 
       {/* Parallel Tracks - Side by Side */}
       {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 px-10"> */}
       {/* Track 1 */}
       {/* <div className="border border-gray-700 p-4 ">
+=======
+        </div>
+
+        {/* Parallel Tracks - Side by Side */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 px-10">
+          {/* Track 1 */}
+          <div className="border border-gray-700 p-4 ">
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
             <h3 className="font-bold text-lg text-center font-orbitron text-neon-blue">
               Track 1: Fintech & Financial Services Innovation
             </h3>
             <p className="text-center mb-4">Shaping the Future of BFSI with AI & Automation</p>
             <ShortAgenda items={shortAgendaData1} />
+<<<<<<< HEAD
           </div> */}
 
       {/* Track 2 */}
       {/* <div className="border border-gray-700 p-4 ">
+=======
+          </div>
+
+          {/* Track 2 */}
+          <div className="border border-gray-700 p-4 ">
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
             <h3 className="font-bold text-lg text-center font-orbitron text-neon-blue">
               Track 2: AI x Startups – Scaling Ambitions with Intelligence
             </h3>
@@ -287,6 +402,7 @@ const BangaloreEdition = () => {
             <ShortAgenda items={shortAgendaData2} />
           </div>
         </div>
+<<<<<<< HEAD
       </div> */}
 
 
@@ -299,13 +415,30 @@ const BangaloreEdition = () => {
       {/* </div> */}
       <KeyTheme />
       <PastHighlights videoSrc="/videos/Yt_promo_10_sept.mp4" />
+=======
+      </div>
+
+      {/* Main Hall Section */}
+      <div className="bg-black text-white p-4  pb-20">
+        <h1 className="text-neon-purple font-bold text-2xl md:text-3xl text-center font-orbitron">
+          Main Hall Programming
+        </h1>
+        <ShortAgenda items={shortAgendaData3} />
+      </div>
+      <KeyTheme />
+<PastHighlights videoSrc="/videos/Post_Event_Montage.mp4" />
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
 
       <DemandVideoHome />
       <PartnershipCTA />
 
       <ShouldAttend />
       <WhoShouldSponsor />
+<<<<<<< HEAD
       <RegistrationClosed />
+=======
+      <BengaloreRegisterForm />
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
       <Footer socialLinks={socialLinks} />
     </div>
   );

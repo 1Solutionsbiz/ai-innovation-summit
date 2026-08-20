@@ -5,6 +5,7 @@ import WatchDemand from "@/components/Edition/DemadVideos";
 import { useEffect } from "react";
 const sections = [
     {
+<<<<<<< HEAD
         city: 'Bengaluru 2025',
         imageName: 'mumbai25',
         videoLinks: [
@@ -23,6 +24,9 @@ const sections = [
     },
     {
         city: 'Bengaluru 2024',
+=======
+        city: 'Bengaluru',
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
         imageName: 'bangaluru',
         videoLinks: [
             'https://www.youtube.com/watch?v=wBaEOg_21bM',
@@ -35,7 +39,11 @@ const sections = [
         ],
     },
     {
+<<<<<<< HEAD
         city: 'Mumbai 2024',
+=======
+        city: 'Mumbai',
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
         imageName: 'mumbai',
         videoLinks: [
             'https://www.youtube.com/watch?v=glzVZO7u7rY',
@@ -58,7 +66,11 @@ const sections = [
         ],
     },
     {
+<<<<<<< HEAD
         city: 'Delhi NCR 2024',
+=======
+        city: 'Gurugram',
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
         imageName: 'gurugram',
         videoLinks: [
             'https://www.youtube.com/watch?v=nNL8q-FzTJY',
@@ -76,10 +88,16 @@ const WatchOnDemand = () => {
         window.scrollTo(0, 0); // Scrolls to the top of the page
     }, []);
     return (
+<<<<<<< HEAD
         <div className="min-h-screen swodpage">
             <Header />
             {sections.map((section, index) => (
 
+=======
+        <div className="min-h-screen">
+            <Header />
+            {sections.map((section, index) => (
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
                 <WatchDemand key={index} {...section} />
             ))}
 

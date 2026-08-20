@@ -22,4 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+<<<<<<< HEAD
 *.zip
+=======
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce

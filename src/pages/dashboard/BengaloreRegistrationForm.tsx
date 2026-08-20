@@ -38,6 +38,7 @@ const fetchRegistrations = async (): Promise<BengaloreRegistration[]> => {
   if (!token) throw new Error('Authentication token is missing. Please log in.');
 
   try {
+<<<<<<< HEAD
 
     const resp = await axios.get('https://olive-elk-842602.hostingersite.com/api/bangalore-registers', {
       headers: { Authorization: `Bearer ${token}` },
@@ -47,6 +48,14 @@ const fetchRegistrations = async (): Promise<BengaloreRegistration[]> => {
     //   headers: { Authorization: `Bearer ${token}` },
     // });
     
+=======
+    const resp = await axios.get('https://olive-elk-842602.hostingersite.com/api/bangalore-registers', {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    //    const resp = await axios.get('http://127.0.0.1:8000/api/bangalore-registers', {
+    //   headers: { Authorization: `Bearer ${token}` },
+    // });
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
     return resp.data.data || [];
   } catch (error) {
     throw new Error('Failed to fetch registrations. Please try again later.');
@@ -82,12 +91,16 @@ const BengaloreRegistrationForm: React.FC = () => {
         { Header: 'Name', accessor: 'name', sortType: 'alphanumeric' },
         { Header: 'Designation', accessor: 'designation', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         { Header: 'Organization', accessor: 'organization', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+<<<<<<< HEAD
         { Header: 'Employee Size', accessor: 'employeesize', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         { Header: 'Birth Year', accessor: 'dob', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+=======
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
         { Header: 'Industry', accessor: 'industry', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         { Header: 'Phone Number', accessor: 'phone_number', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         // { Header: 'Mobile Number', accessor: 'mobile_number', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         { Header: 'Official Email', accessor: 'official_email', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+<<<<<<< HEAD
         // { Header: 'Personal Email', accessor: 'personal_email', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         { Header: 'City', accessor: 'city', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         // { Header: 'State', accessor: 'state', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
@@ -115,6 +128,12 @@ const BengaloreRegistrationForm: React.FC = () => {
 
         
         {
+=======
+        { Header: 'City', accessor: 'city', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+        { Header: 'State', accessor: 'state', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+        { Header: 'Pincode', accessor: 'pincode', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+         {
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
           Header: 'Age Acknowledge',
           accessor: 'age_acknowledged',
           Cell: ({ value }: { value: boolean }) => value ? 'Yes' : 'No',
@@ -138,6 +157,7 @@ const BengaloreRegistrationForm: React.FC = () => {
           Cell: ({ value }: { value: boolean }) => value ? 'Yes' : 'No',
           width: 130
         },
+<<<<<<< HEAD
         { Header: 'Content', accessor: 'utm_content_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         { Header: 'Term', accessor: 'utm_term_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
           
@@ -159,6 +179,32 @@ const BengaloreRegistrationForm: React.FC = () => {
         ]
         : [];
         
+=======
+        {
+          Header: 'Created At',
+          accessor: 'created_at',
+          sortType: (rowA: any, rowB: any, columnId: string) => {
+            const a = rowA.values[columnId] ? new Date(rowA.values[columnId]).getTime() : 0;
+            const b = rowB.values[columnId] ? new Date(rowB.values[columnId]).getTime() : 0;
+            return a > b ? 1 : a < b ? -1 : 0;
+          },
+          Cell: ({ value }: { value: string }) => new Date(value).toLocaleString() || 'N/A',
+        },
+      ];
+
+      const utmColumns = showUtmFields
+        ? [
+          { Header: 'Campaign', accessor: 'utm_campaign_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+          { Header: 'Medium', accessor: 'utm_medium_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+          { Header: 'Source', accessor: 'utm_source_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+          { Header: 'Content', accessor: 'utm_content_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+          { Header: 'Term', accessor: 'utm_term_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+          { Header: 'Landing Page', accessor: 'landing_page_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+          { Header: 'Conversion Page', accessor: 'conversion_page_temp', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+          { Header: 'IP Address', accessor: 'ip_address', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+        ]
+        : [];
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
 
       return [...baseColumns, ...utmColumns];
     },
@@ -226,17 +272,29 @@ const BengaloreRegistrationForm: React.FC = () => {
         </div>
 
         <div className="flex gap-4">
+<<<<<<< HEAD
           {/* <button
+=======
+          <button
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
             onClick={() => setShowUtmFields(!showUtmFields)}
             className="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded transition"
           >
             {showUtmFields ? 'Hide UTM Fields' : 'Show UTM Fields'}
+<<<<<<< HEAD
           </button> */}
+=======
+          </button>
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
 
           <CSVLink
             data={dataTable}
             headers={columns.map(col => ({ label: col.Header, key: col.accessor as string }))}
+<<<<<<< HEAD
             filename="bengaluru-registrations.csv"
+=======
+            filename="bangalore-registrations.csv"
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
             className="bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition"
           >
             Export CSV

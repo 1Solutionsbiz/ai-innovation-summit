@@ -32,6 +32,7 @@ interface Partner {
 
 const fetchPartners = async (): Promise<Partner[]> => {
   const token = localStorage.getItem('token') || '';
+<<<<<<< HEAD
 
   const resp = await axios.get('https://olive-elk-842602.hostingersite.com/api/partners', {
     headers: { Authorization: `Bearer ${token}` },
@@ -41,6 +42,11 @@ const fetchPartners = async (): Promise<Partner[]> => {
   //   headers: { Authorization: `Bearer ${token}` },
   // });
   
+=======
+  const resp = await axios.get('https://olive-elk-842602.hostingersite.com/api/partners', {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
   return resp.data.data;
 };
 
@@ -164,7 +170,11 @@ const PartnerForm: React.FC = () => {
             filename="partners.csv"
             className="bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition"
           >
+<<<<<<< HEAD
             Export CSV 
+=======
+            Export CSV
+>>>>>>> 85ab05d138a48cb3d16253c15a4668cbde1e27ce
           </CSVLink>
         </div>
       </div>
