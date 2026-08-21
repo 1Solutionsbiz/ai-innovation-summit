@@ -53,6 +53,7 @@ const App: React.FC = () => (
         <Route path="/" element={<BengaluruEdition26 />} />
         <Route path="/agenda-registration-form" element={<SinghaniyaTest />} />
 
+        <Route path="/previous/bangalore-2026" element={<BengaluruEdition26/>} />
         <Route path="/previous/delhi-2026" element={<DelhiEditionNew />} />
         <Route path="/previous/bangalore-2025" element={<BangaloreEdition/>} />
         <Route path="/previous/mumbai-2024" element={<MumbaiEdition />} />

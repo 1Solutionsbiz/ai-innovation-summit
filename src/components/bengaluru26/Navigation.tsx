@@ -17,6 +17,7 @@ const Navigation = () => {
   ];
 
   const editions = [
+    { name: "Bengaluru Edition 2026", link: "/previous/bangalore-2026" },
     { name: "Delhi Edition 2026", link: "/previous/delhi-2026" },
     { name: "Bengaluru Edition 2025", link: "/previous/bangalore-2025" },
     { name: "Mumbai Edition 2025", link: "/previous/mumbai-2025" },
