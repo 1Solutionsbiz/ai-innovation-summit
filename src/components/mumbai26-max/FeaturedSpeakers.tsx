@@ -54,14 +54,14 @@ const FeaturedSpeakers = () => {
       {/* Full-bleed carousel, left edge aligned with the 1200px container above */}
       <div
         ref={scrollerRef}
-        className="mt-4 flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pl-6 pr-6 md:pl-[max(1.5rem,calc((100vw-1200px)/2+1.5rem))] md:pr-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+        className="mt-4 flex gap-0.5 overflow-x-auto scroll-smooth snap-x snap-mandatory pl-6 pr-6 md:pl-[max(1.5rem,calc((100vw-1200px)/2+1.5rem))] md:pr-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       >
         {speakers.map((speaker) => (
           <div
             key={speaker.name}
             className="group shrink-0 w-[220px] sm:w-[260px] snap-start rounded-2xl p-0 hover:p-3 transition-all duration-300 hover:bg-slate-900"
           >
-            <div className="relative aspect-square w-full rounded-2xl overflow-hidden bg-slate-100">
+            <div className="relative aspect-[3/4] w-full overflow-hidden rounded-none group-hover:rounded-2xl transition-[border-radius] duration-300 bg-slate-100">
               <img
                 src={speaker.image}
                 alt={speaker.name}
