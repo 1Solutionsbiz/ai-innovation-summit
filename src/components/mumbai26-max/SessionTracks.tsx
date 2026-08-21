@@ -23,7 +23,7 @@ const SessionTracks = () => {
               India.
             </p>
 
-            <ul className="mt-8 space-y-3">
+            <ul className="mt-8">
               {tracks.map((track) => (
                 <li key={track} className="text-slate-200 text-lg">
                   {track}
@@ -35,13 +35,13 @@ const SessionTracks = () => {
               href="#agenda"
               className="mt-10 inline-flex items-center rounded-full bg-white text-slate-900 font-semibold px-6 py-3 text-sm hover:scale-105 transition-transform duration-300"
             >
-              View all sessions
+              View Past Sessions
             </a>
           </div>
 
           <div className="relative rounded-2xl overflow-hidden aspect-[4/3] md:aspect-[6/5]">
             <img
-              src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&q=80"
+              src="/mumbai26-max/focus-areas.jpg"
               alt=""
               className="absolute inset-0 w-full h-full object-cover"
             />
