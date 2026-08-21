@@ -13,11 +13,15 @@ import MumbaiEdition from "./components/Edition/MumbaiEdition";
 import BengaluruEdition from "./components/Edition/BengaluruEdition";
 import GurugramEdition from "./components/Edition/GurugramEdition";
 import WatchOnDemand from "./pages/WatchOnDemand";
-import BengaluruEdition26 from "./pages/BengaluruEdition26";
-import SinghaniyaTest from "./pages/SinghaniyaTest";
-import DelhiEditionNew from "./pages/DelhiEditionNew";
-import BangaloreEdition from "./pages/BangaloreEdition";
 import ScrollManager from "./components/ScrollManager";
+
+
+import DelhiEdition26 from "./pages/DelhiEdition26";
+import BangaloreEdition from "./pages/BangaloreEdition";
+import BengaluruEdition26 from "./pages/BengaluruEdition26";
+import MumbaiEdition26 from "./pages/MumbaiEdition26";
+import SinghaniyaTest from "./pages/SinghaniyaTest";
+
 
 import Login from "./pages/auth/Login";
 import Dashboard from "./pages/dashboard/Dashboard";
@@ -50,11 +54,11 @@ const App: React.FC = () => (
         />
         <Route path="/partner-form" element={<PartnerForm />} />
         {/* Public site routes */}
-        <Route path="/" element={<BengaluruEdition26 />} />
+        <Route path="/" element={<MumbaiEdition26 />} />
         <Route path="/agenda-registration-form" element={<SinghaniyaTest />} />
 
         <Route path="/previous/bangalore-2026" element={<BengaluruEdition26/>} />
-        <Route path="/previous/delhi-2026" element={<DelhiEditionNew />} />
+        <Route path="/previous/delhi-2026" element={<DelhiEdition26 />} />
         <Route path="/previous/bangalore-2025" element={<BangaloreEdition/>} />
         <Route path="/previous/mumbai-2024" element={<MumbaiEdition />} />
         <Route path="/previous/bangalore-2024" element={<BengaluruEdition />} />

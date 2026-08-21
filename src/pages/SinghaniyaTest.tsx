@@ -5,7 +5,7 @@ import Agenda from "@/components/bengaluru26/Agenda";
 import { PartnerSectionForm } from "@/components/PartnerSectionForm";
 import { BengaluruJune26RegisterForm } from "@/components/BengaluruJune26RegisterForm";
 
-import Footer from "@/components/newhome/Footer";
+import Footer from "@/components/delhi26/Footer";
 
 
 import "@/styles/mystyle.css";
