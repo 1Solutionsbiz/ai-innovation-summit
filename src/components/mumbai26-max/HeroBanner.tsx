@@ -34,7 +34,7 @@ const HeroBanner = () => {
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-6 pt-32 pb-20 md:pt-40 w-full">
         <p className="text-sm md:text-base font-semibold uppercase tracking-[0.2em] text-fuchsia-400 mb-6">
-          AI Innovation Summit — Mumbai 2026
+          AI Innovation Summit – Delhi 2026
         </p>
 
         <h1 className="font-inter font-black text-white leading-[0.9] tracking-[-3.5px] text-6xl sm:text-7xl md:text-[88px]">
@@ -44,18 +44,17 @@ const HeroBanner = () => {
         </h1>
 
         <p className="mt-8 max-w-xl text-lg md:text-xl text-slate-300">
-          Get ready for what&apos;s next — a day of enterprise AI strategy,
-          hands-on sessions, and the leaders putting agentic AI to work.
+          From Assistance to Autonomy
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-slate-200">
           <span className="flex items-center gap-2 text-sm md:text-base font-medium">
             <CalendarDays className="w-5 h-5 text-fuchsia-400" />
-            Date to be announced
+            8th December 2026
           </span>
           <span className="flex items-center gap-2 text-sm md:text-base font-medium">
             <MapPin className="w-5 h-5 text-fuchsia-400" />
-            Mumbai
+            Delhi
           </span>
         </div>
 
@@ -64,7 +63,7 @@ const HeroBanner = () => {
             href="#mumbairegistrationform"
             className="inline-flex items-center rounded-full bg-white text-slate-900 font-semibold px-7 py-3 text-sm md:text-base hover:scale-105 transition-transform duration-300 shadow-lg"
           >
-            Notify me when registration opens
+            Registrations Open Soon
           </a>
         </div>
       </div>
