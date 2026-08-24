@@ -19,8 +19,9 @@ import ScrollManager from "./components/ScrollManager";
 import DelhiEdition26 from "./pages/DelhiEdition26";
 import BangaloreEdition from "./pages/BangaloreEdition";
 import BengaluruEdition26 from "./pages/BengaluruEdition26";
-import MumbaiEdition26 from "./pages/MumbaiEdition26";
-import MumbaiEdition2026 from "./pages/MumbaiEdition2026";
+import DelhiEdition26_1 from "./pages/DelhiEdition26_1";
+import DelhiEdition2026_a from "./pages/DelhiEdition2026a";
+import DelhiEdition2026_b from "./pages/DelhiEdition2026b";
 import SinghaniyaTest from "./pages/SinghaniyaTest";
 
 
@@ -55,8 +56,9 @@ const App: React.FC = () => (
         />
         <Route path="/partner-form" element={<PartnerForm />} />
         {/* Public site routes */}
-        <Route path="/" element={<MumbaiEdition26 />} />
-        <Route path="/mumbai-2026" element={<MumbaiEdition2026 />} />
+        <Route path="/" element={<DelhiEdition26_1 />} />
+        <Route path="/delhi-2026" element={<DelhiEdition2026_b />} />
+        <Route path="/delhi-2026-1" element={<DelhiEdition2026_a />} />
         <Route path="/agenda-registration-form" element={<SinghaniyaTest />} />
 
         <Route path="/previous/bangalore-2026" element={<BengaluruEdition26/>} />

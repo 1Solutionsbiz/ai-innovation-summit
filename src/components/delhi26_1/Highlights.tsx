@@ -6,26 +6,26 @@ const Highlights = () => {
 
   const highlights = [
     { 
-      number: "40+", 
-      label: "Thought Leaders",
+      number: "45+", 
+      label: "Visionary Speakers",
       icon: User,
       color: "text-[#FF1493]" // Deep Pink
     },
     { 
-      number: "400+", 
-      label: "Industry Experts",
+      number: "12+", 
+      label: "Engaging sessions",
       icon: Users,
       color: "text-[#00BFFF]" // Deep Sky Blue
     },
     { 
-      number: "10+", 
-      label: "Strategic Sessions",
+      number: "8+", 
+      label: "Hours of Networking ",
       icon: Handshake,
       color: "text-[#FFA500]" // Orange
     },
     { 
-      number: "8+", 
-      label: "Hours of Networking",
+      number: "700+ ", 
+      label: "Attendees ",
       icon: Lightbulb,
       color: "text-[#32CD32]" // Lime Green
     },

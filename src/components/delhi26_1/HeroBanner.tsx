@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import guildLogo from "@/assets/guild-logo.png";
-import aiinvationlogo from "/logo/logo-26.png";
+import aiinvationlogo from "/logo/ai-innovation.png";
 import { MapPin, CalendarDays } from "lucide-react"; // ✅ Added icons
 
 const HeroBanner = () => {
@@ -34,7 +34,7 @@ const HeroBanner = () => {
         }}
         >
         <span className="pt10 block leading-tight">
-            7<sup>th</sup>
+            8<sup>th</sup>
             <br />
             EDITION
         </span>
@@ -59,11 +59,13 @@ const HeroBanner = () => {
         {/* Main Title */}
         <div className="opacity-0 animate-fade-in animation-delay-200">
           <h1 className="text-white">
+            
             <img
               src={aiinvationlogo}
               alt="Ai Innovation Summit"
               className=" mx-auto h-24 md:h-32 lg:h-40 ailogmain-bang26 object-contain"
             />
+
             {/* <span className="block text-5xl md:text-7xl lg:text-8xl font-bold mb-2">
               <span className="text-white">AI</span>
               <span className="bg-gradient-to-r from-purple-500 to-fuchsia-600 bg-clip-text text-transparent">
@@ -89,10 +91,10 @@ const HeroBanner = () => {
             {/* Location Icon + Delhi */}
             <span className="bega26 items-center mobbega26">
               <span>
-                <CalendarDays className="w-6 h-6 text-fuchsia-400" /> 11<sup>th</sup> June 2026 |
+                <CalendarDays className="w-6 h-6 text-fuchsia-400" /> 8<sup>th</sup> December 2026 |
               </span>
               <span>
-                <MapPin className="w-6 h-6 text-fuchsia-400" /> Conrad Hotel, Bengaluru
+                <MapPin className="w-6 h-6 text-fuchsia-400" /> Delhi
               </span>
             </span>
 
