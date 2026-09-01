@@ -1,23 +1,23 @@
 const featured = [
   {
     name: "Siddharth Sureka",
-    image: "/delhi26_redesign/speakers/1.png",
+    image: "/delhi26_redesign/speakers/a.png",
   },
   {
-    name: "Kuldeep Tomar",
-    image: "/delhi26_redesign/speakers/1.png",
+    name: "Siddharth Sureka",
+    image: "/delhi26_redesign/speakers/a.png",
   },
   {
-    name: "Suvodip Chatterjee",
-    image: "/delhi26_redesign/speakers/1.png",
+    name: "Siddharth Sureka",
+    image: "/delhi26_redesign/speakers/a.png",
   },
   {
-    name: "Atul Rainman",
-    image: "/delhi26_redesign/speakers/1.png",
+    name: "Siddharth Sureka",
+    image: "/delhi26_redesign/speakers/a.png",
   },
   {
-    name: "Jyoti Kodnani",
-    image: "/delhi26_redesign/speakers/1.png",
+    name: "Siddharth Sureka",
+    image: "/delhi26_redesign/speakers/a.png",
   },
 ];
 

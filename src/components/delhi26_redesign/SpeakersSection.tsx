@@ -237,7 +237,7 @@ const SpeakersSection = () => {
               key={speaker.name}
               className="
                 group
-                min-w-[205px]
+                min-w-[280px]
                 max-w-[220px]
                 flex-1
                 overflow-hidden
@@ -257,7 +257,7 @@ const SpeakersSection = () => {
               <div
                 className="
                   relative
-                  h-[245px]
+                  h-[345px]
                   overflow-hidden
                   rounded-[15px]
                   bg-[#062861]

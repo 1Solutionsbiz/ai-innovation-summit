@@ -1,4 +1,3 @@
-
 const sponsors = [
   {
     name: "PRESENTING PARTNER",
@@ -32,12 +31,12 @@ const SponsorsSection = () => {
     <section className="sponsors-section">
 
       <div className="sponsors-heading">
-        <span className="sponsors-heading-span">
+        <h4 className="sponsors-heading-span">
           OUR VALUED SPONSORS
-        </span>
+        </h4>
 
         <h2>
-          <strong>Meet our amazing sponsors.</strong>
+          Meet our amazing sponsors
         </h2>
 
         <p>
@@ -47,19 +46,23 @@ const SponsorsSection = () => {
       </div>
 
       <div className="sponsor-card">
-
         {sponsors.map((sponsor) => (
           <div className="sponsor-logo" key={sponsor.name}>
-            <div className="sponsor-heading">{sponsor.name}</div>
+
+            <div className="sponsor-heading">
+              {sponsor.name}
+            </div>
+
             <img
               src={sponsor.logo}
               alt={sponsor.alt}
-              className={`sponsor-logo-img ${sponsor.alt.replace(/\s+/g, '-').toLowerCase()}`}
+              className={`sponsor-logo-img ${sponsor.alt
+                .replace(/\s+/g, "-")
+                .toLowerCase()}`}
             />
-            <br />
+
           </div>
         ))}
-
       </div>
 
     </section>

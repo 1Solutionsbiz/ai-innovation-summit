@@ -1,63 +1,72 @@
 const RedesignFooter = () => {
   return (
     <footer className="redesign-footer">
-
       <div className="footer-grid">
-
         <div className="footer-brand">
-
-          <img
-            src="/delhi26_redesign/logo.png"
-            alt="AI Innovation Summit"
-          />
-
-          <p>
-            From Assistance to Autonomy.
-          </p>
-
-          <div className="socials">
-            <a href="#">LinkedIn</a>
-            <a href="#">Instagram</a>
-            <a href="#">YouTube</a>
+          <div className="brand-wordmark">
+            <span className="brand-ai">AI</span>
+            <span className="brand-innovation">Innovation</span>
+            <span className="brand-summit">SUMMIT</span>
           </div>
 
+          <p>
+            From prompt to impact — the premier summit for artificial intelligence leaders and enthusiasts, making it the most impactful AI Summit.
+          </p>
+
+          <div className="guild-badge">
+            <span>the guild</span>
+          </div>
         </div>
 
-        <div>
-          <h4>QUICK LINKS</h4>
-
-          <a href="#overview">Overview</a>
+        <div className="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#about">About</a>
           <a href="#speakers">Speakers</a>
-          <a href="#focus">Focus Areas</a>
           <a href="#partners">Partners</a>
         </div>
 
-        <div>
-          <h4>CONNECT WITH US</h4>
+        <div className="footer-connect">
+          <h4>Connect With Us</h4>
+
+          <div className="social-row">
+            <span className="social-icon">in</span>
+          </div>
+
+          <a href="mailto:guildconferences@guildlive.com">guildconferences@guildlive.com</a>
 
           <p>
-            AI Innovation Summit
+            Smartworks Corporate Park Tower A, Second Floor
+            <br />
+            Sector 125, Noida, Uttar Pradesh 201303
           </p>
 
-          <p>
-            The Leela Ambience Gurugram
+          <p className="contact-note">
+            <strong>For Speakership Opportunity,</strong>
             <br />
-            Delhi NCR
+            <a href="mailto:nishant.batra@guildlive.com">Email at nishant.batra@guildlive.com</a>
+            <br />
+            <a href="mailto:aditi.malik@guildlive.com">aditi.malik@guildlive.com</a>
+          </p>
+
+          <p className="contact-note">
+            <strong>For Partnerships,</strong>
+            <br />
+            <a href="mailto:partnership@guildlive.com">Email at partnership@guildlive.com</a>
           </p>
         </div>
-
       </div>
 
       <div className="footer-bottom">
-        <span>
-          © 2026 AI Innovation Summit
-        </span>
+        <span>© Copyright 2025, The Guild</span>
 
-        <span>
-          Privacy Policy &nbsp; | &nbsp; Terms
-        </span>
+        <div className="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <span>|</span>
+          <a href="#">Terms &amp; Conditions</a>
+          <span>|</span>
+          <a href="#">Code of Conduct</a>
+        </div>
       </div>
-
     </footer>
   );
 };

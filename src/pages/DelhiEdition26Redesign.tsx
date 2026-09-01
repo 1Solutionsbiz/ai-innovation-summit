@@ -16,6 +16,7 @@ import RedesignFooter from "@/components/delhi26_redesign/RedesignFooter";
 // import ScrollReveal from "@/components/delhi26_redesign/ScrollReveal";
 import SpeakersSection from "@/components/delhi26_redesign/SpeakersSection";
 
+
 import "@/styles/delhi-redesign.css";
 
 const DelhiEdition26Redesign = () => {
