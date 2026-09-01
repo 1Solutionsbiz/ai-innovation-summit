@@ -94,7 +94,7 @@ const HeroBanner = () => {
                 <CalendarDays className="w-6 h-6 text-fuchsia-400" /> 2<sup>nd</sup> December 2026 |
               </span>
               <span>
-                <MapPin className="w-6 h-6 text-fuchsia-400" /> The Leela Ambience Gurugram, Delhi-NCR 
+                <MapPin className="w-6 h-6 text-fuchsia-400" /> The Leela Ambience, Gurugram 
               </span>
             </span>
 
