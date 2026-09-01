@@ -22,31 +22,31 @@ const HeroBanner = () => {
       <div className="absolute inset-0 bg-black/40"></div>
 
 
-<div className="row text-white absolute top-4 right-20 p-4 md:p-8 lg:p-12 singhaniya-badge">
-    {/* Logo + Edition Badge */}
-    <div className="mb-8 flex justify-center items-center gap-6 opacity-0 animate-fade-in">
-        {/* 6th Edition Badge */}
-        <div
-        className="relative glass-button-clr h100 text-white font-semibold text-lg px-6 py-3 text-center uppercase shadow-lg"
-        style={{
-            clipPath: "polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%)",
-            padding: "10px",
-        }}
-        >
-        <span className="pt10 block leading-tight">
-            8<sup>th</sup>
-            <br />
-            EDITION
-        </span>
+      <div className="row text-white absolute top-4 right-20 p-4 md:p-8 lg:p-12 singhaniya-badge">
+        {/* Logo + Edition Badge */}
+        <div className="mb-8 flex justify-center items-center gap-6 opacity-0 animate-fade-in">
+          {/* 6th Edition Badge */}
+          <div
+            className="relative glass-button-clr h100 text-white font-semibold text-lg px-6 py-3 text-center uppercase shadow-lg"
+            style={{
+              clipPath: "polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%)",
+              padding: "10px",
+            }}
+          >
+            <span className="pt10 block leading-tight">
+              8<sup>th</sup>
+              <br />
+              EDITION
+            </span>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
 
       {/* 🔹 Content */}
       <div className="relative z-10 container nwdglm mx-auto px-4 py-20 text-center">
         {/* Logo + Edition Badge */}
-        
-        
+
+
         {/* Guild Logo */}
         {/* <div className="flex justify-center items-center gap-6 opacity-0 animate-fade-in guild-mb-logo">
           <img
@@ -59,7 +59,7 @@ const HeroBanner = () => {
         {/* Main Title */}
         <div className="opacity-0 animate-fade-in animation-delay-200">
           <h1 className="text-white">
-            
+
             <img
               src={aiinvationlogo}
               alt="Ai Innovation Summit"
@@ -81,7 +81,7 @@ const HeroBanner = () => {
         {/* Event Details */}
         <div className="space-y-3 mb-0 moblocationbeng26 opacity-0 animate-fade-in-up animation-delay-600">
           <p className="text-white text-xl md:text-2xl font-normal tracking-wide flex items-center justify-center gap-4">
-            
+
             {/* Date Icon + Month */}
             {/* <span className="flex items-center gap-2">
               <CalendarDays className="w-6 h-6 text-fuchsia-400" />
@@ -91,10 +91,10 @@ const HeroBanner = () => {
             {/* Location Icon + Delhi */}
             <span className="bega26 items-center mobbega26">
               <span>
-                <CalendarDays className="w-6 h-6 text-fuchsia-400" /> 8<sup>th</sup> December 2026 |
+                <CalendarDays className="w-6 h-6 text-fuchsia-400" /> 2<sup>nd</sup> December 2026 |
               </span>
               <span>
-                <MapPin className="w-6 h-6 text-fuchsia-400" /> Delhi
+                <MapPin className="w-6 h-6 text-fuchsia-400" /> The Leela Ambience Gurugram, Delhi-NCR 
               </span>
             </span>
 
@@ -107,15 +107,15 @@ const HeroBanner = () => {
             Where Agentic AI Meets Enterprise-Scale Execution
           </p>
 
-          
+
           <a
             href="#bengalururegistrationform"
             className="md:hidden text-white hover:scale-105 transition-all duration-300 text-xl px-4 py-2 mt-2i rounded-[5px] font-semibold tracking-wide shadow-lg hover:shadow-xl"
             style={{ background: "#bf1c88" }}
           >
-            Registrations Closed 
+            Registrations Closed
           </a>
-          
+
         </div>
 
         {/* CTA Button */}
