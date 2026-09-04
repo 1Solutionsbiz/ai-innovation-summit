@@ -1,0 +1,177 @@
+import { useCallback, useEffect, useRef, useState } from "react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+
+export type Testimonial = {
+  quote: string;
+  name: string;
+  designation: string;
+};
+
+const defaultTestimonials: Testimonial[] = [
+  {
+    quote:
+      "Great to see so many minds coming together to discuss how we can collectively shape the future of AI in India.",
+    name: "Amit Atri",
+    designation: "Global CIO, Tata Consumer Products",
+  },
+  {
+    quote:
+      "The energy in the room was incredible — this is exactly the kind of conversation enterprise AI needs right now.",
+    name: "Priya Menon",
+    designation: "CTO, Reliance Retail",
+  },
+  {
+    quote:
+      "A rare space where builders, leaders and policymakers actually talk to each other instead of past each other.",
+    name: "Rahul Sinha",
+    designation: "VP Engineering, Flipkart",
+  },
+];
+
+const AUTOPLAY_INTERVAL = 6000;
+
+const TestimonialSection = ({
+  testimonials = defaultTestimonials,
+  backgroundImage = "gurugram/testimonial/bg.jpg",
+}: {
+  testimonials?: Testimonial[];
+  backgroundImage?: string;
+}) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const total = testimonials.length;
+
+  const goTo = useCallback(
+    (index: number) => {
+      setActiveIndex(((index % total) + total) % total);
+    },
+    [total]
+  );
+
+  const goNext = useCallback(() => goTo(activeIndex + 1), [activeIndex, goTo]);
+  const goPrev = useCallback(() => goTo(activeIndex - 1), [activeIndex, goTo]);
+
+  /* =====================================================
+     AUTOPLAY — loops continuously, resets on manual nav
+  ===================================================== */
+  useEffect(() => {
+    if (total <= 1) return;
+
+    if (timerRef.current) clearInterval(timerRef.current);
+
+    timerRef.current = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % total);
+    }, AUTOPLAY_INTERVAL);
+
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, [activeIndex, total]);
+
+  const handleManualNav = (direction: "prev" | "next") => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    direction === "next" ? goNext() : goPrev();
+  };
+
+  const current = testimonials[activeIndex];
+
+  return (
+    <section className="relative w-full min-h-[600px] md:min-h-[720px] overflow-hidden">
+      {/* =================================================
+          BACKGROUND IMAGE
+      ================================================= */}
+      <img
+        src={backgroundImage}
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+
+      {/* DARK GRADIENT for text legibility on the left */}
+      <div
+        className="
+          absolute inset-0
+          bg-gradient-to-r
+          from-black/85
+          via-black/40
+          to-transparent
+        "
+      />
+
+      {/* =================================================
+          CONTENT
+      ================================================= */}
+      <div className="relative z-10 h-full min-h-[600px] md:min-h-[720px] max-w-[1500px] mx-auto px-6 flex items-center">
+        <div className="w-full max-w-[760px] py-16">
+          {/* QUOTE — fades between testimonials */}
+          <div
+            key={activeIndex}
+            className="
+              animate-[fadeIn_600ms_ease-out]
+            "
+          >
+            <p className="text-white font-black text-[28px] sm:text-[36px] md:text-[42px] leading-[1.15] tracking-[-0.5px]">
+              &ldquo;{current.quote}&rdquo;
+            </p>
+
+            <p className="mt-6 text-white/80 text-[16px] md:text-[18px]">
+              — {current.name}, {current.designation}
+            </p>
+          </div>
+
+          {/* NAV ARROWS */}
+          <div className="mt-12 flex items-center gap-4">
+            <button
+              onClick={() => handleManualNav("prev")}
+              aria-label="Previous testimonial"
+              className="
+                w-11 h-11
+                rounded-full
+                border border-white/50
+                text-white
+                flex items-center justify-center
+
+                transition-all
+                duration-300
+
+                hover:bg-white
+                hover:text-black
+              "
+            >
+              <ArrowLeft size={18} />
+            </button>
+
+            <button
+              onClick={() => handleManualNav("next")}
+              aria-label="Next testimonial"
+              className="
+                w-11 h-11
+                rounded-full
+                border border-white/50
+                text-white
+                flex items-center justify-center
+
+                transition-all
+                duration-300
+
+                hover:bg-white
+                hover:text-black
+              "
+            >
+              <ArrowRight size={18} />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <style>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(12px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
+    </section>
+  );
+};
+
+export default TestimonialSection;

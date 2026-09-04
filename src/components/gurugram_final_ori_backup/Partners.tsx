@@ -1,0 +1,117 @@
+import React from "react";
+
+const partners = [
+  {
+    title: "PRESENTING PARTNER",
+    image: "/gurugram/partners/partner_1.png",
+    alt: "Partner 1",
+  },
+  {
+    title: "CO-POWERED BY",
+    image: "/gurugram/partners/partner_2.png",
+    alt: "Partner 2",
+  },
+  {
+    title: "CYBER RESILIENCE PARTNER",
+    image: "/gurugram/partners/partner_3.png",
+    alt: "Partner 3",
+  },
+  {
+    title: "AI DATA CLOUD PARTNER",
+    image: "/gurugram/partners/partner_4.png",
+    alt: "Partner 4",
+  },
+  {
+    title: "ENGAGEMENT PARTNER",
+    image: "/gurugram/partners/partner_5.png",
+    alt: "Partner 5",
+  },
+];
+
+const PartnersSection = () => {
+  return (
+    <section className="partners-section">
+      <div className="partners-container">
+
+        {/* LEFT CONTENT */}
+        <div className="partners-content">
+          <span className="partners-small-title">
+            Our Partners
+          </span>
+
+          <h2>
+            The partners
+            <br />
+            powering the summit
+          </h2>
+
+          <p>
+            Meet the partners shaping how enterprises think,
+            <br className="desktop-break" />
+            deploy, and scale AI.
+          </p>
+
+          <a href="#become-partner" className="partners-btn">
+            Become a Partner
+          </a>
+        </div>
+
+
+        {/* RIGHT PARTNER PANEL */}
+        <div className="partners-visual">
+
+          <div className="partners-bg">
+
+            <div className="partners-scroll">
+
+              {/* FIRST SET */}
+              <div className="partners-list">
+                {partners.map((partner, index) => (
+                  <div
+                    className="partner-logo partner-logo-new"
+                    key={`first-${index}`}
+                  >
+                    <h3 className="partner-title text-white">
+                      {partner.title}
+                    </h3>
+
+                    <img
+                      src={partner.image}
+                      alt={partner.alt}
+                    />
+                  </div>
+                ))}
+              </div>
+
+
+              {/* DUPLICATE SET FOR SEAMLESS LOOP */}
+              <div className="partners-list">
+                {partners.map((partner, index) => (
+                  <div
+                    className="partner-logo partner-logo-new"
+                    key={`second-${index}`}
+                  >
+                    <h3 className="partner-title text-white">
+                      {partner.title}
+                    </h3>
+
+                    <img
+                      src={partner.image}
+                      alt={partner.alt}
+                    />
+                  </div>
+                ))}
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+export default PartnersSection;

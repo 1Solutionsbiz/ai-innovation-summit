@@ -1,18 +1,44 @@
 import { Linkedin } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import aiLogo from "@/assets/ai-innovation-logo.png";
 import aiinvationlogo from "/logo/Ai-Innovation_Logo_White.png";
 import guildLogo from "@/assets/guild-logo.png";
 
 const Footer = () => {
+  const footerRef = useRef<HTMLElement>(null);
+  const [footerVisible, setFooterVisible] = useState(false);
+
+  useEffect(() => {
+    const footer = footerRef.current;
+    if (!footer) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setFooterVisible(false);
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => setFooterVisible(true));
+          });
+        } else {
+          setFooterVisible(false);
+        }
+      },
+      { threshold: 0.5 },
+    );
+
+    observer.observe(footer);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer ref={footerRef} className="footer-section bg-slate-900 text-white">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 py-10 md:py-16">
 
         {/* TOP SECTION */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-12">
 
           {/* LEFT SECTION */}
-          <div className="space-y-6">
+          <div className={`space-y-6 footer-reveal footer-delay-1 ${footerVisible ? "is-visible" : ""}`}>
             <div>
               <img
                 src={aiinvationlogo}
@@ -41,7 +67,7 @@ const Footer = () => {
           </div>
 
           {/* RIGHT SECTION */}
-          <div>
+          <div className={`footer-reveal footer-delay-2 ${footerVisible ? "is-visible" : ""}`}>
             <h4 className="text-xl font-bold mb-5 sm:mb-6">Connect With Us</h4>
 
             <div className="space-y-4">
@@ -108,7 +134,7 @@ const Footer = () => {
         </div>
 
         {/* BOTTOM SECTION */}
-        <div className="border-t border-slate-700 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className={`border-t border-slate-700 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 footer-reveal footer-delay-3 ${footerVisible ? "is-visible" : ""}`}>
 
           <p className="text-slate-400 text-xs sm:text-sm text-center md:text-left">
             © Copyright 2025, The Guild
@@ -138,6 +164,38 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      <style>{`
+        @keyframes footerFadeInUp {
+          from {
+            opacity: 0;
+            transform: translate3d(0, 32px, 0);
+          }
+          to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+          }
+        }
+
+        .footer-reveal {
+          opacity: 0;
+          will-change: opacity, transform;
+        }
+
+        .footer-reveal.is-visible {
+          animation: footerFadeInUp 1.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .footer-delay-2 { animation-delay: 220ms; }
+        .footer-delay-3 { animation-delay: 440ms; }
+
+        @media (prefers-reduced-motion: reduce) {
+          .footer-reveal.is-visible {
+            animation-duration: 1ms;
+            animation-delay: 0ms;
+          }
+        }
+      `}</style>
     </footer>
   );
 };
