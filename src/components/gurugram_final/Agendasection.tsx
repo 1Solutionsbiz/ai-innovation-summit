@@ -34,7 +34,7 @@ const AGENDA_DATA: DayData[] = [
     label: "Day 1",
     tracks: [
       {
-        id: "fashion-xp",
+        id: "Detailed-Agenda",
         label: "Detailed Agenda",
         items: [
           {
@@ -70,8 +70,8 @@ const AGENDA_DATA: DayData[] = [
         ],
       },
       {
-        id: "Detailed Agenda 2",
-        label: "Leadership Roundtable In Association With DHL",
+        id: "Detailed-Agenda-2",
+        label: "Detailed Agenda 2",
         items: [
           {
             time: "Time",

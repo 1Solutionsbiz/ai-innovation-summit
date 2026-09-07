@@ -2,27 +2,23 @@ import { useEffect, useRef, useState } from "react";
 
 const focusAreas = [
   {
-    title: "Enterprise AI",
-    heading: "INNOVATING THE FUTURE. AT ENTERPRISE SPEED.",
-    description:
-      "Ideas. Technology. Transformation. The AI conversation enterprises are having now.",
+    title: "ENTERPRISE AI",
+    heading: "INNOVATING THE FUTURE. AT ENTERPRISE SPEED.",
+    description:"Ideas. Technology. Transformation. The AI conversation enterprises are having now.",
     image: "/gurugram/focus/Image_1.png",
     position: "top-left",
   },
   {
-    title: "Leadership",
-    heading: "STRONGER TOGETHER FOR TOMORROW.",
-    description:
-      "Where India's most senior technology and business leaders build what's next.",
+    title: "LEADERSHIP",
+    heading: "STRONGER TOGETHER FOR TOMORROW",
+    description:"Where India's most senior technology and business leaders build what's next.",
     image: "/gurugram/focus/Image_2.png",
     position: "top-right",
   },
   {
-    title: "Agentic AI",
-    heading:
-      "FROM PILOT TO PRODUCTION. FROM ASSISTANCE TO AUTONOMY.",
-    description:
-      "The systems that decide. The leaders who define.",
+    title: "AGENTIC AI",
+    heading:"FROM PILOT TO PRODUCTION. FROM ASSISTANCE TO AUTONOMY.",
+    description:"The systems that decide. The leaders who define.",
     image: "/gurugram/focus/Image_3.png",
     position: "bottom-center",
   },
@@ -217,8 +213,7 @@ const FocusAreasSection = () => {
                 max-w-[400px]
               "
             >
-              Deep-dive into the themes shaping
-              enterprise AI adoption across India
+              Deep-dive into the themes shaping enterprise AI adoption across India.
             </p>
 
 

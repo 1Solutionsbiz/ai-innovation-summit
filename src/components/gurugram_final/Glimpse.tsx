@@ -81,12 +81,12 @@ const Sponsors = () => {
         <p
           className={`glimpse-reveal-up glimpse-delay-0 font-extrabold text-[20px] text-[#e92630] mb-2 ${sectionVisible ? "is-visible" : ""}`}
         >
-          7 Editions
+          7 Editions. Trusted by the Best.
         </p>
         <h2
           className={`glimpse-reveal-up glimpse-delay-1 font-black text-[#022158] text-[36px] sm:text-[44px] md:text-[56px] leading-[1.1] tracking-[-1.44px] ${sectionVisible ? "is-visible" : ""}`}
         >
-          A Glimpse of Participating Enterprises
+          A Glimpse of the Participating Enterprises so far.
         </h2>
       </div>
 
