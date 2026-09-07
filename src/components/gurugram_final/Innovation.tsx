@@ -133,7 +133,7 @@ const InnovationSection = () => {
             <video
               ref={videoRef}
               className="absolute inset-0 w-full h-full object-cover"
-              src="videos/Promo-21-August.mp4"
+              src="videos/innovation_gurugram_26.mp4"
               autoPlay
               muted
               loop

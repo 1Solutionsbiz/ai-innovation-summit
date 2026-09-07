@@ -73,7 +73,8 @@ const HeroBanner = () => {
         <p
           className={`mt-8 max-w-xl text-lg md:text-xl text-slate-300 opacity-0 translate-y-8 transition-all duration-700 delay-200 ease-out ${isVisible ? "opacity-100 translate-y-0" : ""}`}
         >
-          Where Agentic AI Meets Enterprise-Scale Execution
+          {/* Where Agentic AI Meets Enterprise-Scale Execution */}
+          Where India’s enterprise AI agenda takes shape.
         </p>
 
         <div

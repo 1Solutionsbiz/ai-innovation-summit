@@ -40,7 +40,7 @@ const Sponsors = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="partners" className="bg-slate-50 py-20 md:py-28">
+    <section ref={sectionRef} id="partners" className="bg-[#eee] py-20 md:py-28">
       <div className="max-w-[1200px] mx-auto px-6 text-center">
         <p className={`sponsors-reveal sponsors-delay-0 font-extrabold text-[20px] text-[#e92630] mb-2 ${sectionVisible ? "is-visible" : ""}`}>
           Past Sponsors
@@ -64,7 +64,7 @@ const Sponsors = () => {
 
       <div className={`mt-16 overflow-hidden sponsors-reveal sponsors-delay-4 ${sectionVisible ? "is-visible" : ""}`}>
         <div
-          className="sponsor-auto-scroll gap-16 md:gap-24 px-8"
+          className="sponsor-auto-scroll gap-10 md:gap-10 px-8"
           style={{ animationDuration: `${SCROLL_DURATION_SECONDS}s` }}
         >
           {scrollingLogos.map((logo, i) => (
@@ -72,7 +72,7 @@ const Sponsors = () => {
               key={`${logo.src}-${i}`}
               src={logo.src}
               alt={logo.alt}
-              className="shrink-0 h-8 md:h-10 w-auto object-contain grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition"
+              className="shrink-0 h-8 md:h-12 w-auto object-contain grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition bg-white p-2"
             />
           ))}
         </div>

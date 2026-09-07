@@ -1,4 +1,3 @@
-import { User, Handshake, Users, Lightbulb } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 /* =========================
@@ -163,29 +162,20 @@ const Highlights = () => {
 
   const highlights = [
     {
-      number: "700+",
-      label: "Attendees",
-      icon: User,
+      number: "8",
+      label: "Editions",
     },
     {
-      number: "45+",
-      label: "CXO Speakers & Moderators",
-      icon: Users,
+      number: "4,800+",
+      label: "Enterprises Represented",
     },
     {
-      number: "12+",
-      label: "Sessions",
-      icon: Handshake,
+      number: "250+",
+      label: "Enterprise Speakers",
     },
     {
-      number: "10+",
-      label: "Industry Sectors",
-      icon: Lightbulb,
-    },
-    {
-      number: "3+",
-      label: "Parallel Tracks",
-      icon: Lightbulb,
+      number: "10,000+",
+      label: "Registrations",
     },
   ];
 
@@ -193,7 +183,7 @@ const Highlights = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative py-20 md:py-32 overflow-hidden"
+      className="relative overflow-hidden border-b border-slate-200 bg-[#f4f7fb] py-16 md:py-24"
     >
 
       {/* =========================
@@ -271,30 +261,27 @@ const Highlights = () => {
           Content
       ========================= */}
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container relative z-10 mx-auto px-4">
+        <div className="mx-auto mb-12 max-w-3xl text-center">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-red-600">
+            The community behind the conversation
+          </p>
+          <h2 className="text-3xl font-black leading-tight text-[#022158] sm:text-4xl md:text-5xl">
+            India&apos;s Enterprise AI Community
+          </h2>
+        </div>
 
         <div
           className="
-            grid
-            grid-cols-1
+            grid grid-cols-1 gap-y-10
             sm:grid-cols-2
-            lg:grid-cols-3
-            xl:grid-cols-5
-            gap-5
+            lg:grid-cols-4
             max-w-[1400px]
             mx-auto
           "
         >
 
           {highlights.map((item, index) => {
-
-            const delays = [
-              "",
-              "animation-delay-200",
-              "animation-delay-400",
-              "animation-delay-600",
-              "animation-delay-800",
-            ];
 
             return (
 
@@ -307,9 +294,9 @@ const Highlights = () => {
                       justify-center
                       text-center
 
-                      border-r-2
-                      border-[#022158]
-                      last:border-r-0
+                      border-slate-300
+                      lg:border-r
+                      lg:last:border-r-0
                     `}
               >
 
@@ -319,11 +306,11 @@ const Highlights = () => {
 
                 <div
                   className="
-                    text-5xl
-                    xl:text-6xl
-                    font-bold
+                    text-4xl
+                    font-black
+                    sm:text-5xl
+                    md:text-6xl
                     text-[#022158]
-                    drop-shadow-lg
                     leading-none
 
                     h-[1.1em]
@@ -348,10 +335,9 @@ const Highlights = () => {
 
                 <div
                   className="
-                    text-sm
-                    xl:text-base
-                    font-medium
-                    text-[#000]
+                    mt-3 text-sm
+                    font-semibold
+                    text-slate-600
                     tracking-wide
                     leading-snug
                     max-w-[220px]

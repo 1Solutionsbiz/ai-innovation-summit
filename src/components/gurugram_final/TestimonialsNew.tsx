@@ -10,21 +10,39 @@ export type Testimonial = {
 const defaultTestimonials: Testimonial[] = [
   {
     quote:
-      "Great to see so many minds coming together to discuss how we can collectively shape the future of AI in India.",
+      "AI delivers real impact when it moves beyond experimentation and translates into measurable business outcomes—accelerating growth, improving underwriting quality, and driving efficiency across the lending ecosystem.",
+    name: "Parvez Mulla",
+    designation: "MD & CEO, Fedbank Financial Services Ltd.",
+  },
+  {
+    quote:
+      "AI enables companies to understand consumer preferences and behaviors far more precisely. When applied to meaningful business challenges, it can deliver strong ROI while helping organizations create more relevant and personalized experiences for their consumers.",
+    name: "Mithun Appaiah",
+    designation: "CEO, Wow! Momo FMCG",
+  },
+  {
+    quote:
+      "AI is not just an enabler—it changes how businesses operate. The real opportunity for enterprises is to rethink their operating models, move beyond experimentation, and unlock the transformative impact AI can create at scale.",
+    name: "Raghav Aggarwal",
+    designation: "Co-Founder, Fluid AI",
+  },
+  {
+    quote:
+      "Great to see so many minds coming together to discuss how we can collectively shape the future of AI in India. The AI Innovation Summit provides a strong platform for meaningful dialogue and collaboration across the ecosystem.",
     name: "Amit Atri",
     designation: "Global CIO, Tata Consumer Products",
   },
   {
     quote:
-      "The energy in the room was incredible — this is exactly the kind of conversation enterprise AI needs right now.",
-    name: "Priya Menon",
-    designation: "CTO, Reliance Retail",
+      "The panel at AI Innovation Summit was a great platform to reflect on how enterprise architecture must evolve to be truly AI-ready. We explored how cloud-native infrastructure and data pipelines foster a culture of innovation, and why AI must move from being a standalone tool to becoming a core business enabler.",
+    name: "Shashwat Singh",
+    designation: "CIO, boAt",
   },
   {
     quote:
-      "A rare space where builders, leaders and policymakers actually talk to each other instead of past each other.",
-    name: "Rahul Sinha",
-    designation: "VP Engineering, Flipkart",
+      "The way tons of data is getting created in the last 3-4 years, the amount of data which is getting generated is humongous, so what we need is an infrastructure which can basically manage on-demand situation, and the infrastructure which is a secure infrastructure and has a lot of inbuilt facilities.",
+    name: "Vinod Bhat",
+    designation: "Former CIO, Vistara",
   },
 ];
 
@@ -137,7 +155,7 @@ const TestimonialSection = ({
             key={activeIndex}
             className="testimonial-quote animate-[fadeIn_600ms_ease-out]"
           >
-            <p className="text-white font-black text-[28px] sm:text-[36px] md:text-[42px] leading-[1.15] tracking-[-0.5px]">
+            <p className="text-white font-black text-[20px] sm:text-[25px] md:text-[30px] leading-[1.15] tracking-[-0.5px]">
               &ldquo;{current.quote}&rdquo;
             </p>
 

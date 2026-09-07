@@ -1,52 +1,49 @@
 "use client";
 
-import { Link } from "react-router-dom";
 import { Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 type VideoItem = {
-  image: string;
+  image?: string;
   link: string;
   title: string;
+  description: string;
 };
 
 const videos: VideoItem[] = [
   {
-    image: "/gurugram/videos/1.png",
-    link: "https://youtu.be/ihVia4zok2o?si=77qr1sOPwkr7cHM8",
-    title: "The AI ROI Illusion: Why teams struggle to prove AI impact",
+    link: "https://youtu.be/Q1jh_EXeIF0?si=V7q2Oe6TzlAEyAc7",
+    title: "Inaugural Address | Dr. N. Manjula, IAS",
+    description: "Dr. N. Manjula, IAS, Hon'ble Secretary, Government of Karnataka, shares Karnataka's vision for AI, deep tech and digital innovation.",
   },
   {
-    image: "/gurugram/videos/2.png",
-    link: "https://youtu.be/O0uTMQC4wLU?si=cq05f9m8vmhRT7zk",
-    title: "Cyber Resilience: The foundation of AI-Powered Business Transformation",
+    link: "https://youtu.be/zqVcqrTrrKI?si=FLfUx7LudUw-a-TA",
+    title: "The India AI Playbook | CXOs & Senior Industry Leaders",
+    description: "CXOs and senior industry leaders share practical lessons on moving AI from experimentation to measurable business impact.",
   },
   {
-    image: "/gurugram/videos/3.png",
-    link: "https://youtu.be/HKblUL42uAw?si=wZ1-TIMTghd12Jzz",
-    title: "The Autonomous Enterprise: Engineering the Shift",
+    link: "https://youtu.be/aym63ZXFHqU?si=QcjPbssuo9hgH9dH",
+    title: "Amit Sharma | Sr. Vice President – Enterprise Information Management and Analytics, Canara HSBC Life Insurance",
+    description: "Insights on the evolving maturity of AI models, their growing applications in BFSI, and the challenges of scaling AI across legacy enterprise systems.",
   },
   {
-    image: "/gurugram/videos/2.png",
-    link: "https://youtu.be/qyP3-zDsjfk?si=uZYSXHN7qxAAJox3",
-    title: "Cyber Resilience: The foundation of AI-Powered Business Transformation",
+    link: "https://youtu.be/mE-YiCnwzHA?si=gVCkH2li3M-rwnMC",
+    title: "Autonomous Finance | Akbar Ali Shaikh",
+    description: "Akbar Ali Shaikh, Partner - Autonomous Finance, Deloitte, explores how AI, interoperability and real-time data are reshaping finance.",
   },
   {
-    image: "/gurugram/videos/3.png",
-    link: "https://youtu.be/rTy2iuzmZxM?si=eLUO3RXaG_9kUcEx",
-    title: "The Autonomous Enterprise: Engineering the Shift",
+    link: "https://youtu.be/jRHSGJcoAkE?si=GwSOnmpf83a8YNcR",
+    title: "Unlocking Enterprise AI Value | Manpreet Singh Ahuja",
+    description: "Manpreet Singh Ahuja, Partner and Chief Client & TMT Sector Leader, PwC India, shares how organisations can move from pilots to transformation.",
   },
 ];
 
-/* =====================================================
-   Builds the internal watch-page URL for a video.
-   The player page reads these query params and embeds
-   the YouTube video with autoplay enabled.
-===================================================== */
-const buildWatchHref = (item: VideoItem) =>
-  `/watch?v=${encodeURIComponent(item.link)}&title=${encodeURIComponent(
-    item.title
-  )}`;
+const getYoutubeThumbnail = (link: string) => {
+  const videoId = link.match(/(?:youtu\.be\/|youtube\.com\/watch\?v=)([^?&/]+)/)?.[1];
+  return videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : "";
+};
+
+const getVideoImage = (item: VideoItem) => item.image ?? getYoutubeThumbnail(item.link);
 
 const OnDemandSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -120,8 +117,10 @@ const OnDemandSection = () => {
           {/* =================================================
               FEATURED VIDEO
           ================================================= */}
-          <Link
-            to={buildWatchHref(featured)}
+          <a
+            href={featured.link}
+            target="_blank"
+            rel="noreferrer"
             className={`group lg:w-[36%] w-full flex-shrink-0 ondemand-card ondemand-card-featured ${sectionVisible ? "is-visible" : ""}`}
           >
             <div
@@ -139,7 +138,7 @@ const OnDemandSection = () => {
             >
               <div className="relative aspect-[16/10] rounded-[12px] overflow-hidden bg-black">
                 <img
-                  src={featured.image}
+                  src={getVideoImage(featured)}
                   alt={featured.title}
                   className="
                     absolute inset-0
@@ -206,17 +205,22 @@ const OnDemandSection = () => {
               >
                 {featured.title}
               </p>
+              <p className="px-1 pb-4 text-sm leading-relaxed text-slate-600 transition-colors duration-300 group-hover:text-white/80">
+                {featured.description}
+              </p>
             </div>
-          </Link>
+          </a>
 
           {/* =================================================
               GRID OF SMALLER VIDEOS
           ================================================= */}
           <div className="lg:w-[42%] w-full grid grid-cols-2 gap-3 md:gap-4">
             {gridItems.map((item) => (
-              <Link
+              <a
                 key={item.link}
-                to={buildWatchHref(item)}
+                href={item.link}
+                target="_blank"
+                rel="noreferrer"
                 className={`group ondemand-card ondemand-card-${gridItems.indexOf(item)} ${sectionVisible ? "is-visible" : ""}`}
               >
                 <div
@@ -235,7 +239,7 @@ const OnDemandSection = () => {
                 >
                   <div className="relative aspect-[16/10] rounded-[10px] overflow-hidden bg-black">
                     <img
-                      src={item.image}
+                      src={getVideoImage(item)}
                       alt={item.title}
                       className="
                         absolute inset-0
@@ -306,8 +310,11 @@ const OnDemandSection = () => {
                   >
                     {item.title}
                   </p>
+                  <p className="px-0.5 pb-2 text-xs leading-relaxed text-slate-600 transition-colors duration-300 group-hover:text-white/80">
+                    {item.description}
+                  </p>
                 </div>
-              </Link>
+              </a>
             ))}
           </div>
         </div>

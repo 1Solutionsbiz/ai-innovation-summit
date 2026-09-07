@@ -137,7 +137,7 @@ const Footer = () => {
         <div className={`border-t border-slate-700 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 footer-reveal footer-delay-3 ${footerVisible ? "is-visible" : ""}`}>
 
           <p className="text-slate-400 text-xs sm:text-sm text-center md:text-left">
-            © Copyright 2025, The Guild
+            © Copyright 2026, The Guild
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm">

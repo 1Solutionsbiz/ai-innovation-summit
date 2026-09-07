@@ -1168,6 +1168,24 @@
 
 
 
+.btn-bg-w{
+  background: repeating-linear-gradient(90deg, #592fa9, #ec262d 100%);
+  color: #fff;
+  border: 1px solid #fff;
+}
+.btn-bg-w:hover{
+  background: #fff0;
+  border: 2px solid transparent;
+  color: #17458F;
+  transition: all 0.3s ease;
+  scale: 1.02;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(90deg, #8B5CF6 0%, #FF5F6D 100%) border-box;
+
+}
+
+
 
 .btn-bg{
   background: repeating-linear-gradient(90deg, #592fa9, #ec262d 100%);
@@ -1178,7 +1196,6 @@
   background: #fff0;
   color: #fff;
   scale: 1.02;
-
 }
 .btn-bg-hover{
   background: #fff0;
@@ -1251,4 +1268,18 @@
     line-height: 1.2;
     max-width: 70%;
     font-weight: 600;
+}
+
+
+
+
+.bg-color{
+  background: linear-gradient(90deg, #7144d8 0%, #c63d9a 45%, #f03a43 100%);
+}
+
+
+.agendatitle{
+  background: linear-gradient(90deg, #7144d8 0%, #c63d9a 45%, #f03a43 100%);
+  -webkit-background-clip: text;
+  color: transparent;
 }
