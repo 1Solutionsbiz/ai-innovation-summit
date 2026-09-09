@@ -26,7 +26,8 @@ import GurugramEdition26Redesign from "./pages/GurugramEdition26Redesign";
 import GurugramEdition26 from "./pages/GurugramEdition26";
 import GurugramEdition2026a from "./pages/GurugramEdition26_a";
 import SinghaniyaTest from "./pages/SinghaniyaTest";
-import Final from "./pages/Gurugram_Final";
+import DelhiGurugram_Edition26 from "./pages/DelhiGurugram_Edition26";
+import DelhiGurugram_Edition26_Agenda from "./pages/DelhiGurugram_Edition26_Agenda";
 import WatchPage from "./components/gurugram_final/WatchPage";
 
 
@@ -68,7 +69,8 @@ const App: React.FC = () => (
         <Route path="/gurugram-2026" element={<GurugramEdition26 />} />
         <Route path="/new-a" element={<GurugramEdition2026a />} />
         <Route path="/agenda-registration-form" element={<SinghaniyaTest />} />
-        <Route path="/final" element={<Final />} />
+        <Route path="/final" element={<DelhiGurugram_Edition26 />} />
+        <Route path="/delhi-gurugram_edition-26-agenda" element={<DelhiGurugram_Edition26_Agenda />} />
         <Route path="/watch" element={<WatchPage />} />
 
         <Route path="/previous/bangalore-2026" element={<BengaluruEdition26/>} />

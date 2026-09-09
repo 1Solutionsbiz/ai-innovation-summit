@@ -202,7 +202,7 @@ const FocusAreasSection = () => {
             <p
               className="
                 mt-8
-
+                mb-10
                 text-white/90
 
                 text-[18px]
@@ -219,63 +219,17 @@ const FocusAreasSection = () => {
 
             {/* Button */}
 
-            <button
-              type="button"
+            <a
+              href="delhi-gurugram_edition-26-agenda"
               className="
-                relative
-
-                mt-10
-
+                btn-bg-w
                 px-7
                 py-3.5
-
                 rounded-full
-
-                text-white
-
-                text-base
-                md:text-lg
-
-                font-medium
-
-                bg-gradient-to-r
-                from-[#7B4DFF]
-                to-[#EF3340]
-
-                border
-                border-white/60
-
-                shadow-lg
-
-                overflow-hidden
-
-                transition-all
-                duration-500
-
-                hover:scale-105
-                hover:shadow-[0_10px_40px_rgba(239,51,64,0.35)]
               "
             >
-              <span className="relative z-10">
                 View Full Agenda
-              </span>
-
-              <span
-                className="
-                  absolute
-                  inset-0
-
-                  bg-white/20
-
-                  translate-x-[-100%]
-
-                  hover:translate-x-[100%]
-
-                  transition-transform
-                  duration-700
-                "
-              />
-            </button>
+            </a>
 
           </div>
 

@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // ---------- Types ----------
@@ -33,36 +33,107 @@ const EVENTS: EventGroup[] = [
           company: "",
           image: "/speakers/hetal-presswala.png",
         },
-
         {
-          name: "Chaitanya Gogineni",
-          role: "Partner - Lighthouse (Data, Analytics and AI), KPMG India",
+          name: "Hetal Presswala",
+          role: "Chief Information Security Officer, Kalpatru Projects International ",
           company: "",
-          image: "/speakers/chaitanya-gogineni.png",
+          image: "/speakers/hetal-presswala.png",
         },
         {
-          name: "Rajat Mathur",
-          role: "Partner, BCG (Boston Consulting Group)",
+          name: "Hetal Presswala",
+          role: "Chief Information Security Officer, Kalpatru Projects International ",
           company: "",
-          image: "/speakers/rajat-mathur.png",
+          image: "/speakers/hetal-presswala.png",
         },
         {
-          name: "Sankarson Banerjee",
-          role: "Director, Dialoqa and Former CIO, RBL",
+          name: "Hetal Presswala",
+          role: "Chief Information Security Officer, Kalpatru Projects International ",
           company: "",
-          image: "/speakers/sankarson-banerjee.png",
+          image: "/speakers/hetal-presswala.png",
         },
         {
-          name: "Sudipta Ghosh",
-          role: " Partner, PwC India",
+          name: "Hetal Presswala",
+          role: "Chief Information Security Officer, Kalpatru Projects International ",
           company: "",
-          image: "/speakers/sudipta-ghosh.png",
+          image: "/speakers/hetal-presswala.png",
         },
-      {
-          name: "Mubin Shaikh",
-          role: "Partner, Technology Consulting – Cybersecurity EY",
+        {
+          name: "Hetal Presswala",
+          role: "Chief Information Security Officer, Kalpatru Projects International ",
           company: "",
-          image: "/speakers/mubin-shaikh.png",
+          image: "/speakers/hetal-presswala.png",
+        },
+        {
+          name: "Hetal Presswala",
+          role: "Chief Information Security Officer, Kalpatru Projects International ",
+          company: "",
+          image: "/speakers/hetal-presswala.png",
+        },
+        {
+          name: "Hetal Presswala",
+          role: "Chief Information Security Officer, Kalpatru Projects International ",
+          company: "",
+          image: "/speakers/hetal-presswala.png",
+        },
+        {
+          name: "Hetal Presswala",
+          role: "Chief Information Security Officer, Kalpatru Projects International ",
+          company: "",
+          image: "/speakers/hetal-presswala.png",
+        },
+        {
+          name: "Hetal Presswala",
+          role: "Chief Information Security Officer, Kalpatru Projects International ",
+          company: "",
+          image: "/speakers/hetal-presswala.png",
+        },
+        {
+          name: "Hetal Presswala",
+          role: "Chief Information Security Officer, Kalpatru Projects International ",
+          company: "",
+          image: "/speakers/hetal-presswala.png",
+        },
+        {
+          name: "Hetal Presswala",
+          role: "Chief Information Security Officer, Kalpatru Projects International ",
+          company: "",
+          image: "/speakers/hetal-presswala.png",
+        },
+        {
+          name: "Hetal Presswala",
+          role: "Chief Information Security Officer, Kalpatru Projects International ",
+          company: "",
+          image: "/speakers/hetal-presswala.png",
+        },
+        {
+          name: "Hetal Presswala",
+          role: "Chief Information Security Officer, Kalpatru Projects International ",
+          company: "",
+          image: "/speakers/hetal-presswala.png",
+        },
+        {
+          name: "Hetal Presswala",
+          role: "Chief Information Security Officer, Kalpatru Projects International ",
+          company: "",
+          image: "/speakers/hetal-presswala.png",
+        },
+        {
+          name: "Hetal Presswala",
+          role: "Chief Information Security Officer, Kalpatru Projects International ",
+          company: "",
+          image: "/speakers/hetal-presswala.png",
+        },
+        {
+          name: "Hetal Presswala",
+          role: "Chief Information Security Officer, Kalpatru Projects International ",
+          company: "",
+          image: "/speakers/hetal-presswala.png",
+        },
+        {
+          name: "Hetal Presswala",
+          role: "Chief Information Security Officer, Kalpatru Projects International ",
+          company: "",
+          image: "/speakers/hetal-presswala.png",
         },
     ],
   },
@@ -145,18 +216,57 @@ const EVENTS: EventGroup[] = [
 
 const FeaturedSpeakers = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const autoScrollFrame = useRef<number | null>(null);
+  const lastScrollTime = useRef<number | null>(null);
   const [activeEventIndex, setActiveEventIndex] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
+  const [isArrowMoving, setIsArrowMoving] = useState(false);
 
   const activeSpeakers = EVENTS[activeEventIndex].speakers;
+  const loopSpeakers = [
+    ...activeSpeakers,
+    ...activeSpeakers,
+    ...activeSpeakers,
+  ];
+
+  const getCardWidth = () => {
+    const container = scrollRef.current;
+    const card = container?.querySelector<HTMLElement>('[data-speaker-card]');
+    if (!container || !card) return 140;
+
+    const styles = window.getComputedStyle(container);
+    const gap = parseFloat(styles.columnGap || styles.gap) || 20;
+    return card.offsetWidth + gap;
+  };
+
+  const normalizeScrollPosition = () => {
+    const container = scrollRef.current;
+    if (!container || activeSpeakers.length === 0) return;
+
+    const oneSetWidth = getCardWidth() * activeSpeakers.length;
+    if (container.scrollLeft >= oneSetWidth * 2) {
+      container.scrollLeft -= oneSetWidth;
+    }
+    if (container.scrollLeft <= 0) {
+      container.scrollLeft += oneSetWidth;
+    }
+  };
 
   const scrollCarousel = (direction: "left" | "right") => {
     const container = scrollRef.current;
     if (!container) return;
-    const amount = 220;
+
+    setIsArrowMoving(true);
+    lastScrollTime.current = null;
     container.scrollBy({
-      left: direction === "left" ? -amount : amount,
+      left: direction === "left" ? -220 : 220,
       behavior: "smooth",
     });
+
+    window.setTimeout(() => {
+      normalizeScrollPosition();
+      setIsArrowMoving(false);
+    }, 500);
   };
 
   const goToEvent = (eventIndex: number) => {
@@ -173,10 +283,48 @@ const FeaturedSpeakers = () => {
     goToEvent(newIndex);
   };
 
+  useEffect(() => {
+    const container = scrollRef.current;
+    if (!container || activeSpeakers.length === 0) return;
+
+    container.scrollLeft = getCardWidth() * activeSpeakers.length;
+  }, [activeEventIndex, activeSpeakers.length]);
+
+  useEffect(() => {
+    if (autoScrollFrame.current !== null) {
+      cancelAnimationFrame(autoScrollFrame.current);
+      autoScrollFrame.current = null;
+    }
+
+    lastScrollTime.current = null;
+    if (isHovering || isArrowMoving || activeSpeakers.length === 0) return;
+
+    const scrollContinuously = (timestamp: number) => {
+      const container = scrollRef.current;
+      if (!container) return;
+
+      const previousTimestamp = lastScrollTime.current ?? timestamp;
+      const elapsed = Math.min(timestamp - previousTimestamp, 40);
+      container.scrollLeft += elapsed * 1;
+      lastScrollTime.current = timestamp;
+      normalizeScrollPosition();
+      autoScrollFrame.current = requestAnimationFrame(scrollContinuously);
+    };
+
+    autoScrollFrame.current = requestAnimationFrame(scrollContinuously);
+
+    return () => {
+      if (autoScrollFrame.current !== null) {
+        cancelAnimationFrame(autoScrollFrame.current);
+        autoScrollFrame.current = null;
+      }
+    };
+  }, [activeEventIndex, activeSpeakers.length, isArrowMoving, isHovering]);
+
   return (
     <section className="bg-white py-16 px-6 overflow-hidden">
       <div className="max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-10">
           {/* Left column */}
           <div className="flex flex-col justify-center">
             <p className="text-red-600 font-semibold text-lg">Retrospective</p>
@@ -219,25 +367,37 @@ const FeaturedSpeakers = () => {
             <div
               key={activeEventIndex}
               ref={scrollRef}
+              onMouseEnter={() => setIsHovering(true)}
+              onMouseLeave={() => setIsHovering(false)}
               className="flex w-full min-w-0 gap-5 overflow-x-auto scroll-smooth pb-2 no-scrollbar"
             >
-              {activeSpeakers.map((speaker, idx) => (
+              {loopSpeakers.map((speaker, idx) => (
                 <div
                   key={idx}
-                  className="speaker-card group flex-shrink-0 w-[190px] rounded-2xl border border-blue-950 p-0 bg-white transition-colors duration-300 hover:bg-blue-950"
+                  data-speaker-card
+                  className="speaker-card group flex-shrink-0 w-[120px] overflow-hidden rounded-2xl border border-blue-950 bg-white p-0 transition-colors duration-300 hover:bg-black"
                   style={{ animationDelay: `${idx * 90}ms` }}
                 >
-                  <img
-                    src={speaker.image}
-                    alt={speaker.name}
-                    className="w-full aspect-square object-cover rounded-xl grayscale transition-transform duration-500 ease-out group-hover:scale-[0.96]"
-                  />
-                  <p className="mt-3 px-2 text-sm font-bold text-blue-950 transition-colors duration-300 group-hover:text-white">{speaker.name}</p>
-                  <p className="mt-1 px-2 py-2 text-xs leading-tight text-slate-600 transition-colors duration-300 group-hover:text-white/70">
+                  <div
+                    className="aspect-square w-full overflow-hidden bg-cover bg-center bg-no-repeat transition-colors duration-300 group-hover:bg-black"
+                    style={{
+                      backgroundImage: "url('/gurugram/pastspeakers/bg.jpg')",
+                    }}
+                  >
+                    <img
+                      src={speaker.image}
+                      alt={speaker.name}
+                      className="h-full w-full object-cover grayscale transition-transform duration-500 ease-out group-hover:scale-[0.96]"
+                    />
+                  </div>
+                  <div className="bg-white px-2 pb-2 pt-3 transition-colors duration-300 group-hover:bg-black">
+                    <p className="text-sm font-bold text-black transition-colors duration-300 group-hover:text-white">{speaker.name}</p>
+                    <p className="mt-1 text-xs leading-tight text-black transition-colors duration-300 group-hover:text-white">
                     {speaker.role}
                     <br />
                     {speaker.company}
-                  </p>
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>

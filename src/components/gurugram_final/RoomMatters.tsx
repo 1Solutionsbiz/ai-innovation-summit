@@ -56,33 +56,33 @@ const INDUSTRIES = [
 
 const RoomThatMatters = () => {
   return (
-    <section className="relative bg-gradient-to-br from-indigo-50 via-blue-50 to-indigo-50 py-16 px-6 overflow-hidden">
+    <section className="relative overflow-hidden border-t-[5px] border-[#07163d] bg-[#f2f4ff] px-5 py-12 sm:px-8 md:py-16 lg:px-12">
       {/* Top accent bar */}
-      <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-emerald-500 via-blue-900 to-sky-300" />
+      <div className="absolute left-0 right-0 top-0 h-1 bg-[#07163d]" />
 
-      <div className="max-w-[1200px] mx-auto text-center">
-        <h2 className="font-black text-blue-950 text-4xl md:text-5xl tracking-tight">
-          The Room That Matters
+      <div className="mx-auto max-w-[1700px] text-center">
+        <h2 className="font-black uppercase leading-[0.95] tracking-[-2px] text-[#06245d] text-4xl sm:text-5xl md:text-6xl lg:text-[3.2rem]">
+          THE ROOM THAT MATTERS
         </h2>
-        <p className="mt-3 text-slate-600 text-lg">
+        <p className="mt-6 text-lg font-normal text-[#171717] sm:text-xl md:text-1xl">
           700+ enterprise technology &amp; transformation leaders
         </p>
 
         {/* Category cards */}
-        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5">
+        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12 xl:gap-14">
           {CATEGORIES.map((category, idx) => {
             const Icon = category.icon;
             return (
               <div
                 key={idx}
-                className="bg-white/70 backdrop-blur-sm border border-white rounded-2xl p-6 flex flex-col items-center gap-5 shadow-sm hover:shadow-md transition-shadow"
+                className="flex min-h-[300px] flex-col items-center justify-start rounded-[24px] border-2 border-[#d8d9ee] bg-white/75 px-5 py-7 shadow-[0_2px_8px_rgba(36,51,110,0.03)] transition-shadow hover:shadow-[0_8px_24px_rgba(36,51,110,0.12)]"
               >
                 <div
-                  className={`w-16 h-16 rounded-full flex items-center justify-center ${category.iconBg}`}
+                  className={`flex h-[126px] w-[126px] shrink-0 items-center justify-center rounded-full ${category.iconBg}`}
                 >
-                  <Icon className={`w-7 h-7 ${category.iconColor}`} strokeWidth={1.75} />
+                  <Icon className={`h-[72px] w-[72px] ${category.iconColor}`} strokeWidth={1.65} />
                 </div>
-                <p className="font-semibold text-blue-950 leading-snug">
+                <p className="mt-6 max-w-[260px] text-lg font-semibold leading-[1.35] text-[#06245d] sm:text-xl">
                   {category.label}
                 </p>
               </div>
@@ -91,12 +91,12 @@ const RoomThatMatters = () => {
         </div>
 
         {/* Industries strip */}
-        <div className="mt-10 flex flex-wrap justify-center items-center gap-x-3 gap-y-2">
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-x-4 gap-y-3 lg:flex-nowrap lg:gap-x-5">
           {INDUSTRIES.map((industry, idx) => (
             <span key={idx} className="flex items-center gap-3">
-              <span className="font-bold text-blue-950">{industry}</span>
+              <span className="whitespace-nowrap text-lg font-semibold text-[#06245d] sm:text-xl">{industry}</span>
               {idx < INDUSTRIES.length - 1 && (
-                <span className="text-red-500 text-lg leading-none">&middot;</span>
+                <span className="text-xl leading-none text-[#ef3340]">&bull;</span>
               )}
             </span>
           ))}

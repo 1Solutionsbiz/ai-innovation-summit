@@ -53,14 +53,16 @@ const FeaturedSpeakers = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const scrollerRef = useRef<HTMLDivElement>(null);
 
-  const autoScrollTimer = useRef<ReturnType<
-    typeof setInterval
-  > | null>(null);
+  const autoScrollFrame = useRef<number | null>(null);
+  const lastScrollTime = useRef<number | null>(null);
 
   const [sectionVisible, setSectionVisible] =
     useState(false);
 
   const [isHovering, setIsHovering] =
+    useState(false);
+
+  const [isArrowMoving, setIsArrowMoving] =
     useState(false);
 
   const [selectedSpeaker, setSelectedSpeaker] =
@@ -203,51 +205,50 @@ const FeaturedSpeakers = () => {
   }, []);
 
   /* =====================================================
-     AUTO SCROLL
+     CONTINUOUS AUTO SCROLL
   ===================================================== */
 
   useEffect(() => {
-    if (autoScrollTimer.current) {
-      clearInterval(autoScrollTimer.current);
+    if (autoScrollFrame.current !== null) {
+      cancelAnimationFrame(autoScrollFrame.current);
+      autoScrollFrame.current = null;
     }
 
-    if (!sectionVisible) return;
+    lastScrollTime.current = null;
 
-    autoScrollTimer.current = setInterval(() => {
-      if (isHovering) return;
+    if (!sectionVisible || isHovering || isArrowMoving) return;
 
+    const scrollContinuously = (timestamp: number) => {
       const scroller = scrollerRef.current;
 
-      if (!scroller) return;
+      if (!scroller) {
+        autoScrollFrame.current = null;
+        return;
+      }
 
-      const cardWidth = getCardWidth();
+      const previousTimestamp = lastScrollTime.current ?? timestamp;
+      const elapsed = Math.min(timestamp - previousTimestamp, 40);
+      const pixelsPerMillisecond = 0.035;
 
-      /*
-       * Automatically move ONE speaker
-       */
-      scroller.scrollBy({
-        left: cardWidth,
-        behavior: "smooth",
-      });
+      scroller.scrollLeft += elapsed * pixelsPerMillisecond;
+      lastScrollTime.current = timestamp;
+      normalizeScrollPosition();
+      autoScrollFrame.current = requestAnimationFrame(scrollContinuously);
+    };
 
-      /*
-       * Check loop after animation
-       */
-      setTimeout(() => {
-        normalizeScrollPosition();
-      }, 650);
-    }, 3500);
+    autoScrollFrame.current = requestAnimationFrame(scrollContinuously);
 
     return () => {
-      if (autoScrollTimer.current) {
-        clearInterval(autoScrollTimer.current);
+      if (autoScrollFrame.current !== null) {
+        cancelAnimationFrame(autoScrollFrame.current);
+        autoScrollFrame.current = null;
       }
     };
-  }, [sectionVisible, isHovering]);
+    }, [sectionVisible, isHovering, isArrowMoving]);
 
   /* =====================================================
      MANUAL ARROW
-     4 SPEAKERS AT A TIME
+      3 SPEAKERS AT A TIME
   ===================================================== */
 
   const moveSpeakers = (
@@ -259,28 +260,25 @@ const FeaturedSpeakers = () => {
 
     const cardWidth = getCardWidth();
 
-    /*
-     * 4 speakers
-     */
-    const amount = cardWidth * 4;
+    const amount = cardWidth * 3;
+    const targetPosition =
+      scroller.scrollLeft +
+      (direction === "right" ? amount : -amount);
 
-    if (direction === "right") {
-      scroller.scrollBy({
-        left: amount,
-        behavior: "smooth",
-      });
-    } else {
-      scroller.scrollBy({
-        left: -amount,
-        behavior: "smooth",
-      });
-    }
+    setIsArrowMoving(true);
+    lastScrollTime.current = null;
+    scroller.scrollTo({
+      left: targetPosition,
+      behavior: "smooth",
+    });
 
     /*
-     * Normalize after smooth scrolling
+     * Normalize after the three-card smooth movement,
+     * then let continuous autoplay resume.
      */
     setTimeout(() => {
       normalizeScrollPosition();
+      setIsArrowMoving(false);
     }, 700);
   };
 
@@ -557,13 +555,8 @@ const FeaturedSpeakers = () => {
                   overflow-x-auto
                   overflow-y-visible
 
-                  scroll-smooth
-
                   pb-5
                   pt-5
-
-                  snap-x
-                  snap-mandatory
 
                   [scrollbar-width:none]
                   [&::-webkit-scrollbar]:hidden
@@ -590,8 +583,6 @@ const FeaturedSpeakers = () => {
                         w-[220px]
                         sm:w-[230px]
                         md:w-[290px]
-
-                        snap-start
 
                         cursor-pointer
 

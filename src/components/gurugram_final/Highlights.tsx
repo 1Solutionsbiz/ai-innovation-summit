@@ -177,13 +177,17 @@ const Highlights = () => {
       number: "10,000+",
       label: "Registrations",
     },
+    {
+      number: "3+",
+      label: "Parallel Tracks",
+    },
   ];
 
 
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden border-b border-slate-200 bg-[#f4f7fb] py-16 md:py-24"
+      className="relative overflow-hidden bg-white py-14 md:py-16"
     >
 
       {/* =========================
@@ -262,12 +266,11 @@ const Highlights = () => {
       ========================= */}
 
       <div className="container relative z-10 mx-auto px-4">
-        <div className="mx-auto mb-12 max-w-3xl text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-red-600">
-            The community behind the conversation
-          </p>
-          <h2 className="text-3xl font-black leading-tight text-[#022158] sm:text-4xl md:text-5xl">
-            India&apos;s Enterprise AI Community
+        <div className="mx-auto mb-20 max-w-4xl text-center">
+          <h2 className="text-xl font-black leading-tight text-[#022158] sm:text-5xl md:text-[3.5rem]">
+            <span className={`highlights-line line-delay-1 ${isVisible ? "is-visible" : ""}`}>
+              The Room That Matters
+            </span>
           </h2>
         </div>
 
@@ -275,8 +278,8 @@ const Highlights = () => {
           className="
             grid grid-cols-1 gap-y-10
             sm:grid-cols-2
-            lg:grid-cols-4
-            max-w-[1400px]
+            lg:grid-cols-5
+            max-w-[1600px]
             mx-auto
           "
         >
@@ -294,7 +297,7 @@ const Highlights = () => {
                       justify-center
                       text-center
 
-                      border-slate-300
+                      border-[#234478]
                       lg:border-r
                       lg:last:border-r-0
                     `}
@@ -305,11 +308,12 @@ const Highlights = () => {
                 ========================= */}
 
                 <div
-                  className="
-                    text-4xl
+                  className={`
+                    highlights-line line-delay-${index + 2}
+                    text-5xl
                     font-black
-                    sm:text-5xl
-                    md:text-6xl
+                    sm:text-6xl
+                    md:text-[3.5rem]
                     text-[#022158]
                     leading-none
 
@@ -320,7 +324,8 @@ const Highlights = () => {
                     justify-center
 
                     overflow-hidden
-                  "
+                    ${isVisible ? "is-visible" : ""}
+                  `}
                 >
                   <AnimatedNumber
                     value={item.number}
@@ -334,14 +339,16 @@ const Highlights = () => {
                 ========================= */}
 
                 <div
-                  className="
-                    mt-3 text-sm
-                    font-semibold
-                    text-slate-600
-                    tracking-wide
+                  className={`
+                    highlights-line line-delay-${index + 6}
+                    mt-4 text-base
+                    font-normal
+                    text-[#171717]
+                    tracking-normal
                     leading-snug
-                    max-w-[220px]
-                  "
+                    max-w-[240px]
+                    ${isVisible ? "is-visible" : ""}
+                  `}
                 >
                   {item.label}
                 </div>
@@ -353,6 +360,47 @@ const Highlights = () => {
         </div>
 
       </div>
+
+      <style>{`
+        @keyframes highlightsLineReveal {
+          from {
+            opacity: 0;
+            clip-path: inset(0 0 100% 0);
+            transform: translateY(18px);
+          }
+          to {
+            opacity: 1;
+            clip-path: inset(0 0 0 0);
+            transform: translateY(0);
+          }
+        }
+
+        .highlights-line {
+          display: inline-block;
+          opacity: 0;
+        }
+
+        .highlights-line.is-visible {
+          animation: highlightsLineReveal 850ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .line-delay-0 { animation-delay: 0ms; }
+        .line-delay-1 { animation-delay: 140ms; }
+        .line-delay-2 { animation-delay: 280ms; }
+        .line-delay-3 { animation-delay: 420ms; }
+        .line-delay-4 { animation-delay: 560ms; }
+        .line-delay-5 { animation-delay: 700ms; }
+        .line-delay-6 { animation-delay: 840ms; }
+        .line-delay-7 { animation-delay: 980ms; }
+        .line-delay-8 { animation-delay: 1120ms; }
+        .line-delay-9 { animation-delay: 1260ms; }
+
+        @media (prefers-reduced-motion: reduce) {
+          .highlights-line.is-visible {
+            animation-duration: 1ms;
+          }
+        }
+      `}</style>
 
     </section>
   );

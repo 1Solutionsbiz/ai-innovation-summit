@@ -10,7 +10,6 @@ import RoomMatters from "@/components/gurugram_final/RoomMatters";
 import Partners from "@/components/gurugram_final/Partners";
 import Leaders from "@/components/gurugram_final/Leaders";
 import Innovation from "@/components/gurugram_final/Innovation";
-import Agenda from "@/components/gurugram_final/Agendasection";
 import TestimonialsNew from "@/components/gurugram_final/TestimonialsNew";
 import FeaturedSpeakers from "@/components/gurugram_final/FeaturedSpeakers";
 import WatchOnDemand from "@/components/gurugram_final/WatchOnDemand";
@@ -30,13 +29,12 @@ const GurugramEdition2026 = () => {
       <HeroBanner />
       <Highlights />
       <Speakers />
-      <OperatingModel />
+      {/* <OperatingModel /> */}
       <ExploreFocusAreas />
       <RoomMatters />
       <Partners />
       <Leaders />
       <Innovation />
-      <Agenda />
       <TestimonialsNew />
       <FeaturedSpeakers />
       <WatchOnDemand />

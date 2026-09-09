@@ -40,10 +40,10 @@ const Sponsors = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="partners" className="bg-[#eee] py-20 md:py-28">
+    <section ref={sectionRef} id="partners" className="bg-[#fff] py-20 md:py-28">
       <div className="max-w-[1200px] mx-auto px-6 text-center">
         <p className={`sponsors-reveal sponsors-delay-0 font-extrabold text-[20px] text-[#e92630] mb-2 ${sectionVisible ? "is-visible" : ""}`}>
-          Past Sponsors
+          Past Partners
         </p>
         <h2 className={`sponsors-reveal sponsors-delay-1 font-black text-[#022158] text-[36px] sm:text-[44px] md:text-[56px] leading-[1.1] tracking-[-1.44px] ${sectionVisible ? "is-visible" : ""}`}>
           Partners Who Powered the Journey
@@ -52,14 +52,14 @@ const Sponsors = () => {
           Celebrating the organisations that came on board to support ideas, innovation, and industry connections
         </p>
 
-        <div className={`sponsors-reveal sponsors-delay-3 mt-8 flex flex-wrap items-center justify-center gap-4 ${sectionVisible ? "is-visible" : ""}`}>
+        {/* <div className={`sponsors-reveal sponsors-delay-3 mt-8 flex flex-wrap items-center justify-center gap-4 ${sectionVisible ? "is-visible" : ""}`}>
           <a
             href="#partners"
             className="view-all-speakers"
           >
             View all sponsors
           </a>
-        </div>
+        </div> */}
       </div>
 
       <div className={`mt-16 overflow-hidden sponsors-reveal sponsors-delay-4 ${sectionVisible ? "is-visible" : ""}`}>

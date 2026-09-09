@@ -86,7 +86,7 @@ const Sponsors = () => {
         <h2
           className={`glimpse-reveal-up glimpse-delay-1 font-black text-[#022158] text-[36px] sm:text-[44px] md:text-[56px] leading-[1.1] tracking-[-1.44px] ${sectionVisible ? "is-visible" : ""}`}
         >
-          A Glimpse of the Participating Enterprises so far.
+          A Glimpse of the Participating Enterprises
         </h2>
       </div>
 

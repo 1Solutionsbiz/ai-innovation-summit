@@ -9,7 +9,7 @@ const RedesignNavigation = () => {
     { label: "Focus Areas", href: "#focus" },
     { label: "Speakers", href: "#speakers" },
     { label: "Partners", href: "#partners" },
-    { label: "Agenda", href: "#agenda" },
+    { label: "Agenda", href: "delhi-gurugram_edition-26-agenda" },
     { label: "Who Should Attend", href: "#who-should-attend" },
     { label: "Contact", href: "#contact" },
   ];
@@ -31,7 +31,7 @@ const RedesignNavigation = () => {
 
 
        <div className="flex gap-[25px]">
-          <a href="#" className="redesign-logo">
+          <a href="#" className="redesign-logo redesign-logo-gurugram-26">
             <img
               src="/delhi26_redesign/logo.png"
               alt="AI Innovation Summit"
@@ -43,7 +43,7 @@ const RedesignNavigation = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="redesign-nav-link text-[12px] text-white hover:text-primary"
+                className="redesign-nav-link text-[11px] text-white hover:text-primary"
               >
                 {link.label}
               </a>
@@ -51,7 +51,7 @@ const RedesignNavigation = () => {
 
               {/* Previous Editions Dropdown */}
               <div className="relative group">
-                <button className="flex items-center gap-1 text-white hover:text-primary text-sm font-medium">
+                <button className="flex items-center gap-1.2 text-white hover:text-primary text-sm font-medium">
                     Previous Editions <ChevronDown size={16} />
                   </button>
 

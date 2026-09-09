@@ -13,7 +13,7 @@ type VideoItem = {
 const videos: VideoItem[] = [
   {
     link: "https://youtu.be/Q1jh_EXeIF0?si=V7q2Oe6TzlAEyAc7",
-    title: "Inaugural Address | Dr. N. Manjula, IAS",
+    title: "Inaugural Address | Dr. N. Manjula, IAS | Dr. N. Manjula, IAS",
     description: "Dr. N. Manjula, IAS, Hon'ble Secretary, Government of Karnataka, shares Karnataka's vision for AI, deep tech and digital innovation.",
   },
   {
@@ -23,7 +23,7 @@ const videos: VideoItem[] = [
   },
   {
     link: "https://youtu.be/aym63ZXFHqU?si=QcjPbssuo9hgH9dH",
-    title: "Amit Sharma | Sr. Vice President – Enterprise Information Management and Analytics, Canara HSBC Life Insurance",
+    title: "Amit Sharma | Sr. Vice President – Enterprise Information",
     description: "Insights on the evolving maturity of AI models, their growing applications in BFSI, and the challenges of scaling AI across legacy enterprise systems.",
   },
   {
@@ -83,7 +83,7 @@ const OnDemandSection = () => {
           {/* =================================================
               LEFT TEXT
           ================================================= */}
-          <div className="lg:w-[22%] flex-shrink-0">
+          <div className="lg:w-[25%] flex-shrink-0">
             <p
               className={`ondemand-reveal-up ondemand-delay-0 text-[#EF3340] text-[18px] mb-3 ${sectionVisible ? "is-visible" : ""}`}
             >
@@ -92,10 +92,10 @@ const OnDemandSection = () => {
 
             <h2 className="text-white font-[500] text-[36px] sm:text-[43px] leading-[1.05] tracking-[-1px]">
               <span className={`ondemand-line ondemand-reveal-up ondemand-delay-1 ${sectionVisible ? "is-visible" : ""}`}>
-                Ideas That Inspire.
+                Ideas That
               </span>
               <span className={`ondemand-line ondemand-reveal-up ondemand-delay-2 ${sectionVisible ? "is-visible" : ""}`}>
-                On Your Schedule.
+                Inspire. On Your Schedule.
               </span>
             </h2>
 
@@ -118,7 +118,7 @@ const OnDemandSection = () => {
               FEATURED VIDEO
           ================================================= */}
           <a
-            href={featured.link}
+            // href={featured.link}
             target="_blank"
             rel="noreferrer"
             className={`group lg:w-[36%] w-full flex-shrink-0 ondemand-card ondemand-card-featured ${sectionVisible ? "is-visible" : ""}`}
@@ -128,7 +128,7 @@ const OnDemandSection = () => {
                 rounded-[18px]
                 overflow-hidden
                 p-1
-                bg-[#fff]
+                bg-[#000128]
 
                 transition-colors
                 duration-300
@@ -192,7 +192,7 @@ const OnDemandSection = () => {
                   px-1
                   pb-1
 
-                  text-[#022158]
+                  text-[#fff]
                   text-[26px]
                   font-bold
                   leading-snug
@@ -205,9 +205,9 @@ const OnDemandSection = () => {
               >
                 {featured.title}
               </p>
-              <p className="px-1 pb-4 text-sm leading-relaxed text-slate-600 transition-colors duration-300 group-hover:text-white/80">
+              {/* <p className="px-1 pb-4 text-sm leading-relaxed text-slate-600 transition-colors duration-300 group-hover:text-white/80">
                 {featured.description}
-              </p>
+              </p> */}
             </div>
           </a>
 
@@ -218,7 +218,7 @@ const OnDemandSection = () => {
             {gridItems.map((item) => (
               <a
                 key={item.link}
-                href={item.link}
+                // href={item.link}
                 target="_blank"
                 rel="noreferrer"
                 className={`group ondemand-card ondemand-card-${gridItems.indexOf(item)} ${sectionVisible ? "is-visible" : ""}`}
@@ -229,7 +229,7 @@ const OnDemandSection = () => {
                     overflow-hidden
                     p-1
 
-                    bg-[#fff]
+                    bg-[#000128]
 
                     transition-colors
                     duration-300
@@ -297,7 +297,7 @@ const OnDemandSection = () => {
                       px-0.5
                       pb-0.5
 
-                      text-[#022158]
+                      text-[#fff]
                       text-[13px]
                       font-bold
                       leading-snug
@@ -310,9 +310,9 @@ const OnDemandSection = () => {
                   >
                     {item.title}
                   </p>
-                  <p className="px-0.5 pb-2 text-xs leading-relaxed text-slate-600 transition-colors duration-300 group-hover:text-white/80">
+                  {/* <p className="px-0.5 pb-2 text-xs leading-relaxed text-slate-600 transition-colors duration-300 group-hover:text-white/80">
                     {item.description}
-                  </p>
+                  </p> */}
                 </div>
               </a>
             ))}
