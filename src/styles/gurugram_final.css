@@ -1286,3 +1286,15 @@
   -webkit-background-clip: text;
   color: transparent;
 }
+
+
+
+
+
+/* Mobile Section Start */
+@media screen and (max-width: 481px){
+  .two-cols{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* Mobile Section End */

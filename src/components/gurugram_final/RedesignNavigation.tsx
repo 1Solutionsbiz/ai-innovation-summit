@@ -1,8 +1,18 @@
 import { ChevronDown, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const RedesignNavigation = () => {
   const [open, setOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 0);
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const links = [
     { label: "Overview", href: "#overview" },
@@ -26,7 +36,10 @@ const RedesignNavigation = () => {
 
 
   return (
-    <header className="redesign-nav sticky" style={{ marginBottom: "-120px" }}>
+    <header
+      className={`redesign-nav sticky ${isScrolled ? "scrolled" : ""}`}
+      style={{ marginBottom: "-120px" }}
+    >
       <div className="redesign-nav-inner">
 
 

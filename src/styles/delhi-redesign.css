@@ -21,6 +21,7 @@
   left: 0;
   width: 100%;
   z-index: 50;
+  transition: background-color .3s ease, box-shadow .3s ease;
   background: linear-gradient(
     to bottom,
     rgba(0,0,0,.75),
@@ -28,10 +29,15 @@
   );
 }
 
+.redesign-nav.scrolled {
+  background: linear-gradient(100deg,#7147d9,#ed3546);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, .3);
+}
+
 .redesign-nav-inner {
   max-width: 1400px;
   margin: auto;
-  padding: 18px 35px;
+  padding: 10px 35px;
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -12,32 +12,32 @@ type Category = {
 const CATEGORIES: Category[] = [
   {
     icon: Users,
-    iconBg: "bg-purple-100",
-    iconColor: "text-purple-600",
+    iconBg: "bg-purple-600",
+    iconColor: "gurugram/icons/cio.png",
     label: "CIO / CTO / CDO / CISO / CAIO",
   },
   {
     icon: BrainCircuit,
     iconBg: "bg-blue-100",
-    iconColor: "text-blue-600",
+    iconColor: "gurugram/icons/data_leads.png",
     label: "AI & Data Leaders",
   },
   {
     icon: Workflow,
     iconBg: "bg-emerald-100",
-    iconColor: "text-emerald-600",
+    iconColor: "gurugram/icons/transformation.png",
     label: "Digital Transformation Leaders",
   },
   {
     icon: Network,
     iconBg: "bg-orange-100",
-    iconColor: "text-orange-500",
+    iconColor: "gurugram/icons/enterprise.png",
     label: "Enterprise Architecture & Cloud Leaders",
   },
   {
     icon: Factory,
     iconBg: "bg-rose-100",
-    iconColor: "text-rose-500",
+    iconColor: "gurugram/icons/manufacturing.png",
     label: "Manufacturing & Industry Technology Leaders",
   },
 ];
@@ -80,7 +80,8 @@ const RoomThatMatters = () => {
                 <div
                   className={`flex h-[126px] w-[126px] shrink-0 items-center justify-center rounded-full ${category.iconBg}`}
                 >
-                  <Icon className={`h-[72px] w-[72px] ${category.iconColor}`} strokeWidth={1.65} />
+                  {/* <Icon className={`h-[72px] w-[72px] ${category.iconColor}`} strokeWidth={1.65} /> */}
+                  <img src={`${category.iconColor}`} alt="" />
                 </div>
                 <p className="mt-6 max-w-[260px] text-lg font-semibold leading-[1.35] text-[#06245d] sm:text-xl">
                   {category.label}

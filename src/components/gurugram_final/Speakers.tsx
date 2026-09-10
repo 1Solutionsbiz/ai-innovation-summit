@@ -369,7 +369,7 @@ const FeaturedSpeakers = () => {
                   text-[#022158]
                   font-black
 
-                  text-[38px]
+                  text-2xl
                   sm:text-[44px]
                   md:text-[48px]
 

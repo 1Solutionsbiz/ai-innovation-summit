@@ -276,7 +276,7 @@ const Highlights = () => {
 
         <div
           className="
-            grid grid-cols-1 gap-y-10
+            grid grid-cols-2 gap-y-10
             sm:grid-cols-2
             lg:grid-cols-5
             max-w-[1600px]
@@ -310,9 +310,9 @@ const Highlights = () => {
                 <div
                   className={`
                     highlights-line line-delay-${index + 2}
-                    text-5xl
+                    text-2xl
                     font-black
-                    sm:text-6xl
+                    sm:text-2xl
                     md:text-[3.5rem]
                     text-[#022158]
                     leading-none
@@ -341,7 +341,8 @@ const Highlights = () => {
                 <div
                   className={`
                     highlights-line line-delay-${index + 6}
-                    mt-4 text-base
+                    mt-1 text-base
+                    sm:mt-4
                     font-normal
                     text-[#171717]
                     tracking-normal
