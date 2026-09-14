@@ -45,6 +45,17 @@ const getYoutubeThumbnail = (link: string) => {
 
 const getVideoImage = (item: VideoItem) => item.image ?? getYoutubeThumbnail(item.link);
 
+const buildWatchHref = (item: VideoItem) => {
+  const params = new URLSearchParams({
+    v: item.link,
+    title: item.title,
+    description: item.description,
+    destination: "The Leela Ambience Gurugram, Delhi-NCR",
+  });
+
+  return `/watch?${params.toString()}`;
+};
+
 const OnDemandSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [sectionVisible, setSectionVisible] = useState(false);
@@ -100,7 +111,7 @@ const OnDemandSection = () => {
             </h2>
 
             <a
-              href="#"
+              href={buildWatchHref(featured)}
               className={`ondemand-reveal-up ondemand-delay-3
                 mt-5
                 inline-block
@@ -118,9 +129,7 @@ const OnDemandSection = () => {
               FEATURED VIDEO
           ================================================= */}
           <a
-            // href={featured.link}
-            target="_blank"
-            rel="noreferrer"
+            href={buildWatchHref(featured)}
             className={`group lg:w-[36%] w-full flex-shrink-0 ondemand-card ondemand-card-featured ${sectionVisible ? "is-visible" : ""}`}
           >
             <div
@@ -218,9 +227,7 @@ const OnDemandSection = () => {
             {gridItems.map((item) => (
               <a
                 key={item.link}
-                // href={item.link}
-                target="_blank"
-                rel="noreferrer"
+                href={buildWatchHref(item)}
                 className={`group ondemand-card ondemand-card-${gridItems.indexOf(item)} ${sectionVisible ? "is-visible" : ""}`}
               >
                 <div

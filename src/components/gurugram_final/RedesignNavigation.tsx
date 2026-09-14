@@ -44,7 +44,7 @@ const RedesignNavigation = () => {
 
 
        <div className="flex gap-[25px]">
-          <a href="#" className="redesign-logo redesign-logo-gurugram-26">
+          <a href="/" className="redesign-logo redesign-logo-gurugram-26">
             <img
               src="/delhi26_redesign/logo.png"
               alt="AI Innovation Summit"

@@ -2,11 +2,9 @@
 
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import RedesignNavigation from "./RedesignNavigation";
+import Footer from "./Footer";
 
-/* =====================================================
-   Extracts the YouTube video ID from either a
-   youtu.be/ID or youtube.com/watch?v=ID style link.
-===================================================== */
 const getYouTubeId = (url: string): string | null => {
   try {
     const parsed = new URL(url);
@@ -30,64 +28,71 @@ const WatchPage = () => {
   const [searchParams] = useSearchParams();
 
   const rawLink = searchParams.get("v") ?? "";
-  const title = searchParams.get("title") ?? "";
+  const title = searchParams.get("title") ?? "AI Innovation Summit";
+  const description =
+    searchParams.get("description") ??
+    "Explore the latest AI Innovation Summit insights, leadership perspectives, and enterprise transformation stories.";
+  const destination =
+    searchParams.get("destination") ?? "The Leela Ambience Gurugram, Delhi-NCR";
 
   const videoId = getYouTubeId(rawLink);
 
   const embedSrc = videoId
-    ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`
+    ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`
     : null;
 
   return (
-    <section className="relative min-h-screen bg-[#050B22] py-10 md:py-16">
-      <div className="max-w-[1100px] mx-auto px-6">
-        {/* BACK BUTTON */}
-        <button
-          onClick={() => navigate(-1)}
-          className="
-            flex items-center gap-2
+    <div className="min-h-screen bg-[#050B22] text-white">
+      <RedesignNavigation />
 
-            text-white/80
-            text-[15px]
-            font-semibold
+      <main className="relative py-10 md:py-16 mt-10">
+        <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
+          <button
+            onClick={() => navigate(-1)}
+            className="mb-8 flex items-center gap-2 text-[15px] font-semibold text-white/80 transition-colors duration-300 hover:text-white"
+          >
+            <ArrowLeft size={18} />
+            Back
+          </button>
 
-            mb-8
-
-            transition-colors
-            duration-300
-
-            hover:text-white
-          "
-        >
-          <ArrowLeft size={18} />
-          Back
-        </button>
-
-        {/* PLAYER */}
-        <div className="relative w-full aspect-video rounded-[18px] overflow-hidden bg-black">
-          {embedSrc ? (
-            <iframe
-              src={embedSrc}
-              title={title || "Video player"}
-              className="absolute inset-0 w-full h-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          ) : (
-            <div className="absolute inset-0 flex items-center justify-center text-white/60 text-sm">
-              Video not found.
+          <div className="grid items-start gap-8 lg:grid-cols-2 mt-10">
+            <div className="relative w-full overflow-hidden rounded-[20px] bg-black shadow-[0_25px_80px_rgba(0,0,0,0.45)]">
+              <div className="aspect-video">
+                {embedSrc ? (
+                  <iframe
+                    src={embedSrc}
+                    title={title}
+                    className="h-full w-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                ) : (
+                  <div className="flex h-full items-center justify-center text-sm text-white/60">
+                    Video not found.
+                  </div>
+                )}
+              </div>
             </div>
-          )}
-        </div>
 
-        {/* TITLE */}
-        {title && (
-          <h1 className="mt-6 text-white font-black text-[24px] md:text-[30px] leading-tight tracking-[-0.5px]">
-            {title}
-          </h1>
-        )}
-      </div>
-    </section>
+            <div className="pt-2">
+              <h1 className="text-3xl font-black leading-tight tracking-[-0.8px] text-white md:text-5xl">
+                {title}
+              </h1>
+
+              <div className="mt-6 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-white/80 inline-flex items-center">
+                {destination}
+              </div>
+
+              <p className="mt-6 text-base leading-8 text-slate-300 md:text-lg">
+                {description}
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <Footer />
+    </div>
   );
 };
 
