@@ -269,7 +269,7 @@ const Highlights = () => {
         <div className="mx-auto mb-20 max-w-4xl text-center">
           <h2 className="text-xl font-black leading-tight text-[#022158] sm:text-5xl md:text-[3.5rem]">
             <span className={`highlights-line line-delay-1 ${isVisible ? "is-visible" : ""}`}>
-              The Room That Matters
+              The Journey so far
             </span>
           </h2>
         </div>

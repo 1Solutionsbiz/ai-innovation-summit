@@ -31,7 +31,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer ref={footerRef} className="footer-section bg-slate-900 text-white">
+    <footer ref={footerRef} className="footer-section bg-slate-900 text-white" id="contact">
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 py-10 md:py-16">
 
         {/* TOP SECTION */}

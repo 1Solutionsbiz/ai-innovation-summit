@@ -5,6 +5,7 @@ import HeroBanner from "@/components/gurugram_final/HeroBanner";
 import Highlights from "@/components/gurugram_final/Highlights";
 import Speakers from "@/components/gurugram_final/Speakers";
 import OperatingModel from "@/components/gurugram_final/OperatingModel";
+import Overview from "@/components/gurugram_final/Overview";
 import ExploreFocusAreas from "@/components/gurugram_final/ExploreFocusAreas";
 import RoomMatters from "@/components/gurugram_final/RoomMatters";
 import Partners from "@/components/gurugram_final/Partners";
@@ -29,7 +30,7 @@ const GurugramEdition2026 = () => {
       <HeroBanner />
       <Highlights />
       <Speakers />
-      {/* <OperatingModel /> */}
+      <Overview />
       <ExploreFocusAreas />
       <RoomMatters />
       <Partners />
