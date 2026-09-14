@@ -344,7 +344,7 @@ const FeaturedSpeakers = () => {
           {/* Right column */}
           <div className="relative min-w-0">
             {/* Carousel nav arrows */}
-            <div className="flex justify-start gap-3 mb-6">
+            <div className="flex justify-end gap-3 mb-6">
               <button
                 type="button"
                 onClick={() => scrollCarousel("left")}

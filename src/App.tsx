@@ -68,7 +68,7 @@ const App: React.FC = () => (
         <Route path="/new" element={<GurugramEdition26Redesign />} />
         <Route path="/gurugram-2026" element={<GurugramEdition26 />} />
         <Route path="/new-a" element={<GurugramEdition2026a />} />
-        <Route path="/agenda-registration-form" element={<SinghaniyaTest />} />
+        <Route path="/registration-form-26" element={<SinghaniyaTest />} />
         <Route path="/final" element={<DelhiGurugram_Edition26 />} />
         <Route path="/delhi-gurugram_edition-26-agenda" element={<DelhiGurugram_Edition26_Agenda />} />
         <Route path="/watch" element={<WatchPage />} />

@@ -534,22 +534,22 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
           </div>
           {/* reCAPTCHA */}
           <div className="md:col-span-2">
-            <ReCAPTCHA
+            {/* <ReCAPTCHA
               sitekey={RECAPTCHA_SITE_KEY}
               onChange={token => setRecaptchaToken(token)}
               theme="dark"
-            />
+            /> */}
           </div>
 
           {/* Submit */}
           <div className="md:col-span-2 text-center">
-            <button
+            {/* <button
               type="submit"
               disabled={submitting}
               className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded"
             >
               {submitting ? "Submitting..." : "Submit"}
-            </button>
+            </button> */}
             <p className="text-xs mt-2 text-gray-400">
               You can withdraw your consent at any time by contacting us at guildconferences@guildlive.com.
               All data will be processed in accordance with The Guild's <Link to="/privacy-policy" className="text-neon-blue"> Privacy Policy</Link>  and applicable data protection laws.
