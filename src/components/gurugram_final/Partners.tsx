@@ -3,27 +3,27 @@ import React, { useEffect, useRef, useState } from "react";
 const partners = [
   {
     title: "PRESENTING PARTNER",
-    image: "/gurugram/partners/partner_1.png",
+    image: "/gurugram/partners/salesforce.png",
     alt: "Partner 1",
   },
   {
     title: "CO-POWERED BY",
-    image: "/gurugram/partners/partner_2.png",
+    image: "/gurugram/partners/Atlassian.png",
     alt: "Partner 2",
   },
   {
     title: "CYBER RESILIENCE PARTNER",
-    image: "/gurugram/partners/partner_3.png",
+    image: "/gurugram/partners/cohesity.png",
     alt: "Partner 3",
   },
   {
     title: "AI DATA CLOUD PARTNER",
-    image: "/gurugram/partners/partner_4.png",
+    image: "/gurugram/partners/snowflake.png",
     alt: "Partner 4",
   },
   {
     title: "ENGAGEMENT PARTNER",
-    image: "/gurugram/partners/partner_5.png",
+    image: "/gurugram/partners/Equateme.png",
     alt: "Partner 5",
   },
 ];
@@ -114,7 +114,7 @@ const PartnersSection = () => {
                     className="partner-logo partner-logo-new"
                     key={`first-${index}`}
                   >
-                    <h3 className="partner-title text-white">
+                    <h3 className="partner-title text-black">
                       {partner.title}
                     </h3>
 
@@ -134,7 +134,7 @@ const PartnersSection = () => {
                     className="partner-logo partner-logo-new"
                     key={`second-${index}`}
                   >
-                    <h3 className="partner-title text-white">
+                    <h3 className="partner-title text-black">
                       {partner.title}
                     </h3>
 

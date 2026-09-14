@@ -1,4 +1,8 @@
-const OperatingModel = () => {
+type OperatingModelProps = {
+  showCta?: boolean;
+};
+
+const OperatingModel = ({ showCta = true }: OperatingModelProps) => {
   return (
     <section className="bg-white py-20 px-6">
       <div className="max-w-[80%] mx-auto text-center">
@@ -20,16 +24,14 @@ const OperatingModel = () => {
           execution.
         </p>
 
-        <a
-          href="#know-more"
-          className="rounded-full px-10 py-4 btn-bg-w"
-        >
-          Know more...
-        </a>
-
-
-
-
+        {showCta && (
+          <a
+            href="#know-more"
+            className="rounded-full px-10 py-4 btn-bg-w"
+          >
+            Know more...
+          </a>
+        )}
       </div>
     </section>
   );

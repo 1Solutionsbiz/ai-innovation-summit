@@ -173,10 +173,10 @@
   width: 550px;
   min-height: 70vh;
 
-  background-image: url("/gurugram/partners/bg.png");
+  /* background-image: url("/gurugram/partners/bg.png");
   background-size: 100% 100%;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 
   display: flex;
   flex-direction: column;
@@ -368,11 +368,24 @@
   width: 330px;
   height: 450px;
 
-  background-image: url("/gurugram/partners/bg.png");
+  /* background-image: url("/gurugram/partners/bg.png");
   background-size: 100% 100%;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 
+  box-shadow: #092c6380 0px 0px 29px 0px;
+  padding: 0.51rem 1.75rem;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  color: #17458F;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(90deg, #8B5CF6 0%, #FF5F6D 100%) border-box;
+
+
+    
   position: relative;
 
   overflow: hidden;

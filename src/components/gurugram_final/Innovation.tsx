@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { Pause, Play } from "lucide-react";
+import { Pause, Play, X } from "lucide-react";
+import OperatingModel from "./OperatingModel";
 
 const cards = [
   {
@@ -37,6 +38,7 @@ const InnovationSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const [sectionVisible, setSectionVisible] = useState(false);
+  const [isOperatingModelOpen, setIsOperatingModelOpen] = useState(false);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -104,6 +106,7 @@ const InnovationSection = () => {
             
             <button
               type="button"
+              onClick={() => setIsOperatingModelOpen(true)}
               className={`innovation-know-more mt-12 innovation-reveal-up innovation-delay-4 ${sectionVisible ? "is-visible" : ""}`}
             >
               Know More
@@ -177,6 +180,22 @@ const InnovationSection = () => {
           </div>
         </div>
       </div>
+
+      {isOperatingModelOpen && (
+        <div className="fixed inset-0 z-[120] flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm">
+          <div className="relative w-full max-w-5xl overflow-hidden rounded-[26px] bg-white shadow-2xl">
+            <button
+              type="button"
+              onClick={() => setIsOperatingModelOpen(false)}
+              aria-label="Close operating model popup"
+              className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-slate-900 text-white transition hover:bg-slate-700"
+            >
+              <X size={18} />
+            </button>
+            <OperatingModel showCta={false} />
+          </div>
+        </div>
+      )}
 
       <style>{`
         @keyframes innovationFadeInUp {
