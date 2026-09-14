@@ -55,56 +55,48 @@ const HeroBanner = () => {
       <div className="" />
 
       
-      <div className="relative z-10 max-w-[1200px] mx-auto px-6 pt-32 pb-20 md:pt-40 w-full">
-        <p
-          className={`text-sm md:text-base font-semibold text-white opacity-0 translate-y-8 transition-all duration-700 ease-out ${isVisible ? "opacity-100 translate-y-0" : ""}`}
-        >
-          AI Innovation Summit - Delhi 2026
-        </p>
+      <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6 pt-24 pb-20 md:pt-20 w-full">
+        <div className="grid items-center gap-8 lg:grid-cols-[60%_minmax(0,1fr)]">
+          <div className="relative flex justify-center lg:justify-start">
+            <img
+              src="/gurugram/logo-conbain.png"
+              alt="AI Innovation Summit partner showcase"
+              className="w-full max-w-[80%] lg:max-w-[80%] object-contain drop-shadow-[0_25px_50px_rgba(8,145,178,0.25)]"
+            />
+          </div>
 
-        <h1
-          className={`font-inter font-black text-white leading-[0.9] tracking-[-3.5px] text-6xl sm:text-7xl md:text-[88px] opacity-0 translate-y-8 transition-all duration-700 delay-100 ease-out ${isVisible ? "opacity-100 translate-y-0" : ""}`}
-        >
-          From Assistance 
-          <br />
-          to Autonomy.
-        </h1>
+          <div>
+            
+            <div
+              className={`mt-10 flex gap-x-8 gap-y-3 text-slate-200 hero-info-venue opacity-0 translate-y-8 transition-all duration-700 delay-300 ease-out ${isVisible ? "opacity-100 translate-y-0" : ""}`}
+            >
+              <span className="flex items-center gap-2 text-lg md:text-base font-medium">
+                <CalendarDays className="w-5 h-5 text-white" />
+                December 2, 2026
+              </span>
+              <span className="flex items-center gap-2 text-lg md:text-base font-medium">
+                <MapPin className="w-5 h-5 text-white" />
+                The Leela Ambience Gurugram, Delhi-NCR
+              </span>
+            </div>
 
-        <p
-          className={`mt-8 max-w-xl text-lg md:text-xl text-slate-300 opacity-0 translate-y-8 transition-all duration-700 delay-200 ease-out ${isVisible ? "opacity-100 translate-y-0" : ""}`}
-        >
-          {/* Where Agentic AI Meets Enterprise-Scale Execution */}
-          Where India’s enterprise AI agenda takes shape.
-        </p>
-
-        <div
-          className={`mt-10 flex gap-x-8 gap-y-3 text-slate-200 hero-info-venue opacity-0 translate-y-8 transition-all duration-700 delay-300 ease-out ${isVisible ? "opacity-100 translate-y-0" : ""}`}
-        >
-          <span className="flex items-center gap-2 text-lg md:text-base font-medium">
-            <CalendarDays className="w-5 h-5 text-white" />
-            December 2, 2026
-          </span>
-          <span className="flex items-center gap-2 text-lg md:text-base font-medium">
-            <MapPin className="w-5 h-5 text-white" />
-            The Leela Ambience Gurugram, Delhi-NCR
-          </span>
-        </div>
-
-        <div
-          className={`mt-10 flex flex-wrap items-center gap-5 opacity-0 translate-y-8 transition-all duration-700 delay-[400ms] ease-out ${isVisible ? "opacity-100 translate-y-0" : ""}`}
-        >
-          <a
-            href="#mumbairegistrationform"
-            className="inline-flex items-center rounded-full font-semibold px-7 py-3 text-sm md:text-base hover:scale-105 transition-transform duration-300 shadow-lg btn-bg"
-          >
-            Registrations Open Soon
-          </a>
-          <a
-            href="#mumbairegistrationform"
-            className="inline-flex items-center rounded-full font-semibold px-7 py-3 text-sm md:text-base hover:scale-105 transition-transform duration-300 shadow-lg btn-bg-hover"
-          >
-            Registrations Open Soon
-          </a>
+            <div
+              className={`mt-10 flex flex-wrap items-center gap-5 opacity-0 translate-y-8 transition-all duration-700 delay-[400ms] ease-out ${isVisible ? "opacity-100 translate-y-0" : ""}`}
+            >
+              <a
+                href="#mumbairegistrationform"
+                className="inline-flex items-center rounded-full font-semibold px-7 py-3 text-sm md:text-base hover:scale-105 transition-transform duration-300 shadow-lg btn-bg"
+              >
+                Attend AIIS 2026
+              </a>
+              <a
+                href="#mumbairegistrationform"
+                className="inline-flex items-center rounded-full font-semibold px-7 py-3 text-sm md:text-base hover:scale-105 transition-transform duration-300 shadow-lg btn-bg-hover"
+              >
+                Explore More
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 

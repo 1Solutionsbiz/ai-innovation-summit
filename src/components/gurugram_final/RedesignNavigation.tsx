@@ -38,7 +38,7 @@ const RedesignNavigation = () => {
   return (
     <header
       className={`redesign-nav sticky ${isScrolled ? "scrolled" : ""}`}
-      style={{ marginBottom: "-120px" }}
+      style={{ marginBottom: "-90px" }}
     >
       <div className="redesign-nav-inner">
 
