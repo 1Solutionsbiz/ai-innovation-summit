@@ -104,10 +104,10 @@ const Footer = () => {
                     </a>{" "}
                     or{" "}
                     <a
-                      href="mailto:aditi.malik@guildlive.com"
+                      href="mailto:lavi@guildlive.com"
                       className="text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
-                      aditi.malik@guildlive.com
+                      lavi@guildlive.com
                     </a>
                   </p>
                 </div>

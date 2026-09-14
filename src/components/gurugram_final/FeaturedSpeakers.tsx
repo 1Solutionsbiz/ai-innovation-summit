@@ -190,7 +190,7 @@ const EVENTS: EventGroup[] = [
   },
   {
     location: "Delhi",
-    year: "2026",
+    year: "2025",
     speakers: [
       {
         name: "Suvodip Chatterjee",
