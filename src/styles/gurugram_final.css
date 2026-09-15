@@ -1301,7 +1301,7 @@
   font-size: 14px;
   height: 40px;
   border-radius: 50px;
-  border: 2px solid transparent;
+  border: 2px solid #fff;
   color: #fff;
   background:
     linear-gradient(#000, #000) padding-box,
@@ -1310,8 +1310,7 @@
 
 
 .redesign-nav.scrolled {
-  background: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+  background: #fff;
 }
 
 .redesign-nav.scrolled .redesign-nav-link,
