@@ -1,4 +1,4 @@
-import Navigation from "@/components/bengaluru26/Navigation";
+import Navigation from "@/components/gurugram_final/RedesignNavigation";
 
 import Agenda from "@/components/bengaluru26/Agenda"; 
 

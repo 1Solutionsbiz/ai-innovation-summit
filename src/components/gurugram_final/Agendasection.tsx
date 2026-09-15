@@ -69,16 +69,16 @@ const AGENDA_DATA: DayData[] = [
           },
         ],
       },
-      {
-        id: "Detailed-Agenda-2",
-        label: "Detailed Agenda 2",
-        items: [
-          {
-            time: "Time",
-            title: "Soon",
-          },
-        ],
-      },
+      // {
+      //   id: "Detailed-Agenda-2",
+      //   label: "Detailed Agenda 2",
+      //   items: [
+      //     {
+      //       time: "Time",
+      //       title: "Soon",
+      //     },
+      //   ],
+      // },
     ],
   },
   // {
@@ -118,12 +118,12 @@ const AgendaSection = () => {
     <section className="bg-black py-20 px-6">
       <div className="max-w-[1080px] mx-auto">
         {/* Heading */}
-        <h2 className="text-center font-black text-5xl md:text-6xl tracking-tight uppercase">
+        <h2 className="text-center font-black text-5xl md:text-6xl tracking-tight uppercase mt-10">
           <span className="agendatitle">Agenda</span>
         </h2>
 
         {/* Day tabs */}
-        <div className="mt-10 flex justify-center gap-10">
+        {/* <div className="mt-10 flex justify-center gap-10">
           {AGENDA_DATA.map((day) => (
             <button
               key={day.id}
@@ -137,7 +137,7 @@ const AgendaSection = () => {
               {day.label}
             </button>
           ))}
-        </div>
+        </div> */}
 
         {/* Track pills */}
         <div className="mt-10 flex justify-center">

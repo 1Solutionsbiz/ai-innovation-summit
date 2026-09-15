@@ -1,8 +1,8 @@
 import ScrollToHash from "@/components/ScrollToHash";
 
 import Navigation from "@/components/gurugram_final/RedesignNavigation";
+import SpeakersList from "@/components/gurugram_final/SpeakersList";
 import Speakers from "@/components/gurugram_final/Speakers";
-import Agenda from "@/components/gurugram_final/Agendasection";
 import Footer from "@/components/gurugram_final/Footer";
 
 import "@/styles/gurugram_final.css";
@@ -14,7 +14,7 @@ const GurugramEdition2026 = () => {
       <ScrollToHash />
       <Navigation />
       {/* <Speakers /> */}
-      <Agenda />
+      <SpeakersList />
       <Footer />
     </div>
   );

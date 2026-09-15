@@ -1,14 +1,9 @@
-import {
-  ArrowLeft,
-  ArrowRight,
-  Plus,
-  X,
-} from "lucide-react";
+import { Plus, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const speakers = [
   {
-    name: "Priya Nair",
+    name: "Priya Nair 1",
     role: "VP of Data & AI, Meridian Financial",
     description:
       "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
@@ -16,7 +11,7 @@ const speakers = [
     linkedin: "https://www.linkedin.com/in/priyanair",
   },
   {
-    name: "Priya Nair",
+    name: "Priya Nair 2",
     role: "VP of Data & AI, Meridian Financial",
     description:
       "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
@@ -24,7 +19,7 @@ const speakers = [
     linkedin: "https://www.linkedin.com/in/priyanair",
   },
   {
-    name: "Priya Nair",
+    name: "Priya Nair 3",
     role: "VP of Data & AI, Meridian Financial",
     description:
       "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
@@ -32,7 +27,7 @@ const speakers = [
     linkedin: "https://www.linkedin.com/in/priyanair",
   },
   {
-    name: "Priya Nair",
+    name: "Priya Nair 4",
     role: "VP of Data & AI, Meridian Financial",
     description:
       "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
@@ -40,7 +35,119 @@ const speakers = [
     linkedin: "https://www.linkedin.com/in/priyanair",
   },
   {
-    name: "Priya Nair",
+    name: "Priya Nair 5",
+    role: "VP of Data & AI, Meridian Financial",
+    description:
+      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
+    image: "gurugram/speakers/speaker_1.png",
+    linkedin: "https://www.linkedin.com/in/priyanair",
+  },
+  {
+    name: "Priya Nair 6",
+    role: "VP of Data & AI, Meridian Financial",
+    description:
+      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
+    image: "gurugram/speakers/speaker_1.png",
+    linkedin: "https://www.linkedin.com/in/priyanair",
+  },
+  {
+    name: "Priya Nair 7",
+    role: "VP of Data & AI, Meridian Financial",
+    description:
+      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
+    image: "gurugram/speakers/speaker_1.png",
+    linkedin: "https://www.linkedin.com/in/priyanair",
+  },
+  {
+    name: "Priya Nair 8",
+    role: "VP of Data & AI, Meridian Financial",
+    description:
+      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
+    image: "gurugram/speakers/speaker_1.png",
+    linkedin: "https://www.linkedin.com/in/priyanair",
+  },
+  {
+    name: "Priya Nair 9",
+    role: "VP of Data & AI, Meridian Financial",
+    description:
+      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
+    image: "gurugram/speakers/speaker_1.png",
+    linkedin: "https://www.linkedin.com/in/priyanair",
+  },
+  {
+    name: "Priya Nair 10",
+    role: "VP of Data & AI, Meridian Financial",
+    description:
+      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
+    image: "gurugram/speakers/speaker_1.png",
+    linkedin: "https://www.linkedin.com/in/priyanair",
+  },
+  {
+    name: "Priya Nair 11",
+    role: "VP of Data & AI, Meridian Financial",
+    description:
+      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
+    image: "gurugram/speakers/speaker_1.png",
+    linkedin: "https://www.linkedin.com/in/priyanair",
+  },
+  {
+    name: "Priya Nair 12",
+    role: "VP of Data & AI, Meridian Financial",
+    description:
+      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
+    image: "gurugram/speakers/speaker_1.png",
+    linkedin: "https://www.linkedin.com/in/priyanair",
+  },
+  {
+    name: "Priya Nair 13",
+    role: "VP of Data & AI, Meridian Financial",
+    description:
+      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
+    image: "gurugram/speakers/speaker_1.png",
+    linkedin: "https://www.linkedin.com/in/priyanair",
+  },
+  {
+    name: "Priya Nair 14",
+    role: "VP of Data & AI, Meridian Financial",
+    description:
+      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
+    image: "gurugram/speakers/speaker_1.png",
+    linkedin: "https://www.linkedin.com/in/priyanair",
+  },
+  {
+    name: "Priya Nair 15",
+    role: "VP of Data & AI, Meridian Financial",
+    description:
+      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
+    image: "gurugram/speakers/speaker_1.png",
+    linkedin: "https://www.linkedin.com/in/priyanair",
+  },
+  {
+    name: "Priya Nair 16",
+    role: "VP of Data & AI, Meridian Financial",
+    description:
+      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
+    image: "gurugram/speakers/speaker_1.png",
+    linkedin: "https://www.linkedin.com/in/priyanair",
+  },
+  {
+    name: "Priya Nair 17",
+    role: "VP of Data & AI, Meridian Financial",
+    description:
+      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
+    image: "gurugram/speakers/speaker_1.png",
+    linkedin: "https://www.linkedin.com/in/priyanair",
+  },
+  {
+    name: "Priya Nair 18",
+    role: "VP of Data & AI, Meridian Financial",
+    description:
+      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
+    image: "gurugram/speakers/speaker_1.png",
+    linkedin: "https://www.linkedin.com/in/priyanair",
+  },
+  {
+    name: "Priya Nair 19",
     role: "VP of Data & AI, Meridian Financial",
     description:
       "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
@@ -51,31 +158,12 @@ const speakers = [
 
 const FeaturedSpeakers = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  const scrollerRef = useRef<HTMLDivElement>(null);
-
-  const autoScrollFrame = useRef<number | null>(null);
-  const lastScrollTime = useRef<number | null>(null);
 
   const [sectionVisible, setSectionVisible] =
     useState(false);
 
-  const [isHovering, setIsHovering] =
-    useState(false);
-
-  const [isArrowMoving, setIsArrowMoving] =
-    useState(false);
-
   const [selectedSpeaker, setSelectedSpeaker] =
     useState<(typeof speakers)[number] | null>(null);
-
-  /*
-   * Duplicate speakers for infinite scrolling
-   */
-  const loopSpeakers = [
-    ...speakers,
-    ...speakers,
-    ...speakers,
-  ];
 
   /* =====================================================
      SECTION VISIBILITY
@@ -120,169 +208,6 @@ const FeaturedSpeakers = () => {
   }, []);
 
   /* =====================================================
-     GET CARD WIDTH
-  ===================================================== */
-
-  const getCardWidth = () => {
-    const scroller = scrollerRef.current;
-
-    if (!scroller) {
-      return 240;
-    }
-
-    const card =
-      scroller.querySelector<HTMLElement>(
-        "[data-speaker-card]"
-      );
-
-    if (!card) {
-      return 240;
-    }
-
-    const styles = window.getComputedStyle(scroller);
-
-    const gap =
-      parseFloat(styles.columnGap || styles.gap) || 12;
-
-    return card.offsetWidth + gap;
-  };
-
-  /* =====================================================
-     INFINITE LOOP
-  ===================================================== */
-
-  const normalizeScrollPosition = () => {
-    const scroller = scrollerRef.current;
-
-    if (!scroller) return;
-
-    /*
-     * Because we have 3 copies,
-     * middle copy starts at speakers.length cards.
-     */
-    const oneSetWidth =
-      getCardWidth() * speakers.length;
-
-    /*
-     * If user reaches third copy,
-     * move back by one complete set.
-     */
-    if (
-      scroller.scrollLeft >=
-      oneSetWidth * 2
-    ) {
-      scroller.scrollLeft -= oneSetWidth;
-    }
-
-    /*
-     * If user reaches before first copy,
-     * move forward by one complete set.
-     */
-    if (scroller.scrollLeft <= 0) {
-      scroller.scrollLeft += oneSetWidth;
-    }
-  };
-
-  /* =====================================================
-     START CAROUSEL FROM MIDDLE COPY
-  ===================================================== */
-
-  useEffect(() => {
-    const scroller = scrollerRef.current;
-
-    if (!scroller) return;
-
-    /*
-     * Start from middle set.
-     *
-     * This makes both left and right
-     * infinite scrolling possible.
-     */
-    const startPosition =
-      getCardWidth() * speakers.length;
-
-    scroller.scrollLeft = startPosition;
-  }, []);
-
-  /* =====================================================
-     CONTINUOUS AUTO SCROLL
-  ===================================================== */
-
-  useEffect(() => {
-    if (autoScrollFrame.current !== null) {
-      cancelAnimationFrame(autoScrollFrame.current);
-      autoScrollFrame.current = null;
-    }
-
-    lastScrollTime.current = null;
-
-    if (!sectionVisible || isHovering || isArrowMoving) return;
-
-    const scrollContinuously = (timestamp: number) => {
-      const scroller = scrollerRef.current;
-
-      if (!scroller) {
-        autoScrollFrame.current = null;
-        return;
-      }
-
-      const previousTimestamp = lastScrollTime.current ?? timestamp;
-      const elapsed = Math.min(timestamp - previousTimestamp, 40);
-      const pixelsPerMillisecond = 0.2;
-
-      scroller.scrollLeft += elapsed * pixelsPerMillisecond;
-      lastScrollTime.current = timestamp;
-      normalizeScrollPosition();
-      autoScrollFrame.current = requestAnimationFrame(scrollContinuously);
-    };
-
-    autoScrollFrame.current = requestAnimationFrame(scrollContinuously);
-
-    return () => {
-      if (autoScrollFrame.current !== null) {
-        cancelAnimationFrame(autoScrollFrame.current);
-        autoScrollFrame.current = null;
-      }
-    };
-    }, [sectionVisible, isHovering, isArrowMoving]);
-
-  /* =====================================================
-     MANUAL ARROW
-      3 SPEAKERS AT A TIME
-  ===================================================== */
-
-  const moveSpeakers = (
-    direction: "left" | "right"
-  ) => {
-    const scroller = scrollerRef.current;
-
-    if (!scroller) return;
-
-    const cardWidth = getCardWidth();
-
-    const amount = cardWidth * 3;
-    const targetPosition =
-      scroller.scrollLeft +
-      (direction === "right" ? amount : -amount);
-
-    setIsArrowMoving(true);
-    lastScrollTime.current = null;
-    scroller.scrollTo({
-      left: targetPosition,
-      behavior: "smooth",
-    });
-
-    /*
-     * Normalize after the three-card smooth movement,
-     * then let continuous autoplay resume.
-     */
-    setTimeout(() => {
-      normalizeScrollPosition();
-      setIsArrowMoving(false);
-    }, 700);
-  };
-
-  /* =====================================================
      POPUP
   ===================================================== */
 
@@ -320,21 +245,20 @@ const FeaturedSpeakers = () => {
 
         <div
           className="
-            max-w-[100%]
+            w-full
+            max-w-[1400px]
             mx-auto
-            px-6
+            px-4
+            sm:px-6
+            lg:px-8
           "
         >
 
           <div
             className="
-              grid
-              grid-cols-1
-              lg:grid-cols-[25%_1fr]
+              flex
+              flex-col
               gap-10
-              lg:gap-14
-              items-start
-              align-items-center
             "
           >
 
@@ -342,9 +266,8 @@ const FeaturedSpeakers = () => {
                 LEFT CONTENT
             ================================================= */}
 
-            <div
-              className="pt-2"
-            >
+            <div className="pt-2 text-center">
+
 
               <p
                 className={`
@@ -382,23 +305,14 @@ const FeaturedSpeakers = () => {
                   className={`block opacity-0 translate-y-8 transition-all duration-[1400ms] delay-100 ease-[cubic-bezier(0.16,1,0.3,1)] ${sectionVisible ? "opacity-100 translate-y-0" : ""}`}
                 >
                   Voices Leading
-                </span>
+                {/* </span>
                 <span
                   className={`block opacity-0 translate-y-8 transition-all duration-[1400ms] delay-200 ease-[cubic-bezier(0.16,1,0.3,1)] ${sectionVisible ? "opacity-100 translate-y-0" : ""}`}
-                >
+                > */}
                   India&apos;s AI Future
                 </span>
               </h2>
 
-              <br />
-              <br />
-
-              <a href="delhi-gurugram_edition-26-speakers"
-                type="button"
-                className={`view-all-speakers`}
-              >
-                View all speakers
-              </a>
 
             </div>
 
@@ -409,164 +323,30 @@ const FeaturedSpeakers = () => {
 
             <div
               className={`
-                min-w-0
-
+                w-full
                 transition-all
                 duration-[1700ms]
                 delay-150
-
                 ease-[cubic-bezier(0.16,1,0.3,1)]
-
                 ${sectionVisible
-                  ? "opacity-100 translate-x-0"
-                  : "opacity-0 translate-x-32"
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
                 }
               `}
             >
-
-              {/* =================================================
-                  ARROW BUTTONS
-                  
-                  ALWAYS AT START / TOP OF SPEAKERS
-              ================================================= */}
-
               <div
                 className="
-                  w-full
-
-                  flex
-                  justify-end
-                  items-center
-
-                  gap-3
-
-                  mb-5
+                  grid
+                  grid-cols-1
+                  sm:grid-cols-2
+                  md:grid-cols-3
+                  lg:grid-cols-5
+                  gap-5
+                  pt-2
                 "
               >
 
-                {/* LEFT */}
-
-                <button
-                  type="button"
-                  onClick={() =>
-                    moveSpeakers("left")
-                  }
-                  aria-label="Previous speakers"
-                  className="
-                    flex
-                    shrink-0
-
-                    w-11
-                    h-11
-
-                    rounded-full
-
-                    border
-                    border-[#022158]
-
-                    bg-white
-                    text-[#022158]
-
-                    items-center
-                    justify-center
-
-                    hover:bg-[#022158]
-                    hover:text-white
-
-                    active:scale-95
-                    hover:scale-105
-
-                    transition-all
-                    duration-300
-
-                    cursor-pointer
-
-                    z-20
-                  "
-                >
-                  <ArrowLeft
-                    className="w-4 h-4"
-                  />
-                </button>
-
-
-                {/* RIGHT */}
-
-                <button
-                  type="button"
-                  onClick={() =>
-                    moveSpeakers("right")
-                  }
-                  aria-label="Next speakers"
-                  className="
-                    flex
-                    shrink-0
-
-                    w-11
-                    h-11
-
-                    rounded-full
-
-                    bg-[#022158]
-                    text-white
-
-                    items-center
-                    justify-center
-
-                    hover:bg-[#123d75]
-
-                    active:scale-95
-                    hover:scale-105
-
-                    transition-all
-                    duration-300
-
-                    cursor-pointer
-
-                    z-20
-                  "
-                >
-                  <ArrowRight
-                    className="w-4 h-4"
-                  />
-                </button>
-
-              </div>
-
-
-              {/* =================================================
-                  SPEAKER SCROLLER
-              ================================================= */}
-
-              <div
-                ref={scrollerRef}
-
-                onMouseEnter={() =>
-                  setIsHovering(true)
-                }
-
-                onMouseLeave={() =>
-                  setIsHovering(false)
-                }
-
-                className="
-                  w-full
-
-                  flex
-                  gap-3
-
-                  overflow-x-auto
-                  overflow-y-visible
-
-                  pb-5
-                  pt-5
-
-                  [scrollbar-width:none]
-                  [&::-webkit-scrollbar]:hidden
-                "
-              >
-
-                {loopSpeakers.map(
+                {speakers.map(
                   (speaker, index) => (
                     <div
                       key={`${speaker.name}-${index}`}
@@ -581,11 +361,7 @@ const FeaturedSpeakers = () => {
                         group
 
                         relative
-                        shrink-0
-
-                        w-[220px]
-                        sm:w-[230px]
-                        md:w-[290px]
+                        w-full
 
                         cursor-pointer
 
@@ -711,10 +487,8 @@ const FeaturedSpeakers = () => {
 
                         <div
                           className="
-                            absolute
-                            left-4
-                            right-4
-                            bottom-4
+                            absolute left-3 right-3 bottom-3
+                            sm:left-4 sm:right-4 sm:bottom-4
                           "
                         >
 
@@ -724,7 +498,8 @@ const FeaturedSpeakers = () => {
 
                               font-bold
 
-                              text-[19px]
+                              text-[16px]
+                              sm:text-[19px]
 
                               leading-tight
                             "
@@ -783,7 +558,8 @@ const FeaturedSpeakers = () => {
             items-center
             justify-center
 
-            p-5
+            p-3
+            sm:p-5
 
             bg-[#022158]/75
 
@@ -800,10 +576,10 @@ const FeaturedSpeakers = () => {
               relative
 
               w-full
-              max-w-[50%]
+              max-w-5xl
 
-              min-h-[50vh]
-              max-h-[90vh]
+              max-h-[calc(100vh-1.5rem)]
+              sm:max-h-[90vh]
 
               overflow-y-auto
 
@@ -815,6 +591,8 @@ const FeaturedSpeakers = () => {
 
               animate-[popupScale_0.6s_cubic-bezier(0.16,1,0.3,1)]
               flex
+              flex-col
+              md:flex-row
             "
 
             onClick={(e) =>
@@ -866,8 +644,11 @@ const FeaturedSpeakers = () => {
                 relative
 
                 w-full
+                md:w-1/2
 
-                aspect-[4/2]
+                aspect-[4/3]
+                md:aspect-auto
+                md:min-h-[420px]
 
                 overflow-hidden
               "
@@ -890,7 +671,7 @@ const FeaturedSpeakers = () => {
 
             {/* CONTENT */}
 
-            <div className="p-6 md:p-8">
+            <div className="p-5 sm:p-6 md:w-1/2 md:p-8">
 
               {/* NAME */}
 

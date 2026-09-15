@@ -14,8 +14,8 @@ const RedesignNavigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const logoSrc = isScrolled ? "/delhi26_redesign/logo.png" : "/delhi26_redesign/logo.png";
-  const logoSrcg = isScrolled ? "/src/assets/guild-logo.png" : "/src/assets/guild-logo.png";
+  const logoSrc = isScrolled ? "/logo/logo-dg26-color.png" : "/logo/logo-dg26.png";
+  const logoSrcg = isScrolled ? "/logo/the-guild-dg26-color.png" : "/logo/the-guild-dg26.png";
 
   const links = [
     { label: "Overview", href: "#overview" },
