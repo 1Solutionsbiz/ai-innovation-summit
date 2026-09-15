@@ -62,16 +62,23 @@ const PartnersSection = () => {
             Our Partners
           </span>
 
-          <h2>
+          <h2 className="
+                font-black
+                text-[48px]
+                sm:text-[58px]
+                md:text-[64px]
+                xl:text-[60px]
+                leading-[0.94]
+                tracking-[-3px]">
             <span
               className={`block partners-reveal-up partners-delay-1 ${sectionVisible ? "is-visible" : ""}`}
             >
-              The partners
+              The Partners
             </span>
             <span
               className={`block partners-reveal-up partners-delay-2 ${sectionVisible ? "is-visible" : ""}`}
             >
-              powering the summit
+              Powering The Summit
             </span>
           </h2>
 

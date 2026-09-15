@@ -2,41 +2,7 @@
 
 import { Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-
-type VideoItem = {
-  image?: string;
-  link: string;
-  title: string;
-  description: string;
-};
-
-const videos: VideoItem[] = [
-  {
-    link: "https://youtu.be/Q1jh_EXeIF0?si=V7q2Oe6TzlAEyAc7",
-    title: "Karnataka’s AI & Digital Innovation Vision",
-    description: "Dr. N. Manjula, IAS, Hon'ble Secretary, Government of Karnataka, shares Karnataka's vision for AI, deep tech and digital innovation.",
-  },
-  {
-    link: "https://youtu.be/zqVcqrTrrKI?si=FLfUx7LudUw-a-TA",
-    title: "From AI Experimentation to Measurable Business Impact",
-    description: "CXOs and senior industry leaders share practical lessons on moving AI from experimentation to measurable business impact.",
-  },
-  {
-    link: "https://youtu.be/aym63ZXFHqU?si=QcjPbssuo9hgH9dH",
-    title: "AI Maturity & Enterprise AI Adoption in BFSI",
-    description: "Insights on the evolving maturity of AI models, their growing applications in BFSI, and the challenges of scaling AI across legacy enterprise systems.",
-  },
-  {
-    link: "https://youtu.be/mE-YiCnwzHA?si=gVCkH2li3M-rwnMC",
-    title: "Autonomous Finance: The Future of B2B",
-    description: "Akbar Ali Shaikh, Partner - Autonomous Finance, Deloitte, explores how AI, interoperability and real-time data are reshaping finance.",
-  },
-  {
-    link: "https://youtu.be/jRHSGJcoAkE?si=GwSOnmpf83a8YNcR",
-    title: "From AI Pilots to Enterprise-Wide Value",
-    description: "Manpreet Singh Ahuja, Partner and Chief Client & TMT Sector Leader, PwC India, shares how organisations can move from pilots to transformation.",
-  },
-];
+import { watchVideos as videos, type VideoItem } from "../../data/watchVideos";
 
 const getYoutubeThumbnail = (link: string) => {
   const videoId = link.match(/(?:youtu\.be\/|youtube\.com\/watch\?v=)([^?&/]+)/)?.[1];
@@ -46,14 +12,7 @@ const getYoutubeThumbnail = (link: string) => {
 const getVideoImage = (item: VideoItem) => item.image ?? getYoutubeThumbnail(item.link);
 
 const buildWatchHref = (item: VideoItem) => {
-  const params = new URLSearchParams({
-    v: item.link,
-    title: item.title,
-    description: item.description,
-    destination: "The Leela Ambience Gurugram, Delhi-NCR",
-  });
-
-  return `/watch?${params.toString()}`;
+  return `/watch?id=${encodeURIComponent(item.id)}`;
 };
 
 const OnDemandSection = () => {
@@ -87,21 +46,30 @@ const OnDemandSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="ondemand-section relative bg-[#050B22] py-16 md:py-20 overflow-hidden"
+      className="ondemand-section relative bg-[#050B22] py-12 sm:py-16 md:py-20 overflow-hidden"
     >
-      <div className="max-w-[1500px] mx-auto px-6">
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-10">
+      <div className="max-w-[1500px] mx-auto px-4 sm:px-6">
+        <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-10">
           {/* =================================================
               LEFT TEXT
           ================================================= */}
-          <div className="lg:w-[25%] flex-shrink-0">
+          <div className="lg:w-[30%] flex-shrink-0">
             <p
               className={`ondemand-reveal-up ondemand-delay-0 text-[#EF3340] text-[18px] mb-3 ${sectionVisible ? "is-visible" : ""}`}
             >
               On-Demand Content
             </p>
 
-            <h2 className="text-white font-[500] text-[36px] sm:text-[43px] leading-[1.05] tracking-[-1px]">
+            <h2 className="
+                text-white
+                font-black
+                text-[34px]
+                sm:text-[48px]
+                md:text-[64px]
+                xl:text-[60px]
+                leading-[0.94]
+                tracking-[-1.5px]
+                sm:tracking-[-3px]">
               <span className={`ondemand-line ondemand-reveal-up ondemand-delay-1 ${sectionVisible ? "is-visible" : ""}`}>
                 Ideas That
               </span>
@@ -113,7 +81,8 @@ const OnDemandSection = () => {
             <a
               href={buildWatchHref(featured)}
               className={`ondemand-reveal-up ondemand-delay-3
-                mt-5
+                mt-4
+                sm:mt-5
                 inline-block
                 px-7
                 py-3
@@ -177,7 +146,8 @@ const OnDemandSection = () => {
                     top-1/2 left-1/2
                     -translate-x-1/2 -translate-y-1/2
 
-                    w-16 h-16
+                    w-14 h-14
+                    sm:w-16 sm:h-16
 
                     rounded-full
 
@@ -202,7 +172,8 @@ const OnDemandSection = () => {
                   pb-1
 
                   text-[#fff]
-                  text-[26px]
+                  text-[18px]
+                  sm:text-[26px]
                   font-bold
                   leading-snug
 
@@ -223,7 +194,7 @@ const OnDemandSection = () => {
           {/* =================================================
               GRID OF SMALLER VIDEOS
           ================================================= */}
-          <div className="lg:w-[42%] w-full grid grid-cols-2 gap-3 md:gap-4">
+          <div className="lg:w-[42%] w-full grid grid-cols-2 gap-3 sm:gap-4">
             {gridItems.map((item) => (
               <a
                 key={item.link}
@@ -276,7 +247,8 @@ const OnDemandSection = () => {
                         top-1/2 left-1/2
                         -translate-x-1/2 -translate-y-1/2
 
-                        w-10 h-10
+                        w-9 h-9
+                        sm:w-10 sm:h-10
 
                         rounded-full
 
@@ -291,7 +263,7 @@ const OnDemandSection = () => {
                       "
                     >
                       <Play
-                        size={15}
+                        size={14}
                         className="ml-0.5 text-[#050B22]"
                         fill="currentColor"
                       />
@@ -305,7 +277,8 @@ const OnDemandSection = () => {
                       pb-0.5
 
                       text-[#fff]
-                      text-[13px]
+                      text-[12px]
+                      sm:text-[13px]
                       font-bold
                       leading-snug
 

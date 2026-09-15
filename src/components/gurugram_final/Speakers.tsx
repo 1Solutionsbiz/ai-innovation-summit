@@ -312,7 +312,8 @@ const FeaturedSpeakers = () => {
         className="
           relative
           bg-white
-          py-16
+          py-12
+          sm:py-16
           md:py-20
           overflow-hidden
         "
@@ -322,7 +323,8 @@ const FeaturedSpeakers = () => {
           className="
             max-w-[100%]
             mx-auto
-            px-6
+            px-4
+            sm:px-6
           "
         >
 
@@ -368,14 +370,13 @@ const FeaturedSpeakers = () => {
                 className="
                   text-[#022158]
                   font-black
-
-                  text-2xl
-                  sm:text-[44px]
-                  md:text-[48px]
-
-                  leading-[1.05]
-
+                  text-[34px]
+                  sm:text-[48px]
+                  md:text-[64px]
+                  xl:text-[60px]
+                  leading-[0.94]
                   tracking-[-1.5px]
+                  sm:tracking-[-3px]
                 "
               >
                 <span
@@ -440,7 +441,8 @@ const FeaturedSpeakers = () => {
 
                   gap-3
 
-                  mb-5
+                  mb-3
+                  sm:mb-5
                 "
               >
 
@@ -583,7 +585,7 @@ const FeaturedSpeakers = () => {
                         relative
                         shrink-0
 
-                        w-[220px]
+                        w-[min(78vw,220px)]
                         sm:w-[230px]
                         md:w-[290px]
 
@@ -712,9 +714,12 @@ const FeaturedSpeakers = () => {
                         <div
                           className="
                             absolute
-                            left-4
-                            right-4
-                            bottom-4
+                            left-3
+                            right-3
+                            bottom-3
+                            sm:left-4
+                            sm:right-4
+                            sm:bottom-4
                           "
                         >
 
@@ -724,7 +729,8 @@ const FeaturedSpeakers = () => {
 
                               font-bold
 
-                              text-[19px]
+                              text-[16px]
+                              sm:text-[19px]
 
                               leading-tight
                             "
@@ -783,7 +789,8 @@ const FeaturedSpeakers = () => {
             items-center
             justify-center
 
-            p-5
+            p-3
+            sm:p-5
 
             bg-[#022158]/75
 
@@ -800,10 +807,10 @@ const FeaturedSpeakers = () => {
               relative
 
               w-full
-              max-w-[50%]
+              max-w-5xl
 
-              min-h-[50vh]
-              max-h-[90vh]
+              max-h-[calc(100vh-1.5rem)]
+              sm:max-h-[90vh]
 
               overflow-y-auto
 
@@ -815,6 +822,8 @@ const FeaturedSpeakers = () => {
 
               animate-[popupScale_0.6s_cubic-bezier(0.16,1,0.3,1)]
               flex
+              flex-col
+              md:flex-row
             "
 
             onClick={(e) =>
@@ -866,8 +875,11 @@ const FeaturedSpeakers = () => {
                 relative
 
                 w-full
+                md:w-1/2
 
-                aspect-[4/2]
+                aspect-[4/3]
+                md:aspect-auto
+                md:min-h-[420px]
 
                 overflow-hidden
               "
@@ -890,7 +902,7 @@ const FeaturedSpeakers = () => {
 
             {/* CONTENT */}
 
-            <div className="p-6 md:p-8">
+            <div className="p-5 sm:p-6 md:w-1/2 md:p-8">
 
               {/* NAME */}
 

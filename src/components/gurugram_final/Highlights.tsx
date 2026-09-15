@@ -265,19 +265,28 @@ const Highlights = () => {
           Content
       ========================= */}
 
-      <div className="container relative z-10 mx-auto px-4">
-        <div className="mx-auto mb-20 max-w-4xl text-center">
-          <h2 className="text-xl font-black leading-tight text-[#022158] sm:text-5xl md:text-[3.5rem]">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6">
+        <div className="mx-auto mb-12 max-w-4xl text-center sm:mb-20">
+          <h2 className="text-[#022158]
+                font-black
+                text-[34px]
+                sm:text-[48px]
+                md:text-[54px]
+                xl:text-[60px]
+                leading-[0.94]
+                tracking-[-1.5px]
+                sm:tracking-[-3px]">
             <span className={`highlights-line line-delay-1 ${isVisible ? "is-visible" : ""}`}>
-              The Journey so far
+              The Journey So Far
             </span>
           </h2>
         </div>
 
         <div
           className="
-            grid grid-cols-2 gap-y-10
+            grid grid-cols-2 gap-x-3 gap-y-8
             sm:grid-cols-2
+            sm:gap-x-6 sm:gap-y-10
             lg:grid-cols-5
             max-w-[1600px]
             mx-auto
@@ -300,6 +309,7 @@ const Highlights = () => {
                       border-[#234478]
                       lg:border-r
                       lg:last:border-r-0
+                      min-w-0
                     `}
               >
 
@@ -310,7 +320,7 @@ const Highlights = () => {
                 <div
                   className={`
                     highlights-line line-delay-${index + 2}
-                    text-2xl
+                    text-[clamp(1.5rem,7vw,2rem)]
                     font-black
                     sm:text-2xl
                     md:text-[3.5rem]
@@ -341,13 +351,15 @@ const Highlights = () => {
                 <div
                   className={`
                     highlights-line line-delay-${index + 6}
-                    mt-1 text-base
+                    mt-2 text-sm
                     sm:mt-4
+                    sm:text-base
                     font-normal
                     text-[#171717]
                     tracking-normal
                     leading-snug
-                    max-w-[240px]
+                    max-w-[150px]
+                    sm:max-w-[240px]
                     ${isVisible ? "is-visible" : ""}
                   `}
                 >

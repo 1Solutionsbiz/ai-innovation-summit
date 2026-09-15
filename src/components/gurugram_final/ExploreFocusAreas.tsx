@@ -110,7 +110,7 @@ const FocusAreasSection = () => {
           flex
           flex-col
           lg:flex-row
-          
+          explorefocusdguru26
         "
       >
 
@@ -133,12 +133,13 @@ const FocusAreasSection = () => {
             flex
             items-center
 
-            px-8
+            px-5
             sm:px-12
             lg:px-14
             xl:px-20
 
-            py-16
+            py-12
+            sm:py-16
             lg:py-20
 
             transition-all
@@ -178,22 +179,19 @@ const FocusAreasSection = () => {
             <h2
               className="
                 text-white
-
                 font-black
-
-                text-[48px]
-                sm:text-[58px]
+                text-[36px]
+                sm:text-[48px]
                 md:text-[64px]
-                xl:text-[72px]
-
+                xl:text-[60px]
                 leading-[0.94]
-
-                tracking-[-3px]
+                tracking-[-1.5px]
+                sm:tracking-[-3px]
               "
             >
               Explore
               <br />
-              focus areas
+              Focus Areas
             </h2>
 
 
@@ -201,11 +199,12 @@ const FocusAreasSection = () => {
 
             <p
               className="
-                mt-8
-                mb-10
+                mt-6
+                mb-8
                 text-white/90
 
-                text-[18px]
+                text-[16px]
+                sm:text-[18px]
                 md:text-[20px]
 
                 leading-[1.45]
@@ -865,7 +864,7 @@ const FocusAreasSection = () => {
           .focus-tile-bottom-left,
           .focus-tile-bottom-center,
           .focus-tile-bottom-right {
-            min-height: 280px;
+            min-height: 250px;
           }
 
 
@@ -882,7 +881,7 @@ const FocusAreasSection = () => {
 
 
           .focus-copy h3 {
-            font-size: 26px;
+            font-size: clamp(22px, 7vw, 26px);
 
             letter-spacing: -0.7px;
           }

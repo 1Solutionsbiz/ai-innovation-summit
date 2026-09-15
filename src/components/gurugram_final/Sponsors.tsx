@@ -40,15 +40,23 @@ const Sponsors = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="partners" className="bg-[#fff] py-20 md:py-28">
-      <div className="max-w-[1200px] mx-auto px-6 text-center">
+    <section ref={sectionRef} id="partners" className="bg-[#fff] py-12 sm:py-20 md:py-28">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 text-center">
         <p className={`sponsors-reveal sponsors-delay-0 font-extrabold text-[20px] text-[#e92630] mb-2 ${sectionVisible ? "is-visible" : ""}`}>
           Past Partners
         </p>
-        <h2 className={`sponsors-reveal sponsors-delay-1 font-black text-[#022158] text-[36px] sm:text-[44px] md:text-[56px] leading-[1.1] tracking-[-1.44px] ${sectionVisible ? "is-visible" : ""}`}>
+        <h2 className={`sponsors-reveal sponsors-delay-1 text-[#022158] 
+                font-black
+                text-[34px]
+                sm:text-[48px]
+                md:text-[64px]
+                xl:text-[60px]
+                leading-[0.94]
+                tracking-[-1.5px]
+                sm:tracking-[-3px] ${sectionVisible ? "is-visible" : ""}`}>
           Partners Who Powered the Journey
         </h2>
-        <p className={`sponsors-reveal sponsors-delay-2 mt-6 sponser-description mx-auto ${sectionVisible ? "is-visible" : ""}`}>
+        <p className={`sponsors-reveal sponsors-delay-2 mt-4 sm:mt-6 sponser-description mx-auto ${sectionVisible ? "is-visible" : ""}`}>
           Celebrating the organisations that came on board to support ideas, innovation, and industry connections
         </p>
 
@@ -62,9 +70,9 @@ const Sponsors = () => {
         </div> */}
       </div>
 
-      <div className={`mt-16 overflow-hidden sponsors-reveal sponsors-delay-4 ${sectionVisible ? "is-visible" : ""}`}>
+      <div className={`mt-10 sm:mt-16 overflow-hidden sponsors-reveal sponsors-delay-4 ${sectionVisible ? "is-visible" : ""}`}>
         <div
-          className="sponsor-auto-scroll gap-10 md:gap-10 px-8"
+          className="sponsor-auto-scroll gap-6 sm:gap-10 md:gap-10 px-4 sm:px-8"
           style={{ animationDuration: `${SCROLL_DURATION_SECONDS}s` }}
         >
           {scrollingLogos.map((logo, i) => (
@@ -72,7 +80,7 @@ const Sponsors = () => {
               key={`${logo.src}-${i}`}
               src={logo.src}
               alt={logo.alt}
-              className="shrink-0 h-8 md:h-12 w-auto object-contain grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition bg-white p-2"
+              className="shrink-0 h-7 sm:h-8 md:h-12 w-auto object-contain grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition bg-white p-2"
             />
           ))}
         </div>

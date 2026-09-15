@@ -39,7 +39,14 @@ const LeadersNumbers = () => {
             Reach
           </span>
 
-          <h2>
+          <h2 className="
+                font-black
+                text-[48px]
+                sm:text-[58px]
+                md:text-[64px]
+                xl:text-[60px]
+                leading-[0.94]
+                tracking-[-3px]">
             <span className={`leaders-line leaders-reveal-up leaders-delay-1 ${sectionVisible ? "is-visible" : ""}`}>
               Most Influential
             </span>
@@ -154,7 +161,7 @@ const LeadersNumbers = () => {
 
         .leaders-left {
           flex: 0 0 auto;
-          max-width: 340px;
+          max-width: 400px;
         }
 
         .leaders-label {
@@ -165,12 +172,6 @@ const LeadersNumbers = () => {
           color: #e0242c;
         }
 
-        .leaders-left h2 {
-          font-size: 48px;
-          line-height: 1.15;
-          font-weight: 700;
-          margin: 0 0 28px 0;
-        }
 
         .leaders-btn {
           display: inline-block;
@@ -214,19 +215,79 @@ const LeadersNumbers = () => {
         }
 
         @media (max-width: 768px) {
+          .leaders-section-new {
+            padding: 56px 20px;
+          }
+
           .leaders-container-new {
             flex-direction: column;
             align-items: flex-start;
             gap: 32px;
           }
+
+          .leaders-left {
+            width: 100%;
+            max-width: none;
+          }
+
+          .leaders-label {
+            font-size: 18px;
+            margin-bottom: 12px;
+          }
+
           .leaders-divider {
             display: none;
           }
+
           .leaders-left h2 {
             font-size: 32px;
+            letter-spacing: -1.5px;
           }
+
+          .leaders-btn {
+            padding: 13px 24px;
+            font-size: 16px;
+          }
+
+          .leaders-right {
+            width: 100%;
+          }
+
+          .leaders-description {
+            margin-bottom: 28px;
+            font-size: 17px;
+            line-height: 1.45;
+          }
+
+          .leaders-stat {
+            align-items: flex-start;
+            gap: 16px;
+          }
+
           .leaders-number {
             font-size: 48px;
+            flex-shrink: 0;
+          }
+
+          .leaders-stat-text {
+            font-size: 16px;
+            line-height: 1.3;
+          }
+        }
+
+        @media (max-width: 400px) {
+          .leaders-section-new {
+            padding-left: 16px;
+            padding-right: 16px;
+          }
+
+          .leaders-left h2 {
+            font-size: 28px;
+          }
+
+          .leaders-stat {
+            flex-direction: column;
+            gap: 10px;
           }
         }
       `}</style>

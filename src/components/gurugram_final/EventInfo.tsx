@@ -32,7 +32,14 @@ const EventInfo: React.FC = () => {
 
         {/* LEFT CONTENT */}
         <div className="event-info-left">
-          <h1>
+          <h2 className="                text-white
+                font-black
+                text-[48px]
+                sm:text-[58px]
+                md:text-[64px]
+                xl:text-[60px]
+                leading-[0.94]
+                tracking-[-3px]">
             <span className={`event-reveal-up event-delay-0 ${sectionVisible ? "is-visible" : ""}`}>
               The Future is
             </span>
@@ -42,7 +49,7 @@ const EventInfo: React.FC = () => {
             <span className={`event-reveal-up event-delay-2 ${sectionVisible ? "is-visible" : ""}`}>
               is Ready.
             </span>
-          </h1>
+          </h2>
 
           <p className="event-info-subtext">
             <span className={`event-reveal-up event-delay-3 ${sectionVisible ? "is-visible" : ""}`}>

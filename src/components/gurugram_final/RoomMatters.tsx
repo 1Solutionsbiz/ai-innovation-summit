@@ -56,34 +56,42 @@ const INDUSTRIES = [
 
 const RoomThatMatters = () => {
   return (
-    <section className="relative overflow-hidden border-t-[5px] border-[#07163d] bg-[#f2f4ff] px-5 py-12 sm:px-8 md:py-16 lg:px-12">
+    <section className="relative overflow-hidden border-t-[5px] border-[#07163d] bg-[#f2f4ff] px-4 py-10 sm:px-8 sm:py-12 md:py-16 lg:px-12">
       {/* Top accent bar */}
       <div className="absolute left-0 right-0 top-0 h-1 bg-[#07163d]" />
 
       <div className="mx-auto max-w-[1700px] text-center">
-        <h2 className="font-black uppercase leading-[0.95] tracking-[-2px] text-[#06245d] text-4xl sm:text-5xl md:text-6xl lg:text-[3.2rem]">
+        <h2 className="text-[#06245d]
+                font-black
+                text-[34px]
+                sm:text-[48px]
+                md:text-[64px]
+                xl:text-[60px]
+                leading-[0.94]
+                tracking-[-1.5px]
+                sm:tracking-[-3px]">
           THE ROOM THAT MATTERS
         </h2>
-        <p className="mt-6 text-lg font-normal text-[#171717] sm:text-xl md:text-1xl">
+        <p className="mt-4 text-base font-normal text-[#171717] sm:mt-6 sm:text-xl md:text-1xl">
           700+ enterprise technology &amp; transformation leaders
         </p>
 
         {/* Category cards */}
-        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5 lg:gap-12 xl:gap-14">
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 sm:grid-cols-2 sm:gap-6 lg:grid-cols-5 lg:gap-12 xl:gap-14">
           {CATEGORIES.map((category, idx) => {
             const Icon = category.icon;
             return (
               <div
                 key={idx}
-                className="flex min-h-[300px] flex-col items-center justify-start rounded-[24px] border-2 border-[#d8d9ee] bg-white/75 px-5 py-7 shadow-[0_2px_8px_rgba(36,51,110,0.03)] transition-shadow hover:shadow-[0_8px_24px_rgba(36,51,110,0.12)]"
+                className="flex min-h-[240px] flex-col items-center justify-start rounded-[18px] border-2 border-[#d8d9ee] bg-white/75 px-4 py-6 shadow-[0_2px_8px_rgba(36,51,110,0.03)] transition-shadow hover:shadow-[0_8px_24px_rgba(36,51,110,0.12)] sm:min-h-[300px] sm:rounded-[24px] sm:px-5 sm:py-7"
               >
                 <div
-                  className={`flex h-[126px] w-[126px] shrink-0 items-center justify-center rounded-full ${category.iconBg}`}
+                  className={`flex h-24 w-24 shrink-0 items-center justify-center rounded-full sm:h-[126px] sm:w-[126px] ${category.iconBg}`}
                 >
-                  {/* <Icon className={`h-[72px] w-[72px] ${category.iconColor}`} strokeWidth={1.65} /> */}
+                  {/* <Icon className={`h-[60px] w-[60px] ${category.iconColor}`} strokeWidth={1.65} /> */}
                   <img src={`${category.iconColor}`} alt="" />
                 </div>
-                <p className="mt-6 max-w-[260px] text-lg font-semibold leading-[1.35] text-[#06245d] sm:text-xl">
+                <p className="mt-4 max-w-[260px] text-base font-semibold leading-[1.35] text-[#06245d] sm:mt-6 sm:text-xl">
                   {category.label}
                 </p>
               </div>
@@ -92,12 +100,12 @@ const RoomThatMatters = () => {
         </div>
 
         {/* Industries strip */}
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-x-4 gap-y-3 lg:flex-nowrap lg:gap-x-5">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 sm:mt-10 sm:gap-x-4 sm:gap-y-3 lg:flex-nowrap lg:gap-x-5">
           {INDUSTRIES.map((industry, idx) => (
             <span key={idx} className="flex items-center gap-3">
-              <span className="whitespace-nowrap text-lg font-semibold text-[#06245d] sm:text-xl">{industry}</span>
+              <span className="whitespace-nowrap text-sm font-semibold text-[#06245d] sm:text-lg">{industry}</span>
               {idx < INDUSTRIES.length - 1 && (
-                <span className="text-xl leading-none text-[#ef3340]">&bull;</span>
+                <span className="text-lg leading-none text-[#ef3340] sm:text-xl">&bull;</span>
               )}
             </span>
           ))}

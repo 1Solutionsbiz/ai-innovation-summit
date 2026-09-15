@@ -341,20 +341,28 @@ const FeaturedSpeakers = () => {
   }, [activeEventIndex, activeSpeakers.length, isArrowMoving, isHovering]);
 
   return (
-    <section className="bg-white py-16 px-6 overflow-hidden">
+    <section className="bg-white py-12 px-4 sm:py-16 sm:px-6 overflow-hidden">
       <div className="max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-10">
+        <div className="grid grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-[250px_1fr]">
           {/* Left column */}
           <div className="flex flex-col justify-center">
             <p className="text-red-600 font-semibold text-lg">Retrospective</p>
-            <h2 className="mt-2 text-5xl font-black text-blue-950 leading-[1.05]">
+            <h2 className="text-blue-950
+                font-black
+                text-[34px]
+                sm:text-[48px]
+                md:text-[64px]
+                xl:text-[60px]
+                leading-[0.94]
+                tracking-[-1.5px]
+                sm:tracking-[-3px]">
               Past
               <br />
               Speakers
             </h2>
             <button
               type="button"
-              className="view-all-speakers mt-14"
+              className="view-all-speakers mt-8 sm:mt-14"
             >
               View all speakers
             </button>
@@ -363,7 +371,7 @@ const FeaturedSpeakers = () => {
           {/* Right column */}
           <div className="relative min-w-0">
             {/* Carousel nav arrows */}
-            <div className="flex justify-end gap-3 mb-6">
+            <div className="flex justify-end gap-2 mb-4 sm:gap-3 sm:mb-6">
               <button
                 type="button"
                 onClick={() => scrollCarousel("left")}
@@ -394,7 +402,7 @@ const FeaturedSpeakers = () => {
                 <div
                   key={idx}
                   data-speaker-card
-                  className="speaker-card group flex-shrink-0 w-[120px] overflow-hidden rounded-2xl border border-blue-950 bg-white p-0 transition-colors duration-300 hover:bg-black"
+                  className="speaker-card group flex-shrink-0 w-[min(42vw,160px)] sm:w-[120px] overflow-hidden rounded-2xl border border-blue-950 bg-white p-0 transition-colors duration-300 hover:bg-black"
                   style={{ animationDelay: `${idx * 90}ms` }}
                 >
                   <div
@@ -410,8 +418,8 @@ const FeaturedSpeakers = () => {
                     />
                   </div>
                   <div className="bg-white px-2 pb-2 pt-3 transition-colors duration-300 group-hover:bg-black">
-                    <p className="text-sm font-bold text-black transition-colors duration-300 group-hover:text-white">{speaker.name}</p>
-                    <p className="mt-1 text-xs leading-tight text-black transition-colors duration-300 group-hover:text-white">
+                    <p className="text-[13px] font-bold text-black transition-colors duration-300 group-hover:text-white sm:text-sm">{speaker.name}</p>
+                    <p className="mt-1 text-[11px] leading-tight text-black transition-colors duration-300 group-hover:text-white sm:text-xs">
                     {speaker.role}
                     <br />
                     {speaker.company}
@@ -422,7 +430,7 @@ const FeaturedSpeakers = () => {
             </div>
 
             {/* Year / location selector */}
-            <div className="mt-8 flex items-center gap-6">
+            <div className="mt-6 flex items-center gap-3 sm:mt-8 sm:gap-6">
               <button
                 type="button"
                 onClick={() => scrollYears("left")}
@@ -432,7 +440,7 @@ const FeaturedSpeakers = () => {
                 <ChevronLeft className="w-5 h-5" />
               </button>
 
-              <div className="flex gap-10 overflow-x-auto no-scrollbar">
+              <div className="flex min-w-0 flex-1 gap-6 overflow-x-auto no-scrollbar sm:gap-10">
                 {EVENTS.map((event, idx) => {
                   const isActive = idx === activeEventIndex;
                   return (

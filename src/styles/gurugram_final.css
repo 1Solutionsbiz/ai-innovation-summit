@@ -1,5 +1,12 @@
-.herosection {
+.herosectiondguru26 {
   border-radius: 0px 0px 40px 40px;
+  min-height: 100vh;
+}
+
+
+
+.explorefocusdguru26{
+  min-height: 90vh;
 }
 
 @keyframes partnersFadeUp {
@@ -126,13 +133,6 @@
 
 .partners-content h2 {
   margin: 0;
-
-  font-size: clamp(48px, 5vw, 70px);
-  line-height: 0.98;
-
-  font-weight: 700;
-  letter-spacing: -2.5px;
-
   color: #092c63;
 }
 
@@ -279,7 +279,7 @@
   .partners-container {
     padding: 0;
     flex-direction: column;
-    gap: 50px;
+    gap: 36px;
 
     min-height: auto;
   }
@@ -314,10 +314,10 @@
   }
 
   .partners-bg {
-    width: 290px;
-    min-height: 400px;
+    width: min(100%, 290px);
+    min-height: 360px;
 
-    padding: 25px 40px;
+    padding: 24px 28px;
   }
 
   .partner-logo img {
@@ -342,13 +342,22 @@
   }
 
   .partners-bg {
-    width: 270px;
-    min-height: 380px;
+    width: min(100%, 270px);
+    min-height: 340px;
+    padding: 20px 18px;
+  }
+
+  .partner-logo {
+    min-height: 82px;
+  }
+
+  .partner-title {
+    font-size: 10px;
   }
 
   .partner-logo img {
-    max-width: 135px;
-    max-height: 48px;
+    max-width: 140px;
+    max-height: 46px;
   }
 }
 
@@ -594,7 +603,7 @@
 ========================================= */
 
 .leaders-left {
-  width: 31%;
+  width: 35%;
 
   display: flex;
   flex-direction: column;
@@ -618,18 +627,6 @@
 }
 
 
-.leaders-left h2 {
-  margin: 0;
-
-  color: #ffffff;
-
-  font-size: clamp(38px, 4vw, 53px);
-  line-height: 1.03;
-
-  font-weight: 700;
-
-  letter-spacing: -1.8px;
-}
 
 
 /* =========================================
@@ -1101,39 +1098,55 @@
   .event-info-container {
     flex-direction: column;
     align-items: flex-start;
+    gap: 40px;
   }
 
-  .event-info-left h1 {
+  .event-info-left h2 {
     font-size: 38px;
   }
 
   .event-info-right {
     width: 100%;
+    min-width: 0;
     align-items: flex-start;
   }
 }
 
 @media (max-width: 480px) {
   .event-info-section {
-    padding: 50px 24px;
+    padding: 56px 16px;
   }
 
-  .event-info-left h1 {
+  .event-info-left {
+    width: 100%;
+  }
+
+  .event-info-left h2 {
     font-size: 30px;
+    letter-spacing: -1.5px;
   }
 
   .event-info-subtext {
     font-size: 16px;
   }
 
+  .event-info-date,
+  .event-info-venue {
+    font-size: 16px;
+    line-height: 1.35;
+  }
+
   .event-info-actions {
     flex-direction: column;
     align-items: stretch;
+    width: 100%;
   }
 
   .event-info-btn-primary,
   .event-info-btn-secondary {
     text-align: center;
+    width: 100%;
+    font-size: 16px;
   }
 }
 
@@ -1275,6 +1288,14 @@
   font-weight: 600;
 }
 
+@media (max-width: 640px) {
+  .sponser-description {
+    max-width: 100%;
+    font-size: 16px;
+    line-height: 1.45;
+  }
+}
+
 
 
 
@@ -1346,12 +1367,125 @@
   gap: 15px;
 }
 
+.mobile-menu-toggle {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.redesign-nav.scrolled .mobile-menu-toggle {
+  color: #111;
+}
+
+.mobile-editions-toggle {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0;
+  color: #fff;
+  font-size: 15px;
+  text-align: left;
+}
+
+.mobile-editions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 0 2px 14px;
+}
+
+.mobile-editions-list a {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.mobile-editions-toggle svg {
+  transition: transform 0.2s ease;
+}
+
+@media (max-width: 767px) {
+  .redesign-nav-inner {
+    padding: 8px 12px;
+    gap: 10px;
+  }
+
+  .redesign-nav-inner > div:first-child {
+    min-width: 0;
+    gap: 10px !important;
+  }
+
+  .redesign-logo-gurugram-26 img {
+    width: 78px;
+    max-width: 100%;
+  }
+
+  .guru-26-right-sec {
+    gap: 8px;
+  }
+
+  .register-btn-guru-26 {
+    padding: 5px 14px !important;
+    font-size: 12px;
+    height: 34px;
+  }
+
+  .redesign-nav-inner > div:last-child {
+    min-width: 0;
+    display: flex;
+  }
+
+  .redesign-nav-inner > div:last-child > button {
+    flex-shrink: 0;
+    padding: 4px;
+  }
+
+  .mobile-redesign-menu {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .mobile-redesign-menu a {
+    display: block;
+    padding: 4px 0;
+    font-size: 15px;
+  }
+
+  .mobile-redesign-menu .redesign-register-btn {
+    width: 100%;
+    padding: 10px 16px;
+  }
+
+  .redesign-nav.scrolled .mobile-editions-toggle,
+  .redesign-nav.scrolled .mobile-editions-list a {
+    color: #111;
+  }
+}
+
 
 /* Mobile Section Start */
 @media screen and (max-width: 481px) {
   .two-cols {
     grid-template-columns: 1fr 1fr;
   }
+
+
+  .herosectiondguru26{
+      min-height: 50vh;
+  }
+  .mmt-10{
+    margin-top: 10px !important;
+  }
+  .mmt-35s{
+    margin-top: -35px !important;
+  }
+
+  .partners-visual {
+    width: 100%;
+  }
+
+
 }
 
 /* Mobile Section End */

@@ -78,21 +78,29 @@ const InnovationSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative innovation-section-new bg-white py-16 md:py-28 overflow-hidden"
+      className="relative innovation-section-new bg-white py-12 sm:py-16 md:py-28 overflow-hidden"
     >
-      <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-12">
           {/* =================================================
               LEFT TEXT
           ================================================= */}
-          <div className="lg:w-[30%] flex-shrink-0 lg:pl-2">
+          <div className="lg:w-[33%] flex-shrink-0 lg:pl-2">
             <p
               className={`innovation-reveal-up innovation-delay-0 text-[#EF3340] text-[16px] md:text-[18px] font-bold uppercase tracking-wide mb-3 ${sectionVisible ? "is-visible" : ""}`}
             >
               Innovation Everywhere
             </p>
 
-            <h2 className="text-[#022158] font-black text-[40px] sm:text-[50px] leading-[1.03] tracking-[-1px]">
+            <h2 className="text-[#022158]
+                font-black
+                text-[34px]
+                sm:text-[48px]
+                md:text-[64px]
+                xl:text-[60px]
+                leading-[0.94]
+                tracking-[-1.5px]
+                sm:tracking-[-3px]">
               <span className={`innovation-line innovation-reveal-up innovation-delay-1 ${sectionVisible ? "is-visible" : ""}`}>
                 More Than
               </span>
@@ -107,7 +115,7 @@ const InnovationSection = () => {
             <button
               type="button"
               onClick={() => setIsOperatingModelOpen(true)}
-              className={`innovation-know-more mt-12 innovation-reveal-up innovation-delay-4 ${sectionVisible ? "is-visible" : ""}`}
+              className={`innovation-know-more mt-8 sm:mt-12 innovation-reveal-up innovation-delay-4 ${sectionVisible ? "is-visible" : ""}`}
             >
               Know More
             </button>
@@ -183,7 +191,7 @@ const InnovationSection = () => {
 
       {isOperatingModelOpen && (
         <div className="fixed inset-0 z-[120] flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm">
-          <div className="relative w-full max-w-5xl overflow-hidden rounded-[26px] bg-white shadow-2xl">
+          <div className="relative max-h-[calc(100vh-2rem)] w-full max-w-5xl overflow-y-auto overflow-x-hidden rounded-[20px] bg-white shadow-2xl sm:rounded-[26px]">
             <button
               type="button"
               onClick={() => setIsOperatingModelOpen(false)}
@@ -260,6 +268,13 @@ const InnovationSection = () => {
         @media (max-width: 767px) {
           .innovation-mosaic { min-height: 360px; }
           .innovation-grid { gap: 5px; }
+
+          .innovation-know-more {
+            min-width: 160px;
+            height: 44px;
+            padding: 0 22px;
+            font-size: 16px;
+          }
         }
 
         .innovation-reveal-up.is-visible {

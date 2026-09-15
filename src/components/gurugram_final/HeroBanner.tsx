@@ -37,7 +37,7 @@ const HeroBanner = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen flex items-center overflow-hidden bg-slate-950 herosection"
+      className="relative flex items-center overflow-hidden bg-slate-950 herosectiondguru26"
     >
       {/* Background video, lightly brand-tinted to read as a duotone */}
       <video
@@ -61,37 +61,45 @@ const HeroBanner = () => {
             <img
               src="/gurugram/logo-conbain.png"
               alt="AI Innovation Summit partner showcase"
-              className="w-full max-w-[50%] lg:max-w-[50%] object-contain drop-shadow-[0_25px_50px_rgba(8,145,178,0.25)]"
+              className="w-full max-w-[70%] lg:max-w-[50%] object-contain drop-shadow-[0_25px_50px_rgba(8,145,178,0.25)]"
             />
           </div>
 
           <div>
             
             <div
-              className={`mt-10 flex gap-x-8 gap-y-3 text-slate-200 hero-info-venue opacity-0 translate-y-8 transition-all duration-700 delay-300 ease-out ${isVisible ? "opacity-100 translate-y-0" : ""}`}
+              className={`mt-10 mmt-35s flex gap-x-8 gap-y-3 text-slate-200 hero-info-venue opacity-0 translate-y-8 transition-all duration-700 delay-300 ease-out ${isVisible ? "opacity-100 translate-y-0" : ""}`}
             >
-              <span className="flex items-center gap-2 text-lg md:text-base font-medium">
+              <span className="flex items-center gap-2 font-medium
+                text-[15px]
+                sm:text-[15px]
+                md:text-[15px]
+                xl:text-[18px]">
                 <CalendarDays className="w-5 h-5 text-white" />
                 December 2, 2026
               </span>
-              <span className="flex items-center gap-2 text-lg md:text-base font-medium">
+              <span className="flex items-center gap-2 font-medium
+                text-[15px]
+                sm:text-[15px]
+                md:text-[15px]
+                xl:text-[18px]">
                 <MapPin className="w-5 h-5 text-white" />
                 The Leela Ambience Gurugram, Delhi-NCR
               </span>
             </div>
 
             <div
-              className={`mt-10 flex flex-wrap items-center gap-5 opacity-0 translate-y-8 transition-all duration-700 delay-[400ms] ease-out ${isVisible ? "opacity-100 translate-y-0" : ""}`}
+              className={`mt-10 mmt-10 flex flex-wrap items-center gap-5 opacity-0 translate-y-8 transition-all duration-700 delay-[400ms] ease-out ${isVisible ? "opacity-100 translate-y-0" : ""}`}
             >
               <a
                 href="#mumbairegistrationform"
-                className="inline-flex items-center rounded-full font-semibold px-7 py-3 text-sm md:text-base hover:scale-105 transition-transform duration-300 shadow-lg btn-bg"
+                className="inline-flex items-center rounded-full font-semibold px-5 py-2 md:px-7 md:py-3 text-sm md:text-base hover:scale-105 transition-transform duration-300 shadow-lg btn-bg"
               >
                 Attend AIIS 2026
               </a>
               <a
                 href="#mumbairegistrationform"
-                className="inline-flex items-center rounded-full font-semibold px-7 py-3 text-sm md:text-base hover:scale-105 transition-transform duration-300 shadow-lg btn-bg-hover"
+                className="inline-flex items-center rounded-full font-semibold px-5 py-2 md:px-7 md:py-3 text-sm md:text-base hover:scale-105 transition-transform duration-300 shadow-lg btn-bg-hover"
               >
                 Explore More
               </a>

@@ -1,9 +1,11 @@
 "use client";
 
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Check, Share2 } from "lucide-react";
+import { useEffect, useState } from "react";
 import RedesignNavigation from "./RedesignNavigation";
 import Footer from "./Footer";
+import { watchVideos } from "../../data/watchVideos";
 
 const getYouTubeId = (url: string): string | null => {
   try {
@@ -27,19 +29,74 @@ const WatchPage = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
 
-  const rawLink = searchParams.get("v") ?? "";
-  const title = searchParams.get("title") ?? "AI Innovation Summit";
-  const description =
-    searchParams.get("description") ??
-    "Explore the latest AI Innovation Summit insights, leadership perspectives, and enterprise transformation stories.";
-  const destination =
-    searchParams.get("destination") ?? "The Leela Ambience Gurugram, Delhi-NCR";
+  const videoKey = searchParams.get("id");
+  const currentVideo = watchVideos.find((video) => video.id === videoKey);
+  const [linkCopied, setLinkCopied] = useState(false);
 
-  const videoId = getYouTubeId(rawLink);
+  useEffect(() => {
+    if (!currentVideo) {
+      navigate("/", { replace: true });
+    }
+  }, [currentVideo, navigate]);
+
+  if (!currentVideo) {
+    return null;
+  }
+
+  const { link, title, description } = currentVideo;
+  const destination = "The Leela Ambience Gurugram, Delhi-NCR";
+  const videoId = getYouTubeId(link);
 
   const embedSrc = videoId
     ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`
     : null;
+  const pageUrl = window.location.href;
+  const encodedUrl = encodeURIComponent(pageUrl);
+  const encodedText = encodeURIComponent(`${title} - ${pageUrl}`);
+
+  const socialShareLinks = [
+    {
+      label: "WhatsApp",
+      href: `https://wa.me/?text=${encodedText}`,
+    },
+    {
+      label: "X",
+      href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodedUrl}`,
+    },
+    {
+      label: "LinkedIn",
+      href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+    },
+    {
+      label: "Facebook",
+      href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+    },
+  ];
+
+  const sharePage = async () => {
+    const shareData = {
+      title,
+      text: description,
+      url: window.location.href,
+    };
+
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+        return;
+      } catch (error) {
+        if (error instanceof DOMException && error.name === "AbortError") {
+          return;
+        }
+      }
+    }
+
+    if (navigator.clipboard) {
+      await navigator.clipboard.writeText(pageUrl);
+      setLinkCopied(true);
+      window.setTimeout(() => setLinkCopied(false), 2200);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-[#050B22] text-white">
@@ -86,6 +143,29 @@ const WatchPage = () => {
               <p className="mt-6 text-base leading-8 text-slate-300 md:text-lg">
                 {description}
               </p>
+
+              <div className="mt-7 flex flex-wrap gap-2">
+                {socialShareLinks.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center rounded-full border border-white/30 bg-white/10 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-white hover:text-[#050B22]"
+                  >
+                    {social.label}
+                  </a>
+                ))}
+
+                {/* <button
+                  type="button"
+                  onClick={sharePage}
+                  className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-white hover:text-[#050B22]"
+                >
+                  {linkCopied ? <Check size={17} /> : <Share2 size={17} />}
+                  {linkCopied ? "Link copied" : "Share"}
+                </button> */}
+              </div>
             </div>
           </div>
         </div>

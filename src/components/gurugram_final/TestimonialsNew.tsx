@@ -128,7 +128,7 @@ const TestimonialSection = ({
   return (
     <section
       ref={sectionRef}
-      className="testimonial-section relative w-full min-h-[600px] md:min-h-[720px] overflow-hidden"
+      className="testimonial-section relative w-full min-h-[520px] sm:min-h-[600px] md:min-h-[720px] overflow-hidden"
     >
       {/* =================================================
           BACKGROUND IMAGE
@@ -153,33 +153,33 @@ const TestimonialSection = ({
       {/* =================================================
           CONTENT
       ================================================= */}
-      <div className="relative z-10 h-full min-h-[600px] md:min-h-[720px] max-w-[1500px] mx-auto px-6 flex items-center">
+      <div className="relative z-10 h-full min-h-[520px] sm:min-h-[600px] md:min-h-[720px] max-w-[1500px] mx-auto px-4 sm:px-6 flex items-center">
         <div
-          className={`w-full max-w-[760px] py-16 testimonial-reveal ${sectionVisible ? "is-visible" : ""}`}
+          className={`w-full max-w-[760px] py-10 sm:py-16 testimonial-reveal ${sectionVisible ? "is-visible" : ""}`}
         >
           {/* QUOTE — fades between testimonials */}
           <div
             key={activeIndex}
             className="testimonial-quote animate-[fadeIn_600ms_ease-out]"
           >
-            <p className="text-white font-black text-[20px] sm:text-[25px] md:text-[30px] leading-[1.15] tracking-[-0.5px]">
+            <p className="text-white font-black text-[18px] sm:text-[25px] md:text-[30px] leading-[1.2] tracking-[-0.25px] sm:tracking-[-0.5px]">
               &ldquo;{current.quote}&rdquo;
             </p>
 
-            <div className="mt-6 flex items-center gap-4">
+            <div className="mt-5 flex items-center gap-3 sm:mt-6 sm:gap-4">
               {current.image ? (
                 <img
                   src={current.image}
                   alt={current.name}
-                  className="w-16 sm:w-20"
+                  className="w-14 sm:w-20"
                 />
               ) : null}
 
               <div>
-                <p className="text-white text-[17px] sm:text-[20px] font-semibold leading-tight">
+                <p className="text-white text-[16px] sm:text-[20px] font-semibold leading-tight">
                   {current.name}
                 </p>
-                <p className="text-white/80 text-[15px] sm:text-[17px] leading-tight mt-1">
+                <p className="text-white/80 text-[14px] sm:text-[17px] leading-tight mt-1">
                   {current.designation}
                 </p>
               </div>
@@ -187,7 +187,7 @@ const TestimonialSection = ({
           </div>
 
           {/* NAV ARROWS */}
-          <div className="mt-12 flex items-center gap-4 testimonial-nav">
+          <div className="mt-8 flex items-center gap-3 sm:mt-12 sm:gap-4 testimonial-nav">
             <button
               onClick={() => handleManualNav("prev")}
               aria-label="Previous testimonial"

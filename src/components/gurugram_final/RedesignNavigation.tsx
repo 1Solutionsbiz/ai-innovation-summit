@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 const RedesignNavigation = () => {
   const [open, setOpen] = useState(false);
+  const [editionsOpen, setEditionsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -110,7 +111,9 @@ const RedesignNavigation = () => {
           </div>
 
           <button
-            className="md:hidden text-white"
+            type="button"
+            aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+            className={`mobile-menu-toggle md:hidden ${isScrolled ? "is-scrolled" : ""}`}
             onClick={() => setOpen(!open)}
           >
             {open ? <X size={24} /> : <Menu size={24} />}
@@ -130,6 +133,35 @@ const RedesignNavigation = () => {
               {link.label}
             </a>
           ))}
+
+          <div className="mobile-editions">
+            <button
+              type="button"
+              className="mobile-editions-toggle"
+              aria-expanded={editionsOpen}
+              onClick={() => setEditionsOpen(!editionsOpen)}
+            >
+              <span>Previous Editions</span>
+              <ChevronDown
+                size={18}
+                className={editionsOpen ? "rotate-180" : ""}
+              />
+            </button>
+
+            {editionsOpen && (
+              <div className="mobile-editions-list">
+                {editions.map((edition) => (
+                  <a
+                    key={edition.name}
+                    href={edition.link}
+                    onClick={() => setOpen(false)}
+                  >
+                    {edition.name}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
 
           <button className="redesign-register-btn w-full">
             Register Now
