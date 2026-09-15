@@ -2,6 +2,12 @@
 
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { ArrowLeft, Check, Share2 } from "lucide-react";
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaWhatsapp,
+  FaXTwitter,
+} from "react-icons/fa6";
 import { useEffect, useState } from "react";
 import RedesignNavigation from "./RedesignNavigation";
 import Footer from "./Footer";
@@ -57,18 +63,22 @@ const WatchPage = () => {
   const socialShareLinks = [
     {
       label: "WhatsApp",
+      icon: <FaWhatsapp className="text-[#25D366]" size={17} />,
       href: `https://wa.me/?text=${encodedText}`,
     },
     {
       label: "X",
+      icon: <FaXTwitter className="text-white" size={16} />,
       href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodedUrl}`,
     },
     {
       label: "LinkedIn",
+      icon: <FaLinkedinIn className="text-[#0A66C2]" size={17} />,
       href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
     },
     {
       label: "Facebook",
+      icon: <FaFacebookF className="text-[#1877F2]" size={17} />,
       href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
     },
   ];
@@ -102,7 +112,7 @@ const WatchPage = () => {
     <div className="min-h-screen bg-[#050B22] text-white">
       <RedesignNavigation />
 
-      <main className="relative py-10 md:py-16 mt-10">
+      <main className="relative py-10 md:py-16 mt-20 md:mt-10">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
           <button
             onClick={() => navigate(-1)}
@@ -144,27 +154,31 @@ const WatchPage = () => {
                 {description}
               </p>
 
-              <div className="mt-7 flex flex-wrap gap-2">
+              <div className="mt-7 flex flex-wrap items-center gap-2">
+                <span className="mr-1 text-sm font-semibold text-white/80">
+                  Share :
+                </span>
                 {socialShareLinks.map((social) => (
                   <a
                     key={social.label}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center rounded-full border border-white/30 bg-white/10 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-white hover:text-[#050B22]"
+                    className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-white hover:text-[#050B22]"
                   >
+                    {social.icon}
                     {social.label}
                   </a>
                 ))}
 
-                {/* <button
+                <button
                   type="button"
                   onClick={sharePage}
                   className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-white hover:text-[#050B22]"
                 >
                   {linkCopied ? <Check size={17} /> : <Share2 size={17} />}
                   {linkCopied ? "Link copied" : "Share"}
-                </button> */}
+                </button>
               </div>
             </div>
           </div>
