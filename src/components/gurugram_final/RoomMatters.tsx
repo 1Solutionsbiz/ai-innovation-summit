@@ -67,10 +67,8 @@ const RoomThatMatters = () => {
                 sm:text-[48px]
                 md:text-[64px]
                 xl:text-[60px]
-                leading-[0.94]
-                tracking-[-1.5px]
-                sm:tracking-[-3px]">
-          THE ROOM THAT MATTERS
+                leading-[0.94]">
+          The Room That Matters
         </h2>
         <p className="mt-4 text-base font-normal text-[#171717] sm:mt-6 sm:text-xl md:text-1xl">
           700+ enterprise technology &amp; transformation leaders
