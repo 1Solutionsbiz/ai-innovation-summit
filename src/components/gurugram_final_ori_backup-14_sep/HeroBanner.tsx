@@ -61,7 +61,7 @@ const HeroBanner = () => {
             <img
               src="/gurugram/logo-conbain.png"
               alt="AI Innovation Summit partner showcase"
-              className="w-full max-w-[50%] lg:max-w-[50%] object-contain drop-shadow-[0_25px_50px_rgba(8,145,178,0.25)]"
+              className="w-full max-w-[80%] lg:max-w-[80%] object-contain drop-shadow-[0_25px_50px_rgba(8,145,178,0.25)]"
             />
           </div>
 

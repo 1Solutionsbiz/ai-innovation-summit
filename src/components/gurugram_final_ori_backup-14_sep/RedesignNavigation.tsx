@@ -14,9 +14,6 @@ const RedesignNavigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const logoSrc = isScrolled ? "/delhi26_redesign/logo.png" : "/delhi26_redesign/logo.png";
-  const logoSrcg = isScrolled ? "/src/assets/guild-logo.png" : "/src/assets/guild-logo.png";
-
   const links = [
     { label: "Overview", href: "#overview" },
     { label: "Focus Areas", href: "#focus" },
@@ -49,7 +46,7 @@ const RedesignNavigation = () => {
        <div className="flex gap-[25px]">
           <a href="/" className="redesign-logo redesign-logo-gurugram-26">
             <img
-              src={logoSrc}
+              src="/delhi26_redesign/logo.png"
               alt="AI Innovation Summit"
             />
           </a>
@@ -95,28 +92,16 @@ const RedesignNavigation = () => {
         </div>
 
 
-        <div>
+        <button className="redesign-register-btn register-btn">
+          Register 
+        </button>
 
-          <div className="flex guru-26-right-sec">
-            <button className="register-btn-guru-26 register-btn-guru-26-sticky">
-              Register 
-            </button>            
-            <a href="/" className="redesign-logo redesign-logo-gurugram-26">
-              <img
-                src={logoSrcg}
-                alt="AI Innovation Summit"
-              />
-            </a>
-          </div>
-
-          <button
-            className="md:hidden text-white"
-            onClick={() => setOpen(!open)}
-          >
-            {open ? <X size={24} /> : <Menu size={24} />}
-          </button>
-
-        </div>
+        <button
+          className="md:hidden text-white"
+          onClick={() => setOpen(!open)}
+        >
+          {open ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
 
       {open && (

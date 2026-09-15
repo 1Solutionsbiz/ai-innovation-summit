@@ -5,7 +5,6 @@ export type Testimonial = {
   quote: string;
   name: string;
   designation: string;
-  image?: string;
 };
 
 const defaultTestimonials: Testimonial[] = [
@@ -14,42 +13,36 @@ const defaultTestimonials: Testimonial[] = [
       "AI delivers real impact when it moves beyond experimentation and translates into measurable business outcomes—accelerating growth, improving underwriting quality, and driving efficiency across the lending ecosystem.",
     name: "Parvez Mulla",
     designation: "MD & CEO, Fedbank Financial Services Ltd.",
-    image: "gurugram/testimonial/a.png",
   },
   {
     quote:
       "AI enables companies to understand consumer preferences and behaviors far more precisely. When applied to meaningful business challenges, it can deliver strong ROI while helping organizations create more relevant and personalized experiences for their consumers.",
     name: "Mithun Appaiah",
     designation: "CEO, Wow! Momo FMCG",
-    image: "gurugram/testimonial/a.png",
   },
   {
     quote:
       "AI is not just an enabler—it changes how businesses operate. The real opportunity for enterprises is to rethink their operating models, move beyond experimentation, and unlock the transformative impact AI can create at scale.",
     name: "Raghav Aggarwal",
     designation: "Co-Founder, Fluid AI",
-    image: "gurugram/testimonial/a.png",
   },
   {
     quote:
       "Great to see so many minds coming together to discuss how we can collectively shape the future of AI in India. The AI Innovation Summit provides a strong platform for meaningful dialogue and collaboration across the ecosystem.",
     name: "Amit Atri",
     designation: "Global CIO, Tata Consumer Products",
-    image: "gurugram/testimonial/a.png",
   },
   {
     quote:
       "The panel at AI Innovation Summit was a great platform to reflect on how enterprise architecture must evolve to be truly AI-ready. We explored how cloud-native infrastructure and data pipelines foster a culture of innovation, and why AI must move from being a standalone tool to becoming a core business enabler.",
     name: "Shashwat Singh",
     designation: "CIO, boAt",
-    image: "gurugram/testimonial/a.png",
   },
   {
     quote:
       "The way tons of data is getting created in the last 3-4 years, the amount of data which is getting generated is humongous, so what we need is an infrastructure which can basically manage on-demand situation, and the infrastructure which is a secure infrastructure and has a lot of inbuilt facilities.",
     name: "Vinod Bhat",
     designation: "Former CIO, Vistara",
-    image: "gurugram/testimonial/a.png",
   },
 ];
 
@@ -166,24 +159,9 @@ const TestimonialSection = ({
               &ldquo;{current.quote}&rdquo;
             </p>
 
-            <div className="mt-6 flex items-center gap-4">
-              {current.image ? (
-                <img
-                  src={current.image}
-                  alt={current.name}
-                  className="w-16 sm:w-20"
-                />
-              ) : null}
-
-              <div>
-                <p className="text-white text-[17px] sm:text-[20px] font-semibold leading-tight">
-                  {current.name}
-                </p>
-                <p className="text-white/80 text-[15px] sm:text-[17px] leading-tight mt-1">
-                  {current.designation}
-                </p>
-              </div>
-            </div>
+            <p className="mt-6 text-white/80 text-[16px] md:text-[18px]">
+              — {current.name}, {current.designation}
+            </p>
           </div>
 
           {/* NAV ARROWS */}

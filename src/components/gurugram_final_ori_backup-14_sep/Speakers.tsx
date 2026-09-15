@@ -228,7 +228,7 @@ const FeaturedSpeakers = () => {
 
       const previousTimestamp = lastScrollTime.current ?? timestamp;
       const elapsed = Math.min(timestamp - previousTimestamp, 40);
-      const pixelsPerMillisecond = 0.2;
+      const pixelsPerMillisecond = 0.035;
 
       scroller.scrollLeft += elapsed * pixelsPerMillisecond;
       lastScrollTime.current = timestamp;

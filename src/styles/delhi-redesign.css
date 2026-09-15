@@ -29,10 +29,6 @@
   );
 }
 
-.redesign-nav.scrolled {
-  background: linear-gradient(100deg,#7147d9,#ed3546);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, .3);
-}
 
 .redesign-nav-inner {
   max-width: 1400px;
