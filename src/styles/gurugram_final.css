@@ -1329,6 +1329,10 @@
     linear-gradient(90deg, #8B5CF6 0%, #FF5F6D 100%) border-box;
 }
 
+.register-btn-guru-26:hover {
+  background: repeating-linear-gradient(90deg, #592fa9, #ec262d 100%);
+  color: #fff;
+}
 
 .redesign-nav.scrolled {
   background: #fff;
