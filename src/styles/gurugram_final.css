@@ -445,7 +445,7 @@
 
 .partner-title {
   margin: 0;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.2;
   font-weight: 500;
   width: 100%;
@@ -458,8 +458,8 @@
   display: block;
 
   width: auto;
-  max-width: 175px;
-  max-height: 55px;
+  max-width: 200px;
+  max-height: 80px;
 
   object-fit: contain;
 

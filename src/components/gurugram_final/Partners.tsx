@@ -63,13 +63,12 @@ const PartnersSection = () => {
           </span>
 
           <h2 className="
-                font-black
-                text-[48px]
-                sm:text-[58px]
-                md:text-[64px]
-                xl:text-[60px]
-                leading-[0.94]
-                tracking-[-3px]">
+                  font-black
+                  text-[34px]
+                  sm:text-[48px]
+                  md:text-[64px]
+                  xl:text-[42px]
+                  leading-[0.94]">
             <span
               className={`block partners-reveal-up partners-delay-1 ${sectionVisible ? "is-visible" : ""}`}
             >
@@ -122,7 +121,7 @@ const PartnersSection = () => {
                     className="partner-logo partner-logo-new"
                     key={`first-${index}`}
                   >
-                    <h3 className="partner-title text-black">
+                    <h3 className="partner-title text-black font-[600]">
                       {partner.title}
                     </h3>
 

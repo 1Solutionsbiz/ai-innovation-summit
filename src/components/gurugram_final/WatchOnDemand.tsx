@@ -61,15 +61,13 @@ const OnDemandSection = () => {
             </p>
 
             <h2 className="
-                text-white
+                text-white 
                 font-black
                 text-[34px]
                 sm:text-[48px]
                 md:text-[64px]
-                xl:text-[60px]
-                leading-[0.94]
-                tracking-[-1.5px]
-                sm:tracking-[-3px]">
+                xl:text-[42px]
+                leading-[0.94]">
               <span className={`ondemand-line ondemand-reveal-up ondemand-delay-1 ${sectionVisible ? "is-visible" : ""}`}>
                 Ideas That
               </span>

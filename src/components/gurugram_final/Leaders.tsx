@@ -40,13 +40,12 @@ const LeadersNumbers = () => {
           </span>
 
           <h2 className="
-                font-black
-                text-[48px]
-                sm:text-[58px]
-                md:text-[64px]
-                xl:text-[60px]
-                leading-[0.94]
-                tracking-[-3px]">
+                  font-black
+                  text-[34px]
+                  sm:text-[48px]
+                  md:text-[64px]
+                  xl:text-[42px]
+                  leading-[0.94]">
             <span className={`leaders-line leaders-reveal-up leaders-delay-1 ${sectionVisible ? "is-visible" : ""}`}>
               Most Influential
             </span>

@@ -92,15 +92,13 @@ const InnovationSection = () => {
               Innovation Everywhere
             </p>
 
-            <h2 className="text-[#022158]
-                font-black
-                text-[34px]
-                sm:text-[48px]
-                md:text-[64px]
-                xl:text-[60px]
-                leading-[0.94]
-                tracking-[-1.5px]
-                sm:tracking-[-3px]">
+            <h2 className="text-[#022158] 
+                  font-black
+                  text-[34px]
+                  sm:text-[48px]
+                  md:text-[64px]
+                  xl:text-[42px]
+                  leading-[0.94]">
               <span className={`innovation-line innovation-reveal-up innovation-delay-1 ${sectionVisible ? "is-visible" : ""}`}>
                 More Than
               </span>

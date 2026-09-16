@@ -45,15 +45,13 @@ const Sponsors = () => {
         <p className={`sponsors-reveal sponsors-delay-0 font-extrabold text-[20px] text-[#e92630] mb-2 ${sectionVisible ? "is-visible" : ""}`}>
           Past Partners
         </p>
-        <h2 className={`sponsors-reveal sponsors-delay-1 text-[#022158] 
-                font-black
-                text-[34px]
-                sm:text-[48px]
-                md:text-[64px]
-                xl:text-[60px]
-                leading-[0.94]
-                tracking-[-1.5px]
-                sm:tracking-[-3px] ${sectionVisible ? "is-visible" : ""}`}>
+        <h2 className={`sponsors-reveal sponsors-delay-1 text-[#022158]
+                  font-black
+                  text-[34px]
+                  sm:text-[48px]
+                  md:text-[64px]
+                  xl:text-[42px]
+                  leading-[0.94] ${sectionVisible ? "is-visible" : ""}`}>
           Partners Who Powered the Journey
         </h2>
         <p className={`sponsors-reveal sponsors-delay-2 mt-4 sm:mt-6 sponser-description mx-auto ${sectionVisible ? "is-visible" : ""}`}>

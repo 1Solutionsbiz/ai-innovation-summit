@@ -6,7 +6,13 @@ const OperatingModel = ({ showCta = true }: OperatingModelProps) => {
   return (
     <section className="bg-white py-12 px-4 sm:py-20 sm:px-6" id="overview">
       <div className="w-full max-w-[720px] lg:max-w-[80%] mx-auto text-center">
-        <h2 className="font-black text-blue-950 text-[1.45rem] sm:text-3xl md:text-4xl leading-snug">
+        <h2 className="text-[#022158] 
+                  font-black
+                  text-[34px]
+                  sm:text-[48px]
+                  md:text-[64px]
+                  xl:text-[42px]
+                  leading-[0.94]">
           AI is no longer an experimentation agenda. It is becoming an operating model.
         </h2>
 

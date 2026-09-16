@@ -347,15 +347,13 @@ const FeaturedSpeakers = () => {
           {/* Left column */}
           <div className="flex flex-col justify-center">
             <p className="text-red-600 font-semibold text-lg">Retrospective</p>
-            <h2 className="text-blue-950
-                font-black
-                text-[34px]
-                sm:text-[48px]
-                md:text-[64px]
-                xl:text-[60px]
-                leading-[0.94]
-                tracking-[-1.5px]
-                sm:tracking-[-3px]">
+            <h2 className="text-[#022158] 
+                  font-black
+                  text-[34px]
+                  sm:text-[48px]
+                  md:text-[64px]
+                  xl:text-[42px]
+                  leading-[0.94]">
               Past
               <br />
               Speakers

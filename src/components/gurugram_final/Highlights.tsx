@@ -272,10 +272,8 @@ const Highlights = () => {
                 text-[34px]
                 sm:text-[48px]
                 md:text-[54px]
-                xl:text-[60px]
-                leading-[0.94]
-                tracking-[-1.5px]
-                sm:tracking-[-3px]">
+                xl:text-[42px]
+                leading-[0.94]">
             <span className={`highlights-line line-delay-1 ${isVisible ? "is-visible" : ""}`}>
               The Journey So Far
             </span>

@@ -61,13 +61,13 @@ const RoomThatMatters = () => {
       <div className="absolute left-0 right-0 top-0 h-1 bg-[#07163d]" />
 
       <div className="mx-auto max-w-[1700px] text-center">
-        <h2 className="text-[#06245d]
-                font-black
-                text-[34px]
-                sm:text-[48px]
-                md:text-[64px]
-                xl:text-[60px]
-                leading-[0.94]">
+        <h2 className="text-[#06245d] 
+                  font-black
+                  text-[34px]
+                  sm:text-[48px]
+                  md:text-[64px]
+                  xl:text-[42px]
+                  leading-[0.94]">
           The Room That Matters
         </h2>
         <p className="mt-4 text-base font-normal text-[#171717] sm:mt-6 sm:text-xl md:text-1xl">

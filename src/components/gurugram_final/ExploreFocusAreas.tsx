@@ -178,15 +178,13 @@ const FocusAreasSection = () => {
 
             <h2
               className="
-                text-white
+                text-white 
                 font-black
-                text-[36px]
+                text-[34px]
                 sm:text-[48px]
                 md:text-[64px]
-                xl:text-[60px]
+                xl:text-[42px]
                 leading-[0.94]
-                tracking-[-1.5px]
-                sm:tracking-[-3px]
               "
             >
               Explore
