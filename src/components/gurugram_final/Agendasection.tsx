@@ -8,11 +8,21 @@ type Speaker = {
   image: string;
 };
 
+type DescriptionBlock =
+  | { type: "paragraph"; text: string }
+  | { type: "list"; items: string[] };
+
 type AgendaItem = {
   time: string;
   title: string;
-  description?: string;
+  description?: string | DescriptionBlock[];
   speakers?: Speaker[];
+  isTrack?: boolean;
+};
+
+type DescriptionParts = {
+  summary: string;
+  details: DescriptionBlock[];
 };
 
 type Track = {
@@ -26,6 +36,78 @@ type DayData = {
   label: string;
   tracks: Track[];
 };
+
+const getDescriptionBlocks = (
+  description: string | DescriptionBlock[],
+): DescriptionBlock[] => {
+  if (Array.isArray(description)) return description;
+
+  return description
+    .replace(/\\n/g, "\n")
+    .split(/\n+/)
+    .flatMap((paragraph) => {
+      const parts = paragraph
+        .split(/\s+-\s+/)
+        .map((part) => part.trim())
+        .filter(Boolean);
+
+      if (parts.length <= 1) {
+        return [{ type: "paragraph", text: paragraph.trim() }];
+      }
+
+      return [
+        { type: "paragraph", text: parts[0] },
+        { type: "list", items: parts.slice(1) },
+      ];
+    });
+};
+
+const getDescriptionParts = (
+  description: string | DescriptionBlock[],
+): DescriptionParts => {
+  const blocks = getDescriptionBlocks(description);
+  const firstParagraph = blocks.find((block) => block.type === "paragraph");
+
+  if (!firstParagraph || firstParagraph.type !== "paragraph") {
+    return { summary: "", details: blocks };
+  }
+
+  const sentenceMatch = firstParagraph.text.match(/^(.+?[.!?])(?:\s|$)/);
+  const summary = sentenceMatch?.[1] ?? firstParagraph.text;
+  const remainingText = firstParagraph.text.slice(summary.length).trim();
+  const details = [
+    ...(remainingText ? [{ type: "paragraph" as const, text: remainingText }] : []),
+    ...blocks.slice(blocks.indexOf(firstParagraph) + 1),
+  ];
+
+  return { summary, details };
+};
+
+type AgendaGroup = {
+  time: string;
+  items: AgendaItem[];
+};
+
+const normalizeTime = (time: string) =>
+  time.trim().replace(/\s+/g, " ").replace(/\s*[-–—]\s*/g, "-");
+
+const getAgendaGroups = (items: AgendaItem[]): AgendaGroup[] =>
+  items.reduce<AgendaGroup[]>((groups, item) => {
+    const lastGroup = groups[groups.length - 1];
+    const normalizedTime = normalizeTime(item.time);
+
+    if (
+      lastGroup &&
+      normalizeTime(lastGroup.time) === normalizedTime &&
+      Boolean(lastGroup.items[0].isTrack) === Boolean(item.isTrack)
+    ) {
+      lastGroup.items.push(item);
+      return groups;
+    }
+
+    groups.push({ time: item.time, items: [item] });
+    return groups;
+  }, []);
 
 // ---------- Sample data (swap with real data) ----------
 const AGENDA_DATA: DayData[] = [
@@ -41,14 +123,14 @@ const AGENDA_DATA: DayData[] = [
             time: "08:30 AM - 09:15 AM",
             title: "Registration & Networking Breakfast ",
             description: "Delegates arrive and collect registration kits. Lucky Draw QR codes active. Engagement Zone open in pre-function area. Sponsor booths open. ",
-            // speakers: [
-            //   {
-            //     name: "Charu Lamba",
-            //     role: "Deputy Editor",
-            //     roleLines: ["Deputy", "Editor", "ETRetail"],
-            //     image: "/speakers/charu-lamba.jpg",
-            //   },
-            // ],
+            speakers: [
+              {
+                name: "Charu Lamba",
+                role: "Deputy Editor",
+                roleLines: ["Deputy", "Editor", "ETRetail"],
+                image: "/speakers/charu-lamba.jpg",
+              },
+            ],
           },
           {
             time: "09:15 AM - 09:20 AM",
@@ -58,22 +140,19 @@ const AGENDA_DATA: DayData[] = [
           {
             time: "9:20 AM - 9:40 AM",
             title: "Opening Keynote From Assistance to Autonomy: The Enterprise AI Mandate for 2026",
-            description: "hat enterprise AI leadership actually looks like when the boardroom demands ROI, the regulators demand governance, and the technology moves faster than either can keep up with.Where enterprise AI stands in India in 2026, the state of the union across sectors Why the shift from AI assistance to AI autonomy is not a technology decision, but a leadership decision The structural choices, architectural, economic, cultural, that separate AI deployments that endure from those that stall What the intelligent enterprise looks like from the inside ",
+            description: "hat enterprise AI leadership actually looks like when the boardroom demands ROI, the regulators demand governance, and the technology moves faster than either can keep up with. - Where enterprise AI stands in India in 2026, the state of the union across sectors - Why the shift from AI assistance to AI autonomy is not a technology decision, but a leadership decision - The structural choices, architectural, economic, cultural, that separate AI deployments that endure from those that stall - What the intelligent enterprise looks like from the inside ",
           },
           {
             time: "09:40 AM- 09:55 AM",
             title: "Partner Keynote Address",
-            description: "[Presenting Partner]",
           },
           {
             time: "09:55 AM - 10:10 AM",
             title: "Partner Keynote Address",
-            description: "[Powered by Partner]",
           },
           {
             time: "10:10 AM – 10:25 AM ",
             title: "Inaugural / Dignitary Address ",
-            description: "[Guest of Honour, Government of Delhi NCT / MeitY] ",
           },
           {
             time: "10:25 AM – 10:45 AM ",
@@ -88,7 +167,6 @@ const AGENDA_DATA: DayData[] = [
           {
             time: "11:30 AM – 11:40 AM  ",
             title: "Partner Keynote Address",
-            description:"[Partner Slot]",
           },
           {
             time: "11:40 AM – 12:25 PM ",
@@ -113,16 +191,19 @@ const AGENDA_DATA: DayData[] = [
           {
             time: "02:20 PM– 03:35 PM ",
             title: "Track 1: AI Security Security • Governance • Trust The Trust Layer: Securing, Governing, and Scaling AI Enterprises Can Actually Rely On",
+            isTrack: true,
             description:"The dedicated AI security, governance, and trust track, where the enterprises deploying AI at scale are being forced to confront a hard truth: innovation without trust does not survive contact with the boardroom, the regulator, or the customer. This track brings together India's most senior CISOs, Heads of AI Governance, Chief Risk Officers, and security architects for a practitioner-level deep dive on what it takes to make enterprise AI safe, defensible, and durable in 2026. - Agent access is the new privileged access: fewer than half of CISOs can confidently say where their AI agents are, what they can access, or what actions they are authorised to take. Closing this gap is the single biggest identity mandate of 2026 - Shadow AI at scale: 29% of employees are already using unsanctioned AI agents. How security teams are building AI inventories that extend beyond applications to models, datasets, APIs, agents, and vector databases - Governance frameworks that actually work: moving from principle-based responsible AI to enforceable, runtime guardrails, continuous red-teaming, and adversarial testing embedded into the deployment pipeline - The dual-clock compliance reality: CERT-In's 6-hour reporting window, the DPDP Act's 72-hour notification requirement, and sector-specific mandates from RBI, IRDAI, and SEBI, all running on parallel clocks - Board alignment on AI risk: only 31% of CISOs feel fully aligned with their board on acceptable AI risk. What it takes to move the boardroom from viewing AI security as a compliance checkbox to a business enabler - Building the trust infrastructure: AI-specific audit trails, model access governance, zero-trust for autonomous agents, and the crypto-agility decisions that cannot wait for quantum to arrive ",
           },
           {
             time: "02:20 PM – 03:35 PM ",
             title: "Track 2: Autonomous Industry Manufacturing • Robotics • Industrial AI The Autonomous Factory: Where Agentic AI, Robotics, and Industrial Intelligence Are Rewriting How India Makes Things ",
+            isTrack: true,
             description:"The dedicated autonomous industry track, and the most operationally grounded conversation of the day. India's manufacturing sector is undergoing its most consequential transformation in a generation, moving from cost-led production to intelligence-led manufacturing. Agentic AI, advanced robotics, digital twins, and industrial IoT are converging to create factories where machines negotiate, plan, and execute autonomously. This track brings together senior technology, AI, engineering, and operations leaders from automotive, heavy industry, pharma manufacturing, FMCG production, and industrial automation. - From automation to autonomy: the shift from pre-programmed assembly lines to intelligent cells where autonomous agents (robots and software alike) handle high-mix, low-volume production without extensive retooling - Physical AI on the factory floor: how cloud robotics, software-defined automation, and Physical AI are moving industrial systems from hardware-fixed to software-flexible, enabling continuous production optimisation - Predictive maintenance and quality inspection at scale: the two use cases delivering the fastest ROI on Indian factory floors, and what separates production deployments from long-running pilots - Digital twins as live operational intelligence: the shift from engineering simulation to real-time factory brains that self-optimise across energy, output, and quality - AI-driven supply chain orchestration: from raw material forecasting to autonomous procurement to real-time logistics, with agents that negotiate across tiers of suppliers - PLI-scheme readiness: how AI-driven process control is separating PLI winners from the rest in electronics, semiconductors, and precision manufacturing - The workforce shift: what happens on the plant floor when AI takes the repetitive decisions, and how manufacturing leaders are managing the human side of autonomous operations ",
           },
           {
             time: "02:20 PM – 03:35 PM ",
             title: "Track 3: Enterprise AI in Action Agents • Automation • Enterprise Applications Agents in Production: How Enterprise AI Is Rewiring Work, Not Just Augmenting It ",
+            isTrack: true,
             description:"The dedicated enterprise AI in action track, where the theoretical becomes the operational. 79% of enterprises say AI agents are already being adopted; 66% report measurable productivity gains. Yet 88% of agent pilots never reach production. This track brings together the enterprise technology, AI, and business leaders who have crossed that gap, deploying agents that are actually shipping work across customer service, finance, procurement, engineering, and internal operations. Practical, in-production, with real ROI data. - The proven ROI zones: where enterprise agents are delivering measurable value today, customer service, finance and receivables, document processing, engineering copilots, and internal helpdesks, and why these categories clear the business case fastest in the Indian cost structure - Multi-agent orchestration in production: 22% of production deployments now coordinate three or more agents. What the architecture, memory, and hand-off patterns look like when it works at enterprise scale - The observability mandate: why deploying an agent without observability is like running a production database without monitoring, and the tracing, cost, quality, and human-feedback stack enterprises are standardising on - From workflow to agent-native design: why the enterprises winning in 2026 are redesigning business processes around agent capabilities rather than layering AI on top of legacy workflows - The measurement problem: proving agentic AI ROI when the value shows up in cycle time, error rate, and workforce leverage rather than direct revenue, and how CFOs are being brought along - Enterprise-grade agent platforms: Salesforce Agentforce, ServiceNow, Microsoft Copilot Studio, SAP Business AI at the application layer; AWS Bedrock, Google Vertex, Azure AI Foundry at the infrastructure layer, how enterprises are choosing between them - Governance before scale: why only 34% of enterprises have AI-specific security controls, and how the leaders are building agent registries, least-privilege credentials, and human-in-the-loop thresholds into every workflow from day one ",
           },
           {
@@ -133,7 +214,6 @@ const AGENDA_DATA: DayData[] = [
           {
             time: "03:50 PM – 04:00 PM ",
             title: "Partner Keynote Address",
-            description:"[Associate Partner]",
           },
           {
             time: "04:00 PM – 04:45 PM ",
@@ -201,6 +281,7 @@ const AgendaSection = () => {
   const [activeTrackId, setActiveTrackId] = useState(activeDay.tracks[0].id);
   const activeTrack =
     activeDay.tracks.find((t) => t.id === activeTrackId) ?? activeDay.tracks[0];
+  const [expandedItems, setExpandedItems] = useState<Record<string, boolean>>({});
 
   const handleDayChange = (dayId: string) => {
     setActiveDayId(dayId);
@@ -212,7 +293,7 @@ const AgendaSection = () => {
     <section className="bg-black py-20 px-6">
       <div className="max-w-[1080px] mx-auto">
         {/* Heading */}
-        <h2 className="text-center font-black text-5xl md:text-6xl tracking-tight uppercase mt-10">
+        <h2 className="mt-10 text-center text-4xl font-black uppercase tracking-tight sm:text-5xl md:text-6xl">
           <span className="agendatitle">Agenda</span>
         </h2>
 
@@ -235,12 +316,12 @@ const AgendaSection = () => {
 
         {/* Track pills */}
         <div className="mt-10 flex justify-center">
-          <div className="flex bg-white/10 rounded-full p-1 max-w-full overflow-x-auto">
+          <div className="flex max-w-full overflow-x-auto rounded-full bg-white/10 p-1">
             {activeDay.tracks.map((track) => (
               <button
                 key={track.id}
                 onClick={() => setActiveTrackId(track.id)}
-                className={`whitespace-nowrap rounded-full px-6 py-3 text-sm font-semibold transition-colors ${
+                className={`whitespace-nowrap rounded-full px-4 py-3 text-sm font-semibold transition-colors sm:px-6 ${
                   activeTrackId === track.id
                     ? "bg-color text-white"
                     : "text-white/60 hover:text-white/80"
@@ -254,51 +335,108 @@ const AgendaSection = () => {
 
         {/* Timeline */}
         <div className="mt-14">
-          {activeTrack.items.map((item, idx) => (
+          {getAgendaGroups(activeTrack.items).map((group, idx) => (
             <div
               key={idx}
-              className="grid grid-cols-[auto_1fr] gap-x-6 md:gap-x-10 border-t border-white/15 py-8 first:border-t-0"
+              className="grid min-w-0 grid-cols-[78px_minmax(0,1fr)] gap-x-3 border-t border-white/15 py-8 first:border-t-0 sm:gap-x-6 md:grid-cols-[auto_minmax(0,1fr)] md:gap-x-10"
             >
               {/* Time column */}
-              <div className="text-white text-sm md:text-base font-semibold w-[110px] md:w-[190px] pt-1">
-                {item.time}
+              <div className="w-[78px] pt-1 text-sm font-semibold text-white sm:w-[110px] md:w-[190px] md:text-base">
+                {group.time}
               </div>
 
               {/* Content column */}
-              <div className="flex gap-5 md:gap-8 border-l-2 border-fuchsia-600 pl-5 md:pl-8">
-                <div>
-                  <h3 className="text-white font-bold text-base md:text-lg">
-                    {item.title}
-                  </h3>
+              <div
+                className={`min-w-0 border-l-2 border-fuchsia-600 pl-3 sm:pl-5 md:pl-8 ${
+                  group.items.length > 1
+                    ? "grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6"
+                    : ""
+                }`}
+              >
+                {group.items.map((item, itemIdx) => (
+                  <div
+                    key={itemIdx}
+                    className={`min-w-0 ${
+                      item.isTrack
+                        ? "rounded-lg border border-fuchsia-500/30 bg-fuchsia-500/5 p-4"
+                        : ""
+                    }`}
+                  >
+                    <h3 className="break-words text-base font-bold text-white md:text-lg">
+                      {item.title}
+                    </h3>
 
-                  {item.description && (
-                    <p className="mt-2 max-w-3xl text-sm leading-relaxed text-white/65">
-                      {item.description}
-                    </p>
-                  )}
+                    {item.description && (
+                      (() => {
+                        const descriptionParts = getDescriptionParts(item.description);
+                        const itemKey = `${idx}-${itemIdx}`;
+                        const isExpanded = Boolean(expandedItems[itemKey]);
 
-                  {item.speakers && item.speakers.length > 0 && (
-                    <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-4">
-                      {item.speakers.map((speaker, sIdx) => (
-                        <div key={sIdx} className="flex items-center gap-3">
-                          <img
-                            src={speaker.image}
-                            alt={speaker.name}
-                            className="w-12 h-12 rounded-md object-cover flex-shrink-0 bg-white/10"
-                          />
-                          <div className="text-sm">
-                            <p className="text-white font-semibold">{speaker.name}</p>
-                            {(speaker.roleLines ?? [speaker.role]).map((line, lIdx) => (
-                              <p key={lIdx} className="text-white/60 leading-tight">
-                                {line}
-                              </p>
-                            ))}
+                        return (
+                          <div className="mt-2 max-w-3xl break-words text-sm leading-relaxed text-white/65">
+                            {descriptionParts.summary && <p>{descriptionParts.summary}</p>}
+
+                            {descriptionParts.details.length > 0 && (
+                              <>
+                                <button
+                                  type="button"
+                                  onClick={() =>
+                                    setExpandedItems((current) => ({
+                                      ...current,
+                                      [itemKey]: !current[itemKey],
+                                    }))
+                                  }
+                                  className="mt-3 font-semibold text-fuchsia-300 transition-colors hover:text-fuchsia-200"
+                                  aria-expanded={isExpanded}
+                                >
+                                  {isExpanded ? "Read Less" : "Read More"}
+                                </button>
+
+                                {isExpanded && (
+                                  <div className="mt-3 space-y-4">
+                                    {descriptionParts.details.map((block, blockIdx) =>
+                                      block.type === "paragraph" ? (
+                                        <p key={blockIdx}>{block.text}</p>
+                                      ) : (
+                                        <ul key={blockIdx} className="list-disc space-y-2 pl-5">
+                                          {block.items.map((itemText, detailIdx) => (
+                                            <li key={detailIdx}>{itemText}</li>
+                                          ))}
+                                        </ul>
+                                      ),
+                                    )}
+                                  </div>
+                                )}
+                              </>
+                            )}
                           </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
+                        );
+                      })()
+                    )}
+
+                    {item.speakers && item.speakers.length > 0 && (
+                      <div className="mt-4 grid grid-cols-1 gap-x-10 gap-y-4 sm:grid-cols-2">
+                        {item.speakers.map((speaker, sIdx) => (
+                          <div key={sIdx} className="flex items-center gap-3">
+                            <img
+                              src={speaker.image}
+                              alt={speaker.name}
+                              className="w-12 h-12 rounded-md object-cover flex-shrink-0 bg-white/10"
+                            />
+                            <div className="text-sm">
+                              <p className="text-white font-semibold">{speaker.name}</p>
+                              {(speaker.roleLines ?? [speaker.role]).map((line, lIdx) => (
+                                <p key={lIdx} className="text-white/60 leading-tight">
+                                  {line}
+                                </p>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
           ))}
