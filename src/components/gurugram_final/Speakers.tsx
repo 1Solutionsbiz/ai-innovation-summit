@@ -374,7 +374,7 @@ const FeaturedSpeakers = () => {
                   sm:text-[48px]
                   md:text-[64px]
                   xl:text-[42px]
-                  leading-[0.94]
+                  mb-14
                 "
               >
                 <span
@@ -389,8 +389,6 @@ const FeaturedSpeakers = () => {
                 </span>
               </h2>
 
-              <br />
-              <br />
 
               <a href="delhi-gurugram_edition-26-speakers"
                 type="button"

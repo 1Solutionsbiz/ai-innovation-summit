@@ -97,8 +97,7 @@ const InnovationSection = () => {
                   text-[34px]
                   sm:text-[48px]
                   md:text-[64px]
-                  xl:text-[42px]
-                  leading-[0.94]">
+                  xl:text-[42px]">
               <span className={`innovation-line innovation-reveal-up innovation-delay-1 ${sectionVisible ? "is-visible" : ""}`}>
                 More Than
               </span>
@@ -113,7 +112,7 @@ const InnovationSection = () => {
             <button
               type="button"
               onClick={() => setIsOperatingModelOpen(true)}
-              className={`innovation-know-more mt-8 sm:mt-12 innovation-reveal-up innovation-delay-4 ${sectionVisible ? "is-visible" : ""}`}
+              className={`innovation-know-more mt-5 innovation-reveal-up innovation-delay-4 ${sectionVisible ? "is-visible" : ""}`}
             >
               Know More
             </button>

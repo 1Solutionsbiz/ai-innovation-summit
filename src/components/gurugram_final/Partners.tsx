@@ -94,7 +94,6 @@ const PartnersSection = () => {
             </span>
           </p>
 
-          <br />
           <a
             href="#become-partner"
             className={`partners-btn partners-reveal-up partners-delay-5 ${sectionVisible ? "is-visible" : ""}`}

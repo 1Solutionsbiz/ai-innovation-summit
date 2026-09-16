@@ -60,7 +60,7 @@ const RedesignNavigation = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="redesign-nav-link text-[11px] text-white hover:text-primary"
+                className="redesign-nav-link redesign-nav-link-guru26 text-[13px] text-white hover:text-[#ec262d]"
               >
                 {link.label}
               </a>
@@ -68,7 +68,7 @@ const RedesignNavigation = () => {
 
               {/* Previous Editions Dropdown */}
               <div className="relative group">
-                <button className="flex items-center gap-1.2 text-white hover:text-primary text-sm font-medium">
+                <button className="flex items-center gap-1.2 text-white hover:text-[#ec262d] text-[13px] ">
                     Previous Editions <ChevronDown size={16} />
                   </button>
 

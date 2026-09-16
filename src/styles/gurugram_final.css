@@ -1339,10 +1339,17 @@
 }
 
 .redesign-nav.scrolled .redesign-nav-link,
-.redesign-nav.scrolled .redesign-nav-link:hover,
-.redesign-nav.scrolled button,
-.redesign-nav.scrolled .redesign-nav-link:focus {
+.redesign-nav.scrolled button{
   color: #111111;
+}
+.redesign-nav.scrolled .redesign-nav-link:hover,
+.redesign-nav.scrolled .redesign-nav-link:focus,
+.redesign-nav.scrolled button:hover {
+  color: #ec262d;
+}
+
+.redesign-nav-link-guru26{
+  text-transform: capitalize;
 }
 
 .redesign-nav.scrolled .register-btn-guru-26 {
