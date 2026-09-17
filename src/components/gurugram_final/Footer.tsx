@@ -1,128 +1,90 @@
-import { Linkedin } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
-import aiLogo from "@/assets/ai-innovation-logo.png";
 import aiinvationlogo from "/logo/Ai-Innovation_Logo_White.png";
-import guildLogo from "@/assets/guild-logo.png";
+import guildLogo from "/logo/the-guild-dg26.png";
+
 
 const Footer = () => {
-  const footerRef = useRef<HTMLElement>(null);
-  const [footerVisible, setFooterVisible] = useState(false);
-
-  useEffect(() => {
-    const footer = footerRef.current;
-    if (!footer) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setFooterVisible(false);
-          requestAnimationFrame(() => {
-            requestAnimationFrame(() => setFooterVisible(true));
-          });
-        } else {
-          setFooterVisible(false);
-        }
-      },
-      { threshold: 0.5 },
-    );
-
-    observer.observe(footer);
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <footer ref={footerRef} className="footer-section bg-slate-900 text-white" id="contact">
-      <div className="container max-w-7xl mx-auto px-4 sm:px-6 py-10 md:py-16">
+    <footer className="bg-[#000019] text-white" id="contact">
+      <div className="mx-auto max-w-[1680px] border border-white/90 bg-[#000019]">
+        <div className="grid grid-cols-1 gap-10 px-6 py-8 lg:grid-cols-[1.35fr_0.95fr] lg:items-start lg:gap-12 lg:px-10 lg:py-12 xl:px-14">
+          <div className="flex min-h-[320px] items-center">
+            <div className="w-full">
+              
 
-        {/* TOP SECTION */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-12">
+              <div>
+                <img
+                  src={aiinvationlogo}
+                  alt="Ai Innovation Summit"
+                  className="h-9 sm:h-10 md:h-12 lg:h-24 object-contain ftrlogog26"
+                />
+              </div>
 
-          {/* LEFT SECTION */}
-          <div className={`space-y-6 footer-reveal footer-delay-1 ${footerVisible ? "is-visible" : ""}`}>
-            <div>
-              <img
-                src={aiinvationlogo}
-                alt="Ai Innovation Summit"
-                className="h-9 sm:h-10 md:h-12 lg:h-24 object-contain ftrlogo"
-              />
-            </div>
-
-            <p className="text-slate-300 text-sm leading-relaxed">
-              From prompt to impact — the premier summit for artificial intelligence
-              leaders and enthusiasts, making it the most impactful AI Summit.
-            </p>
-
-            <div className="pt-4">
-              <img
-                src={guildLogo}
-                alt="The Guild"
-                className="h-8 sm:h-10 md:h-12 w-auto object-contain"
-              />
             </div>
           </div>
 
-          {/* CENTER SECTION */}
-          <div className="text-left sm:text-left">
+          <div className="flex items-start justify-start">
+            <div className="w-full max-w-[560px] space-y-5 text-[15px] font-medium sm:text-[17px] lg:text-[18px]">
+              
+              
+              
+              <div className="">
+                <img
+                  src={guildLogo}
+                  alt="The Guild"
+                  className="h-8 sm:h-10 md:h-12 w-auto object-contain"
+                />
+              </div>
 
-          </div>
-
-          {/* RIGHT SECTION */}
-          <div className={`footer-reveal footer-delay-2 ${footerVisible ? "is-visible" : ""}`}>
-            <h4 className="text-xl font-bold mb-5 sm:mb-6">Connect With Us</h4>
-
-            <div className="space-y-4">
-              <div className="flex items-center gap-2">
-                <Linkedin className="text-cyan-400" size={20} />
+              <div className="flex items-center gap-3 text-white">
+                <a href="https://www.linkedin.com/showcase/guild-ai-innovation-summit/" target="_blank">
+                  <span className="text-[clamp(1.4rem,2vw,2.2rem)] font-black leading-none tracking-[-0.04em]">in</span>
+                </a>
               </div>
 
               <a
                 href="mailto:guildconferences@guildlive.com"
-                className="text-slate-300 hover:text-cyan-400 transition-colors text-sm sm:text-base block"
+                className="block text-[#ff3333] transition-colors hover:text-[#ff3333]"
               >
                 guildconferences@guildlive.com
               </a>
 
-              <p className="text-slate-300 text-sm leading-relaxed">
+              <p className="max-w-[480px] leading-[1.45] text-white">
                 Smartworks Corporate Park Tower A, Second Floor Sector 125,
                 Noida, Uttar Pradesh 201303
               </p>
 
-              {/* Speakership */}
-              <div className="pt-2 space-y-3">
+              <div className="space-y-4 pt-2">
                 <div>
-                  <p className="font-semibold text-sm sm:text-base mb-1">
+                  <p className="text-white">
                     For Speakership Opportunity,
                   </p>
-
-                  <p className="text-sm text-slate-300">
+                  <p className="mt-1 leading-[1.5] text-white">
                     Email at{" "}
                     <a
                       href="mailto:nishant.batra@guildlive.com"
-                      className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                      className="text-[#ff3333] transition-colors hover:text-[#ff3333]"
                     >
                       nishant.batra@guildlive.com
                     </a>{" "}
                     or{" "}
                     <a
                       href="mailto:lavi@guildlive.com"
-                      className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                      className="text-[#ff3333] transition-colors hover:text-[#ff3333]"
                     >
                       lavi@guildlive.com
                     </a>
                   </p>
                 </div>
 
-                {/* Partnerships */}
                 <div>
-                  <p className="font-semibold text-sm sm:text-base mb-1">
+                  <p className="text-white">
                     For Partnerships,
                   </p>
-
-                  <p className="text-sm text-slate-300">
+                  <p className="mt-1 leading-[1.5] text-white">
                     Email at{" "}
                     <a
                       href="mailto:partnership@guildlive.com"
-                      className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                      className="text-[#ff3333] transition-colors hover:text-[#ff3333]"
                     >
                       partnership@guildlive.com
                     </a>
@@ -133,69 +95,22 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* BOTTOM SECTION */}
-        <div className={`border-t border-slate-700 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 footer-reveal footer-delay-3 ${footerVisible ? "is-visible" : ""}`}>
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-white/80 bg-[#141414] px-6 py-4 text-white md:flex-row md:px-10 xl:px-14">
+          <p className="text-sm font-medium sm:text-base">© Copyright 2026, The Guild</p>
 
-          <p className="text-slate-400 text-xs sm:text-sm text-center md:text-left">
-            © Copyright 2026, The Guild
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm">
-            <a
-              href="#privacy"
-              className="text-slate-400 hover:text-white transition-colors"
-            >
+          <div className="flex flex-wrap items-center justify-center gap-4 text-sm font-medium sm:gap-6 sm:text-base">
+            <a href="#privacy" className="text-white transition-colors hover:text-[#ff3333]">
               Privacy Policy
             </a>
-
-            <a
-              href="#terms"
-              className="text-slate-400 hover:text-white transition-colors"
-            >
-              Terms & Conditions
+            <a href="#terms" className="text-white transition-colors hover:text-[#ff3333]">
+              Terms &amp; Conditions
             </a>
-
-            <a
-              href="#conduct"
-              className="text-slate-400 hover:text-white transition-colors"
-            >
+            <a href="#conduct" className="text-white transition-colors hover:text-[#ff3333]">
               Code of Conduct
             </a>
           </div>
         </div>
       </div>
-
-      <style>{`
-        @keyframes footerFadeInUp {
-          from {
-            opacity: 0;
-            transform: translate3d(0, 32px, 0);
-          }
-          to {
-            opacity: 1;
-            transform: translate3d(0, 0, 0);
-          }
-        }
-
-        .footer-reveal {
-          opacity: 0;
-          will-change: opacity, transform;
-        }
-
-        .footer-reveal.is-visible {
-          animation: footerFadeInUp 1.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-
-        .footer-delay-2 { animation-delay: 220ms; }
-        .footer-delay-3 { animation-delay: 440ms; }
-
-        @media (prefers-reduced-motion: reduce) {
-          .footer-reveal.is-visible {
-            animation-duration: 1ms;
-            animation-delay: 0ms;
-          }
-        }
-      `}</style>
     </footer>
   );
 };
