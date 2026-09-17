@@ -124,6 +124,9 @@ const Highlights = () => {
 
   /* =========================
      Intersection Observer
+     Re-triggers every time the section enters the
+     viewport (scrolling down OR back up), instead of
+     firing once and staying stuck "on".
   ========================= */
 
   useEffect(() => {
@@ -133,15 +136,14 @@ const Highlights = () => {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-
         if (entry.isIntersecting) {
-          setIsVisible(true);
-
-          // Once animation starts,
-          // observer is no longer required
-          observer.unobserve(section);
+          setIsVisible(false);
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => setIsVisible(true));
+          });
+        } else {
+          setIsVisible(false);
         }
-
       },
       {
         threshold: 0.25,
@@ -254,7 +256,7 @@ const Highlights = () => {
             -translate-y-1/2
             w-3/4
             h-3/4
-            
+
           "
         />
 
@@ -274,7 +276,7 @@ const Highlights = () => {
                 md:text-[54px]
                 xl:text-[42px]
                 leading-[0.94]">
-            <span className={`highlights-line line-delay-1 ${isVisible ? "is-visible" : ""}`}>
+            <span className={`partners-reveal-up ${isVisible ? "is-visible" : ""}`}>
               The Journey So Far
             </span>
           </h2>
@@ -292,6 +294,8 @@ const Highlights = () => {
         >
 
           {highlights.map((item, index) => {
+
+            const delayClass = `partners-delay-${Math.min(index + 1, 5)}`;
 
             return (
 
@@ -317,7 +321,7 @@ const Highlights = () => {
 
                 <div
                   className={`
-                    highlights-line line-delay-${index + 2}
+                    partners-reveal-up ${delayClass}
                     text-[clamp(1.5rem,7vw,2rem)]
                     font-black
                     sm:text-2xl
@@ -348,7 +352,7 @@ const Highlights = () => {
 
                 <div
                   className={`
-                    highlights-line line-delay-${index + 6}
+                    partners-reveal-up ${delayClass}
                     mt-2 text-sm
                     sm:mt-4
                     sm:text-base
@@ -371,47 +375,6 @@ const Highlights = () => {
         </div>
 
       </div>
-
-      <style>{`
-        @keyframes highlightsLineReveal {
-          from {
-            opacity: 0;
-            clip-path: inset(0 0 100% 0);
-            transform: translateY(18px);
-          }
-          to {
-            opacity: 1;
-            clip-path: inset(0 0 0 0);
-            transform: translateY(0);
-          }
-        }
-
-        .highlights-line {
-          display: inline-block;
-          opacity: 0;
-        }
-
-        .highlights-line.is-visible {
-          animation: highlightsLineReveal 850ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-
-        .line-delay-0 { animation-delay: 0ms; }
-        .line-delay-1 { animation-delay: 140ms; }
-        .line-delay-2 { animation-delay: 280ms; }
-        .line-delay-3 { animation-delay: 420ms; }
-        .line-delay-4 { animation-delay: 560ms; }
-        .line-delay-5 { animation-delay: 700ms; }
-        .line-delay-6 { animation-delay: 840ms; }
-        .line-delay-7 { animation-delay: 980ms; }
-        .line-delay-8 { animation-delay: 1120ms; }
-        .line-delay-9 { animation-delay: 1260ms; }
-
-        @media (prefers-reduced-motion: reduce) {
-          .highlights-line.is-visible {
-            animation-duration: 1ms;
-          }
-        }
-      `}</style>
 
     </section>
   );
