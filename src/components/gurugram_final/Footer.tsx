@@ -5,7 +5,7 @@ import guildLogo from "/logo/the-guild-dg26.png";
 const Footer = () => {
   return (
     <footer className="bg-[#000019] text-white" id="contact">
-      <div className="mx-auto max-w-[1680px] border border-white/90 bg-[#000019]">
+      <div className="mx-auto max-w-[1680px] bg-[#000019]">
         <div className="grid grid-cols-1 gap-10 px-6 py-8 lg:grid-cols-[1.35fr_0.95fr] lg:items-start lg:gap-12 lg:px-10 lg:py-12 xl:px-14">
           <div className="flex min-h-[320px] items-center">
             <div className="w-full">
