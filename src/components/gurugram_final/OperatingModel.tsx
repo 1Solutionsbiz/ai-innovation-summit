@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { getScrollDirection } from "@/hooks/useScrollDirection";
 
 type OperatingModelProps = {
   showCta?: boolean;
@@ -7,6 +8,7 @@ type OperatingModelProps = {
 const OperatingModel = ({ showCta = true }: OperatingModelProps) => {
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [direction, setDirection] = useState<"up" | "down">("down");
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -15,8 +17,13 @@ const OperatingModel = ({ showCta = true }: OperatingModelProps) => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(section);
+          setDirection(getScrollDirection());
+          setIsVisible(false);
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => setIsVisible(true));
+          });
+        } else {
+          setIsVisible(false);
         }
       },
       { threshold: 0.2 },
@@ -26,6 +33,12 @@ const OperatingModel = ({ showCta = true }: OperatingModelProps) => {
     return () => observer.disconnect();
   }, []);
 
+  const total = showCta ? 3 : 2;
+  const delayFor = (index: number) => {
+    const order = direction === "up" ? total - 1 - index : index;
+    return isVisible ? `${order * 160}ms` : undefined;
+  };
+
   return (
     <section ref={sectionRef} className="bg-white py-16 px-6 sm:py-20">
       <div className="mx-auto max-w-5xl text-left">
@@ -33,11 +46,17 @@ const OperatingModel = ({ showCta = true }: OperatingModelProps) => {
           Concept Note
         </p> */}
 
-        <h2 className={`partners-reveal-up text-center font-black text-blue-950 text-2xl sm:text-3xl md:text-4xl leading-snug ${isVisible ? "is-visible" : ""}`}>
+        <h2
+          className={`partners-reveal-up text-center font-black text-blue-950 text-2xl sm:text-3xl md:text-4xl leading-snug ${isVisible ? "is-visible" : ""}`}
+          style={{ animationDelay: delayFor(0) }}
+        >
           The AI Innovation Summit returns for its 8th Edition in Delhi NCR
         </h2>
 
-        <div className="mt-4 space-y-2 text-base leading-relaxed text-blue-950/80 md:text-[16px]">
+        <div
+          className={`partners-reveal-up mt-4 space-y-2 text-base leading-relaxed text-blue-950/80 md:text-[16px] ${isVisible ? "is-visible" : ""}`}
+          style={{ animationDelay: delayFor(1) }}
+        >
           <p>
             The <strong className="font-bold text-blue-950">AI Innovation Summit</strong> returns for its <strong className="font-bold text-blue-950">8th Edition in Delhi NCR</strong> at a defining moment for enterprise AI, bringing together <strong className="font-bold text-blue-950">CIOs, CTOs, Chief Data Officers, CISOs, Chief AI Officers, IT Heads, and senior business and technology leaders</strong> for high-impact conversations on AI-driven transformation.
           </p>
@@ -64,7 +83,10 @@ const OperatingModel = ({ showCta = true }: OperatingModelProps) => {
         </div>
 
         {showCta && (
-          <div className="mt-10 text-center">
+          <div
+            className={`partners-reveal-up mt-10 text-center ${isVisible ? "is-visible" : ""}`}
+            style={{ animationDelay: delayFor(2) }}
+          >
             <a href="#know-more" className="rounded-full px-10 py-4 btn-bg-w">
               Know more...
             </a>

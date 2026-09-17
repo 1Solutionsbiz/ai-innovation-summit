@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { getScrollDirection } from "@/hooks/useScrollDirection";
 
 /* =========================
    Rolling Digit
@@ -120,13 +121,16 @@ const Highlights = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
 
   const [isVisible, setIsVisible] = useState(false);
+  const [revealDirection, setRevealDirection] = useState<"up" | "down">("down");
 
 
   /* =========================
      Intersection Observer
      Re-triggers every time the section enters the
      viewport (scrolling down OR back up), instead of
-     firing once and staying stuck "on".
+     firing once and staying stuck "on". The direction is
+     captured at the moment it enters so the stat columns
+     can stagger in reverse order when scrolling up.
   ========================= */
 
   useEffect(() => {
@@ -137,6 +141,7 @@ const Highlights = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          setRevealDirection(getScrollDirection());
           setIsVisible(false);
           requestAnimationFrame(() => {
             requestAnimationFrame(() => setIsVisible(true));
@@ -295,7 +300,8 @@ const Highlights = () => {
 
           {highlights.map((item, index) => {
 
-            const delayClass = `partners-delay-${Math.min(index + 1, 5)}`;
+            const order = revealDirection === "up" ? highlights.length - 1 - index : index;
+            const delayMs = isVisible ? `${order * 160}ms` : undefined;
 
             return (
 
@@ -321,7 +327,7 @@ const Highlights = () => {
 
                 <div
                   className={`
-                    partners-reveal-up ${delayClass}
+                    partners-reveal-up
                     text-[clamp(1.5rem,7vw,2rem)]
                     font-black
                     sm:text-2xl
@@ -338,6 +344,7 @@ const Highlights = () => {
                     overflow-hidden
                     ${isVisible ? "is-visible" : ""}
                   `}
+                  style={{ animationDelay: delayMs }}
                 >
                   <AnimatedNumber
                     value={item.number}
@@ -352,7 +359,7 @@ const Highlights = () => {
 
                 <div
                   className={`
-                    partners-reveal-up ${delayClass}
+                    partners-reveal-up
                     mt-2 text-sm
                     sm:mt-4
                     sm:text-base
@@ -364,6 +371,7 @@ const Highlights = () => {
                     sm:max-w-[240px]
                     ${isVisible ? "is-visible" : ""}
                   `}
+                  style={{ animationDelay: delayMs }}
                 >
                   {item.label}
                 </div>

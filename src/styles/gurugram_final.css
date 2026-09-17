@@ -76,6 +76,25 @@
   }
 }
 
+/* Generic reveal used for headings, subheadings, body text and buttons
+   across the page. Delay is set per-instance via inline style so groups
+   of siblings can stagger in either order (see <Reveal index total />). */
+.reveal-fade-up {
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+.reveal-fade-up.is-visible {
+  animation: partnersFadeUp 1.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-fade-up.is-visible {
+    animation-duration: 1ms;
+    animation-delay: 0ms !important;
+  }
+}
+
 
 
 
