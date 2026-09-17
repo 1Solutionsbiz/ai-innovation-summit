@@ -188,7 +188,7 @@ const InnovationSection = () => {
 
       {isOperatingModelOpen && (
         <div className="fixed inset-0 z-[120] flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm">
-          <div className="relative max-h-[calc(100vh-2rem)] w-full max-w-5xl overflow-y-auto overflow-x-hidden rounded-[20px] bg-white shadow-2xl sm:rounded-[26px]">
+          <div className="relative max-h-[calc(100vh-2rem)] w-full max-w-6xl overflow-y-auto overflow-x-hidden rounded-[20px] bg-white shadow-2xl sm:rounded-[26px]">
             <button
               type="button"
               onClick={() => setIsOperatingModelOpen(false)}

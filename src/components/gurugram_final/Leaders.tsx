@@ -61,7 +61,7 @@ const LeadersNumbers = () => {
             href="#become-partner"
             className={`leaders-btn btn-bg leaders-reveal-up leaders-delay-4 ${sectionVisible ? "is-visible" : ""}`}
           >
-            Become a Partner
+            Register Now
           </a>
 
         </div>

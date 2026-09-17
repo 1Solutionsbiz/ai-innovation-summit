@@ -2,7 +2,7 @@
 
 export const MUMBAI_SPEAKERS = [
    {
-    name: "Parvez Mulla",
+    name: "Parvez Mulla ",
     role: "MD & CEO, Fedbank Financial Services Ltd. ",
     linkedin: "https://www.linkedin.com/in/parvez-mulla-b796044/",
     image: "/speakers/parvez-mulla.png",
