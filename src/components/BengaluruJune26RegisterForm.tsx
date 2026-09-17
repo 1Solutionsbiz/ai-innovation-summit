@@ -534,11 +534,11 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
           </div>
           {/* reCAPTCHA */}
           <div className="md:col-span-2">
-            {/* <ReCAPTCHA
+            <ReCAPTCHA
               sitekey={RECAPTCHA_SITE_KEY}
               onChange={token => setRecaptchaToken(token)}
               theme="dark"
-            /> */}
+            />
           </div>
 
           {/* Submit */}
