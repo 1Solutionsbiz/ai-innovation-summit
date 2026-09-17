@@ -1,4 +1,5 @@
 import seriesPartnersBg from "@/assets/series-partners-bg.jpg";
+import RevealHeading from "@/components/ui/RevealHeading";
 
 const partnersData = [
   {
@@ -60,9 +61,9 @@ const SeriesPartners = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
+        <RevealHeading className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
           Series Partners
-        </h2>
+        </RevealHeading>
         <p className="text-slate-600 text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed mb-12 text-center">
           Partnering with industry leaders to drive innovation
         </p>

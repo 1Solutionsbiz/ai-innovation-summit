@@ -1,4 +1,5 @@
 import { Mail, Phone } from "lucide-react";
+import RevealHeading from "@/components/ui/RevealHeading";
 
 const ContactDetails = () => {
   return (
@@ -9,9 +10,9 @@ const ContactDetails = () => {
       <div className="container mx-auto px-4">
         {/* Title */}
         <div className="max-w-2xl mx-auto text-center mb-16 relative z-10">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4">
+          <RevealHeading className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4">
             Contact Us
-          </h2>
+          </RevealHeading>
           <p className="text-white text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-12 text-center">
             For Speakership Opportunity
           </p>

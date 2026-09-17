@@ -1,3 +1,5 @@
+import RevealHeading from "@/components/ui/RevealHeading";
+
 const FeaturedSpeakers = () => {
     // 🔥 Added your full Delhi 26 speakers list
   const delhispeakers = [
@@ -841,9 +843,9 @@ const FeaturedSpeakers = () => {
   return (
     <section id="speakers" className="py-16 md:py-24 bg-background">
       <div className="container  mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
+        <RevealHeading className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
           Featured Speakers: Past Editions
-        </h2>
+        </RevealHeading>
 
         <p className="text-foreground/70 text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed mb-16 text-center">
           Industry leaders who have shared their insights

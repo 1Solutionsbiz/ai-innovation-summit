@@ -1,4 +1,5 @@
 import { useState } from "react";
+import RevealHeading from "@/components/ui/RevealHeading";
 
 const WhatAwaits = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -49,9 +50,9 @@ const WhatAwaits = () => {
 <div className="absolute inset-0  from-white via-gray-50 to-slate-100" />
 
 <div className="container mx-auto px-4 relative z-10">
-  <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent opacity-0 animate-fade-in-up">
+  <RevealHeading className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
     Focus Areas
-  </h2>
+  </RevealHeading>
 
 
       <div className="container mx-auto mw-96p px-4">

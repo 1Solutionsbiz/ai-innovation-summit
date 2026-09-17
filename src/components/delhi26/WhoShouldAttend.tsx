@@ -1,3 +1,5 @@
+import RevealHeading from "@/components/ui/RevealHeading";
+
 const WhoShouldAttend = () => {
   const attendees = [
     "CIOs, CTOs, CDOs, and other C-suite executives",
@@ -16,9 +18,9 @@ const WhoShouldAttend = () => {
     <section id="who-should-attend" className="py-16 bg-gradient-to-b from-slate-50 to-white">
       <div className="container mx-auto px-4 text-center">
         
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-10 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
+        <RevealHeading className="text-4xl md:text-5xl lg:text-6xl font-bold mb-10 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
           Who Should Attend
-        </h2>
+        </RevealHeading>
 
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 justify-center">

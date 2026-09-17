@@ -1,4 +1,5 @@
 import guildLogo from "@/assets/guild-logo.png";
+import RevealHeading from "@/components/ui/RevealHeading";
 
 const AboutTheGuild = () => {
   return (
@@ -6,9 +7,9 @@ const AboutTheGuild = () => {
           <section className="py-16 md:py-24 bg-gray-100 from-white to-slate-50">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
+          <RevealHeading className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
             About The Guild
-          </h2>
+          </RevealHeading>
           {/* <p className="text-slate-600 text-center text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed mb-12">
             Building platforms that unite leaders and innovators
           </p> */}

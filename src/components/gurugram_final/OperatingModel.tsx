@@ -1,16 +1,39 @@
+import { useEffect, useRef, useState } from "react";
+
 type OperatingModelProps = {
   showCta?: boolean;
 };
 
 const OperatingModel = ({ showCta = true }: OperatingModelProps) => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(section);
+        }
+      },
+      { threshold: 0.2 },
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="bg-white py-16 px-6 sm:py-20">
+    <section ref={sectionRef} className="bg-white py-16 px-6 sm:py-20">
       <div className="mx-auto max-w-5xl text-left">
         {/* <p className="mb-4 text-center text-xs font-semibold uppercase tracking-[0.25em] text-[#EF3340]">
           Concept Note
         </p> */}
 
-        <h2 className="text-center font-black text-blue-950 text-2xl sm:text-3xl md:text-4xl leading-snug">
+        <h2 className={`partners-reveal-up text-center font-black text-blue-950 text-2xl sm:text-3xl md:text-4xl leading-snug ${isVisible ? "is-visible" : ""}`}>
           The AI Innovation Summit returns for its 8th Edition in Delhi NCR
         </h2>
 

@@ -1,3 +1,5 @@
+import RevealHeading from "@/components/ui/RevealHeading";
+
 const Overview = () => {
   return (
     <section id="overview" className="bg-gradient-to-br from-white via-gray-50 to-slate-100 py-16 md:py-24 relative overflow-hidden">
@@ -7,9 +9,9 @@ const Overview = () => {
       </div>
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto text-center space-y-8">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent leading-tight opacity-0 animate-fade-in-up">
+          <RevealHeading className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent leading-tight">
             Overview
-          </h2>
+          </RevealHeading>
           
           <div className="space-y-6 text-foreground/80 text-base leading-relaxed">
             <p className="opacity-0 animate-fade-in-up animation-delay-200">

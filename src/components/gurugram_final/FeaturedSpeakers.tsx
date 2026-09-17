@@ -1061,9 +1061,29 @@ const FeaturedSpeakers = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const autoScrollFrame = useRef<number | null>(null);
   const lastScrollTime = useRef<number | null>(null);
+  const sectionRef = useRef<HTMLElement>(null);
   const [activeEventIndex, setActiveEventIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
   const [isArrowMoving, setIsArrowMoving] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(section);
+        }
+      },
+      { threshold: 0.2 },
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
 
   const activeSpeakers = EVENTS[activeEventIndex].speakers;
   const loopSpeakers = [
@@ -1165,19 +1185,19 @@ const FeaturedSpeakers = () => {
   }, [activeEventIndex, activeSpeakers.length, isArrowMoving, isHovering]);
 
   return (
-    <section className="bg-white py-12 px-4 sm:py-16 sm:px-6 overflow-hidden">
+    <section ref={sectionRef} className="bg-white py-12 px-4 sm:py-16 sm:px-6 overflow-hidden">
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-[250px_1fr]">
           {/* Left column */}
           <div className="flex flex-col justify-center">
             <p className="text-red-600 font-semibold text-lg">Retrospective</p>
-            <h2 className="text-[#022158] 
+            <h2 className={`partners-reveal-up text-[#022158]
                   font-black
                   text-[34px]
                   sm:text-[48px]
                   md:text-[64px]
                   xl:text-[42px]
-                  leading-[0.94]">
+                  leading-[0.94] ${isVisible ? "is-visible" : ""}`}>
               Past
               <br />
               Speakers

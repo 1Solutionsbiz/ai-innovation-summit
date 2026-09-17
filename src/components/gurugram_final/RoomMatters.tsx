@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { Users, BrainCircuit, Workflow, Network, Factory } from "lucide-react";
 
 // ---------- Types ----------
@@ -55,19 +56,40 @@ const INDUSTRIES = [
 ];
 
 const RoomThatMatters = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(section);
+        }
+      },
+      { threshold: 0.2 },
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="relative overflow-hidden border-t-[5px] border-[#07163d] bg-[#f2f4ff] px-4 py-10 sm:px-8 sm:py-12 md:py-16 lg:px-12">
+    <section ref={sectionRef} className="relative overflow-hidden border-t-[5px] border-[#07163d] bg-[#f2f4ff] px-4 py-10 sm:px-8 sm:py-12 md:py-16 lg:px-12">
       {/* Top accent bar */}
       <div className="absolute left-0 right-0 top-0 h-1 bg-[#07163d]" />
 
       <div className="mx-auto max-w-[1700px] text-center">
-        <h2 className="text-[#06245d] 
+        <h2 className={`partners-reveal-up text-[#06245d]
                   font-black
                   text-[34px]
                   sm:text-[48px]
                   md:text-[64px]
                   xl:text-[42px]
-                  leading-[0.94]">
+                  leading-[0.94] ${isVisible ? "is-visible" : ""}`}>
           The Room That Matters
         </h2>
         <p className="mt-4 text-base font-normal text-[#171717] sm:mt-6 sm:text-xl md:text-1xl">

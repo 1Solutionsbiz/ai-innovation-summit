@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Target, Network, Zap, Eye, Scale, Radio } from "lucide-react";
+import RevealHeading from "@/components/ui/RevealHeading";
 
 const BeThePartner = () => {
   const benefits = [
@@ -65,9 +66,9 @@ const BeThePartner = () => {
     <section className="py-16 md:py-24 bg-gradient-to-br from-white via-gray-50 to-slate-100 text-white overflow-hidden">
       <div className="container mx-auto px-4">
         
-        <h2 className="text-4xl lh80px md:text-5xl lg:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
+        <RevealHeading className="text-4xl lh80px md:text-5xl lg:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
           Be the Partner Driving Tech Innovation
-        </h2>
+        </RevealHeading>
 
         <p className="text-slate-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-12 text-center">
           Stand Out, Seize the Spotlight and Drive Innovation Today and Tomorrow

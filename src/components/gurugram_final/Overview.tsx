@@ -1,18 +1,41 @@
+import { useEffect, useRef, useState } from "react";
+
 type OperatingModelProps = {
   showCta?: boolean;
 };
 
 const OperatingModel = ({ showCta = true }: OperatingModelProps) => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(section);
+        }
+      },
+      { threshold: 0.2 },
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="bg-white py-12 px-4 sm:py-20 sm:px-6" id="overview">
+    <section ref={sectionRef} className="bg-white py-12 px-4 sm:py-20 sm:px-6" id="overview">
       <div className="w-full max-w-[720px] lg:max-w-[80%] mx-auto text-center">
-        <h2 className="text-[#022158] 
+        <h2 className={`partners-reveal-up text-[#022158]
                   font-black
                   text-[34px]
                   sm:text-[48px]
                   md:text-[64px]
                   xl:text-[42px]
-                  leading-[0.94]">
+                  leading-[0.94] ${isVisible ? "is-visible" : ""}`}>
           AI is no longer an experimentation agenda. It is becoming an operating model.
         </h2>
 

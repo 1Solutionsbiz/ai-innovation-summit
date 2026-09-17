@@ -10,6 +10,7 @@ import {
   Zap,
   Building2,
 } from "lucide-react";
+import RevealHeading from "@/components/ui/RevealHeading";
 
 const IndustryRepresentation = () => {
   const industries = [
@@ -29,9 +30,9 @@ const IndustryRepresentation = () => {
     <section className="py-[150px] bg-gradient-to-br from-[#1A1C2E] via-[#3E2F8A] to-[#BF1C88] text-center relative overflow-hidden">
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         {/* Heading */}
-        <h2 className="text-3xl md:text-5xl font-bold text-white mb-16 drop-shadow-lg">
+        <RevealHeading className="text-3xl md:text-5xl font-bold text-white mb-16 drop-shadow-lg">
           Industry Representation
-        </h2>
+        </RevealHeading>
 
         {/* Icon Grid */}
         <div className="grid grid-cols-1 max-w-7xl mx-auto sm:grid-cols-2 lg:grid-cols-5 gap-10 text-center">

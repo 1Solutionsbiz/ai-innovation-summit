@@ -1,3 +1,5 @@
+import RevealHeading from "@/components/ui/RevealHeading";
+
 const FeaturedSpeakers = () => {
   // 🔥 Added your full Bengaluru speakers list
   const speakers = [
@@ -20,9 +22,9 @@ const FeaturedSpeakers = () => {
   return (
     <section id="speakers" className="py-16 md:py-24 bg-gradient-to-br from-white via-gray-50 to-slate-100">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl lh-1-4 font-bold text-center mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
+        <RevealHeading className="text-4xl md:text-5xl lg:text-6xl lh-1-4 font-bold text-center mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
           Visionary Speakers
-        </h2>
+        </RevealHeading>
         <br />
         
         

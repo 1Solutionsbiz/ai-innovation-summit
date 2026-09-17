@@ -1,5 +1,6 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef } from "react";
+import RevealHeading from "@/components/ui/RevealHeading";
 
 const LeadersReflect = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -104,9 +105,9 @@ const LeadersReflect = () => {
   return (
     <section className="py-16 md:py-24 bg-white overflow-hidden leders-reflect-section">
       <div className="container mx-auto px-4 mb-12">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
+        <RevealHeading className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
           Leaders Reflect
-        </h2>
+        </RevealHeading>
         <p className="text-slate-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-8 text-center">
           Perspectives from industry pioneers
         </p>

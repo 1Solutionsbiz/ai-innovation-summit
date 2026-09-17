@@ -1,4 +1,5 @@
 import { useState } from "react";
+import RevealHeading from "@/components/ui/RevealHeading";
 
 const WhatAwaits = () => {
   const whatswaits = "/delhi26/whatswaits.jpg"; // background image path
@@ -42,9 +43,9 @@ const WhatAwaits = () => {
       <div className="container mx-auto px-4 relative z-10">
         {/* Heading */}
         <div className="text-center mb-10 md:mb-16">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-3">
+          <RevealHeading className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-3">
             What Awaits You at the<br /> AI Innovation Summit
-          </h2>
+          </RevealHeading>
 
           <p className="text-white/90 text-lg md:text-2xl max-w-3xl mx-auto">
             Experience innovation, insights, and impact at India’s premier AI summit

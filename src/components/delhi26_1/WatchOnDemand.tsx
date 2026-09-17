@@ -1,6 +1,7 @@
 import { Play, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import RevealHeading from "@/components/ui/RevealHeading";
 
 const WatchOnDemand = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -58,9 +59,9 @@ const WatchOnDemand = () => {
   return (
     <section className="py-16 md:py-24 bg-gradient-to-b from-white to-slate-50 relative">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
+        <RevealHeading className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-slate-800 via-slate-700 to-slate-900 bg-clip-text text-transparent">
           Watch On-Demand Videos
-        </h2>
+        </RevealHeading>
 
         <p className="text-slate-600 text-lg md:text-xl max-w-3xl mx-auto mb-12 text-center">
           Catch the Summit Highlights Anytime

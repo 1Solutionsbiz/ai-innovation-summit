@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Plus, Minus } from "lucide-react";
+import RevealHeading from "@/components/ui/RevealHeading";
 
 const AgendaNew = () => {
   const higlitbanner = "/delhi26/highlight.png";
@@ -138,9 +139,9 @@ const AgendaNew = () => {
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-white">
+          <RevealHeading className="text-4xl md:text-5xl font-bold text-white">
             Agenda
-          </h2>
+          </RevealHeading>
         </div>
 
         <div className="max-w-7xl mx-auto divide-y divide-gray-200 backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-8">
