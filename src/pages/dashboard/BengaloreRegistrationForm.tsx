@@ -39,13 +39,13 @@ const fetchRegistrations = async (): Promise<BengaloreRegistration[]> => {
 
   try {
 
-    // const resp = await axios.get('https://olive-elk-842602.hostingersite.com/api/bangalore-registers', {
-    //   headers: { Authorization: `Bearer ${token}` },
-    // });
-    
-    const resp = await axios.get('http://127.0.0.1:8000/api/bangalore-registers', {
+    const resp = await axios.get('https://olive-elk-842602.hostingersite.com/api/bangalore-registers', {
       headers: { Authorization: `Bearer ${token}` },
     });
+    
+    // const resp = await axios.get('http://127.0.0.1:8000/api/bangalore-registers', {
+    //   headers: { Authorization: `Bearer ${token}` },
+    // });
     
     return resp.data.data || [];
   } catch (error) {

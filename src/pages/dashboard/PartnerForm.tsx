@@ -33,13 +33,13 @@ interface Partner {
 const fetchPartners = async (): Promise<Partner[]> => {
   const token = localStorage.getItem('token') || '';
 
-  // const resp = await axios.get('https://olive-elk-842602.hostingersite.com/api/partners', {
-  //   headers: { Authorization: `Bearer ${token}` },
-  // });
-  
-  const resp = await axios.get('http://127.0.0.1:8000/api/partners', {
+  const resp = await axios.get('https://olive-elk-842602.hostingersite.com/api/partners', {
     headers: { Authorization: `Bearer ${token}` },
   });
+  
+  // const resp = await axios.get('http://127.0.0.1:8000/api/partners', {
+  //   headers: { Authorization: `Bearer ${token}` },
+  // });
   
   return resp.data.data;
 };
