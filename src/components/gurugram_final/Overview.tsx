@@ -19,8 +19,7 @@ const OperatingModel = ({ showCta = true }: OperatingModelProps) => {
         <p className="mt-6 sm:mt-8 text-blue-950/80 text-[15px] sm:text-base md:text-lg leading-relaxed">
           AI Innovation Summit brings together the technology leaders responsible for making that transition happen inside large enterprises: CIOs, CTOs, CDOs, CISOs, AI leaders and transformation heads.
         </p>
-
-        <p className="mt-5 mb-0 sm:mt-6 sm:mb-8 text-blue-950/80 text-[15px] sm:text-base md:text-lg leading-relaxed">
+        <p className="mb-0 sm:mb-8 text-blue-950/80 text-[15px] sm:text-base md:text-lg leading-relaxed">
           Across one day, the conversation moves beyond AI demos and pilots to the harder questions of deployment, governance, security, infrastructure, organisational readiness and enterprise-scale execution.
         </p>
 

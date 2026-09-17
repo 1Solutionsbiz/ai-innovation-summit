@@ -43,7 +43,7 @@ const HeroBanner = () => {
       <video
         ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover"
-        src="/videos/Promo-21-August.mp4"
+        src="/videos/delhi-gurugram-26.mp4"
         autoPlay
         loop
         muted
