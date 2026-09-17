@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { getScrollDirection } from "@/hooks/useScrollDirection";
 
 // Add / remove / rename logos freely here.
 // "src" is the image path, "alt" is the accessible name for that logo.
@@ -47,6 +48,7 @@ const SCROLL_DURATION_SECONDS = 50;
 const Sponsors = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [sectionVisible, setSectionVisible] = useState(false);
+  const [revealDirection, setRevealDirection] = useState<"up" | "down">("down");
   const scrollingLogos = [...placeholderLogos, ...placeholderLogos];
 
   useEffect(() => {
@@ -56,6 +58,7 @@ const Sponsors = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          setRevealDirection(getScrollDirection());
           setSectionVisible(false);
           requestAnimationFrame(() => {
             requestAnimationFrame(() => setSectionVisible(true));
@@ -71,6 +74,9 @@ const Sponsors = () => {
     return () => observer.disconnect();
   }, []);
 
+  const upDelay = (order: number, total: number) =>
+    `${(revealDirection === "up" ? total - 1 - order : order) * 220}ms`;
+
   return (
     <section
       ref={sectionRef}
@@ -79,26 +85,29 @@ const Sponsors = () => {
     >
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 text-center">
         <p
-          className={`glimpse-reveal-up glimpse-delay-0 font-extrabold text-[20px] text-[#e92630] mb-2 ${sectionVisible ? "is-visible" : ""}`}
+          className={`glimpse-reveal-up font-extrabold text-[20px] text-[#e92630] mb-2 ${sectionVisible ? "is-visible" : ""}`}
+          style={{ animationDelay: upDelay(0, 3) }}
         >
           7 Editions. Trusted by the Best.
         </p>
         <h2
-          className={`glimpse-reveal-up glimpse-delay-1 text-[#022158]
-                  text-[#022158] 
+          className={`glimpse-reveal-up text-[#022158]
+                  text-[#022158]
                   font-black
                   text-[34px]
                   sm:text-[48px]
                   md:text-[64px]
                   xl:text-[42px]
                   leading-[0.94] ${sectionVisible ? "is-visible" : ""}`}
+          style={{ animationDelay: upDelay(1, 3) }}
         >
           A Glimpse of the Participating Enterprises
         </h2>
       </div>
 
       <div
-        className={`mt-10 sm:mt-16 overflow-hidden glimpse-reveal-up glimpse-delay-2 ${sectionVisible ? "is-visible" : ""}`}
+        className={`mt-10 sm:mt-16 overflow-hidden glimpse-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+        style={{ animationDelay: upDelay(2, 3) }}
       >
         <div
           className="sponsor-auto-scroll gap-10 sm:gap-16 md:gap-24 px-4 sm:px-8"

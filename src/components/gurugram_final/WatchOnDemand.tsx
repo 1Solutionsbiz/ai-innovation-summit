@@ -3,6 +3,7 @@
 import { Play } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { watchVideos as videos, type VideoItem } from "../../data/watchVideos";
+import { getScrollDirection } from "@/hooks/useScrollDirection";
 
 const getYoutubeThumbnail = (link: string) => {
   const videoId = link.match(/(?:youtu\.be\/|youtube\.com\/watch\?v=)([^?&/]+)/)?.[1];
@@ -18,6 +19,7 @@ const buildWatchHref = (item: VideoItem) => {
 const OnDemandSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [sectionVisible, setSectionVisible] = useState(false);
+  const [revealDirection, setRevealDirection] = useState<"up" | "down">("down");
   const [featured, ...rest] = videos;
   const gridItems = rest.slice(0, 4);
 
@@ -28,6 +30,7 @@ const OnDemandSection = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          setRevealDirection(getScrollDirection());
           setSectionVisible(false);
           requestAnimationFrame(() => {
             requestAnimationFrame(() => setSectionVisible(true));
@@ -43,6 +46,9 @@ const OnDemandSection = () => {
     return () => observer.disconnect();
   }, []);
 
+  const upDelay = (order: number, total: number) =>
+    `${(revealDirection === "up" ? total - 1 - order : order) * 200}ms`;
+
   return (
     <section
       ref={sectionRef}
@@ -55,30 +61,31 @@ const OnDemandSection = () => {
           ================================================= */}
           <div className="lg:w-[30%] flex-shrink-0">
             <p
-              className={`ondemand-reveal-up ondemand-delay-0 text-[#EF3340] text-[18px] mb-3 ${sectionVisible ? "is-visible" : ""}`}
+              className={`ondemand-reveal-up text-[#EF3340] text-[18px] mb-3 ${sectionVisible ? "is-visible" : ""}`}
+              style={{ animationDelay: upDelay(0, 4) }}
             >
               On-Demand Content
             </p>
 
             <h2 className="
-                text-white 
+                text-white
                 font-black
                 text-[34px]
                 sm:text-[48px]
                 md:text-[64px]
                 xl:text-[42px]
                 leading-[0.94]">
-              <span className={`ondemand-line ondemand-reveal-up ondemand-delay-1 ${sectionVisible ? "is-visible" : ""}`}>
+              <span className={`ondemand-line ondemand-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(1, 4) }}>
                 Ideas That
               </span>
-              <span className={`ondemand-line ondemand-reveal-up ondemand-delay-2 ${sectionVisible ? "is-visible" : ""}`}>
+              <span className={`ondemand-line ondemand-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(2, 4) }}>
                 Inspire. On Your Schedule.
               </span>
             </h2>
 
             <a
               href={buildWatchHref(featured)}
-              className={`ondemand-reveal-up ondemand-delay-3
+              className={`ondemand-reveal-up
                 mt-4
                 sm:mt-5
                 inline-block
@@ -87,6 +94,7 @@ const OnDemandSection = () => {
                 rounded-full
                 btn-bg
                 ${sectionVisible ? "is-visible" : ""}`}
+              style={{ animationDelay: upDelay(3, 4) }}
             >
               Explore More
             </a>

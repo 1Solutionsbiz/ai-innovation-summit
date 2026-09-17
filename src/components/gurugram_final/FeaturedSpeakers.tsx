@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { getScrollDirection } from "@/hooks/useScrollDirection";
 
 // ---------- Types ----------
 type Speaker = {
@@ -1066,6 +1067,7 @@ const FeaturedSpeakers = () => {
   const [isHovering, setIsHovering] = useState(false);
   const [isArrowMoving, setIsArrowMoving] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [revealDirection, setRevealDirection] = useState<"up" | "down">("down");
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -1074,8 +1076,13 @@ const FeaturedSpeakers = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(section);
+          setRevealDirection(getScrollDirection());
+          setIsVisible(false);
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => setIsVisible(true));
+          });
+        } else {
+          setIsVisible(false);
         }
       },
       { threshold: 0.2 },
@@ -1084,6 +1091,9 @@ const FeaturedSpeakers = () => {
     observer.observe(section);
     return () => observer.disconnect();
   }, []);
+
+  const upDelay = (order: number, total: number) =>
+    `${(revealDirection === "up" ? total - 1 - order : order) * 160}ms`;
 
   const activeSpeakers = EVENTS[activeEventIndex].speakers;
   const loopSpeakers = [
@@ -1190,14 +1200,22 @@ const FeaturedSpeakers = () => {
         <div className="grid grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-[250px_1fr]">
           {/* Left column */}
           <div className="flex flex-col justify-center">
-            <p className="text-red-600 font-semibold text-lg">Retrospective</p>
-            <h2 className={`partners-reveal-up text-[#022158]
+            <p
+              className={`partners-reveal-up text-red-600 font-semibold text-lg ${isVisible ? "is-visible" : ""}`}
+              style={{ animationDelay: upDelay(0, 2) }}
+            >
+              Retrospective
+            </p>
+            <h2
+              className={`partners-reveal-up text-[#022158]
                   font-black
                   text-[34px]
                   sm:text-[48px]
                   md:text-[64px]
                   xl:text-[42px]
-                  leading-[0.94] ${isVisible ? "is-visible" : ""}`}>
+                  leading-[0.94] ${isVisible ? "is-visible" : ""}`}
+              style={{ animationDelay: upDelay(1, 2) }}
+            >
               Past
               <br />
               Speakers

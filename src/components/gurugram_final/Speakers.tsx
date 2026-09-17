@@ -5,6 +5,7 @@ import {
   X,
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import { getScrollDirection } from "@/hooks/useScrollDirection";
 
 const speakers = [
   {
@@ -59,6 +60,9 @@ const FeaturedSpeakers = () => {
   const [sectionVisible, setSectionVisible] =
     useState(false);
 
+  const [revealDirection, setRevealDirection] =
+    useState<"up" | "down">("down");
+
   const [isHovering, setIsHovering] =
     useState(false);
 
@@ -92,6 +96,7 @@ const FeaturedSpeakers = () => {
           /*
            * Start animation
            */
+          setRevealDirection(getScrollDirection());
           setSectionVisible(false);
 
           requestAnimationFrame(() => {
@@ -362,6 +367,7 @@ const FeaturedSpeakers = () => {
                   ease-[cubic-bezier(0.16,1,0.3,1)]
                   ${sectionVisible ? "opacity-100 translate-y-0" : ""}
                 `}
+                style={{ transitionDelay: `${(revealDirection === "up" ? 3 : 0) * 130}ms` }}
               >
                 AIIS 2026 Speakers
               </p>
@@ -378,12 +384,14 @@ const FeaturedSpeakers = () => {
                 "
               >
                 <span
-                  className={`block opacity-0 translate-y-8 transition-all duration-[1400ms] delay-100 ease-[cubic-bezier(0.16,1,0.3,1)] ${sectionVisible ? "opacity-100 translate-y-0" : ""}`}
+                  className={`block opacity-0 translate-y-8 transition-all duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${sectionVisible ? "opacity-100 translate-y-0" : ""}`}
+                  style={{ transitionDelay: `${(revealDirection === "up" ? 2 : 1) * 130}ms` }}
                 >
                   Voices Leading
                 </span>
                 <span
-                  className={`block opacity-0 translate-y-8 transition-all duration-[1400ms] delay-200 ease-[cubic-bezier(0.16,1,0.3,1)] ${sectionVisible ? "opacity-100 translate-y-0" : ""}`}
+                  className={`block opacity-0 translate-y-8 transition-all duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${sectionVisible ? "opacity-100 translate-y-0" : ""}`}
+                  style={{ transitionDelay: `${(revealDirection === "up" ? 1 : 2) * 130}ms` }}
                 >
                   India&apos;s AI Future
                 </span>
@@ -392,7 +400,8 @@ const FeaturedSpeakers = () => {
 
               <a href="delhi-gurugram_edition-26-speakers"
                 type="button"
-                className={`view-all-speakers`}
+                className={`view-all-speakers opacity-0 translate-y-8 transition-all duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${sectionVisible ? "opacity-100 translate-y-0" : ""}`}
+                style={{ transitionDelay: `${(revealDirection === "up" ? 0 : 3) * 130}ms` }}
               >
                 View all speakers
               </a>

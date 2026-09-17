@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Pause, Play, X } from "lucide-react";
 import OperatingModel from "./OperatingModel";
+import { getScrollDirection } from "@/hooks/useScrollDirection";
 
 const cards = [
   {
@@ -39,6 +40,7 @@ const InnovationSection = () => {
   const [isPlaying, setIsPlaying] = useState(true);
   const [sectionVisible, setSectionVisible] = useState(false);
   const [isOperatingModelOpen, setIsOperatingModelOpen] = useState(false);
+  const [revealDirection, setRevealDirection] = useState<"up" | "down">("down");
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -47,6 +49,7 @@ const InnovationSection = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          setRevealDirection(getScrollDirection());
           setSectionVisible(false);
           requestAnimationFrame(() => {
             requestAnimationFrame(() => setSectionVisible(true));
@@ -61,6 +64,14 @@ const InnovationSection = () => {
     observer.observe(section);
     return () => observer.disconnect();
   }, []);
+
+  const textDelay = (order: number, total: number) =>
+    `${(revealDirection === "up" ? total - 1 - order : order) * 220}ms`;
+
+  const cardDelayMap: Record<string, number> =
+    revealDirection === "up"
+      ? { live: 150, video: 300, network: 450, ideas: 550, audience: 600 }
+      : { audience: 150, ideas: 300, network: 450, video: 550, live: 600 };
 
   const togglePlay = () => {
     const video = videoRef.current;
@@ -87,32 +98,43 @@ const InnovationSection = () => {
           ================================================= */}
           <div className="lg:w-[33%] flex-shrink-0 lg:pl-2">
             <p
-              className={`innovation-reveal-up innovation-delay-0 text-[#EF3340] text-[16px] md:text-[18px] font-bold uppercase tracking-wide mb-3 ${sectionVisible ? "is-visible" : ""}`}
+              className={`innovation-reveal-up text-[#EF3340] text-[16px] md:text-[18px] font-bold uppercase tracking-wide mb-3 ${sectionVisible ? "is-visible" : ""}`}
+              style={{ animationDelay: textDelay(0, 5) }}
             >
               Innovation Everywhere
             </p>
 
-            <h2 className="text-[#022158] 
+            <h2 className="text-[#022158]
                   font-black
                   text-[34px]
                   sm:text-[48px]
                   md:text-[64px]
                   xl:text-[42px]">
-              <span className={`innovation-line innovation-reveal-up innovation-delay-1 ${sectionVisible ? "is-visible" : ""}`}>
+              <span
+                className={`innovation-line innovation-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+                style={{ animationDelay: textDelay(1, 5) }}
+              >
                 More Than
               </span>
-              <span className={`innovation-line innovation-reveal-up innovation-delay-2 ${sectionVisible ? "is-visible" : ""}`}>
+              <span
+                className={`innovation-line innovation-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+                style={{ animationDelay: textDelay(2, 5) }}
+              >
                 A Conference.
               </span>
-              <span className={`innovation-line innovation-reveal-up innovation-delay-3 ${sectionVisible ? "is-visible" : ""}`}>
+              <span
+                className={`innovation-line innovation-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+                style={{ animationDelay: textDelay(3, 5) }}
+              >
                 An Experience.
               </span>
             </h2>
-            
+
             <button
               type="button"
               onClick={() => setIsOperatingModelOpen(true)}
-              className={`innovation-know-more mt-5 innovation-reveal-up innovation-delay-4 ${sectionVisible ? "is-visible" : ""}`}
+              className={`innovation-know-more mt-5 innovation-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+              style={{ animationDelay: textDelay(4, 5) }}
             >
               Know More
             </button>
@@ -137,6 +159,7 @@ const InnovationSection = () => {
                       overflow-hidden
                       group
                     `}
+                    style={{ animationDelay: `${cardDelayMap[card.key]}ms` }}
                   >
                     <img
                       src={card.image}
@@ -174,7 +197,10 @@ const InnovationSection = () => {
                     </div>
                   </div>
                 ))}
-                <div className={`innovation-card innovation-grid-video innovation-card-reveal innovation-card-video ${sectionVisible ? "is-visible" : ""}`}>
+                <div
+                  className={`innovation-card innovation-grid-video innovation-card-reveal innovation-card-video ${sectionVisible ? "is-visible" : ""}`}
+                  style={{ animationDelay: `${cardDelayMap.video}ms` }}
+                >
                   <video ref={videoRef} className="absolute inset-0 w-full h-full object-cover" src="videos/innovation_gurugram_26.mp4" autoPlay muted loop playsInline />
                   <div className="absolute inset-0 bg-black/35" />
                   <button onClick={togglePlay} aria-label={isPlaying ? "Pause video" : "Play video"} className="absolute inset-0 m-auto z-20 w-12 h-12 rounded-full bg-white/20 border border-white/70 flex items-center justify-center text-white transition-transform duration-300 hover:scale-110">

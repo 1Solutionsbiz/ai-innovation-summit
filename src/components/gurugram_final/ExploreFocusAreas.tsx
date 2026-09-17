@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { getScrollDirection } from "@/hooks/useScrollDirection";
 
 const focusAreas = [
   {
@@ -49,6 +50,7 @@ const FocusAreasSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
 
   const [isVisible, setIsVisible] = useState(false);
+  const [revealDirection, setRevealDirection] = useState<"up" | "down">("down");
 
   /* =====================================================
      INTERSECTION OBSERVER
@@ -65,6 +67,7 @@ const FocusAreasSection = () => {
           /*
            * Reset animation
            */
+          setRevealDirection(getScrollDirection());
           setIsVisible(false);
 
           /*
@@ -94,6 +97,9 @@ const FocusAreasSection = () => {
     };
   }, []);
 
+  const tileDelay = (order: number) =>
+    `${(revealDirection === "up" ? 5 - order : order) * 150}ms`;
+
   return (
     <section
       ref={sectionRef}
@@ -119,7 +125,7 @@ const FocusAreasSection = () => {
         ===================================================== */}
 
         <div
-          className={`
+          className="
             relative
             z-20
 
@@ -141,17 +147,7 @@ const FocusAreasSection = () => {
             py-12
             sm:py-16
             lg:py-20
-
-            transition-all
-            duration-[1600ms]
-            ease-[cubic-bezier(0.16,1,0.3,1)]
-
-            ${
-              isVisible
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-20"
-            }
-          `}
+          "
         >
 
           <div className="max-w-[430px]">
@@ -159,7 +155,7 @@ const FocusAreasSection = () => {
             {/* Small Heading */}
 
             <p
-              className="
+              className={`
                 text-[#EF3340]
 
                 text-lg
@@ -168,7 +164,16 @@ const FocusAreasSection = () => {
                 font-bold
 
                 mb-4
-              "
+
+                opacity-0
+                translate-y-8
+                transition-all
+                duration-[1400ms]
+                ease-[cubic-bezier(0.16,1,0.3,1)]
+
+                ${isVisible ? "opacity-100 translate-y-0" : ""}
+              `}
+              style={{ transitionDelay: `${(revealDirection === "up" ? 3 : 0) * 150}ms` }}
             >
               Discover what's possible
             </p>
@@ -177,15 +182,24 @@ const FocusAreasSection = () => {
             {/* Main Heading */}
 
             <h2
-              className="
-                text-white 
+              className={`
+                text-white
                 font-black
                 text-[34px]
                 sm:text-[48px]
                 md:text-[64px]
                 xl:text-[42px]
                 leading-[0.94]
-              "
+
+                opacity-0
+                translate-y-8
+                transition-all
+                duration-[1400ms]
+                ease-[cubic-bezier(0.16,1,0.3,1)]
+
+                ${isVisible ? "opacity-100 translate-y-0" : ""}
+              `}
+              style={{ transitionDelay: `${(revealDirection === "up" ? 2 : 1) * 150}ms` }}
             >
               Explore
               <br />
@@ -196,7 +210,7 @@ const FocusAreasSection = () => {
             {/* Description */}
 
             <p
-              className="
+              className={`
                 mt-6
                 mb-8
                 text-white/90
@@ -208,7 +222,16 @@ const FocusAreasSection = () => {
                 leading-[1.45]
 
                 max-w-[400px]
-              "
+
+                opacity-0
+                translate-y-8
+                transition-all
+                duration-[1400ms]
+                ease-[cubic-bezier(0.16,1,0.3,1)]
+
+                ${isVisible ? "opacity-100 translate-y-0" : ""}
+              `}
+              style={{ transitionDelay: `${(revealDirection === "up" ? 1 : 2) * 150}ms` }}
             >
               Deep-dive into the themes shaping enterprise AI adoption across India.
             </p>
@@ -218,12 +241,23 @@ const FocusAreasSection = () => {
 
             <a
               href="delhi-gurugram_edition-26-agenda"
-              className="
+              className={`
                 btn-bg-w
                 px-7
                 py-3.5
                 rounded-full
-              "
+
+                inline-block
+
+                opacity-0
+                translate-y-8
+                transition-all
+                duration-[1400ms]
+                ease-[cubic-bezier(0.16,1,0.3,1)]
+
+                ${isVisible ? "opacity-100 translate-y-0" : ""}
+              `}
+              style={{ transitionDelay: `${(revealDirection === "up" ? 0 : 3) * 150}ms` }}
             >
                 View Full Agenda
             </a>
@@ -266,7 +300,7 @@ const FocusAreasSection = () => {
               }
             `}
             style={{
-              transitionDelay: "250ms",
+              transitionDelay: tileDelay(0),
             }}
           >
 
@@ -318,7 +352,7 @@ const FocusAreasSection = () => {
               }
             `}
             style={{
-              transitionDelay: "400ms",
+              transitionDelay: tileDelay(1),
             }}
           >
 
@@ -346,7 +380,7 @@ const FocusAreasSection = () => {
               }
             `}
             style={{
-              transitionDelay: "550ms",
+              transitionDelay: tileDelay(2),
             }}
           >
 
@@ -400,7 +434,7 @@ const FocusAreasSection = () => {
               }
             `}
             style={{
-              transitionDelay: "700ms",
+              transitionDelay: tileDelay(3),
             }}
           >
 
@@ -428,7 +462,7 @@ const FocusAreasSection = () => {
               }
             `}
             style={{
-              transitionDelay: "850ms",
+              transitionDelay: tileDelay(4),
             }}
           >
 
@@ -482,7 +516,7 @@ const FocusAreasSection = () => {
               }
             `}
             style={{
-              transitionDelay: "1000ms",
+              transitionDelay: tileDelay(5),
             }}
           >
 

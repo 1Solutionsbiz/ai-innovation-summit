@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
+import { getScrollDirection } from "@/hooks/useScrollDirection";
 
 const LeadersNumbers = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [sectionVisible, setSectionVisible] = useState(false);
+  const [revealDirection, setRevealDirection] = useState<"up" | "down">("down");
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -11,6 +13,7 @@ const LeadersNumbers = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          setRevealDirection(getScrollDirection());
           setSectionVisible(false);
           requestAnimationFrame(() => {
             requestAnimationFrame(() => setSectionVisible(true));
@@ -26,6 +29,9 @@ const LeadersNumbers = () => {
     return () => observer.disconnect();
   }, []);
 
+  const upDelay = (order: number, total: number) =>
+    `${(revealDirection === "up" ? total - 1 - order : order) * 200}ms`;
+
   return (
     <section ref={sectionRef} className="leaders-section-new">
       <div className="leaders-container-new">
@@ -35,6 +41,7 @@ const LeadersNumbers = () => {
 
           <span
             className={`leaders-label leaders-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+            style={{ animationDelay: upDelay(0, 5) }}
           >
             Reach
           </span>
@@ -46,20 +53,30 @@ const LeadersNumbers = () => {
                   md:text-[64px]
                   xl:text-[42px]
                   leading-[0.94]">
-            <span className={`leaders-line leaders-reveal-up leaders-delay-1 ${sectionVisible ? "is-visible" : ""}`}>
+            <span
+              className={`leaders-line leaders-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+              style={{ animationDelay: upDelay(1, 5) }}
+            >
               Most Influential
             </span>
-            <span className={`leaders-line leaders-reveal-up leaders-delay-2 ${sectionVisible ? "is-visible" : ""}`}>
+            <span
+              className={`leaders-line leaders-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+              style={{ animationDelay: upDelay(2, 5) }}
+            >
               Enterprise AI
             </span>
-            <span className={`leaders-line leaders-reveal-up leaders-delay-3 ${sectionVisible ? "is-visible" : ""}`}>
+            <span
+              className={`leaders-line leaders-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+              style={{ animationDelay: upDelay(3, 5) }}
+            >
               Leaders
             </span>
           </h2>
 
           <a
             href="#become-partner"
-            className={`leaders-btn btn-bg leaders-reveal-up leaders-delay-4 ${sectionVisible ? "is-visible" : ""}`}
+            className={`leaders-btn btn-bg leaders-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+            style={{ animationDelay: upDelay(4, 5) }}
           >
             Register Now
           </a>
@@ -76,6 +93,7 @@ const LeadersNumbers = () => {
 
           <p
             className={`leaders-description leaders-reveal-down ${sectionVisible ? "is-visible" : ""}`}
+            style={{ animationDelay: upDelay(0, 3) }}
           >
             AI Innovation Summit brings together the decision-makers
             and change-makers shaping the future of enterprise AI
@@ -87,13 +105,15 @@ const LeadersNumbers = () => {
           <div className="leaders-stat">
 
             <div
-              className={`leaders-number leaders-reveal-down leaders-delay-1 ${sectionVisible ? "is-visible" : ""}`}
+              className={`leaders-number leaders-reveal-down ${sectionVisible ? "is-visible" : ""}`}
+              style={{ animationDelay: upDelay(1, 3) }}
             >
               700+
             </div>
 
             <div
-              className={`leaders-stat-text leaders-reveal-down leaders-delay-2 ${sectionVisible ? "is-visible" : ""}`}
+              className={`leaders-stat-text leaders-reveal-down ${sectionVisible ? "is-visible" : ""}`}
+              style={{ animationDelay: upDelay(2, 3) }}
             >
               CXOs &amp; Senior Business &amp;
               <br />
