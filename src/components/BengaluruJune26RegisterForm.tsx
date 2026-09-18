@@ -250,8 +250,8 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
       <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(99,102,241,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.08)_1px,transparent_1px)] [background-size:42px_42px]" />
       <div className="relative mx-auto max-w-5xl overflow-hidden rounded-2xl border border-indigo-400/30 bg-slate-950/90 p-5 shadow-[0_0_80px_rgba(37,99,235,0.18)] sm:p-8 lg:p-12">
         <div className="mb-10 text-center">
-          <p className="mb-3 text-xs font-bold uppercase tracking-[0.35em] text-cyan-300">AI Innovation Summit | Delhi-NCR</p>
-          <h2 className="font-orbitron text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.35em] text-[#e92630]">AI Innovation Summit | Delhi-NCR</p>
+          <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
           Express Your Interest To Attend The Summit
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-slate-400">Join senior technology and business leaders shaping the next era of intelligent enterprise.</p>
@@ -465,7 +465,7 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
                 onChange={handleChange}
                 className="mt-1"
               />
-              <span>I have read & agree with <Link to="/terms-and-conditions" className="font-semibold text-cyan-300 hover:text-cyan-200">Terms & Conditions</Link> </span>
+              <span>I have read & agree with <Link to="/terms-and-conditions" className="font-semibold text-[#e92630] hover:text-[#e92630]">Terms & Conditions</Link> </span>
             </label>
             {errors.termsAccepted && <p className="mt-1 text-sm text-red-400">{errors.termsAccepted}</p>}
           </div>
@@ -508,7 +508,7 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
                 onChange={handleChange}
                 className="mt-1"
               />
-              <span>I consent to the collection and processing of my personal data by The Guild (Polygon Media Pvt. Ltd.) for the purpose of registering and communicating with me regarding this event. I have read and agree to the <Link to="/privacy-policy" className="font-semibold text-cyan-300 hover:text-cyan-200"> Privacy Policy</Link>.</span>
+              <span>I consent to the collection and processing of my personal data by The Guild (Polygon Media Pvt. Ltd.) for the purpose of registering and communicating with me regarding this event. I have read and agree to the <Link to="/privacy-policy" className="font-semibold text-[#e92630] hover:text-[#e92630]"> Privacy Policy</Link>.</span>
             </label>
           </div>
 
@@ -557,7 +557,7 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
             </button>
             <p className="mx-auto mt-4 max-w-3xl text-xs leading-5 text-slate-500">
               You can withdraw your consent at any time by contacting us at guildconferences@guildlive.com.
-              All data will be processed in accordance with The Guild's <Link to="/privacy-policy" className="text-cyan-300 hover:text-cyan-200"> Privacy Policy</Link>  and applicable data protection laws.
+              All data will be processed in accordance with The Guild's <Link to="/privacy-policy" className="text-[#e92630] hover:text-[#e92630]"> Privacy Policy</Link>  and applicable data protection laws.
             </p>
           </div>
         </form>

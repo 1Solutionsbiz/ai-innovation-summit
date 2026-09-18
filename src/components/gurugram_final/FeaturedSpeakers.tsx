@@ -1222,7 +1222,7 @@ const FeaturedSpeakers = () => {
             </h2>
             <a
               target="_blank"
-              href="delhi-gurugram_edition-26-speakers"
+              href="#"
               type="button"
               className="view-all-speakers mt-8 sm:mt-14"
             >
