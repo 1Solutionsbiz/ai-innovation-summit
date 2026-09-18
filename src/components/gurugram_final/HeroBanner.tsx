@@ -110,7 +110,7 @@ const HeroBanner = () => {
                 className={`inline-flex items-center rounded-full font-semibold px-5 py-2 md:px-7 md:py-3 text-sm md:text-base hover:scale-105 transition-transform duration-300 shadow-lg btn-bg partners-reveal-up ${isVisible ? "is-visible" : ""}`}
                 style={{ animationDelay: heroDelay(3, 5) }}
               >
-                Attend AIIS 2026
+                Register Interest
               </a>
               <a
                 href="#focus"
