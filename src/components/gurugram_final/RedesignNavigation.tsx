@@ -162,14 +162,6 @@ const RedesignNavigation = () => {
               </div>
             )}
           </div>
-
-          <a
-            href="#delhincrregistrationform"
-            onClick={() => setOpen(false)}
-            className="redesign-register-btn w-full"
-          >
-            Register Now
-          </a>
         </div>
       )}
     </header>
