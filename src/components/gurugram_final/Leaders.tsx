@@ -92,7 +92,7 @@ const LeadersNumbers = () => {
         <div className="leaders-right">
 
           <p
-            className={`leaders-description partners-reveal-down ${sectionVisible ? "is-visible" : ""}`}
+            className={`leaders-description partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
             style={{ animationDelay: upDelay(0, 3) }}
           >
             AI Innovation Summit brings together the decision-makers
@@ -105,14 +105,14 @@ const LeadersNumbers = () => {
           <div className="leaders-stat">
 
             <div
-              className={`leaders-number partners-reveal-down ${sectionVisible ? "is-visible" : ""}`}
+              className={`leaders-number partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
               style={{ animationDelay: upDelay(1, 3) }}
             >
               700+
             </div>
 
             <div
-              className={`leaders-stat-text partners-reveal-down ${sectionVisible ? "is-visible" : ""}`}
+              className={`leaders-stat-text partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
               style={{ animationDelay: upDelay(2, 3) }}
             >
               CXOs &amp; Senior Business &amp;
