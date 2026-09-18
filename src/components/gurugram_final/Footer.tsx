@@ -96,16 +96,16 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col items-center justify-between gap-4 border-t border-white/80 bg-[#141414] px-6 py-4 text-white md:flex-row md:px-10 xl:px-14">
-          <p className="text-sm font-medium sm:text-base">© Copyright 2026, The Guild</p>
+          <p className="text-[12px] font-medium sm:text-[12px]">© Copyright 2026, The Guild</p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 text-sm font-medium sm:gap-6 sm:text-base">
-            <a href="#privacy" className="text-white transition-colors hover:text-[#d909b7]">
+          <div className="flex flex-wrap items-center justify-center gap-4 text-[12px] font-medium sm:gap-6 sm:text-[12px]">
+            <a href="/privacy-policy" className="text-white transition-colors hover:text-[#d909b7]">
               Privacy Policy
             </a>
-            <a href="#terms" className="text-white transition-colors hover:text-[#d909b7]">
+            <a href="/terms-and-conditions" className="text-white transition-colors hover:text-[#d909b7]">
               Terms &amp; Conditions
             </a>
-            <a href="#conduct" className="text-white transition-colors hover:text-[#d909b7]">
+            <a href="/code-of-conduct" className="text-white transition-colors hover:text-[#d909b7]">
               Code of Conduct
             </a>
           </div>
