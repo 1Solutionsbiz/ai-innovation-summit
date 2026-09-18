@@ -110,7 +110,8 @@ const PartnersSection = () => {
           </p>
 
           <a
-            href="#become-partner"
+            href="partner-form"
+            target="_blank"
             className={`partners-btn partners-reveal-up inline-block ${sectionVisible ? "is-visible" : ""}`}
             style={{ animationDelay: delayFor(5, 6) }}
           >

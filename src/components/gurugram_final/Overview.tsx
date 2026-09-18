@@ -42,21 +42,35 @@ const OperatingModel = ({ showCta = true }: OperatingModelProps) => {
   return (
     <section ref={sectionRef} className="bg-white py-12 px-4 sm:py-20 sm:px-6" id="overview">
       <div className="w-full max-w-[720px] lg:max-w-[80%] mx-auto text-center">
-        <h2
+        <h2 className="text-[#022158]
+                font-black
+                text-[34px]
+                sm:text-[48px]
+                md:text-[54px]
+                xl:text-[42px]
+                leading-[0.94]">
+            <span className={`inline-block partners-reveal-up ${isVisible ? "is-visible" : ""}`}>
+              Overview
+            </span>
+          </h2>
+
+
+        <h3
           className={`partners-reveal-up text-[#022158]
                   font-black
-                  text-[34px]
-                  sm:text-[48px]
-                  md:text-[64px]
-                  xl:text-[42px]
+                  mt-5
+                  text-[17px]
+                  sm:text-[28px]
+                  md:text-[34px]
+                  xl:text-[22px]
                   leading-[0.94] ${isVisible ? "is-visible" : ""}`}
           style={{ animationDelay: delayFor(0) }}
         >
           AI is no longer an experimentation agenda. It is becoming an operating model.
-        </h2>
+        </h3>
 
         <p
-          className={`partners-reveal-up mt-6 sm:mt-8 text-blue-950/80 text-[15px] sm:text-base md:text-lg leading-relaxed ${isVisible ? "is-visible" : ""}`}
+          className={`partners-reveal-up mt-4 sm:mt-3 text-blue-950/80 text-[15px] sm:text-base md:text-lg leading-relaxed ${isVisible ? "is-visible" : ""}`}
           style={{ animationDelay: delayFor(1) }}
         >
           AI Innovation Summit brings together the technology leaders responsible for making that transition happen inside large enterprises: CIOs, CTOs, CDOs, CISOs, AI leaders and transformation heads.

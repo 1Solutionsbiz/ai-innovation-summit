@@ -1,6 +1,10 @@
-import { Header } from "@/components/Header";
+// import { Header } from "@/components/Header";
 
-import { Footer } from "@/components/Footer";
+import Header from "@/components/gurugram_final/RedesignNavigation";
+
+import Footer from "@/components/gurugram_final/Footer";
+
+// import { Footer } from "@/components/Footer";
 
 
 import { useEffect } from "react";

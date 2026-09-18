@@ -12,7 +12,8 @@ const Dashboard: React.FC = () => (
       <Route index element={<Navigate to="partner-form" replace />} />
       <Route path="partner-form" element={<PartnerForm/>} />
       <Route path="registration-form" element={<RegistrationForm />} />
-      <Route path="bengaluru-registration-form" element={<BengaloreRegistrationForm />} />
+      {/* <Route path="bengaluru-registration-form" element={<BengaloreRegistrationForm />} /> */}
+      <Route path="delhincr-registration-form" element={<BengaloreRegistrationForm />} />
       {/* <Route path="delhi-registration-form" element={<BengaloreRegistrationForm />} /> */}
       {/* <Route path="delhi1-registration-form" element={<DelhhiRegistrationForm />} /> */}
     </Route>
