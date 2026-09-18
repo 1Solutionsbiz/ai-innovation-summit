@@ -1220,12 +1220,13 @@ const FeaturedSpeakers = () => {
               <br />
               Speakers
             </h2>
-            <button
+            <a
+              href="delhi-gurugram_edition-26-speakers"
               type="button"
               className="view-all-speakers mt-8 sm:mt-14"
             >
               View all speakers
-            </button>
+            </a>
           </div>
 
           {/* Right column */}

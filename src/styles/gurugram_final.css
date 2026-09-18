@@ -1367,6 +1367,8 @@
   background:
     linear-gradient(#000, #000) padding-box,
     linear-gradient(90deg, #8B5CF6 0%, #FF5F6D 100%) border-box;
+  display: flex;
+  align-items: center;
 }
 
 .register-btn-guru-26:hover {

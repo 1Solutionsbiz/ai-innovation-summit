@@ -92,13 +92,13 @@ const HeroBanner = () => {
               className={`mt-10 mmt-10 flex flex-wrap items-center gap-5 opacity-0 translate-y-8 transition-all duration-700 delay-[400ms] ease-out ${isVisible ? "opacity-100 translate-y-0" : ""}`}
             >
               <a
-                href="#mumbairegistrationform"
+                href="#delhincrregistrationform"
                 className="inline-flex items-center rounded-full font-semibold px-5 py-2 md:px-7 md:py-3 text-sm md:text-base hover:scale-105 transition-transform duration-300 shadow-lg btn-bg"
               >
                 Attend AIIS 2026
               </a>
               <a
-                href="#mumbairegistrationform"
+                href="#delhincrregistrationform"
                 className="inline-flex items-center rounded-full font-semibold px-5 py-2 md:px-7 md:py-3 text-sm md:text-base hover:scale-105 transition-transform duration-300 shadow-lg btn-bg-hover"
               >
                 Explore More

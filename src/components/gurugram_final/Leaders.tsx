@@ -74,7 +74,7 @@ const LeadersNumbers = () => {
           </h2>
 
           <a
-            href="#become-partner"
+            href="#delhincrregistrationform"
             className={`leaders-btn btn-bg partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
             style={{ animationDelay: upDelay(4, 5) }}
           >
