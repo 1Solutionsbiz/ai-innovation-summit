@@ -551,7 +551,7 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
             <button
               type="submit"
               disabled={submitting}
-              className="register-btn min-w-44 py-3 text-sm font-bold uppercase tracking-widest transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
+              className="btn-bg register-btn min-w-44 py-3 text-sm font-bold uppercase tracking-widest transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
             >
               {submitting ? "Submitting..." : "Submit"}
             </button>

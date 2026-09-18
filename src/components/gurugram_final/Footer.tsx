@@ -43,7 +43,7 @@ const Footer = () => {
 
               <a
                 href="mailto:guildconferences@guildlive.com"
-                className="block text-[#ff3333] transition-colors hover:text-[#ff3333]"
+                className="block text-[#ff3333] transition-colors hover:text-[#d909b7]"
               >
                 guildconferences@guildlive.com
               </a>
@@ -62,14 +62,14 @@ const Footer = () => {
                     Email at{" "}
                     <a
                       href="mailto:nishant.batra@guildlive.com"
-                      className="text-[#ff3333] transition-colors hover:text-[#ff3333]"
+                      className="text-[#ff3333] transition-colors hover:text-[#d909b7]"
                     >
                       nishant.batra@guildlive.com
                     </a>{" "}
                     or{" "}
                     <a
                       href="mailto:lavi@guildlive.com"
-                      className="text-[#ff3333] transition-colors hover:text-[#ff3333]"
+                      className="text-[#ff3333] transition-colors hover:text-[#d909b7]"
                     >
                       lavi@guildlive.com
                     </a>
@@ -84,7 +84,7 @@ const Footer = () => {
                     Email at{" "}
                     <a
                       href="mailto:partnership@guildlive.com"
-                      className="text-[#ff3333] transition-colors hover:text-[#ff3333]"
+                      className="text-[#ff3333] transition-colors hover:text-[#d909b7]"
                     >
                       partnership@guildlive.com
                     </a>
@@ -99,13 +99,13 @@ const Footer = () => {
           <p className="text-sm font-medium sm:text-base">© Copyright 2026, The Guild</p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 text-sm font-medium sm:gap-6 sm:text-base">
-            <a href="#privacy" className="text-white transition-colors hover:text-[#ff3333]">
+            <a href="#privacy" className="text-white transition-colors hover:text-[#d909b7]">
               Privacy Policy
             </a>
-            <a href="#terms" className="text-white transition-colors hover:text-[#ff3333]">
+            <a href="#terms" className="text-white transition-colors hover:text-[#d909b7]">
               Terms &amp; Conditions
             </a>
-            <a href="#conduct" className="text-white transition-colors hover:text-[#ff3333]">
+            <a href="#conduct" className="text-white transition-colors hover:text-[#d909b7]">
               Code of Conduct
             </a>
           </div>
