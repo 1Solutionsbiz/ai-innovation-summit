@@ -156,7 +156,7 @@ const RedesignNavigation = () => {
                     href={edition.link}
                     onClick={() => setOpen(false)}
                   >
-                    {edition.name}
+                    - {edition.name}
                   </a>
                 ))}
               </div>
