@@ -8,46 +8,46 @@ import { useEffect, useRef, useState } from "react";
 import { getScrollDirection } from "@/hooks/useScrollDirection";
 
 const speakers = [
-  {
-    name: "Priya Nair",
-    role: "VP of Data & AI, Meridian Financial",
-    description:
-      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-    image: "gurugram/speakers/speaker_1.png",
-    linkedin: "https://www.linkedin.com/in/priyanair",
-  },
-  {
-    name: "Priya Nair",
-    role: "VP of Data & AI, Meridian Financial",
-    description:
-      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-    image: "gurugram/speakers/speaker_1.png",
-    linkedin: "https://www.linkedin.com/in/priyanair",
-  },
-  {
-    name: "Priya Nair",
-    role: "VP of Data & AI, Meridian Financial",
-    description:
-      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-    image: "gurugram/speakers/speaker_1.png",
-    linkedin: "https://www.linkedin.com/in/priyanair",
-  },
-  {
-    name: "Priya Nair",
-    role: "VP of Data & AI, Meridian Financial",
-    description:
-      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-    image: "gurugram/speakers/speaker_1.png",
-    linkedin: "https://www.linkedin.com/in/priyanair",
-  },
-  {
-    name: "Priya Nair",
-    role: "VP of Data & AI, Meridian Financial",
-    description:
-      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-    image: "gurugram/speakers/speaker_1.png",
-    linkedin: "https://www.linkedin.com/in/priyanair",
-  },
+  // {
+  //   name: "Priya Nair",
+  //   role: "VP of Data & AI, Meridian Financial",
+  //   description:
+  //     "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
+  //   image: "gurugram/speakers/speaker_1.png",
+  //   linkedin: "https://www.linkedin.com/in/priyanair",
+  // },
+  // {
+  //   name: "Priya Nair",
+  //   role: "VP of Data & AI, Meridian Financial",
+  //   description:
+  //     "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
+  //   image: "gurugram/speakers/speaker_1.png",
+  //   linkedin: "https://www.linkedin.com/in/priyanair",
+  // },
+  // {
+  //   name: "Priya Nair",
+  //   role: "VP of Data & AI, Meridian Financial",
+  //   description:
+  //     "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
+  //   image: "gurugram/speakers/speaker_1.png",
+  //   linkedin: "https://www.linkedin.com/in/priyanair",
+  // },
+  // {
+  //   name: "Priya Nair",
+  //   role: "VP of Data & AI, Meridian Financial",
+  //   description:
+  //     "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
+  //   image: "gurugram/speakers/speaker_1.png",
+  //   linkedin: "https://www.linkedin.com/in/priyanair",
+  // },
+  // {
+  //   name: "Priya Nair",
+  //   role: "VP of Data & AI, Meridian Financial",
+  //   description:
+  //     "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
+  //   image: "gurugram/speakers/speaker_1.png",
+  //   linkedin: "https://www.linkedin.com/in/priyanair",
+  // },
 ];
 
 const FeaturedSpeakers = () => {
@@ -538,6 +538,27 @@ const FeaturedSpeakers = () => {
               {/* =================================================
                   SPEAKER SCROLLER
               ================================================= */}
+
+
+<h2>
+              <p
+                className={`
+                  text-[24px]
+                  font-bold
+                  text-[#EF3340]
+                  mb-3
+                  partners-reveal-up
+                  ${sectionVisible ? "is-visible" : ""}
+                `}
+                style={{ animationDelay: `${(revealDirection === "up" ? 3 : 0) * 130}ms` }}
+              >
+                Speakers Coming Soon
+              </p>
+</h2>
+
+
+
+
 
               <div
                 ref={scrollerRef}
