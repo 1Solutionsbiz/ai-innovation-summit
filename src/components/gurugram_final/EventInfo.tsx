@@ -45,22 +45,22 @@ const EventInfo: React.FC = () => {
                   md:text-[64px]
                   xl:text-[42px]
                   leading-[0.94]">
-            <span className={`event-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(0, 5) }}>
+            <span className={`event-reveal-line partners-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(0, 5) }}>
               The Future is
             </span>
-            <span className={`event-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(1, 5) }}>
+            <span className={`event-reveal-line partners-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(1, 5) }}>
               Intelligent. India
             </span>
-            <span className={`event-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(2, 5) }}>
+            <span className={`event-reveal-line partners-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(2, 5) }}>
               is Ready.
             </span>
           </h2>
 
           <p className="event-info-subtext">
-            <span className={`event-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(3, 5) }}>
+            <span className={`event-reveal-line partners-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(3, 5) }}>
               Be part of the movement shaping
             </span>
-            <span className={`event-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(4, 5) }}>
+            <span className={`event-reveal-line partners-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(4, 5) }}>
               Enterprise AI tomorrow
             </span>
           </p>
@@ -69,10 +69,10 @@ const EventInfo: React.FC = () => {
         {/* RIGHT CONTENT */}
         <div className="event-info-right">
           <div className="event-info-meta">
-            <span className={`event-info-date event-reveal-down ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(0, 4) }}>
+            <span className={`event-info-date partners-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(0, 4) }}>
               December 2, 2026
             </span>
-            <span className={`event-info-venue event-reveal-down ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(1, 4) }}>
+            <span className={`event-info-venue partners-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(1, 4) }}>
               The Leela Ambience Gurugram, Delhi-NCR
             </span>
           </div>
@@ -80,14 +80,14 @@ const EventInfo: React.FC = () => {
           <div className="event-info-actions">
             <a
               href="#delhincrregistrationform"
-              className={`event-info-btn-primary btn-bg event-reveal-down ${sectionVisible ? "is-visible" : ""}`}
+              className={`event-info-btn-primary btn-bg partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
               style={{ animationDelay: upDelay(2, 4) }}
             >
               Attend AIIS 2026
             </a>
             <a
               href="#focus"
-              className={`event-info-btn-secondary btn-bg-hover event-reveal-down ${sectionVisible ? "is-visible" : ""}`}
+              className={`event-info-btn-secondary btn-bg-hover partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
               style={{ animationDelay: upDelay(3, 4) }}
             >
               Explore More
@@ -98,42 +98,15 @@ const EventInfo: React.FC = () => {
       </div>
 
       <style>{`
-        @keyframes eventFadeInUp {
-          from { opacity: 0; transform: translate3d(0, 38px, 0); }
-          to { opacity: 1; transform: translate3d(0, 0, 0); }
-        }
-
-        @keyframes eventFadeInDown {
-          from { opacity: 0; transform: translate3d(0, -30px, 0); }
-          to { opacity: 1; transform: translate3d(0, 0, 0); }
-        }
-
-        .event-reveal-up,
-        .event-reveal-down {
+        .event-reveal-line {
           display: block;
-          opacity: 0;
-          will-change: opacity, transform;
         }
 
-        .event-reveal-up.is-visible {
-          animation: eventFadeInUp 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-
-        .event-reveal-down.is-visible {
-          animation: eventFadeInDown 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-
-        .event-delay-1 { animation-delay: 220ms; }
-        .event-delay-2 { animation-delay: 440ms; }
-        .event-delay-3 { animation-delay: 660ms; }
-        .event-delay-4 { animation-delay: 880ms; }
-
-        @media (prefers-reduced-motion: reduce) {
-          .event-reveal-up.is-visible,
-          .event-reveal-down.is-visible {
-            animation-duration: 1ms;
-            animation-delay: 0ms;
-          }
+        .event-info-date,
+        .event-info-venue,
+        .event-info-btn-primary,
+        .event-info-btn-secondary {
+          display: inline-block;
         }
       `}</style>
     </section>

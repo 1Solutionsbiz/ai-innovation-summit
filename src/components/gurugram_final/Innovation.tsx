@@ -98,7 +98,7 @@ const InnovationSection = () => {
           ================================================= */}
           <div className="lg:w-[33%] flex-shrink-0 lg:pl-2">
             <p
-              className={`innovation-reveal-up text-[#EF3340] text-[16px] md:text-[18px] font-bold uppercase tracking-wide mb-3 ${sectionVisible ? "is-visible" : ""}`}
+              className={`partners-reveal-up text-[#EF3340] text-[16px] md:text-[18px] font-bold uppercase tracking-wide mb-3 ${sectionVisible ? "is-visible" : ""}`}
               style={{ animationDelay: textDelay(0, 5) }}
             >
               Innovation Everywhere
@@ -111,19 +111,19 @@ const InnovationSection = () => {
                   md:text-[64px]
                   xl:text-[42px]">
               <span
-                className={`innovation-line innovation-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+                className={`innovation-line partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
                 style={{ animationDelay: textDelay(1, 5) }}
               >
                 More Than
               </span>
               <span
-                className={`innovation-line innovation-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+                className={`innovation-line partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
                 style={{ animationDelay: textDelay(2, 5) }}
               >
                 A Conference.
               </span>
               <span
-                className={`innovation-line innovation-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+                className={`innovation-line partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
                 style={{ animationDelay: textDelay(3, 5) }}
               >
                 An Experience.
@@ -133,7 +133,7 @@ const InnovationSection = () => {
             <button
               type="button"
               onClick={() => setIsOperatingModelOpen(true)}
-              className={`innovation-know-more mt-5 innovation-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+              className={`innovation-know-more mt-5 partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
               style={{ animationDelay: textDelay(4, 5) }}
             >
               Know More
@@ -151,8 +151,7 @@ const InnovationSection = () => {
                     key={card.key}
                       className={`
                       ${card.className}
-                        innovation-card-reveal
-                        innovation-card-${card.key}
+                        partners-reveal-up
                         ${sectionVisible ? "is-visible" : ""}
 
                       rounded-[10px]
@@ -198,7 +197,7 @@ const InnovationSection = () => {
                   </div>
                 ))}
                 <div
-                  className={`innovation-card innovation-grid-video innovation-card-reveal innovation-card-video ${sectionVisible ? "is-visible" : ""}`}
+                  className={`innovation-card innovation-grid-video partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
                   style={{ animationDelay: `${cardDelayMap.video}ms` }}
                 >
                   <video ref={videoRef} className="absolute inset-0 w-full h-full object-cover" src="videos/innovation_gurugram_26.mp4" autoPlay muted loop playsInline />
@@ -229,21 +228,6 @@ const InnovationSection = () => {
       )}
 
       <style>{`
-        @keyframes innovationFadeInUp {
-          from { opacity: 0; transform: translate3d(0, 42px, 0); }
-          to { opacity: 1; transform: translate3d(0, 0, 0); }
-        }
-
-        @keyframes innovationCardsMerge {
-          to { opacity: 1; transform: translate3d(0, 0, 0) scale(1); }
-        }
-
-        .innovation-reveal-up,
-        .innovation-card-reveal {
-          opacity: 0;
-          will-change: opacity, transform;
-        }
-
         .innovation-line {
           display: block;
         }
@@ -300,32 +284,6 @@ const InnovationSection = () => {
           }
         }
 
-        .innovation-reveal-up.is-visible {
-          animation: innovationFadeInUp 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-
-        .innovation-card-reveal.is-visible {
-          animation: innovationCardsMerge 1.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-
-        .innovation-card-audience { transform: translate3d(90px, -55px, 0) scale(0.82); animation-delay: 150ms; }
-        .innovation-card-ideas { transform: translate3d(-70px, 70px, 0) scale(0.82); animation-delay: 300ms; }
-        .innovation-card-network { transform: translate3d(95px, 0, 0) scale(0.82); animation-delay: 450ms; }
-        .innovation-card-video { transform: translate3d(-70px, 70px, 0) scale(0.82); animation-delay: 550ms; }
-        .innovation-card-live { transform: translate3d(70px, 70px, 0) scale(0.82); animation-delay: 600ms; }
-
-        .innovation-delay-1 { animation-delay: 250ms; }
-        .innovation-delay-2 { animation-delay: 550ms; }
-        .innovation-delay-3 { animation-delay: 850ms; }
-        .innovation-delay-4 { animation-delay: 1150ms; }
-
-        @media (prefers-reduced-motion: reduce) {
-          .innovation-reveal-up.is-visible,
-          .innovation-card-reveal.is-visible {
-            animation-duration: 1ms;
-            animation-delay: 0ms;
-          }
-        }
       `}</style>
     </section>
   );
