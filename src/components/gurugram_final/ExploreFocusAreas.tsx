@@ -745,6 +745,7 @@ const FocusAreasSection = () => {
           position: absolute;
           z-index: 5;
           left: 18%;
+          right: 38%;
           top: 10%;
           color: white;
         }
@@ -752,12 +753,14 @@ const FocusAreasSection = () => {
 
         .focus-copy-right {
           left: 30%;
+          right: 4%;
           top: 10%;
         }
 
 
         .focus-copy-agentic {
           left: 25%;
+          right: 6%;
           top: 12%;
         }
 

@@ -533,8 +533,10 @@
 
 
 
-.ftrlogog26{
-  height: 20rem !important;
+@media (min-width: 1024px) {
+  .ftrlogog26{
+    height: 20rem !important;
+  }
 }
 
 
@@ -1481,7 +1483,9 @@
     font-size: 12px;
     height: 34px;
   }
+}
 
+@media (max-width: 1279px) {
   .redesign-nav-inner > div:last-child {
     min-width: 0;
     display: flex;
@@ -1505,7 +1509,10 @@
     font-size: 15px;
   }
 
-  .mobile-redesign-menu .redesign-register-btn {
+  .redesign-nav .mobile-redesign-menu .redesign-register-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     padding: 10px 16px;
   }

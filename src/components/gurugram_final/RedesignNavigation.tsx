@@ -55,7 +55,7 @@ const RedesignNavigation = () => {
             />
           </a>
 
-          <nav className="hidden md:flex items-center gap-4">
+          <nav className="hidden xl:flex items-center gap-4">
             {links.map((link) => (
               <a
                 key={link.label}
@@ -113,7 +113,7 @@ const RedesignNavigation = () => {
           <button
             type="button"
             aria-label={open ? "Close navigation menu" : "Open navigation menu"}
-            className={`mobile-menu-toggle md:hidden ${isScrolled ? "is-scrolled" : ""}`}
+            className={`mobile-menu-toggle xl:hidden ${isScrolled ? "is-scrolled" : ""}`}
             onClick={() => setOpen(!open)}
           >
             {open ? <X size={24} /> : <Menu size={24} />}
@@ -163,9 +163,13 @@ const RedesignNavigation = () => {
             )}
           </div>
 
-          <button className="redesign-register-btn w-full">
+          <a
+            href="#delhincrregistrationform"
+            onClick={() => setOpen(false)}
+            className="redesign-register-btn w-full"
+          >
             Register Now
-          </button>
+          </a>
         </div>
       )}
     </header>
