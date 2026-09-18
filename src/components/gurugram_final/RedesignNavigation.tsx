@@ -123,7 +123,7 @@ const RedesignNavigation = () => {
       </div>
 
       {open && (
-        <div className="mobile-redesign-menu mobile-redesign-menu-open">
+        <div className="mobile-redesign-menu mobile-redesign-menu-open gap-1">
           {links.map((link) => (
             <a
               key={link.label}
