@@ -281,7 +281,7 @@ const Highlights = () => {
                 md:text-[54px]
                 xl:text-[42px]
                 leading-[0.94]">
-            <span className={`partners-reveal-up ${isVisible ? "is-visible" : ""}`}>
+            <span className={`inline-block partners-reveal-up ${isVisible ? "is-visible" : ""}`}>
               The Journey So Far
             </span>
           </h2>

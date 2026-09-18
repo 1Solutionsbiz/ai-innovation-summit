@@ -40,7 +40,7 @@ const LeadersNumbers = () => {
         <div className="leaders-left">
 
           <span
-            className={`leaders-label leaders-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+            className={`leaders-label partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
             style={{ animationDelay: upDelay(0, 5) }}
           >
             Reach
@@ -54,19 +54,19 @@ const LeadersNumbers = () => {
                   xl:text-[42px]
                   leading-[0.94]">
             <span
-              className={`leaders-line leaders-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+              className={`leaders-line partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
               style={{ animationDelay: upDelay(1, 5) }}
             >
               Most Influential
             </span>
             <span
-              className={`leaders-line leaders-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+              className={`leaders-line partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
               style={{ animationDelay: upDelay(2, 5) }}
             >
               Enterprise AI
             </span>
             <span
-              className={`leaders-line leaders-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+              className={`leaders-line partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
               style={{ animationDelay: upDelay(3, 5) }}
             >
               Leaders
@@ -75,7 +75,7 @@ const LeadersNumbers = () => {
 
           <a
             href="#become-partner"
-            className={`leaders-btn btn-bg leaders-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+            className={`leaders-btn btn-bg partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
             style={{ animationDelay: upDelay(4, 5) }}
           >
             Register Now
@@ -92,7 +92,7 @@ const LeadersNumbers = () => {
         <div className="leaders-right">
 
           <p
-            className={`leaders-description leaders-reveal-down ${sectionVisible ? "is-visible" : ""}`}
+            className={`leaders-description partners-reveal-down ${sectionVisible ? "is-visible" : ""}`}
             style={{ animationDelay: upDelay(0, 3) }}
           >
             AI Innovation Summit brings together the decision-makers
@@ -105,14 +105,14 @@ const LeadersNumbers = () => {
           <div className="leaders-stat">
 
             <div
-              className={`leaders-number leaders-reveal-down ${sectionVisible ? "is-visible" : ""}`}
+              className={`leaders-number partners-reveal-down ${sectionVisible ? "is-visible" : ""}`}
               style={{ animationDelay: upDelay(1, 3) }}
             >
               700+
             </div>
 
             <div
-              className={`leaders-stat-text leaders-reveal-down ${sectionVisible ? "is-visible" : ""}`}
+              className={`leaders-stat-text partners-reveal-down ${sectionVisible ? "is-visible" : ""}`}
               style={{ animationDelay: upDelay(2, 3) }}
             >
               CXOs &amp; Senior Business &amp;
@@ -129,38 +129,9 @@ const LeadersNumbers = () => {
       </div>
 
       <style>{`
-        @keyframes leadersFadeInUp {
-          from { opacity: 0; transform: translate3d(0, 34px, 0); }
-          to { opacity: 1; transform: translate3d(0, 0, 0); }
-        }
-
-        @keyframes leadersFadeInDown {
-          from { opacity: 0; transform: translate3d(0, -34px, 0); }
-          to { opacity: 1; transform: translate3d(0, 0, 0); }
-        }
-
-        .leaders-reveal-up,
-        .leaders-reveal-down {
-          opacity: 0;
-          will-change: opacity, transform;
-        }
-
         .leaders-line {
           display: block;
         }
-
-        .leaders-reveal-up.is-visible {
-          animation: leadersFadeInUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-
-        .leaders-reveal-down.is-visible {
-          animation: leadersFadeInDown 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-
-        .leaders-delay-1 { animation-delay: 300ms; }
-        .leaders-delay-2 { animation-delay: 650ms; }
-        .leaders-delay-3 { animation-delay: 1000ms; }
-        .leaders-delay-4 { animation-delay: 1350ms; }
 
         .leaders-section-new {
           background-image: url('/gurugram/leaders_info_bg.png');

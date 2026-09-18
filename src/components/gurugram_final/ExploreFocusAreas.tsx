@@ -165,15 +165,11 @@ const FocusAreasSection = () => {
 
                 mb-4
 
-                opacity-0
-                translate-y-8
-                transition-all
-                duration-[1400ms]
-                ease-[cubic-bezier(0.16,1,0.3,1)]
+                partners-reveal-up
 
-                ${isVisible ? "opacity-100 translate-y-0" : ""}
+                ${isVisible ? "is-visible" : ""}
               `}
-              style={{ transitionDelay: `${(revealDirection === "up" ? 3 : 0) * 150}ms` }}
+              style={{ animationDelay: `${(revealDirection === "up" ? 3 : 0) * 150}ms` }}
             >
               Discover what's possible
             </p>
@@ -191,15 +187,11 @@ const FocusAreasSection = () => {
                 xl:text-[42px]
                 leading-[0.94]
 
-                opacity-0
-                translate-y-8
-                transition-all
-                duration-[1400ms]
-                ease-[cubic-bezier(0.16,1,0.3,1)]
+                partners-reveal-up
 
-                ${isVisible ? "opacity-100 translate-y-0" : ""}
+                ${isVisible ? "is-visible" : ""}
               `}
-              style={{ transitionDelay: `${(revealDirection === "up" ? 2 : 1) * 150}ms` }}
+              style={{ animationDelay: `${(revealDirection === "up" ? 2 : 1) * 150}ms` }}
             >
               Explore
               <br />
@@ -223,15 +215,11 @@ const FocusAreasSection = () => {
 
                 max-w-[400px]
 
-                opacity-0
-                translate-y-8
-                transition-all
-                duration-[1400ms]
-                ease-[cubic-bezier(0.16,1,0.3,1)]
+                partners-reveal-up
 
-                ${isVisible ? "opacity-100 translate-y-0" : ""}
+                ${isVisible ? "is-visible" : ""}
               `}
-              style={{ transitionDelay: `${(revealDirection === "up" ? 1 : 2) * 150}ms` }}
+              style={{ animationDelay: `${(revealDirection === "up" ? 1 : 2) * 150}ms` }}
             >
               Deep-dive into the themes shaping enterprise AI adoption across India.
             </p>
@@ -249,15 +237,11 @@ const FocusAreasSection = () => {
 
                 inline-block
 
-                opacity-0
-                translate-y-8
-                transition-all
-                duration-[1400ms]
-                ease-[cubic-bezier(0.16,1,0.3,1)]
+                partners-reveal-up
 
-                ${isVisible ? "opacity-100 translate-y-0" : ""}
+                ${isVisible ? "is-visible" : ""}
               `}
-              style={{ transitionDelay: `${(revealDirection === "up" ? 0 : 3) * 150}ms` }}
+              style={{ animationDelay: `${(revealDirection === "up" ? 0 : 3) * 150}ms` }}
             >
                 View Full Agenda
             </a>

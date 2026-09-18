@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { getScrollDirection } from "@/hooks/useScrollDirection";
 
 const partners = [
   {
@@ -31,6 +32,7 @@ const partners = [
 const PartnersSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [sectionVisible, setSectionVisible] = useState(false);
+  const [revealDirection, setRevealDirection] = useState<"up" | "down">("down");
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -39,8 +41,13 @@ const PartnersSection = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setSectionVisible(true);
-          observer.unobserve(section);
+          setRevealDirection(getScrollDirection());
+          setSectionVisible(false);
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => setSectionVisible(true));
+          });
+        } else {
+          setSectionVisible(false);
         }
       },
       { threshold: 0.2 },
@@ -50,6 +57,9 @@ const PartnersSection = () => {
     return () => observer.disconnect();
   }, []);
 
+  const delayFor = (order: number, total: number) =>
+    `${(revealDirection === "up" ? total - 1 - order : order) * 150}ms`;
+
   return (
     <section ref={sectionRef} className="partners-section">
       <div className="partners-container">
@@ -58,6 +68,7 @@ const PartnersSection = () => {
         <div className="partners-content">
           <span
             className={`partners-small-title partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+            style={{ animationDelay: delayFor(0, 6) }}
           >
             Our Partners
           </span>
@@ -70,12 +81,14 @@ const PartnersSection = () => {
                   xl:text-[42px]
                   leading-[0.94]">
             <span
-              className={`block partners-reveal-up partners-delay-1 ${sectionVisible ? "is-visible" : ""}`}
+              className={`block partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+              style={{ animationDelay: delayFor(1, 6) }}
             >
               The Partners
             </span>
             <span
-              className={`block partners-reveal-up partners-delay-2 ${sectionVisible ? "is-visible" : ""}`}
+              className={`block partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+              style={{ animationDelay: delayFor(2, 6) }}
             >
               Powering The Summit
             </span>
@@ -83,12 +96,14 @@ const PartnersSection = () => {
 
           <p>
             <span
-              className={`block partners-reveal-up partners-delay-3 ${sectionVisible ? "is-visible" : ""}`}
+              className={`block partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+              style={{ animationDelay: delayFor(3, 6) }}
             >
               Meet the partners shaping how enterprises think,
             </span>
             <span
-              className={`block partners-reveal-up partners-delay-4 ${sectionVisible ? "is-visible" : ""}`}
+              className={`block partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+              style={{ animationDelay: delayFor(4, 6) }}
             >
               deploy, and scale AI.
             </span>
@@ -96,7 +111,8 @@ const PartnersSection = () => {
 
           <a
             href="#become-partner"
-            className={`partners-btn partners-reveal-up partners-delay-5 ${sectionVisible ? "is-visible" : ""}`}
+            className={`partners-btn partners-reveal-up inline-block ${sectionVisible ? "is-visible" : ""}`}
+            style={{ animationDelay: delayFor(5, 6) }}
           >
             Become a Partner
           </a>
