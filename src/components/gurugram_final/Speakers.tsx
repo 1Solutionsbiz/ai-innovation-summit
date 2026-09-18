@@ -539,27 +539,6 @@ const FeaturedSpeakers = () => {
                   SPEAKER SCROLLER
               ================================================= */}
 
-
-<h2>
-              <p
-                className={`
-                  text-[24px]
-                  font-bold
-                  text-[#EF3340]
-                  mb-3
-                  partners-reveal-up
-                  ${sectionVisible ? "is-visible" : ""}
-                `}
-                style={{ animationDelay: `${(revealDirection === "up" ? 3 : 0) * 130}ms` }}
-              >
-                Speakers Coming Soon
-              </p>
-</h2>
-
-
-
-
-
               <div
                 ref={scrollerRef}
 
