@@ -112,7 +112,7 @@ const FeaturedSpeakers = () => {
           setSectionVisible(false);
         }
       },
-      { threshold: 0, rootMargin: "-15% 0px -15% 0px" }
+      { threshold: 0.2 }
     );
 
     observer.observe(section);
@@ -358,10 +358,14 @@ const FeaturedSpeakers = () => {
                   font-bold
                   text-[#EF3340]
                   mb-3
-                  partners-reveal-up
-                  ${sectionVisible ? "is-visible" : ""}
+                  opacity-0
+                  translate-y-8
+                  transition-all
+                  duration-[1200ms]
+                  ease-[cubic-bezier(0.16,1,0.3,1)]
+                  ${sectionVisible ? "opacity-100 translate-y-0" : ""}
                 `}
-                style={{ animationDelay: `${(revealDirection === "up" ? 3 : 0) * 130}ms` }}
+                style={{ transitionDelay: `${(revealDirection === "up" ? 3 : 0) * 130}ms` }}
               >
                 AIIS 2026 Speakers
               </p>
@@ -378,14 +382,14 @@ const FeaturedSpeakers = () => {
                 "
               >
                 <span
-                  className={`block partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
-                  style={{ animationDelay: `${(revealDirection === "up" ? 2 : 1) * 130}ms` }}
+                  className={`block opacity-0 translate-y-8 transition-all duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${sectionVisible ? "opacity-100 translate-y-0" : ""}`}
+                  style={{ transitionDelay: `${(revealDirection === "up" ? 2 : 1) * 130}ms` }}
                 >
                   Voices Leading
                 </span>
                 <span
-                  className={`block partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
-                  style={{ animationDelay: `${(revealDirection === "up" ? 1 : 2) * 130}ms` }}
+                  className={`block opacity-0 translate-y-8 transition-all duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${sectionVisible ? "opacity-100 translate-y-0" : ""}`}
+                  style={{ transitionDelay: `${(revealDirection === "up" ? 1 : 2) * 130}ms` }}
                 >
                   India&apos;s AI Future
                 </span>
@@ -395,8 +399,8 @@ const FeaturedSpeakers = () => {
               <a href="delhi-gurugram_edition-26-speakers"
                 type="button"
                 target="_blank"
-                className={`view-all-speakers inline-block partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
-                style={{ animationDelay: `${(revealDirection === "up" ? 0 : 3) * 130}ms` }}
+                className={`view-all-speakers opacity-0 translate-y-8 transition-all duration-[1400ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${sectionVisible ? "opacity-100 translate-y-0" : ""}`}
+                style={{ transitionDelay: `${(revealDirection === "up" ? 0 : 3) * 130}ms` }}
               >
                 View all speakers
               </a>
