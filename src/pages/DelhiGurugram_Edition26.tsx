@@ -36,7 +36,8 @@ const GurugramEdition2026 = () => {
       <Overview />
       <ExploreFocusAreas />
       <RoomMatters />
-      <Partners />
+      {/* <Partners /> */}
+      <Sponsors />
       <Leaders />
       <Innovation />
       <TestimonialsNew />
@@ -44,8 +45,10 @@ const GurugramEdition2026 = () => {
       <WatchOnDemand />
       <Glimpse />
       <EventInfo />
-      <Sponsors />
+      {/* <Sponsors /> */}
       
+      <hr />
+
             <section id="delhincrregistrationform" ></section>
             <BengaluruJune26RegisterForm />
 

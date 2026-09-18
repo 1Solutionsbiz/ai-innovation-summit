@@ -24,7 +24,7 @@ const TermsAndConditions: React.FC = () => {
 
         <section className="space-y-6 text-lg leading-relaxed">
           <p className="text-xl">
-            Effective Date: 01/01/2025
+            Effective Date: 01/01/2026
           </p>
           <p>
             These Terms & Conditions ("Terms") govern your participation in any in-person, virtual, or hybrid event ("Event") hosted or organized by Guild Live, a division of Polygon Media Private Limited ("The Guild", "we", "our", or "us"). By registering for, attending, or participating in the Event, you ("you", "your", or "Attendee") agree to be bound by these Terms.

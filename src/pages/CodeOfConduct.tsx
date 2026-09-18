@@ -27,7 +27,7 @@ const CodeOfConduct: React.FC = () => {
             Guild Live - An initiative by The Guild (Polygon Media Pvt. Ltd.)
           </p>
           <p className="text-xl">
-            Effective Date: 01/01/2025
+            Effective Date: 01/01/2026
           </p>
           <p>
             Guild Live is committed to providing a safe, inclusive, and respectful experience for everyone at our events, whether in-person, virtual, or hybrid. This Code of Conduct outlines the behavioral expectations applicable to all participants—including attendees, speakers, sponsors, exhibitors, staff, volunteers, and media representatives.

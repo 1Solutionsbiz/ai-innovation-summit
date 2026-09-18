@@ -31,6 +31,38 @@ const getYouTubeId = (url: string): string | null => {
   }
 };
 
+const renderDescription = (description: string) => {
+  const lines = description
+    .replace(/<br\s*\/?>/gi, "\n")
+    .split(/\r?\n/);
+
+  const renderLine = (line: string) => {
+    const parts = line.trim().split(/(\*\*[^*]+\*\*|\*[^*]+\*)/g);
+
+    return parts.map((part, index) => {
+      if (part.startsWith("**") && part.endsWith("**")) {
+        return <strong key={index}>{part.slice(2, -2)}</strong>;
+      }
+
+      if (part.startsWith("*") && part.endsWith("*")) {
+        return <strong key={index}>{part.slice(1, -1)}</strong>;
+      }
+
+      return <span key={index}>{part}</span>;
+    });
+  };
+
+  return lines.map((line, index) => (
+    <span
+      key={`${line}-${index}`}
+      className={line.trim() ? "block" : "block h-5"}
+      aria-hidden={!line.trim()}
+    >
+      {line.trim() && renderLine(line)}
+    </span>
+  ));
+};
+
 const WatchPage = () => {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
@@ -50,7 +82,7 @@ const WatchPage = () => {
   }
 
   const { link, title, description } = currentVideo;
-  const destination = "The Leela Ambience Gurugram, Delhi-NCR";
+  const destination = "";
   const videoId = getYouTubeId(link);
 
   const embedSrc = videoId
@@ -62,22 +94,22 @@ const WatchPage = () => {
 
   const socialShareLinks = [
     {
-      label: "WhatsApp",
+      label: "",
       icon: <FaWhatsapp className="text-[#25D366]" size={17} />,
       href: `https://wa.me/?text=${encodedText}`,
     },
     {
-      label: "X",
-      icon: <FaXTwitter className="text-white" size={16} />,
+      label: "",
+      icon: <FaXTwitter className="text-black" size={16} />,
       href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodedUrl}`,
     },
     {
-      label: "LinkedIn",
+      label: "",
       icon: <FaLinkedinIn className="text-[#0A66C2]" size={17} />,
       href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
     },
     {
-      label: "Facebook",
+      label: "",
       icon: <FaFacebookF className="text-[#1877F2]" size={17} />,
       href: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
     },
@@ -142,16 +174,16 @@ const WatchPage = () => {
             </div>
 
             <div className="pt-2">
-              <h1 className="text-3xl font-black leading-tight tracking-[-0.8px] text-white md:text-5xl">
+              <h1 className="text-3xl font-black leading-tight tracking-[-0.8px] text-white md:text-3xl">
                 {title}
               </h1>
 
-              <div className="mt-6 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-white/80 inline-flex items-center">
+              {/* <div className="mt-6 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-white/80 inline-flex items-center">
                 {destination}
-              </div>
+              </div> */}
 
               <p className="mt-6 text-base leading-8 text-slate-300 md:text-lg">
-                {description}
+                {renderDescription(description)}
               </p>
 
               <div className="mt-7 flex flex-wrap items-center gap-2">
