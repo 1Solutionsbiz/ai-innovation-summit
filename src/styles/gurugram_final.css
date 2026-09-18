@@ -1445,17 +1445,36 @@
 .mobile-editions-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0px;
   padding: 8px 0 2px 14px;
 }
 
 .mobile-editions-list a {
-  font-size: 14px;
+  font-size: 14px !important;
   opacity: 0.9;
 }
 
 .mobile-editions-toggle svg {
   transition: transform 0.2s ease;
+}
+
+.redesign-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  isolation: isolate;
+}
+
+.mobile-redesign-menu-open {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  max-height: calc(100dvh - 70px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 @media (max-width: 767px) {
