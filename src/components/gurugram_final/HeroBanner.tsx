@@ -81,7 +81,7 @@ const HeroBanner = () => {
             />
           </div>
 
-          <div>
+          <div className="flex flex-col items-center lg:items-start">
 
             <div
               className="mt-10 mmt-35s flex gap-x-8 gap-y-3 text-slate-200 hero-info-venue"
