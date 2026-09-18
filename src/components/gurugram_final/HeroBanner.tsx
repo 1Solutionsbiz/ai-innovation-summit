@@ -74,7 +74,7 @@ const HeroBanner = () => {
         <div className="grid items-center gap-8 lg:grid-cols-[60%_minmax(0,1fr)]">
           <div className="relative flex justify-center lg:justify-start">
             <img
-              src="/gurugram/logo-conbain.png"
+              src="/gurugram/logo-combain.png"
               alt="AI Innovation Summit partner showcase"
               className={`w-full max-w-[70%] lg:max-w-[50%] object-contain drop-shadow-[0_25px_50px_rgba(8,145,178,0.25)] partners-reveal-up ${isVisible ? "is-visible" : ""}`}
               style={{ animationDelay: heroDelay(0, 5) }}
