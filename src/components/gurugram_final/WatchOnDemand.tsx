@@ -84,6 +84,7 @@ const OnDemandSection = () => {
             </h2>
 
             <a
+              target="_blank"
               href={buildWatchHref(featured)}
               className={`ondemand-reveal-up
                 mt-4
@@ -104,6 +105,7 @@ const OnDemandSection = () => {
               FEATURED VIDEO
           ================================================= */}
           <a
+            target="_blank"
             href={buildWatchHref(featured)}
             className={`group lg:w-[36%] w-full flex-shrink-0 ondemand-card ondemand-card-featured ${sectionVisible ? "is-visible" : ""}`}
           >
@@ -205,6 +207,7 @@ const OnDemandSection = () => {
               <a
                 key={item.link}
                 href={buildWatchHref(item)}
+                target="_blank"
                 className={`group ondemand-card ondemand-card-${gridItems.indexOf(item)} ${sectionVisible ? "is-visible" : ""}`}
               >
                 <div

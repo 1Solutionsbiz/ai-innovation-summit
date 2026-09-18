@@ -79,14 +79,14 @@ const EventInfo: React.FC = () => {
 
           <div className="event-info-actions">
             <a
-              href="#attend"
+              href="#delhincrregistrationform"
               className={`event-info-btn-primary btn-bg event-reveal-down ${sectionVisible ? "is-visible" : ""}`}
               style={{ animationDelay: upDelay(2, 4) }}
             >
               Attend AIIS 2026
             </a>
             <a
-              href="#explore"
+              href="#delhincrregistrationform"
               className={`event-info-btn-secondary btn-bg-hover event-reveal-down ${sectionVisible ? "is-visible" : ""}`}
               style={{ animationDelay: upDelay(3, 4) }}
             >

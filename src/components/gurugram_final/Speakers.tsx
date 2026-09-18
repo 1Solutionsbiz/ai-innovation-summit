@@ -394,6 +394,7 @@ const FeaturedSpeakers = () => {
 
               <a href="delhi-gurugram_edition-26-speakers"
                 type="button"
+                target="_blank"
                 className={`view-all-speakers inline-block partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
                 style={{ animationDelay: `${(revealDirection === "up" ? 0 : 3) * 130}ms` }}
               >

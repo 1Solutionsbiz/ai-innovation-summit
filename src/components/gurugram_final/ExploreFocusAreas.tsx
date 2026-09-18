@@ -226,6 +226,7 @@ const FocusAreasSection = () => {
             {/* Button */}
 
             <a
+              target="_blank"
               href="delhi-gurugram_edition-26-agenda"
               className={`
                 btn-bg-w
