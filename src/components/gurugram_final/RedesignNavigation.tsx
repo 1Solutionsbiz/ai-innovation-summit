@@ -19,13 +19,13 @@ const RedesignNavigation = () => {
   const logoSrcg = isScrolled ? "/logo/the-guild-dg26-color.png" : "/logo/the-guild-dg26.png";
 
   const links = [
-    { label: "Overview", href: "#overview" },
-    { label: "Focus Areas", href: "#focus" },
-    { label: "Speakers", href: "#speakers" },
-    { label: "Partners", href: "#partners" },
+    { label: "Overview", href: "/#overview" },
+    { label: "Focus Areas", href: "/#focus" },
+    { label: "Speakers", href: "/#speakers" },
+    { label: "Partners", href: "/#partners" },
     { label: "Agenda", href: "delhi-gurugram_edition-26-agenda" },
-    { label: "Who Should Attend", href: "#roommatters" },
-    { label: "Contact", href: "#contact" },
+    { label: "Who Should Attend", href: "/#roommatters" },
+    { label: "Contact", href: "/#contact" },
   ];
 
   const editions = [
@@ -99,7 +99,7 @@ const RedesignNavigation = () => {
         <div>
 
           <div className="flex guru-26-right-sec">
-            <a href="#delhincrregistrationform" className="register-btn-guru-26 register-btn-guru-26-sticky">
+            <a href="/#delhincrregistrationform" className="register-btn-guru-26 register-btn-guru-26-sticky">
               Register 
             </a>            
             <a href="/" className="redesign-logo redesign-logo-gurugram-26">
