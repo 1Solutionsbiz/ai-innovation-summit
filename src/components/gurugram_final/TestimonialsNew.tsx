@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import { getScrollDirection } from "@/hooks/useScrollDirection";
 
 export type Testimonial = {
   quote: string;
@@ -65,6 +66,7 @@ const TestimonialSection = ({
   const sectionRef = useRef<HTMLElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const [sectionVisible, setSectionVisible] = useState(false);
+  const [revealDirection, setRevealDirection] = useState<"up" | "down">("down");
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const total = testimonials.length;
@@ -110,6 +112,7 @@ const TestimonialSection = ({
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          setRevealDirection(getScrollDirection());
           setSectionVisible(false);
           requestAnimationFrame(() => {
             requestAnimationFrame(() => setSectionVisible(true));
@@ -118,12 +121,15 @@ const TestimonialSection = ({
           setSectionVisible(false);
         }
       },
-      { threshold: 0.5 },
+      { threshold: 0, rootMargin: "-15% 0px -15% 0px" },
     );
 
     observer.observe(section);
     return () => observer.disconnect();
   }, []);
+
+  const testimonialDelay = (order: number, total: number) =>
+    `${(revealDirection === "up" ? total - 1 - order : order) * 200}ms`;
 
   return (
     <section
@@ -155,12 +161,13 @@ const TestimonialSection = ({
       ================================================= */}
       <div className="relative z-10 h-full min-h-[520px] sm:min-h-[600px] md:min-h-[720px] max-w-[1500px] mx-auto px-4 sm:px-6 flex items-center">
         <div
-          className={`w-full max-w-[760px] py-10 sm:py-16 testimonial-reveal ${sectionVisible ? "is-visible" : ""}`}
+          className={`w-full max-w-[760px] py-10 sm:py-16 partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+          style={{ animationDelay: testimonialDelay(0, 2) }}
         >
           {/* QUOTE — fades between testimonials */}
           <div
             key={activeIndex}
-            className="testimonial-quote animate-[fadeIn_600ms_ease-out]"
+            className="animate-[fadeIn_600ms_ease-out]"
           >
             <p className="text-white font-black text-[18px] sm:text-[25px] md:text-[30px] leading-[1.2] tracking-[-0.25px] sm:tracking-[-0.5px]">
               &ldquo;{current.quote}&rdquo;
@@ -187,7 +194,10 @@ const TestimonialSection = ({
           </div>
 
           {/* NAV ARROWS */}
-          <div className="mt-8 flex items-center gap-3 sm:mt-12 sm:gap-4 testimonial-nav">
+          <div
+            className={`mt-8 flex items-center gap-3 sm:mt-12 sm:gap-4 partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+            style={{ animationDelay: testimonialDelay(1, 2) }}
+          >
             <button
               onClick={() => handleManualNav("prev")}
               aria-label="Previous testimonial"
@@ -232,39 +242,6 @@ const TestimonialSection = ({
       </div>
 
       <style>{`
-        @keyframes testimonialReveal {
-          from {
-            opacity: 0;
-            transform: translate3d(0, 44px, 0);
-          }
-          to {
-            opacity: 1;
-            transform: translate3d(0, 0, 0);
-          }
-        }
-
-        .testimonial-reveal {
-          opacity: 0;
-          will-change: opacity, transform;
-        }
-
-        .testimonial-reveal.is-visible {
-          animation: testimonialReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-
-        .testimonial-quote {
-          animation-delay: 150ms;
-        }
-
-        .testimonial-nav {
-          opacity: 0;
-          transform: translate3d(0, 24px, 0);
-        }
-
-        .testimonial-reveal.is-visible .testimonial-nav {
-          animation: testimonialReveal 1.1s 450ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(12px); }
           to { opacity: 1; transform: translateY(0); }

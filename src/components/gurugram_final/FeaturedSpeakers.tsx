@@ -1202,7 +1202,7 @@ const FeaturedSpeakers = () => {
           <div className="flex flex-col justify-center">
             <p
               className={`partners-reveal-up text-red-600 font-semibold text-lg ${isVisible ? "is-visible" : ""}`}
-              style={{ animationDelay: upDelay(0, 2) }}
+              style={{ animationDelay: upDelay(0, 3) }}
             >
               Retrospective
             </p>
@@ -1214,7 +1214,7 @@ const FeaturedSpeakers = () => {
                   md:text-[64px]
                   xl:text-[42px]
                   leading-[0.94] ${isVisible ? "is-visible" : ""}`}
-              style={{ animationDelay: upDelay(1, 2) }}
+              style={{ animationDelay: upDelay(1, 3) }}
             >
               Past
               <br />
@@ -1224,7 +1224,8 @@ const FeaturedSpeakers = () => {
               target="_blank"
               href="#"
               type="button"
-              className="view-all-speakers mt-8 sm:mt-14"
+              className={`view-all-speakers inline-block mt-8 sm:mt-14 partners-reveal-up ${isVisible ? "is-visible" : ""}`}
+              style={{ animationDelay: upDelay(2, 3) }}
             >
               View all speakers
             </a>

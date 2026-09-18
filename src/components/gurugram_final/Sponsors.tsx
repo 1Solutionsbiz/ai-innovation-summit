@@ -48,10 +48,10 @@ const Sponsors = () => {
   return (
     <section ref={sectionRef} id="partners" className="bg-[#fff] py-12 sm:py-20 md:py-28">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 text-center">
-        <p className={`sponsors-reveal font-extrabold text-[20px] text-[#e92630] mb-2 ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(0, 4) }}>
+        <p className={`partners-reveal-up font-extrabold text-[20px] text-[#e92630] mb-2 ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(0, 4) }}>
           Past Partners
         </p>
-        <h2 className={`sponsors-reveal text-[#022158]
+        <h2 className={`partners-reveal-up text-[#022158]
                   font-black
                   text-[34px]
                   sm:text-[48px]
@@ -60,11 +60,11 @@ const Sponsors = () => {
                   leading-[0.94] ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(1, 4) }}>
           Partners Who Powered the Journey
         </h2>
-        <p className={`sponsors-reveal mt-4 sm:mt-6 sponser-description mx-auto ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(2, 4) }}>
+        <p className={`partners-reveal-up mt-4 sm:mt-6 sponser-description mx-auto ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(2, 4) }}>
           Celebrating the organisations that came on board to support ideas, innovation, and industry connections
         </p>
 
-        {/* <div className={`sponsors-reveal sponsors-delay-3 mt-8 flex flex-wrap items-center justify-center gap-4 ${sectionVisible ? "is-visible" : ""}`}>
+        {/* <div className={`partners-reveal-up mt-8 flex flex-wrap items-center justify-center gap-4 ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(3, 4) }}>
           <a
             href="#partners"
             className="view-all-speakers"
@@ -74,7 +74,7 @@ const Sponsors = () => {
         </div> */}
       </div>
 
-      <div className={`mt-10 sm:mt-16 overflow-hidden sponsors-reveal ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(3, 4) }}>
+      <div className={`mt-10 sm:mt-16 overflow-hidden partners-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(3, 4) }}>
         <div
           className="sponsor-auto-scroll gap-6 sm:gap-10 md:gap-10 px-4 sm:px-8"
           style={{ animationDuration: `${SCROLL_DURATION_SECONDS}s` }}
@@ -91,25 +91,6 @@ const Sponsors = () => {
       </div>
 
       <style>{`
-        @keyframes sponsorsFadeInUp {
-          from { opacity: 0; transform: translate3d(0, 32px, 0); }
-          to { opacity: 1; transform: translate3d(0, 0, 0); }
-        }
-
-        .sponsors-reveal {
-          opacity: 0;
-          will-change: opacity, transform;
-        }
-
-        .sponsors-reveal.is-visible {
-          animation: sponsorsFadeInUp 1.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-
-        .sponsors-delay-1 { animation-delay: 180ms; }
-        .sponsors-delay-2 { animation-delay: 360ms; }
-        .sponsors-delay-3 { animation-delay: 540ms; }
-        .sponsors-delay-4 { animation-delay: 720ms; }
-
         @keyframes sponsor-scroll-horizontal {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }

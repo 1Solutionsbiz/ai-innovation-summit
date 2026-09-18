@@ -1,24 +1,39 @@
 import { useEffect, useRef, useState } from "react";
 import { CalendarDays, MapPin, Pause, Play } from "lucide-react";
+import { getScrollDirection } from "@/hooks/useScrollDirection";
 
 const HeroBanner = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
+  const [revealDirection, setRevealDirection] = useState<"up" | "down">("down");
 
   useEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
 
     const observer = new IntersectionObserver(
-      ([entry]) => setIsVisible(entry.isIntersecting),
-      { threshold: 0.2 },
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setRevealDirection(getScrollDirection());
+          setIsVisible(false);
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => setIsVisible(true));
+          });
+        } else {
+          setIsVisible(false);
+        }
+      },
+      { threshold: 0, rootMargin: "-15% 0px -15% 0px" },
     );
 
     observer.observe(section);
     return () => observer.disconnect();
   }, []);
+
+  const heroDelay = (order: number, total: number) =>
+    `${(revealDirection === "up" ? total - 1 - order : order) * 150}ms`;
 
   const togglePlayback = () => {
     const video = videoRef.current;
@@ -61,45 +76,46 @@ const HeroBanner = () => {
             <img
               src="/gurugram/logo-conbain.png"
               alt="AI Innovation Summit partner showcase"
-              className="w-full max-w-[70%] lg:max-w-[50%] object-contain drop-shadow-[0_25px_50px_rgba(8,145,178,0.25)]"
+              className={`w-full max-w-[70%] lg:max-w-[50%] object-contain drop-shadow-[0_25px_50px_rgba(8,145,178,0.25)] partners-reveal-up ${isVisible ? "is-visible" : ""}`}
+              style={{ animationDelay: heroDelay(0, 5) }}
             />
           </div>
 
           <div>
-            
+
             <div
-              className={`mt-10 mmt-35s flex gap-x-8 gap-y-3 text-slate-200 hero-info-venue opacity-0 translate-y-8 transition-all duration-700 delay-300 ease-out ${isVisible ? "opacity-100 translate-y-0" : ""}`}
+              className="mt-10 mmt-35s flex gap-x-8 gap-y-3 text-slate-200 hero-info-venue"
             >
-              <span className="flex items-center gap-2 font-medium
-                text-[15px]
-                sm:text-[15px]
-                md:text-[15px]
-                xl:text-[18px]">
+              <span
+                className={`flex items-center gap-2 font-medium text-[15px] sm:text-[15px] md:text-[15px] xl:text-[18px] partners-reveal-up ${isVisible ? "is-visible" : ""}`}
+                style={{ animationDelay: heroDelay(1, 5) }}
+              >
                 <CalendarDays className="w-5 h-5 text-white" />
                 December 2, 2026
               </span>
-              <span className="flex items-center gap-2 font-medium
-                text-[15px]
-                sm:text-[15px]
-                md:text-[15px]
-                xl:text-[18px]">
+              <span
+                className={`flex items-center gap-2 font-medium text-[15px] sm:text-[15px] md:text-[15px] xl:text-[18px] partners-reveal-up ${isVisible ? "is-visible" : ""}`}
+                style={{ animationDelay: heroDelay(2, 5) }}
+              >
                 <MapPin className="w-5 h-5 text-white" />
                 The Leela Ambience Gurugram, Delhi-NCR
               </span>
             </div>
 
             <div
-              className={`mt-10 mmt-10 flex flex-wrap items-center gap-5 opacity-0 translate-y-8 transition-all duration-700 delay-[400ms] ease-out ${isVisible ? "opacity-100 translate-y-0" : ""}`}
+              className="mt-10 mmt-10 flex flex-wrap items-center gap-5"
             >
               <a
                 href="#delhincrregistrationform"
-                className="inline-flex items-center rounded-full font-semibold px-5 py-2 md:px-7 md:py-3 text-sm md:text-base hover:scale-105 transition-transform duration-300 shadow-lg btn-bg"
+                className={`inline-flex items-center rounded-full font-semibold px-5 py-2 md:px-7 md:py-3 text-sm md:text-base hover:scale-105 transition-transform duration-300 shadow-lg btn-bg partners-reveal-up ${isVisible ? "is-visible" : ""}`}
+                style={{ animationDelay: heroDelay(3, 5) }}
               >
                 Attend AIIS 2026
               </a>
               <a
                 href="#focus"
-                className="inline-flex items-center rounded-full font-semibold px-5 py-2 md:px-7 md:py-3 text-sm md:text-base hover:scale-105 transition-transform duration-300 shadow-lg btn-bg-hover"
+                className={`inline-flex items-center rounded-full font-semibold px-5 py-2 md:px-7 md:py-3 text-sm md:text-base hover:scale-105 transition-transform duration-300 shadow-lg btn-bg-hover partners-reveal-up ${isVisible ? "is-visible" : ""}`}
+                style={{ animationDelay: heroDelay(4, 5) }}
               >
                 Explore More
               </a>

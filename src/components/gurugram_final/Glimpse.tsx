@@ -85,13 +85,13 @@ const Sponsors = () => {
     >
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 text-center">
         <p
-          className={`glimpse-reveal-up font-extrabold text-[20px] text-[#e92630] mb-2 ${sectionVisible ? "is-visible" : ""}`}
+          className={`partners-reveal-up font-extrabold text-[20px] text-[#e92630] mb-2 ${sectionVisible ? "is-visible" : ""}`}
           style={{ animationDelay: upDelay(0, 3) }}
         >
           7 Editions. Trusted by the Best.
         </p>
         <h2
-          className={`glimpse-reveal-up text-[#022158]
+          className={`partners-reveal-up text-[#022158]
                   text-[#022158]
                   font-black
                   text-[34px]
@@ -106,7 +106,7 @@ const Sponsors = () => {
       </div>
 
       <div
-        className={`mt-10 sm:mt-16 overflow-hidden glimpse-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+        className={`mt-10 sm:mt-16 overflow-hidden partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
         style={{ animationDelay: upDelay(2, 3) }}
       >
         <div
@@ -125,29 +125,6 @@ const Sponsors = () => {
       </div>
 
       <style>{`
-        @keyframes glimpseFadeInUp {
-          from {
-            opacity: 0;
-            transform: translate3d(0, 36px, 0) scale(0.98);
-          }
-          to {
-            opacity: 1;
-            transform: translate3d(0, 0, 0) scale(1);
-          }
-        }
-
-        .glimpse-reveal-up {
-          opacity: 0;
-          will-change: opacity, transform;
-        }
-
-        .glimpse-reveal-up.is-visible {
-          animation: glimpseFadeInUp 1.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-        }
-
-        .glimpse-delay-1 { animation-delay: 180ms; }
-        .glimpse-delay-2 { animation-delay: 420ms; }
-
         @keyframes sponsor-scroll-horizontal {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
@@ -165,7 +142,7 @@ const Sponsors = () => {
         }
 
         @media (prefers-reduced-motion: reduce) {
-          .glimpse-reveal-up.is-visible {
+          .partners-reveal-up.is-visible {
             animation-duration: 1ms;
             animation-delay: 0ms;
           }

@@ -3,7 +3,7 @@ import ScrollToHash from "@/components/ScrollToHash";
 import Navigation from "@/components/gurugram_final/RedesignNavigation";
 import HeroBanner from "@/components/gurugram_final/HeroBanner";
 import Highlights from "@/components/gurugram_final/Highlights";
-import Speakers from "@/components/gurugram_final/Speakers";
+import Speakers from "@/components/gurugram_final/SpeakersFinal";
 import OperatingModel from "@/components/gurugram_final/OperatingModel";
 import Overview from "@/components/gurugram_final/Overview";
 import ExploreFocusAreas from "@/components/gurugram_final/ExploreFocusAreas";
