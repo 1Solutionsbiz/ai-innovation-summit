@@ -41,10 +41,17 @@ const Footer = () => {
           {/* LEFT SECTION */}
           <div className={`space-y-6 footer-reveal footer-delay-1 ${footerVisible ? "is-visible" : ""}`}>
             <div>
+              
+              <img
+                src={Yesican}
+                alt="The Guild"
+                className="mt-2 h-8 sm:h-8 md:h-8 w-auto object-contain"
+              />
+
               <img
                 src={aiinvationlogo}
                 alt="Ai Innovation Summit"
-                className="h-9 sm:h-10 md:h-12 lg:h-24 object-contain ftrlogo"
+                className="h-7 sm:h-8 md:h-10 lg:h-20 object-contain ftrlogo"
               />
             </div>
 
@@ -59,15 +66,6 @@ const Footer = () => {
                 alt="The Guild"
                 className="h-8 sm:h-8 md:h-8 w-auto object-contain"
               />
-
-
-              <img
-                src={Yesican}
-                alt="The Guild"
-                className="mt-2 h-4 sm:h-4 md:h-4 w-auto object-contain"
-              />
-
-
             </div>
           </div>
 

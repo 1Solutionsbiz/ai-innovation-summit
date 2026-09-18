@@ -65,13 +65,14 @@ const App: React.FC = () => (
         />
         <Route path="/partner-form" element={<PartnerForm />} />
         {/* Public site routes */}
-        <Route path="/" element={<DelhiEdition26_1 />} />
+        <Route path="/" element={<DelhiGurugram_Edition26 />} />
+        {/* <Route path="/" element={<DelhiEdition26_1 />} /> */}
 
         <Route path="/new" element={<GurugramEdition26Redesign />} />
         <Route path="/gurugram-2026" element={<GurugramEdition26 />} />
         <Route path="/new-a" element={<GurugramEdition2026a />} />
         <Route path="/registration-oldform-26-" element={<SinghaniyaTest />} />
-        <Route path="/final" element={<DelhiGurugram_Edition26 />} />
+        {/* <Route path="/final" element={<DelhiGurugram_Edition26 />} /> */}
         <Route path="/delhi-gurugram_edition-26-agenda" element={<DelhiGurugram_Edition26_Agenda />} />
         <Route path="/delhi-gurugram_edition-26-speakers" element={<DelhiGurugram_Edition26_Speakers />} />
         <Route path="/watch" element={<WatchPage />} />
