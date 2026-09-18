@@ -163,9 +163,9 @@ const RedesignNavigation = () => {
             )}
           </div>
 
-          <button className="redesign-register-btn w-full">
+          {/* <button className="redesign-register-btn w-full">
             Register Now
-          </button>
+          </button> */}
         </div>
       )}
     </header>
