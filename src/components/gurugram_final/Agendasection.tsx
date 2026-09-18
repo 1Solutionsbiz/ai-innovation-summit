@@ -133,11 +133,6 @@ const AGENDA_DATA: DayData[] = [
             // ],
           },
           {
-            time: "08:30 AM – 09:15 AM",
-            title: "Registration & Networking Breakfast ",
-            description: "Delegates arrive and collect registration kits. Lucky Draw QR codes active. Engagement Zone open in pre-function area. Sponsor booths open."
-          },
-          {
             time: "09:15 AM – 09:20 AM",
             title: "Welcome Address",
             description: "Welcome note by The Guild and Guild Live. Context setting for the day.. "
