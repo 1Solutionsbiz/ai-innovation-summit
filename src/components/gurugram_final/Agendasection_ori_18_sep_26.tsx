@@ -9,18 +9,12 @@ type Speaker = {
 };
 
 type DescriptionBlock =
-  | {
-      type: "paragraph";
-      text: string;
-      tag?: "h2" | "h3" | "h4" | "h5" | "span" | "p";
-      className?: string;
-    }
+  | { type: "paragraph"; text: string }
   | { type: "list"; items: string[] };
 
 type AgendaItem = {
   time: string;
   title: string;
-  section?: string;
   description?: string | DescriptionBlock[];
   speakers?: Speaker[];
   isTrack?: boolean;
@@ -127,7 +121,6 @@ const AGENDA_DATA: DayData[] = [
         items: [
           {
             time: "08:30 AM - 09:15 AM",
-            section: "Pre-Summit",
             title: "Registration & Networking Breakfast ",
             description: "Delegates arrive and collect registration kits. Lucky Draw QR codes active. Engagement Zone open in pre-function area. Sponsor booths open. ",
             // speakers: [
@@ -141,13 +134,11 @@ const AGENDA_DATA: DayData[] = [
           },
           {
             time: "09:15 AM – 09:20 AM",
-            section: "Opening",
             title: "Welcome Address",
             description: "Welcome note by The Guild and Guild Live. Context setting for the day.. "
           },
           {
             time: "09:20 AM – 09:40 AM ",
-            section: "Keynotes — First Half",
             title: "Opening Keynote From Assistance to Autonomy: The Enterprise AI Mandate for 2026",
             description: "What enterprise AI leadership actually looks like when the boardroom demands ROI, the regulators demand governance, and the technology moves faster than either can keep up with. - Where enterprise AI stands in India in 2026, the state of AI adoption across sectors - Why the shift from AI assistance to AI autonomy is a leadership decision, not just a technology decision - The structural choices, architectural, economic and cultural, that separate enduring AI deployments from those that stall - What the intelligent enterprise looks like from the inside and what leaders need to rethink "
           },
@@ -173,7 +164,6 @@ const AGENDA_DATA: DayData[] = [
           },
           {
             time: "10:45 AM – 11:30 AM",
-            section: "Plenary Sessions — First Half ",
             title: "Session 1: Leadership Panel The Technology Mandate: Scaling AI Where the Board Is Watching",
             description: "The role of Technology CXOs has been permanently rewritten. From technology custodians to enterprise intelligence architects. Accountable to boards for AI ROI. Accountable to regulators for AI governance. Accountable to the workforce for how AI reshapes their jobs. \n This panel brings together India's most senior Tech-CXOs from manufacturing, BFSI, pharma, FMCG, and cross-industry enterprises for a frank conversation on how they are navigating the most consequential mandate transformation in a generation. - Turning AI investment into a board-level ROI narrative - Governing GPU costs, model lifecycles and AI infrastructure at scale - Solving legacy integration, architecture debt and vendor lock-in - Redrawing AI accountability across the C-suite - Building the intelligent enterprise operating model - Leading the workforce through AI-driven change, trust and capability"
           },
@@ -204,20 +194,19 @@ const AGENDA_DATA: DayData[] = [
           },
           {
             time: "02:20 PM – 03:35 PM",
-            section: "Parallel Tracks — Post Lunch (2:20 PM – 3:35 PM)",
-            title: "Track 1: AI Security ",
-            description: "Security • Governance • Trust \nThe Trust Layer: Securing, Governing, and Scaling AI Enterprises Can Actually Rely On \n\n The dedicated AI security, governance, and trust track, where the enterprises deploying AI at scale are being forced to confront a hard truth: innovation without trust does not survive contact with the boardroom, the regulator, or the customer. This track brings together India's most senior CISOs, Heads of AI Governance, Chief Risk Officers, and security architects for a practitioner-level deep dive on what it takes to make enterprise AI safe, defensible, and durable in 2026.  - Treating agent access as the new privileged access - Building AI inventories across models, datasets, APIs, agents and vector databases - Moving from responsible AI principles to enforceable runtime guardrails and continuous testing - Managing parallel AI compliance requirements across regulators and sectors - Aligning the board on acceptable AI risk and making security a business enabler - Building trust infrastructure through audit trails, access governance and zero-trust agents "
+            title: "Track 1: AI Security Security • Governance • Trust The Trust Layer: Securing, Governing, and Scaling AI Enterprises Can Actually Rely On",
+            description: "The dedicated AI security, governance, and trust track, where the enterprises deploying AI at scale are being forced to confront a hard truth: innovation without trust does not survive contact with the boardroom, the regulator, or the customer. This track brings together India's most senior CISOs, Heads of AI Governance, Chief Risk Officers, and security architects for a practitioner-level deep dive on what it takes to make enterprise AI safe, defensible, and durable in 2026.  - Treating agent access as the new privileged access - Building AI inventories across models, datasets, APIs, agents and vector databases - Moving from responsible AI principles to enforceable runtime guardrails and continuous testing - Managing parallel AI compliance requirements across regulators and sectors - Aligning the board on acceptable AI risk and making security a business enabler - Building trust infrastructure through audit trails, access governance and zero-trust agents "
             
           },
           {
             time: "02:20 PM  – 03:35 PM",
-            title: "Track 2: Autonomous Industry ",
-            description: "Manufacturing • Robotics • Industrial AI \n The Autonomous Factory: Where Agentic AI, Robotics, and Industrial Intelligence Are Rewriting How India Makes Things \n\n The dedicated autonomous industry track, and the most operationally grounded conversation of the day. India’s manufacturing sector is undergoing its most consequential transformation in a generation, moving from cost-led production to intelligence-led manufacturing. Agentic AI, advanced robotics, digital twins, and industrial IoT are converging to create factories where machines can plan, coordinate, and execute autonomously. This track brings together senior technology, AI, engineering, and operations leaders from enterprise manufacturing industry sectors , and industrial automation. - From automation to autonomy: intelligent production systems that adapt with less retooling - Physical AI on the factory floor: cloud robotics, software-defined automation and intelligent systems - Predictive maintenance and quality inspection: scaling proven AI use cases beyond pilots - Digital twins as live operational intelligence: optimising energy, output and quality in real time - AI-driven supply chain orchestration: autonomous forecasting, procurement and logistics - PLI-scheme readiness: using AI-driven process control to strengthen manufacturing competitiveness - The workforce shift: managing the human impact as AI takes on repetitive decisions "
+            title: "Track 2: Autonomous Industry Manufacturing • Robotics • Industrial AI The Autonomous Factory: Where Agentic AI, Robotics, and Industrial Intelligence Are Rewriting How India Makes Things",
+            description: "The dedicated autonomous industry track, and the most operationally grounded conversation of the day. India’s manufacturing sector is undergoing its most consequential transformation in a generation, moving from cost-led production to intelligence-led manufacturing. Agentic AI, advanced robotics, digital twins, and industrial IoT are converging to create factories where machines can plan, coordinate, and execute autonomously. This track brings together senior technology, AI, engineering, and operations leaders from enterprise manufacturing industry sectors , and industrial automation. - From automation to autonomy: intelligent production systems that adapt with less retooling - Physical AI on the factory floor: cloud robotics, software-defined automation and intelligent systems - Predictive maintenance and quality inspection: scaling proven AI use cases beyond pilots - Digital twins as live operational intelligence: optimising energy, output and quality in real time - AI-driven supply chain orchestration: autonomous forecasting, procurement and logistics - PLI-scheme readiness: using AI-driven process control to strengthen manufacturing competitiveness - The workforce shift: managing the human impact as AI takes on repetitive decisions "
           },
           {
             time: "02:20 PM – 03:35 PM",
-            title: "Track 3: Enterprise AI in Action",
-            description: "Agents • Automation • Enterprise Applications \n Agents in Production: How Enterprise AI Is Rewiring Work, Not Just Augmenting It \n\n The dedicated enterprise AI in action track, where the theoretical becomes the operational. 79% of enterprises say AI agents are already being adopted; 66% report measurable productivity gains. Yet 88% of agent pilots never reach production. This track brings together the enterprise technology, AI, and business leaders who have crossed that gap, deploying agents that are actually shipping work across customer service, finance, procurement, engineering, and internal operations. Practical, in-production, with real ROI data. - Proven ROI zones: customer service, finance, document processing, engineering and internal operations - Multi-agent orchestration: architecture, memory and hand-offs for production-scale deployments - The observability mandate: tracing, cost, quality and human feedback across agent workflows - From workflows to agent-native design: redesigning processes around agent capabilities - Measuring agentic AI ROI: cycle time, error reduction and workforce leverage - Choosing enterprise agent platforms: application-layer and infrastructure-layer approaches -  Governance before scale: agent registries, least-privilege access and human-in-the-loop controls "
+            title: "Track 3: Enterprise AI in Action Agents • Automation • Enterprise Applications Agents in Production: How Enterprise AI Is Rewiring Work, Not Just Augmenting It",
+            description: "The dedicated enterprise AI in action track, where the theoretical becomes the operational. 79% of enterprises say AI agents are already being adopted; 66% report measurable productivity gains. Yet 88% of agent pilots never reach production. This track brings together the enterprise technology, AI, and business leaders who have crossed that gap, deploying agents that are actually shipping work across customer service, finance, procurement, engineering, and internal operations. Practical, in-production, with real ROI data. - Proven ROI zones: customer service, finance, document processing, engineering and internal operations - Multi-agent orchestration: architecture, memory and hand-offs for production-scale deployments - The observability mandate: tracing, cost, quality and human feedback across agent workflows - From workflows to agent-native design: redesigning processes around agent capabilities - Measuring agentic AI ROI: cycle time, error reduction and workforce leverage - Choosing enterprise agent platforms: application-layer and infrastructure-layer approaches -  Governance before scale: agent registries, least-privilege access and human-in-the-loop controls "
           },
           {
             time: "03:35 PM – 03:50 PM",
@@ -226,7 +215,6 @@ const AGENDA_DATA: DayData[] = [
           },
           {
             time: "03:50 PM– 04:00 PM ",
-            section: "Plenary Sessions — Second Half",
             title: "Partner Keynote Address",
             description: ""
           },
@@ -242,7 +230,6 @@ const AGENDA_DATA: DayData[] = [
           },
           {
             time: "05:30 PM – 05:45 PM ",
-            section: "Close of Day ",
             title: "Closing Address & Vote of Thanks",
             description: "Closing address by The Guild and Guild Live. Acknowledgement of partners, speakers, and delegates. Lucky Draw prize reveal."
           },
@@ -310,6 +297,8 @@ const AgendaSection = () => {
   const [activeTrackId, setActiveTrackId] = useState(activeDay.tracks[0].id);
   const activeTrack =
     activeDay.tracks.find((t) => t.id === activeTrackId) ?? activeDay.tracks[0];
+  const [expandedItems, setExpandedItems] = useState<Record<string, boolean>>({});
+
   const handleDayChange = (dayId: string) => {
     setActiveDayId(dayId);
     const newDay = AGENDA_DATA.find((d) => d.id === dayId);
@@ -363,13 +352,10 @@ const AgendaSection = () => {
         {/* Timeline */}
         <div className="mt-14">
           {getAgendaGroups(activeTrack.items).map((group, idx) => (
-            <div key={idx}>
-              {group.items[0].section && (
-                <div className="border-y border-white/15 bg-white/15 px-3 py-2 text-sm font-bold text-white sm:px-5 md:px-8 md:text-base">
-                  {group.items[0].section}
-                </div>
-              )}
-              <div className="grid min-w-0 grid-cols-[78px_minmax(0,1fr)] gap-x-3 border-t border-white/15 py-8 first:border-t-0 sm:gap-x-6 md:grid-cols-[auto_minmax(0,1fr)] md:gap-x-10">
+            <div
+              key={idx}
+              className="grid min-w-0 grid-cols-[78px_minmax(0,1fr)] gap-x-3 border-t border-white/15 py-8 first:border-t-0 sm:gap-x-6 md:grid-cols-[auto_minmax(0,1fr)] md:gap-x-10"
+            >
               {/* Time column */}
               <div className="w-[78px] pt-1 text-sm font-semibold text-white sm:w-[110px] md:w-[190px] md:text-base">
                 {group.time}
@@ -377,9 +363,12 @@ const AgendaSection = () => {
 
               {/* Content column */}
               <div
-                className="min-w-0 border-l-2 border-fuchsia-600 pl-3 sm:pl-5 md:pl-8"
+                className={`min-w-0 border-l-2 border-fuchsia-600 pl-3 sm:pl-5 md:pl-8 ${
+                  group.items.length > 1
+                    ? "grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6"
+                    : ""
+                }`}
               >
-                <div className="space-y-8">
                 {group.items.map((item, itemIdx) => (
                   <div
                     key={itemIdx}
@@ -396,31 +385,45 @@ const AgendaSection = () => {
                     {item.description && (
                       (() => {
                         const descriptionParts = getDescriptionParts(item.description);
+                        const itemKey = `${idx}-${itemIdx}`;
+                        const isExpanded = Boolean(expandedItems[itemKey]);
 
                         return (
                           <div className="mt-2 max-w-3xl break-words text-sm leading-relaxed text-white/65">
                             {descriptionParts.summary && <p>{descriptionParts.summary}</p>}
+
                             {descriptionParts.details.length > 0 && (
-                              <div className="mt-3 space-y-4">
-                                {descriptionParts.details.map((block, blockIdx) =>
-                                  block.type === "paragraph" ? (
-                                    (() => {
-                                      const Tag = block.tag ?? "p";
-                                      return (
-                                        <Tag key={blockIdx} className={block.className}>
-                                          {block.text}
-                                        </Tag>
-                                      );
-                                    })()
-                                  ) : (
-                                    <ul key={blockIdx} className="list-disc space-y-2 pl-5">
-                                      {block.items.map((itemText, detailIdx) => (
-                                        <li key={detailIdx}>{itemText}</li>
-                                      ))}
-                                    </ul>
-                                  ),
+                              <>
+                                <button
+                                  type="button"
+                                  onClick={() =>
+                                    setExpandedItems((current) => ({
+                                      ...current,
+                                      [itemKey]: !current[itemKey],
+                                    }))
+                                  }
+                                  className="mt-3 font-semibold text-fuchsia-300 transition-colors hover:text-fuchsia-200"
+                                  aria-expanded={isExpanded}
+                                >
+                                  {isExpanded ? "Read Less" : "Read More"}
+                                </button>
+
+                                {isExpanded && (
+                                  <div className="mt-3 space-y-4">
+                                    {descriptionParts.details.map((block, blockIdx) =>
+                                      block.type === "paragraph" ? (
+                                        <p key={blockIdx}>{block.text}</p>
+                                      ) : (
+                                        <ul key={blockIdx} className="list-disc space-y-2 pl-5">
+                                          {block.items.map((itemText, detailIdx) => (
+                                            <li key={detailIdx}>{itemText}</li>
+                                          ))}
+                                        </ul>
+                                      ),
+                                    )}
+                                  </div>
                                 )}
-                              </div>
+                              </>
                             )}
                           </div>
                         );
@@ -450,9 +453,7 @@ const AgendaSection = () => {
                     )}
                   </div>
                 ))}
-                </div>
               </div>
-            </div>
             </div>
           ))}
         </div>
