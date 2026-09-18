@@ -90,7 +90,7 @@ const RoomThatMatters = () => {
   };
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden border-t-[5px] border-[#07163d] bg-[#f2f4ff] px-4 py-10 sm:px-8 sm:py-12 md:py-16 lg:px-12">
+    <section ref={sectionRef} id="roommatters" className="relative overflow-hidden border-t-[5px] border-[#07163d] bg-[#f2f4ff] px-4 py-10 sm:px-8 sm:py-12 md:py-16 lg:px-12">
       {/* Top accent bar */}
       <div className="absolute left-0 right-0 top-0 h-1 bg-[#07163d]" />
 

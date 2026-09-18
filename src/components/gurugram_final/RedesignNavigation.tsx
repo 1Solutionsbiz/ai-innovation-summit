@@ -24,7 +24,7 @@ const RedesignNavigation = () => {
     { label: "Speakers", href: "#speakers" },
     { label: "Partners", href: "#partners" },
     { label: "Agenda", href: "delhi-gurugram_edition-26-agenda" },
-    { label: "Who Should Attend", href: "#who-should-attend" },
+    { label: "Who Should Attend", href: "#roommatters" },
     { label: "Contact", href: "#contact" },
   ];
 
