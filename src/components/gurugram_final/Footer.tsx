@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import aiLogo from "@/assets/ai-innovation-logo.png";
 import aiinvationlogo from "/logo/Ai-Innovation_Logo_White.png";
 import guildLogo from "@/assets/guild-logo.png";
+import Yesican from "/logo/Yesican.png";
 
 const Footer = () => {
   const footerRef = useRef<HTMLElement>(null);
@@ -58,6 +59,15 @@ const Footer = () => {
                 alt="The Guild"
                 className="h-8 sm:h-10 md:h-12 w-auto object-contain"
               />
+
+
+              <img
+                src={Yesican}
+                alt="The Guild"
+                className="h-4 sm:h-4 md:h-4 w-auto object-contain"
+              />
+
+
             </div>
           </div>
 
