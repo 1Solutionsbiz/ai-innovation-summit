@@ -1456,6 +1456,25 @@
   transition: transform 0.2s ease;
 }
 
+.redesign-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  isolation: isolate;
+}
+
+.mobile-redesign-menu-open {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+  max-height: calc(100dvh - 70px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
 @media (max-width: 767px) {
   .redesign-nav-inner {
     padding: 8px 12px;
