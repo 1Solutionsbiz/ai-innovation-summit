@@ -2,7 +2,7 @@ import { Linkedin } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import aiLogo from "@/assets/ai-innovation-logo.png";
 import aiinvationlogo from "/logo/Ai-Innovation_Logo_White.png";
-import guildLogo from "@/assets/guild-logo.png";
+import guildLogo from "/logo/the-guild-dg26.png";
 import Yesican from "/logo/Yesican.png";
 
 const Footer = () => {
@@ -57,14 +57,14 @@ const Footer = () => {
               <img
                 src={guildLogo}
                 alt="The Guild"
-                className="h-8 sm:h-10 md:h-12 w-auto object-contain"
+                className="h-8 sm:h-8 md:h-8 w-auto object-contain"
               />
 
 
               <img
                 src={Yesican}
                 alt="The Guild"
-                className="h-4 sm:h-4 md:h-4 w-auto object-contain"
+                className="mt-2 h-4 sm:h-4 md:h-4 w-auto object-contain"
               />
 
 
