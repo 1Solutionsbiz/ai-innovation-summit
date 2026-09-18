@@ -284,7 +284,7 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
             // { name: "pincode", label: "Pincode" }
           ].map(field => (
             <div key={field.name}>
-              <label className="mb-2 block text-sm font-semibold text-slate-200">{field.label}</label>
+              <label className="mb-2 block text-sm font-semibold text-slate-200">{field.label} *</label>
               <input
                 type={field.name.includes("Email") ? "email" : field.name.includes("Number") ? "tel" : "text"}
                 name={field.name}
@@ -301,7 +301,7 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
 
           {/* Employee Size */}
           <div>
-            <label className="mb-2 block text-sm font-semibold text-slate-200">Employee Size</label>
+            <label className="mb-2 block text-sm font-semibold text-slate-200">Employee Size *</label>
             <select
               name="employeeSize"
               value={formData.employeeSize}
@@ -322,7 +322,7 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
             { name: "pincode", label: "Pincode" }
           ].map(field => (
             <div key={field.name}>
-              <label className="mb-2 block text-sm font-semibold text-slate-200">{field.label}</label>
+              <label className="mb-2 block text-sm font-semibold text-slate-200">{field.label} *</label>
               <input
                 type={field.name.includes("Email") ? "email" : field.name.includes("Number") ? "tel" : "text"}
                 name={field.name}
@@ -339,7 +339,7 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
 
           {/* Industry */}
           <div>
-            <label className="mb-2 block text-sm font-semibold text-slate-200">Industry</label>
+            <label className="mb-2 block text-sm font-semibold text-slate-200">Industry *</label>
             <select
               name="industry"
               value={formData.industry}
@@ -355,7 +355,7 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
           {/* date of birth  */}
           <div>
 
-            <label className="mb-2 block text-sm font-semibold text-slate-200">Birth Year</label>
+            <label className="mb-2 block text-sm font-semibold text-slate-200">Birth Year *</label>
             {/* <input
             type="number"
             name="dob"
@@ -406,7 +406,7 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
           {/* Parallel Track Selection */}
           <div className="rounded-xl border border-indigo-400/30 bg-indigo-950/25 p-5 md:col-span-2">
             <label className="mb-3 block text-sm font-semibold text-white">
-              Which Parallel Industry Track do you wish to attend?
+              Which Parallel Industry Track do you wish to attend? *
             </label>
             <div className="space-y-3">
 
@@ -465,7 +465,7 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
                 onChange={handleChange}
                 className="mt-1"
               />
-              <span>I have read & agree with <Link to="/terms-and-conditions" className="font-semibold text-[#e92630] hover:text-[#e92630]">Terms & Conditions</Link> </span>
+              <span>I have read & agree with <Link to="/terms-and-conditions" className="font-semibold text-[#e92630] hover:text-[#e92630]">Terms & Conditions</Link> *</span>
             </label>
             {errors.termsAccepted && <p className="mt-1 text-sm text-red-400">{errors.termsAccepted}</p>}
           </div>
@@ -478,7 +478,7 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
                 onChange={handleChange}
                 className="mt-1"
               />
-              <span>I acknowledge that I am 18 years of age or older and eligible to participate.</span>
+              <span>I acknowledge that I am 18 years of age or older and eligible to participate. *</span>
             </label>
             {errors.ageAcknowledged && (
               <p className="mt-1 text-sm text-red-400">{errors.ageAcknowledged}</p>
