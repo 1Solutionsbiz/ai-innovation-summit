@@ -26,7 +26,7 @@ const OperatingModel = ({ showCta = true }: OperatingModelProps) => {
           setIsVisible(false);
         }
       },
-      { threshold: 0.2 },
+      { threshold: 0, rootMargin: "-15% 0px -15% 0px" },
     );
 
     observer.observe(section);

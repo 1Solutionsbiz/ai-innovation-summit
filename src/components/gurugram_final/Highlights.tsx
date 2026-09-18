@@ -150,9 +150,7 @@ const Highlights = () => {
           setIsVisible(false);
         }
       },
-      {
-        threshold: 0.25,
-      }
+      { threshold: 0, rootMargin: "-15% 0px -15% 0px" }
     );
 
     observer.observe(section);

@@ -67,7 +67,7 @@ const Sponsors = () => {
           setSectionVisible(false);
         }
       },
-      { threshold: 0.5 },
+      { threshold: 0, rootMargin: "-15% 0px -15% 0px" },
     );
 
     observer.observe(section);
