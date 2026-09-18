@@ -49,7 +49,7 @@ const defaultTestimonials: Testimonial[] = [
       "The way tons of data is getting created in the last 3-4 years, the amount of data which is getting generated is humongous, so what we need is an infrastructure which can basically manage on-demand situation, and the infrastructure which is a secure infrastructure and has a lot of inbuilt facilities.",
     name: "Vinod Bhat",
     designation: "Former CIO, Vistara",
-    image: "gurugram/testimonial/a.png",
+    image: "gurugram/testimonial/Vinod-bhatt.png",
   },
 ];
 
