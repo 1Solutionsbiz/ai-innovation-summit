@@ -246,16 +246,21 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
   const maxDob = getEighteenYearsAgo();
 
   return (
-    <section className="py-16 px-4 bg-gray-900 text-white" id="register">
-      <div className="max-w-4xl mx-auto bg-gray-800 p-8 rounded-lg shadow-lg">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4">
+    <section className="relative overflow-hidden bg-[#020617] px-4 py-20 text-white sm:px-6" id="register">
+      <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(99,102,241,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.08)_1px,transparent_1px)] [background-size:42px_42px]" />
+      <div className="relative mx-auto max-w-5xl overflow-hidden rounded-2xl border border-indigo-400/30 bg-slate-950/90 p-5 shadow-[0_0_80px_rgba(37,99,235,0.18)] sm:p-8 lg:p-12">
+        <div className="mb-10 text-center">
+          <p className="mb-3 text-xs font-bold uppercase tracking-[0.35em] text-[#e92630]">AI Innovation Summit | Delhi-NCR</p>
+          <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
           Express Your Interest To Attend The Summit
-        </h2>
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-slate-400">Join senior technology and business leaders shaping the next era of intelligent enterprise.</p>
+        </div>
 
-        {serverError && <div className="mb-4 text-red-400 text-center">{serverError}</div>}
-        {successMessage && <div className="mb-4 text-green-400 text-center">{successMessage}</div>}
+        {serverError && <div className="mb-6 rounded-lg border border-red-400/40 bg-red-500/10 px-4 py-3 text-center text-sm text-red-300">{serverError}</div>}
+        {successMessage && <div className="mb-6 rounded-lg border border-emerald-400/40 bg-emerald-500/10 px-4 py-3 text-center text-sm text-emerald-300">{successMessage}</div>}
 
-        <form onSubmit={handleSubmit} noValidate className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <form onSubmit={handleSubmit} noValidate className="grid grid-cols-1 gap-x-6 gap-y-5 md:grid-cols-2">
           {/* Hidden Fields */}
           <input type="hidden" name="utm_campaign_temp" value={formData.utm_campaign_temp} />
           <input type="hidden" name="utm_medium_temp" value={formData.utm_medium_temp} />
@@ -279,16 +284,16 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
             // { name: "pincode", label: "Pincode" }
           ].map(field => (
             <div key={field.name}>
-              <label className="block mb-1 font-semibold ">{field.label}</label>
+              <label className="mb-2 block text-sm font-semibold text-slate-200">{field.label} *</label>
               <input
                 type={field.name.includes("Email") ? "email" : field.name.includes("Number") ? "tel" : "text"}
                 name={field.name}
                 value={formData[field.name as keyof FormDataType] as string}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded px-3 py-2 text-black"
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               />
               {errors[field.name as keyof FormDataType] && (
-                <p className="text-red-400 text-sm mt-1">{errors[field.name as keyof FormDataType]}</p>
+                <p className="mt-1 text-sm text-red-400">{errors[field.name as keyof FormDataType]}</p>
               )}
             </div>
           ))}
@@ -296,17 +301,17 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
 
           {/* Employee Size */}
           <div>
-            <label className="block mb-1 font-semibold ">Employee Size</label>
+            <label className="mb-2 block text-sm font-semibold text-slate-200">Employee Size *</label>
             <select
               name="employeeSize"
               value={formData.employeeSize}
               onChange={handleChange}
-              className="w-full border border-gray-300 rounded px-3 py-2 text-black"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
             >
               <option value="">Select Size</option>
               {employeeSizes.map(size => <option key={size} value={size}>{size}</option>)}
             </select>
-            {errors.employeeSize && <p className="text-red-400 text-sm mt-1">{errors.employeeSize}</p>}
+            {errors.employeeSize && <p className="mt-1 text-sm text-red-400">{errors.employeeSize}</p>}
           </div>
 
 
@@ -317,16 +322,16 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
             { name: "pincode", label: "Pincode" }
           ].map(field => (
             <div key={field.name}>
-              <label className="block mb-1 font-semibold ">{field.label}</label>
+              <label className="mb-2 block text-sm font-semibold text-slate-200">{field.label} *</label>
               <input
                 type={field.name.includes("Email") ? "email" : field.name.includes("Number") ? "tel" : "text"}
                 name={field.name}
                 value={formData[field.name as keyof FormDataType] as string}
                 onChange={handleChange}
-                className="w-full border border-gray-300 rounded px-3 py-2 text-black"
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               />
               {errors[field.name as keyof FormDataType] && (
-                <p className="text-red-400 text-sm mt-1">{errors[field.name as keyof FormDataType]}</p>
+                <p className="mt-1 text-sm text-red-400">{errors[field.name as keyof FormDataType]}</p>
               )}
             </div>
           ))}
@@ -334,23 +339,23 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
 
           {/* Industry */}
           <div>
-            <label className="block mb-1 font-semibold ">Industry</label>
+            <label className="mb-2 block text-sm font-semibold text-slate-200">Industry *</label>
             <select
               name="industry"
               value={formData.industry}
               onChange={handleChange}
-              className="w-full border border-gray-300 rounded px-3 py-2 text-black"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
             >
               <option value="">Select Industry</option>
               {industries.map(i => <option key={i} value={i}>{i}</option>)}
             </select>
-            {errors.industry && <p className="text-red-400 text-sm mt-1">{errors.industry}</p>}
+            {errors.industry && <p className="mt-1 text-sm text-red-400">{errors.industry}</p>}
           </div>
 
           {/* date of birth  */}
           <div>
 
-            <label className="block mb-1 font-semibold ">Birth Year</label>
+            <label className="mb-2 block text-sm font-semibold text-slate-200">Birth Year *</label>
             {/* <input
             type="number"
             name="dob"
@@ -373,7 +378,7 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
               min="1900"
               max={new Date().getFullYear()}
               placeholder="YYYY"
-              className="w-full border border-gray-300 rounded px-3 py-2 text-black"
+              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
             />
 
 
@@ -392,20 +397,20 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
 
 
             {errors.dob && (
-              <p className="text-red-400 text-sm mt-1">{errors.dob}</p>
+              <p className="mt-1 text-sm text-red-400">{errors.dob}</p>
             )}
           </div>
 
 
 
           {/* Parallel Track Selection */}
-          <div className="md:col-span-2 border rounded bg-white px-3 py-2">
-            <label className="block mb-2 font-semibold text-black">
-              Which Parallel Industry Track do you wish to attend?
+          <div className="rounded-xl border border-indigo-400/30 bg-indigo-950/25 p-5 md:col-span-2">
+            <label className="mb-3 block text-sm font-semibold text-white">
+              Which Parallel Industry Track do you wish to attend? *
             </label>
-            <div className="space-y-2 px-3 py-3">
+            <div className="space-y-3">
 
-              <label className="flex items-start space-x-3 text-black">
+              <label className="flex cursor-pointer items-start gap-3 text-sm text-slate-200">
                 <input
                   type="radio"
                   name="parallelTrack"
@@ -417,7 +422,7 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
                 <span>Track A: AI Security</span>
               </label>
 
-              <label className="flex items-start space-x-3 text-black">
+              <label className="flex cursor-pointer items-start gap-3 text-sm text-slate-200">
                 <input
                   type="radio"
                   name="parallelTrack"
@@ -429,7 +434,7 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
                 <span>Track B: Autonomous Industry Manufacturing</span>
               </label>
 
-              <label className="flex items-start space-x-3 text-black">
+              <label className="flex cursor-pointer items-start gap-3 text-sm text-slate-200">
                 <input
                   type="radio"
                   name="parallelTrack"
@@ -443,7 +448,7 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
             </div>
 
             {errors.parallelTrack && (
-              <p className="text-red-400 text-sm mt-1">
+              <p className="mt-1 text-sm text-red-400">
                 {errors.parallelTrack}
               </p>
             )}
@@ -451,8 +456,8 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
 
 
           {/* Terms and Disclosure */}
-          <div className="md:col-span-2">
-            <label className="flex items-start space-x-3">
+          <div className="border-t border-slate-800 pt-5 md:col-span-2">
+            <label className="flex cursor-pointer items-start gap-3 text-sm leading-6 text-slate-300">
               <input
                 type="checkbox"
                 name="termsAccepted"
@@ -460,12 +465,12 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
                 onChange={handleChange}
                 className="mt-1"
               />
-              <span>I have read & agree with <Link to="/terms-and-conditions" className="text-neon-blue">Terms & Conditions</Link> </span>
+              <span>I have read & agree with <Link to="/terms-and-conditions" className="font-semibold text-[#e92630] hover:text-[#e92630]">Terms & Conditions</Link> *</span>
             </label>
-            {errors.termsAccepted && <p className="text-red-400 text-sm mt-1">{errors.termsAccepted}</p>}
+            {errors.termsAccepted && <p className="mt-1 text-sm text-red-400">{errors.termsAccepted}</p>}
           </div>
           <div className="md:col-span-2">
-            <label className="flex items-start space-x-3">
+            <label className="flex cursor-pointer items-start gap-3 text-sm leading-6 text-slate-300">
               <input
                 type="checkbox"
                 name="ageAcknowledged"
@@ -473,10 +478,10 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
                 onChange={handleChange}
                 className="mt-1"
               />
-              <span>I acknowledge that I am 18 years of age or older and eligible to participate.</span>
+              <span>I acknowledge that I am 18 years of age or older and eligible to participate. *</span>
             </label>
             {errors.ageAcknowledged && (
-              <p className="text-red-400 text-sm mt-1">{errors.ageAcknowledged}</p>
+              <p className="mt-1 text-sm text-red-400">{errors.ageAcknowledged}</p>
             )}
           </div>
 
@@ -494,8 +499,8 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
             {errors.detailsDisclosure && <p className="text-red-400 text-sm mt-1">{errors.detailsDisclosure}</p>}
           </div> */}
           {/* New Consent Checkboxes */}
-          <div className="md:col-span-2">
-            <label className="flex items-start space-x-3">
+          <div className="md:col-span-2 rounded-lg bg-slate-900/60 p-4">
+            <label className="flex cursor-pointer items-start gap-3 text-sm leading-6 text-slate-400">
               <input
                 type="checkbox"
                 name="dataConsent"
@@ -503,12 +508,12 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
                 onChange={handleChange}
                 className="mt-1"
               />
-              <span>I consent to the collection and processing of my personal data by The Guild (Polygon Media Pvt. Ltd.) for the purpose of registering and communicating with me regarding this event. I have read and agree to the <Link to="/privacy-policy" className="text-neon-blue"> Privacy Policy</Link>.</span>
+              <span>I consent to the collection and processing of my personal data by The Guild (Polygon Media Pvt. Ltd.) for the purpose of registering and communicating with me regarding this event. I have read and agree to the <Link to="/privacy-policy" className="font-semibold text-[#e92630] hover:text-[#e92630]"> Privacy Policy</Link>.</span>
             </label>
           </div>
 
-          <div className="md:col-span-2">
-            <label className="flex items-start space-x-3">
+          <div className="md:col-span-2 rounded-lg bg-slate-900/60 p-4">
+            <label className="flex cursor-pointer items-start gap-3 text-sm leading-6 text-slate-400">
               <input
                 type="checkbox"
                 name="marketingConsent"
@@ -520,8 +525,8 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
             </label>
           </div>
 
-          <div className="md:col-span-2">
-            <label className="flex items-start space-x-3">
+          <div className="md:col-span-2 rounded-lg bg-slate-900/60 p-4">
+            <label className="flex cursor-pointer items-start gap-3 text-sm leading-6 text-slate-400">
               <input
                 type="checkbox"
                 name="sponsorSharingConsent"
@@ -533,7 +538,7 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
             </label>
           </div>
           {/* reCAPTCHA */}
-          <div className="md:col-span-2">
+          <div className="md:col-span-2 flex justify-center rounded-lg border border-slate-800 bg-slate-900/50 p-4">
             <ReCAPTCHA
               sitekey={RECAPTCHA_SITE_KEY}
               onChange={token => setRecaptchaToken(token)}
@@ -542,17 +547,17 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
           </div>
 
           {/* Submit */}
-          <div className="md:col-span-2 text-center">
+          <div className="md:col-span-2 pt-2 text-center">
             <button
               type="submit"
               disabled={submitting}
-              className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded"
+              className="btn-bg register-btn min-w-44 py-3 text-sm font-bold uppercase tracking-widest transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
             >
               {submitting ? "Submitting..." : "Submit"}
             </button>
-            <p className="text-xs mt-2 text-gray-400">
+            <p className="mx-auto mt-4 max-w-3xl text-xs leading-5 text-slate-500">
               You can withdraw your consent at any time by contacting us at guildconferences@guildlive.com.
-              All data will be processed in accordance with The Guild's <Link to="/privacy-policy" className="text-neon-blue"> Privacy Policy</Link>  and applicable data protection laws.
+              All data will be processed in accordance with The Guild's <Link to="/privacy-policy" className="text-[#e92630] hover:text-[#e92630]"> Privacy Policy</Link>  and applicable data protection laws.
             </p>
           </div>
         </form>
