@@ -1485,10 +1485,10 @@
 }
 
 .redesign-nav-inner{
-      display: flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 6rem;
+    padding: 1rem 6rem;
 }
 
 @media (max-width: 767px) {
