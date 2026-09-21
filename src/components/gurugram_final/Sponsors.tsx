@@ -2,14 +2,15 @@ import { useEffect, useRef, useState } from "react";
 import { getScrollDirection } from "@/hooks/useScrollDirection";
 
 const placeholderLogos = [
-  { src: "/gurugram/pastsponsers/Atlassian.png", alt: "" },
-  { src: "/gurugram/pastsponsers/aws.png", alt: "" },
-  { src: "/gurugram/pastsponsers/boom.png", alt: "" },
-  { src: "/gurugram/pastsponsers/cohesity.png", alt: "" },
-  { src: "/gurugram/pastsponsers/Couchbase.png", alt: "" },
-  { src: "/gurugram/pastsponsers/Equateme.png", alt: "" },
-  { src: "/gurugram/pastsponsers/microsoft.png", alt: "" },
+  
   { src: "/gurugram/pastsponsers/salesforce.png", alt: "" },
+  { src: "/gurugram/pastsponsers/adobe.png", alt: "" },
+  { src: "/gurugram/pastsponsers/Atlassian.png", alt: "" },
+  { src: "/gurugram/pastsponsers/cohesity.png", alt: "" },
+  { src: "/gurugram/pastsponsers/aws.png", alt: "" },
+  { src: "/gurugram/pastsponsers/microsoft.png", alt: "" },
+  { src: "/gurugram/pastsponsers/boom.png", alt: "" },
+  { src: "/gurugram/pastsponsers/Equateme.png", alt: "" },
 ];
 
 // Scroll speed in seconds — lower number = faster scroll, higher = slower.
