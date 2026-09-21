@@ -2,23 +2,21 @@ import { useEffect, useRef, useState } from "react";
 import { getScrollDirection } from "@/hooks/useScrollDirection";
 
 const placeholderLogos = [
-  { src: "/gurugram/pastsponsers/Atlassian.png", alt: "" },
-  { src: "/gurugram/pastsponsers/aws.png", alt: "" },
-  { src: "/gurugram/pastsponsers/cohesity.png", alt: "" },
-  { src: "/gurugram/pastsponsers/Couchbase.png", alt: "" },
-  { src: "/gurugram/pastsponsers/Equateme.png", alt: "" },
-  { src: "/gurugram/pastsponsers/salesforce.png", alt: "" },
+  { src: "/gurugram/pastsponsers/past-partner-logo-stip.png", alt: "" },
+  // { src: "/gurugram/pastsponsers/Atlassian.png", alt: "" },
+  // { src: "/gurugram/pastsponsers/aws.png", alt: "" },
+  // { src: "/gurugram/pastsponsers/boom.png", alt: "" },
+  // { src: "/gurugram/pastsponsers/cohesity.png", alt: "" },
+  // { src: "/gurugram/pastsponsers/Couchbase.png", alt: "" },
+  // { src: "/gurugram/pastsponsers/Equateme.png", alt: "" },
+  // { src: "/gurugram/pastsponsers/microsoft.png", alt: "" },
+  // { src: "/gurugram/pastsponsers/salesforce.png", alt: "" },
 ];
-
-// Scroll speed in seconds — lower number = faster scroll, higher = slower.
-const SCROLL_DURATION_SECONDS = 20;
 
 const Sponsors = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [sectionVisible, setSectionVisible] = useState(false);
   const [revealDirection, setRevealDirection] = useState<"up" | "down">("down");
-  const scrollingLogos = [...placeholderLogos, ...placeholderLogos];
-
   useEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
@@ -75,38 +73,17 @@ const Sponsors = () => {
       </div>
 
       <div className={`mt-10 sm:mt-16 overflow-hidden partners-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(3, 4) }}>
-        <div
-          className="sponsor-auto-scroll gap-6 sm:gap-10 md:gap-10 px-4 sm:px-8"
-          style={{ animationDuration: `${SCROLL_DURATION_SECONDS}s` }}
-        >
-          {scrollingLogos.map((logo, i) => (
+        <div className="flex items-center justify-center px-4 sm:px-8">
+          {placeholderLogos.map((logo) => (
             <img
-              key={`${logo.src}-${i}`}
+              key={logo.src}
               src={logo.src}
               alt={logo.alt}
-              className="shrink-0 h-7 sm:h-8 md:h-12 w-auto object-contain grayscale opacity-80 hover:opacity-100 hover:grayscale-0 transition bg-white p-2"
+              className="h-auto max-h-20 w-full max-w-[1200px] object-contain"
             />
           ))}
         </div>
       </div>
-
-      <style>{`
-        @keyframes sponsor-scroll-horizontal {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        .sponsor-auto-scroll {
-          display: flex;
-          align-items: center;
-          width: max-content;
-          animation-name: sponsor-scroll-horizontal;
-          animation-timing-function: linear;
-          animation-iteration-count: infinite;
-        }
-        .sponsor-auto-scroll:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
     </section>
   );
 };
