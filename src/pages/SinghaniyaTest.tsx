@@ -3,7 +3,9 @@ import Navigation from "@/components/gurugram_final/RedesignNavigation";
 import Agenda from "@/components/bengaluru26/Agenda"; 
 
 import { PartnerSectionForm } from "@/components/PartnerSectionForm";
-import { BengaluruJune26RegisterForm } from "@/components/BengaluruJune26RegisterForm";
+
+import { BengaluruJune26RegisterForm } from "@/components/BengaluruJune26RegisterLinkedinFOrm";
+// import { BengaluruJune26RegisterForm } from "@/components/BengaluruJune26RegisterForm";
 
 import Footer from "@/components/gurugram_final/Footer";
 
