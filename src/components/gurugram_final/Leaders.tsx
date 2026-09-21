@@ -73,6 +73,18 @@ const LeadersNumbers = () => {
             </span>
           </h2>
 
+
+          <div className="event-info-meta mt-3">
+            <span className={`partners-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(0, 4) }}>
+              December 2, 2026
+            </span>
+            <span className={`partners-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(1, 4) }}>
+              The Leela Ambience Gurugram, Delhi-NCR
+            </span>
+          </div>
+
+
+
           <a
             href="#delhincrregistrationform"
             className={`leaders-btn btn-bg partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
