@@ -88,7 +88,7 @@ const BengaloreRegistrationForm: React.FC = () => {
         { Header: 'Phone Number', accessor: 'phone_number', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         // { Header: 'Mobile Number', accessor: 'mobile_number', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         { Header: 'Official Email', accessor: 'official_email', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
-        // { Header: 'Personal Email', accessor: 'personal_email', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
+        { Header: 'Linkedin URL', accessor: 'personal_email', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         { Header: 'City', accessor: 'city', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         // { Header: 'State', accessor: 'state', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },
         { Header: 'Parallel Track', accessor: 'parallel_track', sortType: 'alphanumeric', Cell: ({ value }: { value: string | null }) => value || 'N/A' },

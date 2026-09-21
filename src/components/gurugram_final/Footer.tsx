@@ -56,7 +56,7 @@ const Footer = () => {
             </div>
 
             <p className="text-slate-300 text-sm leading-relaxed">
-              From prompt to impact — the premier summit for artificial intelligence
+              From assistance to autonomy — the premier summit for artificial intelligence
               leaders and enthusiasts, making it the most impactful AI Summit.
             </p>
 

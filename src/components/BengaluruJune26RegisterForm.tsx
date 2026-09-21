@@ -15,7 +15,7 @@ interface FormDataType {
   employeeSize: string;
   phoneNumber: string;
   officialEmail: string;
-  // personalEmail: string;
+  personalEmail: string;
   city: string;
   pincode: string;
   dob: string;
@@ -48,7 +48,7 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
     employeeSize: "",
     phoneNumber: "",
     officialEmail: "",
-    // personalEmail: "",
+    personalEmail: "",
     city: "",
 
     pincode: "",
@@ -159,11 +159,11 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
         ...formData,
         official_email: formData.officialEmail,
         phone_number: formData.phoneNumber,
-        // personal_email: formData.personalEmail,
+        personal_email: formData.personalEmail,
         recaptchaToken,
       };
       delete payload.officialEmail;
-      // delete payload.personalEmail;
+      delete payload.personalEmail;
       delete payload.phoneNumber;
 
 
@@ -191,7 +191,7 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
         employeeSize: "",
         phoneNumber: "",
         officialEmail: "",
-        // personalEmail: "",
+        personalEmail: "",
         city: "",
         dob: "",
         parallelTrack: "",
@@ -400,6 +400,64 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
               <p className="mt-1 text-sm text-red-400">{errors.dob}</p>
             )}
           </div>
+
+
+
+
+
+
+
+
+
+
+          {/* Linked In URL */}
+          <div className="md:col-span-2">
+
+
+          {[
+            // { name: "name", label: "Name" },
+            // { name: "designation", label: "Designation" },
+            // { name: "organization", label: "Organization" },
+            // { name: "phoneNumber", label: "Phone Number" },
+            // { name: "officialEmail", label: "Official Email" },
+            { name: "personalEmail", label: "Linkedin URL" },
+            // { name: "city", label: "City" },
+            // { name: "pincode", label: "Pincode" }
+          ].map(field => (
+            <div key={field.name}>
+              <label className="mb-2 block text-sm font-semibold text-slate-200">{field.label}</label>
+              <input
+                type="text"
+                name={field.name}
+                value={formData[field.name as keyof FormDataType] as string}
+                onChange={handleChange}
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+              />
+              {errors[field.name as keyof FormDataType] && (
+                <p className="mt-1 text-sm text-red-400">{errors[field.name as keyof FormDataType]}</p>
+              )}
+            </div>
+          ))}
+
+
+
+          </div>
+          {/* Linked In URL */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
