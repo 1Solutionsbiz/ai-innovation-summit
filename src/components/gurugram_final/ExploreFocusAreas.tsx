@@ -745,8 +745,8 @@ const FocusAreasSection = () => {
           position: absolute;
           z-index: 5;
           left: 18%;
-          right: 38%;
-          top: 10%;
+          right: 15%;
+          top: 23%;
           color: white;
         }
 
@@ -754,14 +754,14 @@ const FocusAreasSection = () => {
         .focus-copy-right {
           left: 30%;
           right: 4%;
-          top: 10%;
+          top: 23%;
         }
 
 
         .focus-copy-agentic {
           left: 25%;
           right: 6%;
-          top: 12%;
+          top: 25%;
         }
 
 
@@ -780,16 +780,10 @@ const FocusAreasSection = () => {
 
         .focus-copy h3 {
           margin: 0;
-
           font-size: clamp(20px,20px,42px);
-
           line-height: 1.3;
-
           font-weight: 900;
-
           font-style: italic;
-
-          letter-spacing: 0px;
         }
 
 
