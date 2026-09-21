@@ -427,7 +427,7 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
             <div key={field.name}>
               <label className="mb-2 block text-sm font-semibold text-slate-200">{field.label}</label>
               <input
-                type={field.name.includes("Email") ? "email" : field.name.includes("Number") ? "tel" : "text"}
+                type="text"
                 name={field.name}
                 value={formData[field.name as keyof FormDataType] as string}
                 onChange={handleChange}
