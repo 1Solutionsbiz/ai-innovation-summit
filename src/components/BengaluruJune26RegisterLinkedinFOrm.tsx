@@ -163,7 +163,7 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
         recaptchaToken,
       };
       delete payload.officialEmail;
-      // delete payload.personalEmail;
+      delete payload.personalEmail;
       delete payload.phoneNumber;
 
 
@@ -252,7 +252,7 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
         <div className="mb-10 text-center">
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.35em] text-[#e92630]">AI Innovation Summit | Delhi-NCR</p>
           <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
-            Express Your Interest To Attend The Summit
+          Express Your Interest To Attend The Summit
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-slate-400">Join senior technology and business leaders shaping the next era of intelligent enterprise.</p>
         </div>
@@ -406,19 +406,55 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
 
 
 
+
+
+
+
           {/* Linked In URL */}
           <div className="md:col-span-2">
 
-            <label className="mb-2 block text-sm font-semibold text-slate-200">LinkedIn URL </label>
-             <input
-              type="text"
-              name="linkedinurl"
-              value={formData.dob}
-              placeholder="Your Linkedin URL"
-              className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-            />
+
+          {[
+            // { name: "name", label: "Name" },
+            // { name: "designation", label: "Designation" },
+            // { name: "organization", label: "Organization" },
+            // { name: "phoneNumber", label: "Phone Number" },
+            // { name: "officialEmail", label: "Official Email" },
+            { name: "personalEmail", label: "Linkedin URL" },
+            // { name: "city", label: "City" },
+            // { name: "pincode", label: "Pincode" }
+          ].map(field => (
+            <div key={field.name}>
+              <label className="mb-2 block text-sm font-semibold text-slate-200">{field.label}</label>
+              <input
+                type={field.name.includes("Email") ? "email" : field.name.includes("Number") ? "tel" : "text"}
+                name={field.name}
+                value={formData[field.name as keyof FormDataType] as string}
+                onChange={handleChange}
+                className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+              />
+              {errors[field.name as keyof FormDataType] && (
+                <p className="mt-1 text-sm text-red-400">{errors[field.name as keyof FormDataType]}</p>
+              )}
+            </div>
+          ))}
+
+
+
           </div>
           {/* Linked In URL */}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
