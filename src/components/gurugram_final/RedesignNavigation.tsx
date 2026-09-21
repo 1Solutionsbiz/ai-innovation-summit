@@ -99,7 +99,7 @@ const RedesignNavigation = () => {
         <div>
 
           <div className="flex guru-26-right-sec">
-            <a href="/#delhincrregistrationform" className="register-btn-guru-26 register-btn-guru-26-sticky">
+            <a href="#delhincrregistrationform" className="register-btn-guru-26 register-btn-guru-26-sticky">
               Register Interest 
             </a>            
             <a href="/" className="redesign-logo redesign-logo-gurugram-26">
