@@ -1484,6 +1484,13 @@
   -webkit-overflow-scrolling: touch;
 }
 
+.redesign-nav-inner{
+      display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 6rem;
+}
+
 @media (max-width: 767px) {
   .redesign-nav-inner {
     padding: 8px 12px;
