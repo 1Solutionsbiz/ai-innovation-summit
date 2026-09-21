@@ -64,11 +64,6 @@ const LeadersNumbers = () => {
               style={{ animationDelay: upDelay(2, 5) }}
             >
               Enterprise AI
-            </span>
-            <span
-              className={`leaders-line partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
-              style={{ animationDelay: upDelay(3, 5) }}
-            >
               Leaders
             </span>
           </h2>
@@ -76,10 +71,10 @@ const LeadersNumbers = () => {
 
           <div className="event-info-meta mt-3">
             <span className={`partners-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(0, 4) }}>
-              December 2, 2026
+              2nd December, 2026
             </span>
             <span className={`partners-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(1, 4) }}>
-              The Leela Ambience Gurugram, Delhi-NCR
+              The Leela Ambience, Gurugram
             </span>
           </div>
 
@@ -163,7 +158,7 @@ const LeadersNumbers = () => {
 
         .leaders-left {
           flex: 0 0 auto;
-          max-width: 400px;
+          max-width: 450px;
         }
 
         .leaders-label {
@@ -192,7 +187,7 @@ const LeadersNumbers = () => {
         }
 
         .leaders-description {
-          font-size: 23px;
+          font-size: 20px;
           line-height: 1.4;
           color: #fff;
           margin: 0 0 40px 0;

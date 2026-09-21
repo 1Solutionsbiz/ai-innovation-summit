@@ -750,7 +750,6 @@ const FocusAreasSection = () => {
           color: white;
         }
 
-
         .focus-copy-right {
           left: 30%;
           right: 4%;
