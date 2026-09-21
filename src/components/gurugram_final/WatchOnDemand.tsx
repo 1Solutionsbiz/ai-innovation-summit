@@ -84,8 +84,7 @@ const OnDemandSection = () => {
             </h2>
 
             <a
-              target="_blank"
-              href={buildWatchHref(featured)}
+              href="/watch-On-Demand-videos"
               className={`partners-reveal-up
                 mt-4
                 sm:mt-5
@@ -97,7 +96,7 @@ const OnDemandSection = () => {
                 ${sectionVisible ? "is-visible" : ""}`}
               style={{ animationDelay: upDelay(3, 4) }}
             >
-              Explore More
+              Know More
             </a>
           </div>
 

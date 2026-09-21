@@ -85,6 +85,7 @@ const App: React.FC = () => (
         <Route path="/previous/bangalore-2024" element={<BengaluruEdition />} />
         <Route path="/previous/delhi-ncr-2024" element={<GurugramEdition />} />
         
+        <Route path="/watch-On-Demand-videos" element={<WatchOnDemand />} />
         <Route path="/watch-on-demand" element={<WatchOnDemand />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-and-conditions" element={<TermsAndConditions />} />

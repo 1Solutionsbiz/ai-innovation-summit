@@ -1,9 +1,16 @@
-import { Header } from "@/components/Header";
-
-import { Footer } from "@/components/Footer";
-import WatchDemand from "@/components/Edition/DemadVideos";
+import { Play } from "lucide-react";
 import { useEffect } from "react";
-const sections = [
+import { Link } from "react-router-dom";
+import Footer from "@/components/gurugram_final/Footer";
+import RedesignNavigation from "@/components/gurugram_final/RedesignNavigation";
+import { watchVideos } from "@/data/watchVideos";
+
+const getYoutubeThumbnail = (link: string) => {
+    const videoId = link.match(/(?:youtu\.be\/|youtube\.com\/watch\?v=)([^?&/]+)/)?.[1];
+    return videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : "";
+};
+
+/*
     {
         city: 'Bengaluru 2025',
         imageName: 'mumbai25',
@@ -67,7 +74,7 @@ const sections = [
             'https://www.youtube.com/watch?v=oWnCSnK35kU&list=TLGG2hVAM1ls04YyMzA0MjAyNQ',
         ],
     },
-];
+]; */
 
 
 
@@ -76,12 +83,47 @@ const WatchOnDemand = () => {
         window.scrollTo(0, 0); // Scrolls to the top of the page
     }, []);
     return (
-        <div className="min-h-screen swodpage">
-            <Header />
-            {sections.map((section, index) => (
+        <div className="min-h-screen bg-[#050B22] text-white">
+            <RedesignNavigation />
 
-                <WatchDemand key={index} {...section} />
-            ))}
+            <main className="px-4 pb-16 pt-32 sm:px-[6rem] md:pt-40">
+                <div className="mx-auto max-w-[1500px]">
+                    <div className="mb-10 max-w-3xl">
+                        <p className="mb-3 text-[18px] text-[#EF3340]">On-Demand Content</p>
+                        <h1 className="text-4xl font-black leading-tight sm:text-5xl md:text-6xl">
+                            Ideas That Inspire.
+                        </h1>
+                        <p className="mt-4 max-w-2xl text-base leading-7 text-white/70 sm:text-lg">
+                            Explore every session, keynote, and conversation from the AI Innovation Summit.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                        {watchVideos.map((video) => (
+                            <Link
+                                key={video.id}
+                                to={`/watch?id=${encodeURIComponent(video.id)}`}
+                                className="group rounded-[14px] bg-[#000128] p-1 transition-colors duration-300 hover:bg-[#022158]"
+                            >
+                                <div className="relative aspect-[16/10] overflow-hidden rounded-[10px] bg-black">
+                                    <img
+                                        src={video.image ?? getYoutubeThumbnail(video.link)}
+                                        alt={video.title}
+                                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    />
+                                    <div className="absolute inset-0 bg-black/10 transition-colors duration-300 group-hover:bg-black/25" />
+                                    <div className="absolute left-1/2 top-1/2 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 transition-transform duration-300 group-hover:scale-110">
+                                        <Play size={17} className="ml-0.5 text-[#050B22]" fill="currentColor" />
+                                    </div>
+                                </div>
+                                <h2 className="px-2 pb-3 pt-3 text-base font-bold leading-snug text-white">
+                                    {video.title}
+                                </h2>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </main>
 
             <Footer />
         </div>

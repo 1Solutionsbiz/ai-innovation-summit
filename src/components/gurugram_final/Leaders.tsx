@@ -78,7 +78,7 @@ const LeadersNumbers = () => {
             className={`leaders-btn btn-bg partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
             style={{ animationDelay: upDelay(4, 5) }}
           >
-            Register Now
+            Register Interest
           </a>
 
         </div>
