@@ -420,7 +420,7 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
             // { name: "organization", label: "Organization" },
             // { name: "phoneNumber", label: "Phone Number" },
             // { name: "officialEmail", label: "Official Email" },
-            { name: "personalEmail", label: "Linkedin URL" },
+            { name: "personalEmail", label: "Linkedin URL -" },
             // { name: "city", label: "City" },
             // { name: "pincode", label: "Pincode" }
           ].map(field => (
