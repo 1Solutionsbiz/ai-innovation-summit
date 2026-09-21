@@ -44,7 +44,7 @@ const EVENTS: EventGroup[] = [
       },
       {
         name: "Amit Atri",
-        role: "	Sr. VP & Global Chief Information Officer, Tata Consumer Products",
+        role: "	Sr. VP & Global CIO, Tata Consumer Products",
         company: "",
         image: "/speakers/bengaluru26/Amit.jpg",
       },
@@ -98,7 +98,7 @@ const EVENTS: EventGroup[] = [
       },
       {
         name: "Rajesh Ramachandran",
-        role: "Global Chief Digital Officer & MD, ABB Automation",
+        role: "Global CDO & MD, ABB Automation",
         company: "",
         image: "/speakers/bengaluru26/Rajesh-Ramachandran.jpg",
       },
@@ -650,7 +650,7 @@ const EVENTS: EventGroup[] = [
       },
       {
         name: "Sridhar Jonnala",
-        role: "Chief Technology Officer, AI, Strategy, Delivery and Governance, IBM, India",
+        role: "CTO, AI, Strategy, Delivery and Governance, IBM, India",
         company: "",
         image: "/speakers/bengaluru/sridhar.png",
       },
@@ -1265,7 +1265,7 @@ const FeaturedSpeakers = () => {
                 <div
                   key={idx}
                   data-speaker-card
-                  className="speaker-card group flex h-[260px] flex-shrink-0 w-[min(42vw,160px)] flex-col overflow-hidden rounded-2xl border border-blue-950 bg-white p-0 transition-colors duration-300 hover:bg-black sm:h-[200px] hover:sm:h-[auto] sm:w-[120px]"
+                  className="speaker-card group flex h-[260px] flex-shrink-0 w-[min(42vw,160px)] flex-col overflow-hidden rounded-2xl border border-blue-950 bg-white p-0 transition-colors duration-300 hover:bg-black sm:h-[230px] hover:sm:h-[auto] sm:w-[120px]"
                   style={{ animationDelay: `${idx * 90}ms` }}
                 >
                   <div
@@ -1282,7 +1282,7 @@ const FeaturedSpeakers = () => {
                   </div>
                   <div className="flex min-h-0 flex-1 flex-col bg-white px-2 pb-2 pt-3 transition-colors duration-300 group-hover:bg-black">
                     <p className="text-[13px] font-bold text-black transition-colors duration-300 group-hover:text-white sm:text-sm">{speaker.name}</p>
-                    <div className="mt-1 max-h-[56px] overflow-hidden pr-1 text-[11px] leading-tight text-black transition-all duration-300 group-hover:max-h-[150px] group-hover:overflow-visible group-hover:text-white sm:text-xs">
+                    <div className="mt-1 max-h-[60px] overflow-hidden pr-1 text-[11px] leading-tight text-black transition-all duration-300 group-hover:max-h-[150px] group-hover:overflow-visible group-hover:text-white sm:text-xs">
                       <p>{speaker.role}</p>
                       {speaker.company && <p className="mt-1">{speaker.company}</p>}
                     </div>
