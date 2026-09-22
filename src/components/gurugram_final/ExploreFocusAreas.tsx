@@ -748,6 +748,7 @@ const FocusAreasSection = () => {
           right: 15%;
           top: 23%;
           color: white;
+          transform: skewX(-8deg);
         }
 
         .focus-copy-right {
@@ -766,20 +767,15 @@ const FocusAreasSection = () => {
 
         .focus-small-title {
           margin: 0 0 8px;
-
-          font-size: 15px;
-
+          font-size: 18px;
           font-weight: 800;
-
           font-style: italic;
-
-          letter-spacing: -0.5px;
         }
 
 
         .focus-copy h3 {
           margin: 0;
-          font-size: clamp(20px,20px,42px);
+          font-size: clamp(20px,22px,42px);
           line-height: 1.3;
           font-weight: 900;
           font-style: italic;
@@ -788,13 +784,9 @@ const FocusAreasSection = () => {
 
         .focus-description {
           margin-top: 8px;
-
           font-size: clamp(14px,15px,21px);
-
           line-height: 1.18;
-
           font-style: italic;
-
           font-weight: 500;
         }
 
