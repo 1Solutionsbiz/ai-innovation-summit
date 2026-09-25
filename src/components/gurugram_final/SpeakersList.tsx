@@ -3,156 +3,46 @@ import { useEffect, useRef, useState } from "react";
 
 const speakers = [
   {
-    name: "Priya Nair 1",
-    role: "VP of Data & AI, Meridian Financial",
-    description:
-      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-    image: "gurugram/speakers/speaker_1.png",
-    linkedin: "https://www.linkedin.com/in/priyanair",
+    name: "Gaurav Gulati",
+    role: "Group CIO, Motherson Group",
+    description:"",
+    image: "gurugram/speakers/Gaurav-Gulati.png",
+    linkedin: "#",
   },
   {
-    name: "Priya Nair 2",
-    role: "VP of Data & AI, Meridian Financial",
-    description:
-      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-    image: "gurugram/speakers/speaker_1.png",
-    linkedin: "https://www.linkedin.com/in/priyanair",
+    name: "Parna Ghosh",
+    role: "President, Group CIO and Data Protection Officer, Uno Minda",
+    description:"",
+    image: "gurugram/speakers/Parna-Ghosh.png",
+    linkedin: "#",
   },
   {
-    name: "Priya Nair 3",
-    role: "VP of Data & AI, Meridian Financial",
-    description:
-      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-    image: "gurugram/speakers/speaker_1.png",
-    linkedin: "https://www.linkedin.com/in/priyanair",
+    name: "Supriya Kaul",
+    role: "Regional IT CIO, CNH Industrial",
+    description:"",
+    image: "gurugram/speakers/Supriya-Kaul.png",
+    linkedin: "#",
   },
   {
-    name: "Priya Nair 4",
-    role: "VP of Data & AI, Meridian Financial",
-    description:
-      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-    image: "gurugram/speakers/speaker_1.png",
-    linkedin: "https://www.linkedin.com/in/priyanair",
+    name: "Yogesh Kumar Sharma",
+    role: "Chief Information Security Officer, Jindal Stainless",
+    description:"",
+    image: "gurugram/speakers/Yogesh-Kumar-Sharma.png",
+    linkedin: "#",
   },
   {
-    name: "Priya Nair 5",
-    role: "VP of Data & AI, Meridian Financial",
-    description:
-      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-    image: "gurugram/speakers/speaker_1.png",
-    linkedin: "https://www.linkedin.com/in/priyanair",
+    name: "Sanjiv Jain",
+    role: "Group Chief Information Officer, Krishna Maruti Group",
+    description:"",
+    image: "gurugram/speakers/Sanjiv-Jain.png",
+    linkedin: "#",
   },
   {
-    name: "Priya Nair 6",
-    role: "VP of Data & AI, Meridian Financial",
-    description:
-      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-    image: "gurugram/speakers/speaker_1.png",
-    linkedin: "https://www.linkedin.com/in/priyanair",
-  },
-  {
-    name: "Priya Nair 7",
-    role: "VP of Data & AI, Meridian Financial",
-    description:
-      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-    image: "gurugram/speakers/speaker_1.png",
-    linkedin: "https://www.linkedin.com/in/priyanair",
-  },
-  {
-    name: "Priya Nair 8",
-    role: "VP of Data & AI, Meridian Financial",
-    description:
-      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-    image: "gurugram/speakers/speaker_1.png",
-    linkedin: "https://www.linkedin.com/in/priyanair",
-  },
-  {
-    name: "Priya Nair 9",
-    role: "VP of Data & AI, Meridian Financial",
-    description:
-      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-    image: "gurugram/speakers/speaker_1.png",
-    linkedin: "https://www.linkedin.com/in/priyanair",
-  },
-  {
-    name: "Priya Nair 10",
-    role: "VP of Data & AI, Meridian Financial",
-    description:
-      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-    image: "gurugram/speakers/speaker_1.png",
-    linkedin: "https://www.linkedin.com/in/priyanair",
-  },
-  {
-    name: "Priya Nair 11",
-    role: "VP of Data & AI, Meridian Financial",
-    description:
-      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-    image: "gurugram/speakers/speaker_1.png",
-    linkedin: "https://www.linkedin.com/in/priyanair",
-  },
-  {
-    name: "Priya Nair 12",
-    role: "VP of Data & AI, Meridian Financial",
-    description:
-      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-    image: "gurugram/speakers/speaker_1.png",
-    linkedin: "https://www.linkedin.com/in/priyanair",
-  },
-  {
-    name: "Priya Nair 13",
-    role: "VP of Data & AI, Meridian Financial",
-    description:
-      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-    image: "gurugram/speakers/speaker_1.png",
-    linkedin: "https://www.linkedin.com/in/priyanair",
-  },
-  {
-    name: "Priya Nair 14",
-    role: "VP of Data & AI, Meridian Financial",
-    description:
-      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-    image: "gurugram/speakers/speaker_1.png",
-    linkedin: "https://www.linkedin.com/in/priyanair",
-  },
-  {
-    name: "Priya Nair 15",
-    role: "VP of Data & AI, Meridian Financial",
-    description:
-      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-    image: "gurugram/speakers/speaker_1.png",
-    linkedin: "https://www.linkedin.com/in/priyanair",
-  },
-  {
-    name: "Priya Nair 16",
-    role: "VP of Data & AI, Meridian Financial",
-    description:
-      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-    image: "gurugram/speakers/speaker_1.png",
-    linkedin: "https://www.linkedin.com/in/priyanair",
-  },
-  {
-    name: "Priya Nair 17",
-    role: "VP of Data & AI, Meridian Financial",
-    description:
-      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-    image: "gurugram/speakers/speaker_1.png",
-    linkedin: "https://www.linkedin.com/in/priyanair",
-  },
-  {
-    name: "Priya Nair 18",
-    role: "VP of Data & AI, Meridian Financial",
-    description:
-      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-    image: "gurugram/speakers/speaker_1.png",
-    linkedin: "https://www.linkedin.com/in/priyanair",
-  },
-  {
-    name: "Priya Nair 19",
-    role: "VP of Data & AI, Meridian Financial",
-    description:
-      "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-    image: "gurugram/speakers/speaker_1.png",
-    linkedin: "https://www.linkedin.com/in/priyanair",
+    name: "Vivek Madan",
+    role: "Chief Technology Officer, Hero Fincorp - Housing Entity",
+    description:"",
+    image: "gurugram/speakers/Vivek-Madan.png",
+    linkedin: "#",
   },
 ];
 
