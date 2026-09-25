@@ -131,6 +131,9 @@ const FeaturedSpeakers = () => {
           md:py-20
           overflow-hidden
         "
+        style={{
+            background: "repeating-linear-gradient(180deg, #ec262d9c, #592fa9 100%)",
+          }}
       >
 
         <div
@@ -164,7 +167,7 @@ const FeaturedSpeakers = () => {
                   text-[18px]
                   md:text-[20px]
                   font-bold
-                  text-[#EF3340]
+                  text-[#fff]
                   mb-3
                   opacity-0
                   translate-y-8
@@ -179,7 +182,7 @@ const FeaturedSpeakers = () => {
 
               <h2
                 className="
-                  text-[#022158]
+                  text-[#fff]
                   font-black
 
                   text-2xl
