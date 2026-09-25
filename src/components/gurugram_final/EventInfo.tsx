@@ -86,7 +86,7 @@ const EventInfo: React.FC = () => {
               Register Interest
             </a>
             <a
-              href="#focus"
+              href="/partner-form"
               className={`event-info-btn-secondary btn-bg-hover partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
               style={{ animationDelay: upDelay(3, 4) }}
             >
