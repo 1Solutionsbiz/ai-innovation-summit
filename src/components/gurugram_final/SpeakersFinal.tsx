@@ -8,46 +8,48 @@ import { useEffect, useRef, useState } from "react";
 import { getScrollDirection } from "@/hooks/useScrollDirection";
 
 const speakers = [
-  // {
-  //   name: "Priya Nair",
-  //   role: "VP of Data & AI, Meridian Financial",
-  //   description:
-  //     "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-  //   image: "gurugram/speakers/speaker_1.png",
-  //   linkedin: "https://www.linkedin.com/in/priyanair",
-  // },
-  // {
-  //   name: "Priya Nair",
-  //   role: "VP of Data & AI, Meridian Financial",
-  //   description:
-  //     "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-  //   image: "gurugram/speakers/speaker_1.png",
-  //   linkedin: "https://www.linkedin.com/in/priyanair",
-  // },
-  // {
-  //   name: "Priya Nair",
-  //   role: "VP of Data & AI, Meridian Financial",
-  //   description:
-  //     "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-  //   image: "gurugram/speakers/speaker_1.png",
-  //   linkedin: "https://www.linkedin.com/in/priyanair",
-  // },
-  // {
-  //   name: "Priya Nair",
-  //   role: "VP of Data & AI, Meridian Financial",
-  //   description:
-  //     "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-  //   image: "gurugram/speakers/speaker_1.png",
-  //   linkedin: "https://www.linkedin.com/in/priyanair",
-  // },
-  // {
-  //   name: "Priya Nair",
-  //   role: "VP of Data & AI, Meridian Financial",
-  //   description:
-  //     "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-  //   image: "gurugram/speakers/speaker_1.png",
-  //   linkedin: "https://www.linkedin.com/in/priyanair",
-  // },
+  {
+    name: "Gaurav Gulati",
+    role: "Group CIO, Motherson Group",
+    description:"",
+    image: "gurugram/speakers/Gaurav-Gulati.png",
+    linkedin: "#",
+  },
+  {
+    name: "Parna Ghosh",
+    role: "President, Group CIO and Data Protection Officer, Uno Minda",
+    description:"",
+    image: "gurugram/speakers/Parna-Ghosh.png",
+    linkedin: "#",
+  },
+  {
+    name: "Supriya Kaul",
+    role: "Regional IT CIO, CNH Industrial",
+    description:"",
+    image: "gurugram/speakers/Supriya-Kaul.png",
+    linkedin: "#",
+  },
+  {
+    name: "Yogesh Kumar Sharma",
+    role: "Chief Information Security Officer, Jindal Stainless",
+    description:"",
+    image: "gurugram/speakers/Yogesh-Kumar-Sharma.png",
+    linkedin: "#",
+  },
+  {
+    name: "Sanjiv Jain",
+    role: "Group Chief Information Officer, Krishna Maruti Group",
+    description:"",
+    image: "gurugram/speakers/Sanjiv-Jain.png",
+    linkedin: "#",
+  },
+  {
+    name: "Vivek Madan",
+    role: "Chief Technology Officer, Hero Fincorp - Housing Entity",
+    description:"",
+    image: "gurugram/speakers/Vivek-Madan.png",
+    linkedin: "#",
+  },
 ];
 
 const FeaturedSpeakers = () => {

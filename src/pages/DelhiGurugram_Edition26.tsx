@@ -32,7 +32,7 @@ const GurugramEdition2026 = () => {
       <Navigation />
       <HeroBanner />
       <Highlights />
-      {/* <Speakers /> */}
+      <Speakers />
       <Overview />
       <ExploreFocusAreas />
       <RoomMatters />
