@@ -197,12 +197,7 @@ const FeaturedSpeakers = () => {
                 <span
                   className={`block opacity-0 translate-y-8 transition-all duration-[1400ms] delay-100 ease-[cubic-bezier(0.16,1,0.3,1)] ${sectionVisible ? "opacity-100 translate-y-0" : ""}`}
                 >
-                  Voices Leading
-                {/* </span>
-                <span
-                  className={`block opacity-0 translate-y-8 transition-all duration-[1400ms] delay-200 ease-[cubic-bezier(0.16,1,0.3,1)] ${sectionVisible ? "opacity-100 translate-y-0" : ""}`}
-                > */}
-                  India&apos;s AI Future
+                  Voices Leading India&apos;s AI Future
                 </span>
               </h2>
 
@@ -308,8 +303,7 @@ const FeaturedSpeakers = () => {
 
                             object-cover
 
-                            grayscale
-
+                            
                             transition-all
                             duration-[1200ms]
                             ease-out
