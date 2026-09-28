@@ -1,6 +1,6 @@
 import ScrollToHash from "@/components/ScrollToHash";
 
-import Navigation from "@/components/gurugram_final/RedesignNavigation";
+import Navigation from "@/components/gurugram_final/RedesignNavigationStatic";
 import SpeakersList from "@/components/gurugram_final/SpeakersList";
 import Speakers from "@/components/gurugram_final/Speakers";
 import Footer from "@/components/gurugram_final/Footer";

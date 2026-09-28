@@ -132,7 +132,7 @@ const FeaturedSpeakers = () => {
           overflow-hidden
         "
         style={{
-            background: "repeating-linear-gradient(180deg, #ec262d9c, #592fa9 100%)",
+            // background: "repeating-linear-gradient(180deg, #ec262d9c, #592fa9 100%)",
           }}
       >
 
@@ -167,8 +167,9 @@ const FeaturedSpeakers = () => {
                   text-[18px]
                   md:text-[20px]
                   font-bold
-                  text-[#fff]
+                  text-[#ef3340]
                   mb-3
+                  mt-5
                   opacity-0
                   translate-y-8
                   transition-all
@@ -182,9 +183,10 @@ const FeaturedSpeakers = () => {
 
               <h2
                 className="
-                  text-[#fff]
+                  text-[#022158]
                   font-black
 
+                  mb-5
                   text-2xl
                   sm:text-[44px]
                   md:text-[48px]
