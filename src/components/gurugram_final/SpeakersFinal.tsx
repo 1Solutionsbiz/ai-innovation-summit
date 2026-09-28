@@ -634,8 +634,6 @@ const FeaturedSpeakers = () => {
 
                             object-cover
 
-                            grayscale
-
                             transition-all
                             duration-[1200ms]
                             ease-out
