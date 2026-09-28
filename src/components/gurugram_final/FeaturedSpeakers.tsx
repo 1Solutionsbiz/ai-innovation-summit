@@ -26,14 +26,14 @@ const EVENTS: EventGroup[] = [
     speakers: [
       {
         name: "Dr. N. Manjula",
-        role: "IAS, Hon'ble Secretary to Government, Department of Electronics, IT, BT and S&T, Government of Karnataka ",
-        company: "",
+        role: "IAS, Hon'ble Secretary to Government, Department of Electronics, IT, BT and S&T",
+        company: "Government of Karnataka, ",
         image: "/speakers/bengaluru26/Dr-N-Manjula.jpg",
       },
       {
         name: "Kunal Mehta",
-        role: "CIO, Arvind Fashions",
-        company: "",
+        role: "CIO",
+        company: "Arvind Fashions, ",
         image: "/speakers/bengaluru26/Kunal-Mehta.jpg",
       },
       {

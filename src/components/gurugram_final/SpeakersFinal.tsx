@@ -866,7 +866,7 @@ const FeaturedSpeakers = () => {
                 relative
 
                 w-full
-                md:w-1/2
+                md:w-[33%]
 
                 aspect-[4/3]
                 md:aspect-auto
@@ -965,7 +965,7 @@ const FeaturedSpeakers = () => {
                   hover:text-[#EF3340]
                 "
               >
-                View LinkedIn Profile
+                <img src="linkedin.png" className="w-[20px]" alt="Linkedin" />
               </a>
 
             </div>
