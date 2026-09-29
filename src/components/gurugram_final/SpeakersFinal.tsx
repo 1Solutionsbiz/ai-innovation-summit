@@ -50,6 +50,13 @@ const speakers = [
     image: "gurugram/speakers/Vivek-Madan.png",
     linkedin: "#",
   },
+  {
+    name: "Arvind Heda",
+    role: "Chief Technology Officer, Info Edge India Ltd",
+    description:"",
+    image: "gurugram/speakers/Arvind-Heda.png",
+    linkedin: "#",
+  },
 ];
 
 const FeaturedSpeakers = () => {
