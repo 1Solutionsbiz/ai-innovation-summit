@@ -440,7 +440,7 @@
   display: grid;
   grid-template-columns: 42% 58%;
   
-  background-image: url("/delhi26_redesign/focus/bg.jpg");
+  background-image: url("/gurugram/focus/bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -587,7 +587,7 @@
   text-align: center;
   color: #fff;
 
-  background-image: url("/delhi26_redesign/sponsors/bg.png");
+  background-image: url("/gurugram/sponsors/bg.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

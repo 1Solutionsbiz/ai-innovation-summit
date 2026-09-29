@@ -44,6 +44,20 @@ const speakers = [
     image: "gurugram/speakers/Vivek-Madan.png",
     linkedin: "#",
   },
+  {
+    name: "Arvind Heda",
+    role: "Chief Technology Officer, Info Edge India",
+    description:"",
+    image: "gurugram/speakers/Arvind-Heda.png",
+    linkedin: "#",
+  },
+  {
+    name: "Charit Agarwal",
+    role: "Chief Data & AI Officer, Niva Bupa Health Insurance",
+    description:"",
+    image: "gurugram/speakers/Charit-Agarwal.png",
+    linkedin: "https://www.linkedin.com/in/charitagarwal/",
+  }, 
 ];
 
 const FeaturedSpeakers = () => {
@@ -268,7 +282,6 @@ const FeaturedSpeakers = () => {
                         hover:-translate-y-3
                         hover:scale-[1.025]
 
-                        hover:shadow-[0_25px_50px_rgba(2,33,88,0.30)]
                       "
                     >
 
