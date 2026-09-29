@@ -29,7 +29,7 @@ const sections = [
 ];
 
 const speakers = [
-  { name: 'Himanshu Sharma', designation: 'GM-Head of ICDC (Integrated Cyber Defence Center)', company: 'Gramax (Subsidiary of GMR Group)', image: '/edition/speakers/gurugram/himanshu.png' },
+  { name: 'Himanshu Sharma 1', designation: 'GM-Head of ICDC (Integrated Cyber Defence Center)', company: 'Gramax (Subsidiary of GMR Group)', image: '/edition/speakers/gurugram/himanshu.png' },
   { name: 'Rajiv Sikka', designation: 'CIO', company: 'Medanta', image: '/edition/speakers/gurugram/rajiv.png' },
   { name: 'Shiva Singh', designation: 'Director Technology', company: 'Moglix', image: '/edition/speakers/gurugram/shiva.png' },
   { name: 'Vinod Bhat', designation: 'CIO', company: 'Vistara', image: '/edition/speakers/gurugram/vinod.png' },

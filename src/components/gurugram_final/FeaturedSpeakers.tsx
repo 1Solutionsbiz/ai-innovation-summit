@@ -910,166 +910,29 @@ const EVENTS: EventGroup[] = [
     location: "Mumbai",
     year: "2024",
     speakers: [
-      {
-        name: 'Khushru M. Mistry',
-        role: 'Chief Technology Officer',
-        company: '',
-        image: '/edition/speakers/mumbai/khushru.png'
-      },
-
-      {
-        name: 'Naved Hussain',
-        role: 'Chief Technology Officer',
-        company: '',
-        image: '/edition/speakers/mumbai/naved.png'
-      },
-
-      {
-        name: 'Vineet Shukla',
-        role: 'Vice President (Head of Data)',
-        company: '',
-        image: '/edition/speakers/mumbai/vineet.png'
-      },
-
-      {
-        name: 'Milind Khamkar',
-        role: 'Group CIO',
-        company: '',
-        image: '/edition/speakers/mumbai/milind.png'
-      },
-
-      {
-        name: 'Sudhir Kanvinde',
-        role: 'Chief Information Officer',
-        company: '',
-        image: '/edition/speakers/mumbai/sudhir.png'
-      },
-
-      {
-        name: 'Nishant Pradhan',
-        role: 'Chief AI Officer',
-        company: '',
-        image: '/edition/speakers/mumbai/nishant.png'
-      },
-
-      {
-        name: 'Bhawesh Chourasia',
-        role: 'Global Head- Operations Excellence',
-        company: '',
-        image: '/edition/speakers/mumbai/bhawesh.png'
-      },
-
-      {
-        name: 'Dr. Puneet Kohli',
-        role: 'President IT & Data (CIO)',
-        company: '',
-        image: '/edition/speakers/mumbai/dr-puneet.png'
-      },
-
-      {
-        name: 'Mukesh Jain',
-        role: 'CTO & VP',
-        company: '',
-        image: '/edition/speakers/mumbai/mukesh.png'
-      },
-
-      {
-        name: 'Prashant Thakkar',
-        role: 'Chief of Operations and Technology Officer',
-        company: '',
-        image: '/edition/speakers/mumbai/prashant.png'
-      },
-
-      {
-        name: 'Amit Joshi',
-        role: 'CISO Adani Cement Business',
-        company: '',
-        image: '/edition/speakers/mumbai/amit.png'
-      },
-
-      {
-        name: 'Haresh Ambaliya',
-        role: 'General Manager,  Automation, Data Science & Machine Learning',
-        company: '',
-        image: '/edition/speakers/mumbai/haresh.png'
-      },
-
-      {
-        name: 'Kiran Belsekar',
-        role: 'Executive VP- CISO & IT Governance',
-        company: '',
-        image: '/edition/speakers/mumbai/kiran.png'
-      },
-
-      {
-        name: 'Jitendra Jadhwani',
-        role: 'Head - Business Transformation & CISO',
-        company: '',
-        image: '/edition/speakers/mumbai/jitendra.png'
-      },
-
-      {
-        name: 'Kulbhooshan Patil',
-        role: 'VP and Head of Data Science',
-        company: '',
-        image: '/edition/speakers/mumbai/kulbhooshan.png'
-      },
-
-      {
-        name: 'Amit Sharma',
-        role: 'VP Lead - AI-ML Central Data Science',
-        company: '',
-        image: '/edition/speakers/mumbai/amit-sharma.png'
-      },
-
-      {
-        name: 'Binita Prasad',
-        role: 'Head- IT and Digital',
-        company: '',
-        image: '/edition/speakers/mumbai/binita.png'
-      },
-
-      {
-        name: 'Anubhab Goel',
-        role: 'Head- Digital Innovation',
-        company: '',
-        image: '/edition/speakers/mumbai/anubhab.png'
-      },
-
-      {
-        name: 'Narendra K Saini',
-        role: 'CDO | Chief Digital and Data Officer',
-        company: '',
-        image: '/edition/speakers/mumbai/narendra.png'
-      },
-
-      {
-        name: 'Sachin Kawalkar',
-        role: 'Global CISO, Head Info Sec, Cyber and Quality Management',
-        company: '',
-        image: '/edition/speakers/mumbai/sachin.png'
-      },
-
-      {
-        name: 'Arun Gupta',
-        role: 'IT Strategy Consultant Independent Director & Board Member',
-        company: '',
-        image: '/edition/speakers/mumbai/arun.png'
-      },
-
-      {
-        name: 'Muralidharan Ramachandran',
-        role: 'CIO',
-        company: '',
-        image: '/edition/speakers/mumbai/muralidharan.png'
-      },
-
-      {
-        name: 'Rohan Padhi',
-        role: 'Partner, Advisory',
-        company: '',
-        image: '/edition/speakers/mumbai/rohan.png'
-      },
+      { name: 'Khushru M. Mistry', role: 'Chief Technology Officer', company: 'GM Modular', image: '/edition/speakers/mumbai/khushru.png' },
+      { name: 'Naved Hussain', role: 'Chief Technology Officer', company: 'Adani Capital', image: '/edition/speakers/mumbai/naved.png' },
+      { name: 'Vineet Shukla', role: 'Vice President (Head of Data)', company: 'Mahindra Group', image: '/edition/speakers/mumbai/vineet.png' },
+      { name: 'Milind Khamkar', role: 'Group CIO', company: 'SUPER-MAX', image: '/edition/speakers/mumbai/milind.png' },
+      { name: 'Sudhir Kanvinde', role: 'Chief Information Officer', company: 'The Supreme Industries', image: '/edition/speakers/mumbai/sudhir.png' },
+      { name: 'Nishant Pradhan', role: 'Chief AI Officer', company: 'Mirae Asset Global Investments', image: '/edition/speakers/mumbai/nishant.png' },
+      { name: 'Bhawesh Chourasia', role: 'Global Head- Operations Excellence', company: 'Microland', image: '/edition/speakers/mumbai/bhawesh.png' },
+      { name: 'Dr. Puneet Kohli', role: 'President IT & Data (CIO)', company: 'Liberty General Insurance', image: '/edition/speakers/mumbai/dr-puneet.png' },
+      { name: 'Mukesh Jain', role: 'CTO & VP', company: 'Leading AI Based Innovation @ Capgemini', image: '/edition/speakers/mumbai/mukesh.png' },
+      { name: 'Prashant Thakkar', role: 'Chief of Operations and Technology Officer', company: 'LIC Mutual Fund', image: '/edition/speakers/mumbai/prashant.png' },
+      { name: 'Amit Joshi', role: 'CISO Adani Cement Business', company: 'Adani Enterprises', image: '/edition/speakers/mumbai/amit.png' },
+      { name: 'Haresh Ambaliya', role: 'General Manager, Automation, Data Science & Machine Learning', company: 'Jio Platforms', image: '/edition/speakers/mumbai/haresh.png' },
+      { name: 'Kiran Belsekar', role: 'Executive VP- CISO & IT Governance', company: 'Bandhan Life', image: '/edition/speakers/mumbai/kiran.png' },
+      { name: 'Jitendra Jadhwani', role: 'Head - Business Transformation & CISO', company: 'Tata Motors Finance', image: '/edition/speakers/mumbai/jitendra.png' },
+      { name: 'Kulbhooshan Patil', role: 'VP and Head of Data Science', company: 'TATA AIG General Insurance', image: '/edition/speakers/mumbai/kulbhooshan.png' },
+      { name: 'Amit Sharma', role: 'VP Lead - AI-ML Central Data Science', company: 'Paytm', image: '/edition/speakers/mumbai/amit-sharma.png' },
+      { name: 'Binita Prasad', role: 'Head- IT and Digital', company: 'Saint-Gobain Group India | Grindwell Norton', image: '/edition/speakers/mumbai/binita.png' },
+      { name: 'Anubhab Goel', role: 'Head- Digital Innovation', company: 'HDFC ERGO General Insurance', image: '/edition/speakers/mumbai/anubhab.png' },
+      { name: 'Narendra K Saini', role: 'CDO | Chief Digital and Data Officer', company: 'Lupin', image: '/edition/speakers/mumbai/narendra.png' },
+      { name: 'Sachin Kawalkar', role: 'Global CISO, Head Info Sec, Cyber and Quality Management', company: 'Neeyamo', image: '/edition/speakers/mumbai/sachin.png' },
+      { name: 'Arun Gupta', role: 'IT Strategy Consultant Independent Director & Board Member', company: 'Hemas Pharmaceuticals, Sri Lanka & Locuz Enterprise Solutions, India', image: '/edition/speakers/mumbai/arun.png' },
+      { name: 'Muralidharan Ramachandran', role: 'CIO', company: 'Startek', image: '/edition/speakers/mumbai/muralidharan.png' },
+      { name: 'Rohan Padhi', role: 'Partner, Advisory', company: 'KPMG India', image: '/edition/speakers/mumbai/rohan.png' },
     ],
   },
 
@@ -1079,173 +942,30 @@ const EVENTS: EventGroup[] = [
     location: "Bangalore",
     year: "2024",
     speakers: [
-      {
-        name: 'Rejin Surendran',
-        role: 'Global CIO',
-        company: '',
-        image: '/edition/speakers/rejin-surendran.jpg'
-      },
-
-      {
-        name: 'Sudeep Dey',
-        role: 'Chief Information Officer',
-        company: '',
-        image: '/edition/speakers/sudeep-dey.jpg'
-      },
-
-      {
-        name: 'Siva Perubotla',
-        role: 'CIO & CISO',
-        company: '',
-        image: '/edition/speakers/siva-perubotla.jpg'
-      },
-
-      {
-        name: 'Kamesh Babu R',
-        role: 'CISO, Global Head of IT and Cybersecurity',
-        company: '',
-        image: '/edition/speakers/kamesh-babu-r.jpg'
-      },
-
-      {
-        name: 'Dr. Shivani Rai Gupta',
-        role: 'Chief Data Scientist',
-        company: '',
-        image: '/edition/speakers/dr.-shivani-rai-gupta.jpg'
-      },
-
-      {
-        name: 'Ajay Chawla',
-        role: 'Global Head of IT and Infosec',
-        company: '',
-        image: '/edition/speakers/ajay-chawla.jpg'
-      },
-
-      {
-        name: 'Anbu David',
-        role: 'Vice President & Head- Information Security, IT Ops & ITSM, DPO and Regional CISO for APAC',
-        company: '',
-        image: '/edition/speakers/anbu-david.jpg'
-      },
-
-      {
-        name: 'Prakash Narayanan',
-        role: 'Head of Intelligent Automation',
-        company: '',
-        image: '/edition/speakers/prakash-narayanan.jpg'
-      },
-
-      {
-        name: 'Sudarshan Rajagopal',
-        role: 'Partner Technology Consulting - Cyber Security',
-        company: '',
-        image: '/edition/speakers/sudharshan.jpg'
-      },
-
-      {
-        name: 'Sunil David',
-        role: 'Ex-Regional Director(IOT)',
-        company: '',
-        image: '/edition/speakers/sunil-david.jpg'
-      },
-
-      {
-        name: 'Rakesh Ravuri',
-        role: 'CTO - SVP Engineering',
-        company: '',
-        image: '/edition/speakers/rakesh-ravuri.jpg'
-      },
-
-      {
-        name: 'Philip Varughese Vayarakunnil',
-        role: 'Global Head - Cyber Risk & Compliance, Applied Intelligence, Platforms & Engineering ; DXC Security',
-        company: '',
-        image: '/edition/speakers/philip-varughese.jpg'
-      },
-
-      {
-        name: 'Mandar Joshi',
-        role: 'Partner - Management Consulting Leader Digital and Technology Implementation',
-        company: '',
-        image: '/edition/speakers/mandar-joshi.jpg'
-      },
-
-      {
-        name: 'Vijay Gurumurthy',
-        role: 'Director IT',
-        company: '',
-        image: '/edition/speakers/vijay-gurumurthy.jpg'
-      },
-
-      {
-        name: 'Syed Ehsan Amanulla',
-        role: 'SVP & CISO',
-        company: '',
-        image: '/edition/speakers/syed-ehsan.jpg'
-      },
-
-      {
-        name: 'Mrinmoy Dey',
-        role: 'Vice President - Chief Information Security Officer',
-        company: '',
-        image: '/edition/speakers/mrinmoy-dey.jpg'
-      },
-
-      {
-        name: 'Sameer Salunke',
-        role: 'Partner',
-        company: '',
-        image: '/edition/speakers/sameer-salunke.jpg'
-      },
-
-      {
-        name: 'Dinesh Kumar Kotha',
-        role: 'CEO',
-        company: '',
-        image: '/edition/speakers/dinesh-kumar.jpg'
-      },
-
-      {
-        name: 'Md Zeeshan Ali',
-        role: 'Lead Solutions Engineering',
-        company: '',
-        image: '/edition/speakers/zeeshan.jpg'
-      },
-
-      {
-        name: 'Nithyalakshmi Subramanian',
-        role: 'Head of Data & Analytics – AMEA',
-        company: '',
-        image: '/edition/speakers/nithy.png'
-      },
-
-      {
-        name: 'Paras Nigam',
-        role: 'Vice President, Data Science & Engineering',
-        company: '',
-        image: '/edition/speakers/paras-nigam.png'
-      },
-
-      {
-        name: 'Shilpa Singh',
-        role: 'Director of Cloud Technology',
-        company: '',
-        image: '/edition/speakers/shilpa.png'
-      },
-
-      {
-        name: 'Kamesh Srinivasan',
-        role: 'Partner- Data, AI, Automation',
-        company: '',
-        image: '/edition/speakers/kamesh-babu-r.jpg'
-      },
-
-      {
-        name: 'Manish Shukla',
-        role: 'Head of Generative AI Platform',
-        company: '',
-        image: '/edition/speakers/manish-shukla.png'
-      },
+      { name: 'Rejin Surendran', role: 'Global CIO', company: 'Wipro Enterprises Limited', image: '/edition/speakers/rejin-surendran.jpg' },
+      { name: 'Sudeep Dey', role: 'Chief Information Officer', company: 'Healthcare Global Enterprises Limited', image: '/edition/speakers/sudeep-dey.jpg' },
+      { name: 'Siva Perubotla', role: 'CIO & CISO', company: 'Brillio', image: '/edition/speakers/siva-perubotla.jpg' },
+      { name: 'Kamesh Babu R', role: 'CISO, Global Head of IT and Cybersecurity', company: 'Subex', image: '/edition/speakers/kamesh-babu-r.jpg' },
+      { name: 'Dr. Shivani Rai Gupta', role: 'Chief Data Scientist', company: 'Jio', image: '/edition/speakers/dr.-shivani-rai-gupta.jpg' },
+      { name: 'Ajay Chawla', role: 'Global Head of IT and Infosec', company: 'Sterlite Technologies Limited', image: '/edition/speakers/ajay-chawla.jpg' },
+      { name: 'Anbu David', role: 'Vice President & Head- Information Security, IT Ops & ITSM, DPO and Regional CISO for APAC', company: 'Holcim', image: '/edition/speakers/anbu-david.jpg' },
+      { name: 'Prakash Narayanan', role: 'Head of Intelligent Automation', company: 'Cyient', image: '/edition/speakers/prakash-narayanan.jpg' },
+      { name: 'Sudarshan Rajagopal', role: 'Partner Technology Consulting - Cyber Security', company: 'EY', image: '/edition/speakers/sudharshan.jpg' },
+      { name: 'Sunil David', role: 'Ex-Regional Director(IOT)', company: 'AT&T', image: '/edition/speakers/sunil-david.jpg' },
+      { name: 'Rakesh Ravuri', role: 'CTO - SVP Engineering', company: 'Publicis Sapient', image: '/edition/speakers/rakesh-ravuri.jpg' },
+      { name: 'Philip Varughese Vayarakunnil', role: 'Global Head - Cyber Risk & Compliance, Applied Intelligence, Platforms & Engineering ; DXC Security', company: 'DXC Technology', image: '/edition/speakers/philip-varughese.jpg' },
+      { name: 'Mandar Joshi', role: 'Partner - Management Consulting Leader Digital and Technology Implementation', company: 'KPMG', image: '/edition/speakers/mandar-joshi.jpg' },
+      { name: 'Vijay Gurumurthy', role: 'Director IT', company: 'Capgemini', image: '/edition/speakers/vijay-gurumurthy.jpg' },
+      { name: 'Syed Ehsan Amanulla', role: 'SVP & CISO', company: 'Amicorp Group', image: '/edition/speakers/syed-ehsan.jpg' },
+      { name: 'Mrinmoy Dey', role: 'Vice President - Chief Information Security Officer', company: 'Lendingkart', image: '/edition/speakers/mrinmoy-dey.jpg' },
+      { name: 'Sameer Salunke', role: 'Partner', company: 'KPMG', image: '/edition/speakers/sameer-salunke.jpg' },
+      { name: 'Dinesh Kumar Kotha', role: 'CEO', company: 'Ixigo Trains and ConfirmTkt', image: '/edition/speakers/dinesh-kumar.jpg' },
+      { name: 'Md Zeeshan Ali', role: 'Lead Solutions Engineering', company: 'Slack', image: '/edition/speakers/zeeshan.jpg' },
+      { name: 'Nithyalakshmi Subramanian', role: 'Head of Data & Analytics – AMEA', company: 'Kellanova', image: '/edition/speakers/nithy.png' },
+      { name: 'Paras Nigam', role: 'Vice President, Data Science & Engineering', company: 'KnowBe4', image: '/edition/speakers/paras-nigam.png' },
+      { name: 'Shilpa Singh', role: 'Director of Cloud Technology', company: 'Virtusa', image: '/edition/speakers/shilpa.png' },
+      { name: 'Kamesh Srinivasan', role: 'Partner- Data, AI, Automation', company: 'KPMG India', image: '/edition/speakers/kamesh-babu-r.jpg' },
+      { name: 'Manish Shukla', role: 'Head of Generative AI Platform', company: 'NatWest Group', image: '/edition/speakers/manish-shukla.png' },
     ],
   },
 
@@ -1255,124 +975,23 @@ const EVENTS: EventGroup[] = [
     location: "Delhi",
     year: "2024",
     speakers: [
-      {
-        name: 'Himanshu Sharma',
-        role: 'GM-Head of ICDC (Integrated Cyber Defence Center)',
-        company: '',
-        image: '/edition/speakers/gurugram/himanshu.png'
-      },
-
-      {
-        name: 'Rajiv Sikka',
-        role: 'CIO',
-        company: '',
-        image: '/edition/speakers/gurugram/rajiv.png'
-      },
-
-      {
-        name: 'Shiva Singh',
-        role: 'Director Technology',
-        company: '',
-        image: '/edition/speakers/gurugram/shiva.png'
-      },
-
-      {
-        name: 'Vinod Bhat',
-        role: 'CIO',
-        company: '',
-        image: '/edition/speakers/gurugram/vinod.png'
-      },
-
-      {
-        name: 'Himaghna Banerjee',
-        role: 'Business Value Services Manager',
-        company: '',
-        image: '/edition/speakers/gurugram/himaghna.png'
-      },
-
-      {
-        name: 'Amit Singh',
-        role: 'Partner',
-        company: '',
-        image: '/edition/speakers/gurugram/amit.png'
-      },
-
-      {
-        name: 'Manish Sehgal',
-        role: 'Partner, Risk Advisory',
-        company: '',
-        image: '/edition/speakers/gurugram/manish.png'
-      },
-
-      {
-        name: 'Daya Prakash',
-        role: 'Founder',
-        company: '',
-        image: '/edition/speakers/gurugram/daya.png'
-      },
-
-      {
-        name: 'Aakash Bhutani',
-        role: 'Head of Enterprise Application',
-        company: '',
-        image: '/edition/speakers/gurugram/akash.png'
-      },
-
-      {
-        name: 'Puneet Wadwa',
-        role: 'Head IT & Digital',
-        company: '',
-        image: '/edition/speakers/gurugram/puneet.png'
-      },
-
-      {
-        name: 'Ekhlaque Bari',
-        role: 'Founder',
-        company: '',
-        image: '/edition/speakers/gurugram/ekhlaque.png'
-      },
-
-      {
-        name: 'Rajnish Virmani',
-        role: 'CIO Advisor',
-        company: '',
-        image: '/edition/speakers/gurugram/rajnish.png'
-      },
-
-      {
-        name: 'Nitin Dhingra',
-        role: 'CDO & Vice President',
-        company: '',
-        image: '/edition/speakers/gurugram/nitin.png'
-      },
-
-      {
-        name: 'Mohit Malik',
-        role: 'CTO',
-        company: '',
-        image: '/edition/speakers/gurugram/mohit.png'
-      },
-
-      {
-        name: 'Ambuj Bhalla',
-        role: 'CISO',
-        company: '',
-        image: '/edition/speakers/gurugram/ambuj.png'
-      },
-
-      {
-        name: 'Vinay Kumar',
-        role: 'CIO',
-        company: '',
-        image: '/edition/speakers/gurugram/vinay.png'
-      },
-
-      {
-        name: 'Rishi Aggarwal',
-        role: 'Senior Director IT',
-        company: '',
-        image: '/edition/speakers/gurugram/rishi.png'
-      },
+      { name: 'Himanshu Sharma', role: 'GM-Head of ICDC (Integrated Cyber Defence Center)', company: 'Gramax (Subsidiary of GMR Group)', image: '/edition/speakers/gurugram/himanshu.png' },
+      { name: 'Rajiv Sikka', role: 'CIO', company: 'Medanta', image: '/edition/speakers/gurugram/rajiv.png' },
+      { name: 'Shiva Singh', role: 'Director Technology', company: 'Moglix', image: '/edition/speakers/gurugram/shiva.png' },
+      { name: 'Vinod Bhat', role: 'CIO', company: 'Vistara', image: '/edition/speakers/gurugram/vinod.png' },
+      { name: 'Himaghna Banerjee', role: 'Business Value Services Manager', company: 'Salesforce', image: '/edition/speakers/gurugram/himaghna.png' },
+      { name: 'Amit Singh', role: 'Partner', company: 'EY', image: '/edition/speakers/gurugram/amit.png' },
+      { name: 'Manish Sehgal', role: 'Partner, Risk Advisory', company: 'Deloitte India', image: '/edition/speakers/gurugram/manish.png' },
+      { name: 'Daya Prakash', role: 'Founder', company: 'Talent On Lease', image: '/edition/speakers/gurugram/daya.png' },
+      { name: 'Aakash Bhutani', role: 'Head of Enterprise Application', company: 'HT Media', image: '/edition/speakers/gurugram/akash.png' },
+      { name: 'Puneet Wadwa', role: 'Head IT & Digital', company: 'Hatch', image: '/edition/speakers/gurugram/puneet.png' },
+      { name: 'Ekhlaque Bari', role: 'Founder', company: 'XdotO Consulting and Coaching', image: '/edition/speakers/gurugram/ekhlaque.png' },
+      { name: 'Rajnish Virmani', role: 'CIO Advisor', company: 'Zoom Video Communication', image: '/edition/speakers/gurugram/rajnish.png' },
+      { name: 'Nitin Dhingra', role: 'CDO & Vice President', company: 'Hindware', image: '/edition/speakers/gurugram/nitin.png' },
+      { name: 'Mohit Malik', role: 'CTO', company: 'Chaayos', image: '/edition/speakers/gurugram/mohit.png' },
+      { name: 'Ambuj Bhalla', role: 'CISO', company: 'BharatPe', image: '/edition/speakers/gurugram/ambuj.png' },
+      { name: 'Vinay Kumar', role: 'CIO', company: "McDonald's India", image: '/edition/speakers/gurugram/vinay.png' },
+      { name: 'Rishi Aggarwal', role: 'Senior Director IT', company: 'Concentrix', image: '/edition/speakers/gurugram/rishi.png' },
     ],
   },
 
@@ -1604,8 +1223,8 @@ const FeaturedSpeakers = () => {
                   </div>
                   <div className="flex min-h-0 flex-1 flex-col bg-white px-2 pb-2 pt-3 transition-colors duration-300 group-hover:bg-black">
                     <p className="text-[13px] font-bold text-black transition-colors duration-300 group-hover:text-white sm:text-sm">{speaker.name}</p>
-                    <div className="mt-1 max-h-[60px] overflow-hidden pr-1 text-[11px] leading-tight text-black transition-all duration-300 group-hover:max-h-[150px] group-hover:overflow-visible group-hover:text-white sm:text-xs">
-                      {speaker.company && <p className="mt-1">{speaker.company}</p>}
+                    <div className=" max-h-[60px] overflow-hidden pr-1 text-[11px] leading-tight text-black transition-all duration-300 group-hover:max-h-[150px] group-hover:overflow-visible group-hover:text-white sm:text-xs">
+                      {speaker.company && <p className="">{speaker.company}</p>}
                       <p>{speaker.role}</p>
 
                     </div>
