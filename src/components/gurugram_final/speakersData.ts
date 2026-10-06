@@ -79,4 +79,20 @@ export const speakers = [
     image: "gurugram/speakers/Adish-Jain.png",
     linkedin: "https://www.linkedin.com/in/adishjain1995/",
   },
+  {
+    name: "Abhishek Bansal",
+    role: "Chief Information Security Officer, ",
+    company: "Max Life Insurance Company",
+    description: "",
+    image: "gurugram/speakers/Abhishek-Bansal.png",
+    linkedin: "#",
+  },
+  {
+    name: "Swastika Johorey",
+    role: "Chief Digital Officer, ",
+    company: "Varun Beverages",
+    description: "",
+    image: "gurugram/speakers/Swastika-Johorey.png",
+    linkedin: "#",
+  },
 ];
