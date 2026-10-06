@@ -10,60 +10,84 @@ import { getScrollDirection } from "@/hooks/useScrollDirection";
 const speakers = [
   {
     name: "Gaurav Gulati",
-    role: "Group CIO, Motherson Group",
+    role: "Group CIO, ",
+    company: "Motherson Group",
     description:"",
     image: "gurugram/speakers/Gaurav-Gulati.png",
     linkedin: "#",
   },
   {
     name: "Parna Ghosh",
-    role: "President, Group CIO and Data Protection Officer, Uno Minda",
+    role: "President, Group CIO and Data Protection Officer, ",
+    company: "Uno Minda",
     description:"",
     image: "gurugram/speakers/Parna-Ghosh.png",
     linkedin: "#",
   },
   {
     name: "Supriya Kaul",
-    role: "Regional IT CIO, CNH Industrial",
+    role: "Regional IT CIO, ",
+    company: "CNH Industrial",
     description:"",
     image: "gurugram/speakers/Supriya-Kaul.png",
     linkedin: "#",
   },
   {
     name: "Yogesh Kumar Sharma",
-    role: "Chief Information Security Officer, Jindal Stainless",
+    role: "Chief Information Security Officer, ",
+    company: "Jindal Stainless",
     description:"",
     image: "gurugram/speakers/Yogesh-Kumar-Sharma.png",
     linkedin: "#",
   },
   {
     name: "Sanjiv Jain",
-    role: "Group Chief Information Officer, Krishna Maruti Group",
+    role: "Group Chief Information Officer, ",
+    company: "Krishna Maruti Group",
     description:"",
     image: "gurugram/speakers/Sanjiv-Jain.png",
     linkedin: "#",
   },
   {
     name: "Vivek Madan",
-    role: "Chief Technology Officer, Hero Fincorp - Housing Entity",
+    role: "Chief Technology Officer, ",
+    company: "Hero Fincorp - Housing Entity",
     description:"",
     image: "gurugram/speakers/Vivek-Madan.png",
     linkedin: "#",
   },
   {
     name: "Arvind Heda",
-    role: "Chief Technology Officer, Info Edge India",
+    role: "Chief Technology Officer, ",
+    company: "Info Edge India",
     description:"",
     image: "gurugram/speakers/Arvind-Heda.png",
     linkedin: "#",
   },
   {
     name: "Charit Agarwal",
-    role: "Chief Data & AI Officer, Niva Bupa Health Insurance",
+    role: "Chief Data & AI Officer, ",
+    company: "Niva Bupa Health Insurance",
     description:"",
     image: "gurugram/speakers/Charit-Agarwal.png",
     linkedin: "https://www.linkedin.com/in/charitagarwal/",
-  },
+  }, 
+  {
+    name: "Ankit Gupta",
+    role: "Chief Technology Officer, ",
+    company: "PolicyBazaar for Business (PB Fintech Ltd.)",
+    description:"",
+    image: "gurugram/speakers/Ankit-Gupta.png",
+    linkedin: "https://www.linkedin.com/in/ankitgupta871/",
+  }, 
+  {
+    name: "Adish Jain",
+    role: "Chief Security Officer, ",
+    company: "PB Pay",
+    description:"",
+    image: "gurugram/speakers/Adish-Jain.png",
+    linkedin: "https://www.linkedin.com/in/adishjain1995/",
+  }, 
 ];
 
 const FeaturedSpeakers = () => {
@@ -756,6 +780,7 @@ const FeaturedSpeakers = () => {
                             "
                           >
                             {speaker.role}
+                            {speaker.company}
                           </p>
 
                         </div>
@@ -941,6 +966,7 @@ const FeaturedSpeakers = () => {
                 "
               >
                 {selectedSpeaker.role}
+                {selectedSpeaker.company}
               </p>
 
 
