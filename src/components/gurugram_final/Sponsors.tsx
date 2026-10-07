@@ -49,7 +49,7 @@ const Sponsors = () => {
     `${(revealDirection === "up" ? total - 1 - order : order) * 180}ms`;
 
   return (
-    <section ref={sectionRef} id="partners" className="bg-[#fff] py-12 sm:py-20 md:py-28">
+    <section ref={sectionRef} id="sponsors" className="bg-[#fff] py-12 sm:py-20 md:py-28">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 text-center">
         <p className={`partners-reveal-up font-extrabold text-[20px] text-[#e92630] mb-2 ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(0, 4) }}>
           Past Partners

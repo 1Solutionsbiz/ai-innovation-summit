@@ -66,7 +66,7 @@ const PartnersSection = () => {
     `${(revealDirection === "up" ? total - 1 - order : order) * 150}ms`;
 
   return (
-    <section ref={sectionRef} className="partners-section">
+    <section ref={sectionRef} id="partners" className="partners-section">
       <div className="partners-container">
 
         {/* LEFT CONTENT */}
