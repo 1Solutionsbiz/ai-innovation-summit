@@ -36,8 +36,8 @@ const GurugramEdition2026 = () => {
       <Overview />
       <ExploreFocusAreas />
       <RoomMatters />
-      {/* <Partners /> */}
-      <Sponsors />
+      <Partners />
+      {/* <Sponsors /> */}
       <Leaders />
       <Innovation />
       <TestimonialsNew />
@@ -45,7 +45,7 @@ const GurugramEdition2026 = () => {
       <WatchOnDemand />
       <Glimpse />
       <EventInfo />
-      {/* <Sponsors /> */}
+      <Sponsors />
       
       <hr />
 

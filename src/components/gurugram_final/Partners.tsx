@@ -5,28 +5,33 @@ const partners = [
   {
     title: "PRESENTING PARTNER",
     image: "/gurugram/partners/salesforce.png",
-    alt: "Partner 1",
+    alt: "salesforce",
   },
   {
-    title: "CO-POWERED BY",
-    image: "/gurugram/partners/Atlassian.png",
-    alt: "Partner 2",
+    title: "CLOUD PARTNER",
+    image: "/gurugram/partners/Akamai.png",
+    alt: "Akamai",
   },
-  {
-    title: "CYBER RESILIENCE PARTNER",
-    image: "/gurugram/partners/cohesity.png",
-    alt: "Partner 3",
-  },
-  {
-    title: "AI DATA CLOUD PARTNER",
-    image: "/gurugram/partners/snowflake.png",
-    alt: "Partner 4",
-  },
-  {
-    title: "ENGAGEMENT PARTNER",
-    image: "/gurugram/partners/Equateme.png",
-    alt: "Partner 5",
-  },
+  // {
+  //   title: "CO-POWERED BY",
+  //   image: "/gurugram/partners/Atlassian.png",
+  //   alt: "Partner 2",
+  // },
+  // {
+  //   title: "CYBER RESILIENCE PARTNER",
+  //   image: "/gurugram/partners/cohesity.png",
+  //   alt: "Partner 3",
+  // },
+  // {
+  //   title: "AI DATA CLOUD PARTNER",
+  //   image: "/gurugram/partners/snowflake.png",
+  //   alt: "Partner 4",
+  // },
+  // {
+  //   title: "ENGAGEMENT PARTNER",
+  //   image: "/gurugram/partners/Equateme.png",
+  //   alt: "Partner 5",
+  // },
 ];
 
 const PartnersSection = () => {
@@ -131,7 +136,7 @@ const PartnersSection = () => {
             <div className="">
 
               {/* FIRST SET */}
-              <div className="partners-list">
+              <div className="partners-list" style={{ gap: "50px" }}>
                 {partners.map((partner, index) => (
                   <div
                     className="partner-logo partner-logo-new"
