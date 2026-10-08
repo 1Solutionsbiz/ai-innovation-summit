@@ -378,8 +378,8 @@ if (formData.officialEmail.trim()) {
 
           {[
             { name: "officialEmail", label: "Official Email", placeholder: "Please use your official Email id" },
-            { name: "phoneNumber", label: "Phone Number", placeholder: ""  },
-            { name: "city", label: "City", placeholder: ""  },
+            { name: "phoneNumber", label: "Phone Number", placeholder: "" },
+            { name: "city", label: "City", placeholder: "" },
             { name: "pincode", label: "Pincode", placeholder: "" }
           ].map(field => (
             <div key={field.name}>
