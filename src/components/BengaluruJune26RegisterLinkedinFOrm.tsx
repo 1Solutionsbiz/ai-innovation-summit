@@ -6,6 +6,35 @@ import { Link } from "react-router-dom";
 
 const RECAPTCHA_SITE_KEY = "6LfhcysrAAAAAGAo4G_2kXen3oBn290aZNX7caV_";
 
+
+const BLOCKED_EMAIL_DOMAINS = [
+  "gmail.com",
+  "yahoo.com",
+  "outlook.com",
+  "hotmail.com",
+  "live.com",
+  "msn.com",
+  "icloud.com",
+  "me.com",
+  "proton.me",
+  "protonmail.com",
+  "zoho.com",
+  "zohomail.com",
+  "rediffmail.com",
+  "aol.com",
+];
+
+const isPersonalEmailDomain = (email: string): boolean => {
+  const domain = email.trim().toLowerCase().split("@")[1];
+  return !!domain && BLOCKED_EMAIL_DOMAINS.includes(domain);
+};
+
+const isValidEmailFormat = (email: string): boolean =>
+  /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+
+
+
+
 interface FormDataType {
   name: string;
   designation: string;
@@ -136,12 +165,44 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+// Official email validation
+if (formData.officialEmail.trim()) {
+  if (!isValidEmailFormat(formData.officialEmail)) {
+    newErrors.officialEmail = "Please enter a valid email address.";
+  } else if (isPersonalEmailDomain(formData.officialEmail)) {
+    newErrors.officialEmail = "Please use your official Email id.";
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+    setErrors(newErrors);
+
     if (!recaptchaToken) {
       setServerError("Please complete the reCAPTCHA.");
       return false;
     }
 
-    setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
@@ -316,10 +377,10 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
 
 
           {[
-            { name: "officialEmail", label: "Official Email" },
-            { name: "phoneNumber", label: "Phone Number" },
-            { name: "city", label: "City" },
-            { name: "pincode", label: "Pincode" }
+            { name: "officialEmail", label: "Official Email", placeholder: "Please use your official Email id" },
+            { name: "phoneNumber", label: "Phone Number", placeholder: ""  },
+            { name: "city", label: "City", placeholder: ""  },
+            { name: "pincode", label: "Pincode", placeholder: "" }
           ].map(field => (
             <div key={field.name}>
               <label className="mb-2 block text-sm font-semibold text-slate-200">{field.label} *</label>
@@ -328,6 +389,7 @@ export const BengaluruJune26RegisterForm: React.FC = () => {
                 name={field.name}
                 value={formData[field.name as keyof FormDataType] as string}
                 onChange={handleChange}
+                placeholder={field.placeholder}
                 className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               />
               {errors[field.name as keyof FormDataType] && (
