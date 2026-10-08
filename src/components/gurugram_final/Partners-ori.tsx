@@ -67,12 +67,10 @@ const PartnersSection = () => {
 
   return (
     <section ref={sectionRef} id="partners" className="partners-section">
+      <div className="partners-container">
 
-
-      <div className="row text-center">
-        
-        <div className="col-md-6">
-
+        {/* LEFT CONTENT */}
+        <div className="partners-content">
           <span
             className={`partners-small-title partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
             style={{ animationDelay: delayFor(0, 6) }}
@@ -86,30 +84,53 @@ const PartnersSection = () => {
                   sm:text-[48px]
                   md:text-[64px]
                   xl:text-[42px]
-                  leading-[0.94]
-                  text-[#092c63]">
+                  leading-[0.94]">
             <span
               className={`block partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
               style={{ animationDelay: delayFor(1, 6) }}
             >
-              The Partners Powering The Summit
+              The Partners
+            </span>
+            <span
+              className={`block partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+              style={{ animationDelay: delayFor(2, 6) }}
+            >
+              Powering The Summit
             </span>
           </h2>
 
-          <p className="text-[#161616] md:text-[21px] mt-4 mb-8" >
+          <p>
             <span
               className={`block partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
               style={{ animationDelay: delayFor(3, 6) }}
             >
-              Meet the partners shaping how enterprises think, deploy, and scale AI.
+              Meet the partners shaping how enterprises think,
+            </span>
+            <span
+              className={`block partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+              style={{ animationDelay: delayFor(4, 6) }}
+            >
+              deploy, and scale AI.
             </span>
           </p>
 
+          <a
+            href="partner-form"
+            target="_blank"
+            className={`partners-btn partners-reveal-up inline-block ${sectionVisible ? "is-visible" : ""}`}
+            style={{ animationDelay: delayFor(5, 6) }}
+          >
+            Become a Partner
+          </a>
         </div>
-        
-        <div className="col-md-6">
 
-          <div className="text-center">
+
+        {/* RIGHT PARTNER PANEL */}
+        <div
+          className={`partners-visual partners-reveal-right ${sectionVisible ? "is-visible" : ""}`}
+        >
+
+          <div className="partners-bg">
 
             {/* <div className="partners-scroll"> */}
             <div className="">
@@ -121,15 +142,7 @@ const PartnersSection = () => {
                     className="partner-logo partner-logo-new"
                     key={`first-${index}`}
                   >
-                    <h3 className="
-                    partner-title 
-                    text-[#092c64]
-                    text-[16px]
-                    tracking-[0.02em]
-                    mb-2
-                    font-[400]"
-                    style={{ textDecoration: "underline", fontStyle: "normal" }}
-                  >
+                    <h3 className="partner-title text-black font-[600]">
                       {partner.title}
                     </h3>
 
@@ -141,35 +154,33 @@ const PartnersSection = () => {
                 ))}
               </div>
 
+
+              {/* DUPLICATE SET FOR SEAMLESS LOOP */}
+              {/* <div className="partners-list">
+                {partners.map((partner, index) => (
+                  <div
+                    className="partner-logo partner-logo-new"
+                    key={`second-${index}`}
+                  >
+                    <h3 className="partner-title text-black">
+                      {partner.title}
+                    </h3>
+
+                    <img
+                      src={partner.image}
+                      alt={partner.alt}
+                    />
+                  </div>
+                ))}
+              </div> */}
+
             </div>
 
           </div>
 
-
-          <a
-            href="partner-form"
-            target="_blank"
-            className={`partners-btn mt-8 partners-reveal-up inline-block ${sectionVisible ? "is-visible" : ""}`}
-            style={{ animationDelay: delayFor(5, 6) }}
-          >
-            Become a Partner
-          </a>
-
-          
         </div>
+
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
     </section>
   );
 };
