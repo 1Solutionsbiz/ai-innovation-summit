@@ -1582,3 +1582,170 @@
 }
 
 /* Mobile Section End */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- Base (Desktop) ---------- */
+.sticky-partners-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: #f1f1f1;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+  padding: 8px 12px calc(8px + env(safe-area-inset-bottom, 0px));
+}
+
+.sticky-partners-inner {
+  overflow: hidden;
+}
+
+.sticky-partners-track {
+  display: flex;
+  justify-content: center;
+}
+
+.sticky-partners-set {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Desktop pe clone chhupa hua, aur last divider bhi nahi dikhega */
+.sticky-partners-set--clone {
+  display: none;
+}
+.sticky-partners-set:not(.sticky-partners-set--clone) .sticky-partner-divider:last-child {
+  display: none;
+}
+
+.sticky-partner-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.sticky-partner-title {
+  font-size: 13px;
+  font-weight: 400;
+  color: #092c64;
+  letter-spacing: 0.02em;
+  margin: 0 0 4px;
+  white-space: nowrap;
+}
+
+.sticky-partner-item img {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+}
+
+.sticky-partner-divider {
+  width: 1px;
+  height: 60px;
+  background: #092c64;
+  flex-shrink: 0;
+}
+
+/* ---------- Mobile / Tablet: auto-scroll marquee ---------- */
+@media (max-width: 768px) {
+  .sticky-partners-track {
+    width: max-content;
+    justify-content: flex-start;
+    animation: sticky-marquee var(--marquee-duration, 20s) linear infinite;
+    will-change: transform;
+  }
+
+  /* Har set kam se kam screen jitna chauda, taaki kam partners me bhi loop smooth rahe */
+  .sticky-partners-set {
+    min-width: 100vw;
+    justify-content: space-around;
+    gap: 0;
+  }
+
+  .sticky-partners-set--clone {
+    display: flex;
+  }
+
+  /* Mobile pe saare dividers dikhenge (loop ke beech me bhi) */
+  .sticky-partners-set:not(.sticky-partners-set--clone) .sticky-partner-divider:last-child {
+    display: block;
+  }
+
+  .sticky-partner-item {
+    padding: 0 20px;
+  }
+
+  .sticky-partner-item img {
+    height: 32px;
+  }
+
+  .sticky-partner-title {
+    font-size: 11px;
+  }
+
+  .sticky-partner-divider {
+    height: 44px;
+  }
+
+  /* Touch karke rakho to ruk jayega */
+  .sticky-partners-bar:active .sticky-partners-track,
+  .sticky-partners-bar:hover .sticky-partners-track {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes sticky-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Jinhe animation pasand nahi (accessibility), unke liye manual scroll */
+@media (prefers-reduced-motion: reduce) {
+  .sticky-partners-inner {
+    overflow-x: auto;
+  }
+  .sticky-partners-track {
+    animation: none;
+  }
+  .sticky-partners-set--clone {
+    display: none;
+  }
+}
