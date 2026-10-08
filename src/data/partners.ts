@@ -5,6 +5,11 @@ export const partners = [
     alt: "salesforce",
   },
   {
+    title: "POWERED BY",
+    image: "/gurugram/partners/Atlassian.png",
+    alt: "Atlassian",
+  },
+  {
     title: "CLOUD PARTNER",
     image: "/gurugram/partners/Akamai.png",
     alt: "Akamai",

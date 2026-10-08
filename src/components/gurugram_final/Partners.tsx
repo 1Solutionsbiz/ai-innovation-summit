@@ -107,16 +107,17 @@ const PartnersSection = () => {
                     <h3 className="
                     partner-title 
                     text-[#092c64]
-                    text-[16px]
+                    text-[12px]
                     tracking-[0.02em]
                     mb-2
                     font-[400]"
-                    style={{ textDecoration: "underline", fontStyle: "normal" }}
+                    style={{  fontStyle: "normal" }}
                   >
                       {partner.title}
                     </h3>
 
                     <img
+                      className={`${partner.alt}-guru26-image`}
                       src={partner.image}
                       alt={partner.alt}
                     />
