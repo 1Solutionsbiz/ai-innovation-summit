@@ -453,7 +453,7 @@
 .partners-list {
   display: flex;
   flex-direction: column;
-
+  align-items: center;
   width: 100%;
 }
 
@@ -476,7 +476,7 @@
 }
 
 .partner-logo-new {
-  gap: 8px;
+  /* gap: 8px; */
   margin-bottom: 0px;
 }
 
@@ -1621,7 +1621,7 @@
 /* ---------- Base (Desktop) ---------- */
 .sticky-partners-bar {
   position: fixed;
-  left: 0;
+  left: 10%;
   right: 0;
   bottom: 0;
   z-index: 999;
@@ -1629,6 +1629,8 @@
   border-top: 1px solid #ddd;
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
   padding: 8px 12px calc(8px + env(safe-area-inset-bottom, 0px));
+  width: 80%;
+  border-radius: 50px;
 }
 
 .sticky-partners-inner {

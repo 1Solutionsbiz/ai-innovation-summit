@@ -101,7 +101,16 @@ const PartnersSection = () => {
               <div className="partners-list" style={{ gap: "50px" }}>
                 {partners.map((partner, index) => (
                   <div
-                    className="partner-logo partner-logo-new"
+                    className="partner-logo 
+                    partner-logo-new 
+                    md:w-[25%] 
+                    md:min-h-[150px] 
+                    bg-[#f0f0f0] 
+                    rounded-[20px] 
+                    hover:shadow-[0px_0px_20px_#fbe2e4] 
+                    pt-4
+                    pb-4
+                    "
                     key={`first-${index}`}
                   >
                     <h3 className="
