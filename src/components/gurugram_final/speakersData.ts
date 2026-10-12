@@ -96,6 +96,14 @@ export const speakers = [
     linkedin: "#",
   },
   {
+    name: "Shivkumar Pandey",
+    role: "Group CISO, ",
+    company: "Adani Group",
+    description: "",
+    image: "gurugram/speakers/Shivkumar-Pandey.png",
+    linkedin: "https://www.linkedin.com/in/shivkumarpandey?originalSubdomain=in",
+  },
+  {
     name: "Yogesh Kumar Sharma",
     role: "Chief Information Security Officer, ",
     company: "Jindal Stainless",
