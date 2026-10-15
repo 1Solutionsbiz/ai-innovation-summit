@@ -42,7 +42,7 @@ const FeaturedSpeakers = () => {
         }
       },
       {
-        threshold: 0.2,
+        threshold: 0,
       }
     );
 
@@ -183,7 +183,7 @@ const FeaturedSpeakers = () => {
               <div
                 className="
                   grid
-                  grid-cols-1
+                  grid-cols-2
                   sm:grid-cols-2
                   md:grid-cols-3
                   lg:grid-cols-5
@@ -489,6 +489,7 @@ const FeaturedSpeakers = () => {
                 relative
 
                 w-full
+                min-h-[500px]
                 md:w-[33%]
 
                 aspect-[4/3]
