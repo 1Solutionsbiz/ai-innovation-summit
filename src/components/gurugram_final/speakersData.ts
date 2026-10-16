@@ -143,4 +143,12 @@ export const speakers = [
     image: "gurugram/speakers/Rajat-Wadhwa.png",
     linkedin: "https://www.linkedin.com/in/rajatwadhwa/",
   },
+  {
+    name: "Madhur Bhardwaj",
+    role: "Senior Technology Advisor & CTO RAN & Core Technology Strategy, ",
+    company: "Nokia",
+    description: "",
+    image: "gurugram/speakers/Madhur-Bhardwaj.png",
+    linkedin: "#",
+  },
 ];
