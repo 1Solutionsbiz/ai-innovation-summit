@@ -1,18 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { getScrollDirection } from "@/hooks/useScrollDirection";
 
-// const partners = [
-//   {
-//     title: "PRESENTING PARTNER",
-//     image: "/gurugram/partners/salesforce.png",
-//     alt: "salesforce",
-//   },
-//   {
-//     title: "CLOUD PARTNER",
-//     image: "/gurugram/partners/Akamai.png",
-//     alt: "Akamai",
-//   },
-// ];
 
 import { partners } from "@/data/partners";
 
@@ -57,13 +45,14 @@ const PartnersSection = () => {
         <div className="col-md-6">
 
           <span
-            className={`partners-small-title partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+            className={`eyebrowsec partners-small-title partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
             style={{ animationDelay: delayFor(0, 6) }}
           >
             Our Partners
           </span>
 
           <h2 className="
+                  main-title-center
                   font-black
                   text-[34px]
                   sm:text-[48px]
@@ -142,7 +131,7 @@ const PartnersSection = () => {
           <a
             href="partner-form"
             target="_blank"
-            className={`partners-btn mt-8 partners-reveal-up inline-block ${sectionVisible ? "is-visible" : ""}`}
+            className={`cta-btn-mob partners-btn mt-8 partners-reveal-up inline-block ${sectionVisible ? "is-visible" : ""}`}
             style={{ animationDelay: delayFor(5, 6) }}
           >
             Become a Partner

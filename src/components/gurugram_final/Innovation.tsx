@@ -96,15 +96,16 @@ const InnovationSection = () => {
           {/* =================================================
               LEFT TEXT
           ================================================= */}
-          <div className="lg:w-[33%] flex-shrink-0 lg:pl-2">
+          <div className="lg:w-[33%] text-center-sec flex-shrink-0 lg:pl-2">
             <p
-              className={`partners-reveal-up text-[#EF3340] text-[16px] md:text-[18px] font-bold uppercase tracking-wide mb-3 ${sectionVisible ? "is-visible" : ""}`}
+              className={`eyebrowsec partners-reveal-up text-[#EF3340] text-[16px] md:text-[18px] font-bold tracking-wide mb-3 ${sectionVisible ? "is-visible" : ""}`}
               style={{ animationDelay: textDelay(0, 5) }}
             >
               Innovation Everywhere
             </p>
 
             <h2 className="text-[#022158]
+                  main-title-center
                   font-black
                   text-[34px]
                   sm:text-[48px]
@@ -133,7 +134,7 @@ const InnovationSection = () => {
             <button
               type="button"
               onClick={() => setIsOperatingModelOpen(true)}
-              className={`innovation-know-more mt-5 partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+              className={`cta-btn-mob innovation-know-more mt-5 partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
               style={{ animationDelay: textDelay(4, 5) }}
             >
               Know More

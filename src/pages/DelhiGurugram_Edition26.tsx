@@ -61,8 +61,6 @@ const GurugramEdition2026 = () => {
             <BengaluruJune26RegisterForm />
 
       <Footer />
-      <br />
-      <br />
     </div>
   );
 };

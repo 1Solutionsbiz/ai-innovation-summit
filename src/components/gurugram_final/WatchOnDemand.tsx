@@ -59,15 +59,16 @@ const OnDemandSection = () => {
           {/* =================================================
               LEFT TEXT
           ================================================= */}
-          <div className="lg:w-[30%] flex-shrink-0">
+          <div className="lg:w-[30%] text-center flex-shrink-0">
             <p
-              className={`partners-reveal-up text-[#EF3340] text-[18px] mb-3 ${sectionVisible ? "is-visible" : ""}`}
+              className={`eyebrowsec partners-reveal-up text-[#EF3340] text-[18px] mb-3 ${sectionVisible ? "is-visible" : ""}`}
               style={{ animationDelay: upDelay(0, 4) }}
             >
               On-Demand Content
             </p>
 
             <h2 className="
+                main-title-center
                 text-white
                 font-black
                 text-[34px]
@@ -86,6 +87,7 @@ const OnDemandSection = () => {
             <a
               href="/watch-On-Demand-videos"
               className={`partners-reveal-up
+                cta-btn-mob
                 mt-4
                 sm:mt-5
                 inline-block

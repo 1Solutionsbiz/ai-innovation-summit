@@ -1557,6 +1557,20 @@
 }
 
 
+
+
+
+
+
+  .mobsection-only{
+    display: none !important;
+  }
+  .desksection-only{
+    display: block !important;
+  }
+
+
+
 /* Mobile Section Start */
 @media screen and (max-width: 481px) {
   .two-cols {
@@ -1571,17 +1585,81 @@
     margin-top: 10px !important;
   }
   .mmt-35s{
-    margin-top: -35px !important;
+    margin-top: -15px !important;
   }
 
   .partners-visual {
     width: 100%;
   }
+  
+  .eyebrowsec{
+    text-align: center !important;
+    color: #ef3340 !important;
+    font-weight: 700 !important;
+  }
+  .main-title-center{
+    text-align: center !important;
+    font-size: 34px !important;
+    font-weight: 900 !important;
+  }
+  .text-center-sec{
+    text-align: center;
+  }
+  .align-items-sec{
+    align-items: center;
+  }
+  .width100p{
+    width:100%;
+  }
+  .width60mp{
+    width:65%;
+  }
+  .sevensecmob{
+    align-items: center !important;
+    border-top: 1px solid;
+    margin: 0px;
+    padding-top: 20px;
+  }
+  .justify-content-sec{
+    justify-content:center;
+  }
+  .text-center-sec-p30px{
+    text-align: center;
+    padding: 0px 30px;
+  }
+  .mob-spe-sec{
+    border: 1px solid #022158;
+  }
+  .mob-spe-sec svg{
+    color: #022158;
+  }
+
+  .mobsection-only{
+    display: block !important;
+  }
+  .desksection-only{
+    display: none !important;
+  }
+
+  .dflexcenter{
+    display: flex;
+    justify-content: center;
+  }
+  .cta-btn-mob{
+    font-size: 14px !important;
+    padding: 8px 20px !important;
+    font-weight: 600 !important;
+  }
+
+  .innovation-know-more {
+    min-width: 160px !important;
+    height: 40px !important;
+  }
 
 
 }
-
 /* Mobile Section End */
+
 
 
 
@@ -1684,6 +1762,15 @@
   height: 60px;
   background: #092c64;
   flex-shrink: 0;
+}
+
+
+
+.arrowsec-new svg{
+  color: #123d75;
+}
+.arrowsec-new:hover svg{
+  color: #fff;
 }
 
 /* ---------- Mobile / Tablet: auto-scroll marquee ---------- */

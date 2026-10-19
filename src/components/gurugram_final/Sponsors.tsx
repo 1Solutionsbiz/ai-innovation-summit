@@ -51,10 +51,10 @@ const Sponsors = () => {
   return (
     <section ref={sectionRef} id="sponsors" className="bg-[#fff] py-12 sm:py-20 md:py-28">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 text-center">
-        <p className={`partners-reveal-up font-extrabold text-[20px] text-[#e92630] mb-2 ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(0, 4) }}>
+        <p className={`eyebrowsec partners-reveal-up font-extrabold text-[20px] text-[#e92630] mb-2 ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(0, 4) }}>
           Past Partners
         </p>
-        <h2 className={`partners-reveal-up text-[#022158]
+        <h2 className={`main-title-center partners-reveal-up text-[#022158]
                   font-black
                   text-[34px]
                   sm:text-[48px]
@@ -66,15 +66,6 @@ const Sponsors = () => {
         <p className={`partners-reveal-up mt-4 sm:mt-6 sponser-description mx-auto ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(2, 4) }}>
           Celebrating the organisations that came on board to support ideas, innovation, and industry connections
         </p>
-
-        {/* <div className={`partners-reveal-up mt-8 flex flex-wrap items-center justify-center gap-4 ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(3, 4) }}>
-          <a
-            href="#partners"
-            className="view-all-speakers"
-          >
-            View all sponsors
-          </a>
-        </div> */}
       </div>
 
       <div className={`mt-10 sm:mt-16 overflow-hidden partners-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(3, 4) }}>
@@ -87,7 +78,7 @@ const Sponsors = () => {
               key={`${logo.src}-${i}`}
               src={logo.src}
               alt={logo.alt}
-              className="shrink-0 h-7 sm:h-8 md:h-[5rem] w-auto object-contain grayscale opacity-99 hover:opacity-100 hover:grayscale-0 transition bg-white p-2"
+              className="shrink-0 h-7 sm:h-8 md:h-10 w-auto object-contain grayscale opacity-70 hover:opacity-100 hover:grayscale-0 transition"
             />
           ))}
         </div>

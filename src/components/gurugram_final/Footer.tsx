@@ -206,6 +206,56 @@ const Footer = () => {
           }
         }
       `}</style>
+
+
+
+      <style>{`
+        .footer-section {
+          position: sticky;
+          bottom: 0;
+          z-index: -1;
+          box-shadow: 0 -16px 40px rgba(2, 6, 23, 0.18);
+          padding-bottom:2%;
+        }
+
+        @keyframes footerFadeInUp {
+          from {
+            opacity: 0;
+            transform: translate3d(0, 32px, 0);
+          }
+          to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+          }
+        }
+
+        .footer-reveal {
+          opacity: 0;
+          will-change: opacity, transform;
+        }
+
+        .footer-reveal.is-visible {
+          animation: footerFadeInUp 1.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .footer-delay-1 { animation-delay: 0ms; }
+        .footer-delay-2 { animation-delay: 220ms; }
+        .footer-delay-3 { animation-delay: 440ms; }
+
+        @media (prefers-reduced-motion: reduce) {
+          .footer-reveal {
+            opacity: 1;
+            transform: none;
+          }
+
+          .footer-reveal.is-visible {
+            animation: none;
+          }
+        }
+      `}</style>
+
+
+      
     </footer>
   );
 };

@@ -39,6 +39,7 @@ const EventInfo: React.FC = () => {
         {/* LEFT CONTENT */}
         <div className="event-info-left">
           <h2 className="text-white
+                  main-title-center
                   font-black
                   text-[34px]
                   sm:text-[48px]
@@ -56,7 +57,7 @@ const EventInfo: React.FC = () => {
             </span>
           </h2>
 
-          <p className="event-info-subtext">
+          <p className="event-info-subtext text-center-sec">
             <span className={`event-reveal-line partners-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(3, 5) }}>
               Be part of the movement shaping
             </span>
@@ -67,7 +68,7 @@ const EventInfo: React.FC = () => {
         </div>
 
         {/* RIGHT CONTENT */}
-        <div className="event-info-right">
+        <div className="event-info-right text-center-sec align-items-sec">
           <div className="event-info-meta">
             <span className={`event-info-date partners-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(0, 4) }}>
               December 2, 2026
@@ -77,17 +78,17 @@ const EventInfo: React.FC = () => {
             </span>
           </div>
 
-          <div className="event-info-actions">
+          <div className="event-info-actions align-items-sec">
             <a
               href="#delhincrregistrationform"
-              className={`event-info-btn-primary btn-bg partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+              className={`width60mp cta-btn-mob event-info-btn-primary btn-bg partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
               style={{ animationDelay: upDelay(2, 4) }}
             >
               Register Interest
             </a>
             <a
               href="/partner-form"
-              className={`event-info-btn-secondary btn-bg-hover partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+              className={`width60mp cta-btn-mob event-info-btn-secondary btn-bg-hover partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
               style={{ animationDelay: upDelay(3, 4) }}
             >
               Explore Partnership

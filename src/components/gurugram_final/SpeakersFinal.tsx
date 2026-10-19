@@ -314,6 +314,7 @@ const FeaturedSpeakers = () => {
 
               <p
                 className={`
+                  eyebrowsec
                   text-[18px]
                   md:text-[20px]
                   font-bold
@@ -329,13 +330,15 @@ const FeaturedSpeakers = () => {
 
               <h2
                 className="
+                  main-title-center
                   text-[#022158]
                   font-black
                   text-[34px]
                   sm:text-[48px]
                   md:text-[64px]
                   xl:text-[42px]
-                  mb-14
+                  mb-0
+                  md:mb-14
                 "
               >
                 <span
@@ -356,7 +359,7 @@ const FeaturedSpeakers = () => {
               <a href="delhi-gurugram_edition-26-speakers"
                 type="button"
                 target="_blank"
-                className={`view-all-speakers inline-block partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+                className={`desksection-only view-all-speakers inline-block partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
                 style={{ animationDelay: upDelay(3, 4) }}
               >
                 View all speakers
@@ -404,6 +407,7 @@ const FeaturedSpeakers = () => {
                   }
                   aria-label="Previous speakers"
                   className="
+                    arrowsec-new
                     flex
                     shrink-0
 
@@ -450,6 +454,7 @@ const FeaturedSpeakers = () => {
                   }
                   aria-label="Next speakers"
                   className="
+                    arrowsec-new
                     flex
                     shrink-0
 
@@ -458,9 +463,11 @@ const FeaturedSpeakers = () => {
 
                     rounded-full
 
-                    bg-[#022158]
-                    text-white
 
+                    border
+                    border-[#022158]
+
+                    
                     items-center
                     justify-center
 
@@ -626,6 +633,7 @@ const FeaturedSpeakers = () => {
                         <span
                           className="
                             absolute
+                            mob-spe-sec
                             top-3
                             right-3
 
@@ -633,7 +641,7 @@ const FeaturedSpeakers = () => {
                             h-10
 
                             rounded-full
-
+                        
                             bg-white
                             text-[#022158]
 
@@ -712,6 +720,20 @@ const FeaturedSpeakers = () => {
               </div>
 
             </div>
+
+
+
+              <div className="dflexcenter">
+                  <a href="delhi-gurugram_edition-26-speakers"
+                    type="button"
+                    target="_blank"
+                    className={`mobsection-only cta-btn-mob view-all-speakers inline-block partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+                    style={{ animationDelay: upDelay(3, 4) }}
+                  >
+                    View all speakers
+                  </a>
+              </div>
+                          
 
           </div>
 

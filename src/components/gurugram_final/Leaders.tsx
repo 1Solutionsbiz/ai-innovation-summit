@@ -37,16 +37,18 @@ const LeadersNumbers = () => {
       <div className="leaders-container-new">
 
         {/* LEFT CONTENT */}
-        <div className="leaders-left">
+        <div className="leaders-left text-center-sec align-items-sec">
 
           <span
-            className={`leaders-label partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+            className={`width100p eyebrowsec leaders-label partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
             style={{ animationDelay: upDelay(0, 5) }}
           >
             Reach
           </span>
 
           <h2 className="
+                  width100p
+                  main-title-center
                   font-black
                   text-[34px]
                   sm:text-[48px]
@@ -69,7 +71,7 @@ const LeadersNumbers = () => {
           </h2>
 
 
-          <div className="event-info-meta mt-3">
+          <div className="event-info-meta mt-3 width100p">
             <span className={`partners-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(0, 4) }}>
               2nd December, 2026
             </span>
@@ -78,11 +80,9 @@ const LeadersNumbers = () => {
             </span>
           </div>
 
-
-
           <a
             href="#delhincrregistrationform"
-            className={`leaders-btn btn-bg partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+            className={`cta-btn-mob leaders-btn btn-bg partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
             style={{ animationDelay: upDelay(4, 5) }}
           >
             Register Interest
@@ -96,7 +96,7 @@ const LeadersNumbers = () => {
 
 
         {/* RIGHT CONTENT */}
-        <div className="leaders-right">
+        <div className="leaders-right text-center-sec align-items-sec">
 
           <p
             className={`leaders-description partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
@@ -109,7 +109,7 @@ const LeadersNumbers = () => {
 
 
           {/* NUMBER */}
-          <div className="leaders-stat">
+          <div className="leaders-stat text-center-sec align-items-sec sevensecmob">
 
             <div
               className={`leaders-number partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}

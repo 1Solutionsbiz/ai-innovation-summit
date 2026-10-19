@@ -85,13 +85,13 @@ const Sponsors = () => {
     >
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 text-center">
         <p
-          className={`partners-reveal-up font-extrabold text-[20px] text-[#e92630] mb-2 ${sectionVisible ? "is-visible" : ""}`}
+          className={`eyebrowsec partners-reveal-up font-extrabold text-[#e92630] mb-2 ${sectionVisible ? "is-visible" : ""}`}
           style={{ animationDelay: upDelay(0, 3) }}
         >
           7 Editions. Trusted by the Best.
         </p>
         <h2
-          className={`partners-reveal-up text-[#022158]
+          className={`main-title-center partners-reveal-up text-[#022158]
                   text-[#022158]
                   font-black
                   text-[34px]

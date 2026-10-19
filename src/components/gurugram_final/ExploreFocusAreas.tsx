@@ -148,12 +148,13 @@ const FocusAreasSection = () => {
           "
         >
 
-          <div className="max-w-[430px]">
+          <div className="max-w-[430px] text-center-sec">
 
             {/* Small Heading */}
 
             <p
               className={`
+                eyebrowsec
                 text-[#EF3340]
 
                 text-lg
@@ -177,6 +178,7 @@ const FocusAreasSection = () => {
 
             <h2
               className={`
+                main-title-center
                 text-white
                 font-black
                 text-[34px]
@@ -201,6 +203,7 @@ const FocusAreasSection = () => {
 
             <p
               className={`
+                text-center-sec
                 mt-6
                 mb-8
                 text-white/90
@@ -233,7 +236,7 @@ const FocusAreasSection = () => {
                 px-7
                 py-3.5
                 rounded-full
-
+                cta-btn-mob
                 inline-block
 
                 partners-reveal-up

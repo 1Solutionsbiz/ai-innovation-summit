@@ -1140,15 +1140,15 @@ const FeaturedSpeakers = () => {
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-[250px_1fr]">
           {/* Left column */}
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col align-items-sec justify-center">
             <p
-              className={`partners-reveal-up text-red-600 font-semibold text-lg ${isVisible ? "is-visible" : ""}`}
+              className={`eyebrowsec partners-reveal-up text-red-600 font-semibold text-lg ${isVisible ? "is-visible" : ""}`}
               style={{ animationDelay: upDelay(0, 3) }}
             >
               Retrospective
             </p>
             <h2
-              className={`partners-reveal-up text-[#022158]
+              className={`main-title-center partners-reveal-up text-[#022158]
                   font-black
                   text-[34px]
                   sm:text-[48px]
@@ -1165,7 +1165,7 @@ const FeaturedSpeakers = () => {
               target="_blank"
               href="#"
               type="button"
-              className={`view-all-speakers inline-block mt-8 sm:mt-14 partners-reveal-up ${isVisible ? "is-visible" : ""}`}
+              className={`view-all-speakers cta-btn-mob inline-block mt-8 sm:mt-14 partners-reveal-up ${isVisible ? "is-visible" : ""}`}
               style={{ animationDelay: upDelay(2, 3) }}
             >
               View all speakers
@@ -1180,7 +1180,7 @@ const FeaturedSpeakers = () => {
                 type="button"
                 onClick={() => scrollCarousel("left")}
                 aria-label="Scroll speakers left"
-                className="w-10 h-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-600 hover:bg-slate-50 transition-colors"
+                className="arrowsec-new w-10 h-10 rounded-full border border-slate-300 flex items-center justify-center text-slate-600 hover:bg-blue-900 transition-colors"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
@@ -1188,7 +1188,7 @@ const FeaturedSpeakers = () => {
                 type="button"
                 onClick={() => scrollCarousel("right")}
                 aria-label="Scroll speakers right"
-                className="w-10 h-10 rounded-full bg-blue-950 flex items-center justify-center text-white hover:bg-blue-900 transition-colors"
+                className="arrowsec-new w-10 h-10 rounded-full border border-slate-300 flex items-center justify-center text-white hover:bg-blue-900 transition-colors"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
