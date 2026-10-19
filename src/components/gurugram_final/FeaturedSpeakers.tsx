@@ -1001,6 +1001,7 @@ const EVENTS: EventGroup[] = [
 
 const FeaturedSpeakers = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const yearsRef = useRef<HTMLDivElement>(null);
   const autoScrollFrame = useRef<number | null>(null);
   const lastScrollTime = useRef<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
@@ -1087,6 +1088,23 @@ const FeaturedSpeakers = () => {
     setActiveEventIndex(eventIndex);
     // reset carousel scroll position whenever the selected event changes
     scrollRef.current?.scrollTo({ left: 0, behavior: "smooth" });
+
+    const track = yearsRef.current;
+    const option = track?.querySelectorAll<HTMLButtonElement>("[data-event-option]")[eventIndex];
+    if (track && option) {
+      const trackRect = track.getBoundingClientRect();
+      const optionRect = option.getBoundingClientRect();
+      const centeredPosition =
+        track.scrollLeft +
+        optionRect.left -
+        trackRect.left -
+        (track.clientWidth - optionRect.width) / 2;
+
+      track.scrollTo({
+        left: Math.max(0, Math.min(centeredPosition, track.scrollWidth - track.clientWidth)),
+        behavior: "smooth",
+      });
+    }
   };
 
   const scrollYears = (direction: "left" | "right") => {
@@ -1194,6 +1212,8 @@ const FeaturedSpeakers = () => {
               </button>
             </div>
 
+
+
             {/* Speaker cards — only the selected event's speakers */}
             <div
               key={activeEventIndex}
@@ -1221,8 +1241,8 @@ const FeaturedSpeakers = () => {
                       className="h-full w-full object-cover grayscale transition-transform duration-500 ease-out group-hover:scale-[0.96]"
                     />
                   </div>
-                  <div className="flex min-h-0 flex-1 flex-col bg-white px-2 pb-2 pt-3 transition-colors duration-300 group-hover:bg-black">
-                    <p className="text-[13px] font-bold text-black transition-colors duration-300 group-hover:text-white sm:text-sm">{speaker.name}</p>
+                  <div className="flex min-h-0 flex-1 flex-col bg-white px-2 pb-2 pt-1 transition-colors duration-300 group-hover:bg-black">
+                    <p className="text-[13px] mobtext-sec font-bold text-black  duration-300 group-hover:text-white sm:text-sm">{speaker.name}</p>
                     <div className=" max-h-[60px] overflow-hidden pr-1 text-[11px] leading-tight text-black transition-all duration-300 group-hover:max-h-[150px] group-hover:overflow-visible group-hover:text-white sm:text-xs">
                       {speaker.company && <p className="">{speaker.company}</p>}
                       <p>{speaker.role}</p>
@@ -1233,26 +1253,37 @@ const FeaturedSpeakers = () => {
               ))}
             </div>
 
+
+
+
+
             {/* Year / location selector */}
-            <div className="mt-6 flex items-center gap-3 sm:mt-8 sm:gap-6">
+            <div className="speaker-event-selector mt-6 flex items-center gap-3 sm:mt-8 sm:gap-6">
               <button
                 type="button"
                 onClick={() => scrollYears("left")}
                 aria-label="Previous event"
-                className="text-slate-400 hover:text-slate-700 transition-colors"
+                className="speaker-event-arrow text-slate-400 hover:text-slate-700 transition-colors"
               >
                 <ChevronLeft className="w-5 h-5" />
               </button>
 
-              <div className="flex min-w-0 flex-1 gap-6 overflow-x-auto no-scrollbar sm:gap-10">
+              <div
+                ref={yearsRef}
+                role="group"
+                aria-label="Select event location and year"
+                className="speaker-event-track flex min-w-0 flex-1 gap-6 overflow-x-auto no-scrollbar sm:gap-10"
+              >
                 {EVENTS.map((event, idx) => {
                   const isActive = idx === activeEventIndex;
                   return (
                     <button
                       key={idx}
                       type="button"
+                      data-event-option
+                      aria-pressed={isActive}
                       onClick={() => goToEvent(idx)}
-                      className={`flex-shrink-0 text-left font-semibold leading-tight transition-colors ${isActive ? "text-red-600" : "text-blue-950"
+                      className={`speaker-event-option flex-shrink-0 text-left font-semibold leading-tight transition-colors ${isActive ? "text-red-600" : "text-blue-950"
                         }`}
                     >
                       {event.location}
@@ -1267,7 +1298,7 @@ const FeaturedSpeakers = () => {
                 type="button"
                 onClick={() => scrollYears("right")}
                 aria-label="Next event"
-                className="text-slate-400 hover:text-slate-700 transition-colors"
+                className="speaker-event-arrow text-slate-400 hover:text-slate-700 transition-colors"
               >
                 <ChevronRight className="w-5 h-5" />
               </button>
@@ -1312,6 +1343,47 @@ const FeaturedSpeakers = () => {
         .no-scrollbar {
           -ms-overflow-style: none;
           scrollbar-width: none;
+        }
+
+        @media (max-width: 639px) {
+          .speaker-event-selector {
+            gap: 8px;
+          }
+
+          .speaker-event-arrow {
+            display: flex;
+            width: 36px;
+            height: 40px;
+            flex: 0 0 36px;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .speaker-event-track {
+            gap: 8px;
+            padding: 4px 2px;
+            overscroll-behavior-x: contain;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+          }
+
+          .speaker-event-option {
+            min-width: 76px;
+            min-height: 40px;
+            padding: 7px 10px;
+            border: 1px solid transparent;
+            border-radius: 9999px;
+            scroll-snap-align: center;
+            text-align: center;
+            font-size: 12px;
+          }
+
+          .speaker-event-option[aria-pressed="true"] {
+            border-color: #050b21;
+            background-color: #ffffff;
+            color: #050b21 !important;
+          }
         }
 
         @media (prefers-reduced-motion: reduce) {

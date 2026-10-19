@@ -1656,6 +1656,13 @@
     height: 40px !important;
   }
 
+  .speaker-event-selector{
+    background: #050b21;
+  }
+
+  .mobtext-sec{
+    color: #000;
+  }
 
 }
 /* Mobile Section End */
