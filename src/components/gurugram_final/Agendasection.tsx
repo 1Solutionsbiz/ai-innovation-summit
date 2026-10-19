@@ -129,7 +129,7 @@ const AGENDA_DATA: DayData[] = [
             time: "08:30 AM - 09:15 AM",
             section: "Pre-Summit",
             title: "Registration & Networking Breakfast ",
-            description: "Delegates arrive and collect registration kits. Lucky Draw QR codes active. Engagement Zone open in pre-function area. Sponsor booths open. ",
+            description: "Delegate arrival Engagement Zone open in pre-function area. Sponsor booths open.",
             // speakers: [
             //   {
             //     name: "Charu Lamba",
@@ -143,13 +143,25 @@ const AGENDA_DATA: DayData[] = [
             time: "09:15 AM – 09:20 AM",
             section: "Opening",
             title: "Welcome Address",
-            description: "Welcome note by The Guild and Guild Live. Context setting for the day.. "
+            description: "Welcome note by The Guild and Guild Live. Context setting for the day. "
           },
           {
             time: "09:20 AM – 09:40 AM ",
             section: "Keynotes — First Half",
-            title: "Opening Keynote From Assistance to Autonomy: The Enterprise AI Mandate for 2026",
-            description: "What enterprise AI leadership actually looks like when the boardroom demands ROI, the regulators demand governance, and the technology moves faster than either can keep up with. - Where enterprise AI stands in India in 2026, the state of AI adoption across sectors - Why the shift from AI assistance to AI autonomy is a leadership decision, not just a technology decision - The structural choices, architectural, economic and cultural, that separate enduring AI deployments from those that stall - What the intelligent enterprise looks like from the inside and what leaders need to rethink "
+            title: "Opening Keynote From Assistance to Autonomy: The Enterprise AI Mandate for 2026 ",
+            description: "What enterprise AI leadership actually looks like when the boardroom demands ROI, the regulators demand governance, and the technology moves faster than either can keep up with . - Where enterprise AI stands in India in 2026, the state of AI adoption across sectors - Why the shift from AI assistance to AI autonomy is a leadership decision, not just a technology decision - The structural choices, architectural, economic and cultural, that separate enduring AI deployments from those that stall - What the intelligent enterprise looks like from the inside and what leaders need to rethink. \n Keynote Speaker:" ,
+
+            speakers: [
+              {
+                name: "Dr. Tapan Sahoo",
+                role: "",
+                roleLines: ["Senior Executive Officer- Maruti Suzuki India Limited", ""],
+                image: "gurugram/speakers/Dr.-Tapan-Sahoo.png",
+              },
+            ],
+
+
+
           },
           {
             time: "09:40 AM – 09:55 AM ",
@@ -175,49 +187,171 @@ const AGENDA_DATA: DayData[] = [
             time: "10:45 AM – 11:30 AM",
             section: "Plenary Sessions — First Half ",
             title: "Session 1: Leadership Panel The Technology Mandate: Scaling AI Where the Board Is Watching",
-            description: "The role of Technology CXOs has been permanently rewritten. From technology custodians to enterprise intelligence architects. Accountable to boards for AI ROI. Accountable to regulators for AI governance. Accountable to the workforce for how AI reshapes their jobs. \n This panel brings together India's most senior Tech-CXOs from manufacturing, BFSI, pharma, FMCG, and cross-industry enterprises for a frank conversation on how they are navigating the most consequential mandate transformation in a generation. - Turning AI investment into a board-level ROI narrative - Governing GPU costs, model lifecycles and AI infrastructure at scale - Solving legacy integration, architecture debt and vendor lock-in - Redrawing AI accountability across the C-suite - Building the intelligent enterprise operating model - Leading the workforce through AI-driven change, trust and capability"
+            description: "The role of Technology CXOs has been permanently rewritten. From technology custodians to enterprise intelligence architects. Accountable to boards for AI ROI. Accountable to regulators for AI governance. Accountable to the workforce for how AI reshapes their jobs. \n This panel brings together India's most senior Tech-CXOs from manufacturing, BFSI, pharma, FMCG, and cross-industry enterprises for a frank conversation on how they are navigating the most consequential mandate transformation in a generation. - Turning AI investment into a board-level ROI narrative - Governing GPU costs, model lifecycles and AI infrastructure at scale - Solving legacy integration, architecture debt and vendor lock-in - Redrawing AI accountability across the C-suite - Building the intelligent enterprise operating model - Leading the workforce through AI-driven change, trust and capability.\n Speakers   ",
+            speakers: [
+              {
+                name: "Gaurav Gulati",
+                role: "",
+                roleLines: ["Group CIO", "Motherson Group"],
+                image: "gurugram/speakers/Gaurav-Gulati.png",
+              },
+              {
+                name: "Supriya Kaul",
+                role: "",
+                roleLines: ["Regional IT CIO", "CNH Industrial"],
+                image: "gurugram/speakers/Supriya-Kaul.png",
+              },
+              {
+                name: "Sanjiv Jain",
+                role: "",
+                roleLines: ["Group Chief Information Officer", "Krishna Maruti Group"],
+                image: "gurugram/speakers/Sanjiv-Jain.png",
+              },
+            ],
           },
           {
-            time: "11:30 AM – 11:40 AM ",
+            time: "11:30 AM – 11:45 AM ",
             title: "Partner Keynote Address",
-            description: ""
+            description: "Special Address by Akama \n Speaker: ",
+
+            speakers: [
+              {
+                name: "Jay Jenkins",
+                role: "",
+                roleLines: ["Field CTO, Akamai", ""],
+                image: "gurugram/speakers/Jay-Jenkins.png",
+              },
+            ]
+
+
           },
           {
-            time: "11:40 AM – 12:25 PM",
+            time: "11:45 AM – 12:30 PM",
             title: "Session 2: Agents at Work: From Pilot to Production",
-            description: "Agentic AI is the most consequential shift in enterprise technology since cloud. The question in 2026 is no longer what it can do, it is whether enterprises have the architecture, governance, and leadership conviction to let it run. This session brings together India's most senior AI and technology leaders from across industries for the most execution-focused conversation of the day. \n The conversation will explore: - Moving agentic AI from pilots to production at enterprise scale - Building production-grade agents through orchestration, memory and human-in-the-loop design - Defining ownership and governance for agentic AI across the enterprise - Scaling real-world use cases across quality, customer service, procurement, fraud and supply chains - Measuring agentic AI ROI through cycle time, error reduction and workforce leverage - Building leadership conviction, cross-functional alignment and workforce readiness for autonomous AI "
+            description: "Agentic AI is the most consequential shift in enterprise technology since cloud. The question in 2026 is no longer what it can do, it is whether enterprises have the architecture, governance, and leadership conviction to let it run. This session brings together India's most senior AI and technology leaders from across industries for the most execution-focused conversation of the day. \n The conversation will explore: - Moving agentic AI from pilots to production at enterprise scale - Building production-grade agents through orchestration, memory and human-in-the-loop design - Defining ownership and governance for agentic AI across the enterprise - Scaling real-world use cases across quality, customer service, procurement, fraud and supply chains - Measuring agentic AI ROI through cycle time, error reduction and workforce leverage - Building leadership conviction, cross-functional alignment and workforce readiness for autonomous AI  \n Speakers ",
+
+            speakers: [
+              {
+                name: "Vivek Madan",
+                role: "",
+                roleLines: ["Chief Technology Officer", "Hero Fincorp – Housing Entity"],
+                image: "gurugram/speakers/Vivek-Madan.png",
+              },
+              {
+                name: "Arvind Heda",
+                role: "",
+                roleLines: ["Chief Technology Officer", "Info Edge India Ltd  "],
+                image: "gurugram/speakers/Arvind-Heda.png",
+              },
+              {
+                name: "Charit Agarwal",
+                role: "",
+                roleLines: ["Chief Data & AI Officer", "Niva Bupa Health Insurance"],
+                image: "gurugram/speakers/Charit-Agarwal.png",
+              },
+              {
+                name: "Ankit Gupta",
+                role: "",
+                roleLines: ["Chief Technology Officer", "Policy bazaar for Business"],
+                image: "gurugram/speakers/Ankit-Gupta.png",
+              },
+              {
+                name: "Ashu Gupta",
+                role: "",
+                roleLines: ["Senior Director – Digital & AI", "(Group CDO)- Jubilant Pharmova"],
+                image: "gurugram/speakers/Ashu-Gupta.png",
+              },
+            ],
+
+
+
           },
           {
-            time: "12:25 PM – 12:55 PM ",
+            time: "12:30 PM – 01:00 PM ",
             title: "Session 3: Fireside Chat The CEO x CIO Dialogue: When the Machine Takes the Wheel",
-            description: "The most honest conversation of the day. A CEO and a CIO, unscripted, sitting across from each other, on what building an autonomous enterprise actually feels like from the inside. The governance moments that tested everything. The board conversations that changed the mandate. The architectural bets that defined where the enterprise stands today. - How the CEO-CIO relationship permanently changes when AI systems make decisions that used to require a committee - Governing AI that moves faster than your audit cycle, and what happens when it does not - The uncomfortable moment most enterprises discover they are not as AI-ready as they thought - The one structural decision each leader would reverse, knowing everything they now know "
+            description: "The most honest conversation of the day. A CEO and a CIO, unscripted, sitting across from each other, on what building an autonomous enterprise actually feels like from the inside. The governance moments that tested everything. The board conversations that changed the mandate. The architectural bets that defined where the enterprise stands today. - How the CEO-CIO relationship permanently changes when AI systems make decisions that used to require a committee - Governing AI that moves faster than your audit cycle, and what happens when it does not - The uncomfortable moment most enterprises discover they are not as AI-ready as they thought - The one structural decision each leader would reverse, knowing everything they now know \n Speakers ",
+
+            speakers: [
+              {
+                name: "Parna Ghosh",
+                role: "",
+                roleLines: ["President, Group CIO and Data Protection Officer", "Uno Minda"],
+                image: "gurugram/speakers/Parna-Ghosh.png",
+              },
+              
+            ],
           },
           {
-            time: "12:55 PM – 01:40 PM ",
+            time: "01:00 PM – 01:45 PM ",
             title: "Session 4: Data as Destiny: Building the Foundation Autonomous AI Runs On",
-            description: "The most sophisticated AI model cannot outperform the data that feeds it. This panel brings together India's most senior data and AI leaders from across the country's most data-intensive sectors for a session on what it actually takes to build data infrastructure that can carry the weight of autonomous AI. - Lakehouse architecture, federated platforms and unified data fabrics replacing legacy warehouses - The India Stack advantage: DPI, Account Aggregator and ONDC reshaping enterprise data access - Turning data governance into a competitive advantage for faster, more confident AI deployment  - Strengthening observability, lineage and explainability for boards, regulators and risk teams - Building AI-ready data infrastructure across manufacturing, pharma and supply chains - Making data ownership a shared, cross-functional responsibility for autonomous AI "
+            description: "The most sophisticated AI model cannot outperform the data that feeds it. This panel brings together India's most senior data and AI leaders from across the country's most data-intensive sectors for a session on what it actually takes to build data infrastructure that can carry the weight of autonomous AI. - Lakehouse architecture, federated platforms and unified data fabrics replacing legacy warehouses - The India Stack advantage: DPI, Account Aggregator and ONDC reshaping enterprise data access - Turning data governance into a competitive advantage for faster, more confident AI deployment  - Strengthening observability, lineage and explainability for boards, regulators and risk teams - Building AI-ready data infrastructure across manufacturing, pharma and supply chains - Making data ownership a shared, cross-functional responsibility for autonomous AI \n Speakers ",
+
+            speakers: [
+              {
+                name: "Dr. Shakti Goel",
+                role: "",
+                roleLines: ["Chief Architect and Data Scientist, Yatra Online", ""],
+                image: "gurugram/speakers/Shakti-Goel.png",
+              },
+              
+            ],
           },
           {
-            time: "01:40 PM – 02:20 PM",
+            time: "01:45 PM – 02:25 PM",
             title: "Networking Lunch ",
             description: "Open networking. Sponsor exhibition and engagement zone active."
           },
           {
-            time: "02:20 PM – 03:35 PM",
+            time: "02:25 PM – 03:35 PM",
             section: "Parallel Tracks — Post Lunch (2:20 PM – 3:35 PM)",
             title: "Track 1: AI Security ",
-            description: "Security • Governance • Trust \nThe Trust Layer: Securing, Governing, and Scaling AI Enterprises Can Actually Rely On \n\n The dedicated AI security, governance, and trust track, where the enterprises deploying AI at scale are being forced to confront a hard truth: innovation without trust does not survive contact with the boardroom, the regulator, or the customer. This track brings together India's most senior CISOs, Heads of AI Governance, Chief Risk Officers, and security architects for a practitioner-level deep dive on what it takes to make enterprise AI safe, defensible, and durable in 2026.  - Treating agent access as the new privileged access - Building AI inventories across models, datasets, APIs, agents and vector databases - Moving from responsible AI principles to enforceable runtime guardrails and continuous testing - Managing parallel AI compliance requirements across regulators and sectors - Aligning the board on acceptable AI risk and making security a business enabler - Building trust infrastructure through audit trails, access governance and zero-trust agents "
+            description: "Security • Governance • Trust \nThe Trust Layer: Securing, Governing, and Scaling AI Enterprises Can Actually Rely On \n\n The dedicated AI security, governance, and trust track, where the enterprises deploying AI at scale are being forced to confront a hard truth: innovation without trust does not survive contact with the boardroom, the regulator, or the customer. This track brings together India's most senior CISOs, Heads of AI Governance, Chief Risk Officers, and security architects for a practitioner-level deep dive on what it takes to make enterprise AI safe, defensible, and durable in 2026.  - Treating agent access as the new privileged access - Building AI inventories across models, datasets, APIs, agents and vector databases - Moving from responsible AI principles to enforceable runtime guardrails and continuous testing - Managing parallel AI compliance requirements across regulators and sectors - Aligning the board on acceptable AI risk and making security a business enabler - Building trust infrastructure through audit trails, access governance and zero-trust agents.\n Speakers: ",
+
+            speakers: [
+              {
+                name: "Yogesh Kumar Sharma",
+                role: "",
+                roleLines: ["Chief Information Security Officer", "Jindal Stainless"],
+                image: "gurugram/speakers/Yogesh-Kumar-Sharma.png",
+              },
+              
+            ],
+
             
           },
           {
             time: "02:20 PM  – 03:35 PM",
             title: "Track 2: Autonomous Industry ",
-            description: "Manufacturing • Robotics • Industrial AI \n The Autonomous Factory: Where Agentic AI, Robotics, and Industrial Intelligence Are Rewriting How India Makes Things \n\n The dedicated autonomous industry track, and the most operationally grounded conversation of the day. India’s manufacturing sector is undergoing its most consequential transformation in a generation, moving from cost-led production to intelligence-led manufacturing. Agentic AI, advanced robotics, digital twins, and industrial IoT are converging to create factories where machines can plan, coordinate, and execute autonomously. This track brings together senior technology, AI, engineering, and operations leaders from enterprise manufacturing industry sectors , and industrial automation. - From automation to autonomy: intelligent production systems that adapt with less retooling - Physical AI on the factory floor: cloud robotics, software-defined automation and intelligent systems - Predictive maintenance and quality inspection: scaling proven AI use cases beyond pilots - Digital twins as live operational intelligence: optimising energy, output and quality in real time - AI-driven supply chain orchestration: autonomous forecasting, procurement and logistics - PLI-scheme readiness: using AI-driven process control to strengthen manufacturing competitiveness - The workforce shift: managing the human impact as AI takes on repetitive decisions "
+            description: "Manufacturing • Robotics • Industrial AI \n The Autonomous Factory: Where Agentic AI, Robotics, and Industrial Intelligence Are Rewriting How India Makes Things \n\n The dedicated autonomous industry track, and the most operationally grounded conversation of the day. India’s manufacturing sector is undergoing its most consequential transformation in a generation, moving from cost-led production to intelligence-led manufacturing. Agentic AI, advanced robotics, digital twins, and industrial IoT are converging to create factories where machines can plan, coordinate, and execute autonomously. This track brings together senior technology, AI, engineering, and operations leaders from enterprise manufacturing industry sectors , and industrial automation. - From automation to autonomy: intelligent production systems that adapt with less retooling - Physical AI on the factory floor: cloud robotics, software-defined automation and intelligent systems - Predictive maintenance and quality inspection: scaling proven AI use cases beyond pilots - Digital twins as live operational intelligence: optimising energy, output and quality in real time - AI-driven supply chain orchestration: autonomous forecasting, procurement and logistics - PLI-scheme readiness: using AI-driven process control to strengthen manufacturing competitiveness - The workforce shift: managing the human impact as AI takes on repetitive decisions \n Speakers:",
+
+
+            speakers: [
+              {
+                name: "Swastika Johorey",
+                role: "",
+                roleLines: ["CDO - Varun Beverages", ""],
+                image: "gurugram/speakers/Swastika-Johorey.png",
+              },
+              
+            ],
           },
           {
             time: "02:20 PM – 03:35 PM",
             title: "Track 3: Enterprise AI in Action",
-            description: "Agents • Automation • Enterprise Applications \n Agents in Production: How Enterprise AI Is Rewiring Work, Not Just Augmenting It \n\n The dedicated enterprise AI in action track, where the theoretical becomes the operational. 79% of enterprises say AI agents are already being adopted; 66% report measurable productivity gains. Yet 88% of agent pilots never reach production. This track brings together the enterprise technology, AI, and business leaders who have crossed that gap, deploying agents that are actually shipping work across customer service, finance, procurement, engineering, and internal operations. Practical, in-production, with real ROI data. - Proven ROI zones: customer service, finance, document processing, engineering and internal operations - Multi-agent orchestration: architecture, memory and hand-offs for production-scale deployments - The observability mandate: tracing, cost, quality and human feedback across agent workflows - From workflows to agent-native design: redesigning processes around agent capabilities - Measuring agentic AI ROI: cycle time, error reduction and workforce leverage - Choosing enterprise agent platforms: application-layer and infrastructure-layer approaches -  Governance before scale: agent registries, least-privilege access and human-in-the-loop controls "
+            description: "Agents • Automation • Enterprise Applications \n Agents in Production: How Enterprise AI Is Rewiring Work, Not Just Augmenting It \n\n The dedicated enterprise AI in action track, where the theoretical becomes operational. 79% of enterprises say AI agents are already being adopted; 66% report measurable productivity gains. Yet 88% of agent pilots never reach production. This track brings together the enterprise technology, AI, and business leaders who have crossed that gap, deploying agents that are actually shipping work across customer service, finance, procurement, engineering, and internal operations. Practical, in-production, with real ROI data. - Proven ROI zones: customer service, finance, document processing, engineering and internal operations - Multi-agent orchestration: architecture, memory and hand-offs for production-scale deployments - The observability mandate: tracing, cost, quality and human feedback across agent workflows - From workflows to agent-native design: redesigning processes around agent capabilities - Measuring agentic AI ROI: cycle time, error reduction and workforce leverage - Choosing enterprise agent platforms: application-layer and infrastructure-layer approaches -  Governance before scale: agent registries, least privilege access and human-in-the-loop controls \n Speakers: ",
+
+            speakers: [
+              {
+                name: "Rajat Wadhwa",
+                role: "",
+                roleLines: ["Head-Customer Applications", ""],
+                image: "gurugram/speakers/Rajat-Wadhwa.png",
+              },
+              
+            ],
+
+
+
           },
           {
             time: "03:35 PM – 03:50 PM",
@@ -233,12 +367,62 @@ const AGENDA_DATA: DayData[] = [
           {
             time: "04:00 PM – 04:45 PM",
             title: "Session 5: Securing the Autonomous Enterprise: When AI Becomes the Attack Surface ",
-            description: "As AI agents move from assistants to autonomous actors across enterprise workflows, the attack surface expands in ways traditional security architecture was not built to handle. Simultaneously, AI-native security is becoming the only viable defence against AI-powered adversaries. India's most senior CISOs across sectors. - Live AI threats: model poisoning, prompt injection, adversarial inputs, shadow AI and LLM-driven data exfiltration - Securing the connected factory: protecting OT/IT convergence as AI expands the industrial attack surface - AI-native threat detection: autonomous incident response at the speed of AI-powered attacks, with human oversight - Zero-trust for AI agents: model access governance and AI-specific audit trails - Preparing for AI compliance: how CISOs are shaping security and compliance investments for the AI era "
+            description: "As AI agents move from assistants to autonomous actors across enterprise workflows, the attack surface expands in ways traditional security architecture was not built to handle. Simultaneously, AI-native security is becoming the only viable defence against AI-powered adversaries. India's most senior CISOs across sectors. - Live AI threats: model poisoning, prompt injection, adversarial inputs, shadow AI and LLM-driven data exfiltration - Securing the connected factory: protecting OT/IT convergence as AI expands the industrial attack surface - AI-native threat detection: autonomous incident response at the speed of AI-powered attacks, with human oversight - Zero-trust for AI agents: model access governance and AI-specific audit trails - Preparing for AI compliance: how CISOs are shaping security and compliance investments for the AI era \n Speakers: ",
+
+            speakers: [
+              {
+                name: "Adish Jain",
+                role: "",
+                roleLines: ["Chief Information Security Officer, PB Pay ", ""],
+                image: "gurugram/speakers/Adish-Jain.png",
+              },
+              {
+                name: "Abhishek Bansal",
+                role: "",
+                roleLines: ["Chief Information Security Officer ", ""],
+                image: "gurugram/speakers/Abhishek-Bansal.png",
+              },
+              {
+                name: "Anil K Saraswat",
+                role: "",
+                roleLines: ["GM & Head – Information Security ", ""],
+                image: "gurugram/speakers/Anil-K-Saraswat.png",
+              },
+              {
+                name: "Shivkumar Pandey",
+                role: "",
+                roleLines: ["GCISO- Adani Group", ""],
+                image: "gurugram/speakers/Shivkumar-Pandey.png",
+              },
+              {
+                name: "Amit Malhotra",
+                role: "",
+                roleLines: ["SVP, GCISO, DPO, Paytm Payments Services", ""],
+                image: "gurugram/speakers/Amit-Malhotra.png",
+              },
+            ],
           },
           {
             time: "04:45 PM – 05:30 PM ",
             title: "Session 6: Cross-Industry Power Conversation From Assistance to Autonomy: What India's Enterprise AI Leaders Are Building Next ",
-            description: "The closing session of the 8th Edition, and the most forward-looking. Leaders from the major enterprise industry sectors in one room for a candid conversation that converges the day's insights into a declaration. - The frontier of enterprise AI in India: sectors and organisations pushing the boundaries - AI ambition vs. architecture: what the gap looks like inside enterprises today - Decisions with hindsight: the one structural AI decision leaders would make differently - Leadership responsibility: shaping how India’s enterprises deploy, govern and trust AI "
+            description: "The closing session of the 8th Edition, and the most forward-looking. Leaders from the major enterprise industry sectors in one room for a candid conversation that converges the day's insights into a declaration. - The frontier of enterprise AI in India: sectors and organisations pushing the boundaries - AI ambition vs. architecture: what the gap looks like inside enterprises today - Decisions with hindsight: the one structural AI decision leaders would make differently - Leadership responsibility: shaping how India’s enterprises deploy, govern and trust AI  \n Speakers:",
+
+            speakers: [
+              {
+                name: "Madhur Bhardwaj",
+                role: "",
+                roleLines: ["Senior Technology Advisor & CTO RAN & Core Technology Strategy- Nokia ", ""],
+                image: "gurugram/speakers/Madhur-Bhardwaj.png",
+              },
+              {
+                name: "Himanshu Pant",
+                role: "",
+                roleLines: ["Group Head AI- RPSG Group", ""],
+                image: "gurugram/speakers/Himanshu.png",
+              },
+            ],
+
+
           },
           {
             time: "05:30 PM – 05:45 PM ",
@@ -434,7 +618,7 @@ const AgendaSection = () => {
                             <img
                               src={speaker.image}
                               alt={speaker.name}
-                              className="w-12 h-12 rounded-md object-cover flex-shrink-0 bg-white/10"
+                              className="w-12 h-16 rounded-md object-cover flex-shrink-0 bg-white/10"
                             />
                             <div className="text-sm">
                               <p className="text-white font-semibold">{speaker.name}</p>
@@ -458,7 +642,10 @@ const AgendaSection = () => {
         </div>
       </div>
     </section>
+
+  
   );
 };
+
 
 export default AgendaSection;

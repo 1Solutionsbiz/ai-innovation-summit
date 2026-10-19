@@ -151,4 +151,20 @@ export const speakers = [
     image: "gurugram/speakers/Madhur-Bhardwaj.png",
     linkedin: "#",
   },
+  {
+    name: "Himanshu Pant",
+    role: "Group Head AI, ",
+    company: "RPSG Group",
+    description: "",
+    image: "gurugram/speakers/Himanshu.png",
+    linkedin: "#",
+  },
+  {
+    name: "Dr. Shakti Goel",
+    role: "Chief Architect and Data Scientist, ",
+    company: "Yatra Online ",
+    description: "",
+    image: "gurugram/speakers/Shakti-Goel.png",
+    linkedin: "#",
+  },
 ];

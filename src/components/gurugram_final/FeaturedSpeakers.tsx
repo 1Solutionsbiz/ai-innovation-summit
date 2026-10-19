@@ -1163,9 +1163,9 @@ const FeaturedSpeakers = () => {
             </h2>
             <a
               target="_blank"
-              href="#"
+              href="delhi-gurugram_edition-26-speakers"
               type="button"
-              className={`view-all-speakers cta-btn-mob inline-block mt-8 sm:mt-14 partners-reveal-up ${isVisible ? "is-visible" : ""}`}
+              className={`desksection-only view-all-speakers cta-btn-mob inline-block mt-8 sm:mt-14 partners-reveal-up ${isVisible ? "is-visible" : ""}`}
               style={{ animationDelay: upDelay(2, 3) }}
             >
               View all speakers
@@ -1272,6 +1272,19 @@ const FeaturedSpeakers = () => {
                 <ChevronRight className="w-5 h-5" />
               </button>
             </div>
+
+              <div className="dflexcenter">
+                <a
+                  target="_blank"
+                  href="delhi-gurugram_edition-26-speakers"
+                  type="button"
+                  className={`mobsection-only cta-btn-mob view-all-speakers cta-btn-mob inline-block mt-8 sm:mt-14 partners-reveal-up ${isVisible ? "is-visible" : ""}`}
+                  style={{ animationDelay: upDelay(2, 3) }}
+                >
+                  View all speakers
+                </a>
+              </div>
+
           </div>
         </div>
       </div>
