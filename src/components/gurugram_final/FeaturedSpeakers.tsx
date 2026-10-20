@@ -1131,13 +1131,14 @@ const FeaturedSpeakers = () => {
     lastScrollTime.current = null;
     if (isHovering || isArrowMoving || activeSpeakers.length === 0) return;
 
+    const mobileViewport = window.matchMedia("(max-width: 639px)");
     const scrollContinuously = (timestamp: number) => {
       const container = scrollRef.current;
       if (!container) return;
 
       const previousTimestamp = lastScrollTime.current ?? timestamp;
       const elapsed = Math.min(timestamp - previousTimestamp, 40);
-      container.scrollLeft += elapsed * 1;
+      container.scrollLeft += elapsed * (mobileViewport.matches ? 0.15 : 0.2);
       lastScrollTime.current = timestamp;
       normalizeScrollPosition();
       autoScrollFrame.current = requestAnimationFrame(scrollContinuously);
@@ -1220,14 +1221,17 @@ const FeaturedSpeakers = () => {
               ref={scrollRef}
               onMouseEnter={() => setIsHovering(true)}
               onMouseLeave={() => setIsHovering(false)}
-              className="flex w-full min-w-0 gap-5 overflow-x-auto scroll-smooth pb-2 no-scrollbar"
+              onTouchStart={() => setIsHovering(true)}
+              onTouchEnd={() => setIsHovering(false)}
+              onTouchCancel={() => setIsHovering(false)}
+              className="flex w-full min-w-0 gap-5 overflow-x-auto pb-2 no-scrollbar"
             >
               {loopSpeakers.map((speaker, idx) => (
                 <div
                   key={idx}
                   data-speaker-card
                   className="speaker-card group flex h-[260px] flex-shrink-0 w-[min(42vw,160px)] flex-col overflow-hidden rounded-2xl border border-blue-950 bg-white p-0 transition-colors duration-300 hover:bg-black sm:h-[230px] hover:sm:h-[auto] sm:w-[120px]"
-                  style={{ animationDelay: `${idx * 90}ms` }}
+                  style={{ animationDelay: `${idx * 10}ms` }}
                 >
                   <div
                     className="aspect-square w-full overflow-hidden bg-cover bg-center bg-no-repeat transition-colors duration-300 group-hover:bg-black"
