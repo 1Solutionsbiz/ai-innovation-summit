@@ -60,7 +60,8 @@ const Sponsors = () => {
                   sm:text-[48px]
                   md:text-[64px]
                   xl:text-[42px]
-                  leading-[0.94] ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(1, 4) }}>
+                  leading-[0.94]
+                  lineheight ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(1, 4) }}>
           Partners Who Powered the Journey
         </h2>
         <p className={`partners-reveal-up mt-4 sm:mt-6 sponser-description mx-auto ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(2, 4) }}>

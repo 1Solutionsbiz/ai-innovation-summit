@@ -80,6 +80,14 @@ export const speakers = [
     linkedin: "#",
   },
   {
+    name: "Madhur Bhardwaj",
+    role: "Senior Technology Advisor & CTO RAN & Core Technology Strategy, ",
+    company: "Nokia",
+    description: "",
+    image: "gurugram/speakers/Madhur-Bhardwaj.png",
+    linkedin: "#",
+  },
+  {
     name: "Ashu Gupta",
     role: "Senior Director - Digital & AI (Group CDO), ",
     company: "Jubilant Pharmova Limited",
@@ -93,6 +101,14 @@ export const speakers = [
     company: "Varun Beverages",
     description: "",
     image: "gurugram/speakers/Swastika-Johorey.png",
+    linkedin: "#",
+  },
+  {
+    name: "Dr. Shakti Goel",
+    role: "Chief Architect and Data Scientist, ",
+    company: "Yatra Online ",
+    description: "",
+    image: "gurugram/speakers/Shakti-Goel.png",
     linkedin: "#",
   },
   {
@@ -144,27 +160,11 @@ export const speakers = [
     linkedin: "https://www.linkedin.com/in/rajatwadhwa/",
   },
   {
-    name: "Madhur Bhardwaj",
-    role: "Senior Technology Advisor & CTO RAN & Core Technology Strategy, ",
-    company: "Nokia",
-    description: "",
-    image: "gurugram/speakers/Madhur-Bhardwaj.png",
-    linkedin: "#",
-  },
-  {
     name: "Himanshu Pant",
     role: "Group Head AI, ",
     company: "RPSG Group",
     description: "",
     image: "gurugram/speakers/Himanshu.png",
-    linkedin: "#",
-  },
-  {
-    name: "Dr. Shakti Goel",
-    role: "Chief Architect and Data Scientist, ",
-    company: "Yatra Online ",
-    description: "",
-    image: "gurugram/speakers/Shakti-Goel.png",
     linkedin: "#",
   },
 ];

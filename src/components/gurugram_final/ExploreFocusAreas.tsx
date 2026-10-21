@@ -186,9 +186,8 @@ const FocusAreasSection = () => {
                 md:text-[64px]
                 xl:text-[42px]
                 leading-[0.94]
-
                 partners-reveal-up
-
+                lineheight
                 ${isVisible ? "is-visible" : ""}
               `}
               style={{ animationDelay: `${(revealDirection === "up" ? 2 : 1) * 150}ms` }}

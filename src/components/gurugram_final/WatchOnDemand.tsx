@@ -75,7 +75,8 @@ const OnDemandSection = () => {
                 sm:text-[48px]
                 md:text-[64px]
                 xl:text-[42px]
-                leading-[0.94]">
+                leading-[0.94]
+                lineheight">
               <span className={`ondemand-line partners-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(1, 4) }}>
                 Ideas That
               </span>

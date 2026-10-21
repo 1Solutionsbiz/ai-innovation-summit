@@ -1577,6 +1577,14 @@
     display: block !important;
   }
 
+  .fallspe{
+    width: 66%;
+  }
+
+  .sallspe{
+    width: 90%;
+  }
+
 
 
 
@@ -1671,6 +1679,21 @@
   }
 
   .mobtext-sec{
+    color: #000;
+  }
+
+  .lineheight{
+    line-height: 1.2 !important;
+  }
+
+  .scrolled .redesign-nav-inner .mobile-menu-toggle svg{
+    color:#000 !important;
+  }
+  .mobile-redesign-menu{
+    background: #fff;
+  }
+  .mobile-editions-toggle,
+  .mobile-editions-toggle svg{
     color: #000;
   }
 

@@ -61,7 +61,7 @@ const PartnersSection = () => {
                   leading-[0.94]
                   text-[#092c63]">
             <span
-              className={`block partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+              className={`block partners-reveal-up lineheight ${sectionVisible ? "is-visible" : ""}`}
               style={{ animationDelay: delayFor(1, 6) }}
             >
               The Partners Powering The Summit

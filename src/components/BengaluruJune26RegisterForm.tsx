@@ -305,7 +305,7 @@ if (formData.officialEmail.trim()) {
       <div className="relative mx-auto max-w-5xl overflow-hidden rounded-2xl border border-indigo-400/30 bg-slate-950/90 p-5 shadow-[0_0_80px_rgba(37,99,235,0.18)] sm:p-8 lg:p-12">
         <div className="mb-10 text-center">
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.35em] text-[#e92630]">AI Innovation Summit | Delhi-NCR</p>
-          <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 className="text-3xl font-bold leading-tight lineheight text-white sm:text-4xl lg:text-5xl">
           Express Your Interest To Attend The Summit
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-slate-400">Join senior technology and business leaders shaping the next era of intelligent enterprise.</p>

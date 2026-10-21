@@ -98,7 +98,8 @@ const Sponsors = () => {
                   sm:text-[48px]
                   md:text-[64px]
                   xl:text-[42px]
-                  leading-[0.94] ${sectionVisible ? "is-visible" : ""}`}
+                  leading-[0.94]
+                  lineheight ${sectionVisible ? "is-visible" : ""}`}
           style={{ animationDelay: upDelay(1, 3) }}
         >
           A Glimpse of the Participating Enterprises

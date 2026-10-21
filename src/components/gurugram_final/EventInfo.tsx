@@ -45,7 +45,8 @@ const EventInfo: React.FC = () => {
                   sm:text-[48px]
                   md:text-[64px]
                   xl:text-[42px]
-                  leading-[0.94]">
+                  leading-[0.94]
+                  lineheight">
             <span className={`event-reveal-line partners-reveal-up ${sectionVisible ? "is-visible" : ""}`} style={{ animationDelay: upDelay(0, 5) }}>
               The Future is
             </span>

@@ -339,6 +339,7 @@ const FeaturedSpeakers = () => {
                   xl:text-[42px]
                   mb-0
                   md:mb-14
+                  lineheight
                 "
               >
                 <span
@@ -359,7 +360,7 @@ const FeaturedSpeakers = () => {
               <a href="delhi-gurugram_edition-26-speakers"
                 type="button"
                 target="_blank"
-                className={`desksection-only view-all-speakers inline-block partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
+                className={`desksection-only fallspe view-all-speakers inline-block partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
                 style={{ animationDelay: upDelay(3, 4) }}
               >
                 View all speakers
@@ -504,6 +505,18 @@ const FeaturedSpeakers = () => {
                 }
 
                 onMouseLeave={() =>
+                  setIsHovering(false)
+                }
+
+                onTouchStart={() =>
+                  setIsHovering(true)
+                }
+
+                onTouchEnd={() =>
+                  setIsHovering(false)
+                }
+
+                onTouchCancel={() =>
                   setIsHovering(false)
                 }
 
@@ -959,6 +972,10 @@ const FeaturedSpeakers = () => {
           POPUP ANIMATION
       ===================================================== */}
 
+
+
+
+
       <style>{`
         @keyframes fadeIn {
           from {
@@ -982,6 +999,11 @@ const FeaturedSpeakers = () => {
           }
         }
       `}</style>
+
+
+
+
+
     </>
   );
 };

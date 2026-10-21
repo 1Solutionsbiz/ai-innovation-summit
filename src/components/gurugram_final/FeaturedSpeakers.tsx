@@ -1173,7 +1173,8 @@ const FeaturedSpeakers = () => {
                   sm:text-[48px]
                   md:text-[64px]
                   xl:text-[42px]
-                  leading-[0.94] ${isVisible ? "is-visible" : ""}`}
+                  leading-[0.94]
+                  lineheight ${isVisible ? "is-visible" : ""}`}
               style={{ animationDelay: upDelay(1, 3) }}
             >
               Past
@@ -1184,7 +1185,7 @@ const FeaturedSpeakers = () => {
               target="_blank"
               href="delhi-gurugram_edition-26-speakers"
               type="button"
-              className={`desksection-only view-all-speakers cta-btn-mob inline-block mt-8 sm:mt-14 partners-reveal-up ${isVisible ? "is-visible" : ""}`}
+              className={`desksection-only sallspe view-all-speakers cta-btn-mob inline-block mt-8 sm:mt-14 partners-reveal-up ${isVisible ? "is-visible" : ""}`}
               style={{ animationDelay: upDelay(2, 3) }}
             >
               View all speakers

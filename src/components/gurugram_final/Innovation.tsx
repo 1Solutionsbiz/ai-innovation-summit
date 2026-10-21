@@ -110,7 +110,8 @@ const InnovationSection = () => {
                   text-[34px]
                   sm:text-[48px]
                   md:text-[64px]
-                  xl:text-[42px]">
+                  xl:text-[42px]
+                  lineheight">
               <span
                 className={`innovation-line partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
                 style={{ animationDelay: textDelay(1, 5) }}

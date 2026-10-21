@@ -102,7 +102,8 @@ const RoomThatMatters = () => {
                   sm:text-[48px]
                   md:text-[64px]
                   xl:text-[42px]
-                  leading-[0.94] ${isVisible ? "is-visible" : ""}`}
+                  leading-[0.94]
+                  lineheight ${isVisible ? "is-visible" : ""}`}
           style={{ animationDelay: delayFor(0, 2) }}
         >
           The Room That Matters
