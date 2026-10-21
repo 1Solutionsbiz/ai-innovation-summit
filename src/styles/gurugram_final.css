@@ -1362,6 +1362,14 @@
 
 
 
+  .clock-icon{
+    width: 17px !important;
+  }
+  .alignItemscenter{
+    align-items: center !important;
+  }
+
+
 
 
 
@@ -1568,6 +1576,8 @@
   .desksection-only{
     display: block !important;
   }
+
+
 
 
 

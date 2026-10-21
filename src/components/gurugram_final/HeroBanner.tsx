@@ -102,11 +102,32 @@ const HeroBanner = () => {
 
                 <span className="flex flex-col">
                   <span>The Leela Ambience Gurugram, Delhi-NCR</span>
-                  <span className="text-sm sm:text-sm md:text-sm xl:text-base text-slate-300 mt-1">
-                    | 8:30 AM Onwards
+                </span>
+              </span>
+              
+
+              <span
+                className={`text-center-sec-p30px flex items-start alignItemscenter gap-2 font-medium text-[15px] sm:text-[15px] md:text-[15px] xl:text-[18px] partners-reveal-up ${isVisible ? "is-visible" : ""}`}
+                style={{ animationDelay: heroDelay(2, 5) }}
+              >
+                
+                 <img
+                        src="/gurugram/clock-icon.png"
+                        alt="AI Innovation Summit"
+                        className={`clock-icon`}
+                        style={{ animationDelay: heroDelay(0, 5) }}
+                      />
+
+                <span className="flex flex-col">
+                  <span className="text-sm sm:text-sm md:text-sm xl:text-base text-slate-300 mt-1">       
+                      8:30 AM Onwards
                   </span>
                 </span>
               </span>
+              
+
+
+
             </div>
 
             <div className="mt-10 mmt-10 flex flex-wrap items-center gap-5 justify-content-sec">
