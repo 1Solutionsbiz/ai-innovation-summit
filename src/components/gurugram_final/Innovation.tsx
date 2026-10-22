@@ -274,6 +274,11 @@ const InnovationSection = () => {
           font-weight: 500;
         }
 
+        .innovation-know-more:hover {
+          background: repeating-linear-gradient(90deg, #592fa9, #ec262d 100%);
+          color: #fff;
+        }
+
         @media (max-width: 767px) {
           .innovation-mosaic { min-height: 360px; }
           .innovation-grid { gap: 5px; }
