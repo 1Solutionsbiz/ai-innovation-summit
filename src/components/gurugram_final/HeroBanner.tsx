@@ -77,10 +77,10 @@ const HeroBanner = () => {
             />
           </div>
 
-          <div className="flex flex-col items-center lg:items-start">
-            <div className="mt-10 mmt-35s flex gap-x-8 gap-y-3 text-slate-200 hero-info-venue">
+          <div className="flex flex-col lg:items-start">
+            <div className="mt-10 mmt-35s mobherosec flex gap-x-8 gap-y-3 text-slate-200 hero-info-venue">
               <span
-                className={`flex items-center gap-2 font-medium text-[15px] sm:text-[15px] md:text-[15px] xl:text-[18px] partners-reveal-up ${isVisible ? "is-visible" : ""}`}
+                className={`flex items-center  gap-2 font-medium text-[15px] sm:text-[15px] md:text-[15px] xl:text-[18px] partners-reveal-up ${isVisible ? "is-visible" : ""}`}
                 style={{ animationDelay: heroDelay(1, 5) }}
               >
                 <CalendarDays className="w-5 h-5 text-white" />
@@ -95,7 +95,7 @@ const HeroBanner = () => {
               </span> */}
 
               <span
-                className={`text-center-sec-p30px flex items-start gap-2 font-medium text-[15px] sm:text-[15px] md:text-[15px] xl:text-[18px] partners-reveal-up ${isVisible ? "is-visible" : ""}`}
+                className={` flex items-start gap-2 font-medium text-[15px] sm:text-[15px] md:text-[15px] xl:text-[18px] partners-reveal-up ${isVisible ? "is-visible" : ""}`}
                 style={{ animationDelay: heroDelay(2, 5) }}
               >
                 <MapPin className="w-5 h-5 text-white mt-1 shrink-0" />
@@ -107,7 +107,7 @@ const HeroBanner = () => {
               
 
               <span
-                className={`text-center-sec-p30px flex items-start alignItemscenter gap-2 font-medium text-[15px] sm:text-[15px] md:text-[15px] xl:text-[18px] partners-reveal-up ${isVisible ? "is-visible" : ""}`}
+                className={` flex items-start alignItemscenter gap-2 font-medium text-[15px] sm:text-[15px] md:text-[15px] xl:text-[18px] partners-reveal-up ${isVisible ? "is-visible" : ""}`}
                 style={{ animationDelay: heroDelay(2, 5) }}
               >
                 

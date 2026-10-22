@@ -1641,10 +1641,6 @@
   .justify-content-sec{
     justify-content:center;
   }
-  .text-center-sec-p30px{
-    text-align: center;
-    padding: 0px 30px;
-  }
   .mob-spe-sec{
     border: 1px solid #022158;
   }
@@ -1695,6 +1691,11 @@
   .mobile-editions-toggle,
   .mobile-editions-toggle svg{
     color: #000;
+  }
+
+  .mobherosec{
+    padding: 0px 15%;
+    align-items: flex-start;
   }
 
 }
