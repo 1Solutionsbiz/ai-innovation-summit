@@ -40,7 +40,7 @@ const OperatingModel = ({ showCta = true }: OperatingModelProps) => {
   };
 
   return (
-    <section ref={sectionRef} className="bg-white py-12 px-4 sm:py-20 sm:px-6" id="overview">
+    <section ref={sectionRef} className="bg-white zindex2 py-12 px-4 sm:py-20 sm:px-6" id="overview">
       <div className="w-full max-w-[720px] lg:max-w-[80%] mx-auto text-center">
         <h2 className="text-[#022158]
                 font-black

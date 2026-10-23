@@ -213,9 +213,13 @@ const Footer = () => {
         .footer-section {
           position: sticky;
           bottom: 0;
-          z-index: -1;
+          z-index: 1;
           box-shadow: 0 -16px 40px rgba(2, 6, 23, 0.18);
           padding-bottom:2%;
+        }
+        .zindex2{
+          z-index:2;
+          position:relative;
         }
 
         @keyframes footerFadeInUp {

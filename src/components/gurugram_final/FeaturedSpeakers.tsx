@@ -1155,7 +1155,7 @@ const FeaturedSpeakers = () => {
   }, [activeEventIndex, activeSpeakers.length, isArrowMoving, isHovering]);
 
   return (
-    <section ref={sectionRef} className="bg-white py-12 px-4 sm:py-16 sm:px-6 overflow-hidden">
+    <section ref={sectionRef} className="bg-white zindex2 py-12 px-4 sm:py-16 sm:px-6 overflow-hidden">
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 gap-8 sm:gap-10 lg:grid-cols-[250px_1fr]">
           {/* Left column */}

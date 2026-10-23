@@ -89,7 +89,7 @@ const InnovationSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative innovation-section-new bg-white py-12 sm:py-16 md:py-28 overflow-hidden"
+      className="relative zindex2 innovation-section-new bg-white py-12 sm:py-16 md:py-28 overflow-hidden"
     >
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-12">

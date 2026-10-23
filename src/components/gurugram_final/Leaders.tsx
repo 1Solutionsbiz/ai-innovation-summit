@@ -33,7 +33,7 @@ const LeadersNumbers = () => {
     `${(revealDirection === "up" ? total - 1 - order : order) * 200}ms`;
 
   return (
-    <section ref={sectionRef} className="leaders-section-new">
+    <section ref={sectionRef} className="leaders-section-new zindex2">
       <div className="leaders-container-new">
 
         {/* LEFT CONTENT */}

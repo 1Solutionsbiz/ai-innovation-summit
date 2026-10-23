@@ -33,7 +33,7 @@ const EventInfo: React.FC = () => {
     `${(revealDirection === "up" ? total - 1 - order : order) * 220}ms`;
 
   return (
-    <section ref={sectionRef} className="event-info-section">
+    <section ref={sectionRef} className="event-info-section zindex2">
       <div className="event-info-container">
 
         {/* LEFT CONTENT */}

@@ -300,7 +300,7 @@ if (formData.officialEmail.trim()) {
   const maxDob = getEighteenYearsAgo();
 
   return (
-    <section className="relative overflow-hidden bg-[#020617] px-4 py-20 text-white sm:px-6" id="register">
+    <section className="relative zindex2 overflow-hidden bg-[#020617] px-4 py-20 text-white sm:px-6" id="register">
       <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(99,102,241,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.08)_1px,transparent_1px)] [background-size:42px_42px]" />
       <div className="relative mx-auto max-w-5xl overflow-hidden rounded-2xl border border-indigo-400/30 bg-slate-950/90 p-5 shadow-[0_0_80px_rgba(37,99,235,0.18)] sm:p-8 lg:p-12">
         <div className="mb-10 text-center">

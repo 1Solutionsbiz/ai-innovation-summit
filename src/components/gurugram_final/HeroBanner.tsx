@@ -50,7 +50,7 @@ const HeroBanner = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative flex items-center overflow-hidden bg-slate-950 herosectiondguru26"
+      className="relative zindex2 flex items-center overflow-hidden bg-slate-950 herosectiondguru26"
     >
       {/* Background video, lightly brand-tinted to read as a duotone */}
       <video

@@ -52,7 +52,7 @@ const OnDemandSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="ondemand-section relative bg-[#050B22] py-12 sm:py-16 md:py-20 overflow-hidden"
+      className="ondemand-section zindex2 relative bg-[#050B22] py-12 sm:py-16 md:py-20 overflow-hidden"
     >
       <div className="max-w-[1500px] mx-auto px-4 sm:px-6">
         <div className="flex flex-col lg:flex-row items-center gap-6 sm:gap-8 lg:gap-10">

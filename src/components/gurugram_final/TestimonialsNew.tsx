@@ -134,7 +134,7 @@ const TestimonialSection = ({
   return (
     <section
       ref={sectionRef}
-      className="testimonial-section relative w-full min-h-[520px] sm:min-h-[600px] md:min-h-[720px] overflow-hidden"
+      className="testimonial-section zindex2 relative w-full min-h-[520px] sm:min-h-[600px] md:min-h-[720px] overflow-hidden"
     >
       {/* =================================================
           BACKGROUND IMAGE

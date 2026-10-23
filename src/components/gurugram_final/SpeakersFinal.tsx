@@ -275,6 +275,7 @@ const FeaturedSpeakers = () => {
         id="speakers"
         className="
           relative
+          zindex2
           bg-white
           py-12
           sm:py-16

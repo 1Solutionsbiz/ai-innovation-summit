@@ -37,7 +37,7 @@ const PartnersSection = () => {
     `${(revealDirection === "up" ? total - 1 - order : order) * 150}ms`;
 
   return (
-    <section ref={sectionRef} id="partners" className="partners-section">
+    <section ref={sectionRef} id="partners" className="partners-section zindex2">
 
 
       <div className="row text-center">

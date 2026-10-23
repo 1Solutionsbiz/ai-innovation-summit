@@ -103,7 +103,7 @@ const FocusAreasSection = () => {
       ref={sectionRef}
       id="focus"
       className="
-        relative
+        relative zindex2
         w-full
         overflow-hidden
         bg-[#03091F]

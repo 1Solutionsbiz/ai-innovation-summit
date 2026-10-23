@@ -81,7 +81,7 @@ const Sponsors = () => {
     <section
       ref={sectionRef}
       id="partners"
-      className="glimpse-section bg-slate-50 py-12 sm:py-20 md:py-28"
+      className="glimpse-section zindex2 bg-slate-50 py-12 sm:py-20 md:py-28"
     >
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 text-center">
         <p

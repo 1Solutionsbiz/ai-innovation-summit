@@ -192,7 +192,7 @@ const Highlights = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden bg-white py-14 md:py-16"
+      className="relative zindex2 overflow-hidden bg-white py-14 md:py-16"
     >
 
       {/* =========================
