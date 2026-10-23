@@ -1588,6 +1588,27 @@
 
 
 
+  .allspeakerssec{
+    width: 100% !important;
+    height: 250px !important;
+  }
+
+  .allspecsecmain{
+    height: 350px;
+  }
+  .allspecsectwo{
+    height: 350px;
+    width: 100%;
+    background: #032158 !important;
+  }
+
+  .allspeakerssectextsec{
+    /* background: repeating-linear-gradient(180deg, transparent, black 100%); */
+  }
+
+
+
+
 
 /* Mobile Section Start */
 @media screen and (max-width: 481px) {

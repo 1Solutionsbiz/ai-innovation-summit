@@ -151,14 +151,14 @@ const AGENDA_DATA: DayData[] = [
             title: "Opening Keynote From Assistance to Autonomy: The Enterprise AI Mandate for 2026 ",
             description: "What enterprise AI leadership actually looks like when the boardroom demands ROI, the regulators demand governance, and the technology moves faster than either can keep up with . - Where enterprise AI stands in India in 2026, the state of AI adoption across sectors - Why the shift from AI assistance to AI autonomy is a leadership decision, not just a technology decision - The structural choices, architectural, economic and cultural, that separate enduring AI deployments from those that stall - What the intelligent enterprise looks like from the inside and what leaders need to rethink. \n Keynote Speaker:" ,
 
-            speakers: [
-              {
-                name: "Dr. Tapan Sahoo",
-                role: "",
-                roleLines: ["Senior Executive Officer- Maruti Suzuki India Limited", ""],
-                image: "gurugram/speakers/Dr.-Tapan-Sahoo.png",
-              },
-            ],
+            // speakers: [
+            //   {
+            //     name: "Dr. Tapan Sahoo",
+            //     role: "",
+            //     roleLines: ["Senior Executive Officer- Maruti Suzuki India Limited", ""],
+            //     image: "gurugram/speakers/Dr.-Tapan-Sahoo.png",
+            //   },
+            // ],
 
 
 

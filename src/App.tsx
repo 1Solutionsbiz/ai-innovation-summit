@@ -28,7 +28,7 @@ import DelhiGurugram_Edition26 from "./pages/DelhiGurugram_Edition26";
 import DelhiGurugram_Edition26_Speakers from "./pages/DelhiGurugram_Edition26_Speakers";
 import DelhiGurugram_Edition26_Agenda from "./pages/DelhiGurugram_Edition26_Agenda";
 import WatchPage from "./components/gurugram_final/WatchPage";
-
+import AllSpeakers from "@/components/gurugram_final/AllSpeakers";
 
 
 import Login from "./pages/auth/Login";
@@ -38,6 +38,11 @@ import PartnerForm from "./pages/PartnerForm";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import CodeOfConduct from "./pages/CodeOfConduct";
+
+
+
+
+
 
 const queryClient = new QueryClient();
 
@@ -69,6 +74,9 @@ const App: React.FC = () => (
         <Route path="/delhi-gurugram_edition-26-agenda" element={<DelhiGurugram_Edition26_Agenda />} />
         <Route path="/delhi-gurugram_edition-26-speakers" element={<DelhiGurugram_Edition26_Speakers />} />
         <Route path="/watch" element={<WatchPage />} />
+
+<Route path="/all-speakers" element={<AllSpeakers />} />
+
 
         <Route path="/previous/bangalore-2026" element={<BengaluruEdition26/>} />
         <Route path="/previous/delhi-2026" element={<DelhiEdition26 />} />
