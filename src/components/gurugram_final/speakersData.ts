@@ -5,7 +5,7 @@ export const speakers = [
     company: "Motherson Group",
     description: "",
     image: "gurugram/speakers/Gaurav-Gulati.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/gaurav-gulati-7883a4/",
   },
   {
     name: "Parna Ghosh",
@@ -13,7 +13,7 @@ export const speakers = [
     company: "Uno Minda",
     description: "",
     image: "gurugram/speakers/Parna-Ghosh.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/parna-ghosh-89376514/",
   },
   {
     name: "Sanjiv Jain",
@@ -21,7 +21,7 @@ export const speakers = [
     company: "Krishna Maruti Group",
     description: "",
     image: "gurugram/speakers/Sanjiv-Jain.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/sanjiv-kumar-jain-9350661/",
   },
   {
     name: "Supriya Kaul",
@@ -29,7 +29,7 @@ export const speakers = [
     company: "CNH Industrial",
     description: "",
     image: "gurugram/speakers/Supriya-Kaul.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/supriya-kaul-8696a14/",
   },
   {
     name: "Arvind Heda",
@@ -37,7 +37,7 @@ export const speakers = [
     company: "Info Edge India",
     description: "",
     image: "gurugram/speakers/Arvind-Heda.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/arvind-heda-3514684/",
   },
   // {
   //   name: "Rahul Puri",
@@ -77,7 +77,7 @@ export const speakers = [
     company: "Hero Fincorp - Housing Entity",
     description: "",
     image: "gurugram/speakers/Vivek-Madan.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/vivekmadan-digital-transformation-chief-technology-officer/",
   },
   {
     name: "Madhur Bhardwaj",
@@ -101,7 +101,7 @@ export const speakers = [
     company: "Varun Beverages",
     description: "",
     image: "gurugram/speakers/Swastika-Johorey.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/swastika-johorey-2251228/",
   },
   {
     name: "Dr. Shakti Goel",
@@ -125,7 +125,7 @@ export const speakers = [
     company: "Jindal Stainless",
     description: "",
     image: "gurugram/speakers/Yogesh-Kumar-Sharma.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/yogeshkumarsharma9/",
   },
   {
     name: "Anil K Saraswat",
@@ -141,7 +141,7 @@ export const speakers = [
     company: "Max Life Insurance Company",
     description: "",
     image: "gurugram/speakers/Abhishek-Bansal.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/bansalabhishek/",
   },
   {
     name: "Adish Jain",
@@ -165,7 +165,7 @@ export const speakers = [
     company: "RPSG Group",
     description: "",
     image: "gurugram/speakers/Himanshu.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/himanshupant/",
   },
   {
     name: "Sivakumar Selva Ganapathy",
