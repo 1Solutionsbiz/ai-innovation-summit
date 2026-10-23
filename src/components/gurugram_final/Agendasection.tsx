@@ -501,7 +501,7 @@ const AgendaSection = () => {
   };
 
   return (
-    <section className="bg-black py-20 px-6">
+    <section className="bg-black zindex2 py-20 px-6">
       <div className="max-w-[1080px] mx-auto">
         {/* Heading */}
         <h2 className="mt-10 text-center text-4xl font-black uppercase tracking-tight sm:text-5xl md:text-6xl">

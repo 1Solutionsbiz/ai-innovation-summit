@@ -167,4 +167,12 @@ export const speakers = [
     image: "gurugram/speakers/Himanshu.png",
     linkedin: "#",
   },
+  {
+    name: "Sivakumar Selva Ganapathy",
+    role: "Vice President – India Digital/IT, ",
+    company: "Johnson Controls GCC ",
+    description: "",
+    image: "gurugram/speakers/Sivakumar-Selva-Ganapathy.png",
+    linkedin: "#",
+  },
 ];
