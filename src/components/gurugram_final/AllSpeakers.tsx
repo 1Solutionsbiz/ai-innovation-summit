@@ -67,7 +67,7 @@ const AllSpeakers = () => {
 <Navigation />
 
 
-      <section className="relative overflow-hidden bg-[#022158] mt-[5.6rem] px-5 py-16 text-white sm:py-24">
+      <section className="relative zindex2 overflow-hidden bg-[#022158] mt-[5.6rem] px-5 py-16 text-white sm:py-24">
         <div className="absolute -right-20 -top-24 h-72 w-72 rounded-full bg-[#EF3340]/20 blur-3xl" />
 
         <div className="relative mx-auto max-w-7xl">
@@ -152,7 +152,7 @@ const AllSpeakers = () => {
       </section>
 
       {/* EVENT-WISE SPEAKERS */}
-      <div className="mx-auto max-w-[1600px] px-4 py-12 sm:px-6 sm:py-16 lg:px-10">
+      <div className="mx-auto zindex2 bg-[#fff] max-w-[1600px] px-4 py-12 sm:px-6 sm:py-16 lg:px-10">
         {filteredEvents.length === 0 ? (
           <div className="py-20 text-center">
             <Users className="mx-auto mb-4 text-slate-300" size={44} />
