@@ -1183,7 +1183,7 @@ const FeaturedSpeakers = () => {
             </h2>
             <a
               target="_blank"
-              href="all-speakers"
+              href={`/all-speakers?location=${encodeURIComponent(EVENTS[activeEventIndex].location)}&year=${encodeURIComponent(EVENTS[activeEventIndex].year)}`}
               type="button"
               className={`desksection-only sallspe view-all-speakers cta-btn-mob inline-block mt-8 sm:mt-14 partners-reveal-up ${isVisible ? "is-visible" : ""}`}
               style={{ animationDelay: upDelay(2, 3) }}

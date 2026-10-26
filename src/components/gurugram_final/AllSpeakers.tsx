@@ -1,6 +1,7 @@
 
 import { useMemo, useState } from "react";
 import { Search, MapPin, CalendarDays, Users } from "lucide-react";
+import { useSearchParams } from "react-router-dom";
 import { EVENTS } from "@/components/gurugram_final/eventSpeakersData";
 
 
@@ -14,9 +15,7 @@ import "@/styles/gurugram_final.css";
 
 
 const AllSpeakers = () => {
-  const [search, setSearch] = useState("");
-  const [selectedLocation, setSelectedLocation] = useState("All");
-  const [selectedYear, setSelectedYear] = useState("All");
+  const [searchParams] = useSearchParams();
 
   const locations = useMemo(
     () => [...new Set(EVENTS.map((event) => event.location))],
@@ -30,6 +29,16 @@ const AllSpeakers = () => {
       ),
     []
   );
+
+  const [search, setSearch] = useState("");
+  const [selectedLocation, setSelectedLocation] = useState(() => {
+    const location = searchParams.get("location");
+    return location && locations.includes(location) ? location : "All";
+  });
+  const [selectedYear, setSelectedYear] = useState(() => {
+    const year = searchParams.get("year");
+    return year && years.includes(year) ? year : "All";
+  });
 
   const filteredEvents = useMemo(() => {
     const query = search.trim().toLowerCase();

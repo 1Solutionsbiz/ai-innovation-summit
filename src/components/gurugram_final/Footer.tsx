@@ -209,6 +209,8 @@ const Footer = () => {
 
 
 
+
+
       <style>{`
         .footer-section {
           position: sticky;
@@ -218,7 +220,7 @@ const Footer = () => {
           padding-bottom:2%;
         }
         .zindex2{
-          z-index:3;
+          z-index:5;
           position:relative;
         }
 
