@@ -1605,6 +1605,15 @@
   .allspeakerssectextsec{
     /* background: repeating-linear-gradient(180deg, transparent, black 100%); */
   }
+  
+  .filtersec11{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .filtersec1{
+    width: 50%;
+  }
 
 
 

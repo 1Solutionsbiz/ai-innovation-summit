@@ -105,7 +105,9 @@ const AllSpeakers = () => {
 
       {/* SEARCH AND FILTERS */}
       <section className="sticky top-0 z-30 border-b border-slate-200 bg-white/95 px-4 py-4 backdrop-blur-md sm:px-6">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 md:flex-row">
+        <div className="mx-auto filtersec11 flex max-w-7xl flex-col gap-3 md:flex-row">
+
+          {/*           
           <div className="relative min-w-0 flex-1">
             <Search
               size={19}
@@ -120,11 +122,12 @@ const AllSpeakers = () => {
               className="w-full rounded-xl border border-slate-200 bg-white py-3 pl-11 pr-4 text-sm outline-none transition focus:border-[#022158] focus:ring-2 focus:ring-[#022158]/10"
             />
           </div>
+           */}
 
           <select
             value={selectedLocation}
             onChange={(e) => setSelectedLocation(e.target.value)}
-            className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:border-[#022158]"
+            className="rounded-xl filtersec1 border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:border-[#022158]"
             aria-label="Filter by location"
           >
             <option value="All">All Locations</option>
@@ -138,7 +141,7 @@ const AllSpeakers = () => {
           <select
             value={selectedYear}
             onChange={(e) => setSelectedYear(e.target.value)}
-            className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:border-[#022158]"
+            className="rounded-xl filtersec1 border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:border-[#022158]"
             aria-label="Filter by year"
           >
             <option value="All">All Years</option>
@@ -228,13 +231,14 @@ const AllSpeakers = () => {
                             {speaker.name}
                           </h3>
 
-                          <p className="mt-2 line-clamp-3 text-xs leading-relaxed text-white/80 sm:text-sm">
+                          <p className="mt-0 line-clamp-2 text-xs font-semibold leading-relaxed text-white sm:text-sm">
+                            {speaker.company}
+                          </p>
+
+                          <p className="mt-0 text-[13px] line-clamp-3 text-xs leading-relaxed text-white/80 sm:text-[11px]">
                             {speaker.role}
                           </p>
 
-                          <p className="mt-1 line-clamp-2 text-xs font-semibold leading-relaxed text-white sm:text-sm">
-                            {speaker.company}
-                          </p>
                         </div>
                       </div>
                     </article>
