@@ -218,7 +218,7 @@ const Footer = () => {
           padding-bottom:2%;
         }
         .zindex2{
-          z-index:2;
+          z-index:3;
           position:relative;
         }
 
