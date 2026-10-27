@@ -34,10 +34,15 @@ const GurugramEdition2026 = () => {
     <div className="min-h-screen">
       <ScrollToHash />
       <Navigation />
-      <HeroBanner />
-      <Highlights />
-      <Speakers />
-      <Overview />
+      {/* Hero stays pinned only inside this wrapper while the sections below slide up
+          over it. The wrapper must hold at least a viewport of content after the hero,
+          otherwise the pin releases before the hero is fully covered. */}
+      <div className="hero-sticky-wrap">
+        <HeroBanner />
+        <Highlights />
+        <Speakers />
+        <Overview />
+      </div>
       <ExploreFocusAreas />
       <RoomMatters />
       <Partners />

@@ -8,6 +8,26 @@ const HeroBanner = () => {
   const [isPlaying, setIsPlaying] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
   const [revealDirection, setRevealDirection] = useState<"up" | "down">("down");
+  // Sticky offset: 0 when the hero fits the viewport, negative when it's taller,
+  // so it pins once its bottom edge is reached instead of hiding its lower content.
+  const [stickyTop, setStickyTop] = useState(0);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const update = () =>
+      setStickyTop(Math.min(0, window.innerHeight - section.offsetHeight));
+
+    update();
+    const resizeObserver = new ResizeObserver(update);
+    resizeObserver.observe(section);
+    window.addEventListener("resize", update);
+    return () => {
+      resizeObserver.disconnect();
+      window.removeEventListener("resize", update);
+    };
+  }, []);
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -50,7 +70,8 @@ const HeroBanner = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative zindex2 flex items-center overflow-hidden bg-slate-950 herosectiondguru26"
+      className="hero-sticky flex items-center overflow-hidden bg-slate-950 herosectiondguru26"
+      style={{ top: stickyTop }}
     >
       {/* Background video, lightly brand-tinted to read as a duotone */}
       <video

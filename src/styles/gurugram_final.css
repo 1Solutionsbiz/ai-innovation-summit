@@ -3,6 +3,23 @@
   min-height: 100vh;
 }
 
+/* Hero pins (like the footer) and the next section slides up over it.
+   Scoped to .hero-sticky-wrap so the pin releases once the hero is covered. */
+.hero-sticky-wrap {
+  position: relative;
+}
+
+/* z-index 2: above the sticky footer (1), below the .zindex2 sections (5) that slide over it */
+.hero-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.hero-sticky-wrap > .hero-sticky + section {
+  box-shadow: 0 -16px 40px rgba(2, 6, 23, 0.18);
+}
+
 
 
 .explorefocusdguru26{
