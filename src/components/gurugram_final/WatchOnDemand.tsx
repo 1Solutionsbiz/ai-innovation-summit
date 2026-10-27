@@ -59,7 +59,7 @@ const OnDemandSection = () => {
           {/* =================================================
               LEFT TEXT
           ================================================= */}
-          <div className="lg:w-[30%] text-center flex-shrink-0">
+          <div className="lg:w-[30%] mobtext-center flex-shrink-0">
             <p
               className={`eyebrowsec partners-reveal-up text-[#EF3340] text-[18px] mb-3 ${sectionVisible ? "is-visible" : ""}`}
               style={{ animationDelay: upDelay(0, 4) }}
