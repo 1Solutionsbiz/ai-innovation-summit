@@ -14,7 +14,7 @@ const StickyPartnersBar = () => {
         <React.Fragment key={`${prefix}-${index}`}>
           <div className="sticky-partner-item">
             <h3 className="sticky-partner-title">{partner.title}</h3>
-            <img src={partner.image} alt={isClone ? "" : partner.alt} />
+            <img src={partner.image} className={`${partner.alt}-guru26-sticky`} alt={isClone ? "" : partner.alt} />
           </div>
           <div className="sticky-partner-divider" />
         </React.Fragment>

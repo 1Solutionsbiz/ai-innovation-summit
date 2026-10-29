@@ -1864,6 +1864,26 @@
   color: #fff;
 }
 
+.Mira-guru26-image{
+  width: 150px !important;
+}
+.Mira-guru26-sticky{
+  width: 110px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ---------- Mobile / Tablet: auto-scroll marquee ---------- */
 @media (max-width: 768px) {
   .sticky-partners-track {

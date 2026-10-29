@@ -199,6 +199,23 @@ export const speakers = [
 
 
 
+  // {
+  //   name: "Sunder Ram Partner",
+  //   role: "Partner & Leader - Cloud Engineering and Data Analytics, ",
+  //   company: "PwC India",
+  //   description: "",
+  //   image: "#",
+  //   linkedin: "#",
+  // },
+  // {
+  //   name: "Navnit Nakra",
+  //   role: "Partner & Technology Sector Leader, ",
+  //   company: "PwC India",
+  //   description: "",
+  //   image: "#",
+  //   linkedin: "#",
+  // },
+
 
 
   // {
@@ -218,7 +235,7 @@ export const speakers = [
   //   linkedin: "#",
   // },
 
-  
+
   {
     name: "Yogesh Kumar Sharma",
     role: "Chief Information Security Officer, ",

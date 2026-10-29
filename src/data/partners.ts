@@ -14,5 +14,10 @@ export const partners = [
     image: "/gurugram/partners/Akamai.png",
     alt: "Akamai",
   },
+  {
+    title: "ASSOCIATE PARTNER",
+    image: "/gurugram/partners/Mira.png",
+    alt: "Mira",
+  },
   // Naya partner yahan add karo, dono jagah dikhega
 ];
