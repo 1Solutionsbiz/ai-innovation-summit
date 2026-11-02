@@ -245,10 +245,6 @@ export const speakers = [
     linkedin: "https://www.linkedin.com/in/yogeshkumarsharma9/",
   },
 
-
-
-
-
   {
     name: "Vinod Kumar G",
     role: "CISO & DPO, ",
