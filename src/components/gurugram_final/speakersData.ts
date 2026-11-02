@@ -249,14 +249,14 @@ export const speakers = [
 
 
 
-  // {
-  //   name: "Vinod Kumar G",
-  //   role: "CISO & DPO, ",
-  //   company: "Paytm Money",
-  //   description: "",
-  //   image: "gurugram/speakers/abc.png",
-  //   linkedin: "https://www.linkedin.com/in/pacevinod/",
-  // },
+  {
+    name: "Vinod Kumar G",
+    role: "CISO & DPO, ",
+    company: "Paytm Money",
+    description: "",
+    image: "gurugram/speakers/Vinod-Kumar.png",
+    linkedin: "https://www.linkedin.com/in/pacevinod/",
+  },
   {
     name: "Munender Soperna",
     role: "Group CDIO, ",

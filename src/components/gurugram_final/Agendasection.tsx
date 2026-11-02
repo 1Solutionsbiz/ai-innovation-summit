@@ -367,6 +367,15 @@ const AGENDA_DATA: DayData[] = [
                 ],
                 image: "gurugram/speakers/Yogesh-Kumar-Sharma.png",
               },
+              {
+                name: "Vinod Kumar G",
+                role: "",
+                roleLines: [
+                  "CISO & DPO",
+                  "Paytm Money",
+                ],
+                image: "gurugram/speakers/Vinod-Kumar.png",
+              },
             ],
           },
           {
