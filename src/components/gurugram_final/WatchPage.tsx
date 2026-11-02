@@ -144,7 +144,7 @@ const WatchPage = () => {
     <div className="min-h-screen bg-[#050B22] text-white">
       <RedesignNavigation />
 
-      <main className="relative py-10 md:py-16 mt-20 md:mt-10">
+      <main className="relative zindex2 bg-[#050B22] py-10 md:py-16 mt-20 md:mt-10">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-8">
           <button
             onClick={() => navigate(-1)}

@@ -86,7 +86,7 @@ const WatchOnDemand = () => {
         <div className="min-h-screen bg-[#050B22] text-white">
             <RedesignNavigation />
 
-            <main className="px-4 pb-16 pt-32 sm:px-[6rem] md:pt-40">
+            <main className="px-4 zindex2 bg-[#050B22] pb-16 pt-32 sm:px-[6rem] md:pt-40">
                 <div className="mx-auto max-w-[1500px]">
                     <div className="mb-10 max-w-3xl">
                         <p className="mb-3 text-[18px] text-[#EF3340]">On-Demand Content</p>
