@@ -286,6 +286,15 @@ const AGENDA_DATA: DayData[] = [
                 ],
                 image: "gurugram/speakers/Ashu-Gupta.png",
               },
+              {
+                name: "Munender Soperna",
+                role: "",
+                roleLines: [
+                  "Group CDIO",
+                  "Dr Lal PathLabs",
+                ],
+                image: "gurugram/speakers/Munender-Soperna.png",
+              },
             ],
           },
           {
@@ -304,6 +313,15 @@ const AGENDA_DATA: DayData[] = [
                   "Uno Minda",
                 ],
                 image: "gurugram/speakers/Parna-Ghosh.png",
+              },
+              {
+                name: "Sumit Bhatnagar",
+                role: "",
+                roleLines: [
+                  "MD & CEO",
+                  "Freecharge",
+                ],
+                image: "gurugram/speakers/Sumit-Bhatnagar.png",
               },
             ],
           },
