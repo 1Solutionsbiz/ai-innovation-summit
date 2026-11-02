@@ -236,6 +236,10 @@ export const speakers = [
   // },
 
 
+
+
+  
+
   {
     name: "Yogesh Kumar Sharma",
     role: "Chief Information Security Officer, ",
@@ -251,7 +255,7 @@ export const speakers = [
 
 
 
-  
+
   {
     name: "Vinod Kumar G",
     role: "CISO & DPO, ",
