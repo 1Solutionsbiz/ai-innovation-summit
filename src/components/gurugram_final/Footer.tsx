@@ -223,6 +223,9 @@ const Footer = () => {
           z-index:5;
           position:relative;
         }
+        .zindex6{
+          z-index:999999;
+        }
 
         @keyframes footerFadeInUp {
           from {
