@@ -1,5 +1,6 @@
 import ScrollToHash from "@/components/ScrollToHash";
 
+
 import Navigation from "@/components/gurugram_final/RedesignNavigation";
 import HeroBanner from "@/components/gurugram_final/HeroBanner";
 import Highlights from "@/components/gurugram_final/Highlights";
@@ -31,42 +32,42 @@ import "@/styles/gurugram_final.css";
 
 const GurugramEdition2026 = () => {
   return (
-    <div className="min-h-screen">
-      <ScrollToHash />
-      <Navigation />
-      {/* Hero stays pinned only inside this wrapper while the sections below slide up
-          over it. The wrapper must hold at least a viewport of content after the hero,
-          otherwise the pin releases before the hero is fully covered. */}
-      <div className="hero-sticky-wrap">
-        <HeroBanner />
-        <Highlights />
-        <Speakers />
-        <Overview />
+      <div className="min-h-screen">
+        <ScrollToHash />
+        <Navigation />
+        {/* Hero stays pinned only inside this wrapper while the sections below slide up
+            over it. The wrapper must hold at least a viewport of content after the hero,
+            otherwise the pin releases before the hero is fully covered. */}
+        <div className="hero-sticky-wrap">
+          <HeroBanner />
+          <Highlights />
+          <Speakers />
+          <Overview />
+        </div>
+        <ExploreFocusAreas />
+        <RoomMatters />
+        <Partners />
+        {/* <Sponsors /> */}
+
+    <StickyPartnersBar />
+
+
+        <Leaders />
+        <Innovation />
+        <TestimonialsNew />
+        <FeaturedSpeakers />
+        <WatchOnDemand />
+        <Glimpse />
+        <EventInfo />
+        <Sponsors />
+        
+        <hr />
+
+              <section id="delhincrregistrationform" ></section>
+              <BengaluruJune26RegisterForm />
+
+        <Footer />
       </div>
-      <ExploreFocusAreas />
-      <RoomMatters />
-      <Partners />
-      {/* <Sponsors /> */}
-
-  <StickyPartnersBar />
-
-
-      <Leaders />
-      <Innovation />
-      <TestimonialsNew />
-      <FeaturedSpeakers />
-      <WatchOnDemand />
-      <Glimpse />
-      <EventInfo />
-      <Sponsors />
-      
-      <hr />
-
-            <section id="delhincrregistrationform" ></section>
-            <BengaluruJune26RegisterForm />
-
-      <Footer />
-    </div>
   );
 };
 

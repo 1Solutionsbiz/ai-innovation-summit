@@ -2,6 +2,10 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import { HelmetProvider } from "react-helmet-async";
+import SEO from "@/components/SEO";
+
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -47,57 +51,61 @@ import CodeOfConduct from "./pages/CodeOfConduct";
 const queryClient = new QueryClient();
 
 const App: React.FC = () => (
-  <QueryClientProvider client={queryClient}>
-    <Toaster />
-    <Sonner />
-    <BrowserRouter>
-      <ScrollManager />
-      <Routes>
-        {/* Auth */}
-        <Route path="/login" element={<Login />} />
+  <HelmetProvider>
+    <QueryClientProvider client={queryClient}>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <SEO />
+        <ScrollManager />
+  
+        <Routes>
+          {/* Auth */}
+          <Route path="/login" element={<Login />} />
 
-        {/* Protected Dashboard */}
-        <Route
-          path="/dashboard/*"
-          element={
-            <RequireAuth>
-              <Dashboard />
-            </RequireAuth>
-          }
-        />
-        <Route path="/partner-form" element={<PartnerForm />} />
-        {/* Public site routes */}
-        <Route path="/" element={<DelhiGurugram_Edition26 />} />
+          {/* Protected Dashboard */}
+          <Route
+            path="/dashboard/*"
+            element={
+              <RequireAuth>
+                <Dashboard />
+              </RequireAuth>
+            }
+          />
+          <Route path="/partner-form" element={<PartnerForm />} />
+          {/* Public site routes */}
+          <Route path="/" element={<DelhiGurugram_Edition26 />} />
 
-        {/* <Route path="/common-forms" element={<SinghaniyaTest />} /> */}
+          {/* <Route path="/common-forms" element={<SinghaniyaTest />} /> */}
 
-        <Route path="/delhi-gurugram_edition-26-agenda" element={<DelhiGurugram_Edition26_Agenda />} />
-        <Route path="/delhi-gurugram_edition-26-speakers" element={<DelhiGurugram_Edition26_Speakers />} />
-        <Route path="/watch" element={<WatchPage />} />
+          <Route path="/delhi-gurugram_edition-26-agenda" element={<DelhiGurugram_Edition26_Agenda />} />
+          <Route path="/delhi-gurugram_edition-26-speakers" element={<DelhiGurugram_Edition26_Speakers />} />
+          <Route path="/watch" element={<WatchPage />} />
 
-<Route path="/all-speakers" element={<AllSpeakers />} />
-
-
-        <Route path="/previous/bangalore-2026" element={<BengaluruEdition26/>} />
-        <Route path="/previous/delhi-2026" element={<DelhiEdition26 />} />
-        <Route path="/previous/bangalore-2025" element={<BangaloreEdition/>} />
-        <Route path="/previous/mumbai-2025" element={<MumbaiEdition25 />} />
-        <Route path="/previous/mumbai-2024" element={<MumbaiEdition />} />
-        <Route path="/previous/bangalore-2024" element={<BengaluruEdition />} />
-        <Route path="/previous/delhi-ncr-2024" element={<GurugramEdition />} />
-        
-        <Route path="/watch-On-Demand-videos" element={<WatchOnDemand />} />
-        <Route path="/watch-on-demand" element={<WatchOnDemand />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-        <Route path="/code-of-conduct" element={<CodeOfConduct />} />
+  <Route path="/all-speakers" element={<AllSpeakers />} />
 
 
-        {/* 404 */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
-  </QueryClientProvider>
+          <Route path="/previous/bangalore-2026" element={<BengaluruEdition26/>} />
+          <Route path="/previous/delhi-2026" element={<DelhiEdition26 />} />
+          <Route path="/previous/bangalore-2025" element={<BangaloreEdition/>} />
+          <Route path="/previous/mumbai-2025" element={<MumbaiEdition25 />} />
+          <Route path="/previous/mumbai-2024" element={<MumbaiEdition />} />
+          <Route path="/previous/bangalore-2024" element={<BengaluruEdition />} />
+          <Route path="/previous/delhi-ncr-2024" element={<GurugramEdition />} />
+          
+          <Route path="/watch-On-Demand-videos" element={<WatchOnDemand />} />
+          <Route path="/watch-on-demand" element={<WatchOnDemand />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="/code-of-conduct" element={<CodeOfConduct />} />
+
+
+          {/* 404 */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </QueryClientProvider>
+  </HelmetProvider>
 );
 
 export default App;
