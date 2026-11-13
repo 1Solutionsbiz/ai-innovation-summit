@@ -174,7 +174,7 @@ export const speakers = [
     company: "Genpact",
     description: "",
     image: "gurugram/speakers/Faizul-Mufti.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/faizul-mufti-0755566/",
   },
 
 
@@ -275,7 +275,6 @@ export const speakers = [
     image: "gurugram/speakers/Munender-Soperna.png",
     linkedin: "#",
   },
-
 
 
 ];

@@ -376,6 +376,15 @@ const AGENDA_DATA: DayData[] = [
                 ],
                 image: "gurugram/speakers/Vinod-Kumar.png",
               },
+              {
+                name: "Faizul Mufti",
+                role: "",
+                roleLines: [
+                  "Vice President, Global Leader Cyber Defense Operations",
+                  "Genpact",
+                ],
+                image: "gurugram/speakers/Faizul-Mufti.png",
+              },
             ],
           },
           {
