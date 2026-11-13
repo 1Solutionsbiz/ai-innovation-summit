@@ -39,7 +39,6 @@ const GurugramEdition2026 = () => {
             over it. The wrapper must hold at least a viewport of content after the hero,
             otherwise the pin releases before the hero is fully covered. */}
         <div className="hero-sticky-wrap">
-          <h1 style={{ display: "none" }}>Delhi Gurugram Edition 2026</h1>
           <HeroBanner />
           <Highlights />
           <Speakers />
@@ -68,6 +67,8 @@ const GurugramEdition2026 = () => {
               <BengaluruJune26RegisterForm />
 
         <Footer />
+
+          <h1>Delhi Gurugram Edition 2026</h1>
       </div>
   );
 };
