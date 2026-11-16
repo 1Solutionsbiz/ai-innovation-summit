@@ -68,7 +68,7 @@ const GurugramEdition2026 = () => {
 
         <Footer />
 
-          <h1>Delhi Gurugram Edition 2026</h1>
+          {/* <h1>Delhi Gurugram Edition 2026</h1> */}
       </div>
   );
 };
