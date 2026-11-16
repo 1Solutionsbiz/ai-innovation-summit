@@ -277,4 +277,36 @@ export const speakers = [
   },
 
 
+
+
+
+
+
+
+  {
+    name: "Saurabh Gugnani",
+    role: "Global Head of Information Security Engineering, Projects and Architecture, ",
+    company: "TMF Group",
+    description: "",
+    image: "gurugram/speakers/Saurabh-Gugnani.png",
+    linkedin: "https://www.linkedin.com/in/saurabh-gugnani-7295a67/",
+  },
+  {
+    name: "Jay Jenkins",
+    role: "Field CTO, ",
+    company: "Cloud computing",
+    description: "",
+    image: "gurugram/speakers/Jay-Jenkins.png",
+    linkedin: "https://www.linkedin.com/in/jaydotsocial/",
+  },
+  {
+    name: "Vikram Khurana",
+    role: "Head of Analytics ,Business Intelligence,Artificial Intelligence(VP), ",
+    company: "Delhivery",
+    description: "",
+    image: "gurugram/speakers/Vikram-Khurana.png",
+    linkedin: "https://www.linkedin.com/in/vikram-khurana/",
+  },
+
+
 ];
