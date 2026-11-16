@@ -308,5 +308,6 @@ export const speakers = [
     linkedin: "https://www.linkedin.com/in/vikram-khurana/",
   },
 
+  
 
 ];
