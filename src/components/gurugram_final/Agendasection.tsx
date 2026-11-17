@@ -218,6 +218,15 @@ const AGENDA_DATA: DayData[] = [
                 ],
                 image: "gurugram/speakers/Sanjiv-Jain.png",
               },
+              {
+                name: "Munender Soperna",
+                role: "",
+                roleLines: [
+                  "Group CDIO",
+                  "Dr Lal PathLabs",
+                ],
+                image: "gurugram/speakers/Munender-Soperna.png",
+              },
             ],
           },
           {
@@ -285,15 +294,6 @@ const AGENDA_DATA: DayData[] = [
                   "(Group CDO)- Jubilant Pharmova",
                 ],
                 image: "gurugram/speakers/Ashu-Gupta.png",
-              },
-              {
-                name: "Munender Soperna",
-                role: "",
-                roleLines: [
-                  "Group CDIO",
-                  "Dr Lal PathLabs",
-                ],
-                image: "gurugram/speakers/Munender-Soperna.png",
               },
             ],
           },
