@@ -176,29 +176,6 @@ export const speakers = [
     image: "gurugram/speakers/Faizul-Mufti.png",
     linkedin: "https://www.linkedin.com/in/faizul-mufti-0755566/",
   },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   // {
   //   name: "Sunder Ram Partner",
   //   role: "Partner & Leader - Cloud Engineering and Data Analytics, ",
@@ -215,9 +192,6 @@ export const speakers = [
   //   image: "#",
   //   linkedin: "#",
   // },
-
-
-
   // {
   //   name: "Rahul Puri",
   //   role: "Cheif Technology Officer, ",
@@ -234,15 +208,6 @@ export const speakers = [
   //   image: "gurugram/speakers/",
   //   linkedin: "#",
   // },
-
-
-
-
-
-  
-
-
-
   {
     name: "Yogesh Kumar Sharma",
     role: "Chief Information Security Officer, ",
@@ -251,14 +216,6 @@ export const speakers = [
     image: "gurugram/speakers/Yogesh-Kumar-Sharma.png",
     linkedin: "https://www.linkedin.com/in/yogeshkumarsharma9/",
   },
-
-
-
-
-
-
-
-
   {
     name: "Vinod Kumar G",
     role: "CISO & DPO, ",
@@ -275,14 +232,6 @@ export const speakers = [
     image: "gurugram/speakers/Munender-Soperna.png",
     linkedin: "#",
   },
-
-
-
-
-
-
-
-
   {
     name: "Saurabh Gugnani",
     role: "Global Head of Information Security Engineering, Projects and Architecture, ",
@@ -306,6 +255,28 @@ export const speakers = [
     description: "",
     image: "gurugram/speakers/Vikram-Khurana.png",
     linkedin: "https://www.linkedin.com/in/vikram-khurana/",
+  },
+
+
+
+
+
+
+  {
+    name: "Rishi Jain",
+    role: "Digital Transformation Leader, ",
+    company: "Adani Group",
+    description: "",
+    image: "gurugram/speakers/Rishi-Jain.png",
+    linkedin: "https://www.linkedin.com/in/rishijain83/",
+  },
+  {
+    name: "Deepinder Singh Sethi",
+    role: "Global Chief Information Officer (CIO), ",
+    company: "Escorts (Kubota)",
+    description: "",
+    image: "gurugram/speakers/Deepinder-Singh-Sethi.png",
+    linkedin: "https://www.linkedin.com/in/deepindersinghsethi/",
   },
 
   
