@@ -15,6 +15,11 @@ export const partners = [
     alt: "Akamai",
   },
   {
+    title: "CYBER RESILIENCE PARTNER",
+    image: "/gurugram/partners/cohesity.png",
+    alt: "Cohesity",
+  },
+  {
     title: "ASSOCIATE PARTNER",
     image: "/gurugram/partners/Mira.png",
     alt: "Mira",
