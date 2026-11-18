@@ -256,12 +256,6 @@ export const speakers = [
     image: "gurugram/speakers/Vikram-Khurana.png",
     linkedin: "https://www.linkedin.com/in/vikram-khurana/",
   },
-
-
-
-
-
-
   {
     name: "Rishi Jain",
     role: "Digital Transformation Leader, ",
@@ -278,7 +272,48 @@ export const speakers = [
     image: "gurugram/speakers/Deepinder-Singh-Sethi.png",
     linkedin: "https://www.linkedin.com/in/deepindersinghsethi/",
   },
+  {
+    name: "Namrita Mahindro",
+    role: "Chief Digital & Information Officer, ",
+    company: "Lumax World",
+    description: "",
+    image: "gurugram/speakers/Namrita-Mahindro.png",
+    linkedin: "https://www.linkedin.com/in/namritasehgal/",
+  },
+  {
+    name: "Naveen Kumar Pareek",
+    role: "Head IT & CISO, ",
+    company: "Livpure India",
+    description: "",
+    image: "gurugram/speakers/Naveen-Kumar-Pareek.png",
+    linkedin: "https://www.linkedin.com/in/naveen-kumar-pareek-95318588/",
+  },
+  {
+    name: "Navnit Nakra",
+    role: "Partner & Technology Sector Leader, ",
+    company: "PwC in India",
+    description: "",
+    image: "gurugram/speakers/Navnit-Nakra.png",
+    linkedin: "#",
+  },
+  {
+    name: "Sundar Ram Partner",
+    role: "Partner & Leader - Cloud Engineering and Data Analytics, ",
+    company: "PwC India",
+    description: "",
+    image: "gurugram/speakers/Sundar-Ram-Partner.png",
+    linkedin: "#",
+  },
+  {
+    name: "Nitin Raj",
+    role: "Partner, Data and AI, ",
+    company: "PwC India",
+    description: "",
+    image: "gurugram/speakers/Nitin-Raj.png",
+    linkedin: "https://www.linkedin.com/in/nitinrai/",
+  },
 
-  
+
+
 
 ];
