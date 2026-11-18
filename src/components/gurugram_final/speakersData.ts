@@ -6,7 +6,7 @@ export const speakers = [
     company: "Freecharge",
     description: "",
     image: "gurugram/speakers/Sumit-Bhatnagar.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/sumit-bhatnagar-ba00175/",
   },
   {
     name: "Gaurav Gulati",
@@ -94,7 +94,7 @@ export const speakers = [
     company: "Yatra Online ",
     description: "",
     image: "gurugram/speakers/Shakti-Goel.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/dr-shakti-goel-53b2132/",
   },
   {
     name: "Madhur Bhardwaj",
@@ -102,7 +102,7 @@ export const speakers = [
     company: "Nokia",
     description: "",
     image: "gurugram/speakers/Madhur-Bhardwaj.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/madhurbhardwaj/",
   },
   {
     name: "Himanshu Pant",
@@ -150,7 +150,7 @@ export const speakers = [
     company: "Johnson Controls GCC ",
     description: "",
     image: "gurugram/speakers/Sivakumar-Selva-Ganapathy.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/sivakumarsg/",
   },
   {
     name: "Harsh Vardhan",
@@ -158,7 +158,7 @@ export const speakers = [
     company: "Apollo Tyres",
     description: "",
     image: "gurugram/speakers/Harsh-Vardhan.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/harshvardhan-ai/",
   },
   {
     name: "Rajat Wadhwa",
@@ -230,7 +230,7 @@ export const speakers = [
     company: "Dr Lal PathLabs",
     description: "",
     image: "gurugram/speakers/Munender-Soperna.png",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/munender-soperna-2a409311/",
   },
   {
     name: "Saurabh Gugnani",

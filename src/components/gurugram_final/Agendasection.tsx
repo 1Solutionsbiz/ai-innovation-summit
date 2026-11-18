@@ -342,6 +342,15 @@ const AGENDA_DATA: DayData[] = [
                 ],
                 image: "gurugram/speakers/Shakti-Goel.png",
               },
+              {
+                name: "Vikram Khurana",
+                role: "",
+                roleLines: [
+                  "Head of Analytics ,Business Intelligence,Artificial Intelligence(VP)",
+                  "Delhivery",
+                ],
+                image: "gurugram/speakers/Vikram-Khurana.png",
+              },
             ],
           },
           {
@@ -358,15 +367,6 @@ const AGENDA_DATA: DayData[] = [
               "Security • Governance • Trust \nThe Trust Layer: Securing, Governing, and Scaling AI Enterprises Can Actually Rely On \n\n The dedicated AI security, governance, and trust track, where the enterprises deploying AI at scale are being forced to confront a hard truth: innovation without trust does not survive contact with the boardroom, the regulator, or the customer. This track brings together India's most senior CISOs, Heads of AI Governance, Chief Risk Officers, and security architects for a practitioner-level deep dive on what it takes to make enterprise AI safe, defensible, and durable in 2026.  - Treating agent access as the new privileged access - Building AI inventories across models, datasets, APIs, agents and vector databases - Moving from responsible AI principles to enforceable runtime guardrails and continuous testing - Managing parallel AI compliance requirements across regulators and sectors - Aligning the board on acceptable AI risk and making security a business enabler - Building trust infrastructure through audit trails, access governance and zero-trust agents.\n Speakers: ",
 
             speakers: [
-              {
-                name: "Yogesh Kumar Sharma",
-                role: "",
-                roleLines: [
-                  "Chief Information Security Officer",
-                  "Jindal Stainless",
-                ],
-                image: "gurugram/speakers/Yogesh-Kumar-Sharma.png",
-              },
               {
                 name: "Vinod Kumar G",
                 role: "",
@@ -401,10 +401,22 @@ const AGENDA_DATA: DayData[] = [
                 image: "gurugram/speakers/Swastika-Johorey.png",
               },
               {
+                name: "Sivakumar Selva Ganapathy",
+                role: "",
+                roleLines: ["Vice President – India Digital/IT", "Johnson Controls GCC"],
+                image: "gurugram/speakers/Sivakumar-Selva-Ganapathy.png",
+              },
+              {
                 name: "Harsh Vardhan",
                 role: "",
                 roleLines: ["Global Head - Digital Innovation", "Apollo Tyres Ltd"],
                 image: "gurugram/speakers/Harsh-Vardhan.png",
+              },
+              {
+                name: "Rishi Jain",
+                role: "",
+                roleLines: ["Digital Transformation Leader", "Adani Group"],
+                image: "gurugram/speakers/Rishi-Jain.png",
               },
             ],
           },
@@ -420,6 +432,12 @@ const AGENDA_DATA: DayData[] = [
                 role: "",
                 roleLines: ["Head-Customer Applications", ""],
                 image: "gurugram/speakers/Rajat-Wadhwa.png",
+              },
+              {
+                name: "Saurabh Gugnani",
+                role: "",
+                roleLines: ["Global Head of Information Security Engineering, Projects and Architecture", "TMF Group"],
+                image: "gurugram/speakers/Saurabh-Gugnani.png",
               },
             ],
           },
@@ -497,6 +515,12 @@ const AGENDA_DATA: DayData[] = [
                 role: "",
                 roleLines: ["Group Head AI- RPSG Group", ""],
                 image: "gurugram/speakers/Himanshu.png",
+              },
+              {
+                name: "Deepinder Singh Sethi",
+                role: "",
+                roleLines: ["Global Chief Information Officer (CIO)", "Escorts (Kubota)"],
+                image: "gurugram/speakers/Deepinder-Singh-Sethi.png",
               },
             ],
           },
