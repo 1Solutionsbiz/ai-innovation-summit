@@ -221,10 +221,7 @@ const AGENDA_DATA: DayData[] = [
               {
                 name: "Munender Soperna",
                 role: "",
-                roleLines: [
-                  "Group CDIO",
-                  "Dr Lal PathLabs",
-                ],
+                roleLines: ["Group CDIO", "Dr Lal PathLabs"],
                 image: "gurugram/speakers/Munender-Soperna.png",
               },
             ],
@@ -317,10 +314,7 @@ const AGENDA_DATA: DayData[] = [
               {
                 name: "Sumit Bhatnagar",
                 role: "",
-                roleLines: [
-                  "MD & CEO",
-                  "Freecharge",
-                ],
+                roleLines: ["MD & CEO", "Freecharge"],
                 image: "gurugram/speakers/Sumit-Bhatnagar.png",
               },
             ],
@@ -370,10 +364,7 @@ const AGENDA_DATA: DayData[] = [
               {
                 name: "Vinod Kumar G",
                 role: "",
-                roleLines: [
-                  "CISO & DPO",
-                  "Paytm Money",
-                ],
+                roleLines: ["CISO & DPO", "Paytm Money"],
                 image: "gurugram/speakers/Vinod-Kumar.png",
               },
               {
@@ -403,13 +394,19 @@ const AGENDA_DATA: DayData[] = [
               {
                 name: "Sivakumar Selva Ganapathy",
                 role: "",
-                roleLines: ["Vice President – India Digital/IT", "Johnson Controls GCC"],
+                roleLines: [
+                  "Vice President – India Digital/IT",
+                  "Johnson Controls GCC",
+                ],
                 image: "gurugram/speakers/Sivakumar-Selva-Ganapathy.png",
               },
               {
                 name: "Harsh Vardhan",
                 role: "",
-                roleLines: ["Global Head - Digital Innovation", "Apollo Tyres Ltd"],
+                roleLines: [
+                  "Global Head - Digital Innovation",
+                  "Apollo Tyres Ltd",
+                ],
                 image: "gurugram/speakers/Harsh-Vardhan.png",
               },
               {
@@ -436,7 +433,10 @@ const AGENDA_DATA: DayData[] = [
               {
                 name: "Saurabh Gugnani",
                 role: "",
-                roleLines: ["Global Head of Information Security Engineering, Projects and Architecture", "TMF Group"],
+                roleLines: [
+                  "Global Head of Information Security Engineering, Projects and Architecture",
+                  "TMF Group",
+                ],
                 image: "gurugram/speakers/Saurabh-Gugnani.png",
               },
             ],
@@ -519,7 +519,10 @@ const AGENDA_DATA: DayData[] = [
               {
                 name: "Deepinder Singh Sethi",
                 role: "",
-                roleLines: ["Global Chief Information Officer (CIO)", "Escorts (Kubota)"],
+                roleLines: [
+                  "Global Chief Information Officer (CIO)",
+                  "Escorts (Kubota)",
+                ],
                 image: "gurugram/speakers/Deepinder-Singh-Sethi.png",
               },
             ],
@@ -541,7 +544,7 @@ const AGENDA_DATA: DayData[] = [
             time: "Evening — By Invitation Only",
             title: "AI Leadership Exchange | Gala Dinner",
             description:
-              "An exclusive CXO sundowner for a select group of technology leaders. Cocktails, keynote, fireside conversation, and a chef-curated dining experience. Brought to you by The Guild & Guild Live",
+              "An exclusive CXO sundowner for a select group of technology leaders. Cocktails, keynote, fireside conversation, and a chef-curated dining experience. Brought to you by The Guild & Atlassian",
           },
         ],
       },
