@@ -299,7 +299,7 @@ export const speakers = [
   {
     name: "Navnit Nakra",
     role: "Partner & Technology Sector Leader, ",
-    company: "PwC in India",
+    company: "PwC India",
     description: "",
     image: "gurugram/speakers/Navnit-Nakra.png",
     linkedin: "#",
