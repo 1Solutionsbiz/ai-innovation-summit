@@ -251,7 +251,7 @@ export const speakers = [
   {
     name: "Jay Jenkins",
     role: "Field CTO, ",
-    company: "Cloud computing",
+    company: "Akamai",
     description: "",
     image: "gurugram/speakers/Jay-Jenkins.png",
     linkedin: "https://www.linkedin.com/in/jaydotsocial/",

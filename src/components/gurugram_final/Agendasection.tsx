@@ -235,7 +235,7 @@ const AGENDA_DATA: DayData[] = [
               {
                 name: "Jay Jenkins",
                 role: "",
-                roleLines: ["Field CTO, Akamai", ""],
+                roleLines: ["Field CTO", "Akamai"],
                 image: "gurugram/speakers/Jay-Jenkins.png",
               },
             ],
