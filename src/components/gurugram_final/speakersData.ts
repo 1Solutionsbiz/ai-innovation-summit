@@ -9,6 +9,14 @@ export const speakers = [
     linkedin: "https://www.linkedin.com/in/sumit-bhatnagar-ba00175/",
   },
   {
+    name: "Neetan Chopra",
+    role: "Chief Digital and Information Officer, ",
+    company: "IndiGo",
+    description: "",
+    image: "gurugram/speakers/Neetan-Chopra.png",
+    linkedin: "",
+  },
+  {
     name: "Gaurav Gulati",
     role: "Group CIO, ",
     company: "Motherson Group",
