@@ -112,7 +112,7 @@ const RedesignNavigation = () => {
           <button
             type="button"
             aria-label={open ? "Close navigation menu" : "Open navigation menu"}
-            className={`mobile-menu-toggle xl:hidden ${isScrolled ? "is-scrolled" : ""}`}
+            className={`mobile-menu-toggle mobile-toggle-static-btn xl:hidden ${isScrolled ? "is-scrolled" : ""}`}
             onClick={() => setOpen(!open)}
           >
             {open ? <X size={24} /> : <Menu size={24} />}

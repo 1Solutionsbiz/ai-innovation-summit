@@ -720,3 +720,19 @@ All colors MUST be HSL.
 
 }
 /* Mobile Screen End */
+
+/* Tab Screen Start */
+@media screen and (max-width: 1278px) {
+
+  .mobile-toggle-static-btn svg{
+    color: #000 !important;
+  }
+  .mobile-redesign-menu {
+      background: #fff;
+  }
+  .mobile-editions-toggle, .mobile-editions-toggle svg {
+      color: #000 !important;
+  }
+
+}
+/* Tab Screen End */
