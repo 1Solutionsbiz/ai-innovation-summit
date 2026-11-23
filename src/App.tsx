@@ -27,8 +27,8 @@ import BengaluruEdition26 from "./pages/BengaluruEdition26";
 
 
 import SinghaniyaTest from "./pages/SinghaniyaTest";
-import About from "@/components/AboutUs";
-import Faq from "@/components/FAQ";
+import About from "@/pages/AboutUs";
+import Faq from "@/pages/Faq";
 
 import DelhiGurugram_Edition26 from "./pages/DelhiGurugram_Edition26";
 import DelhiGurugram_Edition26_Speakers from "./pages/DelhiGurugram_Edition26_Speakers";
