@@ -27,7 +27,8 @@ import BengaluruEdition26 from "./pages/BengaluruEdition26";
 
 
 import SinghaniyaTest from "./pages/SinghaniyaTest";
-import About from "@/pages/AboutUs";
+import About from "@/pages/About";
+import AboutUs from "@/pages/AboutUs";
 import Faq from "@/pages/Faq";
 
 import DelhiGurugram_Edition26 from "./pages/DelhiGurugram_Edition26";
@@ -86,6 +87,7 @@ const App: React.FC = () => (
 		  <Route path="/all-speakers" element={<AllSpeakers />} />
 
 <Route path="/about" element={<About />} />
+<Route path="/about-us" element={<AboutUs />} />
 <Route path="/faq" element={<Faq />} />
 
           <Route path="/previous/bangalore-2026" element={<BengaluruEdition26/>} />

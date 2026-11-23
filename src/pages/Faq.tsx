@@ -8,6 +8,7 @@ import AboutUs from "@/components/Pages/FAQ";
 
 import Footer from "@/components/gurugram_final/Footer";
 import "@/styles/mystyle.css";
+import "@/styles/aboutfaq.css";
 
 
 const GurugramEdition2026 = () => {

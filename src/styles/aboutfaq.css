@@ -1,0 +1,13 @@
+.bg-\[\#ec262d\] {
+    --tw-bg-opacity: 1;
+    background-color: #1d4ed8 !important;
+}
+
+.text-\[\#ec262d\] {
+    --tw-text-opacity: 1;
+    color: rgb(23 69 143) !important;
+}
+
+.abouticon svg{
+    color: #17458f !important;
+}

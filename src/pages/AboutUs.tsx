@@ -1,13 +1,14 @@
 import ScrollToHash from "@/components/ScrollToHash";
 
 
-import Navigation from "@/components/gurugram_final/RedesignNavigationStatic";
+import Navigation from "@/components/gurugram_final/RedesignNavigation";
 
-import AboutUs from "@/components/Pages/About";
+import AboutUs from "@/components/Pages/AboutUs";
 
 
 import Footer from "@/components/gurugram_final/Footer";
 import "@/styles/mystyle.css";
+import "@/styles/aboutfaq.css";
 
 
 const GurugramEdition2026 = () => {
