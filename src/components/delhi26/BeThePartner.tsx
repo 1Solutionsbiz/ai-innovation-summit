@@ -44,10 +44,10 @@ const BeThePartner = () => {
 
   // 🔥 Image array (Customize freely)
   const slideshowImages = [
-    "/delhi26/bethepart/be-the-part-4.jpg",
-    "/delhi26/bethepart/be-the-part-2.jpg",
-    "/delhi26/bethepart/be-the-part-3.jpg",
-    "/delhi26/bethepart/be-the-part-1.jpg",
+    "https://olive-elk-842602.hostingersite.com/delhi26/bethepart/be-the-part-4.jpg",
+    "https://olive-elk-842602.hostingersite.com/delhi26/bethepart/be-the-part-2.jpg",
+    "https://olive-elk-842602.hostingersite.com/delhi26/bethepart/be-the-part-3.jpg",
+    "https://olive-elk-842602.hostingersite.com/delhi26/bethepart/be-the-part-1.jpg",
   ];
 
   const [activeIndex, setActiveIndex] = useState(0); // Left hover active

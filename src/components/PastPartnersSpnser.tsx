@@ -16,35 +16,35 @@ const sponsorTiers = [
     {
       tier: "Co-Partner",
       logos: [
-        { name: "Atlassian", url: "/sponsers/atlassian.png" },
+        { name: "Atlassian", url: "https://olive-elk-842602.hostingersite.com/sponsers/atlassian.png" },
       ],
       isCoPartner: true // Add this flag
     },
     {
       tier: "Agentic AI Partner",
       logos: [
-        { name: "Salesforce", url: "/sponsers/salesforce.png" },
+        { name: "Salesforce", url: "https://olive-elk-842602.hostingersite.com/sponsers/salesforce.png" },
       ],
       isCoPartner: false
     },
     {
       tier: "Associate Partner",
       logos: [
-        { name: "Microsoft", url: "/sponsers/microsoft.png" },
+        { name: "Microsoft", url: "https://olive-elk-842602.hostingersite.com/sponsers/microsoft.png" },
       ],
       isCoPartner: false
     },
     {
       tier: "Robotics Partner",
       logos: [
-        { name: "Xboom", url: "/sponsers/xboom.png" },
+        { name: "Xboom", url: "https://olive-elk-842602.hostingersite.com/sponsers/xboom.png" },
       ],
       isCoPartner: false
     },
     // {
     //   tier: "Live Streaming Partner",
     //   logos: [
-    //     { name: "24fd", url: "/sponsers/24fd-logo.png" },
+    //     { name: "24fd", url: "https://olive-elk-842602.hostingersite.com/sponsers/24fd-logo.png" },
     //   ],
     //   isCoPartner: false
     // },

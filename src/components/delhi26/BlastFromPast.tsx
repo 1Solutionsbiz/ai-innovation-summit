@@ -1,5 +1,5 @@
 const BlastFromPast = () => {
-  const videoSrc = "videos/Yt_promo_10_sept.mp4";
+  const videoSrc = "https://olive-elk-842602.hostingersite.com/videos/Yt_promo_10_sept.mp4";
   const videoTitle = "AI Innovation Summit 2024 Highlights";
 
   return (

@@ -32,7 +32,7 @@ const WatchDemand: React.FC<WatchDemandProps> = ({ city, imageName, videoLinks }
               <div className="h-[320px] sm:h-[360px] md:h-[400px] flex items-center justify-center">
                 <VideoCard
                   videoUrl={link}
-                  imageSrc={`/edition/${index + 1}-${imageName}.png`}
+                  imageSrc={`https://olive-elk-842602.hostingersite.com/edition/${index + 1}-${imageName}.png`}
                 />
               </div>
             </div>

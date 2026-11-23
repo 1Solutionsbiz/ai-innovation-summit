@@ -1,11 +1,11 @@
 import { Button } from "../ui/button";
 
 export const PastEventHero = ({
-  backgroundImage = "/hero-banner.png",
+  backgroundImage = "https://olive-elk-842602.hostingersite.com/hero-banner.png",
   overlay = true,
   contentPosition = "right",
-  contentBackgroundImage = "/hero-banner-image.svg",
-  heroImage = "/past-event-image.png",
+  contentBackgroundImage = "https://olive-elk-842602.hostingersite.com/hero-banner-image.svg",
+  heroImage = "https://olive-elk-842602.hostingersite.com/past-event-image.png",
   subheading = "Relive the Moments",
   date = "March 15, 2024 | Taj Santacruz, Mumbai, India",
 }) => {

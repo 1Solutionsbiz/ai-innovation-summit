@@ -6,49 +6,49 @@ export default function KeyTheme() {
       title: 'From AI Hype to Business Impact',
       description:
         'Debunking myths, aligning CXO expectations, and building real-world AI narratives rooted in outcomes—not buzzwords.',
-      image: '/key/From-AI-Hype-to-Business-Impact.png',
+      image: 'https://olive-elk-842602.hostingersite.com/key/From-AI-Hype-to-Business-Impact.png',
     },
     {
       title: 'Agentic AI: The Next Enterprise Paradigm',
       description:
         'Exploring autonomous agents, their application in enterprise workflows, and how they’re reshaping decision-making.',
-      image: '/key/Agentic-AI.png',
+      image: 'https://olive-elk-842602.hostingersite.com/key/Agentic-AI.png',
     },
     {
       title: 'From Pilot to Production: The Scaling Challenge',
       description:
         'Why 80% of AI pilots don’t scale—and how to build robust strategies around people, processes, and platforms.',
-      image: '/key/From-Pilot-to-Production.png',
+      image: 'https://olive-elk-842602.hostingersite.com/key/From-Pilot-to-Production.png',
     },
     {
       title: 'AI + Data Strategy: Laying the Foundation for Scale',
       description:
         'Ensuring structured, enterprise-wide data readiness for Generative and Agentic AI applications.',
-      image: '/key/AI-Data-Strategy.png',
+      image: 'https://olive-elk-842602.hostingersite.com/key/AI-Data-Strategy.png',
     },
     {
       title: 'People Intelligence: AI-Powered Workforce',
       description:
         'Using GenAI to understand employee behavior, drive engagement, and influence strategic decisions.',
-      image: '/key/People-Intelligence.png',
+      image: 'https://olive-elk-842602.hostingersite.com/key/People-Intelligence.png',
     },
     {
       title: 'Redefining ROI: Measuring Value in the AI Era',
       description:
         'Metrics, frameworks, and leadership mindsets required to define and track AI success across business units.',
-      image: '/key/Redefining-ROI.png',
+      image: 'https://olive-elk-842602.hostingersite.com/key/Redefining-ROI.png',
     },
     {
       title: 'Governance, Ethics & Regulation',
       description:
         'Evolving board-level frameworks, cybersecurity concerns, bias mitigation, and compliance in the AI age.',
-      image: '/key/Governance.png',
+      image: 'https://olive-elk-842602.hostingersite.com/key/Governance.png',
     },
     {
       title: 'Industry Tracks',
       description:
         'Manufacturing, Construction, BFSI, Retail – deep dives into how AI is transforming each sector.',
-      image: '/key/industry-icon.png',
+      image: 'https://olive-elk-842602.hostingersite.com/key/industry-icon.png',
     },
   ];
 

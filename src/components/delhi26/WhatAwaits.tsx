@@ -1,33 +1,33 @@
 import { useState } from "react";
 
 const WhatAwaits = () => {
-  const whatswaits = "/delhi26/whatswaits.jpg"; // background image path
+  const whatswaits = "https://olive-elk-842602.hostingersite.com/delhi26/whatswaits.jpg"; // background image path
 
   const features = [
     {
       title: "Where AI Meets Reality",
       description:"Step into interactive demos bringing cutting-edge experiences to life.",
-      image: "/delhi26/Power-Networking.jpg",
+      image: "https://olive-elk-842602.hostingersite.com/delhi26/Power-Networking.jpg",
     },
     {
       title: "Connections That Shape Tomorrow",
       description:"Connect with top industry leaders and forge meaningful connections.",
-      image: "/delhi26/Immersive-Tech.jpg",
+      image: "https://olive-elk-842602.hostingersite.com/delhi26/Immersive-Tech.jpg",
     },
     {
       title: "Ideas That Shift Perspectives",
       description:"Gain sharp perspectives from visionary voices shaping the future of tech.",
-      image: "/delhi26/Insightful-Talks.jpg",
+      image: "https://olive-elk-842602.hostingersite.com/delhi26/Insightful-Talks.jpg",
     },
     {
       title: "Real Voices. Real Impact.",
       description:"Hear experts decode emerging trends, challenges, and real-world AI applications.",
-      image: "/delhi26/Expert-Panels.jpg",
+      image: "https://olive-elk-842602.hostingersite.com/delhi26/Expert-Panels.jpg",
     },
     {
       title: "Machines That Learn. Systems That Think.",
       description:"Explore innovations pushing the boundaries of intelligent automation.",
-      image: "/delhi26/AI-Robotics.jpg",
+      image: "https://olive-elk-842602.hostingersite.com/delhi26/AI-Robotics.jpg",
     },
   ];
 

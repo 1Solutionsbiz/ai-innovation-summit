@@ -10,16 +10,16 @@ interface GlimpseImageProps {
 
 const Glimpses: React.FC = () => {
   const images: GlimpseImageProps[] = [
-    { src: "/edition/glim/1-min.png", alt: "Edition 1" },
-    { src: "/edition/glim/2-min.png", alt: "Edition 2" },
-    { src: "/edition/glim/3-min.png", alt: "Edition 3" },
-    { src: "/edition/glim/4-min.png", alt: "Edition 4" },
-    { src: "/edition/glim/5-min.png", alt: "Edition 5" },
-    { src: "/edition/glim/6-min.png", alt: "Edition 6" },
-    { src: "/edition/glim/7-min.png", alt: "Edition 7" },
-    { src: "/edition/glim/8-min.png", alt: "Edition 8" },
-    { src: "/edition/glim/9-min.png", alt: "Edition 9" },
-    { src: "/edition/glim/10-min.png", alt: "Edition 10" },
+    { src: "https://olive-elk-842602.hostingersite.com/edition/glim/1-min.png", alt: "Edition 1" },
+    { src: "https://olive-elk-842602.hostingersite.com/edition/glim/2-min.png", alt: "Edition 2" },
+    { src: "https://olive-elk-842602.hostingersite.com/edition/glim/3-min.png", alt: "Edition 3" },
+    { src: "https://olive-elk-842602.hostingersite.com/edition/glim/4-min.png", alt: "Edition 4" },
+    { src: "https://olive-elk-842602.hostingersite.com/edition/glim/5-min.png", alt: "Edition 5" },
+    { src: "https://olive-elk-842602.hostingersite.com/edition/glim/6-min.png", alt: "Edition 6" },
+    { src: "https://olive-elk-842602.hostingersite.com/edition/glim/7-min.png", alt: "Edition 7" },
+    { src: "https://olive-elk-842602.hostingersite.com/edition/glim/8-min.png", alt: "Edition 8" },
+    { src: "https://olive-elk-842602.hostingersite.com/edition/glim/9-min.png", alt: "Edition 9" },
+    { src: "https://olive-elk-842602.hostingersite.com/edition/glim/10-min.png", alt: "Edition 10" },
   ];
 
   const settings = {

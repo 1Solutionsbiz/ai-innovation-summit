@@ -5,21 +5,21 @@ export const KeyPoints = () => {
       description:
         "Hear CIOs, CTOs, and AI Chiefs from the top enterprises of the country making an impact in the world with AI.",
       image:
-        "/networking/1.png",
+        "https://olive-elk-842602.hostingersite.com/networking/1.png",
     },
     {
       title: "Keynote Addresses and Workshops",
       description:
         "Gear up for the valuable takeaways including the focused Industry insights, trending enterprise use-cases.",
       image:
-        "/networking/2.png",
+        "https://olive-elk-842602.hostingersite.com/networking/2.png",
     },
     {
       title: "Networking Opportunities",
       description:
         "Meet the who’s who from the tech fraternity, the tech leaders from across the industry sectors including Manufacturing, Health & Pharma, BFSI & FinTech, and many more.",
       image:
-        "/networking/3.png",
+        "https://olive-elk-842602.hostingersite.com/networking/3.png",
     },
   ];
 

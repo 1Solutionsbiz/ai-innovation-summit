@@ -1,7 +1,5 @@
-import aiinvationlogo from "/logo/Ai-Innovation_Logo_White.png";
-import guildLogo from "/logo/the-guild-dg26.png";
-
-
+const aiinvationlogo = "https://olive-elk-842602.hostingersite.com/logo/Ai-Innovation_Logo_White.png";
+const guildLogo = "https://olive-elk-842602.hostingersite.com/logo/the-guild-dg26.png";
 const Footer = () => {
   return (
     <footer className="bg-[#000019] text-white" id="contact">

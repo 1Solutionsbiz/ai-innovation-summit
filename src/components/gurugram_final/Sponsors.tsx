@@ -3,14 +3,14 @@ import { getScrollDirection } from "@/hooks/useScrollDirection";
 
 const placeholderLogos = [
   
-  { src: "/gurugram/pastsponsers/salesforce.png", alt: "" },
-  { src: "/gurugram/pastsponsers/adobe.png", alt: "" },
-  { src: "/gurugram/pastsponsers/Atlassian.png", alt: "" },
-  { src: "/gurugram/pastsponsers/cohesity.png", alt: "" },
-  { src: "/gurugram/pastsponsers/aws.png", alt: "" },
-  { src: "/gurugram/pastsponsers/microsoft.png", alt: "" },
-  { src: "/gurugram/pastsponsers/boom.png", alt: "" },
-  { src: "/gurugram/pastsponsers/Equateme.png", alt: "" },
+  { src: "https://olive-elk-842602.hostingersite.com/gurugram/pastsponsers/salesforce.png", alt: "" },
+  { src: "https://olive-elk-842602.hostingersite.com/gurugram/pastsponsers/adobe.png", alt: "" },
+  { src: "https://olive-elk-842602.hostingersite.com/gurugram/pastsponsers/Atlassian.png", alt: "" },
+  { src: "https://olive-elk-842602.hostingersite.com/gurugram/pastsponsers/cohesity.png", alt: "" },
+  { src: "https://olive-elk-842602.hostingersite.com/gurugram/pastsponsers/aws.png", alt: "" },
+  { src: "https://olive-elk-842602.hostingersite.com/gurugram/pastsponsers/microsoft.png", alt: "" },
+  { src: "https://olive-elk-842602.hostingersite.com/gurugram/pastsponsers/boom.png", alt: "" },
+  { src: "https://olive-elk-842602.hostingersite.com/gurugram/pastsponsers/Equateme.png", alt: "" },
 ];
 
 // Scroll speed in seconds — lower number = faster scroll, higher = slower.

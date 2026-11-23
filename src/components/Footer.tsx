@@ -9,7 +9,7 @@ export const Footer = ({ socialLinks }) => {
           {/* Left - Info */}
           <div className="md:w-1/2">
             <img
-              src="/logo/Ai-Innovation_Logo_White.png"
+              src="https://olive-elk-842602.hostingersite.com/logo/Ai-Innovation_Logo_White.png"
               alt="AI Innovation Summit Logo"
               className="h-24 w-auto mb-4"
             />
@@ -17,7 +17,7 @@ export const Footer = ({ socialLinks }) => {
               From prompt to impact — the premier summit for artificial intelligence leaders and enthusiasts, making it the most impactful AI Summit.
             </p>
             <img
-              src="/guild-logo.png"
+              src="https://olive-elk-842602.hostingersite.com/guild-logo.png"
               alt="Guild Logo"
               className="h-auto w-auto mt-5"
             />

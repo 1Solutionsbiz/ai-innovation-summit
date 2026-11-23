@@ -6,7 +6,7 @@ const partnersData = [
     logos: [
       {
         name: "Salesforce",
-        url: "/partners/salesforce.png",
+        url: "https://olive-elk-842602.hostingersite.com/partners/salesforce.png",
         link: "https://www.salesforce.com/",
       },
     ],
@@ -17,7 +17,7 @@ const partnersData = [
     logos: [
       {
         name: "Atlassian",
-        url: "/partners/atlassian.png",
+        url: "https://olive-elk-842602.hostingersite.com/partners/atlassian.png",
         link: "https://www.atlassian.com/",
       },
     ],
@@ -28,7 +28,7 @@ const partnersData = [
     logos: [
       {
         name: "Cohesity",
-        url: "/partners/cohesity.png",
+        url: "https://olive-elk-842602.hostingersite.com/partners/cohesity.png",
         link: "https://www.cohesity.com/",
       },
     ],
@@ -39,7 +39,7 @@ const partnersData = [
     logos: [
       {
         name: "Snowflake",
-        url: "/partners/Snowflake.png",
+        url: "https://olive-elk-842602.hostingersite.com/partners/Snowflake.png",
         link: "https://www.snowflake.com/en/",
       },
     ],
@@ -50,7 +50,7 @@ const partnersData = [
     logos: [
       {
         name: "EquateMe",
-        url: "/partners/EquateMe.png",
+        url: "https://olive-elk-842602.hostingersite.com/partners/EquateMe.png",
         link: "https://equateme.com/",
       },
     ],

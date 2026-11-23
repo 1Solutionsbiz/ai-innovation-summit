@@ -142,7 +142,7 @@ const LeadersNumbers = () => {
         }
 
         .leaders-section-new {
-          background-image: url('/gurugram/leaders_info_bg.png');
+          background-image: url('https://olive-elk-842602.hostingersite.com/gurugram/leaders_info_bg.png');
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;

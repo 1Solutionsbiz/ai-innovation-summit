@@ -77,7 +77,7 @@ const HeroBanner = () => {
       <video
         ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover"
-        src="/videos/delhi-gurugram-26-new.mp4"
+        src="https://olive-elk-842602.hostingersite.com/videos/delhi-gurugram-26-new.mp4"
         autoPlay
         loop
         muted
@@ -91,7 +91,7 @@ const HeroBanner = () => {
         <div className="grid items-center gap-8 lg:grid-cols-[60%_minmax(0,1fr)]">
           <div className="relative flex justify-center lg:justify-start">
             <img
-              src="/gurugram/logo-combain.png"
+              src="https://olive-elk-842602.hostingersite.com/gurugram/logo-combain.png"
               alt="AI Innovation Summit partner showcase"
               className={`w-full max-w-[70%] lg:max-w-[50%] object-contain drop-shadow-[0_25px_50px_rgba(8,145,178,0.25)] partners-reveal-up ${isVisible ? "is-visible" : ""}`}
               style={{ animationDelay: heroDelay(0, 5) }}
@@ -133,7 +133,7 @@ const HeroBanner = () => {
               >
                 
                  <img
-                        src="/gurugram/clock-icon.png"
+                        src="https://olive-elk-842602.hostingersite.com/gurugram/clock-icon.png"
                         alt="AI Innovation Summit"
                         className={`clock-icon`}
                         style={{ animationDelay: heroDelay(0, 5) }}

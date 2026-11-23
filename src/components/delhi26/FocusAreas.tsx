@@ -9,7 +9,7 @@ const WhatAwaits = () => {
       title: "C-Suite Al Imperatives",
       description:
         "Strategic AI priorities for business transformation.",
-      image: "/elements/C-Suite-Al-Imperatives.png",
+      image: "https://olive-elk-842602.hostingersite.com/elements/C-Suite-Al-Imperatives.png",
     },
     {
       title: "India's Al Leadership & Global Influence",
@@ -21,25 +21,25 @@ const WhatAwaits = () => {
       title: "Industry Transformation",
       description:
         "AI-driven disruption across key sectors.",
-      image: "/elements/Industry-Transformation.png",
+      image: "https://olive-elk-842602.hostingersite.com/elements/Industry-Transformation.png",
     },
     {
       title: "Next-Gen Automation",
       description:
         "Autonomous enterprises through intelligent automation.",
-      image: "/elements/Next-Gen-Automation.png",
+      image: "https://olive-elk-842602.hostingersite.com/elements/Next-Gen-Automation.png",
     },
     {
       title: "Resilient & Secure Al",
       description:
         "Security, trust & compliance in AI adoption.",
-      image: "/elements/Resilient-&-Secure-Al.png",
+      image: "https://olive-elk-842602.hostingersite.com/elements/Resilient-&-Secure-Al.png",
     },
     {
       title: "Scaling Enterprise Intelligence",
       description:
         "AI capability expansion for sustainable growth.",
-      image: "/elements/Scaling-Enterprise-Intelligence.png",
+      image: "https://olive-elk-842602.hostingersite.com/elements/Scaling-Enterprise-Intelligence.png",
     },
   ];
 

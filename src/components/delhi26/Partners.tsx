@@ -3,17 +3,17 @@ import seriesPartnersBg from "@/assets/series-partners-bg.jpg";
 const partnersData = [
   {
     tier: "Presenting Partner",
-    logos: [{ name: "Adobe", url: "/partners/Adobe_Logo_Red.png" }],
+    logos: [{ name: "Adobe", url: "https://olive-elk-842602.hostingersite.com/partners/Adobe_Logo_Red.png" }],
     isCoPartner: true,
   },
   {
     tier: "Enterprise AI Partner",
-    logos: [{ name: "Microsoft", url: "/partners/microsoft.png" }],
+    logos: [{ name: "Microsoft", url: "https://olive-elk-842602.hostingersite.com/partners/microsoft.png" }],
     isCoPartner: true,
   },
   {
     tier: "Agentic Enterprise Partner",
-    logos: [{ name: "Salesforce", url: "/partners/salesforce.png" }],
+    logos: [{ name: "Salesforce", url: "https://olive-elk-842602.hostingersite.com/partners/salesforce.png" }],
     isCoPartner: true,
   },
 ];

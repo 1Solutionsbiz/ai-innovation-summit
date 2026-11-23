@@ -210,7 +210,7 @@ export const Header = ({
         <div className="container mx-auto px-4 h-26 flex items-center justify-between py-3">
           <Link to="/">
             <img
-              src="/logo/Ai-Innovation_Logo_White.png"
+              src="https://olive-elk-842602.hostingersite.com/logo/Ai-Innovation_Logo_White.png"
               alt="AI Innovation Summit"
               className="h-20 w-auto"
             />

@@ -1,10 +1,9 @@
 import { Linkedin } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import aiLogo from "@/assets/ai-innovation-logo.png";
-import aiinvationlogo from "/logo/Ai-Innovation_Logo_White.png";
-import guildLogo from "/logo/the-guild-dg26.png";
-import Yesican from "/logo/Yesican.png";
-
+const aiinvationlogo = "https://olive-elk-842602.hostingersite.com/logo/Ai-Innovation_Logo_White.png";
+const guildLogo = "https://olive-elk-842602.hostingersite.com/logo/the-guild-dg26.png";
+const Yesican = "https://olive-elk-842602.hostingersite.com/logo/Yesican.png";
 const Footer = () => {
   const footerRef = useRef<HTMLElement>(null);
   const [footerVisible, setFooterVisible] = useState(false);

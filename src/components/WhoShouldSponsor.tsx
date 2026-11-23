@@ -2,15 +2,15 @@ export const WhoShouldSponsor = () => {
   const points = [
     {
       title: "Technology companies offering AI solutions.",
-      image: "/networking/1.png",
+      image: "https://olive-elk-842602.hostingersite.com/networking/1.png",
     },
     {
       title: "Institutions investing in AI-driven innovations.",
-      image: "/networking/2.png",
+      image: "https://olive-elk-842602.hostingersite.com/networking/2.png",
     },
     {
       title: "Consulting firms providing AI integration services.",
-      image: "/networking/3.png",
+      image: "https://olive-elk-842602.hostingersite.com/networking/3.png",
     },
   ];
 

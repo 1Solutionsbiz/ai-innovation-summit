@@ -15,31 +15,31 @@ const CATEGORIES: Category[] = [
   {
     icon: Users,
     iconBg: "bg-purple-600",
-    iconColor: "gurugram/icons/cio.png",
+    iconColor: "https://olive-elk-842602.hostingersite.com/gurugram/icons/cio.png",
     label: "CIO / CTO / CDO / CISO / CAIO",
   },
   {
     icon: BrainCircuit,
     iconBg: "bg-blue-100",
-    iconColor: "gurugram/icons/data_leads.png",
+    iconColor: "https://olive-elk-842602.hostingersite.com/gurugram/icons/data_leads.png",
     label: "AI & Data Leaders",
   },
   {
     icon: Workflow,
     iconBg: "bg-emerald-100",
-    iconColor: "gurugram/icons/transformation.png",
+    iconColor: "https://olive-elk-842602.hostingersite.com/gurugram/icons/transformation.png",
     label: "Digital Transformation Leaders",
   },
   {
     icon: Network,
     iconBg: "bg-orange-100",
-    iconColor: "gurugram/icons/enterprise.png",
+    iconColor: "https://olive-elk-842602.hostingersite.com/gurugram/icons/enterprise.png",
     label: "Enterprise Architecture & Cloud Leaders",
   },
   {
     icon: Factory,
     iconBg: "bg-rose-100",
-    iconColor: "gurugram/icons/manufacturing.png",
+    iconColor: "https://olive-elk-842602.hostingersite.com/gurugram/icons/manufacturing.png",
     label: "Manufacturing & Industry Technology Leaders",
   },
 ];

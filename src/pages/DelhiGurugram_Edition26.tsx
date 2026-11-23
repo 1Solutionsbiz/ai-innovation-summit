@@ -20,11 +20,7 @@ import EventInfo from "@/components/gurugram_final/EventInfo";
 import Sponsors from "@/components/gurugram_final/Sponsors";
 import Footer from "@/components/gurugram_final/Footer";
 
-
 import StickyPartnersBar from "@/components/gurugram_final/StickyPartnersBar";
-
-
-
 import { BengaluruJune26RegisterForm } from "@/components/BengaluruJune26RegisterForm";
 
 import "@/styles/gurugram_final.css";

@@ -5,37 +5,37 @@ const focusAreas = [
     label: "Enterprise AI",
     headline: "Innovating the future. At enterprise speed.",
     sub: "Ideas. Technology. Transformation. The AI conversation enterprises are having now.",
-    image: "/gurugram/focus/Image_1.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/focus/Image_1.png",
   },
   {
     label: "Leadership",
     headline: "Stronger together for tomorrow.",
     sub: "Where India's most senior technology and business leaders build what's next.",
-    image: "/gurugram/focus/Image_2.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/focus/Image_2.png",
   },
   {
     label: "AI Infrastructure",
     headline: "The backbone behind every breakthrough.",
     sub: "Compute, data and platforms powering enterprise-scale AI.",
-    image: "/gurugram/focus/Image_3.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/focus/Image_3.png",
   },
   {
     label: "Agentic AI",
     headline: "From pilot to production. From assistance to autonomy.",
     sub: "The systems that decide. The leaders who define.",
-    image: "/gurugram/focus/Image_4.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/focus/Image_4.png",
   },
   {
     label: "AI Transformation",
     headline: "Rewiring the enterprise, function by function.",
     sub: "How real organisations are putting AI to work.",
-    image: "/gurugram/focus/Image_5.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/focus/Image_5.png",
   },
   {
     label: "Future of Work",
     headline: "New roles. New rules. New teams.",
     sub: "What work looks like when humans and agents build together.",
-    image: "/gurugram/focus/Image_6.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/focus/Image_6.png",
   },
 ];
 

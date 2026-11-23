@@ -44,7 +44,7 @@ const ShouldAttend: React.FC = () => {
           <div className="px-2 sm:px-6 lg:px-10 pb-10">
             <div>
               <h3 className="text-base sm:text-lg font-semibold mb-4 hover:scale-105 transition-transform duration-300 flex items-center gap-2">
-                <img src="/decision-making-icon.png" alt="Decision Makers" className="w-8 sm:w-10 h-8 sm:h-10" />
+                <img src="https://olive-elk-842602.hostingersite.com/decision-making-icon.png" alt="Decision Makers" className="w-8 sm:w-10 h-8 sm:h-10" />
                 Key Decision Makers
               </h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 text-sm">
@@ -77,7 +77,7 @@ const ShouldAttend: React.FC = () => {
 
             <div className="mt-12">
               <h3 className="text-base sm:text-lg font-semibold mb-4 hover:scale-105 transition-transform duration-300 flex items-center gap-2">
-                <img src="/industry-icon.png" alt="Industries" className="w-8 sm:w-10 h-8 sm:h-10" />
+                <img src="https://olive-elk-842602.hostingersite.com/industry-icon.png" alt="Industries" className="w-8 sm:w-10 h-8 sm:h-10" />
                 Key Industries
               </h3>
               <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-4 text-sm">
@@ -99,7 +99,7 @@ const ShouldAttend: React.FC = () => {
         {/* Right Column Image */}
         <div className="lg:flex-1 flex justify-center px-4 sm:px-6 lg:px-0">
           <img
-            src="/attend.png"
+            src="https://olive-elk-842602.hostingersite.com/attend.png"
             alt="Audience Visual"
             className="rounded-lg shadow-lg w-full max-w-sm sm:max-w-md object-cover hover:scale-105 transition-transform duration-300"
           />

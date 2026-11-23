@@ -13,7 +13,7 @@ const speakers = [
   //   role: "VP of Data & AI, Meridian Financial",
   //   description:
   //     "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-  //   image: "gurugram/speakers/speaker_1.png",
+  //   image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/speaker_1.png",
   //   linkedin: "https://www.linkedin.com/in/priyanair",
   // },
   // {
@@ -21,7 +21,7 @@ const speakers = [
   //   role: "VP of Data & AI, Meridian Financial",
   //   description:
   //     "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-  //   image: "gurugram/speakers/speaker_1.png",
+  //   image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/speaker_1.png",
   //   linkedin: "https://www.linkedin.com/in/priyanair",
   // },
   // {
@@ -29,7 +29,7 @@ const speakers = [
   //   role: "VP of Data & AI, Meridian Financial",
   //   description:
   //     "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-  //   image: "gurugram/speakers/speaker_1.png",
+  //   image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/speaker_1.png",
   //   linkedin: "https://www.linkedin.com/in/priyanair",
   // },
   // {
@@ -37,7 +37,7 @@ const speakers = [
   //   role: "VP of Data & AI, Meridian Financial",
   //   description:
   //     "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-  //   image: "gurugram/speakers/speaker_1.png",
+  //   image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/speaker_1.png",
   //   linkedin: "https://www.linkedin.com/in/priyanair",
   // },
   // {
@@ -45,7 +45,7 @@ const speakers = [
   //   role: "VP of Data & AI, Meridian Financial",
   //   description:
   //     "Priya leads data and AI initiatives with a focus on intelligent automation, data-driven decision making and responsible AI adoption.",
-  //   image: "gurugram/speakers/speaker_1.png",
+  //   image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/speaker_1.png",
   //   linkedin: "https://www.linkedin.com/in/priyanair",
   // },
 ];
@@ -627,7 +627,7 @@ const FeaturedSpeakers = () => {
                           
                         "
                         style={{
-                          backgroundImage: "url('/gurugram/speakers/bg.png')",
+                          backgroundImage: "url('https://olive-elk-842602.hostingersite.com/gurugram/speakers/bg.png')",
                         }}
 
                       >

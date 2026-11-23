@@ -11,21 +11,21 @@ export const Sponsors = () => {
     {
       tier: "Co-Partner",
       logos: [
-        { name: "Microsoft", url: "/sponsers/microsoft.png" },
+        { name: "Microsoft", url: "https://olive-elk-842602.hostingersite.com/sponsers/microsoft.png" },
       ],
       isCoPartner: true // Add this flag
     },
     {
       tier: "Robotics Partner",
       logos: [
-        { name: "Xboom", url: "/sponsers/xboom.png" },
+        { name: "Xboom", url: "https://olive-elk-842602.hostingersite.com/sponsers/xboom.png" },
       ],
       isCoPartner: false
     },
     {
       tier: "Associate Partner",
       logos: [
-        { name: "Snowflake", url: "/sponsers/snowflake.png" },
+        { name: "Snowflake", url: "https://olive-elk-842602.hostingersite.com/sponsers/snowflake.png" },
       ],
       isCoPartner: false
     },

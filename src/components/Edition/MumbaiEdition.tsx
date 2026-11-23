@@ -44,40 +44,40 @@ const sections = [
 ];
 
 const speakers = [
-  { name: 'Khushru M. Mistry', designation: 'Chief Technology Officer', company: 'GM Modular', image: '/edition/speakers/mumbai/khushru.png' },
-  { name: 'Naved Hussain', designation: 'Chief Technology Officer', company: 'Adani Capital', image: '/edition/speakers/mumbai/naved.png' },
-  { name: 'Vineet Shukla', designation: 'Vice President (Head of Data)', company: 'Mahindra Group', image: '/edition/speakers/mumbai/vineet.png' },
-  { name: 'Milind Khamkar', designation: 'Group CIO', company: 'SUPER-MAX', image: '/edition/speakers/mumbai/milind.png' },
-  { name: 'Sudhir Kanvinde', designation: 'Chief Information Officer', company: 'The Supreme Industries', image: '/edition/speakers/mumbai/sudhir.png' },
-  { name: 'Nishant Pradhan', designation: 'Chief AI Officer', company: 'Mirae Asset Global Investments', image: '/edition/speakers/mumbai/nishant.png' },
-  { name: 'Bhawesh Chourasia', designation: 'Global Head- Operations Excellence', company: 'Microland', image: '/edition/speakers/mumbai/bhawesh.png' },
-  { name: 'Dr. Puneet Kohli', designation: 'President IT & Data (CIO)', company: 'Liberty General Insurance', image: '/edition/speakers/mumbai/dr-puneet.png' },
-  { name: 'Mukesh Jain', designation: 'CTO & VP', company: 'Leading AI Based Innovation @ Capgemini', image: '/edition/speakers/mumbai/mukesh.png' },
-  { name: 'Prashant Thakkar', designation: 'Chief of Operations and Technology Officer', company: 'LIC Mutual Fund', image: '/edition/speakers/mumbai/prashant.png' },
-  { name: 'Amit Joshi', designation: 'CISO Adani Cement Business', company: 'Adani Enterprises', image: '/edition/speakers/mumbai/amit.png' },
-  { name: 'Haresh Ambaliya', designation: 'General Manager, Automation, Data Science & Machine Learning', company: 'Jio Platforms', image: '/edition/speakers/mumbai/haresh.png' },
-  { name: 'Kiran Belsekar', designation: 'Executive VP- CISO & IT Governance', company: 'Bandhan Life', image: '/edition/speakers/mumbai/kiran.png' },
-  { name: 'Jitendra Jadhwani', designation: 'Head - Business Transformation & CISO', company: 'Tata Motors Finance', image: '/edition/speakers/mumbai/jitendra.png' },
-  { name: 'Kulbhooshan Patil', designation: 'VP and Head of Data Science', company: 'TATA AIG General Insurance', image: '/edition/speakers/mumbai/kulbhooshan.png' },
-  { name: 'Amit Sharma', designation: 'VP Lead - AI-ML Central Data Science', company: 'Paytm', image: '/edition/speakers/mumbai/amit-sharma.png' },
-  { name: 'Binita Prasad', designation: 'Head- IT and Digital', company: 'Saint-Gobain Group India | Grindwell Norton', image: '/edition/speakers/mumbai/binita.png' },
-  { name: 'Anubhab Goel', designation: 'Head- Digital Innovation', company: 'HDFC ERGO General Insurance', image: '/edition/speakers/mumbai/anubhab.png' },
-  { name: 'Narendra K Saini', designation: 'CDO | Chief Digital and Data Officer', company: 'Lupin', image: '/edition/speakers/mumbai/narendra.png' },
-  { name: 'Sachin Kawalkar', designation: 'Global CISO, Head Info Sec, Cyber and Quality Management', company: 'Neeyamo', image: '/edition/speakers/mumbai/sachin.png' },
-  { name: 'Arun Gupta', designation: 'IT Strategy Consultant Independent Director & Board Member', company: 'Hemas Pharmaceuticals, Sri Lanka & Locuz Enterprise Solutions, India', image: '/edition/speakers/mumbai/arun.png' },
-  { name: 'Muralidharan Ramachandran', designation: 'CIO', company: 'Startek', image: '/edition/speakers/mumbai/muralidharan.png' },
-  { name: 'Rohan Padhi', designation: 'Partner, Advisory', company: 'KPMG India', image: '/edition/speakers/mumbai/rohan.png' },
+  { name: 'Khushru M. Mistry', designation: 'Chief Technology Officer', company: 'GM Modular', image: 'https://olive-elk-842602.hostingersite.com/edition/speakers/mumbai/khushru.png' },
+  { name: 'Naved Hussain', designation: 'Chief Technology Officer', company: 'Adani Capital', image: 'https://olive-elk-842602.hostingersite.com/edition/speakers/mumbai/naved.png' },
+  { name: 'Vineet Shukla', designation: 'Vice President (Head of Data)', company: 'Mahindra Group', image: 'https://olive-elk-842602.hostingersite.com/edition/speakers/mumbai/vineet.png' },
+  { name: 'Milind Khamkar', designation: 'Group CIO', company: 'SUPER-MAX', image: 'https://olive-elk-842602.hostingersite.com/edition/speakers/mumbai/milind.png' },
+  { name: 'Sudhir Kanvinde', designation: 'Chief Information Officer', company: 'The Supreme Industries', image: 'https://olive-elk-842602.hostingersite.com/edition/speakers/mumbai/sudhir.png' },
+  { name: 'Nishant Pradhan', designation: 'Chief AI Officer', company: 'Mirae Asset Global Investments', image: 'https://olive-elk-842602.hostingersite.com/edition/speakers/mumbai/nishant.png' },
+  { name: 'Bhawesh Chourasia', designation: 'Global Head- Operations Excellence', company: 'Microland', image: 'https://olive-elk-842602.hostingersite.com/edition/speakers/mumbai/bhawesh.png' },
+  { name: 'Dr. Puneet Kohli', designation: 'President IT & Data (CIO)', company: 'Liberty General Insurance', image: 'https://olive-elk-842602.hostingersite.com/edition/speakers/mumbai/dr-puneet.png' },
+  { name: 'Mukesh Jain', designation: 'CTO & VP', company: 'Leading AI Based Innovation @ Capgemini', image: 'https://olive-elk-842602.hostingersite.com/edition/speakers/mumbai/mukesh.png' },
+  { name: 'Prashant Thakkar', designation: 'Chief of Operations and Technology Officer', company: 'LIC Mutual Fund', image: 'https://olive-elk-842602.hostingersite.com/edition/speakers/mumbai/prashant.png' },
+  { name: 'Amit Joshi', designation: 'CISO Adani Cement Business', company: 'Adani Enterprises', image: 'https://olive-elk-842602.hostingersite.com/edition/speakers/mumbai/amit.png' },
+  { name: 'Haresh Ambaliya', designation: 'General Manager, Automation, Data Science & Machine Learning', company: 'Jio Platforms', image: 'https://olive-elk-842602.hostingersite.com/edition/speakers/mumbai/haresh.png' },
+  { name: 'Kiran Belsekar', designation: 'Executive VP- CISO & IT Governance', company: 'Bandhan Life', image: 'https://olive-elk-842602.hostingersite.com/edition/speakers/mumbai/kiran.png' },
+  { name: 'Jitendra Jadhwani', designation: 'Head - Business Transformation & CISO', company: 'Tata Motors Finance', image: 'https://olive-elk-842602.hostingersite.com/edition/speakers/mumbai/jitendra.png' },
+  { name: 'Kulbhooshan Patil', designation: 'VP and Head of Data Science', company: 'TATA AIG General Insurance', image: 'https://olive-elk-842602.hostingersite.com/edition/speakers/mumbai/kulbhooshan.png' },
+  { name: 'Amit Sharma', designation: 'VP Lead - AI-ML Central Data Science', company: 'Paytm', image: 'https://olive-elk-842602.hostingersite.com/edition/speakers/mumbai/amit-sharma.png' },
+  { name: 'Binita Prasad', designation: 'Head- IT and Digital', company: 'Saint-Gobain Group India | Grindwell Norton', image: 'https://olive-elk-842602.hostingersite.com/edition/speakers/mumbai/binita.png' },
+  { name: 'Anubhab Goel', designation: 'Head- Digital Innovation', company: 'HDFC ERGO General Insurance', image: 'https://olive-elk-842602.hostingersite.com/edition/speakers/mumbai/anubhab.png' },
+  { name: 'Narendra K Saini', designation: 'CDO | Chief Digital and Data Officer', company: 'Lupin', image: 'https://olive-elk-842602.hostingersite.com/edition/speakers/mumbai/narendra.png' },
+  { name: 'Sachin Kawalkar', designation: 'Global CISO, Head Info Sec, Cyber and Quality Management', company: 'Neeyamo', image: 'https://olive-elk-842602.hostingersite.com/edition/speakers/mumbai/sachin.png' },
+  { name: 'Arun Gupta', designation: 'IT Strategy Consultant Independent Director & Board Member', company: 'Hemas Pharmaceuticals, Sri Lanka & Locuz Enterprise Solutions, India', image: 'https://olive-elk-842602.hostingersite.com/edition/speakers/mumbai/arun.png' },
+  { name: 'Muralidharan Ramachandran', designation: 'CIO', company: 'Startek', image: 'https://olive-elk-842602.hostingersite.com/edition/speakers/mumbai/muralidharan.png' },
+  { name: 'Rohan Padhi', designation: 'Partner, Advisory', company: 'KPMG India', image: 'https://olive-elk-842602.hostingersite.com/edition/speakers/mumbai/rohan.png' },
 ];
 const quotesData = [
   {
-    image: "/edition/leaders/mohit-malik.png",
+    image: "https://olive-elk-842602.hostingersite.com/edition/leaders/mohit-malik.png",
     name: "Mohit Malik",
     title: "CIO, Chaayos",
     quote:
       "Over the next 5 years, Gen AI will eliminate the repetitive aspects. While all manual tasks will be automated, the creative aspect will remain untouched.",
   },
   {
-    image: "/edition/leaders/vinod-bhat.png",
+    image: "https://olive-elk-842602.hostingersite.com/edition/leaders/vinod-bhat.png",
     name: "Vinod Bhat",
     title: "CIO, Vistara",
     quote:
@@ -104,14 +104,14 @@ const MumbaiEdition = () => {
         disabledButtonName="Registration Closed"
       />
       <PastEventHero
-        backgroundImage="/past-hero-banner.png"
+        backgroundImage="https://olive-elk-842602.hostingersite.com/past-hero-banner.png"
         contentPosition="left"
         contentBackgroundImage=""
-        heroImage="/cloud-new.png"
+        heroImage="https://olive-elk-842602.hostingersite.com/cloud-new.png"
         subheading="Unlocking the Future: Navigating the Confluence of Cloud and AI"
         date="5th June 2024, Mumbai"
       />
-      <PastHighlights videoSrc="/videos/Yt_promo_10_sept.mp4" />
+      <PastHighlights videoSrc="https://olive-elk-842602.hostingersite.com/videos/Yt_promo_10_sept.mp4" />
 
       <Objectives />
       <StatsSection
@@ -122,11 +122,11 @@ const MumbaiEdition = () => {
           { label: 'Networking Hrs', value: '8+ hrs' },
         ]}
         images={[
-          '/edition/stats/1.png',
-          '/edition/stats/2.png',
-          '/edition/stats/3.png',
-          '/edition/stats/4.png',
-          '/edition/stats/5.png',
+          'https://olive-elk-842602.hostingersite.com/edition/stats/1.png',
+          'https://olive-elk-842602.hostingersite.com/edition/stats/2.png',
+          'https://olive-elk-842602.hostingersite.com/edition/stats/3.png',
+          'https://olive-elk-842602.hostingersite.com/edition/stats/4.png',
+          'https://olive-elk-842602.hostingersite.com/edition/stats/5.png',
         ]}
       />
 

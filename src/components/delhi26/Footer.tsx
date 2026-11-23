@@ -1,6 +1,6 @@
 import { Linkedin } from "lucide-react";
 import aiLogo from "@/assets/ai-innovation-logo.png";
-import aiinvationlogo from "/logo/Ai-Innovation_Logo_White.png";
+const aiinvationlogo = "https://olive-elk-842602.hostingersite.com/logo/Ai-Innovation_Logo_White.png";
 import guildLogo from "@/assets/guild-logo.png";
 
 const Footer = () => {

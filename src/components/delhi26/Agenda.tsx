@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 
 const AgendaNew = () => {
-  const higlitbanner = "/delhi26/highlight.png";
-  const adobelogo = "/partners/Adobe_Logo_Red.png";
+  const higlitbanner = "https://olive-elk-842602.hostingersite.com/delhi26/highlight.png";
+  const adobelogo = "https://olive-elk-842602.hostingersite.com/partners/Adobe_Logo_Red.png";
 
   const [activeIndex, setActiveIndex] = useState(null);
 

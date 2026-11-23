@@ -209,8 +209,8 @@ const BangaloreEdition = () => {
 
       />
       <Hero
-        backgroundImage="/hero-banner.png"
-        contentBackgroundImage="/hero-banner-image.svg"
+        backgroundImage="https://olive-elk-842602.hostingersite.com/hero-banner.png"
+        contentBackgroundImage="https://olive-elk-842602.hostingersite.com/hero-banner-image.svg"
         contentPosition="right"
         heading="Shaping the Future with AI"
         subheading="From prompt to impact"
@@ -298,7 +298,7 @@ const BangaloreEdition = () => {
       {/* <ShortAgenda items={shortAgendaData3} /> */}
       {/* </div> */}
       <KeyTheme />
-      <PastHighlights videoSrc="/videos/Yt_promo_10_sept.mp4" />
+      <PastHighlights videoSrc="https://olive-elk-842602.hostingersite.com/videos/Yt_promo_10_sept.mp4" />
 
       <DemandVideoHome />
       <PartnershipCTA />

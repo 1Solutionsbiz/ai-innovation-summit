@@ -8,28 +8,28 @@ const cards = [
     key: "ideas",
     label: "IDEAS",
     text: "Where Ideas Turn Into Action",
-    image: "gurugram/innovation/innovation_2.jpg",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/innovation/innovation_2.jpg",
     className: "innovation-grid-ideas",
   },
   {
     key: "network",
     label: "NETWORK",
     text: "Connect With the People Shaping What's Next",
-    image: "gurugram/innovation/innovation_1.jpg",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/innovation/innovation_1.jpg",
     className: "innovation-grid-network",
   },
   {
     key: "audience",
     label: "AUDIENCE",
     text: "Connect With the People Shaping What's Next",
-    image: "gurugram/innovation/innovation_4.jpg",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/innovation/innovation_4.jpg",
     className: "innovation-grid-audience",
   },
   {
     key: "live",
     label: "Live Experience",
     text: "See the energy, ideas, and action that define our summit.",
-    image: "gurugram/innovation/innovation_3.jpg",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/innovation/innovation_3.jpg",
     className: "innovation-grid-live",
   },
 ];
@@ -202,7 +202,7 @@ const InnovationSection = () => {
                   className={`innovation-card innovation-grid-video partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
                   style={{ animationDelay: `${cardDelayMap.video}ms` }}
                 >
-                  <video ref={videoRef} className="absolute inset-0 w-full h-full object-cover" src="videos/innovation_gurugram_26.mp4" autoPlay muted loop playsInline />
+                  <video ref={videoRef} className="absolute inset-0 w-full h-full object-cover" src="https://olive-elk-842602.hostingersite.com/videos/innovation_gurugram_26.mp4" autoPlay muted loop playsInline />
                   <div className="absolute inset-0 bg-black/35" />
                   <button onClick={togglePlay} aria-label={isPlaying ? "Pause video" : "Play video"} className="absolute inset-0 m-auto z-20 w-12 h-12 rounded-full bg-white/20 border border-white/70 flex items-center justify-center text-white transition-transform duration-300 hover:scale-110">
                     {isPlaying ? <Pause size={18} fill="white" /> : <Play size={18} fill="white" className="ml-0.5" />}

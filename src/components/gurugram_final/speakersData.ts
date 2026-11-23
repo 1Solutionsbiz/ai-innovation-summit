@@ -5,7 +5,7 @@ export const speakers = [
     role: "MD & CEO, ",
     company: "Freecharge",
     description: "",
-    image: "gurugram/speakers/Sumit-Bhatnagar.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Sumit-Bhatnagar.png",
     linkedin: "https://www.linkedin.com/in/sumit-bhatnagar-ba00175/",
   },
   {
@@ -13,7 +13,7 @@ export const speakers = [
     role: "Chief Digital and Information Officer, ",
     company: "IndiGo",
     description: "",
-    image: "gurugram/speakers/Neetan-Chopra.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Neetan-Chopra.png",
     linkedin: "",
   },
   {
@@ -21,7 +21,7 @@ export const speakers = [
     role: "Group CIO, ",
     company: "Motherson Group",
     description: "",
-    image: "gurugram/speakers/Gaurav-Gulati.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Gaurav-Gulati.png",
     linkedin: "https://www.linkedin.com/in/gaurav-gulati-7883a4/",
   },
   {
@@ -29,7 +29,7 @@ export const speakers = [
     role: "Regional IT CIO, ",
     company: "CNH Industrial",
     description: "",
-    image: "gurugram/speakers/Supriya-Kaul.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Supriya-Kaul.png",
     linkedin: "https://www.linkedin.com/in/supriya-kaul-8696a14/",
   },
   {
@@ -37,7 +37,7 @@ export const speakers = [
     role: "Group Chief Information Officer, ",
     company: "Krishna Maruti Group",
     description: "",
-    image: "gurugram/speakers/Sanjiv-Jain.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Sanjiv-Jain.png",
     linkedin: "https://www.linkedin.com/in/sanjiv-kumar-jain-9350661/",
   },
   {
@@ -45,7 +45,7 @@ export const speakers = [
     role: "Chief Technology Officer, ",
     company: "Info Edge India",
     description: "",
-    image: "gurugram/speakers/Arvind-Heda.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Arvind-Heda.png",
     linkedin: "https://www.linkedin.com/in/arvind-heda-3514684/",
   },
   {
@@ -53,7 +53,7 @@ export const speakers = [
     role: "Chief Technology Officer, ",
     company: "Hero Fincorp - Housing Entity",
     description: "",
-    image: "gurugram/speakers/Vivek-Madan.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Vivek-Madan.png",
     linkedin: "https://www.linkedin.com/in/vivekmadan-digital-transformation-chief-technology-officer/",
   },
   {
@@ -61,7 +61,7 @@ export const speakers = [
     role: "President, Group CIO and Data Protection Officer, ",
     company: "Uno Minda",
     description: "",
-    image: "gurugram/speakers/Parna-Ghosh.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Parna-Ghosh.png",
     linkedin: "https://www.linkedin.com/in/parna-ghosh-89376514/",
   },
   {
@@ -69,7 +69,7 @@ export const speakers = [
     role: "Senior Director - Digital & AI (Group CDO), ",
     company: "Jubilant Pharmova Limited",
     description: "",
-    image: "gurugram/speakers/Ashu-Gupta.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Ashu-Gupta.png",
     linkedin: "https://www.linkedin.com/in/ashu-gupta-8617a413/",
   },
   {
@@ -77,7 +77,7 @@ export const speakers = [
     role: "Chief Technology Officer, ",
     company: "PolicyBazaar for Business (PB Fintech Ltd.)",
     description: "",
-    image: "gurugram/speakers/Ankit-Gupta.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Ankit-Gupta.png",
     linkedin: "https://www.linkedin.com/in/ankitgupta871/",
   },
   {
@@ -85,7 +85,7 @@ export const speakers = [
     role: "Chief Data & AI Officer, ",
     company: "Niva Bupa Health Insurance",
     description: "",
-    image: "gurugram/speakers/Charit-Agarwal.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Charit-Agarwal.png",
     linkedin: "https://www.linkedin.com/in/charitagarwal/",
   },
   {
@@ -93,7 +93,7 @@ export const speakers = [
     role: "Chief Digital Officer, ",
     company: "Varun Beverages",
     description: "",
-    image: "gurugram/speakers/Swastika-Johorey.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Swastika-Johorey.png",
     linkedin: "https://www.linkedin.com/in/swastika-johorey-2251228/",
   },
   {
@@ -101,7 +101,7 @@ export const speakers = [
     role: "Chief Architect and Data Scientist, ",
     company: "Yatra Online ",
     description: "",
-    image: "gurugram/speakers/Shakti-Goel.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Shakti-Goel.png",
     linkedin: "https://www.linkedin.com/in/dr-shakti-goel-53b2132/",
   },
   {
@@ -109,7 +109,7 @@ export const speakers = [
     role: "Senior Technology Advisor & CTO RAN & Core Technology Strategy, ",
     company: "Nokia",
     description: "",
-    image: "gurugram/speakers/Madhur-Bhardwaj.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Madhur-Bhardwaj.png",
     linkedin: "https://www.linkedin.com/in/madhurbhardwaj/",
   },
   {
@@ -117,7 +117,7 @@ export const speakers = [
     role: "Group Head AI, ",
     company: "RPSG Group",
     description: "",
-    image: "gurugram/speakers/Himanshu.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Himanshu.png",
     linkedin: "https://www.linkedin.com/in/himanshupant/",
   },
   {
@@ -125,7 +125,7 @@ export const speakers = [
     role: "Group CISO, ",
     company: "Adani Group",
     description: "",
-    image: "gurugram/speakers/Shivkumar-Pandey.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Shivkumar-Pandey.png",
     linkedin: "https://www.linkedin.com/in/shivkumarpandey?originalSubdomain=in",
   },
   {
@@ -133,7 +133,7 @@ export const speakers = [
     role: "Chief Information Security Officer, ",
     company: "Max Life Insurance Company",
     description: "",
-    image: "gurugram/speakers/Abhishek-Bansal.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Abhishek-Bansal.png",
     linkedin: "https://www.linkedin.com/in/bansalabhishek/",
   },
   {
@@ -141,7 +141,7 @@ export const speakers = [
     role: "General Manager & Head- Information Security, ",
     company: "Samsung Electronics",
     description: "",
-    image: "gurugram/speakers/Anil-K-Saraswat.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Anil-K-Saraswat.png",
     linkedin: "https://www.linkedin.com/in/anil-saraswat-bh007/",
   },
   {
@@ -149,7 +149,7 @@ export const speakers = [
     role: "Chief Security Officer, ",
     company: "PB Pay",
     description: "",
-    image: "gurugram/speakers/Adish-Jain.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Adish-Jain.png",
     linkedin: "https://www.linkedin.com/in/adishjain1995/",
   },
   {
@@ -157,7 +157,7 @@ export const speakers = [
     role: "Vice President – India Digital/IT, ",
     company: "Johnson Controls GCC ",
     description: "",
-    image: "gurugram/speakers/Sivakumar-Selva-Ganapathy.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Sivakumar-Selva-Ganapathy.png",
     linkedin: "https://www.linkedin.com/in/sivakumarsg/",
   },
   {
@@ -165,7 +165,7 @@ export const speakers = [
     role: "Global Head - Digital Innovation, ",
     company: "Apollo Tyres",
     description: "",
-    image: "gurugram/speakers/Harsh-Vardhan.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Harsh-Vardhan.png",
     linkedin: "https://www.linkedin.com/in/harshvardhan-ai/",
   },
   {
@@ -173,7 +173,7 @@ export const speakers = [
     role: "Head- Customer Applications, ",
     company: "Hero FinCorp",
     description: "",
-    image: "gurugram/speakers/Rajat-Wadhwa.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Rajat-Wadhwa.png",
     linkedin: "https://www.linkedin.com/in/rajatwadhwa/",
   },
   {
@@ -181,7 +181,7 @@ export const speakers = [
     role: "Vice President, Global Leader Cyber Defense Operations, ",
     company: "Genpact",
     description: "",
-    image: "gurugram/speakers/Faizul-Mufti.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Faizul-Mufti.png",
     linkedin: "https://www.linkedin.com/in/faizul-mufti-0755566/",
   },
   // {
@@ -221,7 +221,7 @@ export const speakers = [
     role: "Chief Information Security Officer, ",
     company: "Jindal Stainless",
     description: "",
-    image: "gurugram/speakers/Yogesh-Kumar-Sharma.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Yogesh-Kumar-Sharma.png",
     linkedin: "https://www.linkedin.com/in/yogeshkumarsharma9/",
   },
   {
@@ -229,7 +229,7 @@ export const speakers = [
     role: "CISO & DPO, ",
     company: "Paytm Money",
     description: "",
-    image: "gurugram/speakers/Vinod-Kumar.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Vinod-Kumar.png",
     linkedin: "https://www.linkedin.com/in/pacevinod/",
   },
   {
@@ -237,7 +237,7 @@ export const speakers = [
     role: "Group CDIO, ",
     company: "Dr Lal PathLabs",
     description: "",
-    image: "gurugram/speakers/Munender-Soperna.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Munender-Soperna.png",
     linkedin: "https://www.linkedin.com/in/munender-soperna-2a409311/",
   },
   {
@@ -245,7 +245,7 @@ export const speakers = [
     role: "Global Head of Information Security Engineering, Projects and Architecture, ",
     company: "TMF Group",
     description: "",
-    image: "gurugram/speakers/Saurabh-Gugnani.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Saurabh-Gugnani.png",
     linkedin: "https://www.linkedin.com/in/saurabh-gugnani-7295a67/",
   },
   {
@@ -253,7 +253,7 @@ export const speakers = [
     role: "Field CTO, ",
     company: "Akamai",
     description: "",
-    image: "gurugram/speakers/Jay-Jenkins.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Jay-Jenkins.png",
     linkedin: "https://www.linkedin.com/in/jaydotsocial/",
   },
   {
@@ -261,7 +261,7 @@ export const speakers = [
     role: "Head of Analytics ,Business Intelligence,Artificial Intelligence(VP), ",
     company: "Delhivery",
     description: "",
-    image: "gurugram/speakers/Vikram-Khurana.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Vikram-Khurana.png",
     linkedin: "https://www.linkedin.com/in/vikram-khurana/",
   },
   {
@@ -269,7 +269,7 @@ export const speakers = [
     role: "Digital Transformation Leader, ",
     company: "Adani Group",
     description: "",
-    image: "gurugram/speakers/Rishi-Jain.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Rishi-Jain.png",
     linkedin: "https://www.linkedin.com/in/rishijain83/",
   },
   {
@@ -277,7 +277,7 @@ export const speakers = [
     role: "Global Chief Information Officer (CIO), ",
     company: "Escorts (Kubota)",
     description: "",
-    image: "gurugram/speakers/Deepinder-Singh-Sethi.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Deepinder-Singh-Sethi.png",
     linkedin: "https://www.linkedin.com/in/deepindersinghsethi/",
   },
   {
@@ -285,7 +285,7 @@ export const speakers = [
     role: "Chief Digital & Information Officer, ",
     company: "Lumax World",
     description: "",
-    image: "gurugram/speakers/Namrita-Mahindro.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Namrita-Mahindro.png",
     linkedin: "https://www.linkedin.com/in/namritasehgal/",
   },
   {
@@ -293,7 +293,7 @@ export const speakers = [
     role: "Head IT & CISO, ",
     company: "Livpure India",
     description: "",
-    image: "gurugram/speakers/Naveen-Kumar-Pareek.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Naveen-Kumar-Pareek.png",
     linkedin: "https://www.linkedin.com/in/naveen-kumar-pareek-95318588/",
   },
   {
@@ -301,7 +301,7 @@ export const speakers = [
     role: "Partner & Technology Sector Leader, ",
     company: "PwC India",
     description: "",
-    image: "gurugram/speakers/Navnit-Nakra.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Navnit-Nakra.png",
     linkedin: "#",
   },
   {
@@ -309,7 +309,7 @@ export const speakers = [
     role: "Partner & Leader - Cloud Engineering and Data Analytics, ",
     company: "PwC India",
     description: "",
-    image: "gurugram/speakers/Sundar-Ram-Partner.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Sundar-Ram-Partner.png",
     linkedin: "#",
   },
   {
@@ -317,7 +317,7 @@ export const speakers = [
     role: "Partner, Data and AI, ",
     company: "PwC India",
     description: "",
-    image: "gurugram/speakers/Nitin-Raj.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Nitin-Raj.png",
     linkedin: "https://www.linkedin.com/in/nitinrai/",
   },
 

@@ -243,7 +243,7 @@ const FeaturedSpeakers = () => {
                           
                         "
                         style={{
-                          backgroundImage: "url('/gurugram/speakers/bg.png')",
+                          backgroundImage: "url('https://olive-elk-842602.hostingersite.com/gurugram/speakers/bg.png')",
                         }}
 
                       >
@@ -591,7 +591,7 @@ const FeaturedSpeakers = () => {
                   hover:text-[#EF3340]
                 "
               >
-                <img src="linkedin.png" className="w-[20px]" alt="Linkedin" />
+                <img src="https://olive-elk-842602.hostingersite.com/linkedin.png" className="w-[20px]" alt="Linkedin" />
               </a>
 
             </div>

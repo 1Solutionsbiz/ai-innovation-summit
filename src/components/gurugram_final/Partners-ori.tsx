@@ -4,32 +4,32 @@ import { getScrollDirection } from "@/hooks/useScrollDirection";
 const partners = [
   {
     title: "PRESENTING PARTNER",
-    image: "/gurugram/partners/salesforce.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/partners/salesforce.png",
     alt: "salesforce",
   },
   {
     title: "CLOUD PARTNER",
-    image: "/gurugram/partners/Akamai.png",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/partners/Akamai.png",
     alt: "Akamai",
   },
   // {
   //   title: "CO-POWERED BY",
-  //   image: "/gurugram/partners/Atlassian.png",
+  //   image: "https://olive-elk-842602.hostingersite.com/gurugram/partners/Atlassian.png",
   //   alt: "Partner 2",
   // },
   // {
   //   title: "CYBER RESILIENCE PARTNER",
-  //   image: "/gurugram/partners/cohesity.png",
+  //   image: "https://olive-elk-842602.hostingersite.com/gurugram/partners/cohesity.png",
   //   alt: "Partner 3",
   // },
   // {
   //   title: "AI DATA CLOUD PARTNER",
-  //   image: "/gurugram/partners/snowflake.png",
+  //   image: "https://olive-elk-842602.hostingersite.com/gurugram/partners/snowflake.png",
   //   alt: "Partner 4",
   // },
   // {
   //   title: "ENGAGEMENT PARTNER",
-  //   image: "/gurugram/partners/Equateme.png",
+  //   image: "https://olive-elk-842602.hostingersite.com/gurugram/partners/Equateme.png",
   //   alt: "Partner 5",
   // },
 ];

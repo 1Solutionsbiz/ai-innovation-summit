@@ -201,7 +201,7 @@ const Highlights = () => {
 
       {/* <video
         className="absolute inset-0 w-full h-full object-cover"
-        src="/videos/bg-animation2.mp4"
+        src="https://olive-elk-842602.hostingersite.com/videos/bg-animation2.mp4"
         autoPlay
         loop
         muted

@@ -2,7 +2,7 @@ import { Layers, User, Handshake, Users, Lightbulb, Satellite } from "lucide-rea
 import audienceStats from "@/assets/audience-stats.png";
 
 const Highlights = () => {
-  const higlitbanner = "/delhi26/highlight.png"; // background image path
+  const higlitbanner = "https://olive-elk-842602.hostingersite.com/delhi26/highlight.png"; // background image path
 
   const highlights = [
     { 

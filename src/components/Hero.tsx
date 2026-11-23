@@ -1,10 +1,10 @@
 import { Button } from "./ui/button";
 
 export const Hero = ({
-  backgroundImage = "/hero-banner.png",
+  backgroundImage = "https://olive-elk-842602.hostingersite.com/hero-banner.png",
   overlay = true,
   contentPosition = "right", // "left" or "right"
-  contentBackgroundImage = "/hero-banner-image.svg",
+  contentBackgroundImage = "https://olive-elk-842602.hostingersite.com/hero-banner-image.svg",
   heading = "Shaping the Future with AI",
   subheading = "From prompt to impact",
   body = "Join the brightest minds in Artificial Intelligence and Innovation at the most impactful AI Summit mastering AI and securing the future.",

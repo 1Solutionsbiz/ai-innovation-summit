@@ -54,7 +54,7 @@ const IndustryRepresentation = () => {
       </div>
 
       {/* Optional background gradient overlay */}
-      <div className="absolute inset-0 bg-[url('/delhi26/bg-pattern.png')] bg-cover bg-center opacity-10"></div>
+      <div className="absolute inset-0 bg-[url('https://olive-elk-842602.hostingersite.com/delhi26/bg-pattern.png')] bg-cover bg-center opacity-10"></div>
     </section>
   );
 };

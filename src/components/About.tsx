@@ -48,7 +48,7 @@ export const About = () => {
           <div className="lg:ml-auto overflow-hidden">
             <div className="tilt-wrapper w-full h-full p-10">
               <img
-                src="/about.png"
+                src="https://olive-elk-842602.hostingersite.com/about.png"
                 alt="AI Conference"
                 className="tilt-img w-full h-full object-cover mix-blend-screen"
               />

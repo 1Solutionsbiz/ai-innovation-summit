@@ -15,8 +15,8 @@ const RedesignNavigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const logoSrc = isScrolled ? "/logo/logo-dg26-color.png" : "/logo/logo-dg26.png";
-  const logoSrcg = isScrolled ? "/logo/the-guild-dg26-color.png" : "/logo/the-guild-dg26.png";
+  const logoSrc = isScrolled ? "https://olive-elk-842602.hostingersite.com/logo/logo-dg26-color.png" : "https://olive-elk-842602.hostingersite.com/logo/logo-dg26.png";
+  const logoSrcg = isScrolled ? "https://olive-elk-842602.hostingersite.com/logo/the-guild-dg26-color.png" : "https://olive-elk-842602.hostingersite.com/logo/the-guild-dg26.png";
 
   const links = [
     { label: "Overview", href: "/#overview" },

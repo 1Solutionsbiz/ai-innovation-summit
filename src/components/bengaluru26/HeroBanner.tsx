@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import guildLogo from "@/assets/guild-logo.png";
-import aiinvationlogo from "/logo/logo-26.png";
+const aiinvationlogo = "https://olive-elk-842602.hostingersite.com/logo/logo-26.png";
 import { MapPin, CalendarDays } from "lucide-react"; // ✅ Added icons
 
 const HeroBanner = () => {
-  const videoSrc = "/videos/Delhi-2026_video.mp4";
+  const videoSrc = "https://olive-elk-842602.hostingersite.com/videos/Delhi-2026_video.mp4";
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">

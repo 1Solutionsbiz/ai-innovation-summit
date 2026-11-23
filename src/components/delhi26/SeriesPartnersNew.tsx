@@ -4,42 +4,42 @@ import RevealHeading from "@/components/ui/RevealHeading";
 const partnersData = [
   {
     tier: "",
-    logos: [{ name: "Slack", url: "/sponsers/slack-logo.webp" }],
+    logos: [{ name: "Slack", url: "https://olive-elk-842602.hostingersite.com/sponsers/slack-logo.webp" }],
     isCoPartner: true,
   },
   {
     tier: "",
-    logos: [{ name: "Adobe", url: "/sponsers/adobe.png" }],
+    logos: [{ name: "Adobe", url: "https://olive-elk-842602.hostingersite.com/sponsers/adobe.png" }],
     isCoPartner: true,
   },
   {
     tier: "",
-    logos: [{ name: "Atlassian", url: "/sponsers/atlassian-1.png" }],
+    logos: [{ name: "Atlassian", url: "https://olive-elk-842602.hostingersite.com/sponsers/atlassian-1.png" }],
     isCoPartner: true,
   },
   {
     tier: "",
-    logos: [{ name: "Salesforce", url: "/sponsers/salesforce.png" }],
+    logos: [{ name: "Salesforce", url: "https://olive-elk-842602.hostingersite.com/sponsers/salesforce.png" }],
     isCoPartner: false,
   },
   {
     tier: "",
-    logos: [{ name: "Microsoft", url: "/sponsers/microsoft-1.png" }],
+    logos: [{ name: "Microsoft", url: "https://olive-elk-842602.hostingersite.com/sponsers/microsoft-1.png" }],
     isCoPartner: false,
   },
   {
     tier: "",
-    logos: [{ name: "Xboom", url: "/sponsers/xboom-1.png" }],
+    logos: [{ name: "Xboom", url: "https://olive-elk-842602.hostingersite.com/sponsers/xboom-1.png" }],
     isCoPartner: false,
   },
   {
     tier: "",
-    logos: [{ name: "Aws", url: "/sponsers/aws.png" }],
+    logos: [{ name: "Aws", url: "https://olive-elk-842602.hostingersite.com/sponsers/aws.png" }],
     isCoPartner: false,
   },
   {
     tier: "",
-    logos: [{ name: "Snowflake", url: "/sponsers/snowflake-black.png" }],
+    logos: [{ name: "Snowflake", url: "https://olive-elk-842602.hostingersite.com/sponsers/snowflake-black.png" }],
     isCoPartner: false,
   },
 ];

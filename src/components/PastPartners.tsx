@@ -4,11 +4,11 @@ import "keen-slider/keen-slider.min.css";
 
 // Mumbai partner logos list
 const logos = [
-  "/sponsers/microsoft.png",
-  "/sponsers/snowflake.png",
-  "/sponsers/xboom.png",
-  "/sponsers/slack.png",
-  "/sponsers/atlassian.png"
+  "https://olive-elk-842602.hostingersite.com/sponsers/microsoft.png",
+  "https://olive-elk-842602.hostingersite.com/sponsers/snowflake.png",
+  "https://olive-elk-842602.hostingersite.com/sponsers/xboom.png",
+  "https://olive-elk-842602.hostingersite.com/sponsers/slack.png",
+  "https://olive-elk-842602.hostingersite.com/sponsers/atlassian.png"
 ];
 
 const PastPartners: React.FC = () => {
