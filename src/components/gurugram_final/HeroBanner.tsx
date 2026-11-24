@@ -2,6 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import { CalendarDays, MapPin, Pause, Play } from "lucide-react";
 import { getScrollDirection } from "@/hooks/useScrollDirection";
 
+
+import LazyVideo from "@/components/LazyVideo";
+
+
 const HeroBanner = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
@@ -74,7 +78,7 @@ const HeroBanner = () => {
       style={{ top: stickyTop }}
     >
       {/* Background video, lightly brand-tinted to read as a duotone */}
-      <video
+      <LazyVideo
         ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover"
         src="https://olive-elk-842602.hostingersite.com/videos/delhi-gurugram-26-new.mp4"

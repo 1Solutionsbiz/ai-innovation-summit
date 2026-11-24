@@ -3,6 +3,8 @@ import { Pause, Play, X } from "lucide-react";
 import OperatingModel from "./OperatingModel";
 import { getScrollDirection } from "@/hooks/useScrollDirection";
 
+import LazyVideo from "@/components/LazyVideo";
+
 const cards = [
   {
     key: "ideas",
@@ -202,7 +204,7 @@ const InnovationSection = () => {
                   className={`innovation-card innovation-grid-video partners-reveal-up ${sectionVisible ? "is-visible" : ""}`}
                   style={{ animationDelay: `${cardDelayMap.video}ms` }}
                 >
-                  <video ref={videoRef} className="absolute inset-0 w-full h-full object-cover" src="https://olive-elk-842602.hostingersite.com/videos/innovation_gurugram_26.mp4" autoPlay muted loop playsInline />
+                  <LazyVideo ref={videoRef} className="absolute inset-0 w-full h-full object-cover" src="https://olive-elk-842602.hostingersite.com/videos/innovation_gurugram_26.mp4" autoPlay muted loop playsInline />
                   <div className="absolute inset-0 bg-black/35" />
                   <button onClick={togglePlay} aria-label={isPlaying ? "Pause video" : "Play video"} className="absolute inset-0 m-auto z-20 w-12 h-12 rounded-full bg-white/20 border border-white/70 flex items-center justify-center text-white transition-transform duration-300 hover:scale-110">
                     {isPlaying ? <Pause size={18} fill="white" /> : <Play size={18} fill="white" className="ml-0.5" />}
