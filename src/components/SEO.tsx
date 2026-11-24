@@ -77,6 +77,20 @@ const seoData: Record<string, SEOData> = {
       "Watch on-demand videos from the AI Innovation Summit featuring expert insights, enterprise AI discussions, Generative AI, business transformation and industry trends.",
     focusKeyphrase: "AI Innovation Summit Videos",
   },
+
+  "/about-us": {
+    title: "AI Conference Summit About Us",
+    description:
+      "",
+    focusKeyphrase: "AI Innovation Summit Videos",
+  },
+
+  "/faq": {
+    title: "AI Conference Summit FAQs",
+    description:
+      "",
+    focusKeyphrase: "AI Innovation Summit Videos",
+  },
 };
 
 const SEO = () => {
