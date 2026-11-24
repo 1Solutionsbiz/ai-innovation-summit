@@ -93,21 +93,56 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between gap-4 border-t border-white/80 bg-[#141414] px-6 py-4 text-white md:flex-row md:px-10 xl:px-[6.5rem]">
-          <p className="text-[14px] font-medium sm:text-[14px]">© Copyright 2026, The Guild</p>
+        {/* BOTTOM SECTION */}
+        <div
+          className={`border-t border-slate-700 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 footer-reveal footer-delay-3 ${
+            footerVisible ? "is-visible" : ""
+          }`}
+        >
+          <p className="text-slate-400 text-xs sm:text-sm text-center md:text-left">
+            © Copyright 2026, The Guild
+          </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 text-[14px] font-medium sm:gap-6 sm:text-[14px]">
-            <a href="/privacy-policy" className="text-white transition-colors hover:text-[#d909b7]">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm">
+            <a
+              href="/about-us"
+              className="text-slate-400 hover:text-white transition-colors"
+            >
+              About Us
+            </a>
+
+            <a
+              href="/faq"
+              className="text-slate-400 hover:text-white transition-colors"
+            >
+              FAQs
+            </a>
+
+            <a
+              href="/privacy-policy"
+              className="text-slate-400 hover:text-white transition-colors"
+            >
               Privacy Policy
             </a>
-            <a href="/terms-and-conditions" className="text-white transition-colors hover:text-[#d909b7]">
-              Terms &amp; Conditions
+
+            <a
+              href="/terms-and-conditions"
+              className="text-slate-400 hover:text-white transition-colors"
+            >
+              Terms & Conditions
             </a>
-            <a href="/code-of-conduct" className="text-white transition-colors hover:text-[#d909b7]">
+
+            <a
+              href="/code-of-conduct"
+              className="text-slate-400 hover:text-white transition-colors"
+            >
               Code of Conduct
             </a>
           </div>
         </div>
+        {/* BOTTOM SECTION */}
+
+
       </div>
     </footer>
   );

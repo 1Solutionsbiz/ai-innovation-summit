@@ -1,8 +1,10 @@
 import { Linkedin } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import aiLogo from "@/assets/ai-innovation-logo.png";
-const aiinvationlogo = "https://olive-elk-842602.hostingersite.com/logo/Ai-Innovation_Logo_White.png";
-const guildLogo = "https://olive-elk-842602.hostingersite.com/logo/the-guild-dg26.png";
+const aiinvationlogo =
+  "https://olive-elk-842602.hostingersite.com/logo/Ai-Innovation_Logo_White.png";
+const guildLogo =
+  "https://olive-elk-842602.hostingersite.com/logo/the-guild-dg26.png";
 const Yesican = "https://olive-elk-842602.hostingersite.com/logo/Yesican.png";
 const Footer = () => {
   const footerRef = useRef<HTMLElement>(null);
@@ -31,16 +33,19 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer ref={footerRef} className="footer-section bg-slate-900 text-white" id="contact">
+    <footer
+      ref={footerRef}
+      className="footer-section bg-slate-900 text-white"
+      id="contact"
+    >
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 py-10 md:py-16">
-
         {/* TOP SECTION */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-12">
-
           {/* LEFT SECTION */}
-          <div className={`space-y-6 footer-reveal footer-delay-1 ${footerVisible ? "is-visible" : ""}`}>
+          <div
+            className={`space-y-6 footer-reveal footer-delay-1 ${footerVisible ? "is-visible" : ""}`}
+          >
             <div>
-              
               <img
                 src={Yesican}
                 alt="The Guild"
@@ -55,8 +60,9 @@ const Footer = () => {
             </div>
 
             <p className="text-slate-300 text-sm leading-relaxed">
-              From assistance to autonomy — the premier summit for artificial intelligence
-              leaders and enthusiasts, making it the most impactful AI Summit.
+              From assistance to autonomy — the premier summit for artificial
+              intelligence leaders and enthusiasts, making it the most impactful
+              AI Summit.
             </p>
 
             <div className="pt-4">
@@ -69,19 +75,22 @@ const Footer = () => {
           </div>
 
           {/* CENTER SECTION */}
-          <div className="text-left sm:text-left">
-
-          </div>
+          <div className="text-left sm:text-left"></div>
 
           {/* RIGHT SECTION */}
-          <div className={`footer-reveal footer-delay-2 ${footerVisible ? "is-visible" : ""}`}>
+          <div
+            className={`footer-reveal footer-delay-2 ${footerVisible ? "is-visible" : ""}`}
+          >
             <h4 className="text-xl font-bold mb-5 sm:mb-6">Connect With Us</h4>
 
             <div className="space-y-4">
-              <a href="https://www.linkedin.com/showcase/guild-ai-innovation-summit/" target="_blank">
-              <div className="flex items-center gap-2">
-                <Linkedin className="text-white" size={20} />
-              </div>
+              <a
+                href="https://www.linkedin.com/showcase/guild-ai-innovation-summit/"
+                target="_blank"
+              >
+                <div className="flex items-center gap-2">
+                  <Linkedin className="text-white" size={20} />
+                </div>
               </a>
 
               <a
@@ -142,14 +151,32 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* BOTTOM SECTION */}
-        <div className={`border-t border-slate-700 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 footer-reveal footer-delay-3 ${footerVisible ? "is-visible" : ""}`}>
 
+        {/* BOTTOM SECTION */}
+        <div
+          className={`border-t border-slate-700 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 footer-reveal footer-delay-3 ${
+            footerVisible ? "is-visible" : ""
+          }`}
+        >
           <p className="text-slate-400 text-xs sm:text-sm text-center md:text-left">
             © Copyright 2026, The Guild
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm">
+            <a
+              href="/about-us"
+              className="text-slate-400 hover:text-white transition-colors"
+            >
+              About Us
+            </a>
+
+            <a
+              href="/faq"
+              className="text-slate-400 hover:text-white transition-colors"
+            >
+              FAQs
+            </a>
+
             <a
               href="/privacy-policy"
               className="text-slate-400 hover:text-white transition-colors"
@@ -172,6 +199,9 @@ const Footer = () => {
             </a>
           </div>
         </div>
+        {/* BOTTOM SECTION */}
+
+
       </div>
 
       <style>{`
@@ -205,10 +235,6 @@ const Footer = () => {
           }
         }
       `}</style>
-
-
-
-
 
       <style>{`
         .footer-section {
@@ -261,9 +287,6 @@ const Footer = () => {
           }
         }
       `}</style>
-
-
-      
     </footer>
   );
 };

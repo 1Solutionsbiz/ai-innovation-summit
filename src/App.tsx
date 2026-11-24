@@ -27,7 +27,6 @@ import BengaluruEdition26 from "./pages/BengaluruEdition26";
 
 
 import SinghaniyaTest from "./pages/SinghaniyaTest";
-import About from "@/pages/About";
 import AboutUs from "@/pages/AboutUs";
 import Faq from "@/pages/Faq";
 
@@ -86,7 +85,6 @@ const App: React.FC = () => (
           <Route path="/watch" element={<WatchPage />} />
 		  <Route path="/all-speakers" element={<AllSpeakers />} />
 
-<Route path="/about" element={<About />} />
 <Route path="/about-us" element={<AboutUs />} />
 <Route path="/faq" element={<Faq />} />
 
