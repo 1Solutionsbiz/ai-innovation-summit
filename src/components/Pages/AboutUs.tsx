@@ -21,7 +21,7 @@ import {
 const stats = [
   { number: "700+", label: "Enterprise Leaders", icon: Users },
   { number: "2,100+", label: "Registrations", icon: Building2 },
-  { number: "40+", label: "Thought Leaders", icon: Lightbulb },
+  { number: "45+", label: "Thought Leaders", icon: Lightbulb },
   { number: "400+", label: "Industry Experts", icon: Globe2 },
   { number: "8+", label: "Strategic Sessions", icon: BarChart3 },
 ];
