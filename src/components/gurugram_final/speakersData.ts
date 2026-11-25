@@ -303,7 +303,15 @@ export const speakers = [
   //   description: "",
   //   image: "#",
   //   linkedin: "#",
-  // },
+  // },         
+  {
+    name: "Navnit Nakra",
+    role: "Partner & Technology Sector Leader, ",
+    company: "PwC India",
+    description: "",
+    image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Navnit-Nakra.png",
+    linkedin: "#",
+  },
   {
     name: "Sundar Ram Partner",
     role: "Partner & Leader - Cloud Engineering and Data Analytics, ",
@@ -400,23 +408,5 @@ export const speakers = [
   //   image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Priyanka-Sehgal.png",
   //   linkedin: "#",
   // },
-
-
-
-
-
-            
-            // {
-            //   name: "Navnit Nakra",
-            //   role: "Partner & Technology Sector Leader, ",
-            //   company: "PwC India",
-            //   description: "",
-            //   image: "https://olive-elk-842602.hostingersite.com/gurugram/speakers/Navnit-Nakra.png",
-            //   linkedin: "#",
-            // },
-
-
-
-  
 
 ];
