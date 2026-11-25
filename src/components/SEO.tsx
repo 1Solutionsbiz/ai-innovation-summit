@@ -79,17 +79,17 @@ const seoData: Record<string, SEOData> = {
   },
 
   "/about-us": {
-    title: "AI Conference Summit About Us",
+    title: "About AI Innovation Summit | Business AI Conference India",
     description:
-      "",
-    focusKeyphrase: "AI Innovation Summit Videos",
+      "Discover AI Innovation Summit, an enterprise AI conference in India connecting CIOs, CTOs, business leaders and AI innovators to explore enterprise AI and business transformation.",
+    focusKeyphrase: "About AI Innovation Summit",
   },
 
   "/faq": {
-    title: "AI Conference Summit FAQs",
+    title: "AI Innovation Summit FAQs | Registration & Event Details",
     description:
-      "",
-    focusKeyphrase: "AI Innovation Summit Videos",
+      "Find answers to common questions about AI Innovation Summit, including registration, participation, speakers, agenda, event details and sponsorship opportunities.",
+    focusKeyphrase: "FAQs AI Innovation Summit",
   },
 };
 
