@@ -1,5 +1,4 @@
-
-import { useEffect, useRef } from "react";
+import { forwardRef, useEffect, useImperativeHandle, useRef } from "react";
 
 interface LazyVideoProps {
   src: string;
@@ -7,12 +6,15 @@ interface LazyVideoProps {
   className?: string;
 }
 
-export default function LazyVideo({
-  src,
-  poster,
-  className,
-}: LazyVideoProps) {
+// forwardRef so parents (HeroBanner, Innovation) can reach the <video>
+// element for their play/pause buttons. Without it the ref they pass is
+// dropped and the buttons silently do nothing.
+const LazyVideo = forwardRef<HTMLVideoElement, LazyVideoProps>(function LazyVideo(
+  { src, poster, className },
+  forwardedRef
+) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  useImperativeHandle(forwardedRef, () => videoRef.current as HTMLVideoElement);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -56,4 +58,6 @@ export default function LazyVideo({
       preload="none"
     />
   );
-}
+});
+
+export default LazyVideo;

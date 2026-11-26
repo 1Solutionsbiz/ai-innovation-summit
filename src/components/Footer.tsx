@@ -97,7 +97,7 @@ export const Footer = ({ socialLinks }) => {
               <p>
                 Email at{" "}
                 <a
-                  href="partnership@guildlive.com"
+                  href="mailto:partnership@guildlive.com"
                   className="text-neon-blue hover:underline"
                 >
                   partnership@guildlive.com
