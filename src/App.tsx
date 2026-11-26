@@ -1,6 +1,12 @@
 // src/App.tsx
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+// Page stylesheets imported here, in their original order, so the single CSS
+// file keeps exactly the same rule order as before pages were lazy-loaded.
+import "keen-slider/keen-slider.min.css";
+import "@/styles/mystyle.css";
+import "@/styles/aboutfaq.css";
+import "@/styles/gurugram_final.css";
 
 import { HelmetProvider } from "react-helmet-async";
 import SEO from "@/components/SEO";
@@ -10,40 +16,40 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { lazy, Suspense } from "react";
 
 import NotFound from "./pages/NotFound";
-import WatchOnDemand from "./pages/WatchOnDemand";
+const WatchOnDemand = lazy(() => import("./pages/WatchOnDemand"));
 import ScrollManager from "./components/ScrollManager";
 
 
 
-import GurugramEdition from "./components/Edition/GurugramEdition";
-import BengaluruEdition from "./components/Edition/BengaluruEdition";
-import MumbaiEdition from "./components/Edition/MumbaiEdition";
-import MumbaiEdition25 from "./pages/Index";
-import BangaloreEdition from "./pages/BangaloreEdition";
-import DelhiEdition26 from "./pages/DelhiEdition26";
-import BengaluruEdition26 from "./pages/BengaluruEdition26";
+const GurugramEdition = lazy(() => import("./components/Edition/GurugramEdition"));
+const BengaluruEdition = lazy(() => import("./components/Edition/BengaluruEdition"));
+const MumbaiEdition = lazy(() => import("./components/Edition/MumbaiEdition"));
+const MumbaiEdition25 = lazy(() => import("./pages/Index"));
+const BangaloreEdition = lazy(() => import("./pages/BangaloreEdition"));
+const DelhiEdition26 = lazy(() => import("./pages/DelhiEdition26"));
+const BengaluruEdition26 = lazy(() => import("./pages/BengaluruEdition26"));
 
 
-import SinghaniyaTest from "./pages/SinghaniyaTest";
-import AboutUs from "@/pages/AboutUs";
-import Faq from "@/pages/Faq";
+const AboutUs = lazy(() => import("@/pages/AboutUs"));
+const Faq = lazy(() => import("@/pages/Faq"));
 
 import DelhiGurugram_Edition26 from "./pages/DelhiGurugram_Edition26";
-import DelhiGurugram_Edition26_Speakers from "./pages/DelhiGurugram_Edition26_Speakers";
-import DelhiGurugram_Edition26_Agenda from "./pages/DelhiGurugram_Edition26_Agenda";
-import WatchPage from "./components/gurugram_final/WatchPage";
-import AllSpeakers from "@/components/gurugram_final/AllSpeakers";
+const DelhiGurugram_Edition26_Speakers = lazy(() => import("./pages/DelhiGurugram_Edition26_Speakers"));
+const DelhiGurugram_Edition26_Agenda = lazy(() => import("./pages/DelhiGurugram_Edition26_Agenda"));
+const WatchPage = lazy(() => import("./components/gurugram_final/WatchPage"));
+const AllSpeakers = lazy(() => import("@/components/gurugram_final/AllSpeakers"));
 
 
-import Login from "./pages/auth/Login";
-import Dashboard from "./pages/dashboard/Dashboard";
+const Login = lazy(() => import("./pages/auth/Login"));
+const Dashboard = lazy(() => import("./pages/dashboard/Dashboard"));
 import { RequireAuth } from "@/components/layout/RequireAuth";
-import PartnerForm from "./pages/PartnerForm";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import TermsAndConditions from "./pages/TermsAndConditions";
-import CodeOfConduct from "./pages/CodeOfConduct";
+const PartnerForm = lazy(() => import("./pages/PartnerForm"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsAndConditions = lazy(() => import("./pages/TermsAndConditions"));
+const CodeOfConduct = lazy(() => import("./pages/CodeOfConduct"));
 
 
 
@@ -61,6 +67,9 @@ const App: React.FC = () => (
         <SEO />
         <ScrollManager />
   
+        {/* Homepage (with the registration form) stays in the main bundle;
+            every other page is downloaded only when it is visited. */}
+        <Suspense fallback={<div className="min-h-screen" />}>
         <Routes>
           {/* Auth */}
           <Route path="/login" element={<Login />} />
@@ -106,6 +115,7 @@ const App: React.FC = () => (
           {/* 404 */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        </Suspense>
       </BrowserRouter>
     </QueryClientProvider>
   </HelmetProvider>
