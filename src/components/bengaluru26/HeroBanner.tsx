@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import guildLogo from "@/assets/guild-logo.png";
+const guildLogo = "https://olive-elk-842602.hostingersite.com/site-assets/guild-logo.png";
 const aiinvationlogo = "https://olive-elk-842602.hostingersite.com/logo/logo-26.png";
 import { MapPin, CalendarDays } from "lucide-react"; // ✅ Added icons
 

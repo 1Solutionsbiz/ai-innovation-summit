@@ -1,4 +1,4 @@
-import guildLogo from "@/assets/guild-logo.png";
+const guildLogo = "https://olive-elk-842602.hostingersite.com/site-assets/guild-logo.png";
 import RevealHeading from "@/components/ui/RevealHeading";
 
 const AboutTheGuild = () => {

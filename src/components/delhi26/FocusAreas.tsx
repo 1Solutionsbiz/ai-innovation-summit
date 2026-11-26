@@ -15,7 +15,7 @@ const WhatAwaits = () => {
       title: "India's Al Leadership & Global Influence",
       description:
         "India’s pivotal role in shaping the global AI era.",
-      image: "/elements/India's-Al-Leadership-&-Global-Influence.png",
+      image: "https://olive-elk-842602.hostingersite.com/elements/India's-Al-Leadership-&-Global-Influence.png",
     },
     {
       title: "Industry Transformation",

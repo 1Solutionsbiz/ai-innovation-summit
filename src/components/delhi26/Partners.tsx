@@ -1,4 +1,4 @@
-import seriesPartnersBg from "@/assets/series-partners-bg.jpg";
+const seriesPartnersBg = "https://olive-elk-842602.hostingersite.com/site-assets/series-partners-bg.jpg";
 
 const partnersData = [
   {
