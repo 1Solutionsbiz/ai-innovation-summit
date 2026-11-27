@@ -22,7 +22,7 @@ const Socialwall = () => {
       );
       script.setAttribute("data-width", "100%");
       script.setAttribute("data-autoheight", "1");
-      script.setAttribute("data-height", "400");
+      script.setAttribute("data-height", "300");
       script.setAttribute("data-lazyload", "1");
       script.setAttribute("allow", "camera");
 
